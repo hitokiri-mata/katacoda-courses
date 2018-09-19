@@ -1,11 +1,11 @@
 {
     "title": "Kubernetes Fundamentals",
     "icon": "fa-kubernetes",
-    "description": "",
+    "description": "Discover different techniques for running functions on Kubernetes.",
     "courses": [
       {
         "course_id": "kubeless",
-        "title": "Namespaces",
+        "title": "Kubeless",
         "description": "About Kubeless"
       },
       {
