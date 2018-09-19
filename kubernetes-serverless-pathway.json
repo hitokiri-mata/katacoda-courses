@@ -1,0 +1,18 @@
+{
+    "title": "Kubernetes Fundamentals",
+    "icon": "fa-kubernetes",
+    "description": "",
+    "courses": [
+      {
+        "course_id": "kubeless",
+        "title": "Namespaces",
+        "description": "About Kubeless"
+      },
+      {
+        "course_id": "openfaas",
+        "title": "OpenFaaS",
+        "description": "About OpenFaaS"
+      }
+    ]
+  }
+  

@@ -1,0 +1,68 @@
+{
+  "title": "Kubeless",
+  "description": "Discovering how Kubeless runs on Kubernetes.",
+  "details": {
+    "steps": [
+      {
+        "title": "Install",
+        "text": "step1.md"
+      },
+      {
+        "title": "Tools",
+        "text": "step2.md"
+      },
+      {
+        "title": "Deploy Python Function",
+        "text": "step3.md"
+      },
+      {
+        "title": "Call Python Function",
+        "text": "step4.md"
+      },
+      {
+        "title": "Inspect Python Function",
+        "text": "step5.md"
+      },
+      {
+        "title": "Inspect Kubernetes",
+        "text": "step6.md"
+      },
+      {
+        "title": "Deploy Node Function",
+        "text": "step7.md"
+      },
+      {
+        "title": "Call Node Function",
+        "text": "step8.md"
+      },
+      {
+        "title": "Remove Functions and Kubeless",
+        "text": "step9.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"},
+        {"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "port": 30000,
+    "imageid": "kubeless"
+  }
+}
