@@ -1,6 +1,6 @@
 # OpenFaaS on Kubernetes #
 
-[https://github.com/todo/todo](OpenFaaS) is a Kubernetes serverless framework that ...
+[https://www.openfaas.com/](OpenFaaS) is a framework for building serverless functions with Docker and Kubernetes which has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding.
 
 You will learn how:
 
@@ -9,4 +9,4 @@ You will learn how:
 - functions are named, exposed, and invoked
 - functions are listed, inspected and monitored
 
-More about the OpenFaaS architecture is described in the [OpenFaaS documentation](https://todo).
+More about the OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/).

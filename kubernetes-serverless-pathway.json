@@ -1,17 +1,17 @@
 {
-    "title": "Kubernetes Fundamentals",
+    "title": "Kubernetes: Serverless and Functions",
     "icon": "fa-kubernetes",
     "description": "Discover different techniques for running functions on Kubernetes.",
     "courses": [
       {
         "course_id": "kubeless",
         "title": "Kubeless",
-        "description": "About Kubeless"
+        "description": "The Kubernetes Native Serverless Framework. Build advanced applications with FaaS on top of Kubernetes"
       },
       {
         "course_id": "openfaas",
         "title": "OpenFaaS",
-        "description": "About OpenFaaS"
+        "description": "Serverless Functions Made Simple for Kubernetes"
       }
     ]
   }

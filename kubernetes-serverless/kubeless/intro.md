@@ -1,12 +1,12 @@
 # Kubeless on Kubernetes #
 
-[https://github.com/kubeless/kubeless](Kubeless) is a Kubernetes-native serverless framework that lets you deploy small bits of code without having to worry about the underlying infrastructure plumbing. It leverages Kubernetes resources to provide auto-scaling, API routing, monitoring, troubleshooting and more.
+[Kubeless](https://github.com/kubeless/kubeless) is a Kubernetes-native serverless framework that lets you deploy small bits of code without having to worry about the underlying infrastructure plumbing. It leverages Kubernetes resources to provide auto-scaling, API routing, monitoring, troubleshooting and more.
 
-Kubeless is purely open-source and non-affiliated to any commercial organization. Help and feedback is welcomed.
+_Kubeless_ is purely open-source and non-affiliated to any commercial organization. Help and feedback is welcomed.
 
-Exploring _Kubeless_ is a great way to explore this Kubernetes architectural pattern of using a CLI tool, a controller and some Custom Resource Definition (CRDs) optionally along with Kafka to achieve a fundamental serverless solution.
+Exploring _Kubeless_ is a great way to explore this Kubernetes architectural pattern of using a CLI tool, a controller and some Custom Resource Definition ([CRDs](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)) optionally along with [Kafka](https://kafka.apache.org/) to achieve a fundamental serverless solution.
 
-Kubeless relies on a command line tool called 'kubeless' to submit function and perform other controlling operations with the Kubeless controller. There is also a user interface to parallel the CLI tool features. A dedicated Kafka system is also added to allow functions to be trigger via publish/subscribe.
+_Kubeless_ relies on a command line tool called 'kubeless' to submit functions and perform controlling operations with the Kubeless controller. There is also a user interface to parallel the CLI tool features. A dedicated Kafka system is also added to allow functions to be trigger via publish/subscribe.
 
 You will learn how:
 

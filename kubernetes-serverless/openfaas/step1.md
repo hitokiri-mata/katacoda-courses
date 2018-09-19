@@ -1,4 +1,4 @@
-# Install OpenFaaS Onto Your Kubernetes Cluster #
+# Start OpenFaaS on your Kubernetes Cluster #
 
 Helm is a package manager for Kubernetes and a common Helm _chart_ is predefined for that defines the installation. Use Helm to install OpenFaaS with this install command:
 

@@ -1,6 +1,9 @@
 {
+  "pathwayTitle": "Serverless",
   "title": "Kubeless",
   "description": "Discovering how Kubeless runs on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {
@@ -59,10 +62,12 @@
     "showdashboard": true,
     "dashboard": "Dashboard",
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n"
-  },
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": "[{ 'name': 'Kubeless UI', 'port': 8080, 'host': 'host01'"
+    },
   "backend": {
     "port": 30000,
-    "imageid": "kubeless"
+    "imageid": "kubernetes"
   }
 }

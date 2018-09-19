@@ -8,7 +8,7 @@ To deploy a function use the kubeless CLI tool. To deploy a function some fundam
 - The exposed handle name to be associated with the function
 - How the function will be invoked (default HTP trigger)
 
-`kubeless function deploy fibonacci --runtime python3.6 \ --handler fibonacci.handler \ --from-file fibonacci.py`{{execute}}
+`kubeless function deploy fibonacci --runtime python3.6  --handler fibonacci.handler --from-file fibonacci.py`{{execute}}
 
 You can then list the function with the kubeless CLI:
 
@@ -24,11 +24,11 @@ With the deploy command, Kubeless automatically created a Kubernetes deployment 
 
 ## Special Sauce ##
 
-The Kubeless secret sauce is your function's source code is deployed into a Kubernetes ConfigMap. You can view the deployed code here:
+The _Kubeless_ secret sauce is your function's source code is deployed into a Kubernetes ConfigMap. You can view the deployed code here:
 
 'kubectl get configmaps'{{execute}}
 
 On deployment _Kubeless_ starts a pre-baked container containing the Python executable, then your function's source code is referenced from the ConfigMap and injected into the Python container. In turn, the container is fronted by a Kubernetes Service where you can invoke the function from a Service call. Inspect the Service with this command:
 
-TODO: 'kubectl get service'{{execute}}  
+TODO: 'kubectl get services'{{execute}}  
 

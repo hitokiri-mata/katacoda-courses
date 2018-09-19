@@ -1,10 +1,10 @@
-# Install Kubeless Onto Your Kubernetes Cluster #
+# Start Kubeless on your Kubernetes Cluster #
 
 Helm is a package manager for Kubernetes and a common Helm _chart_ is predefined for that defines the installation. Use Helm to install _Kubeless_ with this install command:
 
 `helm install --name my-kubeless --namespace kubeless incubator/kubeless --set rbac.create=true --set ui.enabled=true`{{execute}}
 
-As part of the installation there will be a few pods started in the new _kubeless_ namespace on your Kubernetes cluster.
+As part of the installation there will be a few Pods started in the new `kubeless` namespace on your Kubernetes cluster.
 - The _Kubeless_ controller Pod will watch for function objects to be created.
 - The _Kubeless_ ui Pod serves up a browser based dashboard showing the functions
 
