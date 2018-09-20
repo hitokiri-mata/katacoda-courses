@@ -1,26 +1,26 @@
 # Deploy Python Function #
 
-To deploy a function use the kubeless CLI tool. To deploy a function some fundamental information is provided:
+To deploy a function the Kubeless CLI tool will need some fundamental information:
 
 - Name of the function
 - [Language and version](https://kubeless.io/docs/runtimes/) that Kubeless needs to provide to run the function
 - The function source code
-- The exposed handle name to be associated with the function
-- How the function will be invoked (default HTP trigger)
+- The exposed handle name to be associated and used to invoke the function
+- How the function will be invoked (default HTTP trigger)
 
-`kubeless function deploy fibonacci --runtime python3.6  --handler fibonacci.handler --from-file fibonacci.py`{{execute}}
+`kubeless function deploy fibonacci --runtime python3.6 --handler fibonacci.handler --from-file fibonacci.py`{{execute}}
 
-You can then list the function with the kubeless CLI:
+You can list the new function with the kubeless CLI:
 
-`kubeless function ls`{{execute}}
+`kubeless function list`{{execute}}
 
 While the function is deploying inspect the actual Python function source code:
 
 `cat fibonacci.py`{{execute}}
 
-With the deploy command, Kubeless automatically created a Kubernetes deployment and service for your function. Observe that a Pod containing your function is running:
+With the deploy command, Kubeless automatically created a Kubernetes deployment and service for your function. Observe that a Deployment< Pod> containing your function is running and exposed as a service in the defaukt namespace:
 
-`kubectl get pods`{{execute}}
+`kubectl get deployments,pods,services`{{execute}}
 
 ## Special Sauce ##
 
