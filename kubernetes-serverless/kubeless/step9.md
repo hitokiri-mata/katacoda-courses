@@ -19,7 +19,7 @@ The Helm installation of Kubeless can be seen in this list:
 
 Kubeless can be removed from the cluster with this one command:
 
-`helm delete my-kubeless --purge`{{execute}}
+`helm delete my-kubeless`{{execute}}
 
 This will also remove the _kubeless_ namespace. Verify the remaining namespaces with:
 

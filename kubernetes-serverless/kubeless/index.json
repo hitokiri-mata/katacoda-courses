@@ -45,6 +45,7 @@
     ],
     "intro": {
       "text": "intro.md",
+      "code": "env-init.sh",
       "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
     },
     "finish": {
@@ -66,7 +67,6 @@
     "dashboards": "[{ 'name': 'Kubeless UI', 'port': 8080, 'host': 'host01'"
     },
   "backend": {
-    "port": 30000,
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }
