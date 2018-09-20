@@ -1,16 +1,6 @@
 # Start Kubeless on your Kubernetes Cluster #
 
-As you see, this Kubernetes cluster based on Minikube is available now or will be shortly.
-
-## Install Kubeless CLI tool ##
-
-Let's get the latest CLI binary for this Linux.
-
-`curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
-
-`unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
-
-This tool version will match the controller installed in the next step.
+As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly.
 
 ## Install Kubeless Controller ##
 
@@ -27,7 +17,7 @@ As part of the installation there will be two Pods started in the new `kubeless`
 - The _Kubeless_ controller Pod will watch for function objects to be created.
 - The _Kubeless_ ui Pod serves up a browser based dashboard showing the functions
 
-Observe the availability of each Pod's deployment go from 0 to 1:
+Observe the availability of each Pod's deployment as they progress from 0 to 1:
 
 `kubectl get deployments --namespace kubeless`{{execute}}
 

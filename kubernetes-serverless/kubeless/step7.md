@@ -8,11 +8,11 @@ Deploy the function
 
 Excersize the function
 
-`kubeless function call hello --data '{"kubeless":"rocks"}`{{execute}}
+`kubeless function call hello --data '{"kubeless":"rocks"}'`{{execute}}
 
 See it listed,
 
-`kubeless function list`
+`kubeless function list`{{execute}}
 
 and described.
 

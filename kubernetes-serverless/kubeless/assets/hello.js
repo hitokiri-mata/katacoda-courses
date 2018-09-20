@@ -1,5 +1,6 @@
 module.exports = {
   greeting: function (event, context) {
-    return 'Hello world, from a Kubeless function!\n' + event.data;
+    console.log(event)
+    return 'Hello world, from a Kubeless function!. Passed in data: $(event.data)';
   }
 }

@@ -1,8 +1,14 @@
 # Kubeless Tools #
 
-## Kubeless CLI ##
+## Install Kubeless CLI tool ##
 
-Installed into you cluster is a command line tool (CLI) called `kubeless`. Use this tool to manage your functions on _Kubeless_.
+Kubeless has a command line tool (CLI) named appropriately `kubeless`. Use this tool to manage your functions on _Kubeless_. Let's get the latest Kubeless command line interface (CLI) binary for this Linux.
+
+`curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
+
+`unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
+
+This tool version will match the controller installed in the next step. Verify this CLI is working by inspecting its current version
 
 `kubeless --help && kubeless version`{{execute}}
 
