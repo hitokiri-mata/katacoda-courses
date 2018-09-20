@@ -6,11 +6,11 @@ As you see, this Kubernetes cluster based on Minikube is available now or will b
 
 Let's get the latest CLI binary for this Linux.
 
-- `curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
+`curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
 
-- `unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
+`unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
 
-This tool will match the controller installed in the next step.
+This tool version will match the controller installed in the next step.
 
 ## Install Kubeless Controller ##
 
@@ -18,9 +18,9 @@ Helm is a package manager for Kubernetes and is initialize and ready. A common H
 
 `helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}}
 
-Apply this Helm install command:
+To install Kubeless onto Kubernetes apply this command:
 
-`helm install --name my-kubeless --namespace kubeless incubator/kubeless --set rbac.create=true --set ui.enabled=true`{{execute}}
+`helm install --name my-kubeless --namespace kubeless incubator/kubeless --set ui.enabled=true`{{execute}}
 
 As part of the installation there will be two Pods started in the new `kubeless` namespace on your Kubernetes cluster.
 
@@ -29,6 +29,8 @@ As part of the installation there will be two Pods started in the new `kubeless`
 
 Observe the availability of each Pod's deployment go from 0 to 1:
 
-`kubectl get deployments --namespace kubeless --watch`{{execute}}
+`kubectl get deployments --namespace kubeless`{{execute}}
 
-Once the containers have their _Available_ status reach 1, or at least the controller, break out of the watch with Ctrl-C. New functions can now be deployed to _Kubeless_.
+Wait until the at the least the controller containers have their _Available_ status reach 1.
+
+New functions can now be deployed to _Kubeless_.

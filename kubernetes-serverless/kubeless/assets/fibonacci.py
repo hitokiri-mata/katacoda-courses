@@ -6,7 +6,7 @@ def fib(n):
   else:
     return fib(n-1) + fib(n-2)
 
-def fibSeries(event, context):
-  row=[fib(n) for n in range(1,15)]
+def values(event, context):
+  row=[fib(n) for n in range(1,18)]
   print("Series created: " + row)
   return row
