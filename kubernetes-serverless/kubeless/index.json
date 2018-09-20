@@ -45,7 +45,6 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
       "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
     },
     "finish": {
