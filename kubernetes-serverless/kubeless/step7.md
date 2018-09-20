@@ -4,7 +4,7 @@ There are addtional languages also supported out of the box from Kubeless. Here 
 
 Deploy the function
 
-`kubeless function deploy hello --trigger-http --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
+`kubeless function deploy hello --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
 
 Excersize the function
 
