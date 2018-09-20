@@ -1,4 +1,4 @@
-Tools help you manage functions on _Kubeless_.
+# Kubeless Tools #
 
 ## Kubeless CLI ##
 

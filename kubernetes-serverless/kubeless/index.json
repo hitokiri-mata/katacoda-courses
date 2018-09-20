@@ -11,27 +11,27 @@
         "text": "step1.md"
       },
       {
-        "title": "Tools",
+        "title": "Tooling",
         "text": "step2.md"
       },
       {
-        "title": "Deploy Python Function",
+        "title": "Register",
         "text": "step3.md"
       },
       {
-        "title": "Call Python Function",
+        "title": "Call",
         "text": "step4.md"
       },
       {
-        "title": "Inspect Python Function",
+        "title": "Inspect",
         "text": "step5.md"
       },
       {
-        "title": "Inspect Kubernetes",
+        "title": "Inspect",
         "text": "step6.md"
       },
       {
-        "title": "Deploy Node Function",
+        "title": "Register",
         "text": "step7.md"
       },
       {
@@ -39,7 +39,7 @@
         "text": "step8.md"
       },
       {
-        "title": "Remove Functions and Kubeless",
+        "title": "Cleanup",
         "text": "step9.md"
       }
     ],
