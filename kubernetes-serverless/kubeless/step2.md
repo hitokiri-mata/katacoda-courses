@@ -16,4 +16,10 @@ This tool version will match the controller installed in the next step. Verify t
 
 There is also a user interface as an alternative way to manage _Kubeless_ and your functions.
 
+Currently it's on a random Kubernetes NodePort (some value above 30000) and this next line will force the NodePort to 31000
+
+`kubectl patch service my-kubeless-kubeless-ui --namespace=kubeless --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31000}]'`{{execute}}
+
+Ideally this port adjustment should have happened when the Kubeless Helm chart was installed, but the chart currently does not allow the NodePort value to be specified. As a workaround we adjust the port post installation with the above command. We can now point your browser to the service that serves up the Kubeless UI
+
 The Kubeless UI: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/

@@ -61,7 +61,7 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kuberentes Dash", "port": 30000}, 
+      {"name": "Kubernetes Dash", "port": 30000}, 
       {"name": "Kubeless UI", "port": 31000}
     ]
     },

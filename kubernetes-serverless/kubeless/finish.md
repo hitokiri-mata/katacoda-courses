@@ -16,6 +16,7 @@ With these scenarios you have learned how:
 - [Kubeless project landing page](https://kubeless.io/)
 - [Kubeless is open source](https://github.com/kubeless/kubeless)
 - [Kubeless documentation](https://kubeless.io/docs/architecture/).
-- [Helm, a package mananger for Kubernetes](https://helm.sh/)
+- [Helm, a package manager for Kubernetes](https://helm.sh/)
 - [Helm chart for Kubeless](https://github.com/helm/charts/tree/master/incubator/kubeless)
 - [Kubeless UI project](https://github.com/kubeless/kubeless-ui)
+- [Helm chart for Kafka](https://github.com/helm/charts/tree/master/incubator/kafka)

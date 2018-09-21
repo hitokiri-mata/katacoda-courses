@@ -1,3 +1,5 @@
+import json
+
 def fibonacci(n):
   if n == 0:
     return 0
@@ -12,8 +14,9 @@ def sequence(length):
   print("Fibonacci sequence: " + result)
   return {"sequence":result}
 
-def values(event = {}, context= {}):
-  length = event['data']['length']
+def values(request):
+  print request.json
+  length = request.json["length"]
   return sequence(length)
   
 #print(sequence(18))
