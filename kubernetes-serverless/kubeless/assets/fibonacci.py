@@ -6,8 +6,8 @@ def fib(n):
   else:
     return fib(n-1) + fib(n-2)
 
-def values(request):
-  length = int(request.json["length"])
+def values(event, context):
+  length = int(event.data.length)
   row=[fib(n) for n in range(1,length)]
   serialized = ",".join( str(x) for x in row )
   print("Fibonacci sequence: " + serialized)

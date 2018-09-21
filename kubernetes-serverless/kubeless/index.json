@@ -31,7 +31,11 @@
         "text": "step6.md"
       },
       {
-        "title": "Register",
+        "title": "Register Via YAML",
+        "text": "step7.md"
+      },
+      {
+        "title": "NodeJS",
         "text": "step7.md"
       },
       {

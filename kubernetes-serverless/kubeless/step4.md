@@ -3,7 +3,7 @@
 ## Call from CLI ##
 Use the Kubeless CLI tool to call the function
 
-`kubeless function call fibonacci --data '{"length":"10"}'`{{execute}}
+`kubeless function call fibonacci --data '{"length":"10"}' --header "Content-Type:application/json`{{execute}}
 
 ## Call from URL ##
 

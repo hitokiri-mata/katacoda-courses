@@ -1,26 +1,10 @@
-# Remove Functions and Kubeless #
+Using Kafka for Triggers
 
-## Remove Functions ##
+Add the repo where the Kafka chart can be referenced from
 
-Use the Kubeless CLI tool to list and remove the functions:
+`helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
 
-`kubeless function list`{{execute}}
+Install Kafka
 
-`kubeless delete fibanocci`{{execute}}
-`kubeless delete hello`{{execute}}
+`helm install incubator/kafka --namespace kubeless --name kafka --set rbac.create=true --set kafkaTrigger.enabled=true --set kafkaTrigger.env.kafkaBrokers=brokertodo`{{execute}}
 
-After delete, the associated Deployments, Pods and ConfigMaps will be removed from the Kubernetes _default_ namespace.
-
-## Remove Kubeless ##
-
-The Helm installation of Kubeless can be seen in this list:
-
-`helm list`{{execute}}
-
-Kubeless can be removed from the cluster with this single command:
-
-`helm delete my-kubeless --purge`{{execute}}
-
-This will also remove the _kubeless_ namespace. Verify the remaining namespaces with:
-
-`kubectl get namespaces`{{execute}}

@@ -1,10 +1,19 @@
-Using Kafka for Triggers
+# Deploy Node Function #
 
-Add the repo where the Kafka chart can be referenced from
+There are addtional languages also supported out of the box from Kubeless. Here is a NodeJS example.
 
-`helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
+Deploy the function
 
-Install Kafka
+`kubeless function deploy hello --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
 
-`helm install incubator/kafka --namespace kubeless --name kafka --set rbac.create=true --set kafkaTrigger.enabled=true --set kafkaTrigger.env.kafkaBrokers=brokertodo`{{execute}}
+Excersize the function
 
+`kubeless function call hello --data '{"kubeless":"rocks"}'`{{execute}}
+
+See it listed,
+
+`kubeless function list`{{execute}}
+
+and described.
+
+`kubeless function describe hello`{{execute}}
