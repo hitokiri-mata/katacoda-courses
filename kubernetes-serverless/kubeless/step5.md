@@ -10,8 +10,12 @@ Inspect the execution logs of the function
 
 Call the function with a bad input
 
-`kubeless function call fibonacci --data '{"length":"-1"}'`{{execute}}
+`kubeless function call fibonacci --data '{"introduce-error":"-1"}'`{{execute}}
 
 and reinspect the logs
 
 `kubeless function logs fibonacci`{{execute}}
+
+or
+
+`kubectl logs -l function=get-python`{{execute}}

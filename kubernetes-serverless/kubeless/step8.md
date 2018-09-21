@@ -7,11 +7,8 @@ There are additional languages also supported out of the box from Kubeless. Here
 See the new function listed and confirm the status is _Ready_, it may take a minute.
 
 `kubeless function list`{{execute}}
+`kubeless function describe hello`{{execute}}
 
 Once ready, run the function
 
 `kubeless function call hello --data '{"kubeless":"rocks"}'`{{execute}}
-
-and described.
-
-`kubeless function describe hello`{{execute}}
