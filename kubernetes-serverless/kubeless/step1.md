@@ -1,10 +1,16 @@
 # Install Kubeless #
 
-As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly.
+As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use:
+
+`minikube version && minikube status`{{execute}}
 
 ## Install Kubeless Controller ##
 
-Helm is a package manager for Kubernetes and is initialized and ready. A common Helm _chart_ is predefined for installing _Kubeless_. This command will allow Helm to find the _Kubeless_ chart:
+Helm is a package manager for Kubernetes and is initialized and ready.
+
+`helm version`{{execute}}
+
+A common Helm _chart_ is predefined for installing _Kubeless_. This command will allow Helm to find the _Kubeless_ chart:
 
 `helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}}
 

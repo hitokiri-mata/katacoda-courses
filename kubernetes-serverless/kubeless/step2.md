@@ -2,7 +2,7 @@
 
 ## Install Kubeless CLI tool ##
 
-Kubeless has a command line tool (CLI) named appropriately `kubeless`. Use this tool to manage your functions on _Kubeless_. Let's get the latest Kubeless command line interface (CLI) binary for this Linux.
+Kubeless has a command line tool (CLI) named appropriately `kubeless`. Use this tool to manage your functions on _Kubeless_. Let's get a recent Kubeless command line interface (CLI) binary for this Linux account.
 
 `curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
 
@@ -22,4 +22,5 @@ Currently it's on a random Kubernetes NodePort (some value above 30000) and this
 
 Ideally this port adjustment should have happened when the Kubeless Helm chart was installed, but the chart currently does not allow the NodePort value to be specified. As a workaround we adjust the port post installation with the above command. We can now point your browser to the service that serves up the Kubeless UI
 
-The Kubeless UI: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
+The Kubeless UI is located as a tab above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
+

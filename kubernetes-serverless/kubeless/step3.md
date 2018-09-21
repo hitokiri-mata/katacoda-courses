@@ -3,7 +3,7 @@
 To deploy a function, the Kubeless CLI tool needs some information:
 
 - The name you will use to access the function over the Web
-- The [runtime](https://kubeless.io/docs/runtimes/) to be executed to run the code (here, Python)
+- The [runtime](https://kubeless.io/docs/runtimes/) to be executed to run the code (e.g. Python)
 - The name of the file containing the function code
 - The name of the function inside the file
 
@@ -11,7 +11,7 @@ To deploy a function, the Kubeless CLI tool needs some information:
 
 With the above, here is a breakdown of this function registration request:
 
-- kubeless function deploy _fibonacci_ tells Kubeless to register a new function named fibonacci. The function will be accessible over the Web using this name. Note that this doesn’t need to be the same as the function name used inside the code (we’ll specify that a little further along using the --handler option).
+- kubeless function deploy _fibonacci_ tells Kubeless to register a new function named fibonacci. The function will be accessible over the Web using this name. This doesn’t need to be the same as the function name used inside the code (this is instead specified using the --handler option).
 
 - --runtime python3.6 tells Kubeless to use Python 3.6 to execute the code. Other runtimes are available such as: Java, NodeJS, Ruby, PHP, Golang, .NET and Ballerina. You can also supply a [custom runtime](https://kubeless.io/docs/runtimes/) as a container.
 
