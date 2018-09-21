@@ -7,8 +7,10 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 
 def values(event, context):
-  length = int(event.data.length)
-  row=[fib(n) for n in range(1,length)]
+  length = event['data']['length']
+  print("Length: " + length)
+  print("Event.json: " + event.json)
+  row=[fib(n) for n in range(1,int(length)]
   serialized = ",".join( str(x) for x in row )
   print("Fibonacci sequence: " + serialized)
   return {"sequence":serialized}
