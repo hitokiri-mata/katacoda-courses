@@ -7,47 +7,36 @@
   "details": {
     "steps": [
       {
-        "title": "Install",
         "text": "step1.md"
       },
       {
-        "title": "Tooling",
         "text": "step2.md"
       },
       {
-        "title": "Register",
         "text": "step3.md"
       },
       {
-        "title": "Call",
         "text": "step4.md"
       },
       {
-        "title": "Inspect",
         "text": "step5.md"
       },
       {
-        "title": "Inspect",
         "text": "step6.md"
       },
       {
-        "title": "Register Via YAML",
         "text": "step7.md"
       },
       {
-        "title": "Register Alternative",
         "text": "step7.md"
       },
       {
-        "title": "NodeJS",
         "text": "step8.md"
       },
       {
-        "title": "Call Node Function",
         "text": "step9.md"
       },
       {
-        "title": "Cleanup",
         "text": "step10.md"
       }
     ],

@@ -1,6 +1,7 @@
 # Call Python Function #
 
 ## Call from CLI ##
+
 Use the Kubeless CLI tool to call the function
 
 `kubeless function call fibonacci --data '{"length":"10"}'`{{execute}}

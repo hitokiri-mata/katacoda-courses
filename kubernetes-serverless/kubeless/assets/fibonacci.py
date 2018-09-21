@@ -14,6 +14,6 @@ def sequence(length):
 
 def values(event = {}, context= {}):
   length = event['data']['length']
-  sequence(lengthlength)
+  return sequence(length)
   
 #print(sequence(18))

@@ -8,7 +8,7 @@ Inspect the execution logs of the function
 
 `kubeless function logs fibonacci`{{execute}}
 
-Call the function with a bad imput
+Call the function with a bad input
 
 `kubeless function call fibonacci --data '{"length":"-1"}'`{{execute}}
 

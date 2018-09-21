@@ -1,4 +1,4 @@
-# Start Kubeless on your Kubernetes Cluster #
+# Install Kubeless #
 
 As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly.
 
@@ -10,7 +10,7 @@ Helm is a package manager for Kubernetes and is initialized and ready. A common 
 
 To install Kubeless onto Kubernetes apply this command:
 
-`helm install --name my-kubeless --namespace kubeless incubator/kubeless --set ui.enabled=true ui.service.externalPort=31000`{{execute}}
+`helm install --name my-kubeless --namespace kubeless incubator/kubeless --set ui.enabled=true --set ui.service.externalPort=31000`{{execute}}
 
 As part of the installation there will be two Pods started in the new `kubeless` namespace on your Kubernetes cluster.
 

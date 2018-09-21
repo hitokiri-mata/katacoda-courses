@@ -8,7 +8,7 @@ You can view ConfigMap and see the the deployed code here:
 
 `kubectl describe configmap fibonacci`{{execute}}
 
-When the kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_.  These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
+When the kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_. These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
 
 `kubectl get crds --namespace kubeless`{{execute}}
 
@@ -16,4 +16,4 @@ On deployment _Kubeless_ starts a pre-baked container containing the Python exec
 
 `kubectl get deployments,pods,services`{{execute}}
 
-You can also explore the Kubeless functions in the Kubernetes dashboard: : https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
+You can also explore the Kubeless functions in the Kubernetes dashboard: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

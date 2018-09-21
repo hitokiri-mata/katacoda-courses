@@ -1,4 +1,4 @@
-# Python Function #
+# Register Python Function #
 
 To deploy a function, the Kubeless CLI tool needs some information:
 
@@ -32,5 +32,3 @@ With the deploy command, Kubeless automatically created a Kubernetes deployment 
 Execute this command until _Available_ turns from 0 to 1
 
 `kubectl get deployments,pods,services`{{execute}}
-
-
