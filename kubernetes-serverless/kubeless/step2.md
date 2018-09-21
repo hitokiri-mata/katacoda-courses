@@ -14,4 +14,6 @@ This tool version will match the controller installed in the next step. Verify t
 
 ## Kubeless Dashboard ##
 
-There is also a user interface as an alternative way to manage _Kubeless_ and your functions. TODO - invoke UI in browser tab.
+There is also a user interface as an alternative way to manage _Kubeless_ and your functions. 
+
+The Kubeless UI: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/

@@ -12,7 +12,8 @@ def sequence(length):
   print("Fibonacci sequence: " + result)
   return {"sequence":result}
 
-def values(event, context):
-  sequence(event.data.length)
+def values(event = {}, context= {}):
+  length = event['data']['length']
+  sequence(lengthlength)
   
 #print(sequence(18))

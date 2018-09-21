@@ -35,16 +35,20 @@
         "text": "step7.md"
       },
       {
-        "title": "NodeJS",
+        "title": "Register Alternative",
         "text": "step7.md"
       },
       {
-        "title": "Call Node Function",
+        "title": "NodeJS",
         "text": "step8.md"
       },
       {
-        "title": "Cleanup",
+        "title": "Call Node Function",
         "text": "step9.md"
+      },
+      {
+        "title": "Cleanup",
+        "text": "step10.md"
       }
     ],
     "intro": {
@@ -64,11 +68,13 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboard": "Dashboard",
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
-    "dashboards": "[{ 'name': 'Kubeless UI', 'port': 8080, 'host': 'host01'"
+    "dashboards": [
+      {"name": "Kuberentes Dash", "port": 30000}, 
+      {"name": "Kubeless UI", "port": 31000}
+    ]
     },
   "backend": {
     "imageid": "minikube"

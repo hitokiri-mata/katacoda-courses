@@ -15,3 +15,5 @@ When the kubeless CLI tool registers your function it sends a custom and declara
 On deployment _Kubeless_ starts a pre-baked container containing the Python executable, then your function's source code is referenced from the ConfigMap and injected into the Python container. In turn, the container is fronted by a Kubernetes Service where you can invoke the function from a Service call. Inspect the Deployment and Service with this command:
 
 `kubectl get deployments,pods,services`{{execute}}
+
+You can also explore the Kubeless functions in the Kubernetes dashboard: : https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/

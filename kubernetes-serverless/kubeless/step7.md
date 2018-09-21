@@ -1,19 +1,27 @@
-# Deploy Node Function #
+# Deploy Function with a Manifest #
 
-There are addtional languages also supported out of the box from Kubeless. Here is a NodeJS example.
+Instead of using the Kubeless CLI, it is possible to deploy Kubeless Functions directly using the Kubernetes API and creating Function objects. A manifest can be defined and submitted to Kubernetes with the `kubectl create` command. Take a look at this example manifest
 
-Deploy the function
+`cat ruby-example.yaml`{{execute}}
 
-`kubeless function deploy hello --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
+Notice at the top the manifest Kind is _Function_. Function is not part of the core set of Kubernetes Kinds. Instead this Kind is an extension added by the Kubeless framework. This illustrates the extensibility of Kubernetes to allow anyone to add their own extensions to the Kubernetes API. The Kubernetes feature of custom resource definitions (CRDs) permits this solution. To see the CRDs that Kubeless has added run this
 
-Excersize the function
+`kubectl get crds --namespace kubeless`{{execute}}
 
-`kubeless function call hello --data '{"kubeless":"rocks"}'`{{execute}}
+Now, let's try running a function submitted by definition through a Kubernetes  manifest file
 
-See it listed,
+`kubectl create -f ruby-example.yaml`{{execute}}
 
-`kubeless function list`{{execute}}
+Wait until the deployment is _Available_.
 
-and described.
+`kubectl get deployments`{{execute}}
 
-`kubeless function describe hello`{{execute}}
+If its needed, add a proxy. It may benignly error as it may have been added in one of the previous lessons.
+
+`kubectl proxy --port 8080 &`{{execute}}
+
+Excersize the function.
+
+`curl localhost:8080/api/v1/namespaces/default/services/ruby-example:8080/proxy/`{{execute}}
+
+Notice all these steps were accomplished with just Kubernetes commands.
