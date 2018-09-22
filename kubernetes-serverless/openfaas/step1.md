@@ -26,7 +26,7 @@ A common Helm _chart_ is predefined for installing OpenFaaS. This `repo add` com
 
 Install the OpenFaaS operator
 
-`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true`{{execute}}
+`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true --set rbac=false`{{execute}}
 
 Watch OpenFaaS starting and verify it's _Available_.
 
