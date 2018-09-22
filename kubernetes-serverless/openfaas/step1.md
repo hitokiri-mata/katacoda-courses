@@ -4,7 +4,7 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 `minikube version && minikube status`{{execute}}
 
-## Kubernetes Setup ##
+## Preparation ##
 
 First, we create two namespaces, one for the OpenFaaS core services _openfaas_ and a second for the functions _openfaas-fn_.
 
@@ -12,9 +12,9 @@ First, we create two namespaces, one for the OpenFaaS core services _openfaas_ a
 
 Then generate a Kubernetes secret for basic authentication for the gateway:
 
-`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=my-password --set rbac=false`{{execute}}
+`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=my-password`{{execute}}
 
-## Helm Install of OpenFaaS Operator ##
+## Install OpenFaaS Operator ##
 
 Helm is a package manager for Kubernetes and is initialized and ready.
 
@@ -32,6 +32,8 @@ Watch OpenFaaS starting and verify it's _Available_.
 
 `kubectl --namespace=openfaas get deployments -l "release=openfaas, app=openfaas"`{{execute}}
 
+## OpenFaaS CLI ##
+
 Finally, install the OpeFaaS command line interface (CLI) tool.
 
 `curl -sSL https://cli.openfaas.com | sudo sh`{{execute}}
@@ -43,3 +45,9 @@ Verify it is installed
 And login to the OpenFaaS gateway
 
 `faas-cli login --username admin --password=my-password --gateway=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+
+## OpenFaaS Portal ##
+
+You can also explore the OpenFaaS functions in the portal. On the right there is a tab called Portal or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+
+When prompted, use the same user name and password that was applied above in the secret creation (admin/my-password). For visibility and understanding, leave this tab open throughout the subsequent steps.
