@@ -1,5 +1,7 @@
 # Kubeless on Kubernetes #
 
+<img src="kubeless.png" alt="drawing" width="300"/>
+
 [Kubeless](https://github.com/kubeless/kubeless) is a Kubernetes-native serverless framework that lets you deploy small bits of code without having to worry about the underlying infrastructure plumbing. It leverages Kubernetes resources to provide auto-scaling, API routing, monitoring, troubleshooting and more.
 
 Exploring _Kubeless_ is a great way to explore this as an architectural pattern on Kubernetes. The combination of a CLI tool, ConfigMaps, pre-baked containers, a controller and some Custom Resource Definition ([CRDs](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)) optionally along with [Kafka](https://kafka.apache.org/) achieves a clean solution for managing functions.

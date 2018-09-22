@@ -2,17 +2,25 @@
   "title": "OpenFaaS",
   "description": "Discovering how OpenFaaS runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"30 minutes",
+  "time":	"20 minutes",  
   "details": {
     "steps": [
       {
-        "title": "Install",
         "text": "step1.md"
+      },
+      {
+        "text": "step2.md"
+      },
+      {
+        "text": "step3.md"
+      },
+      {
+        "text": "step10.md"
       }
     ],
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
+      "code": "env-init.sh",
       "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
     },
     "finish": {
@@ -27,12 +35,15 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboard": "Dashboard",
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n"
-  },
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dash", "port": 30000}, 
+      {"name": "OpenFaaS UI", "port": 31000}
+    ]
+    },
   "backend": {
-    "port": 30000,
-    "imageid": "kubeless"
+    "imageid": "minikube"
   }
 }

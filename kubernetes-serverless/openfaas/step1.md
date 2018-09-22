@@ -1,15 +1,31 @@
-# Start OpenFaaS on your Kubernetes Cluster #
+# Install OpenFaaS #
 
-Helm is a package manager for Kubernetes and a common Helm _chart_ is predefined for that defines the installation. Use Helm to install OpenFaaS with this install command:
+As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use:
 
-`helm install --name todo`{{execute}}
+`minikube version && minikube status`{{execute}}
 
-As part of the installation there will be a few pods started in the new openFaaS namespace on your Kubernetes cluster.
-- The OpenFaaS controller Pod will watch for function objects to be created.
-- The OpenFaaS ui Pod serves up a browser based dashboard showing the functions
+## Kubernetes Setup ##
 
-The other two OpenFaaS Pods assist in the PubSub functionality.
+First, we will create two namespaces, one for the OpenFaaS core services _openfaas_ and a second for the functions _openfaas-fn_.
 
-`kubectl get pods --namespace openfaas --watch`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml`{{execute}}
 
-Once the containers are running, or at least the controller, break out of the watch with Ctrl-C. New functions can now be deployed to OpenFaaS.
+Then generate a Kubernetes secret for basic authentication for the gateway:
+
+kubectl -n openfaas create secret generic basic-auth \
+--from-literal=basic-auth-user=admin \
+--from-literal=basic-auth-password="$PASSWORD"
+
+## Helm Installs OpenFaaS Operator ##
+
+Helm is a package manager for Kubernetes and is initialized and ready.
+
+`helm version`{{execute}}
+
+A common Helm _chart_ is predefined for installing OpenFaaS. This `repo add` command will allow Helm to find the OpenFaaS chart:
+
+`helm repo add openfaas https://openfaas.github.io/faas-netes/`{{execute}}
+
+Install the OpenFaaS operator
+
+`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true`{{execute}}

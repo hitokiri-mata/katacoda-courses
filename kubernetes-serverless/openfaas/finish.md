@@ -13,8 +13,8 @@ With these scenarios you have learned how:
 
 ## References ##
 
-- [OpenFaaS project landing page](https://todo)
-- [OpenFaaS is open source](https://github.com/openfaas/todo)
-- [OpenFaaS documentation](https://todo/).
-- [Helm, a package mananger for Kubernetes](https://helm.sh/)
-- [Helm chart for OpenFaaS](https://github.com/helm/charts/todo)
+- [OpenFaaS project](https://www.openfaas.com/)
+- [OpenFaaS is open source](https://github.com/openfaas/faas)
+- [OpenFaaS documentation](https://docs.openfaas.com/)
+- [Helm, a package manager for Kubernetes](https://helm.sh/)
+- [Helm chart for OpenFaaS](https://github.com/openfaas-incubator/openfaas-operator)

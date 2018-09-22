@@ -6,12 +6,12 @@
       {
         "course_id": "kubeless",
         "title": "Kubeless",
-        "description": "The Kubernetes Native Serverless Framework. Build advanced applications with FaaS on top of Kubernetes"
+        "description": "The Kubernetes Native Serverless Framework. Build advanced applications with FaaS on Kubernetes"
       },
       {
         "course_id": "openfaas",
         "title": "OpenFaaS",
-        "description": "Serverless Functions Made Simple for Kubernetes"
+        "description": "Functions as a Service. A framework for building serverless functions on Kubernetes"
       }
     ]
   }
