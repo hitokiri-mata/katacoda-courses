@@ -1,6 +1,6 @@
 # Kubeless on Kubernetes #
 
-<img src="kubeless.png" alt="drawing" width="300"/>
+![](kubeless.png "Kubernetes-native serverless framework")
 
 [Kubeless](https://github.com/kubeless/kubeless) is a Kubernetes-native serverless framework that lets you deploy small bits of code without having to worry about the underlying infrastructure plumbing. It leverages Kubernetes resources to provide auto-scaling, API routing, monitoring, troubleshooting and more.
 

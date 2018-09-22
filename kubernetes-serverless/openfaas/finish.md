@@ -16,5 +16,6 @@ With these scenarios you have learned how:
 - [OpenFaaS project](https://www.openfaas.com/)
 - [OpenFaaS is open source](https://github.com/openfaas/faas)
 - [OpenFaaS documentation](https://docs.openfaas.com/)
+- [CLI tool](https://github.com/openfaas/faas-cli)
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
 - [Helm chart for OpenFaaS](https://github.com/openfaas-incubator/openfaas-operator)

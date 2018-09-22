@@ -40,7 +40,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dash", "port": 30000}, 
-      {"name": "OpenFaaS UI", "port": 31000}
+      {"name": "OpenFaaS UI", "port": 31112}
     ]
     },
   "backend": {
