@@ -12,7 +12,7 @@ First, we create two namespaces, one for the OpenFaaS core services _openfaas_ a
 
 Then generate a Kubernetes secret for basic authentication for the gateway:
 
-`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password="my-password --set rbac=false"`{{execute}}
+`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=my-password --set rbac=false`{{execute}}
 
 ## Helm Install of OpenFaaS Operator ##
 
