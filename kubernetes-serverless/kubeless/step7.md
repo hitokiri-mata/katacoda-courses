@@ -1,29 +1,19 @@
-# Deploy Function with Manifest #
+# Understanding Kubeless on Kubernetes #
 
-Instead of using the Kubeless CLI, it is possible to deploy Kubeless Functions directly using the Kubernetes API and creating Function objects. A manifest can be defined and submitted to Kubernetes with the `kubectl create` command. Take a look at this example manifest
+The _Kubeless_ secret sauce is your function's source code is deployed into a Kubernetes ConfigMap. The ConfigMap contents is listed with this:
 
-`cat ruby-example.yaml`{{execute}}
+`kubectl get configmaps`{{execute}}
 
-Notice at the top the manifest Kind is _Function_. Function is not part of the core set of Kubernetes Kinds. Instead this Kind is an extension added by the Kubeless framework. This illustrates the extensibility of Kubernetes to allow custom extensions to the Kubernetes API. The Kubernetes feature of custom resource definitions (CRDs) permits this solution. To see the CRDs that Kubeless has added run this
+You can view ConfigMap and see the the deployed code here:
+
+`kubectl describe configmap fibonacci`{{execute}}
+
+When the kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_. These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
 
 `kubectl get crds --namespace kubeless`{{execute}}
 
-Now, let's try running a function submitted by definition through a Kubernetes  manifest file
+On deployment _Kubeless_ starts a pre-baked container containing the Python executable, then your function's source code is referenced from the ConfigMap and injected into the Python container. In turn, the container is fronted by a Kubernetes Service where you can invoke the function from a Service call. Inspect the Deployment and Service with this command:
 
-`kubectl create -f ruby-example.yaml`{{execute}}
+`kubectl get deployments,pods,services`{{execute}}
 
-Wait until the deployment is _Available_.
-
-`kubectl get deployments`{{execute}}
-
-If its needed, add a proxy. It may benignly show error as a previous step already asked you to start a proxyit may have been added in one of the previous lessons.
-
-`kubectl proxy --port 8080 &`{{execute}}
-
-Exercise the function.
-
-`curl localhost:8080/api/v1/namespaces/default/services/ruby-example:8080/proxy/`{{execute}}
-
-This function outputs the latest release version found online for Kubeless.
-
-Notice all these steps were accomplished without Kubeless commands, just Kubernetes commands.
+You can also explore the Kubeless functions in the Kubernetes dashboard: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

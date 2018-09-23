@@ -1,20 +1,15 @@
-# Using Kafka for PubSub Triggers #
+# Deploy NodeJS Function #
 
-(This step is under construction and currently not complete.)
+There are additional languages also supported out of the box from Kubeless. Here is a NodeJS example. Deploy the function
 
-You can trigger any Kubeless function by a [PubSub mechanism](https://kubeless.io/docs/pubsub-functions/). The PubSub function is expected to consume input messages from a predefined topic from a messaging system. Kubeless currently supports using events from Kafka and NATS messaging systems.
+`kubeless function deploy hello --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
 
-## Install Kafka ##
+See the new function _hello.greeting_ listed and confirm the status is _Ready_, it may take a minute.
 
-Add the repo where the Kafka chart can be referenced from
+`kubeless function list`{{execute}}
 
-`helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
+`kubeless function describe hello`{{execute}}
 
-and install the Kafka chart.
+Once ready, run the function
 
-`helm install incubator/kafka --namespace kubeless --name kafka --set rbac.create=true --set kafkaTrigger.enabled=true --set kafkaTrigger.env.kafkaBrokers=brokertodo`{{execute}}
-
-Draft: Next steps are to ensure Kubeless is aware of Kafka via Kubeless chart settings:
-
-kafkaTrigger.enabled=true
-kafkaTrigger.env.kafkaBrokers=(tbd)
+`kubeless function call hello --data '{"kubeless":"rocks"}'`{{execute}}

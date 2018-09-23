@@ -1,6 +1,10 @@
 # Register Python Function #
 
-To deploy a function, the Kubeless CLI tool needs some information:
+Kubeless supports a variety of languages and versions out of the box. To see the list of runtimes use this command
+
+`kubeless get-server-config`{{execute}}
+
+To deploy a Python function, the Kubeless CLI tool needs some information:
 
 - The name you will use to access the function over the Web
 - The [runtime](https://kubeless.io/docs/runtimes/) to be executed to run the code (e.g. Python)

@@ -1,27 +1,20 @@
-# Cleanup #
+# Using Kafka for PubSub Triggers #
 
-## Remove Functions ##
+(This step is under construction and currently not complete.)
 
-Use the Kubeless CLI tool to list and remove the functions:
+You can trigger any Kubeless function by a [PubSub mechanism](https://kubeless.io/docs/pubsub-functions/). The PubSub function is expected to consume input messages from a predefined topic from a messaging system. Kubeless currently supports using events from Kafka and NATS messaging systems.
 
-`kubeless function list`{{execute}}
+## Install Kafka ##
 
-`kubeless function delete fibonacci`{{execute}}
-`kubeless function delete hello`{{execute}}
-`kubeless function delete ruby-example`{{execute}}
+Add the repo where the Kafka chart can be referenced from
 
-After delete, the associated Deployments, Pods, and ConfigMaps will be removed from the Kubernetes _default_ namespace.
+`helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
 
-## Remove Kubeless ##
+and install the Kafka chart.
 
-The Helm installation of Kubeless can be seen in this list:
+`helm install incubator/kafka --namespace kubeless --name kafka --set rbac.create=true --set kafkaTrigger.enabled=true --set kafkaTrigger.env.kafkaBrokers=brokertodo`{{execute}}
 
-`helm list`{{execute}}
+Draft: Next steps are to ensure Kubeless is aware of Kafka via Kubeless chart settings:
 
-Kubeless can be removed from the cluster with this single command:
-
-`helm delete my-kubeless --purge`{{execute}}
-
-This will also remove the _kubeless_ namespace. Verify the remaining namespaces with:
-
-`kubectl get namespaces`{{execute}}
+kafkaTrigger.enabled=true
+kafkaTrigger.env.kafkaBrokers=(tbd)

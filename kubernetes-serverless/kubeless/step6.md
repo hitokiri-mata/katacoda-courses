@@ -1,19 +1,17 @@
-# Understanding Kubeless on Kubernetes #
+# Another Simple Python #
 
-The _Kubeless_ secret sauce is your function's source code is deployed into a Kubernetes ConfigMap. The ConfigMap contents is listed with this:
+To review, here is a very simple Python function. Just two lines:
 
-`kubectl get configmaps`{{execute}}
+`cat get.py`{{execute}}
 
-You can view ConfigMap and see the the deployed code here:
+Register the function
 
-`kubectl describe configmap fibonacci`{{execute}}
+`kubeless function deploy get --runtime python3.6 --from-file get.py --handler get.greeting`{{execute}}
 
-When the kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_. These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
+Wait a few seconds for it to start, then call it.
 
-`kubectl get crds --namespace kubeless`{{execute}}
+`kubeless function call get`{{execute}}
 
-On deployment _Kubeless_ starts a pre-baked container containing the Python executable, then your function's source code is referenced from the ConfigMap and injected into the Python container. In turn, the container is fronted by a Kubernetes Service where you can invoke the function from a Service call. Inspect the Deployment and Service with this command:
+or
 
-`kubectl get deployments,pods,services`{{execute}}
-
-You can also explore the Kubeless functions in the Kubernetes dashboard: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
+`curl localhost:8080/api/v1/namespaces/default/services/get:8080/proxy/"`{{execute}}
