@@ -10,8 +10,8 @@ Use the Kubeless CLI tool to call the function
 
 Run a Kubernetes proxy to expose the cluster at a port:
 
-`kubectl proxy --port 8080 &`{{execute}}
+`kubectl proxy --port 8080 &`{{execute T2}}
 
 And call the function via curl:
 
-`curl --data '{"length":"20"}' localhost:8080/api/v1/namespaces/default/services/fibonacci:8080/proxy/ --header "Content-Type:application/json"`{{execute}}
+`curl --data '{"length":"20"}' localhost:8080/api/v1/namespaces/default/services/fibonacci:8080/proxy/ --header "Content-Type:application/json"`{{execute T1}}
