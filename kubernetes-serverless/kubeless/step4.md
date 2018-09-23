@@ -10,7 +10,7 @@ Use the Kubeless CLI tool to call the function
 
 Run a Kubernetes proxy to expose the cluster at a port:
 
-`kubectl proxy --port 8080 &`{{execute T2}}
+`kubectl proxy --port 8080`{{execute T2}}
 
 And call the function via curl:
 

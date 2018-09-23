@@ -9,6 +9,7 @@ Use the Kubeless CLI tool to list and remove the functions:
 `kubeless function delete fibonacci`{{execute}}
 `kubeless function delete hello`{{execute}}
 `kubeless function delete ruby-example`{{execute}}
+`kubeless function delete get`{{execute}}
 
 After delete, the associated Deployments, Pods, and ConfigMaps will be removed from the Kubernetes _default_ namespace.
 

@@ -18,4 +18,4 @@ and reinspect the logs
 
 or
 
-`kubectl logs -l function=get-python`{{execute}}
+`kubectl logs -l function=fibonacci`{{execute}}

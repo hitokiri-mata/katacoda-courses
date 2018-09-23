@@ -18,11 +18,11 @@ Wait until the deployment is _Available_.
 
 If its needed, add a proxy. It may benignly show error as a previous step already asked you to start a proxyit may have been added in one of the previous lessons.
 
-`kubectl proxy --port 8080 &`{{execute T2}}
+`kubectl proxy --port 8080`{{execute T2}}
 
 Exercise the function.
 
-`curl localhost:8080/api/v1/namespaces/default/services/ruby-example:8080/proxy/`{{execute T1}}
+`echo "The latest version of Kubeless CLI is $(curl -s localhost:8080/api/v1/namespaces/default/services/ruby-example:8080/proxy/)"`{{execute T1}}
 
 This function outputs the latest release version found online for Kubeless.
 
