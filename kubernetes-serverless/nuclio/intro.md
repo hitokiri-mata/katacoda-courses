@@ -2,9 +2,9 @@
 
 (This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  September 23, 2018)
 
-![Nuclio](nuclio-superman.png "Nuclio serverless framework")
+![Nuclio](https://github.com/javajon/katacoda-courses/blob/master/kubernetes-serverless/nuclio/nuclio-superman.png "Nuclio serverless framework")
 
-[Nuclio](https://www.nuclio.com/) Nuclio is an open source serverless platform which allows developers to focus on building and running auto-scaling applications without worrying about managing servers.
+[Nuclio](https://www.nuclio.com/) is an open source serverless platform which allows developers to focus on building and running auto-scaling applications without worrying about managing servers.
 
 - The fastest platform running up to 400,000 function invocations per second
 - Enables simple debugging, regression and a multi-versioned CI/CD pipeline

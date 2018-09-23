@@ -30,21 +30,6 @@ This tool version will match the controller installed in the next step. Verify t
 
 `nuctl --help && nuctl version`{{execute}}
 
------
-Finally, install the Nuclio command-line interface (CLI) tool.
-
-`curl -sSL https://cli.openfaas.com | sudo sh`{{execute}}
-
-Verify it is installed
-
-`faas-cli version`{{execute}}
-
-And login to the Nuclio gateway
-
-`faas-cli login --username admin --password=my-password --gateway=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
-
 ## Nuclio Portal ##
 
-You can also explore the OpenFaaS functions in the portal. On the right there is a tab called Portal or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
-
-When prompted, use the same user name and password that was applied above in the secret creation (admin/my-password). For visibility and understanding, leave this tab open throughout the subsequent steps.
+You can also explore the Nuclio functions in the portal. On the right there is a tab called Nuclio Dashboard or click on this link: https://[[HOST_SUBDOMAIN]]-32050-[[KATACODA_HOST]].environments.katacoda.com/

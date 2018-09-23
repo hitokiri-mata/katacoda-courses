@@ -1,3 +1,3 @@
 # Deploy a Function #
 
-`kubectl -n openfaas-fn apply -f nodeinfo.yaml`{{execute}}
+`nuctl deploy func-name  apply -f nodeinfo.yaml`{{execute}}

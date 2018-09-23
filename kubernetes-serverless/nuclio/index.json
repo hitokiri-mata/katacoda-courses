@@ -1,6 +1,6 @@
 {
-  "title": "OpenFaaS",
-  "description": "Discovering how OpenFaaS runs on Kubernetes.",
+  "title": "Nuclio",
+  "description": "Discovering how Nuclio runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"20 minutes",  
   "details": {
