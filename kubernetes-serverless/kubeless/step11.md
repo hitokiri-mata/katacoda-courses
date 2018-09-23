@@ -34,7 +34,7 @@ Now, call the function
 
 or
 
-` curl http://localhost:8080/api/v1/namespaces/default/services/hello/proxy/`{{execute}}
+`curl localhost:8080/api/v1/namespaces/default/services/hello:8080/proxy/ && echo`{{execute}}
 
 Check the logs
 

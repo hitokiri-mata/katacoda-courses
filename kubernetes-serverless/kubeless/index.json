@@ -3,7 +3,7 @@
   "title": "Kubeless",
   "description": "Discovering how Kubeless runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",
+  "time":	"30 minutes",
   "details": {
     "steps": [
       {
