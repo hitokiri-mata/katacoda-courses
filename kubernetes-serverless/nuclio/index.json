@@ -1,9 +1,8 @@
 {
-  "pathwayTitle": "Serverless",
-  "title": "Kubeless",
-  "description": "Discovering how Kubeless runs on Kubernetes.",
+  "title": "OpenFaaS",
+  "description": "Discovering how OpenFaaS runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",
+  "time":	"20 minutes",  
   "details": {
     "steps": [
       {
@@ -14,21 +13,6 @@
       },
       {
         "text": "step3.md"
-      },
-      {
-        "text": "step4.md"
-      },
-      {
-        "text": "step5.md"
-      },
-      {
-        "text": "step6.md"
-      },
-      {
-        "text": "step7.md"
-      },
-      {
-        "text": "step8.md"
       },
       {
         "text": "step10.md"
@@ -56,7 +40,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Kubeless UI", "port": 31000}
+      {"name": "Nuclio Dashboard", "port": 32050}
     ]
     },
   "backend": {

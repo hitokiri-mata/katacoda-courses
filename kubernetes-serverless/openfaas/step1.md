@@ -20,7 +20,7 @@ Helm is a package manager for Kubernetes and is initialized and ready.
 
 `helm version`{{execute}}
 
-A common Helm _chart_ is predefined for installing OpenFaaS. This `repo add` command will allow Helm to find the OpenFaaS chart:
+A common Helm _chart_ is predefined for installing OpenFaaS. Normally, popular charts appear in the [curated Helm chart repository](https://github.com/kubernetes/charts) and there are plans to move OpenFaaS there. For now, this `repo add` command will allow Helm to find the OpenFaaS chart:
 
 `helm repo add openfaas https://openfaas.github.io/faas-netes/`{{execute}}
 
@@ -34,11 +34,11 @@ Watch OpenFaaS starting and verify it's _Available_.
 
 ## OpenFaaS CLI ##
 
-Finally, install the OpeFaaS command line interface (CLI) tool.
+Finally, install the OpenFaaS command-line interface (CLI) tool.
 
 `curl -sSL https://cli.openfaas.com | sudo sh`{{execute}}
 
-Verify it is installed 
+Verify it is installed
 
 `faas-cli version`{{execute}}
 

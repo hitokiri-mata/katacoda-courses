@@ -10,7 +10,7 @@ Helm is a package manager for Kubernetes and is initialized and ready.
 
 `helm version`{{execute}}
 
-A common Helm _chart_ is predefined for installing _Kubeless_. This command will allow Helm to find the _Kubeless_ chart:
+A common Helm _chart_ is predefined for installing _Kubeless_. Normally, popular charts appear in the [curated Helm chart repository](https://github.com/kubernetes/charts) and there are plans to move Kubeless there. For now, this `repo add` command will allow Helm to find the Kubeless chart:
 
 `helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}}
 
