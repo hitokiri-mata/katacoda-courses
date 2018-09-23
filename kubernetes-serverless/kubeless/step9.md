@@ -2,7 +2,7 @@
 
 There are additional languages also supported out of the box from Kubeless. Here is a NodeJS example. Deploy the function
 
-`kubeless function deploy hello --runtime nodejs6 --from-file hello.js --handler hello.greeting`{{execute}}
+`kubeless function deploy hello --runtime nodejs8 --from-file hello.js --handler hello.greeting`{{execute}}
 
 See the new function _hello.greeting_ listed and confirm the status is _Ready_, it may take a minute.
 

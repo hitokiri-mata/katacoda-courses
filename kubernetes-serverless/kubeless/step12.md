@@ -2,7 +2,7 @@
 
 ## Remove Functions ##
 
-Use the Kubeless CLI tool to list and remove the functions:
+Use the Kubeless CLI tool to list and remove the functions introduced in these scenarios:
 
 `kubeless function list`{{execute}}
 

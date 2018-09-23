@@ -1,6 +1,10 @@
 # Kubeless with Serverless.com #
 
+Install serverless
+
 `npm install serverless -g`{{execute}}
+
+Clone the serverless-kubeless repo and check the example function
 
 `git clone https://github.com/serverless/serverless-kubeless`{{execute}}
 
@@ -8,7 +12,11 @@
 
 `cat serverless.yml`{{execute}}
 
+Download dependencies
+
 `npm install`{{execute}}
+
+Deploy hello function
 
 `serverless deploy`{{execute}}
 
