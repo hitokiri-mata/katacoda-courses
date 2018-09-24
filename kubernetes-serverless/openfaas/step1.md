@@ -6,13 +6,13 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 ## Preparation ##
 
-First, we create two namespaces, one for the OpenFaaS core services _openfaas_ and a second for the functions _openfaas-fn_.
+First, create two namespaces, one for the OpenFaaS core services _openfaas_ and a second for the functions _openfaas-fn_.
 
 `kubectl apply -f https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml`{{execute}}
 
 Then generate a Kubernetes secret for basic authentication for the gateway
 
-`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=my-password`{{execute}}
+`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=user --from-literal=basic-auth-password=$(cat user-password.txt)`{{execute}}
 
 ## Install OpenFaaS Operator ##
 
@@ -28,7 +28,7 @@ Install the OpenFaaS operator
 
 `helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true --set rbac=false`{{execute}}
 
-Watch OpenFaaS starting and verify it's _Available_.
+Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ turns from 0 to 1 once each deployment has initialized.
 
 `kubectl --namespace=openfaas get deployments -l "release=openfaas, app=openfaas"`{{execute}}
 
@@ -42,12 +42,20 @@ Verify it is installed
 
 `faas-cli version`{{execute}}
 
-And login to the OpenFaaS gateway
+At this point there is a OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLIs command from this point going forward require this gateway as a parameter. (It's an inconvenience when using the CLI, but perhaps there is a security concern why this cannot be a sticky setting.). To reduce the verbocity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be 
 
-`faas-cli login --username admin --password=my-password --gateway=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`GW = $(minikube service gateway-external  --url)`
+
+But on Katacoda, because of the server virtualization the gateway is here
+
+`GW=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+
+Once the gateway is obtained, the first action is to login
+
+`faas-cli login --username user --password-stdin --gateway=$GW | cat user-password.txt`{{execute}}
 
 ## OpenFaaS Portal ##
 
-You can also explore the OpenFaaS functions in the portal. On the right there is a tab called Portal or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+You can also explore the OpenFaaS functions in the portal. On the right there is a tab called _OpenFaaS Portal_ or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
 
-When prompted, use the same user name and password that was applied above in the secret creation (admin/my-password). For visibility and understanding, leave this tab open throughout the subsequent steps.
+When prompted, use the same user name and password that was applied above in the secret creation (user/user). For visibility and understanding, leave this tab open for the subsequent steps.

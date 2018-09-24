@@ -1,5 +1,9 @@
 # Removing OpenFaaS #
 
+Remove the functions
+
+`faas-cli remove fibonacci --gateway $GW`{{external}}
+
 All control plane components can be cleaned up with helm:
 
 `helm delete --purge openfaas`{{execute}}
