@@ -25,10 +25,10 @@ A common Helm _chart_ is predefined for installing OpenFaaS. Normally, popular c
 `helm repo add openfaas https://openfaas.github.io/faas-netes/`{{execute}}
 
 Install the OpenFaaS operator
-
+n
 `helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true --set rbac=false`{{execute}}
 
-Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ turns from 0 to 1 once each deployment has initialized.
+Watch the 6 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
 
 `kubectl --namespace=openfaas get deployments -l "release=openfaas, app=openfaas"`{{execute}}
 
@@ -42,9 +42,9 @@ Verify it is installed
 
 `faas-cli version`{{execute}}
 
-At this point there is a OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLIs command from this point going forward require this gateway as a parameter. (It's an inconvenience when using the CLI, but perhaps there is a security concern why this cannot be a sticky setting.). To reduce the verbocity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be 
+At this point there is a OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands from this point going forward require this gateway as a parameter. (It's an inconvenience when using the CLI, but perhaps there is a security concern why this cannot be a sticky setting.). To reduce the verbocity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be 
 
-`GW = $(minikube service gateway-external  --url)`
+`GW=$(minikube service gateway-external --namespace openfaas --url)`
 
 But on Katacoda, because of the server virtualization the gateway is here
 
@@ -52,7 +52,7 @@ But on Katacoda, because of the server virtualization the gateway is here
 
 Once the gateway is obtained, the first action is to login
 
-`faas-cli login --username user --password-stdin --gateway=$GW | cat user-password.txt`{{execute}}
+`cat user-password.txt | faas-cli login --username user --password-stdin --gateway=$GW`{{execute}}
 
 ## OpenFaaS Portal ##
 
