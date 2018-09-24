@@ -43,4 +43,3 @@ Check the logs
 Inspect Serverless
 
 `serverless info`{{execute}}
-

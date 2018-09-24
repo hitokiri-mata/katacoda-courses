@@ -10,7 +10,7 @@ First, we create two namespaces, one for the OpenFaaS core services _openfaas_ a
 
 `kubectl apply -f https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml`{{execute}}
 
-Then generate a Kubernetes secret for basic authentication for the gateway:
+Then generate a Kubernetes secret for basic authentication for the gateway
 
 `kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=my-password`{{execute}}
 
@@ -36,7 +36,7 @@ Watch OpenFaaS starting and verify it's _Available_.
 
 Finally, install the OpenFaaS command-line interface (CLI) tool.
 
-`curl -sSL https://cli.openfaas.com | sudo sh`{{execute}}
+`curl -sSL https://cli.openfaas.com | sh`{{execute}}
 
 Verify it is installed
 

@@ -1,6 +1,6 @@
 # Conclusion #
 
-Nuclio is a Kubernetes...
+Nuclio is a new "serverless" project, derived from Iguazio's elastic data life-cycle management service for high-performance events and data processing. It is also an emerging serverless solution for Kubernetes.
 
 ## Lessons Learned ##
 
@@ -13,9 +13,9 @@ With these scenarios you have learned how:
 
 ## References ##
 
-- [Nuclio project](https://www.openfaas.com/)
-- [Nuclio is open source](https://github.com/openfaas/faas)
-- [Nuclio documentation](https://docs.openfaas.com/)
-- [CLI tool](https://github.com/openfaas/faas-cli)
+- [Nuclio project](https://nuclio.io/)
+- [Nuclio is open source](https://github.com/nuclio/nuclio)
+- [Nuclio documentation](https://nuclio.io/docs/latest/)
+- [CLI tool](https://nuclio.io/docs/latest/setup/k8s/getting-started-k8s/#deploy-a-function-with-the-nuclio-cli-nuctl)
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
-- [Helm chart for Nuclio](https://github.com/openfaas-incubator/openfaas-operator)
+- [Helm chart for Nuclio](https://github.com/nuclio/nuclio/tree/master/hack/k8s/helm/nuclio)
