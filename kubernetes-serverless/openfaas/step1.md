@@ -25,7 +25,7 @@ A common Helm _chart_ is predefined for installing OpenFaaS. Normally, popular c
 `helm repo add openfaas https://openfaas.github.io/faas-netes/`{{execute}}
 
 Install the OpenFaaS operator
-n
+
 `helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true --set rbac=false`{{execute}}
 
 Watch the 6 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
@@ -42,7 +42,7 @@ Verify it is installed
 
 `faas-cli version`{{execute}}
 
-At this point there is a OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands from this point going forward require this gateway as a parameter. (It's an inconvenience when using the CLI, but perhaps there is a security concern why this cannot be a sticky setting.). To reduce the verbocity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be 
+At this point there is a OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands from this point going forward require this gateway as a parameter. (It's an inconvenience when using the CLI, but perhaps there is a security concern why this cannot be a sticky setting.). To reduce the verbosity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be 
 
 `GW=$(minikube service gateway-external --namespace openfaas --url)`
 
@@ -50,7 +50,7 @@ But on Katacoda, because of the server virtualization the gateway is here
 
 `GW=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
-Once the gateway is obtained, the first action is to login
+With the gateway access, the first action is to login
 
 `cat user-password.txt | faas-cli login --username user --password-stdin --gateway=$GW`{{execute}}
 
