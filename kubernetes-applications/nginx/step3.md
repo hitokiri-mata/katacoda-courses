@@ -18,12 +18,12 @@ like we did in the previous step, inspect the starting resources. This time they
 
 `kubectl get deployments,replicasets,pods,services`{{execute}}.
 
-Notice in this deployment there are three Pods declared.  The service will load balance between the Pods, round-robin style.
+Notice in this deployment there are three Pods declared. The service will load balance between the Pods, round-robin style.
 
 Once available, you can exercise the service two ways. First, simply from the command line,
 
-`curl $(minikube ip)/`{{execute}}
+`curl $(minikube ip):31112`{{execute}}
 
-the UI for nginx-two can also be seen from the tab "nginx-two" above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+the same UI for nginx-two can also be seen in your browser from the "nginx-two" tab above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
 
 As an alternative to the kubectl CLI you can also observe both deployments in the Kubernetes Dashboard by clicking on the tab above this command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
