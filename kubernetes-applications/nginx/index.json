@@ -1,5 +1,4 @@
 {
-  "private": true,
   "pathwayTitle": "Nginx",
   "title": "Nginx",
   "description": "Discovering how Nginx runs on Kubernetes.",
