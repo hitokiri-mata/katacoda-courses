@@ -1,6 +1,6 @@
 # Deploy Nginx, First Technique #
 
-The command-line interface (CLI) used to manage Kubernetes is appropriately named `kubectl`. We will use this tool to install the applications.
+The command-line interface (CLI) used to manage Kubernetes is appropriately named `kubectl`. We will use this tool to install the applications. Verify it's working.
 
 `kubectl version`{{execute}}
 
@@ -16,7 +16,7 @@ Nginx starts fairly quickly so the Pod status may be already running creating, o
 
 `kubectl get deployments,pods,services`{{execute}}.
 
-At this point Nginx is running, but from the outside at this terminal it cannot be easily reached. We can check this since Minikube has the service listed, but with no available address.
+Nginx is running once the deployment status reports `Running`. However, once its running from outside outside of Kubernetes at this terminal it cannot be easily reached. We can check this since Minikube has the service listed, but with no available address.
 
 `minikube service list`{{execute}}
 
@@ -24,9 +24,11 @@ Let's change the Service type from ClusterIP to NodePort.
 
 `kubectl expose deployment nginx-one --type=NodePort`{{execute}}
 
+Now check the service list again and notice the nginx-one service now is listed with an ip.
+
 `minikube service list`{{execute}}
 
-Currently, the service on a random Kubernetes NodePort (some value above 30000) and this next line will force the NodePort to 31111
+The service on a random Kubernetes NodePort (some value above 30000) and this next line will force the NodePort to 31111
 
 `kubectl patch service nginx-one --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 

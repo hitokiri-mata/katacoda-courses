@@ -1,6 +1,6 @@
 # Kubernetes as Minikube is Running #
 
-As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use:
+As you see, your Kubernetes cluster based on Minikube is will be available in a moment. Verify it's ready for your use:
 
 `minikube version && minikube status`{{execute}}
 
@@ -8,8 +8,8 @@ Notice that while Minikube is running, there is nothing deployed except for a si
 
 `kubectl get deployments,pods,services`{{execute}}
 
-and no services list as available
+and no services are listed.
 
-`minikube service list --namespace default`{{execute}}.
+`minikube service list --namespace default`{{execute}}
 
 A clean slate, let's deploy our first application.
