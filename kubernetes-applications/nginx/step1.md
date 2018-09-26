@@ -4,12 +4,12 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 `minikube version && minikube status`{{execute}}
 
-Notice that while Minikube is running, there is nothing deployed,
+Notice that while Minikube is running, there is nothing deployed except for a single service/kubernetes item,
 
-`kubectl get deployments,pods,services`{execute}
+`kubectl get deployments,pods,services`{{execute}}
 
 and no services list as available
 
-`minikube service list`{{execute}}.
+`minikube service list --namespace default`{{execute}}.
 
 A clean slate, let's deploy our first application.

@@ -4,12 +4,26 @@ Kubernetes relies on manifests as declarations or the state of the cluster. When
 
 Let's inspect a declaration for Nginx,
 
-`cat nginx.yaml'{{execute}}
+`cat nginx.yaml`{{execute}}
 
 Typically manifests are places in source version control in YAML file format. Kubernetes also accepts manifests as JSON but since we often edit these files, the YAML format tends to be easier to read and edit than JSON.
 
-Notice the manifest defined both a `Kind: Deployment` and a `Kind: Service`. The Deployment defined the Nginx in a container and in a Pod. The Service is a access point and load balancer in front of the Pod.  Notice we have three Pods specified.
+Let's deploy the manifest.
 
-The UI for nginx-one can not be seen from the tab "nginx-two" above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+`kubectl create -f nginx.yaml`{{execute}}
 
-You can also observe both deployments in the Kubernetes Dashboard by clicking on the tab above this command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
+Notice the manifest defined both a `Kind: Deployment` and a `Kind: Service`. The Deployment defined the Nginx in a container and in a Pod. The Service is a access point and load balancer in front of the Pod. This specific deployment has three Pods specified.
+
+like we did in the previous step, inspect the starting resources. This time they are named `nginx-two`.
+
+`kubectl get deployments,replicasets,pods,services`{{execute}}.
+
+Notice in this deployment there are three Pods declared.  The service will load balance between the Pods, round-robin style.
+
+Once available, you can exercise the service two ways. First, simply from the command line,
+
+`curl $(minikube ip)/`{{execute}}
+
+the UI for nginx-two can also be seen from the tab "nginx-two" above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+
+As an alternative to the kubectl CLI you can also observe both deployments in the Kubernetes Dashboard by clicking on the tab above this command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

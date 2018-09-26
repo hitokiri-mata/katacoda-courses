@@ -1,4 +1,5 @@
 {
+  "private": true,
   "pathwayTitle": "Nginx",
   "title": "Nginx",
   "description": "Discovering how Nginx runs on Kubernetes.",
@@ -38,8 +39,8 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nginx-One", "port": 31001},
-      {"name": "Nginx-Two", "port": 31002}
+      {"name": "Nginx-One", "port": 31111},
+      {"name": "Nginx-Two", "port": 31112}
     ]
     },
   "backend": {
