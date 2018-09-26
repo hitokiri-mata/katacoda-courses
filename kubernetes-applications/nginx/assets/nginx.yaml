@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 80
     targetPort: nginx-pod-port
-    nodePort: 31111
+    nodePort: 31112
     protocol: TCP
     name: web
   selector:
@@ -18,7 +18,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-two-deployment
 spec:
   selector:
     matchLabels:
