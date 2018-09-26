@@ -1,9 +1,9 @@
 {
-  "private": true,
-  "title": "Nuclio",
-  "description": "Discovering how Nuclio runs on Kubernetes.",
+  "pathwayTitle": "Nginx",
+  "title": "Nginx",
+  "description": "Discovering how Nginx runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"10 minutes",
   "details": {
     "steps": [
       {
@@ -16,7 +16,28 @@
         "text": "step3.md"
       },
       {
-        "text": "step10.md"
+        "text": "step4.md"
+      },
+      {
+        "text": "step5.md"
+      },
+      {
+        "text": "step6.md"
+      },
+      {
+        "text": "step7.md"
+      },
+      {
+        "text": "step8.md"
+      },
+      {
+        "text": "step9.md"
+      },
+      {
+        "text": "step11.md"
+      },
+      {
+        "text": "step12.md"
       }
     ],
     "intro": {
@@ -41,7 +62,8 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nuclio Dashboard", "port": 32050}
+      {"name": "Nginx-One", "port": 31001},
+      {"name": "Nginx-Two", "port": 31002}
     ]
     },
   "backend": {

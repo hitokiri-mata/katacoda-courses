@@ -1,0 +1,24 @@
+{
+    "title": "Kubernetes: Serverless and Functions",
+    "icon": "fa-kubernetes",
+    "description": "Discover different techniques for running functions on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "kubeless",
+        "title": "Kubeless",
+        "description": "The Kubernetes Native Serverless Framework. Build advanced applications with FaaS on Kubernetes"
+      },
+      {
+        "course_id": "openfaas",
+        "title": "OpenFaaS",
+        "description": "Functions as a Service. A framework for building serverless functions on Kubernetes"
+      },
+      {
+        "course_id": "nuclio",
+        "title": "Nuclio",
+        "description": "Serverless Functions for Real-Time and Data-Driven Applications"
+      }
+    
+    ]
+  }
+  

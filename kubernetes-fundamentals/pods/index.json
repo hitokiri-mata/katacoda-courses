@@ -1,4 +1,5 @@
 {
+  "private": true,
   "title": "Pods",
   "description": "About Kubernetes Pods",
   "details": {

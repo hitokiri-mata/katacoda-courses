@@ -1,4 +1,5 @@
 {
+  "private": true,
   "title": "Namespaces",
   "description": "Kubernetes namespaces",
   "details": {
