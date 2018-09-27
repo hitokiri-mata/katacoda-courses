@@ -1,0 +1,3 @@
+# Verfying RabbitMQ #
+
+TODO
