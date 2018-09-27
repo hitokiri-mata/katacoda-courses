@@ -4,7 +4,7 @@ The command-line interface (CLI) used to manage Kubernetes is appropriately name
 
 `kubectl version`{{execute}}
 
-In the first deployment we simple pass a few parameters that declare to Kubernetes our intent to make Nginx available. Use this command
+In the first deployment we simply pass a few parameters that declare to Kubernetes our intent to make Nginx available. Use this command
 
 `kubectl run nginx-one --image=nginx --port=80`{{execute}}
 
@@ -16,7 +16,7 @@ Nginx starts fairly quickly so the Pod status may be already running creating, o
 
 `kubectl get deployments,pods,services`{{execute}}.
 
-Nginx is running once the deployment Availaibty status reaches `1` and the Pod status reports `Running`. However, from outside of Kubernetes at this terminal it cannot be easily reached. We can check this since Minikube has the service listed, but with no available address.
+Nginx is running once the deployment _Available_ status reaches `1` and the Pod status reports `Running`. However, from outside of Kubernetes at this terminal, it cannot be easily reached. We can check this since Minikube has the service listed, but with no available address.
 
 `minikube service list`{{execute}}
 
@@ -24,7 +24,7 @@ Let's change the Service type from ClusterIP to NodePort.
 
 `kubectl expose deployment nginx-one --type=NodePort`{{execute}}
 
-Now check the service list again and notice the nginx-one service now is listed with an ip.
+Now check the service list again and notice the nginx-one service now is listed with an URL.
 
 `minikube service list`{{execute}}
 
