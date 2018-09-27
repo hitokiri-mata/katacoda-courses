@@ -1,4 +1,5 @@
 {
+  "private": true,
   "pathwayTitle": "RabbitMQ",
   "title": "RabbitMQ",
   "description": "Discovering how RabbitMQ runs on Kubernetes.",

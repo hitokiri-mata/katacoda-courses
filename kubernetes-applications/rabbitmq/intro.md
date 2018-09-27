@@ -1,6 +1,7 @@
 # RabbitMQ on Kubernetes #
 
 ![RabbitMQ](/javajon/courses/kubernetes-applications/rabbitmq/assets/rabbitmq.png "Robust messaging for applications to connect and scale.")
+
 Robust messaging for applications to connect and scale.
 
 These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster based on Minikube and a CLI tool called kubectl, a few steps will get a RabbitMQ running.
