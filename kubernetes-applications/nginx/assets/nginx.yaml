@@ -33,4 +33,4 @@ spec:
     nodePort: 31112
     protocol: TCP
   selector:
-    app: nginx
+    app: nginx-two

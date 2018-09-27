@@ -15,7 +15,7 @@ Hopefully you also understand how Kubernetes is a new type of data center _opera
 
 ## References ##
 
-- [Nginx](https://nginx.io/)
+- [Nginx](https://www.nginx.com/)
 - [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 - [Round robin load balancing](https://en.wikipedia.org/wiki/Round-robin_DNS)
 - [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
