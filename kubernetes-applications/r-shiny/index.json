@@ -1,9 +1,9 @@
 {
-  "pathwayTitle": "RabbitMQ",
+  "pathwayTitle": "R Shiny",
   "title": "RabbitMQ",
-  "description": "Discovering how RabbitMQ runs on Kubernetes.",
+  "description": "Discovering how Shiny applications run on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"15 minutes",
+  "time":	"10 minutes",
   "details": {
     "steps": [
       {

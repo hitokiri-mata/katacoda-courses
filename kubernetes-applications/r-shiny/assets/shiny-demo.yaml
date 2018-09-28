@@ -30,6 +30,5 @@ spec:
     targetPort: shiny-port
     nodePort: 31111
     protocol: TCP
-    name: web
   selector:
     app: r-shiny

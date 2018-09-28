@@ -6,8 +6,9 @@ Provisioning RabbitMQ on Kubernetes is easily done by invoking this [stable Helm
 --name my-rabbit \
 --namespace rabbit \
 --set replicas=3 \
---set service.type=NodePort \
---set rabbitmqManagerPort=31111 \
+--set serviceType=NodePort \
+--set rabbitmq.managerPort=31111 \
+--set rabbitmq.nodePort=31112 \
 --set rabbitmq.username=admin \
 --set rabbitmq.password=admin \
 --set rbacEnabled=false`{{execute}}
