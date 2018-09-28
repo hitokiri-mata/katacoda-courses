@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: shiny-wordcloud
+spec:
+  template:
+    metadata:
+      labels:
+        app: shiny-wordcloud
+    spec:
+      containers:
+      - name: shiny-wordcloud
+        image: flaviobarros/shiny-wordcloud
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3838
+          name: shiny-port
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: shiny-wordcloud
+  labels:
+    app: shiny-wordcloud
+spec:
+  type: NodePort
+  ports:
+  - port: 3838
+    targetPort: shiny-port
+    nodePort: 31112
+    protocol: TCP
+    name: web
+  selector:
+    app: shiny-wordcloud

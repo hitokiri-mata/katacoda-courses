@@ -9,14 +9,14 @@
         "description": "Start here to learn how to deploy applications to Kubernetes"
       },
       {
+        "course_id": "r-shiny",
+        "title": "Shiny R Server",
+        "description": "Run a Shiny R demonstration application on Kubernetes"
+      },
+      {
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Run RabbitMQ on Kubernetes"
-      },
-      {
-        "course_id": "r-shiny",
-        "title": "R Shiny Server",
-        "description": "Run an R Shiny engine on Kubernetes"
       }
     ]
   }
