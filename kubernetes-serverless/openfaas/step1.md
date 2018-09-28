@@ -56,6 +56,6 @@ With the gateway access, the first action is to login
 
 ## OpenFaaS Portal ##
 
-You can also explore the OpenFaaS functions in the portal. On the right there is a tab called _OpenFaaS Portal_ or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+You can also explore the OpenFaaS functions in the portal. On the right there is a tab called _OpenFaaS Portal_ or from this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
 
 When prompted, use the same user name and password that was applied above in the secret creation (user/user). For visibility and understanding, leave this tab open for the subsequent steps.

@@ -32,4 +32,4 @@ This tool version will match the controller installed in the next step. Verify t
 
 ## Nuclio Portal ##
 
-You can also explore the Nuclio functions in the portal. On the right there is a tab called Nuclio Dashboard or click on this link: https://[[HOST_SUBDOMAIN]]-32050-[[KATACODA_HOST]].environments.katacoda.com/
+You can also explore the Nuclio functions in the portal. On the right there is a tab called Nuclio Dashboard or from this link: https://[[HOST_SUBDOMAIN]]-32050-[[KATACODA_HOST]].environments.katacoda.com/

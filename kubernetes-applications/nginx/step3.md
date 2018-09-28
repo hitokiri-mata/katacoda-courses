@@ -24,6 +24,6 @@ Once available, you can exercise the service two ways. First, simply from the co
 
 `curl $(minikube ip):31112`{{execute}}
 
-the same UI for nginx-two can also be seen in your browser from the "nginx-two" tab above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
+the same UI for nginx-two can also be seen in your browser from the "nginx-two" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
 
 As an alternative to the kubectl CLI you can also observe both deployments in the Kubernetes Dashboard by clicking on the tab above this command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

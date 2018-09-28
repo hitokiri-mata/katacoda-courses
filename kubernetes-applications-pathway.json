@@ -10,8 +10,8 @@
       },
       {
         "course_id": "r-shiny",
-        "title": "Shiny R Server",
-        "description": "Run a Shiny R demonstration application on Kubernetes"
+        "title": "R Shiny Application",
+        "description": "Run R based Shiny applications on Kubernetes"
       },
       {
         "course_id": "rabbitmq",

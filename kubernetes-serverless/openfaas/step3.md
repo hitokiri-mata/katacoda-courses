@@ -10,4 +10,4 @@ then change the NodePort value to a known port above 30000
 
 `kubectl patch service prometheus-todo --namespace=openfaas --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31000}]'`{{execute}}
 
-With these to changes you can view the Prometheus Portal. On the right there is a tab called _Prometheus Portal_ or click on this link: https://[[HOST_SUBDOMAIN]]-31113-[[KATACODA_HOST]].environments.katacoda.com/
+With these to changes you can view the Prometheus Portal. On the right there is a tab called _Prometheus Portal_ or from this link: https://[[HOST_SUBDOMAIN]]-31113-[[KATACODA_HOST]].environments.katacoda.com/

@@ -36,6 +36,6 @@ and now Minikube lists the address for this exposed service's NodePort.
 
 `minikube service list`{{execute}}
 
-The UI for nginx-one can be seen from the tab "nginx-one" above the command line area or click on this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
+The UI for nginx-one can be seen from the tab "nginx-one" above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 Next, let's explore a better way to deploy the same application.
