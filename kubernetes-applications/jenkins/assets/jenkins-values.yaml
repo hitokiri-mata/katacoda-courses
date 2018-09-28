@@ -1,0 +1,39 @@
+# Includes complete Jenkins configuration in order to run Jenkins on Kubernetes
+# To install run:
+# helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yam
+
+Master:
+ # Image: "jenkins/jenkins"
+ # ImageTag: "2.119-alpine"
+  # No password for demonstration purposes
+  UseSecurity: false
+  Memory: "512Mi"
+  ServiceType: NodePort
+
+# List of plugins to be install during Jenkins master start
+  InstallPlugins:
+    - kubernetes:1.6.0
+    - workflow-aggregator:2.5
+    - workflow-job:2.21
+    - git:3.8.0
+
+Agent:
+  Enabled: true
+
+  # This container run the Jenkins Job. Instead of the default jenkinsci/jnlp-slave
+  # it is replaced with a Jenkins Slave with Docker client and kubectl CLI abilities.
+  Image: radumatei/jenkins-slave-docker
+  ImageTag: kubectl
+  volumes:
+    - type: HostPath
+      hostPath: /var/run/docker.sock
+      mountPath: /var/run/docker.sock
+    - type: HostPath
+      hostPath: /root/.kube
+      mountPath: /root/.kube
+
+rbac:
+  install: false
+  serviceAccountName: default
+  apiVersion: v1beta1
+  roleRef: cluster-admin

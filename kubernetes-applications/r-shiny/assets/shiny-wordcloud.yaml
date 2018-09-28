@@ -14,7 +14,7 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3838
-          name: shiny-port
+          name: shinyport
       restartPolicy: Always
 ---
 kind: Service
@@ -27,7 +27,7 @@ spec:
   type: NodePort
   ports:
   - port: 3838
-    targetPort: shiny-port
+    targetPort: shinyport
     nodePort: 31112
     protocol: TCP
   selector:
