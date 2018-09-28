@@ -7,9 +7,13 @@ A growing list of public stable charts are available and can be seen with this l
 
 `helm search stable`{{execute}}
 
+We are interested in the stable/jenkins chart listed here
+
+`helm search stable/jenkins`{{execute}}
+
 To start Jenkins use Helm to install the stable/Jenkins chart.
 
-'helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yaml`{{execute}}
+`helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yaml`{{execute}}
 
 The jenkins-values.yaml file includes details for the Jenkins configuration to ensure it starts with all the appropriate plugins, along with its Kubernetes plugin. The Jenkins chart also installs a definition for a custom container for running Jenkins jobs. The jenkins-slave-docker:kubectl Docker container image contains the KubeCtl CLI application that the Jenkinsfile in hello-world-instrumented will call. The Jenkinsfile handles the compiling, Docker image building, deploying and canary deployment logic.
 
@@ -27,9 +31,9 @@ There will now be a Jenkins service running that you can access through a Kubern
 
 `minikube service list`{{execute}}
 
-Look for the Jenkins service in the namespace `jenkins` and ask Minikube to point your default browser to the Jenkins UI with this:
+Look for the Jenkins service in the namespace `jenkins`. The Jenkins portal can not be accessed by clicking on the `Jenkins Portal` tab located above the terminal window on the right or by clicking this link:
 
-`minikube service -n jenkins jenkins`{{execute}}
+: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkins dashboard observe those plugins are present.
 
