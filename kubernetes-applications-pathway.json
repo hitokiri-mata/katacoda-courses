@@ -17,6 +17,11 @@
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Run RabbitMQ on Kubernetes"
+      },
+      {
+        "course_id": "jenkins",
+        "title": "Jenkins",
+        "description": "Run Jenkins on Kubernetes"
       }
     ]
   }

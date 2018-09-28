@@ -37,7 +37,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Jenkins", "port": 31111}
+      {"name": "Jenkins Portal", "port": 31111}
     ]
     },
   "backend": {
