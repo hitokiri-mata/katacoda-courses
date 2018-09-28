@@ -3,8 +3,8 @@
 # helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yam
 
 Master:
-  Image: "jenkins/jenkins"
-  ImageTag: "2.60.3-alpine"
+  Image: "jenkinsci/jenkins"
+  ImageTag: "lts"
   # No password for demonstration purposes
   UseSecurity: false
   Master.resources: {requests: {cpu: 50m, memory: 512Mi}, limits: {cpu: 2000m, memory: 2048Mi}}
