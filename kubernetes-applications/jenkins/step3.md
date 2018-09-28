@@ -41,6 +41,7 @@ In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkin
 
 Here is an example test pipeline script that inspects environment variables and uses KubeCtl commands to manipulate Kubernetes. Create a pipeline in Jenkins, paste this script and build the pipeline. View the logs to see the previously submitted secret Quay credentials.
 
+`example`{{copy}}
 `node {
   stage ('Inspections') {
 
