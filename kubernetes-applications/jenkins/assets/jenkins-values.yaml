@@ -3,12 +3,13 @@
 # helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yam
 
 Master:
- # Image: "jenkins/jenkins"
- # ImageTag: "2.119-alpine"
+  Image: "jenkins/jenkins"
+  ImageTag: "2.119-alpine"
   # No password for demonstration purposes
   UseSecurity: false
-  Memory: "512Mi"
+  Master.resources: "{requests: {cpu: 50m, memory: 512Mi}, limits: {cpu: 2000m, memory: 2048Mi}}""
   ServiceType: NodePort
+  NodePort: 31111 
 
 # List of plugins to be install during Jenkins master start
   InstallPlugins:
