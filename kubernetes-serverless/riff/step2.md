@@ -1,6 +1,6 @@
 # Deploy a Function #
 
-`eval $(minikube docker-env --shell=sh)`{{execute}}
+`eval $(minikube docker-env --shell=sh)`{{execute T1}}
 
 
 `export GATEWAY="minikube service --url demo-riff-http-gateway"`{{execute}}
