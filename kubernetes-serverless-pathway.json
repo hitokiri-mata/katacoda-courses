@@ -17,8 +17,12 @@
         "course_id": "nuclio",
         "title": "Nuclio",
         "description": "Serverless Functions for Real-Time and Data-Driven Applications"
+      },
+      {
+        "course_id": "riff",
+        "title": "Riff",
+        "description": "Riff is for functions. Leveraging Knative and the Istio mesh."
       }
-    
     ]
   }
   
