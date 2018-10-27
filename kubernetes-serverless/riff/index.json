@@ -1,5 +1,4 @@
 {
-  "private": true,
   "title": "Riff",
   "description": "Discovering how Riff runs on Kubernetes.",
   "difficulty":	"Introduction",
