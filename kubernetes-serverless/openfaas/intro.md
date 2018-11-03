@@ -1,6 +1,6 @@
 # OpenFaaS on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  September 22, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  November 2, 2018)
 
 ![OpenFaaS](/javajon/courses/kubernetes-serverless/openfaas/assets/openfaas.png "OpenFaaS serverless framework")
 

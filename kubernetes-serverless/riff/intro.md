@@ -1,6 +1,6 @@
 # Riff on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  October 26, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  November 2, 2018)
 
 ![Riff](/javajon/courses/kubernetes-serverless/riff/assets/riff.png "Riff is for functions")
 

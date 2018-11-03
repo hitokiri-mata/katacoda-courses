@@ -28,7 +28,7 @@ Install the OpenFaaS operator
 
 `helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set basic_auth=true --set functionNamespace=openfaas-fn --set operator.create=true --set rbac=false`{{execute}}
 
-Watch the 6 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
+Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
 
 `kubectl --namespace=openfaas get deployments -l "release=openfaas, app=openfaas"`{{execute}}
 

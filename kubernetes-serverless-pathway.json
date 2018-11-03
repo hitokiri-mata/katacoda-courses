@@ -22,6 +22,11 @@
         "course_id": "riff",
         "title": "Riff",
         "description": "Riff is for functions. Leveraging Knative and the Istio mesh."
+      },
+      {
+        "course_id": "camel-k",
+        "title": "Camel-K",
+        "description": "Camel-K is for functions. Leveraging Knative and the Istio mesh."
       }
     ]
   }
