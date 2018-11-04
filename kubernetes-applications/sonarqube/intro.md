@@ -1,6 +1,6 @@
 # SonarQube on Kubernetes #
 
-![SonarQube](/javajon/courses/kubernetes-applications/rabbitmq/assets/sonarqube.png "Code Analysis with SonarQube on Kubernetes.")
+![SonarQube](/javajon/courses/kubernetes-applications/sonarqube/assets/sonarqube.png "Code Analysis with SonarQube on Kubernetes.")
 
 Setting up your SonarQube services(s) as fragile [snowflakes](https://martinfowler.com/bliki/SnowflakeServer.html) is both common and not a recommended technique. Any developer should be able to quickly start a service or rely on a team service that matches the same behaviors. The latest SonarQube version, it's plugins and it's configurations should also be easily adjustable. Your software development lifecycle processes (SDLC) should embrace the versioned configuration and deployment of SonarQube across a variety of [cattle (not pets)](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) targets.
 
