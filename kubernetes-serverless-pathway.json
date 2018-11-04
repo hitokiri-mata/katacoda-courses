@@ -26,7 +26,7 @@
       {
         "course_id": "camel-k",
         "title": "Camel-K",
-        "description": "Camel-K is for functions. Leveraging Knative and the Istio mesh."
+        "description": "Camel-K is Apache Camel with Serverless on Knative and Kubernetes."
       }
     ]
   }

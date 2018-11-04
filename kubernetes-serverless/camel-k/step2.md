@@ -1,30 +1,20 @@
-# Install Camel-K #
+# Registry Setup
 
-As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use:
+## Establish Private Registry on Kubernetes 
 
-`minikube version && minikube status`{{execute}}
+`helm install --name registry stable/docker-registry --set service.type=NodePort{{execute}}`
 
-`minikube addons enable registry`{{execute}}
+This start a private container registry that Camel K will use. To verify it is accessable find the IP and PORT of the service:
 
-Camel-K has a command line interface for installing, inspecting, running functions on Kubernetes. Camel-K also leverages the advantages of Knative and Istio.  
+`export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services registry-docker-registry)`{{execute}}
 
-To install the command line install the binary
+`export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")`{{execute}}
 
-`curl -Lo kamel.gz https://github.com/apache/camel-k/releases/download/0.0.4/camel-k-client-0.0.4-linux-64bit.tar.gz && tar xvzf kamel.gz && sudo mv kamel /usr/local/bin/`{{execute}}
+`echo http://$NODE_IP:$NODE_PORT`{{execute}}
 
-Verify the CLI is available by checking the version:
+`curl http://$NODE_IP:$NODE_PORT`{{execute}}
 
-`kamel version`{{execute}}
+## Add Portal for Container Registry
 
-Using CLI tool initialize Camel-K. This will include initialization of the Istio service mesh and telemetry services.
-
-`kamel install`{{execute}}
-
-Watch the services start
-
-`kubectl -w get deployments --all-namespaces`{{execute T2}}
-
-Once started Ctrl-C.
-
-kamel run https://github.com/apache/camel-k/blob/master/runtime/examples/Sample.java
+`kubectl create -f cluster/registry-ui{{execute}}`
 
