@@ -1,4 +1,4 @@
-image:
+#image:
 #  tag: 6.5-alpine
 #  tag: 7.1-alpine  - produces this: "Error: Could not find or load main class org.sonar.server.app.WebServer"
 #  Report filed here: https://github.com/kubernetes/charts/issues/6648
