@@ -2,8 +2,8 @@
 
 `git clone https://github.com/javajon/code-analysis`{{execute}}
 
-`cd code-analysis\microservices`{{execute}}
+`cd code-analysis\microservice`{{execute}}
 
-`chmod +x gradlew`{{wikipedia}}
+`chmod +x gradlew`{{execute}}
 
-`./gradlew analysis`{{execute}}
+`./gradlew check`{{execute}}

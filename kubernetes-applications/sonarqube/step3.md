@@ -1,6 +1,6 @@
 # Analyze Project with SonarQube #
 
-helm install stable/sonarqube --name my-sonar --namespace sonarqube -f sonarqube-values.yaml
+`helm install stable/sonarqube --name my-sonar --namespace sonarqube -f sonarqube-values.yaml`{{execute}}
 
 `./gradlew sonar`{{execute}}
 
