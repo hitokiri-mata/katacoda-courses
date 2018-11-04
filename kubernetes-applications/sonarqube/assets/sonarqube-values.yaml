@@ -25,7 +25,7 @@ plugins:
 # but newer versions of SonarQube fail to start (see at top).
 
 sonarProperties:
-  sonar.forceAuthentication: false
+  sonar.forceAuthentication=false
 
 postgresql:  
   enabled: false
