@@ -1,20 +1,42 @@
-# Registry Setup
+Deploy Dashboard
 
-## Establish Private Registry on Kubernetes 
+Kubernetes has a web-based dashboard UI giving visibility into the Kubernetes cluster.
 
-`helm install --name registry stable/docker-registry --set service.type=NodePort{{execute}}`
+Deploy the dashboard yaml with the command `kubectl apply -f dashboard.yaml`{{execute}}
 
-This start a private container registry that Camel K will use. To verify it is accessable find the IP and PORT of the service:
+The dashboard is deployed into the kube-system namespace. View the status of the deployment with `kubectl get pods -n kube-system`{{execute}}
 
-`export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services registry-docker-registry)`{{execute}}
+A ServiceAccount is required to login. A ClusterRoleBinding is used to assign the new ServiceAccount (admin-user) the role of cluster-admin on the cluster.
 
-`export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")`{{execute}}
+`cat <<EOF | kubectl create -f - 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kube-system
+EOF`{{execute}}
 
-`echo http://$NODE_IP:$NODE_PORT`{{execute}}
+This means they can control all aspects of Kubernetes. With ClusterRoleBinding and RBAC, different level of permissions can be defined based on security requirements. More information on creating a user for the Dashboard can be found in the Dashboard documentation.
 
-`curl http://$NODE_IP:$NODE_PORT`{{execute}}
+Once the ServiceAccount has been created, the token to login can be found with:
 
-## Add Portal for Container Registry
+`kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')`{{execute}}
 
-`kubectl create -f cluster/registry-ui{{execute}}`
+When the dashboard was deployed, it used externalIPs to bind the service to port 8443. This makes the dashboard available to outside of the cluster and viewable at https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com/
 
+Use the admin-user token to access the dashboard.
+
+For production, instead of externalIPs, it's recommended to use kubectl proxy to access the dashboard. See more details at https://github.com/kubernetes/dashboard.

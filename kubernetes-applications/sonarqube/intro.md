@@ -14,6 +14,4 @@ You will learn how:
 - Access SonarQube Dashboard
 - Analyze code and inspect results with a Gradle plugin
 
-> [SonarQube](https://www.sonarqube.com) is ...
-
-> SonarQube is  [-- Wikipedia](https://en.wikipedia.org/wiki/sonarqube)
+> [SonarQube](https://www.sonarqube.com) is an open source platform developed by SonarSource for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities on 20+ programming languages. SonarQube offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. [-- Wikipedia](https://en.wikipedia.org/wiki/sonarqube)

@@ -1,6 +1,6 @@
 # Camel K on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  November 3, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  November 9, 2018)
 
 ![Camel K](/javajon/courses/kubernetes-serverless/camel-k/assets/camel-k.png "Apache Camel with Knative on Kubernetes")
 

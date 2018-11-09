@@ -25,7 +25,7 @@
       },
       {
         "course_id": "camel-k",
-        "title": "Camel-K",
+        "title": "Camel K",
         "description": "Camel-K is Apache Camel with Serverless on Knative and Kubernetes."
       }
     ]
