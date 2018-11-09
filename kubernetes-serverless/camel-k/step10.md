@@ -1,4 +1,4 @@
-# Removing Camel-K, Knative, Istio and your Functions #
+# Removing Camel K, Knative, Istio and your Functions #
 
 All control plane components can be cleaned up with:
 

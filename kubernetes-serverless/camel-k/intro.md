@@ -16,4 +16,4 @@ You will learn how:
 - to install Camel K on Kubernetes
 - to install functions from the CLI interface
 
-More about the Camel K, Knative and Istio architecture is described in the [Camel-K documentation](https://github.com/apache/camel-k).
+More about the Camel K, Knative and Istio architecture is described in the [Camel K documentation](https://github.com/apache/camel-k).

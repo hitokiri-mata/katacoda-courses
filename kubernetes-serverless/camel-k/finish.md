@@ -1,6 +1,6 @@
 # Conclusion #
 
-Camel-K is ...
+Camel K is ...
 
 ## Lessons Learned ##
 
@@ -12,8 +12,8 @@ With these scenarios you have learned how:
 
 ## References ##
 
-- [Camel-K project](https://github.com/apache/camel-k)
-- [Camel-K article](https://www.nicolaferraro.me/2018/10/15/introducing-camel-k/)
+- [Camel K project](https://github.com/apache/camel-k)
+- [Camel K article](https://www.nicolaferraro.me/2018/10/15/introducing-camel-k/)
 - [Apache Camel](https://github.com/apache/camel)
 - [Knative](https://github.com/knative/docs/)
 - [Istio](https://istio.io/)

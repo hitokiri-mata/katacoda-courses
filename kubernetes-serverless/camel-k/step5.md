@@ -1,4 +1,4 @@
-# Hello World from Camel-K #
+# Hello World from Camel K #
 
 `kamel run hello.groovy`{{execute}}
 

@@ -1,6 +1,6 @@
 {
-  "title": "Camel-k",
-  "description": "Discovering how Camel-K runs on Kubernetes.",
+  "title": "Camel K",
+  "description": "Discovering how Camel K runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
