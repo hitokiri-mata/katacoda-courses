@@ -8,9 +8,9 @@ Next, add a new pipeline based on a Jenkinsfile that can orchestrate the buildin
 
 ## Create a Jenkins Pipeline ##
 
-Navigate to the main Jenkins page:
+Navigate to the Jenkins portal page:
 
-`minikube service -n jenkins jenkins`{{execute}}
+https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 From Jenkins main page:
 
@@ -19,13 +19,13 @@ From Jenkins main page:
 1. Select "Pipeline", click OK
 1. In Pipeline section below select "Pipeline script from SCM"
 1. From SCM dropdown select Git
-1. For the Git repository URL enter:
+1. For the Git repository copy and paste this URL:
 
-`https://github.com/javajon/hello-world-instrumented`{{execute}}
+`https://github.com/javajon/hello-world-instrumented`{{copy}}
 
 ## Initial Pipeline Run ##
 
-1. The build will start within a minute, or click 'Build Now'
+1. Click 'Build Now'
 1. View build console output and notice the job is waiting for container agent
 1. Agent appears in Jenkins main
 1. Go to the Minikube dashboard and observe the Jenkins agent container spinning up
