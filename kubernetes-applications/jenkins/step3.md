@@ -40,11 +40,8 @@ In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkin
 
 Here is an example test pipeline script that inspects environment variables and uses KubeCtl commands to manipulate Kubernetes. Create a pipeline in Jenkins, paste this script and build the pipeline. View the logs to see the previously submitted secret Quay credentials.
 
-`
-node
-{
-  stage ('Inspections')
-  {
+node {
+  stage ('Inspections') {
     sh('env > env.txt')
     sh('cat env.txt')
 
@@ -56,6 +53,5 @@ node
     echo "Quay access: ${quayUserName} / ${quayPassword}"
   }
 }
-`{{copy}}
 
 This pipeline will take a few minutes to startup and run. Through the Kubernetes dashboard observe how a new pod is created in the jenkins namespace by the Jenkins Kubernetes plugin. To verify this pipeline success, inspect the build's console output and verify at the end the "Quay access:" line reports the Quay secret credentials.
