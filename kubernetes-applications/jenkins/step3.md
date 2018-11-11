@@ -1,4 +1,3 @@
-
 # Install Jenkins #
 
 Let's install Jenkins on Kubernetes.
@@ -33,7 +32,7 @@ There will now be a Jenkins service running that you can access through a Kubern
 
 Look for the Jenkins service in the namespace `jenkins`. The Jenkins portal can not be accessed by clicking on the `Jenkins Portal` tab located above the terminal window on the right or by clicking this link:
 
-: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkins dashboard observe those plugins are present.
 
@@ -41,7 +40,6 @@ In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkin
 
 Here is an example test pipeline script that inspects environment variables and uses KubeCtl commands to manipulate Kubernetes. Create a pipeline in Jenkins, paste this script and build the pipeline. View the logs to see the previously submitted secret Quay credentials.
 
-`example`{{copy}}
 `node {
   stage ('Inspections') {
 
