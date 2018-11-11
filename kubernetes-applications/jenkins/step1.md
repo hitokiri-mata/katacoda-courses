@@ -6,6 +6,7 @@ Verify Minikube and Helm are ready.
 
 Clone these two projects from GitHub
 
-`git clone https://github.com/javajon/jenkins-kubernetes`{{execute}}
-
 `git clone https://github.com/javajon/hello-world-instrumented`{{execute}}
+
+`git clone https://github.com/javajon/jenkins-kubernetes && cd jenkins-kubernetes`{{execute}}
+

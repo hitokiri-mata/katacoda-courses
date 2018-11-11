@@ -10,9 +10,9 @@ The above script includes a wait command, so it will take a few minutes for it t
 
 Roadmap: Need to add ServiceMonitor for scraping the hello-world metrics. For now metrics can be largely seen at the node CPU and memory metrics. Consider these two declarations ():
 
-`kubectl create -n monitoring -f jenkins-kubernetes/monitoring.yaml`{{execute}}
+`kubectl create -n monitoring -f monitoring.yaml`{{execute}}
 
 TODO: missing yaml
-`kubectl create -n monitoring -f jenkins-kubernetes/alertmanager-latency-rule.yaml`{{execute}}
+`kubectl create -n monitoring -f alertmanager-latency-rule.yaml`{{execute}}
 
 Below are instructions that configure Prometheus to watch for performance of the upcoming hello-world deployments. But first, let's get a Jenkins pipeline to build, deploy and install the hello-world application.

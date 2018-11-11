@@ -12,7 +12,7 @@ We are interested in the stable/jenkins chart listed here
 
 To start Jenkins use Helm to install the stable/Jenkins chart.
 
-`helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yaml`{{execute}}
+`helm install stable/jenkins --namespace jenkins --name jenkins -f jenkins-values.yaml`{{execute}}
 
 The jenkins-values.yaml file includes details for the Jenkins configuration to ensure it starts with all the appropriate plugins, along with its Kubernetes plugin. The Jenkins chart also installs a definition for a custom container for running Jenkins jobs. The jenkins-slave-docker:kubectl Docker container image contains the KubeCtl CLI application that the Jenkinsfile in hello-world-instrumented will call. The Jenkinsfile handles the compiling, Docker image building, deploying and canary deployment logic.
 
@@ -40,9 +40,11 @@ In the jenkins-values.yaml file is a list of defined plugins. Through the Jenkin
 
 Here is an example test pipeline script that inspects environment variables and uses KubeCtl commands to manipulate Kubernetes. Create a pipeline in Jenkins, paste this script and build the pipeline. View the logs to see the previously submitted secret Quay credentials.
 
-`node {
-  stage ('Inspections') {
-
+`
+node
+{
+  stage ('Inspections')
+  {
     sh('env > env.txt')
     sh('cat env.txt')
 
@@ -53,6 +55,7 @@ Here is an example test pipeline script that inspects environment variables and 
 
     echo "Quay access: ${quayUserName} / ${quayPassword}"
   }
-}`{{copy}}
+}
+`{{copy}}
 
 This pipeline will take a few minutes to startup and run. Through the Kubernetes dashboard observe how a new pod is created in the jenkins namespace by the Jenkins Kubernetes plugin. To verify this pipeline success, inspect the build's console output and verify at the end the "Quay access:" line reports the Quay secret credentials.
