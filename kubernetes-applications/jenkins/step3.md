@@ -54,6 +54,6 @@ node {
     echo "Quay access: ${quayUserName} / ${quayPassword}"
   }
 }
-```
+```{{copy}}
 
 This pipeline will take a few minutes to startup and run. Through the Kubernetes dashboard observe how a new pod is created in the jenkins namespace by the Jenkins Kubernetes plugin. To verify this pipeline success, inspect the build's console output and verify at the end the "Quay access:" line reports the Quay secret credentials.
