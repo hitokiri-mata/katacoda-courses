@@ -4,7 +4,9 @@
 
 `cd && helm install stable/sonarqube --name my-sonar --namespace sonarqube -f sonarqube-values.yaml`{{execute}}
 
-`kubectl patch service my-sonar-sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
+`export NODE_IP=$(kubectl get nodes --namespace sonarqube -o jsonpath="{.items[0].status.addresses[0].address}")`{{execute}}
+
+`kubectl patch service my-sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
 `export SONAR_SERVICE=$NODE_IP:31111`{{execute}}
 
