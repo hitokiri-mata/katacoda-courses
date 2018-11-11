@@ -14,6 +14,7 @@
 
 `wget http://$SONAR_SERVICE`{{execute}}
 
+`kubectl get deployment,pods -n sonarqube`{{execute}}
 
 You can view the SonarQube dashboard here:
 https://[[HOST_SUBDOMAIN]]-31283-[[KATACODA_HOST]].environments.katacoda.com/

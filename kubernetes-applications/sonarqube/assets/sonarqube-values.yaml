@@ -1,20 +1,5 @@
-#image:
-#  tag: 6.5-alpine
-#  tag: 7.1-alpine  - produces this: "Error: Could not find or load main class org.sonar.server.app.WebServer"
-#  Report filed here: https://github.com/kubernetes/charts/issues/6648
-#  Attempt with 6.7.1-alpine reports a connection to Postgres error.
-
 service:
   type: NodePort
-#  nodePort: 31111 - TODO - chart lacks nodePort setting
-
-readinessProbe:
-  initialDelaySeconds: 180
-  periodSeconds: 90
-  failureThreshold: 6
-livenessProbe:
-  initialDelaySeconds: 180
-  periodSeconds: 90
 
 #plugins:
 # install
@@ -25,8 +10,8 @@ livenessProbe:
 # to bump these plugin versions higher some require a newer version of SonarQube,
 # but newer versions of SonarQube fail to start (see at top).
 
-sonarProperties:
-  sonar.forceAuthentication=false
+# sonarProperties:
+#   sonar.forceAuthentication=false
 
-postgresql:  
-  enabled: false
+# postgresql:  
+#   enabled: false
