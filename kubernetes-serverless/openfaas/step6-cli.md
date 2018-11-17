@@ -8,7 +8,7 @@
 
 `faas-cli list`{{execute}}
 
-`faas-cli list verbose`{{execute}}
+`faas-cli list --verbose`{{execute}}
 
 ## Invoke Function ##
 
@@ -18,6 +18,3 @@
 
 `uname -a | faas-cli invoke markdown`{{execute}}
 
-`faas-cli store deploy`{{execute}}
-
-`faas-cli up `{{execute}}

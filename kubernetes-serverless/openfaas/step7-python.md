@@ -14,7 +14,7 @@ Copy the pre-written example fibonacci code into the handler code.
 
 ## Up to Build, Push and Deploy ##
 
-`faas-cli up`{{execute}}
+`faas-cli up -f fibonacci.yml`{{execute}}
 
 ## Call ##
 
