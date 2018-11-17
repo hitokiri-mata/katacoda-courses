@@ -6,19 +6,37 @@
   "details": {
     "steps": [
       {
-        "text": "step1.md"
+        "text": "step1-k8s.md"
       },
       {
-        "text": "step2.md"
+        "text": "step2-prepare.md"
       },
       {
-        "text": "step3.md"
+        "text": "step3-install.md"
       },
       {
-        "text": "step4.md"
+        "text": "step4-cli.md"
       },
       {
-        "text": "step10.md"
+        "text": "step5-portal.md"
+      },
+      {
+        "text": "step6-python.md"
+      },
+      {
+        "text": "step7-cli.md"
+      },
+      {
+        "text": "step8-observe.md"
+      },
+      {
+        "text": "step9-more.md"
+      },
+      {
+        "text": "step10-scaling.md"
+      },
+      {
+        "text": "step11-cleanup.md"
       }
     ],
     "intro": {

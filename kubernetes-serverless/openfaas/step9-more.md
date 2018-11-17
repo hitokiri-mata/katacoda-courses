@@ -1,4 +1,4 @@
-# Add a Stack of Functions #
+# Add Stack of Functions #
 
 Deploy a whole set of functions. Take a look at this YAML file and see of the functions is provides.
 

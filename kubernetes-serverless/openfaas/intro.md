@@ -1,16 +1,28 @@
 # OpenFaaS on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  November 2, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com, November 17, 2018)
 
 ![OpenFaaS](/javajon/courses/kubernetes-serverless/openfaas/assets/openfaas.png "OpenFaaS serverless framework")
 
 [OpenFaaS](https://www.openfaas.com/) is a framework for building serverless functions with Docker and Kubernetes which has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding.
 
+## Key Features ##
+
+- Ease of use through UI portal and one-click install
+- Write functions in any language for Linux or Windows and  package in Docker/OCI image format
+- Portable - runs on existing hardware or public/private cloud
+- Kubernetes and Docker Swarm native
+- CLI available with YAML format for templating and defining functions
+- Scales as demand increases
+- Compatible with Istio mTLS (all health checks are done with exec wget)
+
 You will learn how:
 
 - to install OpenFaaS on Kubernetes
+- interact with OpenFaaS from the command line and its portal
 - functions are deployed and removed
 - functions are named, exposed, and invoked
 - functions are listed, inspected and monitored
+- functions automatically scale up and down based on load
 
-More about the OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/).
+The OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/). More references to documentation and examples are at the end of this course.

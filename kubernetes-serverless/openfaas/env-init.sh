@@ -1,6 +1,12 @@
 #!/bin/sh
 minikube config set WantUpdateNotification false
+
+minikube completion bash
+helm completion bash
+kubectl completion bash
+
 clear
+
 minikube start --insecure-registry localhost:5000
 
 minikube addons enable registry
