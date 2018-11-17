@@ -62,7 +62,7 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "OpenFaaS Portal", "port": 31112},
-      {"name": "Prometheus Portal", "port": 31113}
+      {"name": "Prometheus Portal", "port": 31119}
     ]
     },
   "backend": {

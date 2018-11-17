@@ -23,6 +23,7 @@ With these scenarios you have learned how:
 - [OpenFaaS Operator Helm chart based on faas-netes Helm chart *](https://github.com/openfaas/faas-netes)
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
 - [Helm chart for OpenFaaS](https://github.com/openfaas-incubator/openfaas-operator)
+- [Video: Scaling in action with Prometheus](https://www.youtube.com/watch?v=0DbrLsUvaso)
 
 > \* [Faas-netes chart versus OpenFaaS Operator chart](https://github.com/openfaas/faas-netes/tree/master/chart/openfaas#faas-netes-vs-openfaas-operator)
 > The faas-netes controller is the most tested, stable and supported version of the OpenFaaS integration with Kubernetes. In contrast the OpenFaaS Operator (used in this example) is based upon the codebase and features from faas-netes, but offers a tighter integration with Kubernetes through CustomResourceDefinitions. This means you can type in `kubectl get functions` [and use the `Kind: function` as a Kubernetes resource definition].
