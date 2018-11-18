@@ -12,9 +12,11 @@ View the functions that were just submitted.
 
 `faas-cli list --verbose`{{execute}}
 
-One of the functions is markdown. Here are two ways to invoke the function.
+One of the functions is _Markdown_. Here are two ways to invoke the function.
 
 `echo Hi | faas-cli invoke markdown`{{execute}}
+
+If this command does not come back readily, then it's still initializing and probably stuck. If stuck, Ctrl-C and try again.
 
 `uname -a | faas-cli invoke markdown`{{execute}}
 

@@ -24,4 +24,8 @@ The random password is shortened to just 4 characters for these demonstration pu
 
 3\. There is a private Docker registry running on Kubernetes. Minikube has a registry addon and its has been exposed on port 31500. OpenFaaS requires a container registry to push built images and pull images that contain functions. OpenFaaS default to using Docker Hub, but there is no need to shuttle private images over the internet. Instead we keep all this pushing and pulling locally.
 
-`kubectl create secret docker-registry openfaas-repo --docker-username="admin" --docker-password="admin" --docker-server=http://$(minikube ip):31500 --namespace openfaas-fn`{{execute}}
+`kubectl create secret docker-registry openfaas-repo --docker-username="admin" --docker-password="admin" --docker-server=$(minikube ip):31500 --namespace openfaas-fn`{{execute}}
+
+Inform the service account there is a new registry called _openfaas-repo_.
+
+`kubectl patch serviceaccount default --namespace openfaas-fn --patch '{"imagePullSecrets": [{"name": "openfaas-repo"}]}'`{{execute}}

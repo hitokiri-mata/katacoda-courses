@@ -29,3 +29,11 @@ With this gateway access, the first action is to login. We will use the same pas
 Now the list command will show an empty list found behind the gateway.
 
 `faas-cli list`{{execute}}
+
+In Kubernetes also notice all these functions are now represented by deployments in the openfaas-fn namespace.
+
+`kubectl get deployments --namespace openfaas-fn`{{execute}}
+
+Additionally, they all have services load balancing for the function pods.
+
+`minikube service list --namespace openfaas-fn`{{execute}}
