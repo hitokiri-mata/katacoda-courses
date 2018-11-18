@@ -18,7 +18,7 @@ However, since Katacoda's Minikube server is virtualized the gateway is slightly
 
 `export OPENFAAS_URL=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
-Notice the port 31112. This is the Kubernetes [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport) of the _external_gateway_ OpenFaaS service. The service can be see using this list command.
+Notice the port 31112. This is the Kubernetes [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport) of the _external-gateway_ OpenFaaS service. The service can be see using this list command.
 
 `minikube service list`{{execute}}
 

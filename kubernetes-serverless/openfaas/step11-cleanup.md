@@ -1,17 +1,19 @@
 # Removing OpenFaaS #
 
-Remove the functions
+There really is no need to cleanup with Katacoda but if your were running this tutorial with Minikube or another type of Kubernetes cluster it would be good to clean up this work.
 
-`faas-cli remove fibonacci --gateway $GW`{{external}}
+Since OpenFaaS was installed with the Helm package manager, it can be deleted by referencing the installation name.
 
-All control plane components can be cleaned up with helm:
+`helm delete openfaas --purge`{{execute}}
 
-`helm delete --purge openfaas`{{execute}}
-
-Follow this by the following to remove all other associated objects:
+Also remove the namespaces that were created before the installation:
 
 `kubectl delete namespace/openfaas`{{execute}}
 
 `kubectl delete namespace/openfaas-fn`{{execute}}
 
-In some cases your additional functions may need to be either deleted before deleting the chart with faas-cli or manually deleted using kubectl delete.
+Sometimes you may just want to delete the functions.
+
+`faas-cli remove fibonacci`{{external}}
+
+In some cases your functions may need to be either deleted before deleting the chart with faas-cli or manually deleted using kubectl delete.
