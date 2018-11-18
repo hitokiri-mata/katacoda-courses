@@ -3,7 +3,9 @@
 echo "Starting Kubernetes using Minikube..."
 
 minikube config set WantUpdateNotification false
-minikube start --insecure-registry localhost:5000
+minikube start 
+
+# TODO - needed? --insecure-registry localhost:5000
 
 while [ `docker ps | wc -l` -eq 1 ]
 do
