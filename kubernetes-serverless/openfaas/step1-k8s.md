@@ -4,6 +4,8 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 `minikube version && minikube status`{{execute}}
 
+`kubectl version && kubectl cluster-info && kubectl get nodes` {{execute}}
+
 You can perform operations against Kubernetes using the command line interface.  
 
 `kubectl get deployments,pods,services`{{execute}}

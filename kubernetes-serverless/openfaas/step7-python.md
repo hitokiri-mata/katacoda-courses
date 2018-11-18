@@ -8,7 +8,7 @@ New or updated OpenFaaS functions progress through distinct phases before they c
 
 First create the opinionated files for the new function.
 
-`faas-cli new fibonacci --lang python3 --prefix=$(minikube ip):31500/fibonacci`{{execute}}
+`faas-cli new fibonacci --lang python3 --prefix=$REGISTRY/fibonacci`{{execute}}
 
 Copy the pre-written example fibonacci Python code into the handler code.
 
