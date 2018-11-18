@@ -11,7 +11,7 @@
       {
         "course_id": "openfaas",
         "title": "OpenFaaS",
-        "description": "Functions as a Service. A framework for building serverless functions on Kubernetes"
+        "description": "Building serverless functions with Kubernetes that has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding."
       },
       {
         "course_id": "nuclio",

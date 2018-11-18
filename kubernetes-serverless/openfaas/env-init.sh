@@ -31,6 +31,8 @@ kubectl completion bash
 helm init --wait
 helm repo update
 
+clear 
+
 minikube status
 
 echo "Kubernetes using Minikube is ready."
