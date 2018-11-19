@@ -14,6 +14,6 @@ Also remove the namespaces that were created before the installation:
 
 Sometimes you may just want to delete the functions.
 
-`faas-cli remove fibonacci`{{external}}
+`faas-cli remove fibonacci`{{execute}}
 
 In some cases your functions may need to be either deleted before deleting the chart with faas-cli or manually deleted using kubectl delete.

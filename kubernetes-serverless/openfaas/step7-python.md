@@ -16,7 +16,7 @@ Copy the pre-written example fibonacci Python code into the handler code.
 
 ## Up to Build, Push and Deploy ##
 
-With the function coded and defined deploy the artifacts to OpenFaaS and it will take care of all the server details for you, after all its _serverless_.
+With the function coded and defined deploy the artifacts to OpenFaaS and it will take care of all the server details for you, after all it's _serverless_.
 
 `faas-cli up -f fibonacci.yml`{{execute}}
 
@@ -26,4 +26,4 @@ With the new function deployed OpenFaaS took care of bundling it into a containe
 
 Invoke the new function this with command.
 
-`faas-cli invoke fibonacci`{{execute}}
+`echo 5 | faas-cli invoke fibonacci`{{execute}}
