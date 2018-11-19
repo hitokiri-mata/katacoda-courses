@@ -12,7 +12,7 @@ Install the OpenFaaS operator chart referenced from that repository.
 
 Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
 
-`kubectl --namespace=openfaas get deployments -l "release=openfaas, app=openfaas" -w`{{execute}}
+`kubectl get deployments --namespace=openfaas -l "release=openfaas, app=openfaas" -w`{{execute}}
 
 The installation is complete once all the Deployments have reached an _Available_ state of 1, press Ctrl-C to break out of the watch.
 

@@ -42,7 +42,7 @@ Assign an environment variable to the common registry location.
 
 `export REGISTRY=[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
-It will be a few moments before the registry deployments reports its _Available_.
+It will be a few moments before the registry deployment reports it's _Available_.
 
 `kubectl get deployments registry-docker-registry --namespace kube-system`{{execute}}
 

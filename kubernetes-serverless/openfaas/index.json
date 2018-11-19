@@ -30,13 +30,10 @@
         "text": "step8-observe.md"
       },
       {
-        "text": "step9-more.md"
+        "text": "step9-scaling.md"
       },
       {
-        "text": "step10-scaling.md"
-      },
-      {
-        "text": "step11-cleanup.md"
+        "text": "step10-cleanup.md"
       }
     ],
     "intro": {
@@ -62,7 +59,9 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "OpenFaaS Portal", "port": 31112},
-      {"name": "Prometheus Portal", "port": 31119}
+      {"name": "Prometheus", "port": 31120},
+      {"name": "Alerts", "port": 31121},
+      {"name": "Grafana", "port": 31122}
     ]
     },
   "backend": {

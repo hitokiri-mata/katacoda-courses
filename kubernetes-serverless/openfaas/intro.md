@@ -1,6 +1,6 @@
 # OpenFaaS on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com, November 17, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com, November 19, 2018)
 
 ![OpenFaaS](/javajon/courses/kubernetes-serverless/openfaas/assets/openfaas.png "OpenFaaS serverless framework")
 
@@ -25,4 +25,4 @@ You will learn how:
 - functions are listed, inspected and monitored
 - functions automatically scale up and down based on load
 
-The OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/). More references to documentation and examples are at the end of this course.
+The OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/). More references to documentation and examples listed at the end of this course.
