@@ -14,5 +14,8 @@ Deploy the _figlet_ function.
 
 Exercise the _figlet_ function.
 
+(TODO: Currently this command in this demonstration is failing.)
+
 `while [ true ]; do curl -X POST https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet; done;`{{execute}}
 
+This exercise is adopted from [lab 9 found here](https://github.com/openfaas/workshop/blob/master/lab9.md).
