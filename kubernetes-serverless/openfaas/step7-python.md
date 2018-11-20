@@ -32,6 +32,8 @@ Invoke the new function this with command.
 
 `echo 5 | faas-cli invoke fibonacci`{{execute}}
 
-If you wish to update the function logic you can edit and redeploy with the `--replace` switch.
+If you update the function logic, then redeploy with the `--update=false --replace` switches.
 
 `faas-cli up -f fibonacci.yml --update=false --replace`{{execute}}
+
+The new version of the function will normally be available in 5-10 seconds.

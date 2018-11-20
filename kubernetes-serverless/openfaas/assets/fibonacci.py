@@ -11,10 +11,6 @@ def sequence(length):
     result = ','.join( str(x) for x in row )
     return {"sequence":result}
 
-def values(event, context):
-    length = event['data']['length']
-    return sequence(int(length))
-
 # OpenFaaS expects this method signature
 def handle(req):
-    return sequence(req)
+    return sequence(int(req)
