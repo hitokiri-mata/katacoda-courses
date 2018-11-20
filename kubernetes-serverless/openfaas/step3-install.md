@@ -8,7 +8,9 @@ A common Helm _chart_ is predefined for installing OpenFaaS. Popular incubating 
 
 Install the OpenFaaS operator chart referenced from that repository.
 
-`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set operator.create=true --set basic_auth=true --set rbac=false`{{execute}}
+`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set operator.create=true --set basic_auth=true --set rbac=false --set faasIdler.dryRun=false --set faasIdler.inactivityDuration=1m`{{execute}}
+
+We set the dryRun to false we can explore autoscaling at the end of this tutorial.
 
 Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
 
