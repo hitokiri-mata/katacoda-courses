@@ -1,3 +1,7 @@
+# OpenFaaS expects this method signature
+def handle(req):
+  sequence(req)
+
 def fibonacci(n):
   if n == 0:
     return 0
@@ -7,7 +11,7 @@ def fibonacci(n):
     return fibonacci(n-1) + fibonacci(n-2)
 
 def sequence(length):
-  row = [fibonacci(n) for n in range(1,length)]
+  row = [fibonacci(n) for n in range(1,length+1)]
   result = ','.join( str(x) for x in row )
   print("Fibonacci sequence: " + result)
   return {"sequence":result}
