@@ -1,5 +1,4 @@
 #!/bin/sh
-
 echo "Starting Kubernetes using Minikube..."
 
 minikube config set WantUpdateNotification false

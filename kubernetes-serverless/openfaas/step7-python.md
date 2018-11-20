@@ -10,7 +10,11 @@ Create the structure and files for the new function.
 
 `faas-cli new fibonacci --lang python3 --prefix $REGISTRY/fibonacci --gateway $OPENFAAS_URL`{{execute}}
 
-Copy the pre-written example fibonacci Python code into the handler code.
+In the current directory there is a pre-written fibonacci Python code example. Notice at the top is the "handle" method that OpenFaaS expects as a signature for the function.
+
+`cat fibonacci.py`{{execute}}
+
+Copy the example Python code into the generated directory.
 
 `cp fibonacci.py fibonacci/handler.py`{{execute}}
 
@@ -27,3 +31,7 @@ With the new function deployed OpenFaaS took care of bundling it into a containe
 Invoke the new function this with command.
 
 `echo 5 | faas-cli invoke fibonacci`{{execute}}
+
+If you wish to update the function logic you can edit and redeploy with the `--replace` switch.
+
+`faas-cli up -f fibonacci.yml --update=false --replace`{{execute}}
