@@ -4,14 +4,14 @@
     "description": "Learn the fundamental building blocks of Kubernetes with hands-on on explanations.",
     "courses": [
       {
-        "course_id": "namespaces",
-        "title": "Namespaces",
-        "description": "Kubernetes namespaces"
+        "course_id": "minikube",
+        "title": "Minikube",
+        "description": "Introduction to Minikube as a simple Kubernetes cluster"
       },
       {
-        "course_id": "pods",
-        "title": "Pods",
-        "description": "About Kubernetes Pods"
+        "course_id": "first-app",
+        "title": "First App",
+        "description": "Run your first application on Kubernetes"
       }
     ]
   }

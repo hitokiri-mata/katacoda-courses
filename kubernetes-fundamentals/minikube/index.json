@@ -1,6 +1,8 @@
 {
   "title": "Minikube",
   "description": "A simple Kubernetes cluster",
+  "difficulty":	"Beginner",
+  "time":	"20 minutes",  
   "details": {
     "steps": [
       {
