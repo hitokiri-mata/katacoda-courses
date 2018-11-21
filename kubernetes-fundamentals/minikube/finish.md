@@ -20,7 +20,7 @@ Other courses based on Minikube follow this introduction. Now that you understan
 - [Minishift is similar if you lean toward OpenShift](https://github.com/minishift/minishift)
 
 --------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/openfaas/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/minikube/assets/nfjs.png "No Fluff Just Stuff")
 For a deeper understanding of these topics and more join me for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
 
 [Jonathan Johnson](https://www.linkedin.com/in/javajon/)
