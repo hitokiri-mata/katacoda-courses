@@ -1,7 +1,7 @@
 # Minikube #
 
-![Minikube](/javajon/courses/kubernetes-serverless/openfaas/assets/minikube.png "Minikube")
-![Kubernetes](/javajon/courses/kubernetes-serverless/openfaas/assets/kubernetes.png "Kubernetes")
+![Minikube](/javajon/courses/kubernetes-fundamentals/openfaas/assets/minikube.png "Minikube")
+![Kubernetes](/javajon/courses/kubernetes-fundamentals/openfaas/assets/kubernetes.png "Kubernetes")
 
 [Minikube](https://kubernetes.io/docs/setup/minikube/) is a method for creating a local, single-node Kubernetes cluster for development and testing. Setup is completely automated and doesn’t require a cloud provider account.
 
