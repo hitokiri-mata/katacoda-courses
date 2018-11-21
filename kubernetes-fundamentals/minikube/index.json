@@ -1,0 +1,41 @@
+{
+  "title": "Minikube",
+  "description": "A simple Kubernetes cluster",
+  "details": {
+    "steps": [
+      {
+        "text": "step1-versions.md"
+      },
+      {
+        "text": "step2-start.md"
+      },
+      {
+        "text": "step3-kubernetes.md"
+      },
+      {
+        "text": "step4-addons.md"
+      },
+      {
+        "text": "step5-dashboard.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+    ]
+    },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

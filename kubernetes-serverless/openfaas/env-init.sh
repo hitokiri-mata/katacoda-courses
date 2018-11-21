@@ -9,9 +9,9 @@ do
   sleep 1
 done
 
-minikube completion bash
-helm completion bash
-kubectl completion bash
+source <(minikube completion bash)
+source <(kubectl completion bash)
+source <(helm completion bash)
 
 helm init --wait
 helm repo update

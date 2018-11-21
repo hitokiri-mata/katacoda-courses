@@ -1,1 +1,0 @@
-finishing instructions for namespaces topic

@@ -1,7 +1,5 @@
 # OpenFaaS on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com, November 19, 2018)
-
 ![OpenFaaS](/javajon/courses/kubernetes-serverless/openfaas/assets/openfaas.png "OpenFaaS serverless framework")
 
 [OpenFaaS](https://www.openfaas.com/) is a framework for building serverless functions with Docker and Kubernetes which has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding.
