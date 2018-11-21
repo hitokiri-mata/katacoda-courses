@@ -14,11 +14,22 @@ As promised, it's a single node cluster.
 
 `kubectl get nodes`{{execute}}
 
+Note: On Katacoda this reports no nodes, however it normally should report this:
+
+```
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   1h    v1.10.0
+```
+
 There are various ways to get details about the cluster.
 
 `kubectl cluster-info`{{execute}}
 
 `kubectl config view`{{execute}}
+
+`kubectl config get-contexts`{{execute}}
+
+`kubectl get componentstatus`{{execute}}
 
 More details are revealed with the describe command.
 

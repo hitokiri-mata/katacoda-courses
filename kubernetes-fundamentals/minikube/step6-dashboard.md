@@ -1,6 +1,10 @@
 # Dashboard #
 
-Another Addon that is enabled is the standard Kubernetes dashboard. When running Minikube locally the simple invocation
+Another Addon that is enabled is the standard Kubernetes dashboard. You can get the URL to the dashboard.
+
+`minikube service -n kube-system kubernetes-dashboard --url`{{execute}}
+
+When running Minikube locally the simple invocation
 
 `minikube dashboard`
 

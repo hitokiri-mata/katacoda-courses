@@ -22,4 +22,9 @@ It will take a minute or two before Heapster is running and providing data. Once
 
 `kubectl top node`{{execute}}
 
-While the addons feature is convenient, its very Minikube centric for standing up a small set of helpful solutions. All of these solutions and hundreds more are better configured and installed using the [Helm](https://helm.sh/) package manager for Kubernetes.
+The Top command can also inspect Pods as well.
+
+`kubectl top pods --all-namespaces`{{execute}}
+
+While the addons feature is convenient for standing up a small set of helpful solutions, it's very Minikube centric. All of these solutions and hundreds more are better configured and installed using the [Helm](https://helm.sh/) package manager for Kubernetes.
+

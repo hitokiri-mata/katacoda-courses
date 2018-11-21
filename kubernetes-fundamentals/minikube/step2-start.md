@@ -17,3 +17,18 @@ It's running on a single machine.
 And, there should be nothing notable in the logs.
 
 `minikube logs`{{execute}}
+
+The minikube cluster can be stopped and started.
+
+`minikube stop`{{execute}}
+`minikube status`{{execute}}
+`minikube start`{{execute}}
+`minikube status`{{execute}}
+
+You can delete the Minikube cluster, but don't as we have more to learn.
+
+`minikube delete`
+
+Typically you an also ssh into Minikube, but this current stack does not support the command.
+
+`minikube ssh`{{execute}}
