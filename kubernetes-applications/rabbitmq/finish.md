@@ -22,4 +22,6 @@ Hopefully you also understand how Kubernetes is a new type of data center _opera
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
 
 ------
+![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/rabbitmq/assets/nfjs.png "No Fluff Just Stuff")
+
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

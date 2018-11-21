@@ -21,4 +21,6 @@ With these scenarios you have learned how:
 - [Helm chart for Nuclio](https://github.com/nuclio/nuclio/tree/master/hack/k8s/helm/nuclio)
 
 ------
+![No Fluff Just Stuff](/javajon/courses/kubernetes-serverless/nuclio/assets/nfjs.png "No Fluff Just Stuff")
+
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
