@@ -22,3 +22,6 @@ With these scenarios you have learned how:
 * [Cattle not pets](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/)
 * Point your Intellij IDE at the SonarQube service using the [SonarLint plugin](https://www.sonarlint.org/intellij/howto.html).
 * Careful when upgrading SonarQube tag images or its plugins. It can be dependency hell with a complex matrix. If your container is failing it's due to mismatched versions.
+
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

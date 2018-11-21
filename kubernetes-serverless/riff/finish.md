@@ -15,3 +15,6 @@ With these scenarios you have learned how:
 - [Riff project](https://projectriff.io/)
 - [Knative is open source](https://github.com/knative/docs/)
 - [Istio documentation](https://istio.io/)
+
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

@@ -26,4 +26,5 @@ Additional topics may be added to this lesson:
 - [Serverless for Kubeless](https://serverless.com/framework/docs/providers/kubeless/guide/intro)
 - [Kubeless observability](https://kubeless.io/docs/monitoring/)
 
-For a deeper understanding on these topics and more join me for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

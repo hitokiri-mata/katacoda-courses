@@ -21,14 +21,17 @@ And, there should be nothing notable in the logs.
 The minikube cluster can be stopped and started.
 
 `minikube stop`{{execute}}
+
 `minikube status`{{execute}}
+
 `minikube start`{{execute}}
+
 `minikube status`{{execute}}
 
 You can delete the Minikube cluster, but don't as we have more to learn.
 
 `minikube delete`
 
-Typically you an also ssh into Minikube, but this current stack does not support the command.
+Typically you can also ssh into Minikube, but this current stack does not support the command.
 
 `minikube ssh`{{execute}}

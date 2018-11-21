@@ -19,3 +19,6 @@ With these scenarios you have learned how:
 - [CLI tool](https://nuclio.io/docs/latest/setup/k8s/getting-started-k8s/#deploy-a-function-with-the-nuclio-cli-nuctl)
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
 - [Helm chart for Nuclio](https://github.com/nuclio/nuclio/tree/master/hack/k8s/helm/nuclio)
+
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

@@ -18,11 +18,11 @@ Heapster can add data that the top feature can reference. Enable the addon and t
 
 `minikube addons enable heapster`{{execute}}
 
-It will take a minute or two before Heapster is running and providing data. Once running, the top command will return metrics instead of an error.
+**It will take about 2-3 mintutes** before Heapster is running and providing data. Once running, the _top_ command will return metrics instead of an error.
 
 `kubectl top node`{{execute}}
 
-The Top command can also inspect Pods as well.
+The _top_ command can also inspect Pods as well.
 
 `kubectl top pods --all-namespaces`{{execute}}
 

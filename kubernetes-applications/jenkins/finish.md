@@ -47,3 +47,6 @@ https://whatis.techtarget.com/definition/canary-canary-testing)
 - Instructional video: [Lachlan Evenson's](https://github.com/lachie83/croc-hunter) demonstration [Zero to Kubernetes CI/CD in 5 minutes with Jenkins and Helm](https://youtu.be/eMOzF_xAm7w)
 - Instructional video: [Continuously delivering apps to Kubernetes using Helm - Adnan Abdulhussein (Bitnami)](https://youtu.be/CmPK93hg5w8)
 - [Jenkins Slave with Docker client and kubectl CLI](https://github.com/radu-matei/jenkins-slave-docker)
+
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

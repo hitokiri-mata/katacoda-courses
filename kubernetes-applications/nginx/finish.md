@@ -20,3 +20,6 @@ Hopefully you also understand how Kubernetes is a new type of data center _opera
 - [Round robin load balancing](https://en.wikipedia.org/wiki/Round-robin_DNS)
 - [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
+
+------
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
