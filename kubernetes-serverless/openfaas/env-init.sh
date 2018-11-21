@@ -1,7 +1,14 @@
 #!/bin/sh
+
+# Minikube pre-setup
 minikube config set WantUpdateNotification false
-minikube config set bootstrapper kubeadm
+# TODO: There is a known issue with Katacoda when this is applied. Waiting to move to new version of Minikube.
+# minikube config set bootstrapper kubeadm
+source <(minikube completion bash)
+source <(kubectl completion bash)
+source <(helm completion bash)
 clear
+
 echo "Starting Kubernetes using Minikube..."
 minikube start 
 
@@ -10,13 +17,9 @@ do
   sleep 1
 done
 
-source <(minikube completion bash)
-source <(kubectl completion bash)
-source <(helm completion bash)
-
-helm init --wait
+# Helm Setup
 helm repo update
-
+helm init --wait
 clear 
 
 minikube status
