@@ -1,7 +1,8 @@
 #!/bin/sh
-echo "Starting Kubernetes using Minikube..."
-
 minikube config set WantUpdateNotification false
+minikube config set bootstrapper kubeadm
+clear
+echo "Starting Kubernetes using Minikube..."
 minikube start 
 
 while [ `docker ps | wc -l` -eq 1 ]

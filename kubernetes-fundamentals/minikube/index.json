@@ -18,7 +18,10 @@
         "text": "step4-addons.md"
       },
       {
-        "text": "step5-dashboard.md"
+        "text": "step5-addons.md"
+      },
+      {
+        "text": "step6-dashboard.md"
       }
     ],
     "intro": {
@@ -26,6 +29,10 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
     }
   },
   "environment": {
@@ -34,7 +41,8 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Grafana Dashboard", "port": 30002}
     ]
     },
   "backend": {

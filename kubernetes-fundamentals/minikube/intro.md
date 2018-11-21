@@ -5,7 +5,13 @@
 
 [Minikube](https://kubernetes.io/docs/setup/minikube/) is a method for creating a local, single-node Kubernetes cluster for development and testing. Setup is completely automated and doesn’t require a cloud provider account.
 
-Minikube is _not_ a full blown high-available cluster and should never be considered for production deployments or where security, performance and stability is expected. However, it's a very approachable tool to learn the core concepts of Kubernetes.
+This scenario takes you through the basics of using Minikube. You will learn how:
+
+- to install Minikube
+- to configure Minikube
+- the Minikube CLI tool differs from the Kubernetes KubeCtl tool
+- to inspect a cluster
+- the addons work
 
 ## Key Features ##
 
@@ -19,12 +25,6 @@ Minikube is _not_ a full blown high-available cluster and should never be consid
 - Administer the single node cluster from the command line tool
 - Well documented and supported by the community
 
-You will learn how:
-
-- to install Minikube
-- to configure Minikube
-- the Minikube CLI tool differs from the Kubernetes KubeCtl tool
-- to inspect a cluster
-- the addons work
+Minikube is _not_ a full blown high-available cluster and should never be considered for production deployments or where security, performance and stability is expected. However, it's a very approachable tool to learn the core concepts of Kubernetes.
 
 More about [Minikube is documented here](https://kubernetes.io/docs/setup/minikube/).

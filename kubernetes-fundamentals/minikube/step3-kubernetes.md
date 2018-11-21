@@ -23,3 +23,7 @@ There are various ways to get details about the cluster.
 More details are revealed with the describe command.
 
 `kubectl describe node minikube`{{execute}}
+
+Events can be listed.
+
+`kubectl get events`{{execute}}

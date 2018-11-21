@@ -1,6 +1,6 @@
 {
   "private": true,
-  "title": "Pods",
+  "title": "First App",
   "description": "About Kubernetes Pods",
   "details": {
     "steps": [
