@@ -6,7 +6,7 @@ Ensure Minikube is running and ready to accept your upcoming declarations.
 
 Deploy a simple application called [_echoserver_](https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/echoserver?gcrImageListsize=30).
 
-`kubectl -f create echoserver.yaml`{{execute}}
+`kubectl create -f echoserver.yaml`{{execute}}
 
 > A simpler way to do this is with the _run_ command, but this only creates a Pod. We actually want a Deployment with a ReplicaSet
 > `kubectl run hello --generator=run-pod/v1 --image=k8s.gcr.io/echoserver:1.9 --port=8080`
@@ -19,6 +19,6 @@ Notice this not only defines a `kind: Deployment`, but inside the deployment is 
 
 It's only about 44 MB so it downloads and starts within a few moments. Ensure the _Available_ status changes from 0 to 1.
 
-`kubectl get pods`{{execute}}
+`kubectl get deployments,pods`{{execute}}
 
 With this the application is running, however it's not accessible. A service is needed for access.

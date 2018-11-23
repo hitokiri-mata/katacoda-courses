@@ -8,7 +8,7 @@ source <(minikube completion bash)
 source <(kubectl completion bash)
 source <(helm completion bash)
 
-minikube addons enable heapster
 clear
 
 minikube start
+minikube addons enable heapster

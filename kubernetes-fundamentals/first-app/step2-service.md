@@ -6,13 +6,13 @@ This service can be referenced by its label, and therefore access with the help 
 
 Expose the Pod by fronting it with a Service labeled _hello_.
 
-`kubectl expose pod hello --type=NodePort`{{execute}}
+`kubectl expose deployment hello --type=NodePort`{{execute}}
 
 `kubectl get service hello`{{execute}}
 
 The NodePort is assign a port value at some free port above 30000. For this Katacoda example we need it to be at a defined value, here we choose 31001. Use the _patch_ command to change the _hello_ service NodePort from its random value to the chosen, fixed value.
 
-`kubectl patch service hello --type='json' --patch='[{"op": "replace", "path": "/spec/type","value":"NodePort"}]'`{{execute}}
+`kubectl patch service hello --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
 The service NodePort is now adjusted.
 
