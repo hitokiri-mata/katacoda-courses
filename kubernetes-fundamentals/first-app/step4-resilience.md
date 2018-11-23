@@ -14,7 +14,7 @@ Delete one of the Pods and watch Kubernetes recover from the glitch.
 
 ```
 kubectl delete pod XXXX-TODO
-kubectl get deployments --label hello
+kubectl get deployments --selector=label=hello
 ```{{execute}}
 
 When a Pod is no longer running, the Kubernetes controller recognizes the different between the declared state and the reality of the cluster state. The controller will instruct the Scheduler on how to resolve the problem and the Schedular will search out the most healthy and optimum Kubelet among of the worker nodes. The Kubelet will start the new Pod. Shortly thereafter the Controller will recognize the state of the cluster now matches the declared state and peace is restored.
