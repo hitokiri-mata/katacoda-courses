@@ -8,13 +8,15 @@ You can witness Kubernetes resilience feature by purposefully killing your Pods.
 
 Get the list of running pods.
 
-`kubectl get pods --label hello`{{execute}}
+`kubectl get pods --selector=run=hello`{{execute}}
 
-Delete one of the Pods and watch Kubernetes recover from the glitch.
+Delete one of the Pods and watch (-w) how Kubernetes recover from the glitch.
 
 ```
-kubectl delete pod XXXX-TODO
-kubectl get deployments --selector=label=hello
+kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)&
+kubectl get deployments --selector=label=hello -w
 ```{{execute}}
+
+Ctrl-C once the 3 pods are restored, notice one pod has a new Id in the name.
 
 When a Pod is no longer running, the Kubernetes controller recognizes the different between the declared state and the reality of the cluster state. The controller will instruct the Scheduler on how to resolve the problem and the Schedular will search out the most healthy and optimum Kubelet among of the worker nodes. The Kubelet will start the new Pod. Shortly thereafter the Controller will recognize the state of the cluster now matches the declared state and peace is restored.

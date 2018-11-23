@@ -8,7 +8,7 @@ We will scale the hello Pod up and down. First, in another terminal start a cont
 
 With this, the single Pod is handling all the requests.
 
-`kubectl get pods`{{execute T1}}
+`kubectl get deployments,pods`{{execute T1}}
 
 Ask Kubernetes to duplicate the _echoservice_ across more Pods.
 
@@ -16,7 +16,7 @@ Ask Kubernetes to duplicate the _echoservice_ across more Pods.
 
 Kubernetes spins up new and duplicated Pods and the same service begins to balance the requests across the pods.
 
-`kubectl top pods`{{execute T1}}
+`kubectl top pod -l run=hello`{{execute T1}}
 
 Scale the Pods to zero and see what happens with the same _top_ command and the requests in the other terminal.
 
@@ -25,3 +25,11 @@ Scale the Pods to zero and see what happens with the same _top_ command and the 
 Scale the Pods back to 1 and see how the requests are restored.
 
 `kubectl scale deployment hello --replicas=1`{{execute T1}}
+
+A new pod should show in a moment.
+
+`kubectl get deployments,pods`{{execute T1}}
+
+A few moments later the metrics will be available for the new pod.
+
+`kubectl top pod -l run=hello`{{execute T1}}
