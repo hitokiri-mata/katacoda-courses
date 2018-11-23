@@ -4,15 +4,15 @@ If you inspect the Pod you will see the running container is version 1.9
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-A newer version of the container is 1.10.
+A newer version of the container is 1.10 as listed [here](https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/echoserver?gcrImageListsize=30).
 
 An important aspect of Kubernetes is your users may benefit from the ideas of [continuous deployment](https://martinfowler.com/bliki/ContinuousDelivery.html). A fundamental way to approach this is with Kubernetes rollouts.
 
 Here are two approaches.
 
-1\. A precise surgical way is with the _set image_ command. This will modify the image version for the Pod in the Deployment.
+1\. A precise surgical way is with the _set image_ command. This will modify the image version for the container in each Pod.
 
-`kubectl set image deployment/hello hello=echoserver:1.10 --all`{{execute}}
+`kubectl set image deployment/hello hello=k8s.gcr.io/echoserver:1.10 --all`{{execute}}
 
 Now, the Pod inspection will report the updated container.
 

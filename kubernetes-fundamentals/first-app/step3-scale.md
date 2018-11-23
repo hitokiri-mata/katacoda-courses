@@ -28,7 +28,7 @@ The list will show the pods Terminating, then in a moment the list will be blank
 
 `kubectl get pods`{{execute T1}}
 
-Notice while the pod count is at zero the service running in Terminal 2 is reporting no responses.
+Notice while the pod count is at zero the service running in Terminal 2 is reporting no responses. Soon the above command will report _No resources found_.
 
 Scale the Pods back to 1 and see how the requests are restored.
 
