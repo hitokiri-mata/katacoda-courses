@@ -2,7 +2,7 @@
 
 ## Versions ##
 
-This KataCoda scenario provides a recent version of the Minikube command line tool (CLI). Katacoda has provided you a Linux virtual machine completely capable of serving up Minikube in the Bash shell to the right.
+This Katacoda scenario provides a recent version of the Minikube command line tool (CLI). Katacoda has provided you a Linux virtual machine completely capable of serving up Minikube in the Bash shell to the right.
 
 > After this course, if you want to also run Minikube locally follow these [installation instructions](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
