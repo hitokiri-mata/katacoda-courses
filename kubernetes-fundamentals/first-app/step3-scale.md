@@ -18,9 +18,17 @@ Kubernetes spins up new and duplicated Pods and the same service begins to balan
 
 `kubectl top pod -l run=hello`{{execute T1}}
 
+The call may return and error such as _metrics not available yet_. This just means the Heapster monitoring is still initializing. In a few moments the call will work.
+
 Scale the Pods to zero and see what happens with the same _top_ command and the requests in the other terminal.
 
 `kubectl scale deployment hello --replicas=0`{{execute T1}}
+
+The list will show the pods Terminating, then in a moment the list will be blank.
+
+`kubectl get pods`{{execute T1}}
+
+Notice while the pod count is at zero the service running in Terminal 2 is reporting no responses.
 
 Scale the Pods back to 1 and see how the requests are restored.
 
