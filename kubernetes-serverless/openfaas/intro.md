@@ -23,4 +23,4 @@ You will learn how:
 - functions are listed, inspected and monitored
 - functions automatically scale up and down based on load
 
-The OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/). More references to documentation and examples listed at the end of this course.
+The OpenFaaS architecture is described in the [OpenFaaS documentation](https://docs.openfaas.com/). More references to documentation and examples listed at the end of this scenario.

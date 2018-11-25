@@ -18,15 +18,19 @@ Expose queue with a service to make is easy for producers and consumers to acces
 
 Produce a collection of work items and place onto queue.
 
+`QUEUE_POD=$(kubectl get pods -l app=work-queue,component=queue -o jsonpath='{.items[0].metadata.name}')`{{execute}}
+
+`kubectl port-forward $QUEUE_POD 8080:8080 &`{{execute}}
+
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-6-load-queue.sh | bash`{{execute}}
 
-See the queued items count.
+See the _enqueued_ items count, it will be 100.
 
 `curl $(minikube service queue --url)/memq/server/stats`{{execute}}
 
 You can also see the queue in the portal. Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 ## Process Work Items ##
 

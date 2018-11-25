@@ -4,12 +4,12 @@ TODO...
 
 ## Lessons Learned ##
 
-You will learn:
+You have learn:
 
 - How Jobs are defined and work in Kubernetes
-- How Job can serially or in parallel
 - How Kubernetes resilience recovers failed jobs.
-- How [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) can be scheduled with a cron rule
+- How Job can serially or in parallel
+- Why it's more efficient to run Jobs in parallel
 - How Jobs can process a work queue
 
 ## References ##

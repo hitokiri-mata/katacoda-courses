@@ -18,7 +18,7 @@ When Pods run the output from the containers are captured in the Pod's /var/logs
 
 `echo $JOB_ID`{{execute}}
 
-`kubectl logs $(JOB_ID)`{{execute}}
+`kubectl logs $JOB_ID`{{execute}}
 
 Once you are done inspecting the job, use the _delete_ command to remove it.
 

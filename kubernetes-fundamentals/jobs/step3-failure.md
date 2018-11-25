@@ -14,7 +14,7 @@ After it runs for a moment, inspect the Pod status.
 
 `kubectl get pod --selector job-name=oneshot`{{execute}}
 
-Notice the column _RESTARTS_ shows Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. This is because the job was submitted with the `restartPolicy: OnFailure` setting. Alternatively the policy could have been set to `Never` to prevent the restarts.
+Notice the shortly the column _RESTARTS_ reports Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. This is because the job was submitted with the `restartPolicy: OnFailure` setting. Alternatively the policy could have been set to `Never` to prevent the restarts.
 
 Cleanup this job with the _delete_ command.
 
