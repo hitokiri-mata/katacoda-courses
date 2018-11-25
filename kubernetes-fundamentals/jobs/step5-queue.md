@@ -22,13 +22,13 @@ Produce a collection of work items and place onto queue. First, use port forward
 
 View the _enqueued_ items count, it will be 100.
 
-`curl $(minikube service queue --url)/memq/server/stats`{{execute}}
+`curl localhost:8080/memq/server/stats`{{execute}}
 
 You can also see the queue in the portal. Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service.
 
 These commands will expose the service externally to Katacoda's subdomain scheme.
 
-Expose the queue with a Kubernetes service to allow access to the Queu portal.
+Expose the queue with a Kubernetes service to allow access to the Queue Portal.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-5-service-queue.yaml`{{execute T1}}
 
@@ -38,7 +38,7 @@ Expose the queue with a Kubernetes service to allow access to the Queu portal.
 
 Notice the same port number is placed in the subdomain of the URL.
 
-`https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`
 
 ## Process Work Items ##
 
@@ -52,11 +52,11 @@ Create the parallel consumer Job.
 
 Watch activity of pods, queue and kubernetes dashboard
 
-`kubectl get pods -w`{{execute}}
+`kubectl get pods`{{execute}}
 
-Go back to the Queue portal watch the items get processed until all 100 are complete.
+Go back to the Queue portal watch the items get processed until all 100 are complete. You can also watch the progress with this _curl_.
 
-`curl $(minikube service queue --url)/memq/server/stats`{{execute}}
+`watch -n 3 curl $(minikube service queue --url)/memq/server/stats`{{execute}}
 
 ## Clean Up ##
 

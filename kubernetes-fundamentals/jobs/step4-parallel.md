@@ -34,7 +34,11 @@ The template runs 10 jobs where each job generates 10 keys. For a better race co
 
 `curl -s https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-3-job-parallel.yaml | sed '/num-to-gen=/s/=.*/=1"/' > job-parallel.yaml`{{execute}}
 
-Run the job in parallel.
+Notice now the `keygen-num-to-gen` setting is set to `=1`.
+
+`cat job-parallel.yaml`{{execute}}
+
+Run the jobs in parallel.
 
 `kubectl apply -f job-parallel.yaml`{{execute}}
 
@@ -54,7 +58,7 @@ Let's take a look at the race results between the serial and parallel execution 
 
 `clear && echo -e "For over a decade prophets have voiced the contention that the organization of a single computer has reached its limits and that truly significant advances can be made only by interconnection of a multiplicity of computers. - Gene Amdahl in 1967.\n\nThe results are in:\nSerial: $SERIAL_DURATION\nParallel: $PARALLEL_DURATION"`{{execute}}
 
-The high the number of key to generate will correlate to a high gap in time between these two techniques.
+The high the number of keys to generate will correlate to a larger gap in time between these two techniques.
 
 Finally, delete the 2 jobs by filtering on a label.
 

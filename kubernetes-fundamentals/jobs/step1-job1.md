@@ -10,9 +10,11 @@ Use the Kubectl _run_ command as a simple way to create a Job. This command runs
 
 Once the job is complete the Pod and container are no longer running, but are still present and its state and logs can be inspected.
 
-Use the _get_ command to list of current jobs.
+Use the _get_ command to list the current jobs.
 
 `kubectl get jobs`{{execute}}
+
+Take a peek at the Kubernetes Dashboard (tab above the command line) and see how the Job is created as a resource. In the dashboard, explore the details and logs of the Job and Pod that just ran.
 
 Once you are done inspecting the job, use the _delete_ command to remove it.
 
