@@ -6,12 +6,17 @@
       {
         "course_id": "minikube",
         "title": "Minikube",
-        "description": "Introduction to Minikube as a simple Kubernetes cluster"
+        "description": "Introduction to Minikube as a simple Kubernetes cluster."
       },
       {
         "course_id": "first-app",
         "title": "First App",
-        "description": "Run your first application on Kubernetes"
+        "description": "Run your first application on Kubernetes."
+      },
+      {
+        "course_id": "jobs",
+        "title": "Jobs and Queuing",
+        "description": "Explore the Jobs resource and how the pattern can be applied."
       }
     ]
   }

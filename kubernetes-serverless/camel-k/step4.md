@@ -18,7 +18,6 @@ Watch the services start
 
 `kubectl get deployments -w --all-namespaces`{{execute}}
 
-Once started Ctrl-C.
+Once started run submit this raw code.
 
-`kamel run sample.java`{{execute}}
-
+`kamel run sample.java`{{execute interrupt}}

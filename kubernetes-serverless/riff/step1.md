@@ -18,8 +18,10 @@ Using the Riff CLI tool too initialize Knative. This will include initialization
 
 `riff system install --node-port`{{execute}}
 
-Watch the services start
+Watch the Pods start
 
-`watch -n 1 kubectl get pod --all-namespaces`{{execute T2}}
+`kubectl get pod -w --all-namespaces`{{execute T2}}
 
-Once started Ctrl-C.
+Once started check one more time.
+
+`kubectl get pod -w --all-namespaces`{{execute T2 interrupt}}

@@ -1,0 +1,54 @@
+{
+  "title": "Jobs",
+  "description": "Explore the Jobs resource and how the pattern can be applied.",
+  "details": {
+    "steps": [
+      {
+        "text": "step1-job1.md"
+      },
+      {
+        "text": "step2-job2.md"
+      },
+      {
+        "text": "step3-failure.md"
+      },
+      {
+        "text": "step4-parallel.md"
+      },
+      {
+        "text": "step5-queue.md"
+      },
+      {
+        "text": "step6-cleanup.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Queue Portal", "port": 30001}
+    ]
+    },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
