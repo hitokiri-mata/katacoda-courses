@@ -1,6 +1,6 @@
 # Parallelism #
 
-A huge advantage of running application on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be longer running and incur notable CPU and memory consumption. One of the best ways to approach performance is running the jobs in parallel. Instead of each job creating a series of keys serially, have multiple jobs work on smaller units of work.
+A huge advantage of running application on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be longer running and incur notable CPU and memory consumption. A helpful ways to solve performance problems is running the jobs in parallel. Instead of each job creating a series of keys serially, have multiple jobs work on smaller units of work.
 
 ## A Race ##
 
@@ -12,13 +12,13 @@ First, run the job we ran in the previous step 2 and have it generate 10 keys.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 
-This time we will watch for is the Duration result. Inspect the job description and extract the `Duration:` time, this will take a few minutes. If the number does not appear, this means the job is still running.
+This time we will watch for is the duration result. By inspecting the status times in the job's YAML the duration time can be extracted. It will be a few moments before the end time is recorded. If a syntax error appears, it just means the `completionTime` has not been recorded yet.
 
-`kubectl describe jobs oneshot | grep -o 'Duration: .*' | cut -f2- -d:`{{execute}}
+`echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'startTime: .*' | cut -f2- -d:))) seconds"`{{execute}}
 
-Once the number appears, take note of it.
+Once the seconds number appears, take note of it.
 
-`export SERIAL_DURATION=$(kubectl describe jobs oneshot | grep -o 'Created pod: .*' | cut -f2- -d:)`{{execute}}
+`export SERIAL_DURATION=$(expr $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'startTime: .*' | cut -f2- -d:)))`{{execute}}
 
 ### Parallel ###
 
@@ -36,17 +36,21 @@ Run the job in parallel.
 
 `kubectl apply -f job-parallel.yaml`{{execute}}
 
-Again, watch for the Duration result. Inspect the parallel job description and extract the `Duration:` time, this will take a few minutes. If the number does not appear, this means the job is still running.
+Again, by inspecting the status times in the job's YAML the duration time can be extracted. It will be a few moments before the end time is recorded. If a syntax error appears, it just means the `completionTime` has not been recorded yet.
 
-`kubectl describe jobs parallel | grep -o 'Duration: .*' | cut -f2- -d:`{{execute}}
+`echo "Duration: $(expr $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'startTime: .*' | cut -f2- -d:))) seconds"`{{execute}}
 
-Once the number appears, take note of it.
+Once the seconds number appears, take note of it.
 
-`export PARALLEL_DURATION=$(kubectl describe jobs parallel | grep -o 'Duration: .*' | cut -f2- -d:)`{{execute}}
+`export PARALLEL_DURATION=$(expr $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'startTime: .*' | cut -f2- -d:)))`{{execute}}
 
 ## Race Results ##
 
+Let's take a look at the race results between the serial and parallel execution of the key generation job.
+
 `clear && echo -e "For over a decade prophets have voiced the contention that the organization of a single computer has reached its limits and that truly significant advances can be made only by interconnection of a multiplicity of computers. - Gene Amdahl in 1967.\n\nThe results are in:\nSerial: $SERIAL_DURATION\nParallel: $PARALLEL_DURATION"`{{execute}}
+
+The high the number of key to generate will correlate to a high gap in time between these two techniques.
 
 Finally, delete the 2 jobs by filtering on a label.
 

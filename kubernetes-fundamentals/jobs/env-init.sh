@@ -11,4 +11,3 @@ source <(helm completion bash)
 clear
 
 minikube start
-minikube addons enable heapster
