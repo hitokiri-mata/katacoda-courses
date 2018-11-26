@@ -27,6 +27,11 @@
         "course_id": "sonarqube",
         "title": "SonarQube",
         "description": "Code Analysis with SonarQube on Kubernetes"
+      },
+      {
+        "course_id": "mean",
+        "title": "Mean Application",
+        "description": "Deploy A MEAN Application On Kubernetes With Helm. Based on an article from Bitnami."
       }
     ]
   }

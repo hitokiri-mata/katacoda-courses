@@ -13,6 +13,6 @@ There are many other types of resources that can be added to Kubernetes besides 
 - **Rolling out** new versions of an application
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/first-app/assets/nfjs.png "No Fluff Just Stuff")
+<img align="left" src="/javajon/courses/kubernetes-fundamentals/first-app/assets/nfjs.png">
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

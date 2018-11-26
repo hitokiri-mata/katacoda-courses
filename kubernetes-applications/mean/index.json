@@ -1,24 +1,30 @@
 {
-  "title": "First App",
-  "description": "About Kubernetes Pods",
+  "title": "Mean Application",
+  "description": "Deploy A MEAN Application On Kubernetes With Helm.",
   "difficulty":	"Intermediate",
-  "time":	"29 minutes",
+  "time":	"25 minutes",
   "details": {
     "steps": [
       {
-        "text": "step1-deployment.md"
+        "text": "step1-minikube.md"
       },
       {
-        "text": "step2-service.md"
+        "text": "step2-registry.md"
       },
       {
-        "text": "step3-scale.md"
+        "text": "step3-source-code.md"
       },
       {
-        "text": "step4-resilience.md"
+        "text": "step4-build.md"
       },
       {
-        "text": "step5-rollout.md"
+        "text": "step5-helm.md"
+      },
+      {
+        "text": "step6-deploy.md"
+      },
+      {
+        "text": "step7-use.md"
       }
     ],
     "intro": {
@@ -43,7 +49,8 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Queue Portal", "port": 31001}
     ]
     },
   "backend": {
