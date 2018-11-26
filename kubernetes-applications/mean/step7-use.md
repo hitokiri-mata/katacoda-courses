@@ -1,21 +1,12 @@
 # Use Application #
 
-Failure is embraced as a first class visitor in Kubernetes. All things are expected to fail at some point. Let's see the behavior when a job fails.  
+`kubectl patch service my-mean-app-mean-k8s --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
-By default the _kaurd_ container competes with an success exit code of 0. A command can be passed to force a different exit code. Inspect this job definition that forces the container to end with an exit code of 1 after generating 3 keys.
+With these to changes you can navigate to the MapApp portal. On the right there is a tab called _MapApp_ or from this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/dashboard/db/openfaas
 
-`curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-2-job-oneshot-failure1.yaml`{{execute}}
-
-Run the job and see it fail.
-
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-2-job-oneshot-failure1.yaml`{{execute}}
-
-After it runs for a moment, inspect the Pod status.
-
-`kubectl get pod --selector job-name=oneshot`{{execute}}
-
-In a moment, notice the column _RESTARTS_ reports Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. This is because the job was submitted with the `restartPolicy: OnFailure` setting. Alternatively, the policy could have been set to `Never` to prevent the restarts.
 
 Cleanup this job with the _delete_ command.
 
-`kubectl delete jobs oneshot`{{execute}}
+`helm delete my-mean-app --purge`{{execute}}
+
+`helm delete registry --purge`{{execute}}

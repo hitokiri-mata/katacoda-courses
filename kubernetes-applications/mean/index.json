@@ -50,7 +50,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Queue Portal", "port": 31001}
+      {"name": "MapApp", "port": 31001}
     ]
     },
   "backend": {
