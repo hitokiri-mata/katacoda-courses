@@ -17,5 +17,3 @@ You will learn:
 - TODO
 - TODO
 - TODO
-
-The Jobs feature is described in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/). More references to documentation is listed at the end of this scenario.

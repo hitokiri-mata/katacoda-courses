@@ -1,20 +1,27 @@
 # Helm Chart #
 
-`ls helm-chart`{{execute}}
+View the Helm chart structure.
 
-Edit the Values.Yaml file
+`tree helm-chart`{{execute}}
 
-change the registry for the image
+## Edit values.yaml ##
 
-Edit The Requirements.Yaml File
+TODO
 
-Edit The Templates/Deployment.Yaml File
+## Change registry for the image ##
+
+TODO
+
+$$ Edit requirements.yaml ##
+
+TODO
+
+## Edit Templates/deployment.aml ##y
+
+TODO
 
 ## Install Missing Dependencies ##
 
 `helm dep list helm-chart`{{execute}}
 
 `helm dep update helm-chart/`{{execute}}
-
-
-
