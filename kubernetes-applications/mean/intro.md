@@ -4,7 +4,7 @@
 
 As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario of this course.
 
-<img align="right" src="/javajon/courses/kubernetes-fundamentals/jobs/assets/kubernetes-up-and-running-book.png">
+<img align="right" src="/javajon/courses/kubernetes-application/mean/assets/mapapp.png">
 
 This scenario takes you through the basics building deploying and running a MEAN stack on Kubernetes.
 
