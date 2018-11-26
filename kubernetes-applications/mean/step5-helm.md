@@ -12,7 +12,7 @@ Edit The Templates/Deployment.Yaml File
 
 ## Install Missing Dependencies ##
 
-`helm dep list`{{execute}}
+`helm dep list helm-chart`{{execute}}
 
 `helm dep update helm-chart/`{{execute}}
 

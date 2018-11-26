@@ -4,7 +4,7 @@
 
 (TODO - assign export USERNAME="user fills in DockHub user name")
 
-`docker build -t USERNAME/mean-k8s:0.1.0 .`{{execute}}
+`docker build -t $REGISTRY/mean-k8s:0.1.0 .`{{execute}}
 
 Verify the container images have been built.
 
