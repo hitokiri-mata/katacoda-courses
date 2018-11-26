@@ -2,9 +2,9 @@
 
 (This is a draft, jonathan.johnson@dijure.com, Nov 25, 2018)
 
-As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario of this course.
+As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario in [this course](https://www.katacoda.com/javajon/courses/kubernetes-fundamentals).
 
-<img align="right" src="/javajon/courses/kubernetes-application/mean/assets/mapapp.png">
+<img align="right" src="/javajon/courses/kubernetes-applications/mean/assets/mapapp.png">
 
 This scenario takes you through the basics building deploying and running a MEAN stack on Kubernetes.
 
