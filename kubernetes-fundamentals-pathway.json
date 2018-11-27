@@ -17,6 +17,11 @@
         "course_id": "jobs",
         "title": "Jobs",
         "description": "Explore the Jobs resource and how the pattern can be applied."
+      },
+      {
+        "course_id": "configmap-secret",
+        "title": "ConfigMaps and Secrets",
+        "description": "Explore Kubernetes ConfigMaps and Secrets."
       }
     ]
   }
