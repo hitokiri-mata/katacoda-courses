@@ -4,11 +4,11 @@ Camel K is ...
 
 ## Lessons Learned ##
 
-With these scenarios you have learned how:
+With these steps you have learned:
 
-- todo
-- todo
-- todo
+- how TODO,
+- how TODO,
+- how todo.
 
 ## References ##
 

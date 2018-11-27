@@ -2,6 +2,9 @@
 
 (TODO, blocking issue as this is a multi-stage build and it will fail because local Docker instance is version 17.03.0-ce and multi-stage builds are a new feature requiring Docker 17.05 or higher)
 
+sudo apt-get remove docker docker-engine docker.io
+
+
 (TODO - assign export USERNAME="user fills in DockHub user name")
 
 `docker build -t $REGISTRY/mean-k8s:0.1.0 .`{{execute}}

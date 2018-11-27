@@ -1,30 +1,34 @@
 {
-  "title": "First App",
-  "description": "About Kubernetes Pods",
+  "title": "Kubernetes ConfigMaps and Secrets",
+  "description": "The fundamentals of Kubernetes ConfigMaps and Secrets",
   "difficulty":	"Intermediate",
-  "time":	"20 minutes",
+  "time":	"15 minutes",
   "details": {
     "steps": [
       {
-        "text": "step1-deployment.md"
+        "text": "step1-minikube.md"
       },
       {
-        "text": "step2-service.md"
+        "text": "step2-create.md"
       },
       {
-        "text": "step3-scale.md"
+        "text": "step3-via-cli.md"
       },
       {
-        "text": "step4-resilience.md"
+        "text": "step4-via-env.md"
       },
       {
-        "text": "step5-rollout.md"
+        "text": "step5-via-volume.md"
+      },
+      {
+        "text": "step6-secret-create.md"
+      },
+      {
+        "text": "step7-secret-read.md"
       }
     ],
     "intro": {
-      "text": "intro.md",
-      "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
@@ -33,9 +37,6 @@
       "host01": [
         {"file": "*", "target": "/root"}      ]
     }
-  },
-  "environment": {
-    "uilayout": "terminal"
   },
   "environment": {
     "showdashboard": true,

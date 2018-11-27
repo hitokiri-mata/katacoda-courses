@@ -6,11 +6,13 @@ There are many other types of resources that can be added to Kubernetes besides 
 
 ## Lessons Learned ##
 
-- **Deploying** an application
-- **Scaling** an application
-- Load balancing and application with a **Service** for multiple **Pods** of the app
-- **Resilience** maintains the declared state even with failures
-- **Rolling out** new versions of an application
+With these steps you have learned:
+
+- how to **Deploy** an application,
+- how to **Scale** an application,
+- how to load balance an application with a **Service** for multiple **Pods** of an application,
+- how **Resilience** maintains the declared state even with failures,
+- how to **Roll out** new versions of an application.
 
 ------
 <img align="left" src="/javajon/courses/kubernetes-fundamentals/first-app/assets/nfjs.png">

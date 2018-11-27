@@ -11,12 +11,12 @@ This scenario takes you through the basics of [Job resources](https://kubernetes
 
 >> The Job object is responsible for creating and managing pods defined in a template in the Job specification. These pods generally run until successful completion. The Job object coordinates running a number of pods in parallel.
 
-You will learn:
+In the following steps you will learn:
 
-- How Jobs are defined and work in Kubernetes
-- How Kubernetes resilience recovers failed jobs
-- How Job can serially or in parallel
-- Why it's more efficient to run Jobs in parallel
-- How Jobs can process a work queue
+- how Jobs are defined and work in Kubernetes,
+- how Kubernetes resilience recovers failed jobs,
+- how Job can serially or in parallel,
+- why it's more efficient to run Jobs in parallel,
+- how Jobs can process a work queue.
 
 The Jobs feature is described in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/). More references to documentation is listed at the end of this scenario.

@@ -4,11 +4,11 @@ You now understand ...
 
 ## Lessons Learned ##
 
-With these scenarios you have learned how:
+With these steps you have learned:
 
-- to TODO...
-- to TODO...
-- to TODO...
+- how TODO,
+- how TODO,
+- how TODO.
 
 Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
 

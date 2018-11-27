@@ -12,7 +12,7 @@ These scenarios were inspired from Bitnami's article [Bitnami's article: Deploy 
 
 > MEAN is an opinionated full-stack Javascript framework which simplifies and accelerates web application development. It is a popular choice for developers who want to create web applications with ease. It is based on the NodeJS language and it allows you to write less code with its predefined layout and additional libraries for simplifying the programming of web applications. -Bitnami, _Deploy A MEAN Application On Kubernetes With Helm_
 
-You will learn:
+In the following steps you will learn:
 
 - TODO
 - TODO

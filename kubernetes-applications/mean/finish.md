@@ -4,11 +4,11 @@ TODO
 
 ## Lessons Learned ##
 
-You have learn:
+With these steps you have learned:
 
-- TODO
-- TODO
-- TODO
+- how TODO,
+- how TODO,
+- how TODO.
 
 ## References ##
 

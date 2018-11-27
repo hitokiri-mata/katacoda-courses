@@ -4,14 +4,14 @@ OpenFaaS is an independent project created by [Alex Ellis](https://www.alexellis
 
 ## Lessons Learned ##
 
-With these scenarios you have learned how:
+With these steps you have learned:
 
-- to install OpenFaaS on Kubernetes
-- interact with OpenFaaS from the command line and its portal
-- functions are deployed and removed
-- functions are named, exposed, and invoked
-- functions are listed, inspected and monitored
-- functions automatically scale up and down based on load
+- how to install OpenFaaS on Kubernetes,
+- how to interact with OpenFaaS from the command line and its portal,
+- how functions are deployed and removed,
+- how functions are named, exposed, and invoked,
+- how functions are listed, inspected and monitored,
+- how functions automatically scale up and down based on load.
 
 ## References ##
 

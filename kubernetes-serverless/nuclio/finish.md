@@ -4,12 +4,12 @@ Nuclio is a new "serverless" project, derived from Iguazio's elastic data life-c
 
 ## Lessons Learned ##
 
-With these scenarios you have learned how:
+With these steps you have learned:
 
-- to install Nuclio on Kubernetes
-- functions are deployed and removed
-- functions are named, exposed, and invoked
-- functions are listed, inspected and monitored
+- how to install Nuclio on Kubernetes,
+- how functions are deployed and removed,
+- how functions are named, exposed, and invoked,
+- how functions are listed, inspected and monitored.
 
 ## References ##
 

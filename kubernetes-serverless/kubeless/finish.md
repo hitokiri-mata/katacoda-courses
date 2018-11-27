@@ -4,12 +4,12 @@ Kubeless is a Kubernetes-native serverless framework. It runs on top of your Kub
 
 ## Lessons Learned ##
 
-With these scenarios you have learned how:
+With these steps you have learned:
 
-- to install Kubeless on Kubernetes
-- functions are deployed and removed
-- functions are named, exposed, and invoked
-- functions are listed, inspected and monitored
+- how to install Kubeless on Kubernetes,
+- how functions are deployed and removed,
+- how functions are named, exposed, and invoked,
+- how functions are listed, inspected and monitored.
 
 ## References ##
 

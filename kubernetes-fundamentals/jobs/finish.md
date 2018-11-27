@@ -10,13 +10,13 @@ To further this thinking consider investigating _serverless_ or _function_ imple
 
 ## Lessons Learned ##
 
-You have learn:
+With these steps you have learned:
 
-- How Jobs are defined and work in Kubernetes
-- How Kubernetes resilience recovers failed jobs.
-- How Job can serially or in parallel
-- Why it's more efficient to run Jobs in parallel
-- How Jobs can process a work queue
+- how Jobs are defined and work in Kubernetes,
+- how Kubernetes resilience recovers failed jobs,
+- how Job can serially or in parallel,
+- why it's more efficient to run Jobs in parallel,
+- how Jobs can process a work queue.
 
 ## References ##
 
