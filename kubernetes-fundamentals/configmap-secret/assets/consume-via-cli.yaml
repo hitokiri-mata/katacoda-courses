@@ -19,3 +19,4 @@ spec:
               name: ucs-info
               key: ucs-org
   restartPolicy: Never
+  

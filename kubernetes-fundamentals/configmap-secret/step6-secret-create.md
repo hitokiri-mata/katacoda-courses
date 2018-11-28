@@ -1,7 +1,5 @@
 # Create Secret #
 
-## Secrets ##
-
 Both ConfigMaps and Secrets are stored in etcd, but the way you submit secrets is slightly different than ConfigMaps.
 
 ## Create from CLI ##
@@ -24,14 +22,13 @@ A better way to define Secrets is with a resource YAML file in this form.
 
 `kubectl create -f secret.yaml`{{execute}}
 
-Look inside the file
+Look inside the YAML.
 
 `cat secret.yaml`{{execute}}
 
 When the YAML file was create the password text came from the output of this _base64_ command.
 
 `echo MyDbPassw0rd | base64`{{execute}}
-TXlEYlBhc3N3MHJkCg==
 
 When first creating the YAML file you can skip using the _base64_ command and instead use the kubectl `--dry-run` feature which will generate the YAML file for you with the encoding.
 

@@ -1,6 +1,6 @@
 # Conclusion #
 
-Keeping configurations and secrets out of your codebase is an important pattern to follow for application on Kubernetes. Kubernetes can be deployed to a variety of data center targets and your application should also accommodate these different contextual settings. As you have learned, the environment configuration can all be stored in ConfigMaps and Secrets. This allows your applications to reference these configurations as environmental resources.
+Keeping configurations and secrets out of your codebase is an important guideline for application on Kubernetes. Kubernetes can be deployed to a variety of data center targets and your application should also accommodate these different contextual settings. You learned, the environment configuration can all be stored in ConfigMaps and Secrets. This allows your applications to reference these configurations as environmental resources.
 
 ## Secrets and Protection ##
 
@@ -8,7 +8,7 @@ If you are interested in storing secrets safely in version control, consider thi
 
 Since secrets are stored in etcd it's recommended to separate and firewall your etcd cluster. This is an advanced administration topic for Kubernetes, but it's important to keep your secrets _secret_. [See 11 Ways (Not) to Get Hacked](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#4-separate-and-firewall-your-etcd-cluster).
 
-Lastly, enable RBAC and protect your Kubernetes API. Unprotected access to the cluster, such as through the dashboard, can unveil secrets. Invest in protecting your Kubernetes cluster and avoid what Tesla and others have done in the past [Lessons from the Cryptojacking Attack at Tesla](https://redlock.io/blog/cryptojacking-tesla).
+Lastly, enable RBAC and protect your Kubernetes API. Unprotected access to the cluster, such as through the dashboard, can unveil secrets. Invest in protecting your Kubernetes cluster and avoid what others have done in the past [Lessons from the Cryptojacking Attack at Tesla](https://redlock.io/blog/cryptojacking-tesla).
 
 ## Lessons Learned ##
 
