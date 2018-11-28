@@ -23,12 +23,11 @@ With these steps you have learned:
 - [__Free PDF__ of Kubernetes Up & Running: CHAPTER 11, ConfigMaps and Secrets](https://azepdf.com/kubernetes-up-and-running-aaronmsftcom.html)
 - [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
-- [Configuring Redis using a ConfigMap](https://kubernetes.io/docs/tutorials/configuratSecrets)
-- [Wired article on security risks and Tesla case study](https://www.wired.com/story/cryptojacking-tesla-amazon-cloud/ion/configure-redis-using-configmap/)
+- [Configuring Redis using a ConfigMap](https://kubernetes.io/docs/tutorials/configuration/configure-redis-using-configmap/)
 - [Storage of secrets as plain text in etcd](https://github.com/bitnami-labs/sealed-secrets)
 - [Vault](https://www.vaultproject.io/)
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/configmap-secrets/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/configmap-secret/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
