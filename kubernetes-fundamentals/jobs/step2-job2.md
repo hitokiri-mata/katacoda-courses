@@ -1,6 +1,6 @@
 # Job from Resource #
 
-It's generally preferable to define resources such as Jobs in resource manifests such as this YAML file.  
+It's generally preferable to define resources such as Jobs in resource manifests such as this YAML file.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 

@@ -12,7 +12,7 @@ is a convenient feature to present the dashboard in your local browser tab. Beca
 
 https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/
 
-The monitoring-grafana service is also available. Explore this  monitoring dashboard for Kubernetes.  
+The monitoring-grafana service is also available. Explore this  monitoring dashboard for Kubernetes.
 
 https://[[HOST_SUBDOMAIN]]-30002-[[KATACODA_HOST]].environments.katacoda.com/
 

@@ -1,0 +1,23 @@
+{
+    "title": "Kubernetes: Observability",
+    "icon": "fa-kubernetes",
+    "description": "Discover different applications that assist in observing applications running on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "logging",
+        "title": "Logging with EFK",
+        "description": "Learn how to aggregate logs on Kubernetes"
+      },
+      {
+        "course_id": "monitoring",
+        "title": "Prometheus",
+        "description": "Learn how to monitor applications on Kubernetes"
+      },
+      {
+        "course_id": "tracing",
+        "title": "Transaction tracing",
+        "description": "Learn how to trace applications on Kubernetes"
+      }
+    ]
+  }
+  

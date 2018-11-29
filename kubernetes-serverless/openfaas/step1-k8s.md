@@ -6,7 +6,7 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 `kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
 
-Verify the Kubernetes cluster is empty.  
+Verify the Kubernetes cluster is empty.
 
 `kubectl get deployments,pods,services`{{execute}}
 

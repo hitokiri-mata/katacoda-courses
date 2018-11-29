@@ -18,7 +18,7 @@ Now, the Pod inspection will report the updated container.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-2\. Another way is to modify the YAML then apply the change with the _update_ command.  
+2\. Another way is to modify the YAML then apply the change with the _update_ command.
 
 Restore the Pod's container 3
 image the version back to the original version

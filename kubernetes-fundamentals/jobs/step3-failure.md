@@ -1,6 +1,6 @@
 # Job Failure #
 
-Failure is embraced as a first class visitor in Kubernetes. All things are expected to fail at some point. Let's see the behavior when a job fails.  
+Failure is embraced as a first class visitor in Kubernetes. All things are expected to fail at some point. Let's see the behavior when a job fails.
 
 By default the _kaurd_ container competes with an success exit code of 0. A command can be passed to force a different exit code. Inspect this job definition that forces the container to end with an exit code of 1 after generating 3 keys.
 

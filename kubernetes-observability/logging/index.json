@@ -1,0 +1,47 @@
+{
+  "title": "Logging with EFK",
+  "description": "Learn how to aggregate logs on Kubernetes",
+  "difficulty":	"Intermediate",
+  "time":	"20 minutes",
+  "details": {
+    "steps": [
+      {
+        "text": "step1-deploy.md"
+      },
+      {
+        "text": "step2-generate.md"
+      },
+      {
+        "text": "step3-kibana.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Kibana", "port": 31001}
+    ]
+    },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

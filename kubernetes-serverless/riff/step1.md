@@ -4,7 +4,7 @@ As you see, your Kubernetes cluster based on Minikube is started now or will be 
 
 `minikube version && minikube status`{{execute}}
 
-Riff is a command line interface for running functions on Knative on Kubernetes.  
+Riff is a command line interface for running functions on Knative on Kubernetes.
 
 To install the command line install the binary
 
