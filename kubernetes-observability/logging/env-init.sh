@@ -13,7 +13,7 @@ clear
 minikube start
 
 # Helm Setup
-helm init --wait
+helm init --service-account tiller --wait
 helm repo update
 
-clear 
+# clear 
