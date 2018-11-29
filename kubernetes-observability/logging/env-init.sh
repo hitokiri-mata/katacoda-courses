@@ -11,4 +11,9 @@ source <(helm completion bash)
 clear
 
 minikube start
-minikube addons enable heapster
+
+# Helm Setup
+helm init --wait
+helm repo update
+
+clear 

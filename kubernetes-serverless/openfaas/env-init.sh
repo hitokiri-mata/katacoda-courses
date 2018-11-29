@@ -18,8 +18,9 @@ do
 done
 
 # Helm Setup
-helm repo update
 helm init --wait
+helm repo update
+
 clear 
 
 minikube status

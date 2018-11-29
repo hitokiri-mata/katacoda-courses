@@ -1,23 +1,11 @@
-# Resilience #
+# Kibana #
 
-Applications designed to embrace failure are the most healthy and resistant to interrupting users' experiences. Kubernetes embraces failure and so should your applications. One failure to expect is your containers _will_ fail. Kubernetes expects containers to crash and will restart Pods when that happens. When your application is load balancing and spreading fault tolerance across multiple Pods, whole groups of users should rarely be effected by container failures.
+Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
 
-You can witness Kubernetes resilience feature by purposefully killing your Pods. Scale the Pods back up.
+`https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
-`kubectl scale deployment hello --replicas=3`{{execute}}
+There is also a top above the command line area labeled `Kibana` that takes you to the same Kibana portal.
 
-Get the list of running pods.
 
-`kubectl get pods --selector=run=hello`{{execute}}
 
-Delete one of the Pods.
-
-`kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)&`{{execute}}
-
-Watch (-w) how Kubernetes recover from the glitch.
-
-`kubectl get pods --selector=run=hello -w`{{execute}}
-
-Ctrl-C once the 3 pods are restored, notice one pod has a new Id in the name.
-
-When a Pod is no longer running, the Kubernetes controller recognizes the different between the declared state and the reality of the cluster state. The controller will instruct the Scheduler on how to resolve the problem and the Schedular will search out the most healthy and optimum Kubelet among of the worker nodes. The Kubelet will start the new Pod. Shortly thereafter the Controller will recognize the state of the cluster now matches the declared state and peace is restored.
+TODO: Drafting...

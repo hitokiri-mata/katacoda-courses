@@ -1,4 +1,5 @@
 #!/bin/sh
 
-helm init
+# Helm Setup
+helm init --wait
 helm repo update

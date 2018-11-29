@@ -12,6 +12,6 @@ clear
 echo "Starting Kubernetes using Minikube..."
 minikube start 
 
-# Helm
-helm repo update
+# Helm Setup
 helm init --wait
+helm repo update
