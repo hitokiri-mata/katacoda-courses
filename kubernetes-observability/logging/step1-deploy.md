@@ -14,8 +14,6 @@ The examples charts are defined in a [Alen Komljen's GitHub repository](https://
 
 The [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/#combining-new-apis-with-automation) is helpful in Kubernetes and Alen Komljen took a [good approach to use an operator](https://akomljen.com/kubernetes-elasticsearch-operator/) for this solution. Add the ElasticSearch operator.
 
-TOOD: run `helm init` with the --tiller-tls-verify flag?
-
 `helm install --name es-operator --namespace logging akomljen-charts/elasticsearch-operator`{{execute}}
 
 In a moment, verify the operator is up and running.

@@ -1,5 +1,7 @@
 # Kubernetes and Logging #
 
+(DRAFT, having issue with helm install es-operator and role security, jonathan.johnson@dijure.com)
+
 It's important to remember to treat logs simple as event streams. Containers should only produce logs as event streams and leave the aggregation and routing to other services on Kubernetes. It's so important that it's defined as factor [11 Logs](https://12factor.net/logs) of the [The Twelve Factors App methodology](https://12factor.net/).
 
 One of the best demonstrable solutions has been provided by [Alen Komljen](https://akomljen.com/) in his blog [Get Kubernetes Logs with EFK Stack in 5 Minutes](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/). This is a helpful short blog, give it a read. The following steps are an adaption of his recommendations in this Katacoda scenario.
