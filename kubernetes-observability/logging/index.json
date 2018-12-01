@@ -42,6 +42,6 @@
     ]
     },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "kubernetes"
   }
 }
