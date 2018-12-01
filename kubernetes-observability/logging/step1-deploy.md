@@ -32,7 +32,9 @@ Inspect the _crd_.
 
 With these operator prerequisites the EFK stack can be deployed with a single umbrella Helm chart.
 
-`helm install --name efk --namespace logging akomljen-charts/efk --set kibana.service.type=NodePort --set fluent-bit.rbac.create=false`{{execute}}
+`helm install --name efk --namespace logging akomljen-charts/efk --set kibana.service.type=NodePort --set fluent-bit.rbac.create=false --set elasticsearch.javaOpts="-Xms256m -Xmx256m" --set elasticsearch.resources.requests.memory=256Mi --set elasticsearch.resources.limits.memory=512Mi`{{execute}}
+
+Above, rbac was disabled for simplicity of this demo and the memory settings were lowered to fit inside the Katacoda small minikube server size.
 
 The stack of pods will soon be running in the logging namespace.
 
