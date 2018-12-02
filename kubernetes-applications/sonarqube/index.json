@@ -7,13 +7,20 @@
   "details": {
     "steps": [
       {
-        "text": "step1.md"
+        "title": "Kubernetes Running for You",
+        "text": "step1-minikube.md"
       },
       {
-        "text": "step2.md"
+        "title": "Start SonarQube",
+        "text": "step2-sonarqube.md"
       },
       {
-        "text": "step3.md"
+        "title": "Analyze Project with SonarQube",
+        "text": "step3-analyze.md"
+      },
+      {
+        "title": "Static Analysis with Gradle",
+        "text": "step4-additional.md"
       }
     ],
     "intro": {

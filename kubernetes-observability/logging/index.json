@@ -1,4 +1,5 @@
 {
+  "private": true,
   "title": "Logging with EFK",
   "description": "Learn how to aggregate logs on Kubernetes",
   "difficulty":	"Intermediate",
@@ -42,6 +43,6 @@
     ]
     },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }

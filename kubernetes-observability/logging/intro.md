@@ -1,6 +1,6 @@
 # Kubernetes and Logging #
 
-(This is a draft and may not work yet..., jonathan.johnson@dijure.com)
+(This is a draft and does not work yet. The Katacoda minikube memory is too small, does not appear to be adjustable and its not clear on how to ensure the charts can be adjusted for a smaller elasticsearch. Pods fail due to out of memory, when memory was set lower, Pods failed for other reasons..., jonathan.johnson@dijure.com)
 
 Containers should only produce logs as event streams and leave the aggregation and routing to other services on Kubernetes. This pattern is emphasized as factor [11 Logs](https://12factor.net/logs) of the [The Twelve Factors App methodology](https://12factor.net/).
 
@@ -36,5 +36,5 @@ However, this scenario is aimed to show how you can get a working stack up with 
 
 In the following steps you will learn:
 
-- How to deploy ElasticSearch, Fluent-bit, and Kibana with Helm charts
+- How to deploy ElasticSearch, Fluent bit, and Kibana with Helm charts
 - How to generate log events and query then in Kibana

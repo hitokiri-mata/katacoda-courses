@@ -13,5 +13,5 @@ service:
 # sonarProperties:
 #   sonar.forceAuthentication=false
 
-# postgresql:  
-#   enabled: false
+postgresql:  
+  enabled: false
