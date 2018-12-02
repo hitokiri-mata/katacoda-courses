@@ -10,4 +10,3 @@ serviceType: NodePort
 rabbitmq:
   nodePort: 31333
   username: admin
-  password: admin

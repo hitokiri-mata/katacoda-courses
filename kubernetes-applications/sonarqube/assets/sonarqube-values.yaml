@@ -18,6 +18,7 @@ service:
 # For Web: sonar.web.javaOpts
 # For ElasticSearch: sonar.search.javaOpts
 # For Compute Engine: sonar.ce.javaOpts
+# https://github.com/10up/wp-local-docker/issues/6
 
 sonarProperties:
   sonar.forceAuthentication=false

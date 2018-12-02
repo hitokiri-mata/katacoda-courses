@@ -1,7 +1,8 @@
 (DRAFTING... working on getting these steps to work...
-https://github.com/helm/charts/issues/6648
-https://github.com/helm/charts/issues/2574
-)
+This Katacoda Minikube instance is not large enough for SonarQube.
+Some attempts have been made in the settings to reduce the memory needs.
+However, you can run the same instructions on another Kubernetes cluster with
+a larger memory setting.)
 
 Install SonarQube using a Helm chart with custom values.
 
