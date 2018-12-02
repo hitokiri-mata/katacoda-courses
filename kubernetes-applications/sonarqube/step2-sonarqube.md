@@ -9,7 +9,7 @@ Install SonarQube using a Helm chart with custom values.
 
 The service is a NodePort but at a random value. For Katacode to offer a URL to the service, the port must be at the known number, 31111.
 
-`kubectl patch service sonar-sonarqube -n sonar --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]`{{execute}}
+`kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]`{{execute}}
 
 `export SONAR_SERVICE=$NODE_IP:31111`{{execute}}
 
