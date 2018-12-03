@@ -17,7 +17,7 @@
 	  },	"details": {
 		"steps": [{
 			"title": "Cluster up and running",
-			"text": "step1.md"
+			"text": "step1-minikube.md"
 		}, {
 			"title": "cAdvisor",
 			"text": "step2-cadvisor.md"
