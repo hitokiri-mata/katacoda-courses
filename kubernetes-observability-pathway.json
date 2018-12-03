@@ -4,6 +4,11 @@
     "description": "Discover different applications that assist in observing applications running on Kubernetes.",
     "courses": [
       {
+        "course_id": "basics",
+        "title": "Basic Kubernetes Observability",
+        "description": "Inspection of a Kubernetes cluster"
+      },
+      {
         "course_id": "logging",
         "title": "Logging with EFK",
         "description": "Learn how to aggregate logs on Kubernetes"
