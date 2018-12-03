@@ -17,3 +17,5 @@ The cAdvisor also serves up the metrics is a helpful HTML format. Without Kataco
 `open $(minikube ip):4194`
 
 However, on Katacoda a slight different route is provided. See the [cAdvisor page here](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/).
+
+It's helpful to leave this page visible as it refreshes every 10 seconds.

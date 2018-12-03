@@ -10,8 +10,13 @@
       },
       {
         "course_id": "logging",
+        "title": "Logging basics and using EFK",
+        "description": "Learn how to access and aggregate logs on Kubernetes"
+      },
+      {
+        "course_id": "logging-chart",
         "title": "Logging with EFK",
-        "description": "Learn how to aggregate logs on Kubernetes"
+        "description": "Learn how install and use an EFK stack on Kubernetes"
       },
       {
         "course_id": "monitoring",
