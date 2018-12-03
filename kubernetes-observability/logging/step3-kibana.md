@@ -6,6 +6,4 @@ Because of Katacoda's virtualization you cannot address this URL from your brows
 
 There is also a top above the command line area labeled `Kibana` that takes you to the same Kibana portal.
 
-
-
 TODO: Drafting...

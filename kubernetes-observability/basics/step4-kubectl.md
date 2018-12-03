@@ -1,3 +1,5 @@
+#
+
 The cAdvisor data can also be observed through a variety of `kubectl describe` commands across various resources.
 
 Inspect the main Minikube node.
@@ -10,7 +12,8 @@ Inspect the last deployment.
 
 Inspect the 3 pods.
 
-`kubectl get pods`{{execute}}
+`kubectl get deployments,pods`{{execute}}
+
 `kubectl describe pods`{{execute}}
 
 Much of this same data is found on the cAdvisor [page](`https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}).
@@ -19,9 +22,11 @@ Kubernetes also maintains a list of events.
 
 `kubectl get events`{{execute}}
 
-Scaling is a type of event. Scale down the pod from 3 down to 2 and see the recorded change event.
+Scaling is a type of event. Scale down the pod from 3 down to 2.
 
 `kubectl scale deployment/random-logger --replicas=2`{{execute}}
+
+Notice the last event will reflectthe scaling request.
 
 `kubectl get events`{{execute}}
 

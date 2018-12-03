@@ -1,3 +1,5 @@
+#
+
 In this Linux server, Minikube and the Kubernetes CLI tool is already installed for you. Check that they are properly installed.
 
 `minikube version && kubectl version`{{execute}}
