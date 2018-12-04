@@ -25,16 +25,20 @@
     },
     "steps": [
       { 
+        "title": "Start Cluster",
+        "text": "step1-start.md"
+      },
+      { 
         "title": "Deploy EFK",
-        "text": "step1-deploy.md"
+        "text": "step2-deploy.md"
       },
       {
         "title": "Generate Logging Events",
-        "text": "step2-generate.md"
+        "text": "step3-generate.md"
       },
       {
         "title": "Kibana",
-        "text": "step3-kibana.md"
+        "text": "step4-kibana.md"
       }
     ],
     "finish": {
