@@ -1,5 +1,3 @@
-# Generate Logging Events ##
-
 Run this _random-logger_ container to start generating continuously random logging events.
 
 `kubectl run random-logger --image=chentex/random-logger --namespace=logging`{{execute}}

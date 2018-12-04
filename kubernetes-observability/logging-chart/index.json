@@ -1,34 +1,9 @@
 {
-  "private": true,
+  "private": false,
   "title": "Logging with EFK",
   "description": "Learn how to aggregate logs on Kubernetes",
   "difficulty":	"Intermediate",
   "time":	"20 minutes",
-  "details": {
-    "steps": [
-      {
-        "text": "step1-deploy.md"
-      },
-      {
-        "text": "step2-generate.md"
-      },
-      {
-        "text": "step3-kibana.md"
-      }
-    ],
-    "intro": {
-      "text": "intro.md",
-      "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
-    },
-    "finish": {
-      "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {"file": "*", "target": "/root"}      ]
-    }
-  },
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal",
@@ -40,6 +15,34 @@
     ]
   },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "kubernetes"
+  },
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "steps": [
+      { 
+        "title": "Deploy EFK",
+        "text": "step1-deploy.md"
+      },
+      {
+        "title": "Generate Logging Events",
+        "text": "step2-generate.md"
+      },
+      {
+        "title": "Kibana",
+        "text": "step3-kibana.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
+    }
   }
 }

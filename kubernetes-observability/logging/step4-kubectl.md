@@ -18,7 +18,7 @@ Inspect the 3 _pods_.
 
 Much of this same data is found on the cAdvisor [page](`https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}).
 
-## Events ##
+## Inspect Events ##
 
 Kubernetes also maintains a list of events.
 
@@ -34,7 +34,7 @@ Notice the last event will reflectthe scaling request.
 
 These events are not to be confused with [security audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/) which are also recorded.
 
-## Inspecting Containers ##
+## Inspect Containers ##
 
 You can also typically get into a running container and inspect it as well. Get the name of the first Pod.
 

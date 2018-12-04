@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"title": "Basic Kubernetes Observability",
 	"description": "Inspection of a Kubernetes cluster",
 	"backend": {
@@ -14,7 +15,8 @@
 		  {"name": "Kubernetes Dashboard", "port": 30000},
 		  {"name": "cAdvisor", "port": 4194}
 		]
-	  },	"details": {
+	  }, 
+	  "details": {
 		"steps": [{
 			"title": "Cluster up and running",
 			"text": "step1-minikube.md"
@@ -25,7 +27,7 @@
 			"title": "Sample Application",
 			"text": "step3-app.md"
 		}, {
-			"title": "Resource Inspection with KubeCtl",
+			"title": "Inspections",
 			"text": "step4-kubectl.md"
 		}, {
 			"title": "Heapster",
@@ -38,7 +40,6 @@
 		"finish": {
 			"text": "finish.md"
 		}
-	},
-	"embedded_survey_url": "https://docs.google.com/forms/d/e/1FAIpQLScMbLRAbaZ8NleOFYRrepdIwCbhClHK3abu3SgzMn1KT_H5iA/viewform?entry.434419381="
+	}
 }
 
