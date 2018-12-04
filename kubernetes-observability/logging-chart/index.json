@@ -1,5 +1,4 @@
 {
-  "private": false,
   "title": "Logging with EFK",
   "description": "Learn how to aggregate logs on Kubernetes",
   "difficulty":	"Intermediate",
