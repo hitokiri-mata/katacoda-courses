@@ -4,19 +4,6 @@
   "description": "Learn how to aggregate logs on Kubernetes",
   "difficulty":	"Intermediate",
   "time":	"20 minutes",
-  "environment": {
-    "showdashboard": true,
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
-    "icon": "fa-kubernetes",
-    "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Kibana", "port": 31001}
-    ]
-  },
-  "backend": {
-    "imageid": "kubernetes"
-  },
   "details": {
     "intro": {
       "text": "intro.md",
@@ -47,6 +34,20 @@
     "assets": {
       "host01": [
         {"file": "*", "target": "/root"}      ]
+    },
+    "environment": {
+      "showdashboard": true,
+      "dashboard": "Dashboard",
+      "uilayout": "terminal",
+      "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+      "icon": "fa-kubernetes",
+      "dashboards": [
+        {"name": "Kubernetes Dashboard", "port": 30000},
+        {"name": "Kibana", "port": 31001}
+      ]
+    },
+    "backend": {
+      "imageid": "kubernetes-cluster-running"
     }
   }
 }
