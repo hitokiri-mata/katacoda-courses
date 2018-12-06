@@ -14,4 +14,4 @@ Redis needs permissions to write to these mount points.
 
 `kubectl get deployments,pods,services`{{execute}}
 
-Once complete it will move into a running state. A [Redis cluster]((https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/)) is running on Kubernetes.
+Once complete it will move into a running state. A [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) is running on Kubernetes.
