@@ -30,7 +30,7 @@ Now check the service list again and notice the nginx-one service now is listed 
 
 The service on a random Kubernetes NodePort (some value above 30000) and this next line will force the NodePort to 31111
 
-`kubectl patch service nginx-one --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
+`kubectl patch service nginx-one --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
 and now Minikube lists the address for this exposed service's NodePort.
 

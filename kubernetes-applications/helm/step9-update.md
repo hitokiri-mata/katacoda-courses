@@ -4,6 +4,6 @@ Look at the service. Notice the service type is ClusterIP. To see the Nginx defa
 
 Well, this demonstration chart is a bit deficient as it does not allow the values for the NodePort to be assigned. Right now it's a random value. We could modify the chart template to accept a nodePort value, but for this exercise apply this quick patch.
 
-`kubectl patch service my-app-app-chart --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
+`kubectl patch service my-app-app-chart --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-With this adjustment my-app's [Nginx default page](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) will be reachable.
+With this adjustment my-app's [Nginx default page](https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/) will be reachable.

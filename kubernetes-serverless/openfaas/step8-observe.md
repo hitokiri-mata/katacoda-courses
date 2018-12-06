@@ -10,7 +10,7 @@ The Helm chart sets up a Prometheus service, but it's not exposed. The Prometheu
 
 then change the NodePort value to a known port above 30000
 
-`kubectl patch service prometheus --namespace=openfaas --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31120}]'`{{execute}}
+`kubectl patch service prometheus --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31120}]'`{{execute}}
 
 With these to changes you can view the Prometheus Portal. On the right there is a tab called _Prometheus_ or from this link: https://[[HOST_SUBDOMAIN]]-31120-[[KATACODA_HOST]].environments.katacoda.com/
 
@@ -22,7 +22,7 @@ As above, the Helm chart also sets up an AlertManager service. It is also not ex
 
 then change the NodePort value to a known port above 30000
 
-`kubectl patch service alertmanager --namespace=openfaas --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31121}]'`{{execute}}
+`kubectl patch service alertmanager --namespace=openfaas --type='json' --patch='[{"op": "replace": "/spec/ports/0/nodePort", "value":31121}]'`{{execute}}
 
 With these to changes you can view the Alertmanager Portal. On the right there is a tab called _Alerts_ or from this link: https://[[HOST_SUBDOMAIN]]-31121-[[KATACODA_HOST]].environments.katacoda.com/
 
@@ -38,7 +38,7 @@ Expose the dashboard as a service on a known port.
 
 `kubectl -n openfaas expose deployment grafana --type=NodePort --name=grafana`{{execute}}
 
-`kubectl patch service grafana --namespace=openfaas --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31122}]'`{{execute}}
+`kubectl patch service grafana --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31122}]'`{{execute}}
 
 With these to changes you can view the Grafana dashboard. On the right there is a tab called _Grafana_ or from this link: https://[[HOST_SUBDOMAIN]]-31122-[[KATACODA_HOST]].environments.katacoda.com/dashboard/db/openfaas
 

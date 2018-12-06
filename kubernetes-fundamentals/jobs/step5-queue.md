@@ -34,7 +34,7 @@ Expose the queue with a Kubernetes service to allow access to the Queue Portal.
 
 `kubectl patch service queue --type='json' --patch='[{"op": "replace", "path": "/spec/type","value":"NodePort"}]'`{{execute}}
 
-`kubectl patch service queue --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
+`kubectl patch service queue --type='json' --patch='[{"op": "replace": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
 Notice the same port number is placed in the subdomain of the URL.
 

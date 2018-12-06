@@ -38,7 +38,7 @@ Wait a few minutes until **all six pods** reach the _Running_ status. Ctrl-C to 
 
 The chart lacks the ability to set the nodePort value for the service exposed as a NodePort. Instead, patch the service to change the random port to a known port.
 
-`kubectl patch service efk-kibana --namespace logging --type='json' --patch='[{"op": "replace",  "path": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
+`kubectl patch service efk-kibana --namespace logging --type='json' --patch='[{"op": "replace": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
 With this, the Kibana service is assigned to a known port, 31001.
 

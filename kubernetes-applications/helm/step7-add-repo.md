@@ -12,7 +12,7 @@ With this the repo will appear in the repo list.
 
 `helm repo list`{{execute}}
 
-Now, the chart can be listed.
+Now, their charts can be listed.
 
 `helm search fabric8`{{execute}}
 

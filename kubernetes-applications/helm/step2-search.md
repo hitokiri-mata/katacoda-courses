@@ -4,6 +4,6 @@ For example, to deploy Redis search for that chart by name.
 
 `helm search redis`{{execute}}
 
-Once found, more more information may be revealed with the _inspect_ command.
+Once found, more information may be revealed with the _inspect_ command.
 
 `helm inspect stable/redis`{{execute}}

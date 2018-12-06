@@ -4,4 +4,12 @@ Use the _get_ command to find out what was deployed.
 
 `kubectl get deployments,pods,services`{{execute}}
 
-A Redis cluster should now be running on Kubernetes.
+The Pod will be in a pending state while the container image is downloaded and until a Persistent Volume is available.
+
+`kubectl apply -f pv.yaml`{{execute}}
+
+Redis needs permissions to write 
+
+`chmod 777 -R /mnt/data*`{{execute}}
+
+Once complete it will move into a running state. A Redis cluster is running on Kubernetes.

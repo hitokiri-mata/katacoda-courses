@@ -4,7 +4,7 @@ Helm relies on a packaging format called _charts_. Charts define a composition o
 
 Helm also helps you manage the complexities of dependency management. Charts can also include dependencies to other charts. Charts compliment your [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code) processes. Use Helm effectively with a mature container versioning pipeline.
 
-The Helm CLI tool deploys charts to Kubernetes. A server side component can accept the chart and submit the YAML declarations to Kubernetes. The chart is a deployable unit that can be inspected, listed, updated and removed.  
+The Helm CLI tool deploys charts to Kubernetes. A server side component can accept the chart and submit the YAML declarations to Kubernetes. The chart is a deployable unit that can be inspected, listed, updated and removed.
 
 Interact with Helm start with a command-line tool (CLI). It can be downloaded from https://github.com/kubernetes/helm/releases
 
@@ -18,7 +18,7 @@ Once installed locally a server side component needs to be started called _Tille
 
 `kubectl get pods -n kube-system | grep tiller`{{execute}}
 
-Helm has a working set of public repositories.  More on this later, but for now the repo cache can be updated.
+Helm has a working set of public repositories. More on this later, but for now the repo cache can be updated.
 
 `helm repo update`{{execute}}
 
