@@ -13,23 +13,23 @@
             },
             {
                 "title": "Search For Redis Chart",
-                "text": "step2-search-redis.md"
+                "text": "step2-search.md"
             },
             {
                 "title": "Search For Redis Chart",
-                "text": "step2-search-redis.md"
+                "text": "step2-search.md"
             },
             {
                 "title": "Deploy Redis",
-                "text": "step3-deploy-redis.md"
+                "text": "step3-deploy.md"
             },
             {
                 "title": "Observe Redis",
-                "text": "step4-observe-redis.md"
+                "text": "step4-observe.md"
             },
             {
                 "title": "Remove Redis",
-                "text": "step5-remove-redis.md"
+                "text": "step5-remove.md"
             },
             {
                 "title": "Explore Repositories",
