@@ -6,7 +6,7 @@ Helm also helps you manage the complexities of dependency management. Charts can
 
 The Helm CLI tool deploys charts to Kubernetes. A server side component can accept the chart and submit the YAML declarations to Kubernetes. The chart is a deployable unit that can be inspected, listed, updated and removed.
 
-Interact with Helm start with a command-line tool (CLI). It can be downloaded from https://github.com/kubernetes/helm/releases
+Interact with Helm start with a command-line tool (CLI). Helm can be downloaded from https://github.com/kubernetes/helm/releases
 
 `curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.11.0-linux-amd64.tar.gz
 tar -xvf helm-v2.11.0-linux-amd64.tar.gz

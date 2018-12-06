@@ -56,9 +56,11 @@
             "text": "finish.md"
         },
         "assets": {
-            "client": [ {"file": "*", "target": "~/"} ]
-        }
-    },
+            "host01": [
+              {"file": "*", "target": "/root"}
+            ]
+          }
+        },
     "environment": {
         "uilayout": "terminal",
         "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n"
