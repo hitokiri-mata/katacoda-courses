@@ -4,6 +4,11 @@
     "description": "Discover different applications you can easily start on Kubernetes.",
     "courses": [
       {
+        "course_id": "helm",
+        "title": "Helm",
+        "description": "Learn how to use Helm, the package manager for Kubernetes."
+      },
+      {
         "course_id": "nginx",
         "title": "Nginx",
         "description": "Start here to learn how to deploy applications to Kubernetes"
