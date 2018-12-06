@@ -8,8 +8,10 @@ The Pod will be in a pending state while the container image is downloaded and u
 
 `kubectl apply -f pv.yaml`{{execute}}
 
-Redis needs permissions to write 
+Redis needs permissions to write to these mount points.
 
-`chmod 777 -R /mnt/data*`{{execute}}
+`mkdir /mnt/data1 /mnt/data2 /mnt/data3 --mode=777`{{execute}}
 
-Once complete it will move into a running state. A Redis cluster is running on Kubernetes.
+`kubectl get deployments,pods,services`{{execute}}
+
+Once complete it will move into a running state. A [Redis cluster]((https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/)) is running on Kubernetes.

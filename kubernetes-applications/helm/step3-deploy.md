@@ -1,6 +1,6 @@
 With a known chart name, use the _install_ command to deploy the chart to your cluster.
 
-`helm install stable/redis --name my-redis`{{execute}}
+`helm install stable/redis --name my-redis --set master.service.type=NodePort --set master.service.nodePort=31112`{{execute}}
 
 With the install command Helm will launch the required deployments, ReplicaSets, Pods, Services, ConfigMaps or any other Kubernetes resource the charts define. View all the installed charts.
 
