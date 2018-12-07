@@ -34,7 +34,7 @@ The stack of pods will soon be running in the logging namespace.
 
 `kubectl get pods -n logging -w`{{execute}}
 
-Wait a few minutes until **all six pods** reach the _Running_ status. Ctrl-C to stop watching.
+Wait a few moments until **all six pods** reach the _Running_ status. Ctrl-C to stop watching.
 
 The chart lacks the ability to set the nodePort value for the service exposed as a NodePort. Instead, patch the service to change the random port to a known port.
 
