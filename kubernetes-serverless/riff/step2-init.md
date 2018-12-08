@@ -7,5 +7,3 @@ Use the riff CLI to initialize your namespace (if you plan on using a namespace 
 `riff namespace init default --dockerhub $DOCKER_ID`{{execute}}
 
 You will be prompted to provide the password.
-
-(TODO, this is where this demonstration will break on Katacoda.)
