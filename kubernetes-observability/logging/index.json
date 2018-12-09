@@ -2,6 +2,10 @@
 	"private": true,
 	"title": "Basic Kubernetes Observability",
 	"description": "Inspection of a Kubernetes cluster",
+	"backend": {
+		"port": 30000,
+		"imageid": "minikube"
+	},
 	"environment": {
 		"showdashboard": true,
 		"uilayout": "terminal",
@@ -11,11 +15,7 @@
 		  {"name": "Kubernetes Dashboard", "port": 30000},
 		  {"name": "cAdvisor", "port": 4194}
 		]
-	  },
-	  "backend": {
-		"port": 8080,
-		"imageid": "kubernetes-cluster-running"
-	  },
+	  }, 
 	  "details": {
 		"steps": [{
 			"title": "Cluster up and running",
