@@ -1,6 +1,6 @@
 {
   "title": "Logging with EFK",
-  "description": "Learn how to aggregate logs on Kubernetes",
+  "description": "Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK). Learn how to aggregate logs on Kubernetes",
   "difficulty":	"Intermediate",
   "time":	"20 minutes",
   "details": {
