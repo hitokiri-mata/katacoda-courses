@@ -10,16 +10,20 @@
         "text": "step1-install.md"
       },
       {
+        "title": "Install Kubernetes Dashboard",
+        "text": "step2-dashboard.md"
+      },
+      {
         "title": "Deploy Application",
-        "text": "step2-deploy.md"
+        "text": "step3-deploy.md"
       },
       {
         "title": "Invoke Application",
-        "text": "step3-invoke.md"
+        "text": "step4-invoke.md"
       },
       {
         "title": "Delete Application",
-        "text": "step4-delete.md"
+        "text": "step5-delete.md"
       }
     ],
     "intro": {
