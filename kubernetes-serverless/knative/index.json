@@ -12,14 +12,10 @@
       {
         "title": "Deploy Application",
         "text": "step2-deploy.md"
-      },
+      }
       {
-        "title": "Create Function",
-        "text": "step3-create.md"
-      },
-      {
-        "title": "Invoke Function",
-        "text": "step4-invoke.md"
+        "title": "Invoke Application",
+        "text": "step3-invoke.md"
       }
     ],
     "intro": {
