@@ -2,6 +2,8 @@
 
 `export ADDRESS=$(kubectl get node  --output 'jsonpath={.items[0].status.addresses[0].address}'):$(kubectl get svc knative-ingressgateway --namespace istio-system   --output 'jsonpath={.spec.ports[?(@.port==80)].nodePort}')`{{execute}}
 
-`export SERVICE=$(kubectl get ksvc helloworld-go  --output=custom-columns=NAME:.metadata.name,DOMAIN:.status.domain)`{{execute}}
+`export SERVICE=$(kubectl get ksvc helloworld-go  --output jsonpath='{.status.domain}')`{{execute}}
 
-`curl "$SERVICE" http://$ADDRESS`{{execute}}
+`echo Service $SERVICE is at $ADDRESS`{{execute}}
+
+`curl -v -H "Host: $SERVICE" http://$ADDRESS`{{execute}}
