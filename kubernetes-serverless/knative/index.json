@@ -1,0 +1,48 @@
+{
+  "title": "Knative",
+  "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Install Knative",
+        "text": "step1-install.md"
+      },
+      {
+        "title": "Initialize Knative",
+        "text": "step2-init.md"
+      },
+      {
+        "title": "Create Function",
+        "text": "step3-create.md"
+      },
+      {
+        "title": "Invoke Function",
+        "text": "step4-invoke.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+  },
+  "finish": {
+      "text": "finish.md"
+  },
+  "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+    "icon": "fa-kubernetes"
+  },
+  "backend": {
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
+  }
+}
