@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes: Observability",
     "icon": "fa-kubernetes",
-    "description": "Discover different applications that assist in observing applications running on Kubernetes.",
+    "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK).",
     "courses": [
       {
         "course_id": "basics",
