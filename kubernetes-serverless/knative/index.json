@@ -10,8 +10,8 @@
         "text": "step1-install.md"
       },
       {
-        "title": "Initialize Knative",
-        "text": "step2-init.md"
+        "title": "Deploy Application",
+        "text": "step2-deploy.md"
       },
       {
         "title": "Create Function",

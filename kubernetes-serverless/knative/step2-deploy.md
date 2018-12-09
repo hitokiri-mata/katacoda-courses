@@ -1,4 +1,4 @@
-To create an application on Knative the same kubectl CLI tool can be used just like any other Kubernetes based application. The difference is in the YAML declaration using a resource called _service_.  This is not to be confused with the core Kubernetes service resource, instead this is a resource for Knative. It's declaration look like this, 
+To deploy an application on Knative the same kubectl CLI tool can be used just like any other Kubernetes based application. The difference is in the YAML declaration using a resource called _service_. This is not to be confused with the core Kubernetes service resource, instead this is a resource for Knative. It's declaration look like this, 
 
 `curl https://raw.githubusercontent.com/knative/docs/master/serving/samples/helloworld-go/service.yaml`{{execute}}
 
