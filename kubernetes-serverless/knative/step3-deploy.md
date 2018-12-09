@@ -6,11 +6,13 @@ Notice the kind _Service_ and the apiVersion that defines its context. Using thi
 
 `kubectl create -f https://raw.githubusercontent.com/knative/docs/master/serving/samples/helloworld-go/service.yaml`{{execute}}
 
-At this point you might expect some resources such as Pods spinning up as part of this create.
+Confirm the service has been deployed.
 
 `kubectl get deployments,rs,pods,services`{{execute}}
 
-There is nothing there, and that is what should happen, since there has been no request to the service, there is no need for the service to consume any resources. The service   is there, and it can be seen with this command.
+**DRAFT NOTE: The service is expected to start, but fails with a RevisionMissing and a http status 404 result. This is work in progress. If you see the solution email jonathan.johnson@dijure.com.**
+
+The service is there, and it can be seen with these commands.
 
 `kubectl get ksvc helloworld-go`{{execute}}
 
