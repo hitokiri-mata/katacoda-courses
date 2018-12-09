@@ -16,6 +16,10 @@
       {
         "title": "Invoke Application",
         "text": "step3-invoke.md"
+      },
+      {
+        "title": "Delete Application",
+        "text": "step4-delete.md"
       }
     ],
     "intro": {
