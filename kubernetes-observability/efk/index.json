@@ -13,6 +13,30 @@
       { 
         "title": "Start Cluster",
         "text": "step1-start.md"
+      },
+      { 
+        "title": "Deploy ElasticSearch",
+        "text": "step2-elasticsearch.md"
+      },
+      {
+        "title": "Deploy Kibana",
+        "text": "step3-kibana.md"
+      },
+      {
+        "title": "Deploy Fluent Bit",
+        "text": "step4-fluent.md"
+      },
+      {
+        "title": "Verify EFK Stack",
+        "text": "step5-verify.md"
+      },
+      {
+        "title": "Generate Log Events",
+        "text": "step6-generate.md"
+      },
+      {
+        "title": "View Log Events",
+        "text": "step7-view.md"
       }
     ],
     "finish": {
