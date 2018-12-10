@@ -47,8 +47,6 @@
         {"file": "*", "target": "/root"}      ]
     },
     "environment": {
-      "showdashboard": true,
-      "dashboard": "Dashboard",
       "uilayout": "terminal",
       "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
       "icon": "fa-kubernetes",
@@ -58,6 +56,7 @@
       ]
     },
     "backend": {
+      "port": 8080,
       "imageid": "kubernetes-cluster-running"
     }
   }
