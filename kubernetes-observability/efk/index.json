@@ -18,12 +18,12 @@
         "text": "step3-elasticsearch.md"
       },
       {
-        "title": "Deploy Kibana",
-        "text": "step4-kibana.md"
+        "title": "Deploy Fluent Bit",
+        "text": "step4-fluent.md"
       },
       {
-        "title": "Deploy Fluent Bit",
-        "text": "step5-fluent.md"
+        "title": "Deploy Kibana",
+        "text": "step5-kibana.md"
       },
       {
         "title": "Verify EFK Stack",
