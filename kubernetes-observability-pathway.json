@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes: Observability",
     "icon": "fa-kubernetes",
-    "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK).",
+    "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a   cluster.",
     "courses": [
       {
         "course_id": "basics",
@@ -15,12 +15,12 @@
       },
       {
         "course_id": "monitoring",
-        "title": "Prometheus",
+        "title": "Prometheus (drafting)",
         "description": "Learn how to monitor applications on Kubernetes"
       },
       {
         "course_id": "tracing",
-        "title": "Transaction tracing",
+        "title": "Transaction tracing (drafting)",
         "description": "Learn how to trace applications on Kubernetes"
       }
     ]

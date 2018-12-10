@@ -1,13 +1,13 @@
 {
   "title": "Logging with EFK",
-  "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK).",
+  "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
   "difficulty":	"Intermediate",
   "time":	"20 minutes",
   "details": {
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+      "credits": "These steps were interpreted from John Bryan Sazon's article on [Getting started with EFK (Fluent Bit, Elasticsearch and Kibana) stack in Kubernetes](https://medium.com/@jbsazon/aggregated-kubernetes-container-logs-with-fluent-bit-elasticsearch-and-kibana-5a9708c5dd9a)"
     },
     "steps": [
       { 
