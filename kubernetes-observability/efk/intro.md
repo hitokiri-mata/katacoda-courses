@@ -16,7 +16,7 @@ Elasticsearch is a search engine based on the Lucene library. It provides a dist
 
 <img align="right" src="/javajon/courses/kubernetes-observability/logging/assets/docker_flow_flb_elastic.png">
 
-[Fluentd](https://www.fluentd.org/) is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data. in this stack Fluentd runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
+[Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluentd runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
 
 This example uses a lighter variation of Fluentd called [Fluent Bit](https://fluentbit.io/). Perhaps EfK, with a lower case 'f' is apropos. [Alen Komljen](https://akomljen.com/) covers the reason why in his [blog](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
 
