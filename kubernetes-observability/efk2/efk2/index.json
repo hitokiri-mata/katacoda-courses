@@ -1,15 +1,19 @@
 {
-  "title": "Logging with EFK",
-  "description": "sdfd",
+  "title": "title sample",
+  "description": "sdfsdfsdf",
   "details": {
     "steps": [
       {
-        "title": "Start Cluster",
-        "text": "step1-start.md"
+        "title": "Step 1",
+        "text": "step1.md"
       },
       {
-        "title": "Start Cluster",
-        "text": "step2-elasticsearch.md"
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
       }
     ],
     "intro": {
