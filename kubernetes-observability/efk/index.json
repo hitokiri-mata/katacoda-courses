@@ -1,15 +1,41 @@
 {
   "title": "Logging with EFK",
-  "description": "sdfd",
+  "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
+  "difficulty":	"Intermediate",
+  "time":	"20 minutes",
   "details": {
     "steps": [
-      {
+      { 
         "title": "Start Cluster",
         "text": "step1-start.md"
       },
+      { 
+        "title": "Start Dashboard",
+        "text": "step2-dashboard.md"
+      },
+      { 
+        "title": "Deploy ElasticSearch",
+        "text": "step3-elasticsearch.md"
+      },
       {
-        "title": "Start Cluster",
-        "text": "step2-elasticsearch.md"
+        "title": "Deploy Kibana",
+        "text": "step4-kibana.md"
+      },
+      {
+        "title": "Deploy Fluent Bit",
+        "text": "step5-fluent.md"
+      },
+      {
+        "title": "Verify EFK Stack",
+        "text": "step6-verify.md"
+      },
+      {
+        "title": "Generate Log Events",
+        "text": "step7-generate.md"
+      },
+      {
+        "title": "View Log Events",
+        "text": "step8-view.md"
       }
     ],
     "intro": {
