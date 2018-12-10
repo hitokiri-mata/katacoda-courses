@@ -6,7 +6,7 @@ Deploy ElasticSearch
 
 `kubectl run elasticsearch -n logging --image=docker.elastic.co/elasticsearch/elasticsearch:6.3.2`{{execute}}
 
-`kubectl expose deploy elasticsearch --port 9200`{{eecute}}
+`kubectl expose deploy elasticsearch -n logging --port 9200`{{execute}}
 
 Verify ElasticsSearch is starting up.
 
