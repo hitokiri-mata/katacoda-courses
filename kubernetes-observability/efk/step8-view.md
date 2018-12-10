@@ -12,4 +12,6 @@ Configure the index with logstash* using @timestamp as the Time field filter.
 
 Go to Discover and you can now add your custom filters and see the logs.
 
-The screen should appears like the ones in this article. https://medium.com/@jbsazon/aggregated-kubernetes-container-logs-with-fluent-bit-elasticsearch-and-kibana-5a9708c5dd9a
+These steps were interpreted from John Bryan Sazon's article on [Getting started with EFK (Fluent Bit, Elasticsearch and Kibana) stack in Kubernetes](https://medium.com/@jbsazon/aggregated-kubernetes-container-logs-with-fluent-bit-elasticsearch-and-kibana-5a9708c5dd9a)"
+
+The screen should appear like the ones in the article.
