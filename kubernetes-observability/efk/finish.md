@@ -6,7 +6,7 @@ TODO....
 
 With these steps you have learned:
 
-- How to deploy ElasticSearch, Fluent bit, and Kibana with Helm charts
+- How to deploy ElasticSearch, Fluent Bit, and Kibana with Helm charts
 - How to generate log events and query then in Kibana
 
 ------

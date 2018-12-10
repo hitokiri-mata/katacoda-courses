@@ -10,8 +10,8 @@
       },
       {
         "course_id": "efk",
-        "title": "Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK)",
-        "description": "Learn how install and use an EFK stack on Kubernetes"
+        "title": "Logging with EFK",
+        "description": "Learn how install and use an ElasticsSearch, Fluent-bit, and Kibana (EFK) stack on Kubernetes."
       },
       {
         "course_id": "monitoring",

@@ -15,17 +15,29 @@
         "text": "step1-start.md"
       },
       { 
-        "title": "Deploy EFK",
-        "text": "step2-deploy.md"
+        "title": "Deploy ElasticSearch",
+        "text": "step2-elasticsearch.md"
       },
       {
-        "title": "Generate Logging Events",
-        "text": "step3-generate.md"
+        "title": "Deploy Kibana",
+        "text": "step3-kibana.md"
       },
       {
-        "title": "Kibana",
-        "text": "step4-kibana.md"
-      }
+        "title": "Deploy Fluent Bit",
+        "text": "step4-fluent.md"
+      },
+      {
+        "title": "Verify EFK Stack",
+        "text": "step5-kibana.md"
+      },
+      {
+        "title": "Generate Log Events",
+        "text": "step6-kibana.md"
+      },
+      {
+        "title": "View Log Events",
+        "text": "step7-kibana.md"
+      },
     ],
     "finish": {
       "text": "finish.md"
