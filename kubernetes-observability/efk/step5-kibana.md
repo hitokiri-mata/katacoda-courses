@@ -2,7 +2,7 @@ Deploy Kibana
 
 `helm install --name kibana stable/kibana \
     --set env.ELASTICSEARCH_URL=http://elasticsearch:9200 \
-    --set image.tag=6.4.2 \
+    --set image.tag=6.5.1 \
     --set service.type=NodePort \
     --set service.nodePort=31001 \
     --namespace logging`{{execute}}

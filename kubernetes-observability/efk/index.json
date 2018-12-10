@@ -39,7 +39,9 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "These steps were interpreted from John Bryan Sazon's article on [Getting started with EFK (Fluent Bit, Elasticsearch and Kibana) stack in Kubernetes](https://medium.com/@jbsazon/aggregated-kubernetes-container-logs-with-fluent-bit-elasticsearch-and-kibana-5a9708c5dd9a)"
     },
     "finish": {
       "text": "finish.md"
