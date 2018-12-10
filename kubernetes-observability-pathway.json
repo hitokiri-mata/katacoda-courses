@@ -7,7 +7,7 @@
         "course_id": "basics",
         "title": "Basic Kubernetes Observability",
         "description": "Inspection of a Kubernetes cluster"
-      }
+      },
       {
         "course_id": "efk",
         "title": "Logging with ElasticsSearch, Fluent-bit, and Kibana (EFK)",
