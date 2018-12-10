@@ -1,4 +1,3 @@
-## Verify EFK Stack ##
 
 `kubectl get pods,ds,services -n logging`{{execute}}
 

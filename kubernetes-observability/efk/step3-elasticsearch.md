@@ -4,7 +4,7 @@ Create a namespace for the EFK stack.
 
 Deploy ElasticSearch
 
-`kubectl run elasticsearch -n logging --image=docker.elastic.co/elasticsearch/elasticsearch:6.3.2`{{execute}}
+`kubectl run elasticsearch -n logging --image=docker.elastic.co/elasticsearch/elasticsearch:6.5.2`{{execute}}
 
 Verify ElasticsSearch is starting up.
 

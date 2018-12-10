@@ -6,15 +6,12 @@ Thank you to Vicente Zepeda for providing this [beautifully simple container](ht
 
 -------
 
-TODO - needed?
-Populate logs
-
-Deploy an example Nginx container and port-forward the traffic to your localhost.
+As another log generating example, deploy a Nginx container and port-forward the traffic to your localhost.
 
 `kubectl run nginx --image=nginx -n logging`{{execute}}
 
-kubectl port-forward nginx-8586cf59-kpbf6 8081:80 &
+`kubectl port-forward nginx-8586cf59-kpbf6 8081:80 &`{{execute}}
 
 Curl it a few times, and press Ctrl+C when done.
 
-while true; do curl localhost:8081; sleep 2; done
+`while true; do curl localhost:8081; sleep 2; done`{{execute}}
