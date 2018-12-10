@@ -28,15 +28,15 @@
       },
       {
         "title": "Verify EFK Stack",
-        "text": "step5-kibana.md"
+        "text": "step5-verify.md"
       },
       {
         "title": "Generate Log Events",
-        "text": "step6-kibana.md"
+        "text": "step6-generate.md"
       },
       {
         "title": "View Log Events",
-        "text": "step7-kibana.md"
+        "text": "step7-view.md"
       }
     ],
     "finish": {
