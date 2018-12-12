@@ -18,7 +18,7 @@ Using the Riff CLI tool too initialize Knative. This will include initialization
 
 Watch the Pods start.
 
-`kubectl get pod --all-namespaces --watch`{{execute T2}}
+`watch kubectl get pod --all-namespaces`{{execute T2}}
 
 Once started check one more time.
 

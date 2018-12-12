@@ -35,7 +35,7 @@
       },
       {
         "course_id": "mean",
-        "title": "Mean Application",
+        "title": "Mean Application (draft)",
         "description": "Deploy A MEAN Application On Kubernetes With Helm. Based on an article from Bitnami."
       }
     ]

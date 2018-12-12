@@ -6,13 +6,9 @@ There are many options for standing up a container registry. With Minikube there
 
 `helm install stable/docker-registry --name registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
 
-The registry is now available as a service. It can be seen in Minikube
+The registry is now available as a service. Assign an environment variable to the common registry location.
 
-`minikube service list --namespace kube-system`{{execute}}
-
-Assign an environment variable to the common registry location.
-
-`export REGISTRY=[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`export REGISTRY=[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com && echo $REGISTRY`{{execute}}
 
 It will be a few moments before the registry deployment reports it's _Available_.
 

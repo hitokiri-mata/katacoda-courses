@@ -14,13 +14,13 @@
         "description": "Building serverless functions with Kubernetes that has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding."
       },
       {
-        "course_id": "knative",
+        "course_id": "knative (draft)",
         "title": "Knative",
         "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads."
       },
       {
         "course_id": "riff",
-        "title": "Riff",
+        "title": "Riff (draft)",
         "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio."
       },
       {
