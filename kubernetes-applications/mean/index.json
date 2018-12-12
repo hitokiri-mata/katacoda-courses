@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "text": "step1-minikube.md"
+        "text": "step1-kubernetes.md"
       },
       {
         "text": "step2-registry.md"
@@ -54,6 +54,6 @@
     ]
     },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "kubernetes"
   }
 }

@@ -5,8 +5,10 @@ replicas: 3
 
 rbacEnabled: false
 
-serviceType: NodePort 
+service:
+  type: NodePort 
+  nodePort: 31333
 
 rabbitmq:
-  nodePort: 31333
   username: admin
+  password: admin

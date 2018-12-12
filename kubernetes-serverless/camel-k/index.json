@@ -1,5 +1,6 @@
 {
-  "title": "Camel K",
+  "private": true,
+  "title": "Camel K (coming soon)",
   "description": "Discovering how Camel K runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",

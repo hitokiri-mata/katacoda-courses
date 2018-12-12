@@ -1,7 +1,7 @@
 {
-    "title": "Kubernetes: Serverless and Functions",
+    "title": "Kubernetes: Serverless",
     "icon": "fa-kubernetes",
-    "description": "Discover different techniques for running functions on Kubernetes.",
+    "description": "Discover different techniques for running apps and functions on Kubernetes.",
     "courses": [
       {
         "course_id": "kubeless",

@@ -2,9 +2,9 @@
 
 As you see, your Kubernetes cluster based on Minikube is will be available in a moment. Verify it's ready for your use:
 
-`minikube version && minikube status`{{execute}}
+``{{execute}}
 
-Notice that while Minikube is running, there is nothing deployed except for a single service/kubernetes item,
+Notice that while Kubernetes is running, there is nothing deployed except for a single service/kubernetes item,
 
 `kubectl get deployments,pods,services`{{execute}}
 

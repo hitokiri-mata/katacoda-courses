@@ -37,7 +37,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "RabbitMQ Portal", "port": 31111}
+      {"name": "RabbitMQ Portal", "port": 31000}
     ]
     },
   "backend": {

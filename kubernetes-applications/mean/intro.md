@@ -1,6 +1,6 @@
 # Deploy A MEAN Application On Kubernetes With Helm #
 
-(This is a draft, jonathan.johnson@dijure.com, Nov 25, 2018)
+**(This is a draft, jonathan.johnson@dijure.com, Nov 25, 2018)**
 
 As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario in [this course](https://www.katacoda.com/javajon/courses/kubernetes-fundamentals).
 
