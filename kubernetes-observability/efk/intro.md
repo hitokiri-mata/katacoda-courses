@@ -8,7 +8,7 @@ Containers should only produce logs as event streams and leave the aggregation a
 
 Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. Sometimes stack use Fluent bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size. Other solutions sometimes use Logstash (ELK) instead of Fluentd.
 
-This EFK stack solution uses the YAML files defined for the Minikube Addon called EFK. There are many ways to install a EFK stack and they vary in complexity. The preferred method is an EFK operator installed with a Helm chart.
+This EFK stack solution uses the YAML files defined for the Minikube Addon called EFK.
 
 ## Aggregation: ElasticSearch ##
 
@@ -20,7 +20,7 @@ Elasticsearch is a search engine based on the Lucene library. It provides a dist
 
 [Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluentd runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
 
-This example uses a lighter variation of Fluentd called [Fluent Bit](https://fluentbit.io/). Perhaps EfK, with a lower case 'f' is apropos. [Alen Komljen](https://akomljen.com/) covers the reason why in his [blog](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
+This example could use a lighter variation of Fluentd called [Fluent Bit](https://fluentbit.io/). Perhaps EfK, with a lower case 'f' is apropos. [Alen Komljen](https://akomljen.com/) covers the reason why in his [blog](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
 
 Another variation for logging is the E**L**K stack that includes Logstash as a substitution for the Fluent aggregation solution.
 
@@ -34,5 +34,5 @@ However, this scenario is aimed to show how you can get a working stack up with 
 
 In the following steps you will learn:
 
-- How to deploy ElasticSearch, Fluent Bit, and Kibana with Helm charts
+- How to deploy ElasticSearch, Fluentd, and Kibana
 - How to generate log events and query then in Kibana
