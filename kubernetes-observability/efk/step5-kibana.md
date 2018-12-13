@@ -1,18 +1,5 @@
-Deploy Kibana
+Deploy Kibana ReplicaSet and its assocaited service. The service will be on a NodePort at 30003.
 
-`helm install --name kibana stable/kibana \
-    --set env.ELASTICSEARCH_URL=http://elasticsearch:9200 \
-    --set image.tag=6.5.1 \
-    --set service.type=NodePort \
-    --set service.nodePort=31001 \
-    --namespace logging`{{execute}}
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/minikube/master/deploy/addons/efk/kibana-rc.yaml
 
-With this, the Kibana service is assigned to a known port, 31001.
-
-`kubectl get service kibana --namespace logging`{{execute}}
-
-Verify Kibana is starting up.
-
-`helm list`{{execute}}
-
-`kubectl get pods,services -n logging`{{execute}}
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/minikube/master/deploy/addons/efk/kibana-svc.yaml

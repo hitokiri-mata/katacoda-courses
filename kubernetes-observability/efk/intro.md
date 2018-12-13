@@ -6,7 +6,9 @@ This scenario takes you through the basics of deploying a logging solution on Ku
 
 Containers should only produce logs as event streams and leave the aggregation and routing to other services on Kubernetes. This pattern is emphasized as factor [11 Logs](https://12factor.net/logs) of the [The Twelve Factors App methodology](https://12factor.net/).
 
-Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. There is a slight twist to use Fluent Bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size.
+Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. Sometimes stack use Fluent bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size. Other solutions sometimes use Logstash (ELK) instead of Fluentd.
+
+This EFK stack solution uses the YAML files defined for the Minikube Addon called EFK. There are many ways to install a EFK stack and they vary in complexity. The preferred method is an EFK operator installed with a Helm chart.
 
 ## Aggregation: ElasticSearch ##
 

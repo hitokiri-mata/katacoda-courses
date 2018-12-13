@@ -1,15 +1,5 @@
-Create a namespace for the EFK stack.
+Deploy ElasticSearch and its associated service.
 
-`kubectl create namespace logging`{{execute}}
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/minikube/master/deploy/addons/efk/elasticsearch-rc.yaml
 
-Deploy ElasticSearch
-
-`kubectl run elasticsearch -n logging --image=docker.elastic.co/elasticsearch/elasticsearch:6.5.2`{{execute}}
-
-Verify ElasticsSearch is starting up.
-
-`kubectl get pods,services -n logging`{{execute}}
-
-Once it reaches the running state, expose the port.
-
-`kubectl expose deploy elasticsearch -n logging --port 9200`{{execute}}
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/minikube/master/deploy/addons/efk/elasticsearch-svc.yaml

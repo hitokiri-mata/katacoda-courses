@@ -52,9 +52,14 @@
     }
   },
   "environment": {
+		"showdashboard": true,
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
-    "icon": "fa-kubernetes"
+		"icon": "fa-kubernetes",
+		"dashboards": [
+		  {"name": "Kubernetes Dashboard", "port": 30000},
+		  {"name": "Kibana", "port": 30003}
+		]
   },
   "backend": {
     "port": 8080,
