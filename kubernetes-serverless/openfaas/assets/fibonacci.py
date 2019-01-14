@@ -13,4 +13,5 @@ def sequence(length):
 
 # OpenFaaS expects this method signature
 def handle(req):
-    return sequence(int(req)
+    return sequence(int(req))
+
