@@ -24,6 +24,10 @@ With the function coded and defined deploy the artifacts to OpenFaaS and it will
 
 `faas-cli up -f fibonacci.yml`{{execute}}
 
+Once built, the image will be in the container registry.
+
+`curl $REGISTRY/v2/_catalog`{{execute}}
+
 ## Invoke ##
 
 With the new function deployed OpenFaaS took care of bundling it into a container and instructing Kubernetes to create a Pod and Service so it can start handling requests.

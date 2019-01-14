@@ -8,7 +8,7 @@ Notice the label passed in ensures the functions deployed, but the Pod is not ru
 
 Exercise the _figlet_ function.
 
-`curl -X POST https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'No Just Stuff is transcendent'`{{execute}}
+`curl -X POST https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'No Fluff Just Stuff is transcendent'`{{execute}}
 
 Repeat this function in a loop.
 

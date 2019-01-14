@@ -17,7 +17,7 @@
 You will learn how:
 
 - to install OpenFaaS on Kubernetes
-- interact with OpenFaaS from the command line and its portal
+- to interact with OpenFaaS from the command line and its portal
 - functions are deployed and removed
 - functions are named, exposed, and invoked
 - functions are listed, inspected and monitored
