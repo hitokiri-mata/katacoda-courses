@@ -14,13 +14,13 @@ At this point there is an OpenFaaS gateway providing access to both the portal a
 
 `export OPENFAAS_URL=$(minikube service gateway-external --namespace openfaas --url)`
 
-However, since Katacoda's Minikube server is virtualized the gateway is slightly different.
+However, since Katacoda's Kubernetes server is virtualized the gateway is slightly different.
 
 `export OPENFAAS_URL=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 Notice the port 31112. This is the Kubernetes [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport) of the _external-gateway_ OpenFaaS service. The service can be see using this list command.
 
-`minikube service list`{{execute}}
+`kubectl get service --namespace openfaas`{{execute}}
 
 With this gateway access, the first action is to login. We will use the same password that was submitted in the previous preparation step.
 

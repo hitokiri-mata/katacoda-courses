@@ -34,4 +34,4 @@ In Kubernetes notice all these functions are now represented by deployments in t
 
 Additionally, they all have services load balancing for the function pods.
 
-`minikube service list --namespace openfaas-fn`{{execute}}
+`kubectl get service --namespace openfaas-fn`{{execute}}

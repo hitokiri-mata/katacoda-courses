@@ -1,8 +1,6 @@
 # Your Kubernetes Cluster #
 
-As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use.
-
-`minikube version && minikube status`{{execute}}
+As you see, your Kubernetes cluster is started. Verify it's ready for your use.
 
 `kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
 
