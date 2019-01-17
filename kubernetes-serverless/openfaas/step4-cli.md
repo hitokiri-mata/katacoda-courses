@@ -24,7 +24,7 @@ Notice the port 31112. This is the Kubernetes [NodePort](https://kubernetes.io/d
 
 With this gateway access, the first action is to login. We will use the same password that was submitted in the previous preparation step.
 
-`faas-cli login --username user --password="$PASSWORD"`{{execute}}
+`faas-cli login --username admin --password="$PASSWORD"`{{execute}}
 
 Now the list command will show an empty list found behind the gateway.
 

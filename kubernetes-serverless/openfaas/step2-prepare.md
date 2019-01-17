@@ -24,7 +24,7 @@ Generate and submit a Kubernetes secret for basic authentication for the gateway
 
 The random password is shortened to just 4 characters for these demonstration purposes. Normally `head -c 4` would be omitted.
 
-`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=user --from-literal=basic-auth-password=$PASSWORD`{{execute}}
+`kubectl -n openfaas create secret generic basic-auth --from-literal=basic-auth-user=admin --from-literal=basic-auth-password=$PASSWORD`{{execute}}
 
 ## Container Registry ##
 
