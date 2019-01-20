@@ -8,6 +8,6 @@ Verify the Kubernetes cluster is empty.
 
 `kubectl get deployments,pods,services`{{execute}}
 
-The Helm package manager used for installing applications on Kubernetes is also available.
+The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
 `helm version`{{execute}}

@@ -40,7 +40,8 @@
       {"name": "RabbitMQ Portal", "port": 31000}
     ]
     },
-  "backend": {
-    "imageid": "minikube"
-  }
+    "backend": {
+      "port": 8080,
+      "imageid": "kubernetes-cluster-running"
+    }
 }

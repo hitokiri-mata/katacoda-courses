@@ -6,12 +6,12 @@ First, declare the Deployment
 
 `kubectl create -f shiny-demo.yaml`{{execute}}
 
-The Shiny server takes a few minutes to start so the Pod watch the _status_ change to Running. To get a complete status of the deployment availability run this inspection
+The Shiny server takes a few minutes to start. Watch the Pod _status_ change from _ContainerCreating_ to _Running_. To get a complete status of the deployment availability run this inspection
 
 `kubectl get deployments,pods,services`{{execute}}.
 
-Once available, you can exercise the application two ways. First, simply from the command line,
+Once available, you can exercise the application two ways. If your running Minikube outside of Kubernetes this command would launch the Shiny application in your browser.
 
-`minikube service shiny-demo`{{execute}}
+`minikube service r-shiny`
 
-This same application for can also be seen in your browser from the "Shiny Demo" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
+In Katacoda this same application can also be seen in your browser from the "Shiny Demo" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/

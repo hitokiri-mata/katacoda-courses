@@ -4,7 +4,7 @@ Provisioning RabbitMQ on Kubernetes is easily done by invoking this [stable Helm
 
 `helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
-The RabbitMQ containers start fairly quickly so the Pod status may be already running creating, or initializing. To get a complete status of the deployment availability run this inspection
+The RabbitMQ containers start fairly quickly so the Pod status may be already running, creating, or initializing. To get a complete status of the deployment availability run this inspection
 
 `kubectl get deployments,pods,services --namespace rabbit`{{execute}}.
 

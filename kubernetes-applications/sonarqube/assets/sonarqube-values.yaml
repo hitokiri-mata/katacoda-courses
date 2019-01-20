@@ -10,7 +10,7 @@ service:
 # to bump these plugin versions higher some require a newer version of SonarQube,
 # but newer versions of SonarQube fail to start (see at top).
 
-# When running SonarQube in a limited cluster, such as on Katacoda SonarQube my fail and 
+# When running SonarQube in a limited cluster, such as on Katacoda SonarQube may fail and 
 # log "Process exited with exit value [es]: 137". This error happens when SonarQube does
 # not have enough memory. SonarQube relies on ElasticSearch which by itself is memory
 # intensive. There are some properties to reduce memory consumption in this case:
@@ -22,7 +22,7 @@ service:
 
 sonarProperties:
   sonar.forceAuthentication=false
-  sonar.search.javaOpts=-Xms512m -Xmx512m -XX:+HeapDumpOnOutOfMemoryError
+  # sonar.search.javaOpts=-Xms512m -Xmx512m -XX:+HeapDumpOnOutOfMemoryError
 
 postgresql:  
-  enabled: false
+  enabled: true

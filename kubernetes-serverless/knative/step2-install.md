@@ -1,10 +1,6 @@
 # Install Riff #
 
-As you see, your Kubernetes cluster is started. Verify it's ready for your use:
-
-`kubectl cluster-info`{{execute}}
-
-Knative, by design, has no command line interface. Its a server side framework that allows other platforms to produce their own clients and other ways of interacting with Knative and Kubernetes.
+Knative, by design, has no command line interface. It's a server side framework that allows other platforms to produce their own clients and other ways of interacting with Knative and Kubernetes.
 
 ## Install Istio ##
 

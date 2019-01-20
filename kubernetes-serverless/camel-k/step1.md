@@ -1,11 +1,13 @@
-# Kubernetes Cluster
+# Your Kubernetes Cluster #
 
-## Start
+As you see, your Kubernetes cluster is started. Verify it's ready for your use.
 
-`launch.sh`{{execute}}
+`kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
 
-This will create a two node Kubernetes cluster using WeaveNet for networking.
+Verify the Kubernetes cluster is empty.
 
-## Health Check
+`kubectl get deployments,pods,services`{{execute}}
 
-`kubectl cluster-info`{{execute}}
+The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
+
+`helm version`{{execute}}

@@ -6,24 +6,28 @@
   "details": {
     "steps": [
       {
+        "title": "Kubernetes Cluster",
+        "text": "step1-k8s.md"
+      },
+      {
         "title": "Install Knative",
-        "text": "step1-install.md"
+        "text": "step2-install.md"
       },
       {
         "title": "Install Kubernetes Dashboard",
-        "text": "step2-dashboard.md"
+        "text": "step3-dashboard.md"
       },
       {
         "title": "Deploy Application",
-        "text": "step3-deploy.md"
+        "text": "step4-deploy.md"
       },
       {
         "title": "Invoke Application",
-        "text": "step4-invoke.md"
+        "text": "step5-invoke.md"
       },
       {
         "title": "Delete Application",
-        "text": "step5-delete.md"
+        "text": "step6-delete.md"
       }
     ],
     "intro": {
@@ -41,9 +45,13 @@
     }
   },
   "environment": {
+    "showdashboard": true,
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
-    "icon": "fa-kubernetes"
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
   },
   "backend": {
     "port": 8080,

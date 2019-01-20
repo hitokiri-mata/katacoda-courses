@@ -4,15 +4,15 @@ Some attempts have been made in the settings to reduce the memory needs.
 However, you can run the same instructions on another Kubernetes cluster with
 a larger memory setting.)
 
-Install SonarQube using a Helm chart with custom values.
+Using Helm, install SonarQube Helm chart with a few custom values.
 
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
-The service is a NodePort but at a random value. For Katacode to offer a URL to the service, the port must be at the known number, 31111.
+This chart bootstraps a SonarQube instance with a PostgreSQL database. The service is exposed as a NodePort but at a random value. For Katacode to offer a URL to the service, the port must adjusted to a known number, 31111.
 
 `kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-`export SONAR_SERVICE=${minikube ip}:31111`{{execute}}
+`export SONAR_SERVICE=$(minikube ip):31111`{{execute}}
 
 `echo $SONAR_SERVICE`{{execute}}
 
