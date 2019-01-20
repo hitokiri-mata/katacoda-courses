@@ -8,9 +8,9 @@ The Helm CLI tool deploys charts to Kubernetes. A server side component can acce
 
 Interact with Helm start with a command-line tool (CLI). Helm can be downloaded from https://github.com/kubernetes/helm/releases
 
-`curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.11.0-linux-amd64.tar.gz
-tar -xvf helm-v2.11.0-linux-amd64.tar.gz
-mv linux-amd64/helm /usr/local/bin/`{{execute}}
+`curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh`{{execute}}
 
 Once installed locally a server side component needs to be started called _Tiller_. The _init_ command starts _Tiller_ and it will be available in a moment.
 
