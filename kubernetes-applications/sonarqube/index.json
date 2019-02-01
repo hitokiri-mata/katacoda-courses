@@ -7,7 +7,7 @@
   "details": {
     "steps": [
       {
-        "title": "You Kubernetes Cluster",
+        "title": "Your Kubernetes Cluster",
         "text": "step1-k8s.md"
       },
       {
