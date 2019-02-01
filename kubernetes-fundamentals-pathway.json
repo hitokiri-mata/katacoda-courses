@@ -15,8 +15,8 @@
       },
       {
         "course_id": "connectivity",
-        "title": "Service Connectivity",
-        "description": "How services communicate with each other."
+        "title": "Pods to Services Communication",
+        "description": "How Pods communicate with Services using a DNS."
       },
       {
         "course_id": "jobs",

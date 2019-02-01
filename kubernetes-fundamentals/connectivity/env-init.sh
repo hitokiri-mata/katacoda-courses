@@ -9,5 +9,5 @@ source <(kubectl completion bash)
 source <(helm completion bash)
 clear
 
-echo "Starting Kubernetes using Minikube..."
+echo 'Starting Kubernetes using Minikube...'
 minikube start 

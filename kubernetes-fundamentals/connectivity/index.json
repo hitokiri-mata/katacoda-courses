@@ -1,6 +1,6 @@
 {
-  "title": "Communication within Kubernetes",
-  "description": "The fundamentals of Pods to Services communication",
+  "title": "Pods to Services Communication",
+  "description": "How Pods communicate with Services using a DNS.",
   "difficulty":	"Beginner",
   "time":	"10 minutes",
   "details": {
@@ -15,12 +15,13 @@
       },
       {
         "title": "DNS for Services and Pods",
-        "text": "step3-via-cli.md"
+        "text": "step3-dns.md"
       }
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh"
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
     },
     "finish": {
       "text": "finish.md"

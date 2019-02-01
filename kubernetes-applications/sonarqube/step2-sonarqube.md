@@ -4,7 +4,11 @@ Some attempts have been made in the settings to reduce the memory needs.
 However, you can run the same instructions on another Kubernetes cluster with
 a larger memory setting.)
 
-Using Helm, install SonarQube Helm chart with a few custom values.
+SonarQube relies on some storage using a Postgress database. First, apply a StorageClass object as a dependency before Postgress starts.
+
+`kubectl create -f storage.yaml`{{execute}}
+
+Using Helm, install the SonarQube Helm chart with a few custom values.
 
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
