@@ -1,5 +1,3 @@
-# Start Kubernetes #
-
 Use the Minikube _start_ command to standup a single node Kubernetes cluster.
 
 `minikube start`{{execute}}

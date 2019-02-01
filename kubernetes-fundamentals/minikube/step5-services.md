@@ -1,5 +1,3 @@
-# Services #
-
 Minikube has a helpful command to list and inspect the Kubernetes services. Some of the services have been exposed as NodePorts. This means there are specific ports (or holes) that have been exposed outside of the cluster for incoming traffic. List the Minikube services.
 
 `minikube service list`{{execute}}

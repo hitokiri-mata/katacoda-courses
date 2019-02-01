@@ -1,5 +1,3 @@
-# Minikube Installation #
-
 ## Versions ##
 
 This Katacoda scenario provides a recent version of the Minikube command line tool (CLI). Katacoda has provided you a Linux virtual machine completely capable of serving up Minikube in the Bash shell to the right.

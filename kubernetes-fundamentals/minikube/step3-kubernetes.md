@@ -1,5 +1,3 @@
-# Kubernetes #
-
 Up to this point several Minikube CLI commands have been covered. However, the primary way to interact with Kubernetes from the command line is instead through the CLI tool called KubeCtl.
 
 Keep in mind the _minikube_ tool is for administering the hosting of the cluster where _kubectl_ tool is for administering Kubernetes itself, regardless of where Kubernetes is running. In the beginning it may take some time to keep the purpose of these commands separate.

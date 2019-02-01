@@ -6,24 +6,31 @@
   "details": {
     "steps": [
       {
+        "title": "Minikube",
         "text": "step1-minikube.md"
       },
       {
+        "title": "Create",
         "text": "step2-create.md"
       },
       {
+        "title": "Command Line Arguments",
         "text": "step3-via-cli.md"
       },
       {
+        "title": "Environment Variables",
         "text": "step4-via-env.md"
       },
       {
+        "title": "Volume Mounts",
         "text": "step5-via-volume.md"
       },
       {
+        "title": "Create Secret",
         "text": "step6-secret-create.md"
       },
       {
+        "title": "Read Secret",
         "text": "step7-secret-read.md"
       }
     ],

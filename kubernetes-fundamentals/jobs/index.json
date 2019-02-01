@@ -6,18 +6,23 @@
   "details": {
     "steps": [
       {
+        "title": "Run Single Job",
         "text": "step1-job1.md"
       },
       {
+        "title": "Job from Resource",
         "text": "step2-job2.md"
       },
       {
+        "title": "Job Failure",
         "text": "step3-failure.md"
       },
       {
+        "title": "Parallelism",
         "text": "step4-parallel.md"
       },
       {
+        "title": "Work Queue",
         "text": "step5-queue.md"
       }
     ],
@@ -33,9 +38,6 @@
       "host01": [
         {"file": "*", "target": "/root"}      ]
     }
-  },
-  "environment": {
-    "uilayout": "terminal"
   },
   "environment": {
     "showdashboard": true,

@@ -6,18 +6,23 @@
   "details": {
     "steps": [
       {
+        "title": "Deployment",
         "text": "step1-deployment.md"
       },
       {
+        "title": "Service",
         "text": "step2-service.md"
       },
       {
+        "title": "Scaling",
         "text": "step3-scale.md"
       },
       {
+        "title": "Resilience",
         "text": "step4-resilience.md"
       },
       {
+        "title": "Rollout",
         "text": "step5-rollout.md"
       }
     ],

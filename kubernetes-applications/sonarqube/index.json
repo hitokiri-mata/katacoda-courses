@@ -56,9 +56,9 @@
         {"name": "Kubernetes Dashboard", "port": 30000}, 
         {"name": "SonarQube Portal", "port": 31111}
       ]
-      },
+    },
     "backend": {
-      "port": 8080,
-      "imageid": "kubernetes-cluster-running"
+      "imageid": "minikube"
     }
-}
+  }
+  

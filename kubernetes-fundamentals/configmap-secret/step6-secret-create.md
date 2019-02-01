@@ -1,5 +1,3 @@
-# Create Secret #
-
 Both ConfigMaps and Secrets are stored in etcd, but the way you submit secrets is slightly different than ConfigMaps.
 
 ## Create from CLI ##

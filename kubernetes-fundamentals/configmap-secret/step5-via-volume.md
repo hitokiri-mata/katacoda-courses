@@ -1,5 +1,3 @@
-# Volume Mounts #
-
 This example shows how a Pod accesses configuration data from the ConfigMap by reading from a file in a directory of the container. Upon startup, the application would reference these parameters by referencing the named files in the known directory.
 
 View the resource definition.

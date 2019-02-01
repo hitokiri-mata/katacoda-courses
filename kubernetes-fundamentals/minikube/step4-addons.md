@@ -1,5 +1,3 @@
-# Addons #
-
 Minikube has an addons features that deployed common sets of solutions on Kubernetes. These common sets are configured to best opinions and tested to ensure they work correctly with the Minikube Kubernetes combination.
 
 View the list of available addons and see which ones are enabled.

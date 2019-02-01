@@ -1,5 +1,3 @@
-# Create #
-
 Before containers can consume contextual configuration data, that data must first be created and stored in ConfigMaps. In later steps the same will be done slightly differently for Secrets.
 
 A ConfigMap is simple data associated with a unique key.

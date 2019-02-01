@@ -6,22 +6,32 @@
   "details": {
     "steps": [
       {
+        "title": "Minikube Installation",
         "text": "step1-versions.md"
       },
       {
+        "title": "Start Kubernetes",
         "text": "step2-start.md"
       },
       {
+        "title": "Kubernetes",
         "text": "step3-kubernetes.md"
       },
       {
+        "title": "Addons",
         "text": "step4-addons.md"
       },
       {
+        "title": "Services",
         "text": "step5-services.md"
       },
       {
+        "title": "Dashboard",
         "text": "step6-dashboard.md"
+      },
+      {
+        "title": "Making Changes",
+        "text": "step7-modification.md"
       }
     ],
     "intro": {

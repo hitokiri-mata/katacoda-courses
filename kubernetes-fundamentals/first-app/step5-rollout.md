@@ -1,5 +1,3 @@
-# Rollout #
-
 If you inspect the Pod you will see the running container is version 1.9
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}

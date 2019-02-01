@@ -1,5 +1,3 @@
-# Service #
-
 The _echoserver_ container is running in a Pod. Each Pod in Kubernetes is assigned an internal and virtual IP address at 10.xx.xx.xx. However, from outside of the cluster these IPs are not addressable, and never should be. Even within the cluster other applications normally should not attempt to address these Pods IPs. Instead each Pod is typically fronted by a service.
 
 This service can be referenced by its label, and therefore access with the help of an internal Domain Name System (DNS) that will resolve the URL to the service based on the label. The Service will add a layer of indirection where it will know how to connect to the Pod. All the other applications in the cluster will connect to the service through DNS lookups and the services will connect to the specific Pods.

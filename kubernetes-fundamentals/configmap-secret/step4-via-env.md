@@ -1,5 +1,3 @@
-# Environment Variables #
-
 This example shows how a Pod accesses configuration data from the ConfigMap by passing in the data as environmental parameters of the container. Upon startup, the application would reference these parameters as system environment variables.
 
 View the resource definition.

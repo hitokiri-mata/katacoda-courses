@@ -1,0 +1,45 @@
+{
+  "title": "Communication within Kubernetes",
+  "description": "The fundamentals of Pods to Services communication",
+  "difficulty":	"Beginner",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Minikube",
+        "text": "step1-minikube.md"
+      },
+      {
+        "title": "Communication from Pods to Services",
+        "text": "step2-intra.md"
+      },
+      {
+        "title": "DNS for Services and Pods",
+        "text": "step3-via-cli.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+    },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

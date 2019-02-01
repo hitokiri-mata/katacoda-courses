@@ -14,6 +14,10 @@ This chart bootstraps a SonarQube instance with a PostgreSQL database. The servi
 
 `export SONAR_SERVICE=$(minikube ip):31111`{{execute}}
 
+In a few moments the deployments will register as _available_ (1).
+
+`kubectl get deployments,pods,services -n sonarqube`{{execute}}
+
 `echo $SONAR_SERVICE`{{execute}}
 
 `wget http://$SONAR_SERVICE`{{execute}}

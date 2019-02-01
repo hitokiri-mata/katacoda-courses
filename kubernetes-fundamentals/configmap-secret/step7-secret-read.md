@@ -1,5 +1,3 @@
-# Read Secret #
-
 Just as there are three ways to get ConfigMap data into a container, the same three techniques are available for Secrets. This step covers secrets supplied to containers as environment properties.
 
 From the previous steps, there is a secret in the cluster called _db-creds_.

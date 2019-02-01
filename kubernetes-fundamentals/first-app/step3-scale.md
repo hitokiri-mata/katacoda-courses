@@ -1,5 +1,3 @@
-# Scaling #
-
 Pods are often replicated for handling parallel requests. The Service will take care of _round robin_ load balancing across the available Pods.
 
 We will scale the hello Pod up and down. First, in another terminal start a continuous loop that puts some load the service.

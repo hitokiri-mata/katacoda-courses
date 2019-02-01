@@ -12,7 +12,7 @@ Exercise the _figlet_ function.
 
 Repeat this function in a loop.
 
-`while [ true ]; do curl https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'NFJS'; done;`{{execute}}
+`while [ true ]; sleep 1; do curl https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'NFJS'; done;`{{execute}}
 
 Navigate to the Grafana dashboard and notice the rising activity. Go to the OpenFaaS portal and notice the rising of the replicas with all the invocation counts. Go to the Kubernetes dashboard and in the openfaas-fn namespaces notice all the pods that are scaled up to handle the load.
 

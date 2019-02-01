@@ -1,5 +1,3 @@
-# Run Single Job #
-
 Ensure Minikube is running and ready to accept your upcoming declarations.
 
 `minikube status`{{execute}}

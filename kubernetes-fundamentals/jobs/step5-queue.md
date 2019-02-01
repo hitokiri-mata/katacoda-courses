@@ -1,5 +1,3 @@
-# Work Queue #
-
 Jobs are an effective mechanism to accept work from a queue and publish the results downstream when completed. Multiple Jobs can run asynchronously and in parallel to accept enqueued items and deque the items when completed. 
 
 This example starts up a simple queuing service, enqueues keygen request work items, then parallel jobs process the work items by submitting they keygen results back to the queue.

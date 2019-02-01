@@ -1,5 +1,3 @@
-# Parallelism #
-
 A huge advantage of running application on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be longer running and incur notable CPU and memory consumption. A helpful ways to solve performance problems is running the jobs in parallel. Instead of each job creating a series of keys serially, have multiple jobs work on smaller units of work.
 
 ## A Race ##
