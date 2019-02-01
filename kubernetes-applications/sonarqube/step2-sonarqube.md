@@ -16,13 +16,16 @@ This chart bootstraps a SonarQube instance with a PostgreSQL database. The servi
 
 `kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-`export SONAR_SERVICE=$(minikube ip):31111`{{execute}}
+`export SONAR_SERVICE=export REGISTRY=[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]]`{{execute}}
+
+`echo $SONAR_SERVICE`{{execute}}
 
 In a few moments the deployments will register as _available_ (1).
 
 `kubectl get deployments,pods,services -n sonarqube`{{execute}}
 
-`echo $SONAR_SERVICE`{{execute}}
+When its running, it will respond to your request.
+
 
 `wget http://$SONAR_SERVICE`{{execute}}
 

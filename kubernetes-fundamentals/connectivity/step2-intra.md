@@ -4,7 +4,7 @@ To start communicating to a Service and its associated Pod, install a small, typ
 
 `kubectl create -f https://raw.githubusercontent.com/javajon/kubernetes-fundamentals/master/nginx/nginx.yaml`{{execute}}
 
-Verify it's running.
+Verify the Nginx deployment is _available_ (1) with two runnings pods and a service.
 
 `kubectl get services,pods,deployments`{{execute}}
 
@@ -19,6 +19,7 @@ Shortly the terminal will assume the prompt _inside_ the Busybox container. Try 
 Because the busyboxplus container is running in the same namespace (_default_) as the Nginx service, the URL is small and simple.
 
 `curl http://nginx`{{execute}}
+
 `curl -I http://nginx:80 | grep "Thank you"`{{execute}}
 
 The namespace can optionally be added to the URL.

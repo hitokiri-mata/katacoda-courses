@@ -9,4 +9,4 @@ helm repo update
 
 clear 
 
-echo "Kubernetes with Helm is ready."
+echo 'Kubernetes with Helm is ready.'

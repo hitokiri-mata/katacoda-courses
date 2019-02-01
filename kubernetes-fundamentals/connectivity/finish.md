@@ -6,9 +6,9 @@ The lesson does not cover more complex topics such as meshing, ingressing, egres
 
 Here are some addition Katacoda courses:
 
-[Create Ingress Routing](https://www.katacoda.com/courses/kubernetes/create-kubernetes-ingress-routes)
-[Networking Introduction](https://www.katacoda.com/courses/kubernetes/networking-introduction)
-[Get Started with Istio and Kubernetes](https://www.katacoda.com/courses/istio/deploy-istio-on-kubernetes)
+- [Create Ingress Routing](https://www.katacoda.com/courses/kubernetes/create-kubernetes-ingress-routes)
+- [Networking Introduction](https://www.katacoda.com/courses/kubernetes/networking-introduction)
+- [Get Started with Istio and Kubernetes](https://www.katacoda.com/courses/istio/deploy-istio-on-kubernetes)
 
 ## Lessons Learned ##
 
