@@ -26,11 +26,7 @@ The Postgres database takes a minute or two before its available. Once healthy, 
 
 When its running, it will respond to your request.
 
-
 `wget http://$SONAR_SERVICE`{{execute}}
-
-Verify SonarQube is running.
-`kubectl get deployment,pods -n sonarqube`{{execute}}
 
 View the SonarQube dashboard here: [SonarQube Dashboard](
 https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).

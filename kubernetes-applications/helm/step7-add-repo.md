@@ -16,7 +16,7 @@ Now, their charts can be listed.
 
 `helm search fabric8`{{execute}}
 
-A specific chart can be inspected.
+A specific fabric8 chart can be further inspected.
 
 `helm inspect fabric8/ipaas-platform`{{execute}}
 

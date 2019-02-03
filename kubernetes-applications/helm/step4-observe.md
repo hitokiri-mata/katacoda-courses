@@ -2,9 +2,9 @@ Helm deploys all the pods, replication controllers and services. The pod will be
 
 Use the _get_ command to find out what was deployed.
 
-`kubectl get deployments,pods,services`{{execute}}
+`watch kubectl get deployments,pods,services`{{execute}}
 
-The Pod will be in a pending state while the container image is downloaded and until a Persistent Volume is available.
+The Pod will be in a pending state while the container image is downloaded and until a Persistent Volume is available.  
 
 `kubectl apply -f pv.yaml`{{execute}}
 
@@ -12,6 +12,10 @@ Redis needs permissions to write to these mount points.
 
 `mkdir /mnt/data1 /mnt/data2 /mnt/data3 --mode=777`{{execute}}
 
-`kubectl get deployments,pods,services`{{execute}}
+`watch kubectl get deployments,pods,services`{{execute}}
 
-Once complete it will move into a running state. A [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) is running on Kubernetes.
+Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
+
+```Clear```{{execute interrupt}} to ctrl-c and clear the shell.
+
+You have successfully installed a [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes.

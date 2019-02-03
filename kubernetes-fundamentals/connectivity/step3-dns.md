@@ -22,7 +22,7 @@ In vane, try to access nginx.
 
 Exit from the Busybox shell.
 
-`exit`{{execute}
+`exit`{{execute}}
 
 The requests fails as expected without the DNS service. So, substitute in the alternate _CoreDNS_ service.
 
