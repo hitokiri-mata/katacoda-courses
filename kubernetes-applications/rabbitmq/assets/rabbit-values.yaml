@@ -8,6 +8,7 @@ rbacEnabled: false
 service:
   type: NodePort 
   nodePort: 31000
+  managerPort: 35672
 
 rabbitmq:
   username: admin
