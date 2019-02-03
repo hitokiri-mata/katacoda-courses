@@ -13,7 +13,7 @@ spec:
         image: flaviobarros/shiny-wordcloud
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3838
+        - containerPort: 80
           name: shinyport
       restartPolicy: Always
 ---

@@ -1,5 +1,3 @@
-# Deploy R Shiny Demonstration #
-
 Provisioning a Shiny demonstration is easily done by invoking this command. Declare the Deployment and Service exposing the endpoint 31111.
 
 First, declare the Deployment
@@ -8,9 +6,13 @@ First, declare the Deployment
 
 The Shiny server takes a few minutes to start. Watch the Pod _status_ change from _ContainerCreating_ to _Running_. To get a complete status of the deployment availability run this inspection
 
-`kubectl get deployments,pods,services`{{execute}}.
+`watch kubectl get deployments,pods,services`{{execute}}.
 
-Once available, you can exercise the application two ways. If your running Minikube outside of Kubernetes this command would launch the Shiny application in your browser.
+Once complete, the Pod will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
+
+```Clear```{{execute interrupt}} to ctrl-c and clear the shell.
+
+Exercise the application two ways. If your running Minikube outside of Kubernetes this command would launch the Shiny application in your browser.
 
 `minikube service r-shiny`
 
