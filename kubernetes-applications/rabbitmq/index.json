@@ -42,8 +42,8 @@
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "RabbitMQ Portal", "port": 31000}
     ]
-    },
-    "backend": {
-      "imageid": "minikube"
-    }
+  },
+  "backend": {
+    "imageid": "minikube"
   }
+}
