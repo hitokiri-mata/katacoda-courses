@@ -14,7 +14,7 @@ Redis needs permissions to write to these mount points.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
+Once complete, the 3 Pods appear and will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
 
 ```Clear```{{execute interrupt}} to ctrl-c and clear the shell.
 

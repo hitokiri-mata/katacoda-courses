@@ -7,12 +7,15 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
         "text": "step1.md"
       },
       {
+        "title": "Deploy RabbitMQ",
         "text": "step2.md"
       },
       {
+        "title": "RabbitMQ Portal",
         "text": "step3.md"
       }
     ],
@@ -41,7 +44,6 @@
     ]
     },
     "backend": {
-      "port": 8080,
-      "imageid": "kubernetes-cluster-running"
+      "imageid": "minikube"
     }
-}
+  }
