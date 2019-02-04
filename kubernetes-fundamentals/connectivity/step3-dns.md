@@ -32,7 +32,7 @@ In a moment, the new DNS service can be seen running.
 
 `kubectl get services,pods,deployments -l 'k8s-app=kube-dns' --namespace kube-system`{{execute}}
 
-New DNS functionality has been enabled.  Notice the service name is still kube-dns, but the running Pod name is 'coredns'.  Verify the DNS is working again.
+New DNS functionality has been enabledNotice the service name is still kube-dns, but the running Pod name is 'coredns'. Verify the DNS is working again.
 
 `kubectl run curl-test --image=radial/busyboxplus:curl -i --tty --rm`{{execute}}
 

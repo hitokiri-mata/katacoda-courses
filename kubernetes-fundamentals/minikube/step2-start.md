@@ -2,7 +2,7 @@ Use the Minikube _start_ command to standup a single node Kubernetes cluster.
 
 `minikube start`{{execute}}
 
-The cluster starts up in a moment or two. These Katacoda servers are fairly fast and the experience on your local machine with the _start_ command will most likely be slower. However, [Moorse's Law](https://en.wikipedia.org/wiki/Moore%27s_law) is always adjusting our expectations.
+The cluster starts up in a moment or two. These Katacoda servers are fairly fast and the experience on your local machine with the _start_ command will most likely be slower. However, [Moore's Law](https://en.wikipedia.org/wiki/Moore%27s_law) is always adjusting our expectations.
 
 Verify Minikube is running.
 

@@ -4,7 +4,7 @@ Use the _get_ command to find out what was deployed.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 
-The Pod will be in a pending state while the container image is downloaded and until a Persistent Volume is available.  
+The Pod will be in a pending state while the container image is downloaded and until a Persistent Volume is available.
 
 `kubectl apply -f pv.yaml`{{execute}}
 

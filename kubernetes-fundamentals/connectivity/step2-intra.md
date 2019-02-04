@@ -30,7 +30,7 @@ Here is the full URL to the service.
 
 `curl --silent http://nginx.default.svc.cluster.local:80 | grep "Thank you"`{{execute}}
 
-As a developer your code would simply reach out to these URLs created from the assigned service names.  
+As a developer your code would simply reach out to these URLs created from the assigned service names.
 
 The name of the service could be passed in as an environment variable to the container. Since the Busybox container was installed after NGINX, the Busybox environment already has information about the various URLS to access the other services. See them listed.
 

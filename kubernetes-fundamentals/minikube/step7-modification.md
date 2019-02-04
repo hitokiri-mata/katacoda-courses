@@ -1,22 +1,26 @@
 Kubernetes is not very helpful if you cannot make changes to it and start adding applications. To start editing Kubernetes, explore the command line tool and the dashboard to see how changes can be applied and verified.
 
-As a simple exercise create a namespace.
+As a simple exercise create two namespaces.
 
-`kubectl create namespace sandbox-a`{{execute}}
-`kubectl create namespace sandbox-b`{{execute}}
+`
+kubectl create namespace sandbox-a
+kubectl create namespace sandbox-b
+`{{execute}}
 
-Verify the namespace has been created.
-
-`kubectl label namespace sandbox-a group=development
-kubectl label namespace sandbox-a customer=alpha`{{execute}}
-
-Now sandboxA has an associated label.
-
-`kubectl describe namespace sandbox-a`{{execute}}
-
-View all the namespaces.
+Verify the namespaces has been created.
 
 `kubectl get namespaces`{{execute}}
+
+Labels can be attached to objects in Kubernetes. Attach a descriptive label to these two namespaces.
+
+`
+kubectl label namespace sandbox-a group=development
+kubectl label namespace sandbox-b customer=alpha
+`{{execute}}
+
+Verify the associated labels have been applied.
+
+`kubectl describe namespace sandbox-a`{{execute}}
 
 Using the label, view only the namespaces with the label you filter for.
 
