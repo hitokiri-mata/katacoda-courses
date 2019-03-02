@@ -12,6 +12,9 @@ clear
 echo "Starting Kubernetes using Minikube..."
 minikube start 
 
+minikube addons enable dashboard
+kubectl create -f /opt/kubernetes-dashboard.yaml
+
 # Helm Setup
 helm init --wait
 helm repo update
