@@ -44,6 +44,7 @@
     ]
   },
   "backend": {
-    "imageid": "minikube"
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
   }
 }
