@@ -12,8 +12,8 @@ kubectl patch service kubernetes-dashboard --namespace=kube-system --type='json'
 helm init --wait
 helm repo update
 
-#TODO: Setup dashboard via chart like minikube on 30001
-helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30001 --set=service.externalPort=80 --namespace kube-system
+# Setup dashboard via chart like minikube on 30000
+helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30000 --set=service.externalPort=80 --namespace kube-system
 
 clear 
 

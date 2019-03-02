@@ -1,14 +1,18 @@
 # Install Kubeless #
 
-As you see, your Kubernetes cluster based on Minikube is started now or will be available shortly. Verify it's ready for your use:
+As you see, your Kubernetes cluster is started. Verify it's ready for your use.
 
-`minikube version && minikube status`{{execute}}
+`kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
 
-## Install Kubeless Controller ##
+Verify the Kubernetes cluster is empty.
 
-Helm is a package manager for Kubernetes and is initialized and ready.
+`kubectl get deployments,pods,services`{{execute}}
+
+The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
 `helm version`{{execute}}
+
+## Install Kubeless Controller ##
 
 A common Helm _chart_ is predefined for installing _Kubeless_. Normally, popular charts appear in the [curated Helm chart repository](https://github.com/kubernetes/charts) and there are plans to move Kubeless there. For now, this `repo add` command will allow Helm to find the Kubeless chart:
 
@@ -25,6 +29,6 @@ As part of the installation there will be two Pods started in the new `kubeless`
 
 Observe the availability of each deployment as they progress from 0 to 1:
 
-`kubectl get deployments --namespace kubeless`{{execute}}
+`kubectl get deployments,pods --namespace kubeless`{{execute}}
 
 New functions can now be deployed to _Kubeless_.
