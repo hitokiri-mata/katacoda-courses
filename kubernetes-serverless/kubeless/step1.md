@@ -27,6 +27,4 @@ Observe the availability of each deployment as they progress from 0 to 1:
 
 `kubectl get deployments --namespace kubeless`{{execute}}
 
-Wait until at the least the controller deployment has its _Available_ status change to 1.
-
 New functions can now be deployed to _Kubeless_.

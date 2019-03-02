@@ -1,20 +1,20 @@
 #!/bin/sh
 
-# Minikube pre-setup
-minikube config set WantUpdateNotification false
-# TODO: There is a known issue with Katacoda when this is applied. Waiting to move to new version of Minikube.
-# minikube config set bootstrapper kubeadm
-source <(minikube completion bash)
 source <(kubectl completion bash)
 source <(helm completion bash)
-clear
 
-echo 'Starting Kubernetes using Minikube...'
-minikube start
-
-minikube addons enable dashboard
-kubectl create -f /opt/kubernetes-dashboard.yaml
+# Add Kubernetes dashboard at NodePort 8443
+kubectl create -n kube-system -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml 
+kubectl patch service kubernetes-dashboard --namespace=kube-system --type='json' --patch='[{"op": "replace", "path": "/spec/type","value":"NodePort"}]'
+kubectl patch service kubernetes-dashboard --namespace=kube-system --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":8443}]'
 
 # Helm Setup
 helm init --wait
 helm repo update
+
+#TODO: Setup dashboard via chart like minikube on 30001
+helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30001 --set=service.externalPort=80 --namespace kube-system
+
+clear 
+
+echo "Kubernetes with Helm is ready."

@@ -12,9 +12,9 @@ Delete one of the Pods.
 
 `kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)&`{{execute}}
 
-Watch (-w) how Kubernetes recover from the glitch.
+Watch how Kubernetes recovers from the glitch.
 
-`kubectl get pods --selector=run=hello -w`{{execute}}
+`watch kubectl get pods --selector=run=hello`{{execute}}
 
 Ctrl-C once the 3 pods are restored, notice one pod has a new Id in the name.
 

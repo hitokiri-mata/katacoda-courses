@@ -18,7 +18,7 @@ Copy the example Python code into the generated directory.
 
 `cp fibonacci.py fibonacci/handler.py`{{execute}}
 
-## Up to Build, Push and Deploy ##
+## Build, Push and Deploy ##
 
 With the function coded and defined deploy the artifacts to OpenFaaS and it will take care of all the server details for you, after all it's _serverless_.
 

@@ -2,8 +2,13 @@ All Kubernetes clusters has some form of a Domain Name System (DNS) handler. DNS
 
 The version of Minukube you are using here in Katacoda currently has _Kube-DNS_ service the requests.
 
-`minikube addons list`{{execute}}
+**Note: a recent change to Minikube dns addons mean these instructions need to change. The steps below will not work.**
 
+__Stop and proceed to Continue below.__
+
+----------
+
+`minikube addons list`{{execute}}
 The Kube-DNS service can be seen running here.
 
 `kubectl get services,pods,deployments -l 'k8s-app=kube-dns' --namespace kube-system`{{execute}}

@@ -1,5 +1,7 @@
 Provisioning RabbitMQ on Kubernetes is easily done by invoking this [stable Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
+**NOTE: This Minikube instance appears to be too small for this chart, this tutorial is being coverted to use a larger cluster**
+
 `helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
 The RabbitMQ containers start fairly quickly so the Pod status may be already running, creating, or initializing. To get a complete status of the deployment availability run this inspection.
