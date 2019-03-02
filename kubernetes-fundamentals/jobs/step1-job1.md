@@ -12,7 +12,7 @@ Use the _get_ command to list the current jobs.
 
 `kubectl get jobs`{{execute}}
 
-Take a peek at the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/) (tab above the command line) and see how the Job is created as a resource. In the dashboard, explore the details and logs of the Job and Pod that just ran.
+Take a peek at the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) (tab above the command line) and see how the Job is created as a resource. In the dashboard, explore the details and logs of the Job and Pod that just ran.
 
 Once you are done inspecting the job, use the _delete_ command to remove it.
 

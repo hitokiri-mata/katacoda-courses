@@ -26,6 +26,6 @@ Using the label, view only the namespaces with the label you filter for.
 
 `kubectl get namespaces -l group=development`{{execute}}
 
-Verify these names spaces and labels in the [Kubernetes Dashboard.](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/)
+Verify these names spaces and labels in the [Kubernetes Dashboard.](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/)
 
 Kubernetes relies on the simplicity of labeling and grouping with namespaces as tool to help your organize your applications and hook them together.

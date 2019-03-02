@@ -40,7 +40,7 @@ Then, view it.
 
 `kubectl describe configmap ucs-info`{{execute}}
 
-The same ConfigMaps can also be explored in the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/).
+The same ConfigMaps can also be explored in the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/).
 
 ## Three Access Techniques ##
 
