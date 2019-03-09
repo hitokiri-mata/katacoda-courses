@@ -29,8 +29,8 @@
         "description": "Run Jenkins on Kubernetes"
       },
       {
-        "course_id": "sonarqube (draft)",
-        "title": "SonarQube",
+        "course_id": "sonarqube",
+        "title": "SonarQube (draft)",
         "description": "Code Analysis with SonarQube on Kubernetes"
       },
       {
