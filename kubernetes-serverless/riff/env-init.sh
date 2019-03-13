@@ -7,6 +7,4 @@ source <(helm completion bash)
 helm init --wait
 helm repo update
 
-clear 
-
-echo "Kubernetes with Helm is ready."
+{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

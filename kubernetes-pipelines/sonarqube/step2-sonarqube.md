@@ -1,10 +1,4 @@
-(DRAFTING... working on getting these steps to work...
-This Katacoda Minikube instance is not large enough for SonarQube.
-Some attempts have been made in the settings to reduce the memory needs.
-However, you can run the same instructions on another Kubernetes cluster with
-a larger memory setting.)
-
-SonarQube relies on some storage using a Postgress database. First, apply a StorageClass object as a dependency before Postgress starts.
+SonarQube relies on a Postgres database for its storage. First, apply a StorageClass object as a dependency before Postgres starts.
 
 `kubectl create -f storage.yaml`{{execute}}
 
@@ -20,7 +14,7 @@ This chart bootstraps a SonarQube instance with a PostgreSQL database. The servi
 
 `echo $SONAR_SERVICE`{{execute}}
 
-The Postgres database takes a minute or two before its available. Once healthy, the deployments will register as _available_ (1).
+The Postgres database takes a minute or two before it's available. Once healthy, the deployments will register as _available_ (1).
 
 `kubectl get deployments,pods,services -n sonarqube`{{execute}}
 

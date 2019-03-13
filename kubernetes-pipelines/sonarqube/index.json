@@ -43,12 +43,12 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "SonarQube Dashboard", "port": 31111}
     ]
-    },    
-    "backend": {
-      "port": 8080,
-      "imageid": "kubernetes-cluster-running"
-    }
+    },
+  "backend": {
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
   }
-  
+}

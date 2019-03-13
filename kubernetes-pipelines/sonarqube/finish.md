@@ -2,7 +2,7 @@
 
 Most developers who know about static code analysis know about SonarQube. While each language typically has its own linting and code analysis tools, SonarQube offers a unifying tools for many languages and teams. Additionally, SonarQube with its database offers the additional dimension of time to trend your metrics over time.
 
-This tutorial shows how you can easily use Kubernetes as a place to host a heightly available server for you and your team.
+This tutorial shows how you can easily use Kubernetes as a place to host a highly available server for you and your team.
 
 ## Lessons Learned ##
 
@@ -14,7 +14,7 @@ With these steps you have learned how:
 - to access the SonarQube Dashboard
 - to analyze code and inspect results with a Gradle plugin
 
-## Additional information ##
+## Additional Information ##
 
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see this example in action. [Code Analysis and Team Culture](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson)
 * [SonarQube integration](https://www.sonarsource.com/why-us/integration/)

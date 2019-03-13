@@ -24,16 +24,6 @@
         "description": "Run RabbitMQ on Kubernetes"
       },
       {
-        "course_id": "jenkins",
-        "title": "Jenkins",
-        "description": "Run Jenkins on Kubernetes"
-      },
-      {
-        "course_id": "sonarqube",
-        "title": "SonarQube (draft)",
-        "description": "Code Analysis with SonarQube on Kubernetes"
-      },
-      {
         "course_id": "mean",
         "title": "Mean Application (draft)",
         "description": "Deploy A MEAN Application On Kubernetes With Helm. Based on an article from Bitnami."
