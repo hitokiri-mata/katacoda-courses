@@ -4,6 +4,10 @@ SonarQube relies on a Postgres database for its storage. First, apply a StorageC
 
 Using Helm, install the SonarQube Helm chart with a few custom values.
 
+> Note: This command fails currently related to the PersistentVolume and the PVC. A correction is in progress. [More info](https://github.com/helm/charts/issues/11304).
+
+----
+
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
 This chart bootstraps a SonarQube instance with a PostgreSQL database. The service is exposed as a NodePort but at a random value. For Katacode to offer a URL to the service, the port must adjusted to a known number, 31111.

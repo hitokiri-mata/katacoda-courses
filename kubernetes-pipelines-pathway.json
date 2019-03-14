@@ -1,22 +1,22 @@
 {
     "title": "Kubernetes: Pipelines",
     "icon": "fa-kubernetes",
-    "description": "Discover different tools and techniques for continuous delivery on Kubernetes. Many can also found at the [Continuous Delivery Foundation (CDF)](https://cd.foundation/)",
+    "description": "Discover different tools and techniques for continuous delivery on Kubernetes.<p>For more tools, reference the growing solutions at the <a href='https://cd.foundation'>Continuous Delivery Foundation (CDF)</a>",
     "courses": [
       {
         "course_id": "jenkins",
         "title": "Jenkins",
-        "description": "Run Jenkins on Kubernetes"
+        "description": "Run Jenkins on Kubernetes."
       },
       {
         "course_id": "drone",
         "title": "Drone (draft)",
-        "description": "Run Drone on Kubernetes"
+        "description": "Run Drone on Kubernetes. Use containers to drop pre‑configured steps into your pipeline. Choose from hundreds of existing containered plugins, or create your own."
       },
       {
         "course_id": "sonarqube",
         "title": "SonarQube (draft)",
-        "description": "Code Analysis with SonarQube on Kubernetes"
+        "description": "Static Code Analysis with SonarQube on Kubernetes."
       }
     ]
   }
