@@ -27,7 +27,7 @@
         "text": "step5-persistent-volume.md"
       },
       {
-        "title": "Install Local Git Repo Service, Gogs",
+        "title": "Install Git Repo Service, Gogs",
         "text": "step6-git-service.md"
       },
       {

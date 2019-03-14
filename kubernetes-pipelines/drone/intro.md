@@ -1,8 +1,8 @@
 # Drone on Kubernetes #
 
-![SonarQube](/javajon/courses/kubernetes-pipelines/drone/assets/drone-logo_128.png "Code Analysis with SonarQube on Kubernetes.")
+![Drone](/javajon/courses/kubernetes-pipelines/drone/assets/drone-logo_128.png "Drone.")
 
-[Drone](https://www.drone.io) is an open source platform developed by the company Drone. 
+[Drone](https://www.drone.io) is an [open source](https://github.com/drone/drone) Continuous Delivery platform. A CI/CD pipeline for building and deploying containers. 
 
 ## Configuration as Code ##
 Pipelines are configured with a simple, easy‑to‑read file that you commit to your git repository. Each Pipeline step is executed inside an isolated Docker container that is automatically downloaded at runtime.
