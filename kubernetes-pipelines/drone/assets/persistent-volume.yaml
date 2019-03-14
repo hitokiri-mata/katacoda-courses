@@ -4,7 +4,7 @@ metadata:
   name: nfs-0001
 spec:
   capacity:
-    storage: 10Gi
+    storage: 11Gi
   accessModes:
     - ReadWriteOnce
     - ReadWriteMany
@@ -12,3 +12,4 @@ spec:
   nfs:
     server: 172.17.0.47
     path: /exports/data-0001
+  

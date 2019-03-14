@@ -6,5 +6,5 @@ Install Gogs, a Git version control provider.
 
 Verify Gogs is running. The deployment _Available_ status should will turn to '1' in a few moments.
 
-`kubectl get deployments,pods,services --namespace gogs`{{execute}}
+`kubectl get deployments,pods,services,pv --namespace gogs`{{execute}}
 

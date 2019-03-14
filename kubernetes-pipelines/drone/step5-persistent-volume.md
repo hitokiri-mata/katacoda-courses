@@ -1,4 +1,4 @@
-Shortly we will be installing a Gig source control server, but before that step it requires a persistent volume. A NFS volume will be allocated.
+Shortly we will be installing a Git source control server, but before that step it requires a persistent volume. A NFS volume will be allocated.
 
 In this scenario, and for demonstration and learning purposes, the role of the NFS Server is handled by a customized container. The container makes directories available via NFS and stores the data inside the container. In production, it is recommended to configure a dedicated NFS Server. Additionally, for [Kubernetes there are many other volume types](https://kubernetes.io/docs/concepts/storage/volumes/) to choose from. 
 
