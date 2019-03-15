@@ -24,8 +24,8 @@ sonarProperties:
   sonar.forceAuthentication=false
   # sonar.search.javaOpts=-Xms512m -Xmx512m -XX:+HeapDumpOnOutOfMemoryError
 
-Persistence:
-  StorageClass: manual 
+persistence:  
+  enabled: false
 
 postgresql:  
   enabled: false
