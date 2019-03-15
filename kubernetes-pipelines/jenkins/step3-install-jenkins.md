@@ -2,7 +2,7 @@
 
 Jenkins will be making a PersistentVolumeClaim so a PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created 
 
-`kubectl create -f pv-host-path.yaml`{{execute}}
+`mkdir /mnt/data && kubectl create -f pv-host-path.yaml`{{execute}}
 
 ## Install Jenkins ##
 
