@@ -4,7 +4,7 @@
 
 Master:
   Image: "jenkinsci/jenkins"
-  ImageTag: "lts"
+  ImageTag: "2.164.1-alpine"
   # No password for demonstration purposes
   UseSecurity: false
   # Master.resources: {requests: {cpu: 50m, memory: 512Mi}, limits: {cpu: 2000m, memory: 2048Mi}}
