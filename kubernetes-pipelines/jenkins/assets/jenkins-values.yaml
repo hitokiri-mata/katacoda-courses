@@ -7,16 +7,16 @@ Master:
   ImageTag: "lts"
   # No password for demonstration purposes
   UseSecurity: false
-  Master.resources: {requests: {cpu: 50m, memory: 512Mi}, limits: {cpu: 2000m, memory: 2048Mi}}
+  # Master.resources: {requests: {cpu: 50m, memory: 512Mi}, limits: {cpu: 2000m, memory: 2048Mi}}
   ServiceType: NodePort
   NodePort: 31111 
 
 # List of plugins to be install during Jenkins master start
-  InstallPlugins:
-    - kubernetes:1.14.7
-    - workflow-aggregator:2.5
-    - workflow-job:2.6
-    - git:3.9.3
+  # InstallPlugins:
+  #   - kubernetes:1.14.7
+  #   - workflow-aggregator:2.5
+  #   - workflow-job:2.6
+  #   - git:3.9.3
 
 Agent:
   Enabled: true
@@ -38,6 +38,6 @@ Persistence:
 
 rbac:
   install: false
-  serviceAccountName: default
-  apiVersion: v1beta1
-  roleRef: cluster-admin
+  # serviceAccountName: default
+  # apiVersion: v1beta1
+  # roleRef: cluster-admin
