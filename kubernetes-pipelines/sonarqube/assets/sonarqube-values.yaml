@@ -2,6 +2,7 @@ service:
   type: NodePort
 
 persistence:
+  enabled: true
   storageClass: manual
 
 #plugins:
