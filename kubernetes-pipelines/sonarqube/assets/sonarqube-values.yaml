@@ -23,3 +23,6 @@ service:
 sonarProperties:
   sonar.forceAuthentication=false
   # sonar.search.javaOpts=-Xms512m -Xmx512m -XX:+HeapDumpOnOutOfMemoryError
+
+persistence:
+  storageClass: manual
