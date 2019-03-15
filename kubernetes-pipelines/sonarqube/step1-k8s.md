@@ -9,3 +9,9 @@ Verify the Kubernetes cluster is empty.
 The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
 `helm version`{{execute}}
+
+The Kubernetes dashboard is also available, but you will need the secret access token to login. reveal the token
+
+`kubectl describe secrets`{{execute}}
+
+then paste this the token into the login prompt.
