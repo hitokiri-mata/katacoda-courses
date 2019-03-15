@@ -6,7 +6,7 @@
 
 This demonstration covers these topics:
 
-- A personal Kubernetes cluster with Minikube
+- A personal Kubernetes cluster
 - Install and configure Jenkins from Helm chart
 - Installing Prometheus from Helm chart
 - Demonstrating Kubernetes plugin for Jenkins

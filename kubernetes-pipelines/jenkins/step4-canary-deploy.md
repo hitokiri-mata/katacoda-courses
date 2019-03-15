@@ -1,8 +1,6 @@
-# Canary Deployment #
-
 Now, this starts to get really interesting. So far you have Kubernetes running with Prometheus monitoring and Jenkins.
 
-> To demonstrate, a simple web application is used. Its GitHub repo two branches: production and canary. Using a Jenkins Pipeline, when changes are committed to the canary branch a build will be triggered and the new version will be rolled out to all replicas in the canary deployment. Once the change is validated, usually via some automated testing and health checks, changes are pushed to the production branch that will trigger the Jenkins Pipeline to update all deployments in the production deployment. - Chris Ricci
+> To demonstrate, a simple web application is used. Its GitHub repo has two branches: production and canary. Using a Jenkins Pipeline, when changes are committed to the canary branch a build will be triggered and the new version will be rolled out to all replicas in the canary deployment. Once the change is validated, usually via some automated testing and health checks, changes are pushed to the production branch that will trigger the Jenkins Pipeline to update all deployments in the production deployment. - Chris Ricci
 
 Next, add a new pipeline based on a Jenkinsfile that can orchestrate the building and deployment.
 
@@ -28,7 +26,7 @@ From Jenkins main page:
 1. Click 'Build Now'
 1. View build console output and notice the job is waiting for container agent
 1. Agent appears in Jenkins main
-1. Go to the Minikube dashboard and observe the Jenkins agent container spinning up
+1. Go to the Kubernetes dashboard and observe the Jenkins agent container spinning up
 
 ## Verify Hello-world ##
 

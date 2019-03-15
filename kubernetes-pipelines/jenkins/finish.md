@@ -16,10 +16,9 @@ Hopefully you also understand how Kubernetes is a new type of data center _opera
 
 This demonstration was performed with these tools. Newer versions may exist.
 
-- VirtualBox 5.8
-- Minikube 0.29.2 (with Kubernetes 1.9.4)
-- Kubectl 1.10.0
-- Helm 2.10.0
+- Kubernetes
+- Kubectl
+- Helm
 - Prometheus Operator
 - Kube-Prometheus (Alertmanager + Grafana)
 - Python

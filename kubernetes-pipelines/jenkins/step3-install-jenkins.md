@@ -1,4 +1,10 @@
-# Install Jenkins #
+## Persistent Volume ##
+
+Jenkins will be making a PersistentVolumeClaim so a PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created 
+
+`kubectl create -f pv-host-path.yaml`{{execute}}
+
+## Install Jenkins ##
 
 Let's install Jenkins on Kubernetes.
 
@@ -28,7 +34,7 @@ Run this command until the deployment changes the *Available* status from 0 to 1
 
 There will now be a Jenkins service running that you can access through a Kubernetes NodePort. List the available services with this:
 
-`minikube service list`{{execute}}
+`kubectl get services -n jenkins`{{execute}}
 
 Look for the Jenkins service in the namespace `jenkins`. The Jenkins portal can not be accessed by clicking on the `Jenkins Portal` tab located above the terminal window on the right or by clicking this link:
 
@@ -55,6 +61,6 @@ node {
   }
 }
 ```{{copy}}
-Click ^ on the copy icon to copy this pipeline text to your clipboard, then paste into the configuration for the new pipeline.
+Click ^ on the above copy icon to copy this pipeline text to your clipboard, then paste into the configuration for the new pipeline.
 
 This pipeline will take a few minutes to startup and run. Through the Kubernetes dashboard observe how a new pod is created in the jenkins namespace by the Jenkins Kubernetes plugin. To verify this pipeline success, inspect the build's console output and verify at the end the "Quay access:" line reports the Quay secret credentials.

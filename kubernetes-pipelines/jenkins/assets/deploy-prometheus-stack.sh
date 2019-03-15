@@ -13,4 +13,4 @@ kubectl patch service kube-prometheus-prometheus   --namespace=monitoring --type
 kubectl patch service kube-prometheus-alertmanager --namespace=monitoring --type='json' -p='[{"op": "replace", "path": "/spec/type", "value":"NodePort"}]'
 kubectl patch service kube-prometheus-grafana      --namespace=monitoring --type='json' -p='[{"op": "replace", "path": "/spec/type", "value":"NodePort"}]'
 
-minikube service list -n monitoring
+kubectl get services -n monitoring

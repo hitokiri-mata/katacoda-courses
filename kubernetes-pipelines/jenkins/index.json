@@ -7,19 +7,24 @@
   "details": {
     "steps": [
       {
-        "text": "step1.md"
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md"
       },
       {
-        "text": "step2.md"
+        "title": "Monitoring",
+        "text": "step2-monitoring.md"
       },
       {
-        "text": "step3.md"
+        "title": "Install Jenkins",
+        "text": "step3-install-jenkins.md"
       },
       {
-        "text": "step4.md"
+        "title": "Canary Deployment",
+        "text": "step4-canary-deploy.md"
       },
       {
-        "text": "step5.md"
+        "title": "Exercise Deployed Application",
+        "text": "step5-run-app.md"
       }
     ],
     "intro": {
@@ -40,11 +45,12 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Kubernetes Dashboard", "port": 30000},
       {"name": "Jenkins Portal", "port": 31111}
     ]
     },
   "backend": {
-    "imageid": "minikube"
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
   }
 }
