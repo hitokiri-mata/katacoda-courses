@@ -1,5 +1,4 @@
 {
-  "private": true,
   "title": "Nuclio",
   "description": "Discovering how Nuclio runs on Kubernetes.",
   "difficulty":	"Introduction",

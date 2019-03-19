@@ -4,9 +4,13 @@ There is a sample HelloWork function written in and can be inspected.
 
 `curl $HELLO_SRC`{{execute}}
 
-Deploy the function to Nuclio on Kubernetes.
+Deploy the function to Nuclio on Kubernetes. This will involve building the code from a base Go language container and pushing the to container with the Hello World Go code into the private registry.
 
 `nuctl deploy helloworld  -n nuclio -p $HELLO_SRC --registry $REGISTRY`{{execute}}
+
+Inspect the contents and see the new container has been deployed.
+
+`curl $REGISTRY/v2/_catalog`{{execute}}
 
 Execute the new function.
 

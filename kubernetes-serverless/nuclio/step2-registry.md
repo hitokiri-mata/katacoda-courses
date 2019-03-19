@@ -19,27 +19,3 @@ It will be a few moments before the registry deployment reports it's _Available_
 Once the registry is serving, inspect the contents of the empty registry.
 
 `curl $REGISTRY/v2/_catalog`{{execute}}
-
-## Create registry secret ##
-
-Create a secret that stores your registry credentials. Replace the <...> placeholders in the following commands with your username, password, and URL:
-
-Note: If you want to use Docker Hub, the URL is registry.hub.docker.com.
-
-Create the secret by running this and silently entering your password.
-
-`read -s mypassword`{{execute}}
-
-To confirm your password echo it.
-
-`echo $mypassword`{{execute}}
-
-kubectl create secret docker-registry nuclio-registry-credentials --namespace nuclio \
-    --docker-username $USER \
-    --docker-password $mypassword \
-    --docker-server <registry name> \
-    --docker-email ignored@nuclio.io
-
-It's good practice to remove these secrets.
-
-`unset mypassword`{{execute}}
