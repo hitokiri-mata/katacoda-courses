@@ -30,6 +30,6 @@ With these steps you have learned how:
 * Careful when upgrading SonarQube tag images or its plugins. It can be dependency hell with a complex matrix. If your container is failing it's due to mismatched versions.
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/sonarqube/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/sonarqube/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

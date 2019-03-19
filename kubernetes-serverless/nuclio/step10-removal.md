@@ -1,5 +1,3 @@
-# Removing Nuclio #
-
 All control plane components can be cleaned up with helm:
 
 `helm delete nuclio --purge`{{execute}}

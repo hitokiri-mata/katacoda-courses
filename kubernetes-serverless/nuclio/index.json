@@ -1,22 +1,38 @@
 {
   "private": true,
-  "title": "Nuclio (coming soon)",
+  "title": "Nuclio",
   "description": "Discovering how Nuclio runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"20 minutes",  
   "details": {
     "steps": [
       {
-        "text": "step1.md"
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md"
       },
       {
-        "text": "step2.md"
+        "title": "Install Container Registry",
+        "text": "step2-registry.md"
       },
       {
-        "text": "step3.md"
+        "title": "Install Nuclio",
+        "text": "step3-nuclio.md"
       },
       {
-        "text": "step10.md"
+        "title": "Install Nuclio CLI",
+        "text": "step4-nuctl.md"
+      },
+      {
+        "title": "Nuclio Portal",
+        "text": "step5-portal.md"
+      },
+      {
+        "title": "Deploy a Function",
+        "text": "step6-deploy.md"
+      },
+      {
+        "title": "Removal",
+        "text": "step10-removal.md"
       }
     ],
     "intro": {
@@ -41,10 +57,10 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nuclio Dashboard", "port": 32050}
+      {"name": "Nuclio Dashboard", "port": 31000}
     ]
     },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "kubernetes-cluster-running"
   }
 }

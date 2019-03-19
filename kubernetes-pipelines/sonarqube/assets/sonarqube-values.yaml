@@ -2,8 +2,10 @@ service:
   type: NodePort
 
 persistence:
-  enabled: true
   storageClass: manual
+  enabled: false
+  size: 9Gi
+
 
 #plugins:
 # install

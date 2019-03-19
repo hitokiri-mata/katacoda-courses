@@ -1,6 +1,6 @@
 # SonarQube on Kubernetes #
 
-![SonarQube](/javajon/courses/kubernetes-applications/sonarqube/assets/sonarqube.png "Code Analysis with SonarQube on Kubernetes.")
+![SonarQube](/javajon/courses/kubernetes-pipelines/sonarqube/assets/sonarqube.png "Code Analysis with SonarQube on Kubernetes.")
 
 > [SonarQube](https://www.sonarqube.com) is an open source platform developed by SonarSource for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities on 20+ programming languages. SonarQube offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. [-- Wikipedia](https://en.wikipedia.org/wiki/sonarqube)
 
