@@ -34,7 +34,7 @@ Once the Jenkins pipeline completes successfully, a very simple Python applicati
 
 The application is served on port 5000, via an exposed NodePort:
 
-`SERVICE=http://$(minikube ip):$(kubectl get svc hello-world -n monitoring-demo -o jsonpath="{.spec.ports[?(@.name=='web')].nodePort}")`{{execute}}
+`SERVICE=http://localhost:$(kubectl get svc hello-world -n monitoring-demo -o jsonpath="{.spec.ports[?(@.name=='web')].nodePort}")`{{execute}}
 
 `curl $SERVICE`{{execute}}
 
@@ -44,7 +44,7 @@ or
 
 and the metrics are served on 8000, via an exposed NodePort 1:
 
-`METRICS=http://$(minikube ip):$(kubectl get svc hello-world -n monitoring-demo -o jsonpath="{.spec.ports[?(@.name=='metrics')].nodePort}")`{{execute}}
+`METRICS=http://localhost:$(kubectl get svc hello-world -n monitoring-demo -o jsonpath="{.spec.ports[?(@.name=='metrics')].nodePort}")`{{execute}}
 
 `curl $METRICS`{{execute}}
 
@@ -54,4 +54,4 @@ Exercise the service at port 5000 a few times with curl or from a browser to gen
 
 This command will point your default browser to the observable metrics:
 
-`start http://$(minikube ip):$(kubectl get svc hello-world -n monitoring-demo -o jsonpath='{.spec.ports[1].node Port}{"\n"}')`{{execute}}
+`start http://localhost:$(kubectl get svc hello-world -n monitoring-demo -o jsonpath='{.spec.ports[1].node Port}{"\n"}')`{{execute}}
