@@ -6,24 +6,31 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
         "text": "step1-kubernetes.md"
       },
       {
+        "title": "Container Registry",
         "text": "step2-registry.md"
       },
       {
+        "title": "Application Source Code",
         "text": "step3-source-code.md"
       },
       {
+        "title": "Build Container Image",
         "text": "step4-build.md"
       },
       {
+        "title": "Helm Chart",
         "text": "step5-helm.md"
       },
       {
+        "title": "Deploy Application",
         "text": "step6-deploy.md"
       },
       {
+        "title": "Use Application",
         "text": "step7-use.md"
       }
     ],
@@ -54,6 +61,6 @@
     ]
     },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster-running"
   }
 }

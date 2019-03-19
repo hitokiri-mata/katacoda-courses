@@ -1,14 +1,17 @@
 #!/bin/sh
 
-# TODO: There is a known issue with Katacoda when this is applied. Waiting to move to new version of Minikube.
-# minikube config set bootstrapper kubeadm
 source <(kubectl completion bash)
 source <(helm completion bash)
 
-clear
-
-launch.sh
+# Special for this project, upgrade Docker as this example uses a multi-stage dockerfile and it will fail because local Docker instance is version 17.03.0-ce and multi-stage builds are a new feature requiring Docker 17.05 or higher
+# sudo apt-get update && sudo apt-get upgrade docker-engine
+# sudo service docker start
 
 # Helm Setup
 helm init --wait
 helm repo update
+
+# Setup dashboard via chart like minikube on 30000
+helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30000 --set=service.externalPort=80 --namespace kube-system
+
+{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

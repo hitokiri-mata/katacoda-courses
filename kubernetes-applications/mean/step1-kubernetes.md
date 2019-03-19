@@ -1,7 +1,11 @@
-# Kubernetes #
+As you see, your Kubernetes cluster is started. Verify it's ready for your use.
 
-This Katacoda instance provides a Kubernetes cluster plus a client Linux Bash terminal with the Kubectl and Helm command line interface (CLI) tools.
+`kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
 
-Ensure Kubernetes is running and ready to accept your upcoming declarations.
+Verify the Kubernetes cluster is empty.
 
-`kubectl cluster-info`{{execute}}
+`kubectl get deployments,pods,services`{{execute}}
+
+The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
+
+`helm version`{{execute}}

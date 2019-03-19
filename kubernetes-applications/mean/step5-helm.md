@@ -1,5 +1,3 @@
-# Helm Chart #
-
 View the Helm chart structure.
 
 `tree helm-chart`{{execute}}

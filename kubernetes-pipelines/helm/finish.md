@@ -23,6 +23,6 @@ With these steps you have learned:
 - [CloudAcademy: Deploying Applications with Helm (video)](https://youtu.be/uXaNh4Mrhdc)
 
 ------
-<img align="left" src="/javajon/courses/kubernetes-applications/helm/assets/nfjs.png">
+<img align="left" src="/javajon/courses/kubernetes-pipelines/helm/assets/nfjs.png">
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

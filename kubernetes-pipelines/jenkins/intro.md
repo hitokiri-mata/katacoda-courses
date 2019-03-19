@@ -1,6 +1,6 @@
 # Jenkins on Kubernetes #
 
-![Jenkins](/javajon/courses/kubernetes-applications/jenkins/assets/jenkins.png "Web server, reverse/mail proxy server")
+![Jenkins](/javajon/courses/kubernetes-pipelines/jenkins/assets/jenkins.png "Web server, reverse/mail proxy server")
 
 ## Canary Releases with Jenkins on Kubernetes ##
 

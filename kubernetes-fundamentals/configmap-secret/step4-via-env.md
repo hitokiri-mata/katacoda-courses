@@ -8,4 +8,8 @@ Create the Pod.
 
 `kubectl create -f consume-via-env.yaml`{{execute}}
 
-Using the Dashboard, inspect the Pod log and information page to see mapped data.
+Once the pod starts, its log can be viewed. The container in the Pod has written its environments variables to the console, which is now visible in the Pod's log.
+
+`kubectl logs consume-via-cli`{{execute}}
+
+You can also view the Pod's log from the the Dashboard.

@@ -8,6 +8,6 @@ The RabbitMQ containers start fairly quickly so the Pod status may be already ru
 
 Once complete, the 3 Pods appear and will move to the _running_ state in a few moments.
 
-```Clear```{{execute interrupt}} to ctrl-c and clear the shell.
+```clear```{{execute interrupt}} to ctrl-c and clear the shell.
 
 As an alternative to the kubectl CLI you can also observe the deployment in the Kubernetes Dashboard by clicking on the tab above this command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

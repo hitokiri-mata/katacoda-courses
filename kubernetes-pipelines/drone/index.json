@@ -1,7 +1,7 @@
 {
-  "pathwayTitle": "SonarQube",
-  "title": "SonarQube",
-  "description": "Code Analysis with SonarQube on Kubernetes.",
+  "pathwayTitle": "Drone",
+  "title": "Drone",
+  "description": "A CI/CD pipeline for building and deploying containers.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {

@@ -1,14 +1,6 @@
 # Conclusion #
 
-You now understand ...
-
-## Lessons Learned ##
-
-With these steps you have learned:
-
-- how TODO,
-- how TODO,
-- how TODO.
+You now understand fundamentally how Jenkins can run on Kubernetes. Jenkins runs the pipelines while its leverages Kubernetes to schedule the agents and to keep the engine running.
 
 Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
 
@@ -48,6 +40,6 @@ https://whatis.techtarget.com/definition/canary-canary-testing)
 - [Jenkins Slave with Docker client and kubectl CLI](https://github.com/radu-matei/jenkins-slave-docker)
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/jenkins/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/jenkins/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).

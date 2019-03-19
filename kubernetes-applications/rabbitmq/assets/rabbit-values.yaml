@@ -7,9 +7,13 @@ rbacEnabled: false
 
 service:
   type: NodePort 
-  nodePort: 31000
-  managerPort: 35672
+
+# SPECIAL NOTE to the stable/rabbitmq chart authors: The chart currently has a 
+# slight problem in svc.yaml where the service.nodePort is being applied to the 
+# wrong port. Instead of applying the NodePort to named _amqp_ port, it should be 
+# applied to the port name _stats_ (the manager ui port).
+#  nodePort: 31000
 
 rabbitmq:
-  username: admin
-  password: admin
+  username: guest
+  password: guest
