@@ -15,7 +15,7 @@
       },
       {
         "course_id": "knative",
-        "title": "Knative",
+        "title": "Knative (draft)",
         "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads."
       },
       {
@@ -30,7 +30,7 @@
       },
       {
         "course_id": "nuclio",
-        "title": "Nuclio (draft)",
+        "title": "Nuclio",
         "description": "Serverless Functions for Real-Time and Data-Driven Applications"
       }
     ]
