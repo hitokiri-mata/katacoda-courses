@@ -6,7 +6,7 @@ The RabbitMQ containers start fairly quickly so the Pod status may be already ru
 
 `watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
 
-Once complete, the 3 Pods appear and will move to the _running_ state in a few moments.
+In a few moments the 3 Pods labeled `pod/my-rabbit-rabbitmq-[1|2|3]` will appear and move to the _Running_ status. Once complete, discontinue the watch.
 
 ```clear```{{execute interrupt}} to ctrl-c and clear the shell.
 
