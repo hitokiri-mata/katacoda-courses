@@ -1,4 +1,4 @@
-OpenFaaS requires a container registry during the build, push and deploy phases. It defaults to using Docker Hub, but there is no need to shuttle private images over the internet. Instead we keep all this pushing and pulling in a local registry.
+Nuclio requires a container registry during the build, push and deploy phases. It defaults to using Docker Hub, but there is no need to shuttle private images over the internet. Instead we keep all this pushing and pulling in a local registry.
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
@@ -20,21 +20,26 @@ Once the registry is serving, inspect the contents of the empty registry.
 
 `curl $REGISTRY/v2/_catalog`{{execute}}
 
-## Create a registry secret ##
+## Create registry secret ##
 
-Nuclio functions are images that need to be pushed and pulled to/from the registry. Create a secret that stores your registry credentials. Replace the <...> placeholders in the following commands with your username, password, and URL:
+Create a secret that stores your registry credentials. Replace the <...> placeholders in the following commands with your username, password, and URL:
 
 Note: If you want to use Docker Hub, the URL is registry.hub.docker.com.
 
-Create the secret:
+Create the secret by running this and silently entering your password.
 
-read -s mypassword
-<enter your password>
+`read -s mypassword`{{execute}}
+
+To confirm your password echo it.
+
+`echo $mypassword`{{execute}}
 
 kubectl create secret docker-registry nuclio-registry-credentials --namespace nuclio \
-    --docker-username <username> \
+    --docker-username $USER \
     --docker-password $mypassword \
     --docker-server <registry name> \
     --docker-email ignored@nuclio.io
 
-unset mypassword
+It's good practice to remove these secrets.
+
+`unset mypassword`{{execute}}

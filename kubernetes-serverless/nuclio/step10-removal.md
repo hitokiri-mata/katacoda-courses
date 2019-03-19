@@ -1,4 +1,4 @@
-All control plane components can be cleaned up with helm:
+All control plane components can be cleaned up with Helm:
 
 `helm delete nuclio --purge`{{execute}}
 

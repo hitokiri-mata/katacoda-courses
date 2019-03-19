@@ -48,7 +48,7 @@ Create the parallel consumer Job.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
 
-Watch activity of pods, queue and kubernetes dashboard
+Watch activity of pods, queue and Kubernetes dashboard
 
 `kubectl get pods`{{execute}}
 

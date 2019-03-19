@@ -1,6 +1,6 @@
 # Nuclio on Kubernetes #
 
-(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  September 23, 2018)
+(This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com  March 19, 2018)
 
 ![Nuclio](/javajon/courses/kubernetes-serverless/nuclio/assets/nuclio.png "Nuclio serverless framework")
 
