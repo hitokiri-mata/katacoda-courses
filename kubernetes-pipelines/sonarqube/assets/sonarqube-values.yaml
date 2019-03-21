@@ -7,6 +7,10 @@ persistence:
   size: 9Gi
   accessMode: ReadWriteOnce
 
+postgresql:
+  persistence:
+    storageClass: manual
+
 #plugins:
 # install
 # TODO - These plugins are causing SonarQube failures
