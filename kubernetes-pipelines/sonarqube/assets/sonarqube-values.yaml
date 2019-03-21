@@ -4,11 +4,12 @@ service:
 persistence:
   storageClass: manual
   enabled: true
-  size: 9Gi
+  size: 10Gi
   accessMode: ReadWriteOnce
 
 postgresql:
   persistence:
+    size: 10Gi
     storageClass: manual
 
 #plugins:
