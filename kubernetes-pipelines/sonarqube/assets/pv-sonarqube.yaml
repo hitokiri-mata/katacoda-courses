@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: postgres-volume
+  name: sonarqube-volume
   labels:
     type: local
 spec:

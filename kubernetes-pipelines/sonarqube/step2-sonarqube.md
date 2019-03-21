@@ -2,8 +2,9 @@
 
 Jenkins will be making a PersistentVolumeClaim so a PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created 
 
-`mkdir /mnt/data/postgres && kubectl create -f pv-postgres.yaml`{{execute}}
-`mkdir /mnt/data/sonarqube && kubectl create -f pv-sonarqube.yaml`{{execute}}
+`mkdir -p /mnt/data/postgres && kubectl create -f pv-postgres.yaml`{{execute}}
+
+`mkdir -p /mnt/data/sonarqube && kubectl create -f pv-sonarqube.yaml`{{execute}}
 
 SonarQube relies on a Postgres database for its storage. First, apply a StorageClass object as a dependency before Postgres starts.
 
