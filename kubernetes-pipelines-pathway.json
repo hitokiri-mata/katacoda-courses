@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes: Pipelines",
     "icon": "fa-kubernetes",
-    "description": "Discover different tools and techniques for continuous delivery on Kubernetes.<p>For more tools, reference the growing solutions at the Continuous Delivery Foundation (CDF, https://cd.foundation)",
+    "description": "Discover different tools and techniques for continuous delivery on Kubernetes.",
     "courses": [
       {
         "course_id": "helm",

@@ -3,9 +3,9 @@ service:
 
 persistence:
   storageClass: manual
-  enabled: false
+  enabled: true
   size: 9Gi
-
+  accessMode: ReadWriteOnce
 
 #plugins:
 # install
