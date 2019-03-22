@@ -1,4 +1,5 @@
 {
+  "private": true,
   "title": "Mean Application",
   "description": "Deploy A MEAN Application On Kubernetes With Helm.",
   "difficulty":	"Intermediate",
