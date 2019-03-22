@@ -20,5 +20,6 @@ helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort
 
 # As a workaround for multi-stage dockerfile, upgrade Docker. This will take a few minutes.
 sudo apt-get update
-#sudo apt-get upgrade docker-engine -y
-sudo apt-get install -f -y docker-ce
+sudo apt-get remove docker-engine -y
+sudo apt-get install docker-engine -y
+
