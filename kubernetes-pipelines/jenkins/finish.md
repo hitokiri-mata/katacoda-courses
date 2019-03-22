@@ -1,8 +1,6 @@
 # Conclusion #
 
-You now understand fundamentally how Jenkins can run on Kubernetes. Jenkins runs the pipelines while its leverages Kubernetes to schedule the agents and to keep the engine running.
-
-Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
+You now understand fundamentally how Jenkins can run on Kubernetes. Jenkins runs the pipelines while its leverages Kubernetes to schedule the agents and to keep the engine running. Hopefully, you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
 
 ## Technology stack ##
 

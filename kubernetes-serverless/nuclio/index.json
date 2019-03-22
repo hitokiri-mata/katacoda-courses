@@ -44,8 +44,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"},
-        {"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}
+        {"file": "*", "target": "/root"}
       ]
     }
   },

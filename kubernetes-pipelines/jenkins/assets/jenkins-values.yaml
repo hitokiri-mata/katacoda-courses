@@ -3,7 +3,7 @@
 # helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yam
 
 Master:
-  Image: "jenkinsci/jenkins"
+  Image: "jenkins/jenkins"
   ImageTag: "2.164.1-alpine"
   # No password for demonstration purposes
   UseSecurity: false
