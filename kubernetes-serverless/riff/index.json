@@ -1,4 +1,5 @@
 {
+  "private": true,
   "title": "Riff",
   "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio.",
   "difficulty":	"Introduction",
@@ -11,11 +12,11 @@
       },
       {
         "title": "Install Riff",
-        "text": "step2-install.md"
+        "text": "step2-init.md"
       },
       {
         "title": "Initialize Riff",
-        "text": "step3-init.md"
+        "text": "step3-install.md"
       },
       {
         "title": "Create Function",

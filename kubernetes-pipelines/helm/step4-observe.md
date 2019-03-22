@@ -16,6 +16,6 @@ Redis needs permissions to write to these mount points.
 
 Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
 
-```clear```{{execute interrupt}} to ctrl-c and clear the shell.
+```clear```{{execute interrupt}} to ctrl-c from the watch and clear the shell.
 
 You have successfully installed a [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes.
