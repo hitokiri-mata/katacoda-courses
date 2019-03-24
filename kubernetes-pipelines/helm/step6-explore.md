@@ -22,4 +22,4 @@ The list is long.
 
 Each chart is backed with a [GitHub repo](https://github.com/helm/charts ), a readme and a team of people that are subject matter experience in forming these opinionated charts. As an example take a look as the [Minio chart source](https://github.com/helm/charts/tree/master/stable/minio) and scan the README to learn how this chart can be installed and configured.
 
-There is also the public [Helm Hub](https://hub.helm.sh/), with over 500 charts.
+There is also the public [Helm Hub](https://hub.helm.sh/), with over 550 charts.

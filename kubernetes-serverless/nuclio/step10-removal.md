@@ -1,3 +1,5 @@
+There really is no need to cleanup with Katacoda but if your were running this tutorial with another type of Kubernetes cluster it would be good to clean up this work.
+
 All control plane components can be cleaned up with Helm:
 
 `helm delete nuclio --purge`{{execute}}
