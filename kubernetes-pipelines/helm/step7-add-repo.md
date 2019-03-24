@@ -28,7 +28,7 @@ There are also dozens of public incubator charts. Add the `incubator` repo.
 
 `helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}} 
 
-Explore the incubating charts. Last time I checked there were 66 incubating charts, how many are there now?
+Explore the incubating charts. Last time we checked there were 66 incubating charts, many of them deprecated as they progressed to stable. How many are there now?
 
 `helm search | grep -c 'incubator/'`{{execute}}
 
