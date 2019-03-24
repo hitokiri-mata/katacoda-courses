@@ -16,7 +16,7 @@
       },
       {
         "title": "Container Registry",
-        "text": "step3-prepare.md",
+        "text": "step3-registry.md",
         "code": "clear.sh"
       },
       {
