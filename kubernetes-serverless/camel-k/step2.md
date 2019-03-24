@@ -1,5 +1,3 @@
-Deploy Dashboard
-
 Kubernetes has a web-based dashboard UI giving visibility into the Kubernetes cluster.
 
 Deploy the dashboard yaml with the command `kubectl apply -f dashboard.yaml`{{execute}}

@@ -1,5 +1,3 @@
-# Registry Setup #
-
 ## Establish Private Registry on Kubernetes ##
 
 `helm install --name registry stable/docker-registry --set service.type=NodePort`{{execute}}

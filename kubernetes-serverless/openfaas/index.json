@@ -6,34 +6,58 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
         "text": "step1-k8s.md"
       },
       {
-        "text": "step2-prepare.md"
+        "title": "Preparations",
+        "text": "step2-prepare.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step3-install.md"
+        "title": "Container Registry",
+        "text": "step3-prepare.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step4-cli.md"
+        "title": "Install OpenFaaS",
+        "text": "step4-install.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step5-portal.md"
+        "title": "OpenFaaS CLI",
+        "text": "step5-cli.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step6-cli.md"
+        "title": "OpenFaaS Portal",
+        "text": "step6-portal.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step7-python.md"
+        "title": "CLI Commands",
+        "text": "step7-cli.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step8-observe.md"
+        "title": "First Python Function",
+        "text": "step8-python.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step9-scaling.md"
+        "title": "Observability",
+        "text": "step9-observe.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step10-cleanup.md"
+        "title": "Scaling",
+        "text": "step10-scaling.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Removing OpenFaaS",
+        "text": "step11-cleanup.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {

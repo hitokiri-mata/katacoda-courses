@@ -1,5 +1,3 @@
-# Scaling #
-
 Deploy the _figlet_ function.
 
 `faas-cli store deploy figlet --label "com.openfaas.scale.zero=true"`{{execute}}

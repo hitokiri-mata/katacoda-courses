@@ -7,24 +7,31 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
         "text": "step1.md"
       },
       {
+        "title": "Deploy Dashboard",
         "text": "step2.md"
       },
       {
+        "title": "Container Registry",
         "text": "step3.md"
       },
       {
+        "title": "Install Camel K",
         "text": "step4.md"
       },
       {
+        "title": "Hello World from Camel K",
         "text": "step5.md"
       },
       {
+        "title": "TODO",
         "text": "step6.md"
       },
       {
+        "title": "Removing Camel K, Knative, Istio and your Functions",
         "text": "step10.md"
       }
     ],

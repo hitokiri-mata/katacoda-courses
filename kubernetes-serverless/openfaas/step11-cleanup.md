@@ -1,5 +1,3 @@
-# Removing OpenFaaS #
-
 There really is no need to cleanup with Katacoda but if your were running this tutorial with another type of Kubernetes cluster it would be good to clean up this work.
 
 Since OpenFaaS was installed with the Helm package manager, it can be deleted by referencing the installation name.

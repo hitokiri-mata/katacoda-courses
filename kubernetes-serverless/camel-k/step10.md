@@ -1,4 +1,6 @@
-# Removing Camel K, Knative, Istio and your Functions #
+There really is no need to cleanup with Katacoda but if your were running this tutorial with another type of Kubernetes cluster it would be good to clean up this work.
+
+Since Camel K was installed with the Helm package manager, it can be deleted by referencing the installation name.
 
 All control plane components can be cleaned up with:
 

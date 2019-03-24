@@ -1,5 +1,3 @@
-# Observability #
-
 A good system will have features in place to observe its status, health and activity. Prometheus is a de facto solution for monitoring the metrics of a Kubernetes clusters and its applications. Prometheus is a time series database and with it, various metrics of the functions can be stored over time and observed. The OpenFaaS Helm chart includes an installation of Prometheus. OpenFaaS also is configured to expose to Prometheus key metrics of the functions and its management.
 
 ## Prometheus ##

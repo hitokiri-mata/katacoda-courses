@@ -1,5 +1,3 @@
-# OpenFaaS CLI #
-
 A common way to interact with OpenFaaS is from the command line. Install the OpenFaaS command-line interface (CLI) tool.
 
 `curl -sSL https://cli.openfaas.com | sh`{{execute}}

@@ -1,5 +1,3 @@
-# OpenFaaS Portal #
-
 To access the portal use the same user name (`admin`) and password that was applied in the preparation step for the secret creation. Reveal the password.
 
 `echo -e "The OpenFaaS portal will need these credentials when prompted:\nuser: admin\npassword: $PASSWORD"`{{execute}}

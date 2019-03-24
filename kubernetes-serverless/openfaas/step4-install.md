@@ -1,5 +1,3 @@
-# Install OpenFaaS #
-
 OpenFaaS can be installed using Helm. Helm is a package manager for Kubernetes that was previously installed and ready for your instructions.
 
 A common Helm _chart_ is predefined for installing OpenFaaS. Popular incubating and stable charts appear in the [curated Helm chart repository](https://github.com/kubernetes/charts) and there are plans to move OpenFaaS there. For now, a `repo add` command will allow Helm to find the OpenFaaS chart.
