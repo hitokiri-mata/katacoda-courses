@@ -12,8 +12,8 @@ The dryRun property is set to false so we can explore scaling near the end of th
 
 Watch the 5 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 once each deployment has initialized.
 
-`kubectl get deployments --namespace=openfaas -l "release=openfaas, app=openfaas" -w`{{execute}}
+`watch kubectl get deployments --namespace=openfaas`{{execute}}
 
-The installation is complete once all the Deployments have reached an _Available_ state of 1, press Ctrl-C to break out of the watch.
+The installation is complete once all the Deployments have reached an _Available_ state of 1. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 These instructions have been adopted from the [openfaas-operator](https://github.com/openfaas-incubator/openfaas-operator).

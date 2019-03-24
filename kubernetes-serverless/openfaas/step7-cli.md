@@ -14,7 +14,7 @@ One of the functions is _Markdown_. Here are two ways to invoke the function.
 
 `echo Hi | faas-cli invoke markdown`{{execute}}
 
-If this command does not come back readily, then it's still initializing and probably stuck. If stuck, Ctrl-C and try again.
+If this command does not come back readily, then it's still initializing and probably stuck. If stuck, ctrl-c and try again. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 `uname -a | faas-cli invoke markdown`{{execute}}
 

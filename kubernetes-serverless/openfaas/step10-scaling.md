@@ -14,7 +14,9 @@ Repeat this function in a loop.
 
 Navigate to the Grafana dashboard and notice the rising activity. Go to the OpenFaaS portal and notice the rising of the replicas with all the invocation counts. Go to the Kubernetes dashboard and in the openfaas-fn namespaces notice all the pods that are scaled up to handle the load.
 
-Ctrl-C to break out of the loop and notice the down scaling as the activity calms down. The nodes will scale to one and after another minute of no activity the single hot pod will be removed to a resting scale of zero. When all is quiet, no resources are consumed.
+Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+
+Notice the down scaling as the activity calms down. The nodes will scale to one and after another minute of no activity the single hot pod will be removed to a resting scale of zero. When all is quiet, no resources are consumed.
 
 This exercise is adopted from [lab 9 found here](https://github.com/openfaas/workshop/blob/master/lab9.md).
 

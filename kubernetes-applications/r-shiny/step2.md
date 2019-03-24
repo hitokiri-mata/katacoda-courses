@@ -8,9 +8,7 @@ The Shiny server takes a few minutes to start. Watch the Pod _status_ change fro
 
 `watch kubectl get deployments,pods,services`{{execute}}.
 
-Once complete, the Pod will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state.
-
-```clear```{{execute interrupt}} to ctrl-c and clear the shell.
+Once complete, the Pod will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 Exercise the application two ways. If your running Minikube outside of Kubernetes this command would launch the Shiny application in your browser.
 

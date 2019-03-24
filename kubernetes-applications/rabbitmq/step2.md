@@ -6,9 +6,7 @@ The RabbitMQ containers start fairly quickly so the Pod status may be already ru
 
 `watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
 
-In a few moments the 3 Pods labeled `pod/my-rabbit-rabbitmq-[1|2|3]` will appear and move to the _Running_ status. Once all are running, discontinue the watch.
-
-```clear```{{execute interrupt}} to ctrl-c from the watch and clear the shell.
+In a few moments the 3 Pods labeled `pod/my-rabbit-rabbitmq-[1|2|3]` will appear and move to the _Running_ status. Once all are running, discontinue the watch. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 As an alternative to the kubectl CLI you can also observe the deployment in the Kubernetes Dashboard. Because the dashboard can be accessed publicly, it is protected and requires login credentials. Because you have administration access to this cluster copy the token from this secret.
 
