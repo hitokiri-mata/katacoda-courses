@@ -6,9 +6,9 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 ## Install ElasticSearch ##
 
-Deploy the public Helm chart for ElasticSearch.
+Deploy the public Helm chart for ElasticSearch. Many of the default parameters are downsized to fit in this KataCoda cluster. 
 
-`helm install stable/elasticsearch --name=elasticsearch --namespace=logs`{{execute}}
+`helm install stable/elasticsearch --name=elasticsearch --namespace=logs --set client.replicas=1 --set data.replicas=1 --set data.heapSize=300m --set data.persistence.size=300Gi`{{execute}}
 
 It will start in a few moments and you can observe its progress.
 
