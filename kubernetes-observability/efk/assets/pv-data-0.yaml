@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: efk-volume
+  name: efk-data-volume
   labels:
     type: local
 spec:

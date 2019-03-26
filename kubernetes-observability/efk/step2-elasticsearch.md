@@ -4,9 +4,9 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 `mkdir -p /mnt/data/efk && kubectl create -f pv.yaml`{{execute}}
 
-`mkdir -p /mnt/data/efk-data && kubectl create -f pv-master-0.yaml`{{execute}}
+`mkdir -p /mnt/data/efk-master-0 && kubectl create -f pv-master-0.yaml`{{execute}}
 
-`mkdir -p /mnt/data/efk-data && kubectl create -f pv-data-0.yaml`{{execute}}
+`mkdir -p /mnt/data/efk-data-0 && kubectl create -f pv-data-0.yaml`{{execute}}
 
 ## Install ElasticSearch ##
 
