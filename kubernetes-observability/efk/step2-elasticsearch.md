@@ -4,6 +4,10 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 `mkdir -p /mnt/data/efk && kubectl create -f pv.yaml`{{execute}}
 
+`mkdir -p /mnt/data/efk-data && kubectl create -f pv-master-0.yaml`{{execute}}
+
+`mkdir -p /mnt/data/efk-data && kubectl create -f pv-data-0.yaml`{{execute}}
+
 ## Install ElasticSearch ##
 
 Deploy the public Helm chart for ElasticSearch. Many of the default parameters are downsized to fit in this KataCoda cluster. 

@@ -1,5 +1,7 @@
-This EFK stack solution uses the YAML files defined for the Minikube Addon called EFK. Verify the EFK components stack is running. It may take about 2 minutes before all the pods report a _running_ status.
+## Access Kibana ##
 
-`kubectl get services,pods -n kube-system`{{execute}}
+Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
 
-Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+[View Kibana](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/)
+
+There is also a tab above the command line area labeled `Kibana` that takes you to the same Kibana portal.

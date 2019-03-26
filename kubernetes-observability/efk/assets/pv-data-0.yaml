@@ -5,10 +5,11 @@ metadata:
   labels:
     type: local
 spec:
+  storageClassName: data-elasticsearch-data-0
   capacity:
-    storage: 10Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/mnt/data/efk"
+    path: "/mnt/data/efk-data"
   

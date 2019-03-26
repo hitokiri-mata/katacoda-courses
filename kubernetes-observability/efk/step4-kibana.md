@@ -9,5 +9,3 @@ Kibana will start in a few moments and you can observe its progress.
 `watch kubectl get deployments,pods,services --namespace=logs`{{execute}}
 
 Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
-
-You have successfully installed a [EFK solution](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes.
