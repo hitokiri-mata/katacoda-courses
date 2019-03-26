@@ -4,7 +4,7 @@ This scenario takes you through the basics of deploying a logging solution on Ku
 
 Containers should only produce logs as event streams and leave the aggregation and routing to other services on Kubernetes. This pattern is emphasized as factor [11 Logs](https://12factor.net/logs) of the [The Twelve Factors App methodology](https://12factor.net/).
 
-Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. Sometimes stack use Fluent bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size. Other solutions sometimes use Logstash (ELK) instead of Fluentd.
+Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. Sometimes stack use Fluent Bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size. Other solutions sometimes use Logstash (ELK) instead of Fluentd.
 
 This EFK stack solution uses the YAML files defined for the Minikube Addon called EFK.
 
@@ -12,11 +12,11 @@ This EFK stack solution uses the YAML files defined for the Minikube Addon calle
 
 Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
-## Forwarding: Fluentd ##
+## Forwarding: Fluent Bit ##
 
 <img align="right" src="/javajon/courses/kubernetes-observability/logging/assets/docker_flow_flb_elastic.png">
 
-[Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluentd runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
+[Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluent Bit runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
 
 This example could use a lighter variation of Fluentd called [Fluent Bit](https://fluentbit.io/). Perhaps EfK, with a lower case 'f' is apropos. [Alen Komljen](https://akomljen.com/) covers the reason why in his [blog](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
 

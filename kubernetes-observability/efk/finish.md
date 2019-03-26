@@ -6,7 +6,7 @@ TODO....
 
 With these steps you have learned:
 
-- How to deploy ElasticSearch, Fluentd, and Kibana
+- How to deploy ElasticSearch, Fluent Bit, and Kibana
 - How to generate log events and query then in Kibana
 
 ------
