@@ -1,41 +1,39 @@
 {
+  "private": "true",
   "title": "Logging with EFK",
   "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
-  "difficulty":	"Intermediate",
+  "difficulty":	"Beginner",
   "time":	"20 minutes",
   "details": {
     "steps": [
       { 
-        "title": "Start Cluster",
-        "text": "step1-start.md"
-      },
-      { 
-        "title": "Start Dashboard",
-        "text": "step2-dashboard.md"
-      },
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md"
+      }
       { 
         "title": "Deploy ElasticSearch",
-        "text": "step3-elasticsearch.md"
+        "text": "step2-elasticsearch.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Fluent Bit",
-        "text": "step4-fluent.md"
+        "text": "step3-fluent.md"
       },
       {
         "title": "Deploy Kibana",
-        "text": "step5-kibana.md"
+        "text": "step4-kibana.md"
       },
       {
         "title": "Verify EFK Stack",
-        "text": "step6-verify.md"
+        "text": "step5-verify.md"
       },
       {
         "title": "Generate Log Events",
-        "text": "step7-generate.md"
+        "text": "step6-generate.md"
       },
       {
         "title": "View Log Events",
-        "text": "step8-view.md"
+        "text": "step7-view.md"
       }
     ],
     "intro": {
@@ -58,11 +56,10 @@
 		"icon": "fa-kubernetes",
 		"dashboards": [
 		  {"name": "Kubernetes Dashboard", "port": 30000},
-		  {"name": "Kibana", "port": 30003}
+		  {"name": "Kibana", "port": 31000}
 		]
   },
   "backend": {
-    "port": 8080,
     "imageid": "kubernetes-cluster-running"
   }
 }
