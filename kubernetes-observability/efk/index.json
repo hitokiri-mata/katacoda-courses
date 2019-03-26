@@ -9,7 +9,7 @@
       { 
         "title": "Your Kubernetes Cluster",
         "text": "step1-k8s.md"
-      }
+      },
       { 
         "title": "Deploy ElasticSearch",
         "text": "step2-elasticsearch.md",
@@ -46,7 +46,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"}      ]
+        {"file": "*", "target": "/root"}      
+      ]
     }
   },
   "environment": {
