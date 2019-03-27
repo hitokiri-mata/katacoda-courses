@@ -16,15 +16,18 @@
       },
       {
         "title": "Deploy Fluent Bit",
-        "text": "step3-fluent.md"
+        "text": "step3-fluent.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Kibana",
-        "text": "step4-kibana.md"
+        "text": "step4-kibana.md",
+        "code": "clear.sh"
       },
       {
         "title": "Verify EFK Stack",
-        "text": "step5-verify.md"
+        "text": "step5-verify.md",
+        "code": "clear.sh"
       },
       {
         "title": "Generate Log Events",

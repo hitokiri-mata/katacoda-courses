@@ -2,9 +2,9 @@
 
 ElasticSearch will be making a PersistentVolumeClaim for its persistence. A PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created.
 
-`mkdir -p /mnt/data/efk-master-0 && kubectl create -f pv-master.yaml`{{execute}}
+`mkdir -p /mnt/data/efk-master && kubectl create -f pv-master.yaml`{{execute}}
 
-`mkdir -p /mnt/data/efk-data-0 && kubectl create -f pv-data.yaml`{{execute}}
+`mkdir -p /mnt/data/efk-data && kubectl create -f pv-data.yaml`{{execute}}
 
 ## Install ElasticSearch ##
 
