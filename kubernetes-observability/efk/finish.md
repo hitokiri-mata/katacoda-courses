@@ -18,7 +18,6 @@ With these steps you have learned:
 - [Fluent](https://www.fluentd.org/)
 - [Fluent Bit](https://fluentbit.io/)
 - [Kibana](https://www.elastic.co/products/kibana)
-- [Logging in Kubernetes using Elasticsearch: The easy way](https://prabhatsharma.in/blog/logging-in-kubernetes-using-elasticsearch-the-easy-way/)
 - [Getting started with EFK (Fluent Bit, Elasticsearch and Kibana) stack in Kubernetes, John Bryan Sazon](https://medium.com/@jbsazon/aggregated-kubernetes-container-logs-with-fluent-bit-elasticsearch-and-kibana-5a9708c5dd9a)"
 - [Installing ElasticSearch using Helm Charts](https://vocon-it.com/2019/03/04/kubernetes-9-installing-elasticsearch-using-helm-charts/)
 
