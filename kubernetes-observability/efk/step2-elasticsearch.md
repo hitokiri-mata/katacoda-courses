@@ -2,8 +2,6 @@
 
 ElasticSearch will be making a PersistentVolumeClaim for its persistence. A PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created.
 
-`mkdir -p /mnt/data/efk && kubectl create -f pv.yaml`{{execute}}
-
 `mkdir -p /mnt/data/efk-master-0 && kubectl create -f pv-master-0.yaml`{{execute}}
 
 `mkdir -p /mnt/data/efk-data-0 && kubectl create -f pv-data-0.yaml`{{execute}}
@@ -12,7 +10,14 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 Deploy the public Helm chart for ElasticSearch. Many of the default parameters are downsized to fit in this KataCoda cluster. 
 
-`helm install stable/elasticsearch --name=elasticsearch --namespace=logs --set client.replicas=1 --set data.replicas=1 --set data.heapSize=300m --set data.persistence.size=300Gi`{{execute}}
+`helm install stable/elasticsearch --name=elasticsearch --namespace=logs \
+--set client.replicas=1 \
+--set data.replicas=1 \
+--set data.heapSize=300m \
+--set master.persistence.storageClass=elasticsearch-data-0 \
+--set master.persistence.size=5Gi \
+--set data.persistence.storageClass=elasticsearch-data-0 \
+--set data.persistence.size=5Gi`{{execute}}
 
 It will start in a few moments and you can observe its progress.
 
