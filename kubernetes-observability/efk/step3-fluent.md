@@ -8,4 +8,4 @@ Fluent Bit will start in a few moments and you can observe its progress.
 
 `watch kubectl get deployments,pods,services --namespace=logs`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+Once complete, the _fluent-bit_ Pod will move to the _running_ state in a few seconds. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
