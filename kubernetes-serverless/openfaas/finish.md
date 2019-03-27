@@ -26,7 +26,7 @@ With these steps you have learned:
 - [Video: Scaling in action with Prometheus](https://www.youtube.com/watch?v=0DbrLsUvaso)
 
 > \* [Faas-netes chart versus OpenFaaS Operator chart](https://github.com/openfaas/faas-netes/tree/master/chart/openfaas#faas-netes-vs-openfaas-operator)
-> The faas-netes controller is the most tested, stable and supported version of the OpenFaaS integration with Kubernetes. In contrast the OpenFaaS Operator (used in this example) is based upon the codebase and features from faas-netes, but offers a tighter integration with Kubernetes through CustomResourceDefinitions. This means you can type in `kubectl get functions` [and use the `Kind: function` as a Kubernetes resource definition].
+> The faas-netes controller is the most tested, stable and supported version of the OpenFaaS integration with Kubernetes. In contrast the OpenFaaS Operator (used in this scenario) is based upon the codebase and features from faas-netes, but offers a tighter integration with Kubernetes through [CustomResourceDefinitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRD). This means you can type in `kubectl get functions` to list the CRD that make this `Kind: function` possible.
 
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-serverless/openfaas/assets/nfjs.png "No Fluff Just Stuff")

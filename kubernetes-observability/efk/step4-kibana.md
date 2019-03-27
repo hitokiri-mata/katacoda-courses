@@ -9,3 +9,5 @@ Kibana will start in a few moments and you can observe its progress.
 `watch kubectl get deployments,pods,services --namespace=logs`{{execute}}
 
 Once complete, the _kibana_ pod will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+
+You know have a full EFK stack running.  Granted its smaller and not configure to he highly available or with access protection, but these 5 pods comprise is a functional solution to get started.
