@@ -1,4 +1,4 @@
-Run this container to start generating continuously random logging events.
+Run this container to start generating random log events.
 
 `kubectl run random-logger --image=chentex/random-logger`{{execute}}
 
@@ -18,3 +18,5 @@ The log events will look something like this.
 Inspect the actual log events now being generated with this log command.
 
 `kubectl logs deployment/random-logger`{{execute}}
+
+Don't be alarmed by the messages, these are just samples.

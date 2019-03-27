@@ -8,7 +8,7 @@ The last place the source of truth for a configuration would be inside the appli
 
 > There should be exactly one codebase for a deployed service with the codebase being used for many deployments.
 
-Since your deployed containers have no context, that information needs to be supplied when the containers start. Context information can typically include names of other services, database locations, service URLs, running modes, feature enable/disable requests. Sensitive context information can include passwords, account ids, security tokens, and the like.
+Since your deployed containers have no context, that information needs to be supplied when the containers start. Context information can typically include names of other services, database locations, service URLs, running modes, feature enable/disable requests. Sensitive context information can include passwords, account IDs, security tokens, and the like.
 
 This is where Kubernetes ConfigMaps and Secrets can help by supplying your deployment containers with the contextual and secretive information they require.
 
