@@ -12,7 +12,7 @@ Elasticsearch is a search engine based on the Lucene library. It provides a dist
 
 ## Forwarding: Fluent Bit ##
 
-<img align="right" src="/javajon/courses/kubernetes-observability/efk/assets/fib_002.png">
+![Fluent Bit](/javajon/courses/kubernetes-observability/efk/assets/flb_002.png "fluent Bit")
 <div style="text-align: right">- fluentbit.io</div>
 
 [Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluent Bit runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
