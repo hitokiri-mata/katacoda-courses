@@ -6,7 +6,7 @@
       {
         "course_id": "registries",
         "title": "Container Registry",
-        "description": "Learn how to uDiscovering how to setup a Container Registry on Kubernetes."
+        "description": "Learn how to to setup a private container registry on Kubernetes."
       },
       {
         "course_id": "helm",

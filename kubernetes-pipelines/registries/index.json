@@ -12,17 +12,17 @@
       },
       {
         "title": "Container Registry",
-        "text": "step3-registry.md",
+        "text": "step2-registry.md",
         "code": "clear.sh"
       },
       {
         "title": "Add Containers",
-        "text": "step4-populate.md",
+        "text": "step3-populate.md",
         "code": "clear.sh"
       },
       {
         "title": "Registry Web Interface",
-        "text": "step5-ui.md",
+        "text": "step4-ui.md",
         "code": "clear.sh"
       }
     ],
