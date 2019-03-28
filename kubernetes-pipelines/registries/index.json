@@ -50,7 +50,6 @@
       {"name": "Registry", "port": 31000}    ]
     },
   "backend": {
-    "port": 8080,
     "imageid": "kubernetes-cluster-running"
   }
 }
