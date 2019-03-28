@@ -3,7 +3,7 @@ There are many processes around Kubernetes that requires access to one more cont
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
 `helm install stable/docker-registry --name registry --namespace kube-system \
---set image.tag=2.7.1
+--set image.tag=2.7.1 \
 --set service.type=NodePort \
 --set service.nodePort=31500`{{execute}}
 
