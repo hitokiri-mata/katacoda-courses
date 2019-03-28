@@ -47,11 +47,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Registry", "port": 31112},
-      {"name": "Prometheus", "port": 31120},
-      {"name": "Alerts", "port": 31121},
-      {"name": "Grafana", "port": 31122}
-    ]
+      {"name": "Registry", "port": 31000}    ]
     },
   "backend": {
     "port": 8080,
