@@ -4,6 +4,11 @@
     "description": "Discover different tools and techniques for continuous delivery on Kubernetes.",
     "courses": [
       {
+        "course_id": "registries",
+        "title": "Container Registry",
+        "description": "Learn how to uDiscovering how to setup a Container Registry on Kubernetes."
+      },
+      {
         "course_id": "helm",
         "title": "Helm",
         "description": "Learn how to use Helm, a package manager for Kubernetes."

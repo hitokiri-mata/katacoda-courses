@@ -1,0 +1,60 @@
+{
+  "private": "true",
+  "title": "Registries",
+  "description": "Discovering how to setup a Container Registry on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step3-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Add Containers",
+        "text": "step4-populate.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Registry Web Interface",
+        "text": "step5-ui.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Registry", "port": 31112},
+      {"name": "Prometheus", "port": 31120},
+      {"name": "Alerts", "port": 31121},
+      {"name": "Grafana", "port": 31122}
+    ]
+    },
+  "backend": {
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
+  }
+}

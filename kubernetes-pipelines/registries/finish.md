@@ -1,0 +1,24 @@
+# Conclusion #
+
+TODO
+
+## Lessons Learned ##
+
+With these steps you have learned:
+
+- how to install a private container on Kubernetes,
+- how to install web interface to list the registry contents
+
+## References ##
+
+- [Registry Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry)
+- [Distribution and Registry 2.0](https://github.com/docker/distribution)
+- [Registry Proxy](https://github.com/helm/charts/tree/master/incubator/kube-registry-proxy)
+- [Portus](https://github.com/SUSE/Portus). An authorization server and a user interface for the Docker Registry API version 2. The minimum required version of Registry is 2.1.
+- [Portus chart](https://github.com/GrantStreetGroup/portus-helm)
+
+
+------
+![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/registries/assets/nfjs.png "No Fluff Just Stuff")
+
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
