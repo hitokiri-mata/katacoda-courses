@@ -4,6 +4,7 @@ metadata:
   name: registry-ui-deployment
   labels:
     app: registry-ui
+  namespace: kube-system
 spec:
   replicas: 1
   selector:
