@@ -11,6 +11,7 @@ With these steps you have learned:
 
 ## References ##
 
+- [Registry source](https://github.com/docker/distribution)
 - [Registry Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry)
 - [Distribution and Registry 2.0](https://github.com/docker/distribution)
 - [Registry Proxy](https://github.com/helm/charts/tree/master/incubator/kube-registry-proxy)

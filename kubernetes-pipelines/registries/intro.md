@@ -6,14 +6,12 @@ The Registry is a stateless, highly scalable server side application that stores
 
 ## Key Features ##
 
-- Follows the Container Registry version 2
+- Follows the [Docker Registry HTTP API V2](https://docs.docker.com/registry/spec/api/)
 - Accepts pushed containers
-- Fullfills container requests
+- Fulfills container requests
 - Images persisted to backing PersistentVolume
 
 You will learn how:
 
 - to install a private container registry on Kubernetes
 - to install a web interface to reveal the contents of the registry.
-
-The [Container Registry HTTP API V2 is defined here](https://docs.docker.com/registry/spec/api/).
