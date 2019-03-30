@@ -1,6 +1,6 @@
 # Container Registries on Kubernetes #
 
-![Registry](/javajon/courses/kubernetes-pipelines/registries/assets/registry.png "Container Registry")
+<img align="right" src="/javajon/courses/kubernetes-pipelines/registries/assets/registry.png">
 
 The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images. The Registry is open-source, under the permissive [Apache license](http://en.wikipedia.org/wiki/Apache_License).
 

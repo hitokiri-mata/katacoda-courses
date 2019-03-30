@@ -16,14 +16,18 @@
         "code": "clear.sh"
       },
       {
-        "title": "Add Containers",
-        "text": "step3-populate.md",
+        "title": "Registry Web Interface",
+        "text": "step3-ui.md",
         "code": "clear.sh"
       },
       {
-        "title": "Registry Web Interface",
-        "text": "step4-ui.md",
+        "title": "Push a Container",
+        "text": "step4-populate.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Pull a Container",
+        "text": "step5-run.md"
       }
     ],
     "intro": {
@@ -47,7 +51,9 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Registry", "port": 31000}    ]
+      {"name": "Registry", "port": 31000},
+      {"name": "MAX-Weather-Forecaster", "port": 32000}  
+    ]
     },
   "backend": {
     "imageid": "kubernetes-cluster-running"

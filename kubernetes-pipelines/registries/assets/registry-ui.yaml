@@ -20,9 +20,9 @@ spec:
         image: joxit/docker-registry-ui:static
         env:
         - name: REGISTRY_URL
-          value: "http://registry-docker-registry.kube-system:5000"
+          value: "http://registry-docker-registry:5000"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -34,8 +34,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 80
+    targetPort: 80
     nodePort: 31000
     protocol: TCP
   selector:
