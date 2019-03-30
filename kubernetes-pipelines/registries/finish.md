@@ -17,11 +17,10 @@ With these steps you have learned:
 
 - [Registry source](https://github.com/docker/distribution)
 - [Registry Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry)
+- [Registry UI from Jones Magloire](https://github.com/Joxit/docker-registry-ui)
 - [Distribution and Registry 2.0](https://github.com/docker/distribution)
 - [Registry Proxy](https://github.com/helm/charts/tree/master/incubator/kube-registry-proxy)
-- [Portus](https://github.com/SUSE/Portus). An authorization server and a user interface for the Docker Registry API version 2. The minimum required version of Registry is 2.1.
-- [Portus chart](https://github.com/GrantStreetGroup/portus-helm)
-- [IBM max-speech-to-text-converter](https://github.com/IBM/MAX-Speech-to-Text-Converter)
+- [IBM MAX Breast Cancer Mitosis Detector](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector)
 
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/registries/assets/nfjs.png "No Fluff Just Stuff")
