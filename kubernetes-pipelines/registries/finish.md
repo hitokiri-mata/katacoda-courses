@@ -21,10 +21,11 @@ With these steps you have learned:
 - [Distribution and Registry 2.0](https://github.com/docker/distribution)
 - [Registry Proxy](https://github.com/helm/charts/tree/master/incubator/kube-registry-proxy)
 - [IBM MAX Breast Cancer Mitosis Detector](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector)
+- [Deploying Deep-Learning Models to Kubernetes on IBM Cloud](https://medium.com/ibm-watson-data-lab/deploying-deep-learning-models-to-kubernetes-on-the-ibm-cloud-93d4a22cb2ab)
 
 ## Homage ##
 
-Lost friend and father, [Bill Becker](https://vimeo.com/73274666). Male Breast Cancer Awareness Week Is The Third Week of October.
+Lost friend and father, [Bill Becker](https://vimeo.com/73274666). Male Breast Cancer Awareness Week is the third week of October.
 
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/registries/assets/nfjs.png "No Fluff Just Stuff")

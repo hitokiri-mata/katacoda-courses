@@ -52,7 +52,7 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "Registry", "port": 31000},
-      {"name": "MAX Cancer Detector", "port": 32000}  
+      {"name": "MAX Cancer Detector", "port": 31500}  
     ]
     },
   "backend": {

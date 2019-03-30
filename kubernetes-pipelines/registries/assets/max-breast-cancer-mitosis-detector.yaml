@@ -7,7 +7,7 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 5000
-    nodePort: 32000
+    nodePort: 31500
   selector:
     app: max-breast-cancer-mitosis-detector
   type: NodePort
