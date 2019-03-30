@@ -14,7 +14,7 @@ Change directory into the repository base folder:
 
 Build the container image locally.
 
-`docker build -t master:31500/max-speech-to-text-converter .`{{executor}}
+`docker build -t master:31500/max-speech-to-text-converter .`{{execute}}
 
 Push the local image to your private registry.
 
