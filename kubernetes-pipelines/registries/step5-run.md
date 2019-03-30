@@ -2,20 +2,16 @@ Deploy the application on Kubernetes using the container image built and pushed 
 
 Deploy the application.
 
-`kubectl apply -f max-weather-forecaster.yaml`{{execute}}
+`kubectl apply -f max-speech-to-text-converter.yaml`{{execute}}
 
-In a moment the application will be available from the [MAX Weather Forecaster web interface](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
+In a moment the application will be available from the [MAX speech-to-text web interface](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
 
-Extract the assets
+Obtain the service location of the application.
 
-`tar -zxvf assets/lstm_weather_test_data.tar.gz -C assets`{{execute}}
-
-Obtain the location of the application.
-
-`export WEATHER_APP=https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`export APP=https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 You can also curl against the application with commands line this:
 
-`curl -F "file=@assets/lstm_weather_test_data/univariate_model_test_data.txt" -XPOST $WEATHER_APP/model/predict`{{execute}}
+`curl -F "audio=@assets/8455-210777-0068.wav" -X POST $APP/model/predict`{{execute}}
 
-If this IBM weather app piques your interest you can explore the details of this  application [here](https://github.com/IBM/MAX-Weather-Forecaster).
+If this IBM app piques your interest you can explore the details of this application [here](https://github.com/IBM/MAX-Speech-to-Text-Converter). There are several other MAX application samples.

@@ -1,33 +1,33 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: max-weather-forecaster
+  name: max-speech-to-text-converter
 spec:
   type: NodePort
   ports:
   - port: 5000
     nodePort: 32000
   selector:
-    app: max-weather-forecaster
+    app: max-speech-to-text-converter
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: max-weather-forecaster
+  name: max-speech-to-text-converter
   labels:
-    app: max-weather-forecaster
+    app: max-speech-to-text-converter
 spec:
   selector:
     matchLabels:
-      app: max-weather-forecaster
+      app: max-speech-to-text-converter
   replicas: 1
   template:
     metadata:
       labels:
-        app: max-weather-forecaster
+        app: max-speech-to-text-converter
     spec:
       containers:
-      - name: max-weather-forecaster
-        image: master:31500/max-weather-forecaster:latest
+      - name: max-speech-to-text-converter
+        image: master:31500/max-speech-to-text-converter:latest
         ports:
         - containerPort: 5000
