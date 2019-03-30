@@ -22,6 +22,10 @@ With these steps you have learned:
 - [Registry Proxy](https://github.com/helm/charts/tree/master/incubator/kube-registry-proxy)
 - [IBM MAX Breast Cancer Mitosis Detector](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector)
 
+## Homage ##
+
+Lost friend and father, [Bill Becker](https://vimeo.com/73274666). Male Breast Cancer Awareness Week Is The Third Week of October.
+
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/registries/assets/nfjs.png "No Fluff Just Stuff")
 
