@@ -7,7 +7,7 @@ spec:
     app: max-weather-forecaster
   ports:
   - port: 5000
-  - nodePort: 32000
+    nodePort: 32000
   type: NodePort
 ---
 apiVersion: extensions/v1beta1
