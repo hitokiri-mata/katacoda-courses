@@ -12,6 +12,6 @@ The [Helm](https://helm.sh/) package manager used for installing applications on
 
 The Kubernetes dashboard is also available, but you will need the secret access token to login. reveal the token
 
-`kubectl describe secrets`{{execute}}
+`echo -e "\n--- Copy and paste this token for dashboard access ---" && kubectl describe secret $(kubectl get secret | awk '/^dashboard-token-/{print $1}') | awk '$1=="token:"{print $2}' && echo "---"`{{execute}}
 
 then paste this the token into the login prompt.

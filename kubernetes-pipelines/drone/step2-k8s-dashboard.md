@@ -6,7 +6,7 @@ For your cluster, the latest dashboard YAML definition can be downloaded from ht
 
 The Kubernetes dashboard login requires a security token. You have admin rights, so to reveal the secret by dumping the secret description.
 
-`kubectl describe secrets`{{execute}}
+`echo -e "\n--- Copy and paste this token for dashboard access ---" && kubectl describe secret $(kubectl get secret | awk '/^dashboard-token-/{print $1}') | awk '$1=="token:"{print $2}' && echo "---"`{{execute}}
 
 Copy this token an paste into the token field when prompted by the Dashboard. 
 

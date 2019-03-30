@@ -18,6 +18,6 @@ On deployment _Kubeless_ starts a pre-baked container containing the Python exec
 
 You can also explore the Kubeless functions in the Kubernetes dashboard. Because the dashboard can be accessed publicly, it is protected and requires login credentials. Because you have administration access to this cluster copy the token from this secret.
 
-`kubectl describe secrets`{{execute}}
+`echo -e "\n--- Copy and paste this token for dashboard access ---" && kubectl describe secret $(kubectl get secret | awk '/^dashboard-token-/{print $1}') | awk '$1=="token:"{print $2}' && echo "---"`{{execute}}
 
 Next, by clicking on the _Kubernetes Dashboard_ tab above the command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/. At the sign prompt select _Token_ and paste in the key you copied in the previous step.
