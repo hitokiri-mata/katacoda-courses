@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: max-weather-forecaster
 spec:
-  selector:
-    app: max-weather-forecaster
+  type: NodePort
   ports:
   - port: 5000
     nodePort: 32000
-  type: NodePort
+  selector:
+    app: max-weather-forecaster
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
