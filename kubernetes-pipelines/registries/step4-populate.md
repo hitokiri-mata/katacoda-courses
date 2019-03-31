@@ -11,13 +11,13 @@ Change directory into the repository base folder:
 
 `cd MAX-Breast-Cancer-Mitosis-Detector`{{execute}}
 
-Build the container image locally. This will take about 2-3 minutes.
+**Build** the container image locally. This will take about 2-3 minutes.
 
 `docker build -t $REGISTRY/max-breast-cancer-mitosis-detector .`{{execute}}
 
-Push the local image to your private registry.
+**Push** the local image to your private registry.
 
 `docker push $REGISTRY/max-breast-cancer-mitosis-detector`{{execute}}
 
-Once the pushing is complete, verify the new container is now in listed in the [registry web interface](
+Once the push is complete, verify the new container is listed in the [registry web interface](
 https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/).

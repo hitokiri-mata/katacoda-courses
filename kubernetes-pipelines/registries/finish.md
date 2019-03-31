@@ -4,7 +4,7 @@ Generally there are three ways to interact with container registeries.
 
 1. Public registries like DockerHub or Quay.io, 
 2. Private team registeries that are within you organization, often hosted by your cloud provider 
-3. Local registeries that you or your team may be using on a local or private Kubernetes cluster or namespace. 
+3. Private registeries that you or your team may be using on a local or private Kubernetes cluster or namespace. 
 
 This tutorial gives you a leg up for leveraging personal and local registeries. This is ideal when you are prototyping or rapidly developing and testing a solution locally. Knowing how to quickly setup and use a private container is another technique you can pull out of your Kubernetes toolbox. 
 
