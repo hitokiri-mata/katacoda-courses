@@ -15,7 +15,7 @@ The tag, push and pull commands must all have the same host name for the image. 
 
 `kubectl port-forward --namespace kube-system \
 $(kubectl get po -n kube-system | grep private-docker-registry | \
-awk '{print $1;}') 5000:5000`{{execute}}
+awk '{print $1;}') 5000:5000 &`{{execute}}
 
 Assign an environment variable to the common registry location.
 
