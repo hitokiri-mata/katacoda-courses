@@ -6,6 +6,8 @@ As a developer of container and Kubernetes solutions there is often a need to pu
 
 The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images. The Registry is open-source, under the permissive [Apache license](http://en.wikipedia.org/wiki/Apache_License).
 
+To learn how the registry works, you will build, push and pull a real application with the registry. The application is a **_Breast Cancer Mitosis Detector_** provided by the IBM. IBM has over [40 projects]((https://github.com/search?q=org%3AIBM+MAX&unscoped_q=MAX)) open source deep learning models. 
+
 ## Key Features ##
 
 - Follows the [Docker Registry HTTP API V2](https://docs.docker.com/registry/spec/api/)

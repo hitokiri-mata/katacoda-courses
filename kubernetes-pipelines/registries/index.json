@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "title": "Registries",
   "description": "Discovering how to setup a Container Registry on Kubernetes.",
   "difficulty":	"Introduction",
