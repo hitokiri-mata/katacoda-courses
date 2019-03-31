@@ -7,7 +7,7 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 5000
-    nodePort: 31500
+    nodePort: 32500
   selector:
     app: max-breast-cancer-mitosis-detector
   type: NodePort
@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
       - name: max-breast-cancer-mitosis-detector
-        image: master:31500/max-breast-cancer-mitosis-detector:latest
+        image: $REGISTRY/max-breast-cancer-mitosis-detector:latest
         ports:
         - containerPort: 5000

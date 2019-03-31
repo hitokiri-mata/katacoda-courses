@@ -2,7 +2,7 @@ There are many processes around Kubernetes that requires access to one more cont
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
-`helm install stable/docker-registry --name registry --namespace kube-system \
+`helm install stable/docker-registry --name private --namespace kube-system \
 --set image.tag=2.7.1 \
 --set service.type=NodePort \
 --set service.nodePort=31500`{{execute}}
@@ -17,7 +17,7 @@ Assign an environment variable to the common registry location.
 
 It will be a few moments before the registry deployment reports it's _Available_ with a _1_.
 
-`kubectl get deployments registry-docker-registry --namespace kube-system`{{execute}}
+`kubectl get deployments private-docker-registry --namespace kube-system`{{execute}}
 
 Once the registry is serving, inspect the contents of the empty registry.
 

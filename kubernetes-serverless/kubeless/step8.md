@@ -16,7 +16,7 @@ Wait until the deployment is _Available_.
 
 `kubectl get deployments`{{execute}}
 
-If it's needed, add a proxy. It may benignly show error as a previous step already asked you to start a proxyit may have been added in one of the previous lessons.
+If it's needed, add a proxy. It may benignly show error as a previous step already asked you to start a proxy as it may have been added in one of the previous lessons.
 
 `kubectl proxy --port 8080`{{execute T2}}
 

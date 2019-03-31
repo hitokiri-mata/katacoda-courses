@@ -1,10 +1,16 @@
-Deploy the application on Kubernetes using the container image built and pushed in the previous step.
+Deploy the application on Kubernetes using the container image built and pushed in the previous step. The Kubernetes manifest YAML file has a $REGISTRY variable inside of it that needs to be replaced with the actual location of the private registry. Use the `envsubst` command to replace the environment variable.
 
-Deploy the application.
+`cd ~ && envsubst < "max-breast-cancer-mitosis-detector.yaml" > "max-breast-cancer-mitosis-detector.yaml"`{{execute}}
+
+With the corrected location to the private registry, deploy the application.
 
 `kubectl apply -f max-breast-cancer-mitosis-detector.yaml`{{execute}}
 
-In a moment the application will be available from the [MAX application web interface](https://[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com/).
+In a moment the application will be available.
+
+`kubectl get deployments,pods,services`{{execute}}
+
+Now that the the application is running navigate to the [MAX application web interface](https://[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com/).
 
 Obtain the service location of the application.
 

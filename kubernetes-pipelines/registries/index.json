@@ -21,12 +21,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Push a Container",
+        "title": "Push the Container",
         "text": "step4-populate.md",
         "code": "clear.sh"
       },
       {
-        "title": "Pull a Container",
+        "title": "Pull the Container",
         "text": "step5-run.md"
       }
     ],
@@ -40,7 +40,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "registry-ui.yaml", "target": "~/"}
+        {"file": "*.yaml", "target": "~/"}
       ]
     }
   },

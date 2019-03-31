@@ -13,11 +13,11 @@ Change directory into the repository base folder:
 
 Build the container image locally.
 
-`docker build -t master:31500/max-breast-cancer-mitosis-detector .`{{execute}}
+`docker build -t 0.0.0.0:5000/max-breast-cancer-mitosis-detector .`{{execute}}
 
 Push the local image to your private registry.
 
-`docker push master:31500/max-breast-cancer-mitosis-detector`{{execute}}
+`docker push 0.0.0.0:5000/max-breast-cancer-mitosis-detector`{{execute}}
 
 Once the pushing is complete, verify the new container is now in listed in the [registry web interface](
 https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/).
