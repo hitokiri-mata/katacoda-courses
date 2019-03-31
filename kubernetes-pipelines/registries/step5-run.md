@@ -1,10 +1,10 @@
 Deploy the application on Kubernetes using the container image built and pushed in the previous step. The Kubernetes manifest YAML file has a $REGISTRY variable inside of it that needs to be replaced with the actual location of the private registry. Use the `envsubst` command to replace the environment variable.
 
-`cd ~ && envsubst < "max-breast-cancer-mitosis-detector.yaml" > "max-breast-cancer-mitosis-detector.yaml"`{{execute}}
+`cd ~ && envsubst < max-breast-cancer-mitosis-detector.yaml > max-breast-cancer-mitosis-detector-modified.yaml`{{execute}}
 
 With the corrected location to the private registry, deploy the application.
 
-`kubectl apply -f max-breast-cancer-mitosis-detector.yaml`{{execute}}
+`kubectl apply -f max-breast-cancer-mitosis-detector-modified.yaml`{{execute}}
 
 In a moment the application will be available.
 
