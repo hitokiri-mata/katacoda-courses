@@ -1,4 +1,4 @@
-As an example, you will take a real application and use the registry to build the container, publish it to your local registry, and run the application on Kubernetes. This example could have done a simple and fast _hello world_, but this example a bit richer. This take longer to build, but the hope it to expose you to new types of application possibilities on Kubernetes.
+As an example, you will take a real application and use the registry to build the container, publish it to your local registry, and run the application on Kubernetes. This example could have used a simple and fast _hello world_, but this example is a bit richer. This take longer to build, but the hope it to expose you to new types of application possibilities on Kubernetes.
 
 We are taking a clever application from IBM that uses Tensorflow to detect whether a mitosis exists in an image of breast cancer tumor cells.
 

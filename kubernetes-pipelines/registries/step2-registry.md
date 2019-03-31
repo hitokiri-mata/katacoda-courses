@@ -1,4 +1,4 @@
-There are many processes around Kubernetes that requires access to one more container registries. While public registries are often referenced there is often privacy concerns and no need to shuttle private images over the internet. Instead, private registries keep all this pushing and pulling in a local registry.
+There are many workflows around Kubernetes that need access to one more container registries. While public registries are commonly referenced there is privacy concerns and no need to shuttle private images over the internet. Instead, private registries keep all this pushing and pulling in a local registry.
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
@@ -11,7 +11,7 @@ The registry is now available as a service. It can be listed.
 
 `kubectl get service --namespace kube-system`{{execute}}
 
-The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so consistently refer to the registry from the command line and from within the cluster via 127.0.0.0. Use port-forward to expose the registry.
+The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so its necessary to consistently refer to the registry from the command line and from within the cluster. In this scenario case we can simply use 127.0.0.0. Use port-forward to expose the registry.
 
 `kubectl port-forward --namespace kube-system \
 $(kubectl get po -n kube-system | grep private-docker-registry | \
