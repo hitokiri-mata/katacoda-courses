@@ -11,7 +11,7 @@ The registry is now available as a service. It can be listed.
 
 `kubectl get service --namespace kube-system`{{execute}}
 
-The tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so the best way to expose the registry sos its consistent from this command line and from within the cluster is via 127.0.0.0. Use port-forward to expose the registry
+The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so consistently refer to the registry from the command line and from within the cluster via 127.0.0.0. Use port-forward to expose the registry.
 
 `kubectl port-forward --namespace kube-system \
 $(kubectl get po -n kube-system | grep private-docker-registry | \
