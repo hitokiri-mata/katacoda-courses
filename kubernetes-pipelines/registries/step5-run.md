@@ -14,7 +14,7 @@ Now that the the application is running navigate to the application's [interacti
 
 Obtain the service location of the application. Be sure access is via HTTP, not HTTPS.
 
-`export APP=http://127.0.01:32500/`{{execute}}
+`export APP=http://127.0.0.1:32500/`{{execute}}
 
 You can also test the application from the command line.
 
