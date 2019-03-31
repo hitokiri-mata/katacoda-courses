@@ -11,9 +11,15 @@ The registry is now available as a service. It can be listed.
 
 `kubectl get service --namespace kube-system`{{execute}}
 
+The tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so the best way to expose the registry sos its consistent from this command line and from within the cluster is via 127.0.0.0. Use port-forward to expose the registry
+
+`kubectl port-forward --namespace kube-system \
+$(kubectl get po -n kube-system | grep private-docker-registry | \
+awk '{print $1;}') 5000:5000`{{execute}}
+
 Assign an environment variable to the common registry location.
 
-`export REGISTRY=[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`export REGISTRY=127.0.0.1:31500`{{execute}}
 
 It will be a few moments before the registry deployment reports it's _Available_ with a _1_.
 
