@@ -8,27 +8,23 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1.md"
-      },
-      {
-        "title": "Deploy Dashboard",
-        "text": "step2.md"
+        "text": "step1-k8s.md"
       },
       {
         "title": "Container Registry",
-        "text": "step3.md"
+        "text": "step2-registry.md"
       },
       {
         "title": "Install Camel K",
-        "text": "step4.md"
+        "text": "step3-camel-k.md"
       },
       {
         "title": "Hello World from Camel K",
-        "text": "step5.md"
+        "text": "step4-hello.md"
       },
       {
         "title": "TODO",
-        "text": "step6.md"
+        "text": "step5.md"
       },
       {
         "title": "Removing Camel K, Knative, Istio and your Functions",
@@ -53,7 +49,7 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 8443}
+      {"name": "Kubernetes Dashboard", "port": 30000}
     ]
     },
   "backend": {

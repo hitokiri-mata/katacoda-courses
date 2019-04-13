@@ -1,4 +1,3 @@
-`kamel run hello.groovy`{{execute}}
+sample.java here:  https://github.com/apache/camel-k
 
-Camel K runs serverless functions and Camel integrations directly on a Kubernetes. It also leverages the power of Knative that provides the building blocks for serverless implementations on Kubernetes.
-
+## Running Integrations in _Dev_ Mode for Fast Feedback ##
