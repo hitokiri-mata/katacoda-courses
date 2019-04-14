@@ -1,6 +1,6 @@
 # Shiny R Applications on Kubernetes #
 
-![R Shiny](/javajon/courses/kubernetes-applications/r-shiny/assets/r-shiny.png "Interact. Analyze. Communicate.")
+![R Shiny](/javajon/courses/kubernetes-applications/r-shiny/assets/shiny.png "Interact. Analyze. Communicate.")
 
 Interact. Analyze. Communicate.
 

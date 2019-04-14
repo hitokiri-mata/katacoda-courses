@@ -6,21 +6,21 @@
       {
         "course_id": "nginx",
         "title": "Nginx",
-        "description": "Start here to learn how to deploy applications to Kubernetes"
+        "description": "Start here to learn how to deploy applications to Kubernetes."
       },
       {
         "course_id": "r-shiny",
         "title": "R Shiny Application",
-        "description": "Run R based Shiny applications on Kubernetes"
+        "description": "Run R based Shiny applications on Kubernetes."
       },
       {
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
-        "description": "Run RabbitMQ on Kubernetes"
+        "description": "Run RabbitMQ on Kubernetes."
       },
       {
         "course_id": "mean",
-        "title": "Mean Application (draft)",
+        "title": "Mean Application (coming soon)",
         "description": "Deploy A MEAN Application On Kubernetes With Helm. Based on an article from Bitnami."
       }
     ]

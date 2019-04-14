@@ -2,6 +2,8 @@
 
 You now understand how to run Shiny applications on Kubernetes.
 
+![R Shiny](/javajon/courses/kubernetes-applications/r-shiny/assets/shiny.png "Interact. Analyze. Communicate.")
+
 ## Lessons Learned ##
 
 With these steps you have learned:
