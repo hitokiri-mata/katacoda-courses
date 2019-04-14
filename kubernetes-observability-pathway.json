@@ -15,13 +15,13 @@
       },
       {
         "course_id": "monitoring",
-        "title": "Prometheus (drafting)",
-        "description": "Learn how to monitor applications on Kubernetes"
+        "title": "Prometheus (coming soon)",
+        "description": "Learn how to monitor applications on Kubernetes."
       },
       {
         "course_id": "tracing",
-        "title": "Transaction tracing (drafting)",
-        "description": "Learn how to trace applications on Kubernetes"
+        "title": "Transaction tracing (coming soon)",
+        "description": "Learn how to trace applications on Kubernetes."
       }
     ]
   }

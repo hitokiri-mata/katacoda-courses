@@ -14,24 +14,24 @@
         "description": "Build serverless functions on Kubernetes with first class support for metrics. Package your processes as functions to consume events without repetitive boiler-plate code."
       },
       {
+        "course_id": "nuclio",
+        "title": "Nuclio",
+        "description": "Serverless Functions for Real-Time and Data-Driven Applications."
+      },
+      {
         "course_id": "knative",
-        "title": "Knative (draft)",
+        "title": "Knative (coming soon)",
         "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads."
       },
       {
         "course_id": "riff",
-        "title": "Riff (draft)",
+        "title": "Riff (coming soon)",
         "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio."
       },
       {
         "course_id": "camel-k",
-        "title": "Camel K (draft)",
+        "title": "Camel K (coming soon)",
         "description": "Camel-K is Apache Camel with Serverless on Knative and Kubernetes."
-      },
-      {
-        "course_id": "nuclio",
-        "title": "Nuclio",
-        "description": "Serverless Functions for Real-Time and Data-Driven Applications"
       }
     ]
   }
