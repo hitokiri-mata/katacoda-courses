@@ -2,7 +2,7 @@
 
 (This draft tutorial is under construction in step 3. Contact me for questions: jonathan.johnson@dijure.com, December 8, 2018)
 
-![Knative](/javajon/courses/kubernetes-serverless/knative/assets/knative.png "Build, deploy, and manage modern serverless workloads.")
+<img align="right" src="/javajon/courses/kubernetes-serverless/knative/assets/knative.png">
 
 Knative is a Kubernetes-based platform to build, deploy, and manage modern serverless workloads. It drives with three primary features:
 

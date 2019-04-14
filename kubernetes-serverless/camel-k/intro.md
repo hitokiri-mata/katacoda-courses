@@ -2,7 +2,7 @@
 
 (This draft tutorial is under construction. Contact me for questions: jonathan.johnson@dijure.com November 9, 2018)
 
-![Camel K](/javajon/courses/kubernetes-serverless/camel-k/assets/camel-k.png "Apache Camel with Knative on Kubernetes")
+<img align="right" src="/javajon/courses/kubernetes-serverless/camel-k/assets/camel-k.png">
 
 [Camel K](https://github.com/apache/camel-k) Apache Camel K (a.k.a. Kamel) is a lightweight integration framework built from Apache Camel that runs natively on Kubernetes and is specifically designed for serverless and microservice architectures. Camel K combines the roots of Apache Camel with Serverless on Knative and Kubernetes. Camel K is a subproject of Apache Camel announced in October 2018.
 
