@@ -8,15 +8,18 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy RabbitMQ",
-        "text": "step2.md"
+        "text": "step2.md",
+        "code": "clear.sh"
       },
       {
         "title": "RabbitMQ Portal",
-        "text": "step3.md"
+        "text": "step3.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {

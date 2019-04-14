@@ -1,8 +1,8 @@
-Provisioning a Shiny application that generates a wordcloud is easily done by invoking this command. Declare the Deployment and Service exposing the endpoint 31112.
+Provisioning a Shiny application that generates a word cloud is easily done by invoking this command. Declare the Deployment and Service exposing the endpoint 31112.
 
 `kubectl create -f shiny-wordcloud.yaml`{{execute}}
 
-This Shiny service takes a few minutes to start. Watch the Pod _status_ change from _ContainerCreating_ to _Running_. To get a complete status of the deployment availability run this inspection
+The Shiny server takes about 1-2 minutes to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection
 
 `watch kubectl get deployments,pods,services`{{execute}}.
 

@@ -30,4 +30,4 @@ Lost friend and father, [Bill Becker](https://vimeo.com/73274666). Male Breast C
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-pipelines/registries/assets/nfjs.png "No Fluff Just Stuff")
 
-For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://www.linkedin.com/in/javajon/), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com/home/main).
+For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).

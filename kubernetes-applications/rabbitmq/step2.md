@@ -1,19 +1,9 @@
-Provisioning RabbitMQ on Kubernetes is easily done by invoking this [stable Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
+Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
 `helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
-The RabbitMQ containers start fairly quickly so the Pod status may be already running, creating, or initializing. To get a complete status of the deployment availability run this inspection.
+The RabbitMQ containers take a few minutes to start. To get a complete status of the deployment availability run this inspection. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_.
 
 `watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
 
 In a few moments the 3 Pods labeled `pod/my-rabbit-rabbitmq-[1|2|3]` will appear and move to the _Running_ status. Once all are running, discontinue the watch. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
-
-## Kubernetes Dashboard ##
-
-As an administrator, you can control the cluster with the `kubectl` CLI tool. You can also use the Kubernetes Dashboard. Because the dashboard can be accessed publicly, it is protected and requires the secret access token to sign in. Because you have administration access to this cluster, copy the token from this secret.
-
-`echo -e "\n--- Copy and paste this token for dashboard access ---" && kubectl describe secret $(kubectl get secret | awk '/^dashboard-token-/{print $1}') | awk '$1=="token:"{print $2}' && echo "---"`{{execute}}
-
-To access the dashboard, click on the _Kubernetes Dashboard_ tab above the command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/. At the sign in prompt select _Token_ and paste in the token, you copied a moment ago.
-
-> For publicly exposed Kubernetes clusters *always* lock any kind of Kubernetes administration access including [access to the dashboard](https://www.wired.com/story/cryptojacking-tesla-amazon-cloud/).

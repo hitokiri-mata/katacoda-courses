@@ -7,5 +7,5 @@ source <(minikube completion bash)
 source <(kubectl completion bash)
 source <(helm completion bash)
 
-minikube addons enable heapster
+minikube addons enable metrics-server
 clear

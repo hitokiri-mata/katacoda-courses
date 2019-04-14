@@ -8,19 +8,23 @@
     "steps": [
       {
         "title": "Kubernetes Running for You",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy R Shiny Demonstration",
-        "text": "step2.md"
+        "text": "step2.md",
+        "code": "clear.sh"
       },
       {
-        "title": "Deploy Shiny Wordcloud Application",
-        "text": "step3.md"
+        "title": "Deploy Shiny Word Cloud Application",
+        "text": "step3.md",
+        "code": "clear.sh"
       },
       {
         "title": "Shiny on Kubernetes",
-        "text": "step4.md"
+        "text": "step4.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {

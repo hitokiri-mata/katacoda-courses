@@ -7,10 +7,12 @@
   "details": {
     "steps": [
       {
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "clear.sh"
       },
       {
-        "text": "step2.md"
+        "text": "step2.md",
+        "code": "clear.sh"
       },
       {
         "text": "step3.md"

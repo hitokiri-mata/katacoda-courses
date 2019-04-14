@@ -7,11 +7,13 @@
     "steps": [
       {
         "title": "Minikube",
-        "text": "step1-minikube.md"
+        "text": "step1-minikube.md",
+        "code": "clear.sh"
       },
       {
         "title": "Communication from Pods to Services",
-        "text": "step2-intra.md"
+        "text": "step2-intra.md",
+        "code": "clear.sh"
       },
       {
         "title": "DNS for Services and Pods",

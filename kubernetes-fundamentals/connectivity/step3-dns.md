@@ -1,4 +1,4 @@
-All Kubernetes clusters has some form of a Domain Name System (DNS) handler. DNS is the heart of service discovery and like everything in Kubernetes it runs in a container and handles the lookups. There are a variety of providers for Kuberentes DNS solutions. Two popular ones are Kube-DNS and [CoreDNS](https://coredns.io/). In 2018 CoreDNS became the more dominant and preferred solutions in the community.
+All Kubernetes clusters has some form of a Domain Name System (DNS) handler. DNS is the heart of service discovery and like everything in Kubernetes it runs in a container and handles the lookups. There are a variety of providers for Kubernetes DNS solutions. Two popular ones are Kube-DNS and [CoreDNS](https://coredns.io/). In 2018 CoreDNS became the more dominant and preferred solutions in the community.
 
 The version of Minukube you are using here in Katacoda currently has _Kube-DNS_ service the requests.
 
