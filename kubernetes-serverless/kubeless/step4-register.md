@@ -9,7 +9,7 @@ To deploy a Python function, the Kubeless CLI tool needs some information:
 - The name of the file containing the function code
 - The name of the function inside the file
 
-`kubeless function deploy fibonacci --runtime python3.6 --from-file fibonacci.py --handler fibonacci.values`{{execute}}
+`kubeless function deploy fibonacci --from-file fibonacci.py --runtime python3.6 --handler fibonacci.values`{{execute}}
 
 With the above, here is a breakdown of this function registration request:
 

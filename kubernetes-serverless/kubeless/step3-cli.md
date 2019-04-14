@@ -1,6 +1,6 @@
 Kubeless has a command-line interface (CLI) tool named appropriately `kubeless`. Use this tool to manage your functions on _Kubeless_. Let's get a recent Kubeless command-line interface (CLI) binary for this Linux account.
 
-`curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.0-alpha.8/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
+`curl -L http://github.com/kubeless/kubeless/releases/download/v1.0.3/kubeless_linux-amd64.zip -o kubeless.zip`{{execute}}
 
 `unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
 
