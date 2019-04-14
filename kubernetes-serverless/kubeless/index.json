@@ -12,7 +12,7 @@
       },
       {
         "title": "Install Kubeless",
-        "text": "step1.md"
+        "text": "step2-install.md"
       },
       {
         "title": "Install Kubeless CLI",

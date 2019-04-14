@@ -51,13 +51,7 @@
       },
       {
         "title": "Scaling",
-        "text": "step10-scaling.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Removing OpenFaaS",
-        "text": "step11-cleanup.md",
-        "code": "clear.sh"
+        "text": "step10-scaling.md"
       }
     ],
     "intro": {

@@ -1,6 +1,6 @@
 # Nuclio on Kubernetes #
 
-![Nuclio](/javajon/courses/kubernetes-serverless/nuclio/assets/nuclio.png "Nuclio serverless framework")
+<img align="right" src="/javajon/courses/kubernetes-serverless/nuclio/assets/nuclio.png">
 
 [Nuclio](https://www.nuclio.com/) is an open source serverless platform which allows developers to focus on building and running auto-scaling applications without worrying about managing servers.
 
