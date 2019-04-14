@@ -16,7 +16,7 @@ With these to changes you can view the Prometheus Portal. On the right there is 
 
 As above, the Helm chart also sets up an AlertManager service. It is also not exposed. The AlertManager service can be exposed by changing the service from a _ClusterIP_ type to a _NodePort_ type.
 
-`kubectl patch service alertmanager --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/type","value":"NodePort"}]'`{{execute}}
+`kubectl patch service alertmanager --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/type","value":"NodePort"}]'`{{execute}}
 
 then change the NodePort value to a known port above 30000
 

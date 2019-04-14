@@ -1,4 +1,4 @@
-OpenFaaS is now ready to do some work. You can quickly get started by registering some pre-built functions by submitting a stack YAML file that defines a collection of functions. See how these pre-defined functions are declared.
+OpenFaaS is now ready to do some work. You can quickly get started by registering a stack of pre-built functions by submitting a single YAML file. See how these pre-defined functions are declared.
 
 `curl https://raw.githubusercontent.com/openfaas/faas/master/stack.yml`{{execute}}
 
