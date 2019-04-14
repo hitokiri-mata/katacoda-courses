@@ -6,7 +6,7 @@
 
 Setting up your SonarQube services as fragile [snowflakes](https://martinfowler.com/bliki/SnowflakeServer.html) is both common and not a recommended technique. Any developer should be able to quickly start a personal SonarQube service as well as rely on a team's service that matches the same behaviors. The latest SonarQube version, it's plugins and it's configurations should also be easily adjustable. Your software development lifecycle processes (SDLC) should embrace the versioned configuration and deployment of SonarQube across a variety of [cattle (not pets)](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) targets.
 
-Follow these instructions to setup a personal [SonarQube engine and dashboard](https://www.sonarqube.org). With this you have a strong, static code analysis tool backing your code  all before you submit your work for a pull request. Within SonarQube there are plugins such as  [Checkstyle](http://checkstyle.sourceforge.net/), [PMD](https://pmd.github.io/) and [Findbugs](http://findbugs.sourceforge.net/). The Findbugs plugin includes rules for vulnerabilities such as the [OWASP top 10](http://find-sec-bugs.github.io).
+Follow these instructions to setup a personal [SonarQube engine and dashboard](https://www.sonarqube.org). With this you have a strong, static code analysis tool backing your code all before you submit your work for a pull request. Within SonarQube there are plugins such as [Checkstyle](http://checkstyle.sourceforge.net/), [PMD](https://pmd.github.io/) and [Findbugs](http://findbugs.sourceforge.net/). The Findbugs plugin includes rules for vulnerabilities such as the [OWASP top 10](http://find-sec-bugs.github.io).
 
 You will learn how:
 

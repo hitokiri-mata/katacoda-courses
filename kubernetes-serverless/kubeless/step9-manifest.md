@@ -6,7 +6,7 @@ Notice at the top the manifest Kind is _Function_. Function is not part of the c
 
 `kubectl get crds --namespace kubeless`{{execute}}
 
-Now, let's try running a function submitted by definition through a Kubernetes  manifest file
+Now, let's try running a function submitted by definition through a Kubernetes manifest file
 
 `kubectl create -f ruby-example.yaml`{{execute}}
 

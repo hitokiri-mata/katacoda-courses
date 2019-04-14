@@ -1,6 +1,6 @@
 # Nginx on Kubernetes #
 
-![Nginx](/javajon/courses/kubernetes-applications/nginx/assets/nginx.png "Web server, reverse/mail proxy server")
+<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/nginx.png">
 
 These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster based on Minikube and a CLI tool called kubectl, a few steps will get a Nginx web server running.
 

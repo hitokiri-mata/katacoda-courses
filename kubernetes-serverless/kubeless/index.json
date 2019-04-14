@@ -7,48 +7,59 @@
   "details": {
     "steps": [
       {
-        "title": "Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Kubeless",
-        "text": "step2-install.md"
+        "text": "step2-install.md",   
+        "code": "clear.sh"
       },
       {
         "title": "Install Kubeless CLI",
-        "text": "step3-cli.md"
+        "text": "step3-cli.md",
+        "code": "clear.sh"
       },
       {
         "title": "Register Python Function",
-        "text": "step4-register.md"
+        "text": "step4-register.md",
+        "code": "clear.sh"
       },
       {
         "title": "Call Python Function",
-        "text": "step5-call.md"
+        "text": "step5-call.md",
+        "code": "clear.sh"
       },
       {
         "title": "Inspect and Debug Function",
-        "text": "step6-inspect.md"
+        "text": "step6-inspect.md",
+        "code": "clear.sh"
       },
       {
         "title": "Another Simple Python",
-        "text": "step7-python.md"
+        "text": "step7-python.md",
+        "code": "clear.sh"
       },
       {
         "title": "Understanding Kubeless on Kubernetes",
-        "text": "step8-explore.md"
+        "text": "step8-explore.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Function with Manifest",
-        "text": "step9-manifest.md"
+        "text": "step9-manifest.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy NodeJS Function",
-        "text": "step10-nodejs.md"
+        "text": "step10-nodejs.md",
+        "code": "clear.sh"
       },
       {
         "title": "Using Kafka for PubSub Triggers",
-        "text": "step11-kafka.md"
+        "text": "step11-kafka.md",
+        "code": "clear.sh"
       },
       {
         "title": "Kubeless with Serverless.com",

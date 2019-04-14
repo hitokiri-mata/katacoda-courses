@@ -7,7 +7,7 @@
 ## Key Features ##
 
 - Ease of use through UI portal and one-click install
-- Write functions in any language for Linux or Windows and  package in Docker/OCI image format
+- Write functions in any language for Linux or Windows and package in Docker/OCI image format
 - Portable - runs on existing hardware or public/private cloud
 - Kubernetes and Docker Swarm native
 - CLI available with YAML format for templating and defining functions

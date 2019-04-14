@@ -1,10 +1,10 @@
 # Shiny R Applications on Kubernetes #
 
-![R Shiny](/javajon/courses/kubernetes-applications/r-shiny/assets/shiny.png "Interact. Analyze. Communicate.")
+<img align="right" src="/javajon/courses/kubernetes-applications/r-shiny/assets/shiny.png">
 
 Interact. Analyze. Communicate.
 
-These next steps demonstrating using R based Shiny applications on  Kubernetes. With a Kubernetes cluster based on Minikube and a CLI tool called kubectl, a few steps will get Shiny servers running.
+These next steps demonstrating using R based Shiny applications on Kubernetes. With a Kubernetes cluster based on Minikube and a CLI tool called kubectl, a few steps will get Shiny servers running.
 
 You will learn how:
 

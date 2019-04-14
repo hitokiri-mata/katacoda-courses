@@ -7,31 +7,32 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Container Registry",
-        "text": "step2-registry.md"
+        "text": "step2-registry.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Nuclio",
-        "text": "step3-nuclio.md"
+        "text": "step3-nuclio.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Nuclio CLI",
-        "text": "step4-nuctl.md"
+        "text": "step4-nuctl.md",
+        "code": "clear.sh"
       },
       {
         "title": "Nuclio Portal",
-        "text": "step5-portal.md"
+        "text": "step5-portal.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy a Function",
         "text": "step6-deploy.md"
-      },
-      {
-        "title": "Removal",
-        "text": "step10-removal.md"
       }
     ],
     "intro": {

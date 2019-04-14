@@ -1,10 +1,11 @@
 # Drone on Kubernetes #
 
-![Drone](/javajon/courses/kubernetes-pipelines/drone/assets/drone-logo_128.png "Drone.")
+<img align="right" src="/javajon/courses/kubernetes-pipelines/drone/assets/drone-logo_128.png">
 
 [Drone](https://www.drone.io) is an [open source](https://github.com/drone/drone) Continuous Delivery platform. A CI/CD pipeline for building and deploying containers. 
 
 ## Configuration as Code ##
+
 Pipelines are configured with a simple, easy‑to‑read file that you commit to your git repository. Each Pipeline step is executed inside an isolated Docker container that is automatically downloaded at runtime.
 
 ## Any Source Code Manager ##
