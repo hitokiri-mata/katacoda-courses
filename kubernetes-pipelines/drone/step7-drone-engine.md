@@ -1,12 +1,8 @@
-Provisioning RabbitMQ on Kubernetes is easily done by invoking this [stable Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
+Install the Drone engine from the public Helm chart.
 
-`helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`helm install stable/drone --name drone --namespace drone --set service.type=NodePort --set service.nodePort=31112`{{execute}}
 
-The RabbitMQ containers start fairly quickly so the Pod status may be already running, creating, or initializing. To get a complete status of the deployment availability run this inspection.
-
-`watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
-
-In a few moments the 3 Pods labeled `pod/my-rabbit-rabbitmq-[1|2|3]` will appear and move to the _Running_ status. Once all are running, discontinue the watch. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+Explore how Drone, the container registry, and Gogs been started on the cluster in their respective namespaces from the Kubernetes Dashboard.
 
 ## Kubernetes Dashboard ##
 

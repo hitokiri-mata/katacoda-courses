@@ -11,40 +11,36 @@
         "text": "step1-k8s.md"
       },
       {
-        "title": "Kubernetes Dashboard",
-        "text": "step2-k8s-dashboard.md"
-      },
-      {
         "title": "Run Drone Locally",
-        "text": "step3-drone-local.md"
+        "text": "step2-drone-local.md"
       },
       {
         "title": "Drone Engine",
-        "text": "step4-drone-engine-intro.md"
+        "text": "step3-drone-engine-intro.md"
       },
       {
         "title": "Install a Persistent Volume",
-        "text": "step5-persistent-volume.md"
+        "text": "step4-persistent-volume.md"
       },
       {
         "title": "Install Git Repo Service, Gogs",
-        "text": "step6-git-service.md"
+        "text": "step5-git-service.md"
       },
       {
         "title": "Container Registry Install",
-        "text": "step7-container-registry.md"
+        "text": "step6-container-registry.md"
       },
       {
         "title": "Drone Engine Install",
-        "text": "step8-drone-engine.md"
+        "text": "step7-drone-engine.md"
       },
       {
         "title": "Drone Dashboard",
-        "text": "step9-drone-dashboard.md"
+        "text": "step8-drone-dashboard.md"
       },
       {
         "title": "Drone Delivery Pipeline",
-        "text": "step10-delivery-pipeline.md"
+        "text": "step9-delivery-pipeline.md"
       }
     ],
     "intro": {
@@ -73,7 +69,6 @@
     ]
     },
   "backend": {
-    "port": 8080,
     "imageid": "kubernetes-cluster-running"
   }
 }

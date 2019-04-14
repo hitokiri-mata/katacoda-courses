@@ -12,7 +12,6 @@
 - Kubernetes and Docker Swarm native
 - CLI available with YAML format for templating and defining functions
 - Scales as demand increases
-- Compatible with Istio mTLS (all health checks are done with exec wget)
 
 You will learn how:
 

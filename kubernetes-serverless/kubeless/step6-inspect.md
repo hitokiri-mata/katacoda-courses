@@ -1,5 +1,3 @@
-# Inspect and Debug Function #
-
 Get a description of the deployed function
 
 `kubeless function describe fibonacci`{{execute}}

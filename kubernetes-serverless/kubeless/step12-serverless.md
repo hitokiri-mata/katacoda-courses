@@ -1,5 +1,3 @@
-# Kubeless with Serverless.com #
-
 Install serverless
 
 `npm install serverless -g`{{execute}}

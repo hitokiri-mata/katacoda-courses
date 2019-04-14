@@ -11,7 +11,7 @@
       {
         "course_id": "openfaas",
         "title": "OpenFaaS",
-        "description": "Building serverless functions with Kubernetes that has first class support for metrics. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding."
+        "description": "Build serverless functions on Kubernetes with first class support for metrics. Package your processes as functions to consume events without repetitive boiler-plate code."
       },
       {
         "course_id": "knative",

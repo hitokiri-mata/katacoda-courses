@@ -4,7 +4,7 @@ First, open a proxy to the Kubernetes API port.
 
 `kubectl proxy &`{{execute}}
 
-Each node provide statistics that ar provided by cAdvisor. Access the node stats with this command.
+Each node provide statistics that are provided by cAdvisor. Access the node stats with this command.
 
 `curl localhost:8001/api/v1/nodes/$(kubectl get nodes -o=jsonpath="{.items[0].metadata.name}")/proxy/stats/`{{execute}}
 

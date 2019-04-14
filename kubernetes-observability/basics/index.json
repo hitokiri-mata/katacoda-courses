@@ -2,7 +2,7 @@
 	"title": "Basic Kubernetes Observability",
 	"description": "Inspection of a Kubernetes cluster",
 	"backend": {
-		"port": 30000,
+		"port": 8080,
 		"imageid": "minikube"
 	},
 	"environment": {

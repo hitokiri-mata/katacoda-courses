@@ -14,20 +14,16 @@
         "text": "step2-install.md"
       },
       {
-        "title": "Install Kubernetes Dashboard",
-        "text": "step3-dashboard.md"
-      },
-      {
         "title": "Deploy Application",
-        "text": "step4-deploy.md"
+        "text": "step3-deploy.md"
       },
       {
         "title": "Invoke Application",
-        "text": "step5-invoke.md"
+        "text": "step4-invoke.md"
       },
       {
         "title": "Delete Application",
-        "text": "step6-delete.md"
+        "text": "step5-delete.md"
       }
     ],
     "intro": {
@@ -54,7 +50,6 @@
     ]
   },
   "backend": {
-    "port": 8080,
     "imageid": "kubernetes-cluster-running"
   }
 }

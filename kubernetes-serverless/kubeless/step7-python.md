@@ -1,5 +1,3 @@
-# Another Simple Python #
-
 To review, here is a very simple Python function. Just two lines:
 
 `cat get.py`{{execute}}

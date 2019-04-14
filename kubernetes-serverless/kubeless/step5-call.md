@@ -1,5 +1,3 @@
-# Call Python Function #
-
 ## Call from CLI ##
 
 Use the Kubeless CLI tool to call the function

@@ -1,5 +1,3 @@
-# Deploy Function with Manifest #
-
 Instead of using the Kubeless CLI, it is possible to deploy Kubeless Functions directly using the Kubernetes API and creating Function objects. A manifest can be defined and submitted to Kubernetes with the `kubectl create` command. Take a look at this example manifest
 
 `cat ruby-example.yaml`{{execute}}

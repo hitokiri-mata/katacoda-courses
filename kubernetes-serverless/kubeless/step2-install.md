@@ -1,5 +1,3 @@
-# Install Kubeless #
-
 As you see, your Kubernetes cluster is started. Verify it's ready for your use.
 
 `kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}

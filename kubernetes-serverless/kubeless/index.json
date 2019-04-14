@@ -3,41 +3,56 @@
   "title": "Kubeless",
   "description": "Discovering how Kubeless runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"30 minutes",
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {
+        "title": "Kubernetes Cluster",
+        "text": "step1-k8s.md"
+      },
+      {
+        "title": "Install Kubeless",
         "text": "step1.md"
       },
       {
-        "text": "step2.md"
+        "title": "Install Kubeless CLI",
+        "text": "step3-cli.md"
       },
       {
-        "text": "step3.md"
+        "title": "Register Python Function",
+        "text": "step4-register.md"
       },
       {
-        "text": "step4.md"
+        "title": "Call Python Function",
+        "text": "step5-call.md"
       },
       {
-        "text": "step5.md"
+        "title": "Inspect and Debug Function",
+        "text": "step6-inspect.md"
       },
       {
-        "text": "step6.md"
+        "title": "Another Simple Python",
+        "text": "step7-python.md"
       },
       {
-        "text": "step7.md"
+        "title": "Understanding Kubeless on Kubernetes",
+        "text": "step8-explore.md"
       },
       {
-        "text": "step8.md"
+        "title": "Deploy Function with Manifest",
+        "text": "step9-manifest.md"
       },
       {
-        "text": "step9.md"
+        "title": "Deploy NodeJS Function",
+        "text": "step10-nodejs.md"
       },
       {
-        "text": "step11.md"
+        "title": "Using Kafka for PubSub Triggers",
+        "text": "step11-kafka.md"
       },
       {
-        "text": "step12.md"
+        "title": "Kubeless with Serverless.com",
+        "text": "step12-serverless.md"
       }
     ],
     "intro": {
