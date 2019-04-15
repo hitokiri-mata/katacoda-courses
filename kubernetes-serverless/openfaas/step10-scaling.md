@@ -10,7 +10,7 @@ Exercise the _figlet_ function.
 
 Put some load on the function by repeating the request in a loop.
 
-`while [ true ]; do curl -so /dev/null -w 'Total: %{time_total}s\n' https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'NFJS'; done;`{{execute}}
+`while [ true ]; do curl -sw 'Total: %{time_total}s\n' https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/function/figlet -d 'NFJS'; done;`{{execute}}
 
 Navigate to the Grafana dashboard and notice the rising Replica scaling value. OpenFaaS is not scaling up new function instances to handle the increased load. Go to the OpenFaaS portal and notice the rising of the replicas with all the invocation counts. Go to the Kubernetes dashboard and in the openfaas-fn namespaces notice all the pods that are scaled up to handle the load.
 
