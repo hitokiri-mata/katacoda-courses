@@ -77,9 +77,9 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
       {"name": "OpenFaaS Portal", "port": 31112},
+      {"name": "Grafana", "port": 31122},
       {"name": "Prometheus", "port": 31120},
-      {"name": "Alerts", "port": 31121},
-      {"name": "Grafana", "port": 31122}
+      {"name": "Alerts", "port": 31121}
     ]
     },
   "backend": {
