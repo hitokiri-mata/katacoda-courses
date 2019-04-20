@@ -1,4 +1,4 @@
-# Install Riff #
+## Install Riff ##
 
 Knative, by design, has no command line interface. It's a server side framework that allows other platforms to produce their own clients and other ways of interacting with Knative and Kubernetes.
 

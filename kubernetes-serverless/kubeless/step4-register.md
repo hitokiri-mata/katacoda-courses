@@ -31,6 +31,6 @@ While the function is deploying inspect the actual Python function source code:
 
 With the deploy command, Kubeless automatically created a Kubernetes deployment and service for your function. Observe that a Deployment containing your function is running and exposed as a service in the default namespace:
 
-Execute this command until _Available_ turns from 0 to 1
+Execute this command until _Available_ turns from 0 to 1.
 
 `kubectl get deployments,pods,services`{{execute}}

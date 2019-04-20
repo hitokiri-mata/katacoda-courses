@@ -7,7 +7,7 @@
   "details": {
     "steps": [
       {
-        "title": "Kubernetes Running for You",
+        "title": "Your Kubernetes Cluster",
         "text": "step1.md",
         "code": "clear.sh"
       },

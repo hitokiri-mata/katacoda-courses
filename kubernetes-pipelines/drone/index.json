@@ -1,4 +1,5 @@
 {
+  "private": true,
   "pathwayTitle": "Drone",
   "title": "Drone",
   "description": "A CI/CD pipeline for building and deploying containers.",

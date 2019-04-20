@@ -7,14 +7,17 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
         "text": "step1.md",
         "code": "clear.sh"
       },
       {
+        "title": "Deploy Nginx with CLI Technique",
         "text": "step2.md",
         "code": "clear.sh"
       },
       {
+        "title": "Deploy Nginx with Manifest Technique",
         "text": "step3.md"
       }
     ],

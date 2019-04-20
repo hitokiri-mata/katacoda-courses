@@ -1,5 +1,3 @@
-# Deploy Nginx, First Technique #
-
 The command-line interface (CLI) used to manage Kubernetes is appropriately named `kubectl`. We will use this tool to install the applications. Verify it's working.
 
 `kubectl version`{{execute}}

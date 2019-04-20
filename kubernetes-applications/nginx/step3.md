@@ -1,8 +1,6 @@
-# Deploy Nginx, Second Technique #
-
 Kubernetes relies on manifests as declarations for desired the state of the cluster. When you submit a manifest, the Kubernetes components such as the controller, scheduler and Kubelets will busily help you by accepting this new state and ensure the cluster matches the declaration you specified. Nothing you do with Kubernetes is scripted with long and imperative scripts, instead a series of declarative manifests simply state the truth and the Kubernetes reconciliation engine (controller) will ensure your statements of truth matches the reality of the cluster. If it does not, notifications can be queried or published.
 
-Let's inspect a declaration for Nginx,
+Inspect the declaration for Nginx.
 
 `cat nginx.yaml`{{execute}}
 
