@@ -25,12 +25,16 @@
         "code": "clear.sh"
       },
       {
+        "title": "Verify Running Stack",
+        "text": "step5-verify.md"
+      },
+      {
         "title": "Generate Log Events",
-        "text": "step5-generate.md"
+        "text": "step6-generate.md"
       },
       {
         "title": "View Log Events",
-        "text": "step6-view.md"
+        "text": "step7-view.md"
       }
     ],
     "intro": {

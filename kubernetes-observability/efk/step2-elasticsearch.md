@@ -23,8 +23,4 @@ Deploy the public Helm chart for ElasticSearch. The chart's default settings are
 --set data.persistence.storageClass=elasticsearch-data \
 --set data.persistence.size=5Gi`{{execute}}
 
-ElasticsSearch will start in a few minutes and you can observe its progress. **Be patient, as it takes time for ElasticSearch to initialize, even with this smaller configuration.**
-
-`watch kubectl get deployments,pods,services --namespace=logs`{{execute}}
-
-Once complete, the 3 Pods will move to the _running_ state. Soon the Deployment status will move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+ElasticsSearch is starting and will become available in a few minutes. In the meantime, move onto the next installation step.
