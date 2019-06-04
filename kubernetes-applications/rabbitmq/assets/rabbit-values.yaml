@@ -1,5 +1,5 @@
 # To install:
-# helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yam
+# helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml
 
 replicas: 3
 
@@ -17,3 +17,6 @@ service:
 rabbitmq:
   username: guest
   password: guest
+
+persistent: 
+  path: /mnt/data/rabbitmq

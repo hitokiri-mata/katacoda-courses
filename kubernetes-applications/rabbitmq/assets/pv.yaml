@@ -1,15 +1,14 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: sonarqube-volume
+  name: rabbitmq-data-volume
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: elasticsearch-data
   capacity:
-    storage: 8Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/opt/bitnami/rabbitmq/var/lib/rabbitmq"
-  
+    path: "/mnt/data/rabbitmq"
