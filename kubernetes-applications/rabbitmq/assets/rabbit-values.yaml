@@ -1,23 +1,11 @@
 # To install:
-# helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml
+# helm install stable/rabbitmq-ha --name my-rabbit --namespace rabbit -f rabbit-values.yaml
 
 replicas: 3
-
-rbacEnabled: false
 
 service:
   type: NodePort 
 
-# SPECIAL NOTE to the stable/rabbitmq chart authors: The chart currently has a 
-# slight problem in svc.yaml where the service.nodePort is being applied to the 
-# wrong port. Instead of applying the NodePort to named _amqp_ port, it should be 
-# applied to the port name _stats_ (the manager ui port).
-#  nodePort: 31000
-
-rabbitmq:
-  username: guest
-  password: guest
-
-persistence:
-  storageClass: rabbitmq-storage
-  path: /mnt/data/rabbitmq
+rabbitmqUsername: guest
+rabbitmqPassword: guest
+rabbitmqNodePort: 31000

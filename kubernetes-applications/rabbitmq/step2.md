@@ -1,14 +1,8 @@
-## Persistent Volume ##
-
-RabbitMQ will be making a PersistentVolumeClaim for its persistence. A PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created.
-
-`mkdir -p /mnt/data/rabbitmq && kubectl create -f pv.yaml`{{execute}}
-
 ## Install ##
 
 Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
-`helm install stable/rabbitmq --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`helm install stable/rabbitmq-ha --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
 The RabbitMQ containers take a few minutes to start. To get a complete status of the deployment availability run this inspection. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_.
 
