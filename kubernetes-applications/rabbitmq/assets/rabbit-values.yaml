@@ -18,5 +18,6 @@ rabbitmq:
   username: guest
   password: guest
 
-persistence: 
+persistence:
+  storageClass: rabbitmq-storage
   path: /mnt/data/rabbitmq
