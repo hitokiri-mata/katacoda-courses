@@ -18,5 +18,5 @@ rabbitmq:
   username: guest
   password: guest
 
-persistent: 
+persistence: 
   path: /mnt/data/rabbitmq
