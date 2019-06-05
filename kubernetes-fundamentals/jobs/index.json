@@ -7,19 +7,23 @@
     "steps": [
       {
         "title": "Run Single Job",
-        "text": "step1-job1.md"
+        "text": "step1-job1.md",
+        "code": "clear.sh"
       },
       {
         "title": "Job from Resource",
-        "text": "step2-job2.md"
+        "text": "step2-job2.md",
+        "code": "clear.sh"
       },
       {
         "title": "Job Failure",
-        "text": "step3-failure.md"
+        "text": "step3-failure.md",
+        "code": "clear.sh"
       },
       {
         "title": "Parallelism",
-        "text": "step4-parallel.md"
+        "text": "step4-parallel.md",
+        "code": "clear.sh"
       },
       {
         "title": "Work Queue",
