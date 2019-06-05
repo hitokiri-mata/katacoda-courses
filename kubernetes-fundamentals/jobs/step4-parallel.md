@@ -12,11 +12,11 @@ First, run the job we ran in the previous step 2 and have it generate 10 keys.
 
 This time we will watch for is the duration result. By inspecting the status times in the job's YAML the duration time can be extracted. It will be about 30-60 seconds before the end time is recorded. If a `syntax error` appears, it just means the `completionTime` has not been recorded yet.
 
-`echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'startTime: .*' | cut -f2- -d:))) seconds"`{{execute}}
+`echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
 Once the seconds number appears, take note of it.
 
-`export SERIAL_DURATION=$(expr $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job oneshot -o yaml | grep -o 'startTime: .*' | cut -f2- -d:)))`{{execute}}
+`export SERIAL_DURATION=$(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime)))`{{execute}}
 
 `echo $SERIAL_DURATION`{{execute}}
 
@@ -42,11 +42,11 @@ Run the jobs in parallel.
 
 Again, by inspecting the status times in the job's YAML the duration time can be extracted. It will be a few moments before the end time is recorded. If a `syntax error` appears, it just means the `completionTime` has not been recorded yet.
 
-`echo "Duration: $(expr $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'startTime: .*' | cut -f2- -d:))) seconds"`{{execute}}
+`echo "Duration: $(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
 Once the seconds number appears, take note of it.
 
-`export PARALLEL_DURATION=$(expr $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'completionTime: .*' | cut -f2- -d:)) - $(date +%s -d $(kubectl get job parallel -o yaml | grep -o 'startTime: .*' | cut -f2- -d:)))`{{execute}}
+`export PARALLEL_DURATION=$(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime)))`{{execute}}
 
 `echo $PARALLEL_DURATION`{{execute}}
 
