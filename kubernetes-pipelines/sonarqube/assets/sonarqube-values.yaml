@@ -9,7 +9,7 @@ service:
 
 persistence:
   storageClass: manual
-  enabled: true
+  enabled: false
   size: 10Gi
   accessMode: ReadWriteOnce
 

@@ -19,4 +19,4 @@ echo -e "\n--- Copy and paste this token for dashboard access --\n$TOKEN\n---"`{
 
 To access the dashboard, click on the _Kubernetes Dashboard_ tab above the command line or from this link: https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/. At the sign in prompt select _Token_ and paste in the token, you copied a moment ago.
 
-> For publicly exposed Kubernetes clusters *always* lock any kind of Kubernetes administration access including [access to the dashboard](https://www.wired.com/story/cryptojacking-tesla-amazon-cloud/).
+> For Kubernetes clusters exposed to the public, *always* lock administration access including [access to the dashboard](https://www.wired.com/story/cryptojacking-tesla-amazon-cloud/).
