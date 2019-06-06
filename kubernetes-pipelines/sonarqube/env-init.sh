@@ -16,4 +16,4 @@ helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort
 
 # Needs Java
 sudo apt-get update
-sudo apt-get install openjdk-8-jdk
+sudo apt-get -y install openjdk-8-jdk

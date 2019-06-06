@@ -16,7 +16,7 @@ The SonarQube service is exposed as a NodePort but at a random value. This chart
 
 `kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-`export SONAR_SERVICE=[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`export SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 `echo $SONAR_SERVICE`{{execute}}
 
@@ -26,7 +26,7 @@ The Postgres database takes a minute or two before it's available. Once healthy,
 
 When its running, it will respond to your request with a HTTP 200 status.
 
-`wget http://$SONAR_SERVICE`{{execute}}
+`wget $SONAR_SERVICE`{{execute}}
 
 View the SonarQube dashboard here: [SonarQube Dashboard](
 https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).

@@ -6,14 +6,8 @@ This project includes a microservice directory that contains a small Spring Boot
 
 `cd code-analysis/microservice`{{execute}}
 
-Ensure gradlew is executable.
-
-`chmod +x gradlew`{{execute}}
-
 Analyze this microservices project using SonarQube as the rule engine and dashboard where the results are published.
 
 `./gradlew -Dsonar.host.url=$SONAR_SERVICE sonarqube`{{execute}}
 
 Once complete, navigate to the SonarQube portal and observed the analyzed project. The portal can be reach from the tab labeled "SonarQube Portal" above this command line or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
-
-The default login is admin/admin.
