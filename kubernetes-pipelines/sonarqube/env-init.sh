@@ -13,3 +13,7 @@ helm repo update
 helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30000 --set=service.externalPort=80 --namespace kube-system
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
+
+# Needs Java
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk

@@ -8,10 +8,6 @@ Jenkins will be making two PersistentVolumeClaims, one for SonarQube and one for
 
 Using Helm, install the SonarQube Helm chart with a few custom values.
 
-> Note, blocking defect: After the next step with a Helm install the Sonarqube pod is failing currently for an unknown reason.
-
-----
-
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
 This chart bootstraps a SonarQube instance along with a PostgreSQL database. 
@@ -20,7 +16,7 @@ The SonarQube service is exposed as a NodePort but at a random value. This chart
 
 `kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-`export SONAR_SERVICE=[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]]`{{execute}}
+`export SONAR_SERVICE=[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 `echo $SONAR_SERVICE`{{execute}}
 
@@ -28,7 +24,7 @@ The Postgres database takes a minute or two before it's available. Once healthy,
 
 `kubectl get deployments,pods,services -n sonarqube`{{execute}}
 
-When its running, it will respond to your request.
+When its running, it will respond to your request with a HTTP 200 status.
 
 `wget http://$SONAR_SERVICE`{{execute}}
 
