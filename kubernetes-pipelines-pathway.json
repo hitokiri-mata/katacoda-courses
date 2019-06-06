@@ -25,7 +25,7 @@
       },
       {
         "course_id": "sonarqube",
-        "title": "SonarQube (coming soon)",
+        "title": "SonarQube",
         "description": "Static Code Analysis with SonarQube on Kubernetes."
       }
     ]

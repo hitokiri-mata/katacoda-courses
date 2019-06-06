@@ -1,5 +1,5 @@
 {
-  "pathwayTitle": "SonarQube",
+  "pathwayTitle":   "SonarQube",
   "title": "SonarQube",
   "description": "Code Analysis with SonarQube on Kubernetes.",
   "difficulty":	"Introduction",

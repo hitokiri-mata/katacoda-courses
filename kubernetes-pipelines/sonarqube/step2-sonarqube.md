@@ -32,3 +32,5 @@ View the SonarQube dashboard here: [SonarQube Dashboard](
 https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).
 
 With SonarQube running it's now ready to analyze a project.
+
+You can login as admin / admin.
