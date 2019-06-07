@@ -21,8 +21,10 @@ postgresql:
 sonarProperties:
   sonar.forceAuthentication=false
 
+# https://docs.sonarqube.org/display/PLUG/Plugin+Version+Matrix
 plugins:
   install:
-    - 'https://github.com/SonarQubeCommunity/sonar-pmd/releases/download/3.2.0/sonar-pmd-plugin-3.2.0.jar'
+    - 'https://binaries.sonarsource.com/Distribution/sonar-java-plugin/sonar-java-plugin-5.13.0.18197.jar`
+    - 'https://github.com/SonarQubeCommunity/sonar-pmd/releases/download/3.2.1/sonar-pmd-plugin-3.2.1.jar'
     - 'https://github.com/spotbugs/sonar-findbugs/releases/download/3.11.0/sonar-findbugs-plugin-3.11.0.jar'
     - 'https://github.com/checkstyle/sonar-checkstyle/releases/download/4.20/checkstyle-sonar-plugin-4.20.jar'
