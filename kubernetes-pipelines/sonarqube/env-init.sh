@@ -14,6 +14,6 @@ helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
 
-# Needs Java
-sudo apt-get update
-sudo apt-get -y install openjdk-8-jdk
+# Need Java for Gradle build
+sudo apt-get update --fix-missing
+apt install -y openjdk-8-jdk-headless --fix-missing
