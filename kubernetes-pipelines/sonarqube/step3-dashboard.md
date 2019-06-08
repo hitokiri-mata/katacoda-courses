@@ -7,4 +7,4 @@ https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).
 
 You can login as admin / admin and view the pre-installed select plugins.
 
-Notice the number of analyzed projects is zero. With SonarQube running it's now ready to analyze a project.
+Notice the dashboard reports the number of analyzed projects is zero. With SonarQube running it's now ready to analyze a project.
