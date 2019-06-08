@@ -2,7 +2,7 @@
 
 ![SonarQube](/javajon/courses/kubernetes-pipelines/sonarqube/assets/sonarqube.png "Code Analysis with SonarQube on Kubernetes.")
 
-> [SonarQube](https://www.sonarqube.com) is an open source platform developed by SonarSource for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities on 20+ programming languages. SonarQube offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. [-- Wikipedia](https://en.wikipedia.org/wiki/sonarqube)
+> [SonarQube](https://www.sonarqube.com) is an open source platform developed by SonarSource for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities on 25+ programming languages. SonarQube offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. [-- Wikipedia](https://en.wikipedia.org/wiki/sonarqube)
 
 Setting up your SonarQube services as fragile [snowflakes](https://martinfowler.com/bliki/SnowflakeServer.html) is both common and not a recommended technique. Any developer should be able to quickly start a personal SonarQube service as well as rely on a team's service that matches the same behaviors. The latest SonarQube version, it's plugins and it's configurations should also be easily adjustable. Your software development lifecycle processes (SDLC) should embrace the versioned configuration and deployment of SonarQube across a variety of [cattle (not pets)](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) targets.
 
