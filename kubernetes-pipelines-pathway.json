@@ -21,7 +21,7 @@
       {
         "course_id": "drone",
         "title": "Drone (coming soon)",
-        "description": "Run Drone on Kubernetes. Use containers to drop pre‑configured steps into your pipeline. Choose from hundreds of existing containered plugins, or create your own."
+        "description": "Run Drone on Kubernetes. Use containers to drop pre‑configured steps into your pipeline."
       },
       {
         "course_id": "sonarqube",
