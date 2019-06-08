@@ -10,7 +10,7 @@ Analyze this microservices project using SonarQube as the rule engine and dashbo
 
 Get the SonarQube engine location.
 
-`SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`
+`SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 Run the analysis. This will take a few minutes.
 
