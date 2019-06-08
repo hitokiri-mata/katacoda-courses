@@ -6,6 +6,6 @@ ABAP · Apex · C/C++ · C# · CSS · COBOL · Flex · Go · HTML · Java · Jav
 
 More language and features are discussed in the [community forum](https://community.sonarsource.com/) and [roadmap](https://www.sonarqube.org/roadmap/).
 
-Along with the growing language support is a [rich ecosystem of 60+ plugins](https://docs.sonarqube.org/display/PLUG/Plugin+Library) driven by the SonarSource community.
+Along with the growing language support is a [rich ecosystem of 70+ plugins](https://docs.sonarqube.org/display/PLUG/Plugin+Library) driven by the SonarSource community.
 
-Sonarqube teaches all of us to [become better engineers](https://en.wikipedia.org/wiki/List_of_software_bugs). Consider contributing to their open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).
+Sonarqube and its community of plugins teaches all of us to [become better engineers](https://en.wikipedia.org/wiki/List_of_software_bugs). Consider contributing to these open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).

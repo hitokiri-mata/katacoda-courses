@@ -1,6 +1,6 @@
 ## Persistent Volume ##
 
-Jenkins will be making two PersistentVolumeClaims, one for SonarQube and one for the Postgres database. A PersistentVolume will be needed for each. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created for both.
+Sonarqube will be making two PersistentVolumeClaims, one for SonarQube and one for the Postgres database. A PersistentVolume will be needed for each. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created for both.
 
 `mkdir -p /mnt/data/postgres && kubectl create -f pv-postgres.yaml`{{execute}}
 
@@ -12,8 +12,8 @@ Using Helm, install the SonarQube Helm chart with a few custom values.
 
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
-This chart bootstraps a SonarQube instance along with a PostgreSQL database. Sonarqube also loads several plugins defined in the Helm chart configuration. The Sonarqube server takes about 4-5 minutes to start. To get a complete status of the deployment availability run this inspection.
+This chart bootstraps a SonarQube instance along with a PostgreSQL database. Sonarqube also loads several plugins defined in the Helm chart configuration. To get a complete status of the deployment availability run this inspection.
 
 `watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+Once complete, the Pods will move to the _running_ state. The Sonarqube server takes about 4-5 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
