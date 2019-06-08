@@ -8,4 +8,4 @@ More language and features are discussed in the [community forum](https://commun
 
 Along with the growing language support is a [rich ecosystem of 60+ plugins](https://docs.sonarqube.org/display/PLUG/Plugin+Library) driven by the SonarSource community.
 
-Consider contributing to their open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).
+Sonarqube teaches all of us to [become better engineers](https://en.wikipedia.org/wiki/List_of_software_bugs). Consider contributing to their open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).
