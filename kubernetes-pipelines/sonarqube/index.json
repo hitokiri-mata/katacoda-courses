@@ -1,26 +1,39 @@
 {
-  "pathwayTitle":   "SonarQube",
+  "pathwayTitle": "SonarQube",
   "title": "SonarQube",
   "description": "Code Analysis with SonarQube on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"10 minutes",
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Start SonarQube",
-        "text": "step2-sonarqube.md"
+        "text": "step2-sonarqube.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Sonarqube Dashboard",
+        "text": "step3-dashboard.md",
+        "code": "clear.sh"
       },
       {
         "title": "Analyze Project with SonarQube",
-        "text": "step3-analyze.md"
+        "text": "step4-analyze.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Sonarqube Community",
+        "text": "step5-options.md",
+        "code": "clear.sh"
       },
       {
         "title": "Static Analysis with Gradle",
-        "text": "step4-additional.md"
+        "text": "step6-additional.md"
       }
     ],
     "intro": {

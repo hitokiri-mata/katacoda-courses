@@ -1,4 +1,4 @@
-First, clone an example Java project.
+Clone an example Java project.
 
 `git clone https://github.com/javajon/code-analysis`{{execute}}
 

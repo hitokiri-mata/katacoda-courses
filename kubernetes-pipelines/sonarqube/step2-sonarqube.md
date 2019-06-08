@@ -6,32 +6,14 @@ Jenkins will be making two PersistentVolumeClaims, one for SonarQube and one for
 
 `mkdir -p /mnt/data/sonarqube && kubectl create -f pv-sonarqube.yaml`{{execute}}
 
+## Install ##
+
 Using Helm, install the SonarQube Helm chart with a few custom values.
 
 `helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
-This chart bootstraps a SonarQube instance along with a PostgreSQL database. 
+This chart bootstraps a SonarQube instance along with a PostgreSQL database. Sonarqube also loads several plugins defined in the Helm chart configuration. The Sonarqube server takes about 1-2 minutes to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection
 
-The SonarQube service is exposed as a NodePort but at a random value. This chart does not allow the NodePort value to be assigned. For Katacode to offer a URL to the service, the NodePort must adjusted to a known number, 31111. A workaround is to apply a patch to the port value.
+`watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}.
 
-`kubectl patch service sonar-sonarqube -n sonarqube --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
-
-`export SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
-
-`echo $SONAR_SERVICE`{{execute}}
-
-The Postgres database takes a minute or two before it's available. Once healthy, the deployments will register as _available_ (1).
-
-`kubectl get deployments,pods,services -n sonarqube`{{execute}}
-
-When its running, it will respond to your request with a HTTP 200 status.
-
-`wget $SONAR_SERVICE`{{execute}}
-
-View the SonarQube dashboard here: [SonarQube Dashboard](
-https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).
-
-With SonarQube running it's now ready to analyze a project.
-
-You can login as admin / admin.
-z   
+Once complete, the Pods will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
