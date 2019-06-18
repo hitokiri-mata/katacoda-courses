@@ -8,7 +8,11 @@ Add the Harbor chart report to Helm.
 
 Install Harbor from the Helm chart.
 
-`helm install --name harbor harbor/harbor --namespace harbor`{{execute}}
+`helm install --name harbor harbor/harbor --namespace harbor \
+--set persistence.enabled=false \
+--set expose.tls.enabled=false \
+--set expose.type=nodePort \
+--set expose.nodePort.ports.http.nodePort=31500`{{execute}}
 
 The registry is now available as a service. It can be listed.
 
@@ -16,17 +20,20 @@ The registry is now available as a service. It can be listed.
 
 The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so its necessary to consistently refer to the registry from the command line and from within the cluster. In this scenario case we can simply use 127.0.0.0. Use port-forward to expose the registry.
 
-`kubectl port-forward --namespace kube-system \
-$(kubectl get po -n kube-system | grep private-docker-registry | \
+`kubectl port-forward --namespace harbor \
+$(kubectl get po -n harbor | grep harbor-registry | \
 awk '{print $1;}') 5000:5000 &`{{execute}}
 
 Assign an environment variable to the common registry location.
 
 `export REGISTRY=127.0.0.1:31500`{{execute}}
 
-It will be a few moments before the registry deployment reports it's _Available_ with a _1_.
 
-`kubectl get deployments private-docker-registry --namespace kube-system`{{execute}}
+This chart bootstraps a Harbor instance consisting of several deployed components. To get a complete status of the deployment availability run this inspection.
+
+`watch kubectl get deployments,pods,services --namespace harbor`{{execute}}
+
+Once complete, the Pods will move to the _running_ state. The Harbor server takes about 2 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 Once the registry is serving, inspect the contents of the empty registry.
 

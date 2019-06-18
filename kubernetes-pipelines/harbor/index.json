@@ -56,8 +56,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Registry", "port": 31000},
-      {"name": "Cancer Detector", "port": 32500}  
+      {"name": "Harbor", "port": 31500}
     ]
     },
   "backend": {
