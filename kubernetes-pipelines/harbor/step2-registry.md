@@ -14,6 +14,14 @@ Install Harbor from the Helm chart.
 --set expose.type=nodePort \
 --set expose.nodePort.ports.http.nodePort=31500`{{execute}}
 
+A few of the persistence and security features have been disabled for this Katacoda example. 
+
+This chart bootstraps a Harbor instance consisting of several deployed components. To get a complete status of the deployment availability run this inspection.
+
+`watch kubectl get deployments --namespace harbor`{{execute}}
+
+Once complete, the Pods will move to the _running_ state. The Harbor server takes about 2 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+
 The registry is now available as a service. It can be listed.
 
 `kubectl get service --namespace harbor`{{execute}}
@@ -27,13 +35,6 @@ awk '{print $1;}') 5000:5000 &`{{execute}}
 Assign an environment variable to the common registry location.
 
 `export REGISTRY=127.0.0.1:31500`{{execute}}
-
-
-This chart bootstraps a Harbor instance consisting of several deployed components. To get a complete status of the deployment availability run this inspection.
-
-`watch kubectl get deployments,pods,services --namespace harbor`{{execute}}
-
-Once complete, the Pods will move to the _running_ state. The Harbor server takes about 2 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
 
 Once the registry is serving, inspect the contents of the empty registry.
 
