@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "title": "Harbor Registry",
+  "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning.",
+  "difficulty":	"Intermediate",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Harbor Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Registry Web Interface",
+        "text": "step3-ui.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Push the Container",
+        "text": "step4-populate.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Pull the Container",
+        "text": "step5-run.md"
+      },
+      {
+        "title": "Explore Clare",
+        "text": "step6-clare.md"
+      }
+  ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "~/"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Registry", "port": 31000},
+      {"name": "Cancer Detector", "port": 32500}  
+    ]
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

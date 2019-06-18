@@ -9,6 +9,11 @@
         "description": "Learn how to setup and interact with a private container registry on Kubernetes."
       },
       {
+        "course_id": "harbor",
+        "title": "Harbor Registry",
+        "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning."
+      },
+      {
         "course_id": "helm",
         "title": "Helm",
         "description": "Learn how to use Helm, a package manager for Kubernetes."
