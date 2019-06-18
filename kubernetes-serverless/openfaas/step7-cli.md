@@ -10,6 +10,10 @@ View the functions that were just submitted.
 
 `faas-cli list --verbose`{{execute}}
 
+You can also ask Kubernetes to list the same functions.
+
+`kubectl get services,pods --namespace openfaas-fn`{{execute}}
+
 One of the functions is _Markdown_. Here are two ways to invoke the function.
 
 `echo Hi | faas-cli invoke markdown`{{execute}}
