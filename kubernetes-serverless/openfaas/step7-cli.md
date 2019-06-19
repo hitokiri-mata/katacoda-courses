@@ -1,4 +1,21 @@
-OpenFaaS is now ready to do some work. You can quickly get started by registering a stack of pre-built functions by submitting a single YAML file. See how these pre-defined functions are declared.
+OpenFaaS is now ready to do some work. 
+
+## Store Functions ##
+
+A variety of pre-built functions are available in the OpenFaaS store. The [Function Store](https://github.com/openfaas/store) is a curated index of OpenFaaS functions which have been tested by the community and chosen for their experience. List the functions in the store.
+
+`faas-cli store list`{{execute}}
+
+Deploy the Cows function and invoke it a few times.
+
+`faas-cli store deploy "ASCII Cows"`{{execute}}
+
+`echo 10 | faas-cli invoke cows`{{execute}}
+
+We hope this is an utterly mooving experience for you. If not, ruminate on the next step.
+
+## Loading a Library ##
+You can register a bundle of pre-built functions by submitting a single YAML file. See how these pre-defined functions are declared.
 
 `curl https://raw.githubusercontent.com/openfaas/faas/master/stack.yml`{{execute}}
 
@@ -18,7 +35,7 @@ One of the functions is _Markdown_. Here are two ways to invoke the function.
 
 `echo Hi | faas-cli invoke markdown`{{execute}}
 
-If this command does not come back readily, then it's still initializing and probably stuck. If stuck, ctrl-c and try again. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+The first time this is invoked it takes a few moments for the Deployment to initialize, but once invoke the subsequent calls are fast.
 
 `uname -a | faas-cli invoke markdown`{{execute}}
 

@@ -8,11 +8,7 @@ _faas-cli_ cannot work until you login to the gateway. Commands like this will r
 
 `faas-cli list`{{execute}}
 
-At this point there is an OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands require this gateway as a parameter. To reduce the verbosity the gateway can be stored as an environment variable. If you were running Minikube locally, the command would be
-
-`export OPENFAAS_URL=$(minikube service gateway-external --namespace openfaas --url)`
-
-However, since Katacoda's Kubernetes server is virtualized the gateway is slightly different.
+At this point there is an OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands require this gateway as a parameter. To reduce the verbosity the gateway here is stored as an environment variable.
 
 `export OPENFAAS_URL=https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
