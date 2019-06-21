@@ -19,7 +19,7 @@ postgresql:
     storageClass: manual
 
 sonarProperties:
-  sonar.forceAuthentication=false
+  sonar.forceAuthentication: false
 
 # https://docs.sonarqube.org/display/PLUG/Plugin+Version+Matrix
 plugins:

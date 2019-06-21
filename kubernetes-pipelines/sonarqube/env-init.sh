@@ -17,3 +17,4 @@ helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort
 # Need Java for Gradle build
 sudo apt-get update --fix-missing
 apt install -y openjdk-8-jdk-headless --fix-missing
+export JAVA_HOME=/usr/lib/jvm/default-java
