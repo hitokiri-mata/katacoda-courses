@@ -18,4 +18,4 @@ Run the analysis.
 
 `./gradlew -Dsonar.host.url=$SONAR_SERVICE sonarqube`{{execute}}
 
-This tutorial is running on a free Katacoda servers, so the resources are relatively slower so the analysis will take about 15 minutes. Once complete, navigate to the SonarQube portal and observed the analyzed project. The portal can be reach from the tab labeled _SonarQube Portal_ above this command line or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+The analysis will take about 1-2 minutes. Once complete, navigate to the SonarQube portal and observed the analyzed project. The portal can be reach from the tab labeled _SonarQube Portal_ above this command line or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
