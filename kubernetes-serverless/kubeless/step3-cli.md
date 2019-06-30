@@ -4,7 +4,7 @@ Kubeless has a command-line interface (CLI) tool named appropriately `kubeless`.
 
 `unzip -Cj kubeless.zip "bundles/kubeless_linux-amd64/kubeless" -d /usr/local/bin`{{execute}}
 
-This tool version will match the controller installed in the next step. Verify this CLI is working by inspecting its current version
+This tool version will match the controller installed in the next step. Verify this CLI is working by inspecting its current version.
 
 `kubeless --help && kubeless version`{{execute}}
 

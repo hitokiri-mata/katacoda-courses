@@ -8,27 +8,33 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-kubernetes.md"
+        "text": "step1-kubernetes.md",
+        "code": "clear.sh"
       },
       {
         "title": "Container Registry",
-        "text": "step2-registry.md"
+        "text": "step2-registry.md",
+        "code": "clear.sh"
       },
       {
         "title": "Application Source Code",
-        "text": "step3-source-code.md"
+        "text": "step3-source-code.md",
+        "code": "clear.sh"
       },
       {
         "title": "Build Container Image",
-        "text": "step4-build.md"
+        "text": "step4-build.md",
+        "code": "clear.sh"
       },
       {
         "title": "Helm Chart",
-        "text": "step5-helm.md"
+        "text": "step5-helm.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Application",
-        "text": "step6-deploy.md"
+        "text": "step6-deploy.md",
+        "code": "clear.sh"
       },
       {
         "title": "Use Application",

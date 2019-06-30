@@ -9,35 +9,43 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Run Drone Locally",
-        "text": "step2-drone-local.md"
+        "text": "step2-drone-local.md",
+        "code": "clear.sh"
       },
       {
         "title": "Drone Engine",
-        "text": "step3-drone-engine-intro.md"
+        "text": "step3-drone-engine-intro.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install a Persistent Volume",
-        "text": "step4-persistent-volume.md"
+        "text": "step4-persistent-volume.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Git Repo Service, Gogs",
-        "text": "step5-git-service.md"
+        "text": "step5-git-service.md",
+        "code": "clear.sh"
       },
       {
         "title": "Container Registry Install",
-        "text": "step6-container-registry.md"
+        "text": "step6-container-registry.md",
+        "code": "clear.sh"
       },
       {
         "title": "Drone Engine Install",
-        "text": "step7-drone-engine.md"
+        "text": "step7-drone-engine.md",
+        "code": "clear.sh"
       },
       {
         "title": "Drone Dashboard",
-        "text": "step8-drone-dashboard.md"
+        "text": "step8-drone-dashboard.md",
+        "code": "clear.sh"
       },
       {
         "title": "Drone Delivery Pipeline",

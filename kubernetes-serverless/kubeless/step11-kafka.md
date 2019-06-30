@@ -1,4 +1,4 @@
-**Note: This step is under construction and currently not complete.**
+**Note: This step is under construction and currently not complete. (TODO) **
 
 You can trigger any Kubeless function by a [PubSub mechanism](https://kubeless.io/docs/pubsub-functions/). The PubSub function is expected to consume input messages from a predefined topic from a messaging system. Kubeless currently supports using events from Kafka and NATS messaging systems.
 

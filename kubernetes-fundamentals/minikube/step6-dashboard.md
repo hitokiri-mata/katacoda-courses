@@ -1,4 +1,4 @@
-Another Addon that is enabled is the standard Kubernetes dashboard. Ensure the dashboard addon is enabled.
+Another Addon is the standard Kubernetes dashboard. Ensure the dashboard addon is enabled.
 
 `minikube addons enable dashboard`{{execute}}
 

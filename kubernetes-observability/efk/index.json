@@ -7,7 +7,8 @@
     "steps": [
       { 
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       { 
         "title": "Deploy ElasticSearch",
@@ -26,11 +27,13 @@
       },
       {
         "title": "Verify Running Stack",
-        "text": "step5-verify.md"
+        "text": "step5-verify.md",
+        "code": "clear.sh"
       },
       {
         "title": "Generate Log Events",
-        "text": "step6-generate.md"
+        "text": "step6-generate.md",
+        "code": "clear.sh"
       },
       {
         "title": "View Log Events",

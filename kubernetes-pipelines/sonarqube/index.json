@@ -17,7 +17,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Sonarqube Dashboard",
+        "title": "SonarQube Dashboard",
         "text": "step3-dashboard.md",
         "code": "clear.sh"
       },
@@ -27,7 +27,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Sonarqube Community",
+        "title": "SonarQube Community",
         "text": "step5-options.md",
         "code": "clear.sh"
       },

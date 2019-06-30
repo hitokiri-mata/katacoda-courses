@@ -8,7 +8,7 @@ Both ConfigMaps and Secrets are stored in etcd, but the way you submit secrets i
 
 `kubectl get secret db-password -o yaml`{{execute}}
 
-Notice when the secret is returned its not the same string that was passed in, `password: TXlEYlBhc3N3MHJk`. It _is_ the same data, just _encoded_ in 64bit form. Kubernetes stores the data assigned to a secret in 64 bit form. __Never__ confuse _encoding_ with _encryption_, as they are two very different concepts. Values encoded are not encrypted. The encoding is to allow a wider variety of values for secrets. You can easily decode the text with a simple _base64_ command to reveal the original password text.
+Notice when the secret is returned it's not the same string that was passed in, `password: TXlEYlBhc3N3MHJk`. It _is_ the same data, just _encoded_ in 64bit form. Kubernetes stores the data assigned to a secret in 64 bit form. __Never__ confuse _encoding_ with _encryption_, as they are two very different concepts. Values encoded are not encrypted. The encoding is to allow a wider variety of values for secrets. You can easily decode the text with a simple _base64_ command to reveal the original password text.
 
 `echo "TXlEYlBhc3N3MHJkCg==" | base64 --decode`{{execute}}
 
@@ -34,4 +34,4 @@ When first creating the YAML file you can skip using the _base64_ command and in
 
 `cat my-secret.yaml`{{execute}}
 
-In this step we see how secrets are created and submitted as a resources to Kubernetes. The next step is to read the secrets.
+In this step we see how secrets are created and submitted as a resources to Kubernetes. The next step will  read these secrets.

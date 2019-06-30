@@ -7,7 +7,7 @@ The goal of this scenario was to show some of the fundamental techniques. Not co
 With these steps you have learned:
 
 - How to access the metrics and information in cAdvisor,
-- How to inspect Kubernetes resources, 
+- How to inspect Kubernetes resources,
 - How to leverage Heapster.
 
 ------

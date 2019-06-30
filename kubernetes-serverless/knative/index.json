@@ -7,19 +7,23 @@
     "steps": [
       {
         "title": "Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Knative",
-        "text": "step2-install.md"
+        "text": "step2-install.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Application",
-        "text": "step3-deploy.md"
+        "text": "step3-deploy.md",
+        "code": "clear.sh"
       },
       {
         "title": "Invoke Application",
-        "text": "step4-invoke.md"
+        "text": "step4-invoke.md",
+        "code": "clear.sh"
       },
       {
         "title": "Delete Application",

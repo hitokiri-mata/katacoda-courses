@@ -7,27 +7,33 @@
     "steps": [
       {
         "title": "Minikube",
-        "text": "step1-minikube.md"
+        "text": "step1-minikube.md",
+        "code": "clear.sh"
       },
       {
         "title": "Create",
-        "text": "step2-create.md"
+        "text": "step2-create.md",
+        "code": "clear.sh"
       },
       {
         "title": "Command Line Arguments",
-        "text": "step3-via-cli.md"
+        "text": "step3-via-cli.md",
+        "code": "clear.sh"
       },
       {
         "title": "Environment Variables",
-        "text": "step4-via-env.md"
+        "text": "step4-via-env.md",
+        "code": "clear.sh"
       },
       {
         "title": "Volume Mounts",
-        "text": "step5-via-volume.md"
+        "text": "step5-via-volume.md",
+        "code": "clear.sh"
       },
       {
         "title": "Create Secret",
-        "text": "step6-secret-create.md"
+        "text": "step6-secret-create.md",
+        "code": "clear.sh"
       },
       {
         "title": "Read Secret",

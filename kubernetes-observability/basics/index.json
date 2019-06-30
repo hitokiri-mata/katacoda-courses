@@ -17,18 +17,26 @@
 	  },	"details": {
 		"steps": [{
 			"title": "Cluster up and running",
-			"text": "step1-minikube.md"
-		}, {
+			"text": "step1-minikube.md",
+			"code": "clear.sh"
+		}, 
+		{
 			"title": "cAdvisor",
-			"text": "step2-cadvisor.md"
-		}, {
+			"text": "step2-cadvisor.md",
+			"code": "clear.sh"
+		}, 
+		{
 			"title": "Sample Application",
-			"text": "step3-app.md"
-		}, {
+			"text": "step3-app.md",
+			"code": "clear.sh"
+		}, 
+		{
 			"title": "Resource Inspection with KubeCtl",
-			"text": "step4-kubectl.md"
-		}, {
-			"title": "Heapster",
+			"text": "step4-kubectl.md",
+			"code": "clear.sh"
+		}, 
+		{
+			"title": "Metrics Server",
 			"text": "step5-metrics-server.md"
 		}],
 		"intro": {

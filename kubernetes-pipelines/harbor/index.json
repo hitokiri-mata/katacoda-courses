@@ -28,7 +28,8 @@
       },
       {
         "title": "Pull the Container",
-        "text": "step5-run.md"
+        "text": "step5-run.md",
+        "code": "clear.sh"
       },
       {
         "title": "Explore Clare",
@@ -42,11 +43,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {"file": "*.yaml", "target": "~/"}
-      ]
     }
   },
   "environment": {

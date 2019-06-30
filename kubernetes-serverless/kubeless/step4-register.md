@@ -1,4 +1,4 @@
-Kubeless supports a variety of languages and versions out of the box. To see the list of runtimes use this command
+Kubeless supports a variety of languages and versions out of the box. To see the list of runtimes use this command.
 
 `kubeless get-server-config`{{execute}}
 

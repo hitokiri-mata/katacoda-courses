@@ -8,23 +8,28 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Riff",
-        "text": "step2-init.md"
+        "text": "step2-init.md",
+        "code": "clear.sh"
       },
       {
         "title": "Initialize Riff",
-        "text": "step3-install.md"
+        "text": "step3-install.md",
+        "code": "clear.sh"
       },
       {
         "title": "Create Function",
-        "text": "step4-create.md"
+        "text": "step4-create.md",
+        "code": "clear.sh"
       },
       {
         "title": "Invoke Function",
-        "text": "step5-invoke.md"
+        "text": "step5-invoke.md",
+        "code": "clear.sh"
       },
       {
         "title": "Delete Function",

@@ -1,4 +1,5 @@
 ## Example Project ##
+
 Clone an example Java project.
 
 `git clone https://github.com/javajon/code-analysis`{{execute}}
@@ -8,6 +9,7 @@ This project includes a microservice directory that contains a small Spring Boot
 `cd code-analysis/microservice`{{execute}}
 
 ## Analysis ##
+
 Analyze this microservices project using SonarQube as the rule engine and dashboard where the results are published.
 
 Get the SonarQube engine location.

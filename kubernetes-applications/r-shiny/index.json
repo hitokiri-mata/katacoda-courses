@@ -23,8 +23,7 @@
       },
       {
         "title": "Shiny on Kubernetes",
-        "text": "step4.md",
-        "code": "clear.sh"
+        "text": "step4.md"
       }
     ],
     "intro": {

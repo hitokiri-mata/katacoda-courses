@@ -9,12 +9,15 @@
 Pipelines are configured with a simple, easy‑to‑read file that you commit to your git repository. Each Pipeline step is executed inside an isolated Docker container that is automatically downloaded at runtime.
 
 ## Any Source Code Manager ##
+
 Drone integrates seamlessly with multiple source code management systems, including GitHub, GitHubEnterprise, Bitbucket, and GitLab.
 
 ## Any Platform ##
+
 Drone natively supports multiple operating systems and architectures, including Linux x64, ARM, ARM64 and Windows x64.
 
 ## Any Language ##
+
 Drone works with any language, database or service that runs inside a Docker container. Choose from thousands of public Docker images or provide your own.
 
 You will learn how:

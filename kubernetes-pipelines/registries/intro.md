@@ -2,7 +2,7 @@
 
 <img align="right" src="/javajon/courses/kubernetes-pipelines/registries/assets/registry.png">
 
-As a developer of container and Kubernetes solutions there is often a need to publish containers to a private registry. When we are prototyping or testing its handy to setup a local registry that just you or a small group can leverage. Kubernetes is ideal for hosting this solution. 
+As a developer of container and Kubernetes solutions there is often a need to publish containers to a private registry. When we are prototyping or testing it's handy to setup a local registry that just you or a small group can leverage. Kubernetes is ideal for hosting this solution. 
 
 The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images. The Registry is open-source, under the permissive [Apache license](http://en.wikipedia.org/wiki/Apache_License).
 

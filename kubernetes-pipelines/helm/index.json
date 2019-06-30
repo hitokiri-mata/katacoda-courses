@@ -6,42 +6,50 @@
     "time":	"25 minutes",
     "details": {
         "steps": [
-            {
-                "title": "Install Helm",
-                "text": "step1-install.md"
-            },
-            {
-                "title": "Search For Redis Chart",
-                "text": "step2-search.md"
-            },
-            {
-                "title": "Deploy Redis",
-                "text": "step3-deploy.md"
-            },
-            {
-                "title": "Observe Redis",
-                "text": "step4-observe.md"
-            },
-            {
-                "title": "Remove Redis",
-                "text": "step5-remove.md"
-            },
-            {
-                "title": "Explore Repositories",
-                "text": "step6-explore.md"
-            },
-            {
-                "title": "Add Repositories",
-                "text": "step7-add-repo.md"
-            },
-            {
-                "title": "Create Chart",
-                "text": "step8-create.md"
-            },
-            {
-                "title": "Update Chart",
-                "text": "step9-update.md"
-            }
+        {
+            "title": "Install Helm",
+            "text": "step1-install.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Search For Redis Chart",
+            "text": "step2-search.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Deploy Redis",
+            "text": "step3-deploy.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Observe Redis",
+            "text": "step4-observe.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Remove Redis",
+            "text": "step5-remove.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Explore Repositories",
+            "text": "step6-explore.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Add Repositories",
+            "text": "step7-add-repo.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Create Chart",
+            "text": "step8-create.md",
+            "code": "clear.sh"
+        },
+        {
+            "title": "Update Chart",
+            "text": "step9-update.md"
+        }
         ],
         "intro": {
             "text": "intro.md",

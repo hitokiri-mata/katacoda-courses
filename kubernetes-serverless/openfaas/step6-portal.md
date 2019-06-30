@@ -4,4 +4,4 @@ To access the portal use the same user name (`admin`) and password that was appl
 
 Instead of using the CLI tool you can also interact with OpenFaaS through its portal. On the right there is a tab called _OpenFaaS Portal_ or it can be accessed from this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/
 
- For visibility and understanding, leave this tab open for the subsequent steps.
+For visibility and understanding, leave this tab open for the subsequent steps.

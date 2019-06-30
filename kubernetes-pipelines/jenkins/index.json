@@ -8,19 +8,23 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Monitoring",
-        "text": "step2-monitoring.md"
+        "text": "step2-monitoring.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Jenkins",
-        "text": "step3-install-jenkins.md"
+        "text": "step3-install-jenkins.md",
+        "code": "clear.sh"
       },
       {
         "title": "Canary Deployment",
-        "text": "step4-canary-deploy.md"
+        "text": "step4-canary-deploy.md",
+        "code": "clear.sh"
       },
       {
         "title": "Exercise Deployed Application",

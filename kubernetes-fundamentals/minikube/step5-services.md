@@ -8,4 +8,4 @@ The URLs for these services can be listed.
 
 `minikube service --namespace kube-system monitoring-grafana --url`{{execute}}
 
-Because of the Katacoda virtualization these URLs are not accessible from your browser, however they can be reached with Katacode URLs described in the next step.
+With this Katacoda virtualization these URLs are not accessible from your browser, however they can be reached with Katacode URLs described in the next step.

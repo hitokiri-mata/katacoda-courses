@@ -8,23 +8,28 @@
     "steps": [
       {
         "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md"
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
       },
       {
         "title": "Container Registry",
-        "text": "step2-registry.md"
+        "text": "step2-registry.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Camel K",
-        "text": "step3-camel-k.md"
+        "text": "step3-camel-k.md",
+        "code": "clear.sh"
       },
       {
         "title": "Hello World from Camel K",
-        "text": "step4-hello.md"
+        "text": "step4-hello.md",
+        "code": "clear.sh"
       },
       {
         "title": "TODO",
-        "text": "step5.md"
+        "text": "step5.md",
+        "code": "clear.sh"
       },
       {
         "title": "Removing Camel K, Knative, Istio and your Functions",

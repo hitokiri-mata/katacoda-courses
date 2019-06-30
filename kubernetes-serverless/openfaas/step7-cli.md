@@ -1,4 +1,4 @@
-OpenFaaS is now ready to do some work. 
+OpenFaaS is now ready to do some work.
 
 ## Store Functions ##
 
