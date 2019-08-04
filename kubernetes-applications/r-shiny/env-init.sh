@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep1; launch.sh
+sleep 1; launch.sh
 
 #minikube config set WantUpdateNotification false
 source <(minikube completion bash)
