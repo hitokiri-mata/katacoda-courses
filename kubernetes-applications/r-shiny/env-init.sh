@@ -1,4 +1,5 @@
 #!/bin/sh
+set +x
 
 sleep 1; launch.sh
 
