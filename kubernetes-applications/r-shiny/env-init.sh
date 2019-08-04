@@ -1,5 +1,5 @@
 #!/bin/sh
-
+{ set +x; } 2> /dev/null
 {
   sleep 1; launch.sh
   source <(minikube completion bash);
