@@ -1,6 +1,6 @@
 #!/bin/sh
 
-launch.sh
+# launch.sh
 
 minikube config set WantUpdateNotification false
 source <(minikube completion bash)
