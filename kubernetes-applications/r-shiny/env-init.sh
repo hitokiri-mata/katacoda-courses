@@ -8,8 +8,8 @@ source <(kubectl completion bash)
 source <(helm completion bash)
 clear
 
-echo "Starting Kubernetes using Minikube..."
-minikube start 
+# echo "Starting Kubernetes using Minikube..."
+# minikube start 
 
 # Dashboard for Minikube on port 30000
 minikube addons enable dashboard
