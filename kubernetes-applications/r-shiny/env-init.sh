@@ -1,14 +1,13 @@
 #!/bin/sh
 
-# launch.sh
+sleep1; launch.sh
 
-echo "test"
-
-minikube config set WantUpdateNotification false
+#minikube config set WantUpdateNotification false
 source <(minikube completion bash)
 source <(kubectl completion bash)
 source <(helm completion bash)
-clear
+# clear
+echo "Your cluster is ready."
 
 # echo "Starting Kubernetes using Minikube..."
 # minikube start 
