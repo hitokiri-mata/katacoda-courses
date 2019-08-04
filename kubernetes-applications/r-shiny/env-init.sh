@@ -2,6 +2,8 @@
 
 # launch.sh
 
+echo "test"
+
 minikube config set WantUpdateNotification false
 source <(minikube completion bash)
 source <(kubectl completion bash)
