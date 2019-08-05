@@ -4,6 +4,10 @@
   "description": "Discovering how Shiny applications run on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
+  "intro": {
+    "text": "intro.md",
+    "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+  },
   "details": {
     "steps": [
       {
@@ -26,11 +30,6 @@
         "text": "step4.md"
       }
     ],
-    "intro": {
-      "text": "intro.md",
-      "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
-    },
     "finish": {
       "text": "finish.md"
     },
