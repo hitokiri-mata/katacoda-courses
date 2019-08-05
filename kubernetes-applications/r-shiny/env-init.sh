@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sleep 1; launch.sh
+sleep 1
+( exec "launch.sh" )
+set +x
+
 source <(minikube completion bash);
 source <(kubectl completion bash);
 source <(helm completion bash);

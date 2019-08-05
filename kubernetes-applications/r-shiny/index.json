@@ -6,6 +6,7 @@
   "time":	"10 minutes",
   "intro": {
     "text": "intro.md",
+    "code": "env-init.sh",
     "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
   },
   "details": {
