@@ -16,6 +16,6 @@ Watch how Kubernetes recovers from the glitch.
 
 `watch kubectl get pods --selector=run=hello`{{execute}}
 
-Wait until the 3 pods are restored. Notice one pod has a new ID in the name. Use this ```clear```{{execute interrupt}} to ctrl-c and clear the shell or press ctrl-c to break out of the watch.
+Wait until the 3 pods are restored. Notice one pod has a new ID in the name. Use this ```clear```{{execute interrupt}} break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 When a Pod is no longer running, the Kubernetes controller recognizes the different between the declared state and the reality of the cluster state. The controller will instruct the Scheduler on how to resolve the problem and the Schedular will search out the most healthy and optimum Kubelet among of the worker nodes. The Kubelet will start the new Pod. Shortly thereafter the Controller will recognize the state of the cluster now matches the declared state and peace is restored.
