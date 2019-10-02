@@ -6,7 +6,7 @@ source <(kubectl completion bash)
 source <(helm completion bash)
 
 # Helm Setup
-helm init --wait --tiller-tls-verify 
+helm init --wait
 helm repo update
 
 # Setup dashboard on port 30000

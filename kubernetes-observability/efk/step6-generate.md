@@ -1,6 +1,6 @@
 Run this container to start generating random log events.
 
-`kubectl run random-logger --image=chentex/random-logger`{{execute}}
+`kubectl run random-logger --image=chentex/random-logger --generator=run-pod/v1`{{execute}}
 
 > Thank you to Vicente Zepeda for providing this [beautifully simple container](https://github.com/chentex/random-logger).
 
