@@ -1,0 +1,20 @@
+{
+    "courses": [
+      {
+        "id": "kubernetes-fundamentals"
+      },
+      {
+        "id": "kubernetes-applications"
+      },
+      {
+        "id": "kubernetes-serverless"
+      },
+      {
+        "id": "kubernetes-pipelines"
+      },
+      {
+        "id": "kubernetes-observability"
+      }
+    ]
+  }
+  

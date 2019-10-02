@@ -1,8 +1,0 @@
-replicas: 3
-
-service:
-          type: NodePort
-
-          rabbitmqUsername: guest
-          rabbitmqPassword: guest
-
