@@ -25,5 +25,7 @@
         "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a cluster.",
         "id": "kubernetes-observability"
       }
-    ]
+    ],
+    "scenarios": []
   }
+  
