@@ -15,4 +15,6 @@ helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort
 # Enable metrics
 helm install --name metrics-server --namespace kube-system stable/metrics-server
 
+pause
+
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
