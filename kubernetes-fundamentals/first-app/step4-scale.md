@@ -2,7 +2,7 @@ Pods are often replicated for handling parallel requests. The Service will take 
 
 We will scale the hello Pod up and down. First, in another terminal start a continuous loop that puts some load the service.
 
-`while true; do sleep 1; curl -s $(minikube service hello --url) -w 'Time: %{time_total}' | grep -E 'Hostname|Time' | xargs; done`{{execute T2}}
+`while true; do sleep 1; curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/ -w 'Time: %{time_total}' | grep -E 'Hostname|Time' | xargs; done`{{execute T2}}
 
 With this, the single Pod is handling all the requests.
 
