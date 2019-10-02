@@ -1,5 +1,5 @@
 {
-    "title": "Kubernetes: Observability",
+    "title": "Kubernetes Observability",
     "icon": "fa-kubernetes",
     "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a cluster.",
     "courses": [

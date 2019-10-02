@@ -1,20 +1,29 @@
 {
     "courses": [
       {
+        "title": "Kubernetes Fundamentals",
+        "description": "Learn the fundamental building blocks of Kubernetes with hands-on on explanations.",
         "id": "kubernetes-fundamentals"
       },
       {
+        "title": "Kubernetes Applications",
+        "description": "Discover different applications you can easily start on Kubernetes.",
         "id": "kubernetes-applications"
       },
       {
+        "title": "Kubernetes Serverless",
+        "description": "Discover different techniques for running apps and functions on Kubernetes.",
         "id": "kubernetes-serverless"
       },
       {
+        "title": "Kubernetes Pipelines",
+        "description": "Discover different tools and techniques for continuous delivery on Kubernetes.",
         "id": "kubernetes-pipelines"
       },
       {
+        "title": "Kubernetes Observability",
+        "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a cluster.",
         "id": "kubernetes-observability"
       }
     ]
   }
-  
