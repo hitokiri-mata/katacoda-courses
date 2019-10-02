@@ -2,7 +2,7 @@ A huge advantage of running application on Kubernetes is there are typically lar
 
 ## A Race ##
 
-Let's have a race to validate this claim, even on a single node cluster like Minikube in this Katacoda instance.
+Let's have a race to validate this claim, even on this limited Katacoda Kubernetes instance.
 
 ### Serially ###
 

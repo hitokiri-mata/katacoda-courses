@@ -2,9 +2,9 @@
 
 The cAdvisor data can also be observed through a variety of `kubectl describe` commands across various resources.
 
-Inspect the main Minikube _node_.
+Inspect this Kubernetes cluster only _Worker_ node.
 
-`kubectl describe node minikube`{{execute}}
+`kubectl describe node node01`{{execute}}
 
 Inspect the last _deployment_.
 

@@ -9,7 +9,7 @@ This scenario takes you through the basics of [Job resources](https://kubernetes
 
 >> The Job object is responsible for creating and managing pods defined in a template in the Job specification. These pods generally run until successful completion. The Job object coordinates running a number of pods in parallel.
 
-As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario of this course.
+As a prerequisite, we assume you have an introductory working knowledge of Kubernetes covered in the _First App_ scenario of this course.
 
 In the following steps you will learn:
 

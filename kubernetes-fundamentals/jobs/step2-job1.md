@@ -1,7 +1,3 @@
-Ensure Minikube is running and ready to accept your upcoming declarations.
-
-`minikube status`{{execute}}
-
 Use the Kubectl _run_ command as a simple way to create a Job. This command runs the Job in the form of a Pod that contains a single container. The app in the container simply generates security keys.
 
 `kubectl run -i oneshot --image=gcr.io/kuar-demo/kuard-amd64:1 --restart=OnFailure -- --keygen-enable --keygen-exit-on-complete --keygen-num-to-gen 10`{{execute}}

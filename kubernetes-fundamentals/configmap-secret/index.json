@@ -6,8 +6,8 @@
   "details": {
     "steps": [
       {
-        "title": "Minikube",
-        "text": "step1-minikube.md",
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
         "code": "clear.sh"
       },
       {
@@ -62,6 +62,6 @@
     ]
     },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-cluster-running"
   }
 }

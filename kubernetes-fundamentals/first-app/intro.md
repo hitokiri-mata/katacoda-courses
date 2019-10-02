@@ -1,6 +1,6 @@
 # First Kubernetes Application #
 
-As a prerequisite, we assume you have an introductory working knowledge of Minikube covered in the Minikube scenario of this course.
+As a prerequisite, we assume you have an introductory working knowledge of Kubernetes covered in the _Minikube_ scenario of this course.
 
 ![Minikube](/javajon/courses/kubernetes-fundamentals/minikube/assets/minikube.png "Minikube")
 ![Kubernetes](/javajon/courses/kubernetes-fundamentals/minikube/assets/kubernetes.png "Kubernetes")

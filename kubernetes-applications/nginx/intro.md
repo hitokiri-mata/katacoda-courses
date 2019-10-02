@@ -2,7 +2,7 @@
 
 <img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/nginx.png">
 
-These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster based on Minikube and a CLI tool called kubectl, a few steps will get a Nginx web server running.
+These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get a Nginx web server running.
 
 You will learn how:
 

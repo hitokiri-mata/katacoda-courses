@@ -1,11 +1,15 @@
 #!/bin/sh
 
+launch.sh
+
+source <(kubectl completion bash)
 source <(helm completion bash)
-clear
 
-echo 'Starting Kubernetes using Minikube...'
-minikube start
+# Helm Setup
+helm init --wait
+helm repo update
 
-# Dashboard for Minikube on port 30000
-minikube addons enable dashboard
-kubectl apply -f /opt/kubernetes-dashboard.yaml
+# Setup dashboard on port 30000
+helm install stable/kubernetes-dashboard --name dash --set=service.type=NodePort --set=enableInsecureLogin=true --set=service.nodePort=30000 --set=service.externalPort=80 --namespace kube-system
+
+{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

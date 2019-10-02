@@ -6,28 +6,33 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Deployment",
-        "text": "step1-deployment.md",
+        "text": "step2-deployment.md",
         "code": "clear.sh"
       },
       {
         "title": "Service",
-        "text": "step2-service.md",
+        "text": "step3-service.md",
         "code": "clear.sh"
       },
       {
         "title": "Scaling",
-        "text": "step3-scale.md",
+        "text": "step4-scale.md",
         "code": "clear.sh"
       },
       {
         "title": "Resilience",
-        "text": "step4-resilience.md",
+        "text": "step5-resilience.md",
         "code": "clear.sh"
       },
       {
         "title": "Rollout",
-        "text": "step5-rollout.md"
+        "text": "step6-rollout.md"
       }
     ],
     "intro": {
@@ -53,6 +58,6 @@
     ]
     },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-cluster-running"
   }
 }

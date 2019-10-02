@@ -18,14 +18,6 @@ The service NodePort is now adjusted.
 
 `kubectl describe service hello`{{execute}}
 
-Because the Service is exposed as a NodePort, Minikube will report the service is addressable at a specific URL.
-
-`minikube service hello --url`{{execute}}
-
-Invoke the _hello_ service.
-
-`curl -s $(minikube service hello --url)`{{execute}}
-
-Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
+Because of Katacoda's virtualization you cannot address this service from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
 
 `curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}

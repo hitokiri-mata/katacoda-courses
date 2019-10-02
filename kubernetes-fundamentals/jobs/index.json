@@ -6,28 +6,33 @@
   "details": {
     "steps": [
       {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Run Single Job",
-        "text": "step1-job1.md",
+        "text": "step2-job1.md",
         "code": "clear.sh"
       },
       {
         "title": "Job from Resource",
-        "text": "step2-job2.md",
+        "text": "step3-job2.md",
         "code": "clear.sh"
       },
       {
         "title": "Job Failure",
-        "text": "step3-failure.md",
+        "text": "step4-failure.md",
         "code": "clear.sh"
       },
       {
         "title": "Parallelism",
-        "text": "step4-parallel.md",
+        "text": "step5-parallel.md",
         "code": "clear.sh"
       },
       {
         "title": "Work Queue",
-        "text": "step5-queue.md"
+        "text": "step6-queue.md"
       }
     ],
     "intro": {
@@ -54,6 +59,6 @@
     ]
     },
   "backend": {
-    "imageid": "minikube-running"
+    "imageid": "kubernetes-cluster-running"
   }
 }
