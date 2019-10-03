@@ -20,7 +20,7 @@ This chart bootstraps a Harbor instance consisting of several deployed component
 
 `watch kubectl get deployments --namespace harbor`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. The Harbor server takes about 2 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete, the Pods will move to the _running_ state. The Harbor server takes about 2 minutes to start. The Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 The registry is now available as a service. It can be listed.
 

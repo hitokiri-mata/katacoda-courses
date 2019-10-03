@@ -14,6 +14,6 @@ Watch the 6 deployments for OpenFaaS become _Available_. The _Available_ status 
 
 `watch kubectl get deployments --namespace=openfaas`{{execute}}
 
-The installation is complete once all the Deployments have reached an _Available_ state of 1. Use this ```clear```{{execute interrupt}} break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The installation is complete once all the Deployments have reached an _Available_ state of 1. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 These instructions have been adopted from the [openfaas-operator](https://github.com/openfaas-incubator/openfaas-operator).

@@ -45,7 +45,7 @@
       {"name": "Nginx-One", "port": 31111},
       {"name": "Nginx-Two", "port": 31112}
     ]
-    },
+  },
   "backend": {
     "imageid": "kubernetes-cluster-running"
   }

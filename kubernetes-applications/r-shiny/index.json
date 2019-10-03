@@ -4,11 +4,6 @@
   "description": "Discovering how Shiny applications run on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
-  "intro": {
-    "text": "intro.md",
-    "code": "env-init.sh",
-    "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
-  },
   "details": {
     "steps": [
       {
@@ -31,13 +26,17 @@
         "text": "step4.md"
       }
     ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"},
-        {"file": "env-init.sh", "target": "/usr/bin"}
+        {"file": "*", "target": "/root"}
       ]
     }
   },
@@ -51,7 +50,7 @@
       {"name": "Shiny Wordcloud", "port": 31112},
       {"name": "Kubernetes Dashboard", "port": 30000}
     ]
-    },
+  },
   "backend": {
     "imageid": "kubernetes-cluster-running"
   }
