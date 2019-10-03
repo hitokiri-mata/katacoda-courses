@@ -20,4 +20,4 @@ Run the analysis.
 
 `./gradlew -Dsonar.host.url=$SONAR_SERVICE sonarqube`{{execute}}
 
-The analysis will take about 1-2 minutes. Once complete, navigate to the SonarQube portal and observed the analyzed project. The portal can be reach from the tab labeled _SonarQube Portal_ above this command line or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+The analysis will take about 1-2 minutes. Once complete, navigate to the SonarQube portal and observe the analyzed project. The portal can be reach from the tab labeled _SonarQube Portal_ above this command line or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.

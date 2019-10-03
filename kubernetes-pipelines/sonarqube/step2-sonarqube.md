@@ -16,4 +16,4 @@ This chart bootstraps a SonarQube instance along with a PostgreSQL database. Son
 
 `watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. The SonarQube server takes about 2 minutes to start. All he Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete, the Pods will move to the _running_ state. The SonarQube server may take up to 7-8 minutes to start. **Note, the startup time is exceptionally long and hopefully will be addressed in later versions.** The behavior of the plugins can effect the startup time. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
