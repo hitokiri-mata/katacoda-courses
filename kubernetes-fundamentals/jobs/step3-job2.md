@@ -2,7 +2,7 @@ It's generally preferable to define resources such as Jobs in resource manifests
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 
-To invoke the same Job use the _apply_ command.
+To invoke this Job declaration use the _apply_ command.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 

@@ -32,7 +32,7 @@ Expose the queue with a Kubernetes service to allow access to the Queue Portal.
 
 `kubectl patch service queue --type='json' --patch='[{"op": "replace", "path": "/spec/type","value":"NodePort"}]'`{{execute}}
 
-`kubectl patch service queue --type='json' --patch='[{"op": "replace": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
+`kubectl patch service queue --type='json' --patch='[{"op": "replace", "path":"/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
 Notice the same port number is placed in the subdomain of the URL.
 
@@ -54,7 +54,7 @@ Watch activity of pods, queue and Kubernetes dashboard
 
 Go back to the Queue portal watch the items get processed until all 100 are complete. You can also watch the progress with this _curl_.
 
-`watch -n 3 curl $(minikube service queue --url)/memq/server/stats`{{execute}}
+`watch -n 3 curl https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/memq/server/stats`{{execute}}
 
 ## Clean Up ##
 
