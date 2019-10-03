@@ -1,4 +1,4 @@
-Now that Redis is running, take it back down. After all these things should not be precious [snowflakes](https://martinfowler.com/bliki/SnowflakeServer.html).
+Now that Redis is running, take it back down. After all, these installations should not be precious [snowflakes](https://martinfowler.com/bliki/SnowflakeServer.html).
 
 `helm delete my-redis --purge`{{execute}}
 

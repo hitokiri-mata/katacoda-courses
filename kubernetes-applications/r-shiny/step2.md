@@ -8,6 +8,6 @@ The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_
 
 `watch kubectl get deployments,pods,services`{{execute}}.
 
-Once complete, the Pod will move to the _running_ state. It will be a few moments and the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete, the Pod will move to the _running_ state. It will be a few moments and all the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 In Katacoda, you can access the application in your browser from the "Shiny Demo" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/

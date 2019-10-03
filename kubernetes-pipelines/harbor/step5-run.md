@@ -16,16 +16,16 @@ Obtain the service location of the application. Be sure access is via HTTP, not 
 
 `export APP=http://127.0.0.1:32500/`{{execute}}
 
-You can also exercise the application from the command line.
+You can exercise the application from the command line.
 
 `cd ~/MAX-Breast-Cancer-Mitosis-Detector`{{execute}}
 
 See the model prediction, in JSON form, with an image containing a known breast cancer mitosis.
 
-`curl -F image=@assets/true.png -XPOST "${APP}model/predict"`{{execute}}
+`curl -F image=@samples/true.png -XPOST "${APP}model/predict"`{{execute}}
 
 See the model prediction with an image without a known breast cancer mitosis.
 
-`curl -F image=@assets/false.png -XPOST "${APP}model/predict"`{{execute}}
+`curl -F image=@samples/false.png -XPOST "${APP}model/predict"`{{execute}}
 
 If this IBM app piques your interest you can explore the details of this application [here](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector). IBM maintains over 40 other [MAX applications in the same GitHub account](https://github.com/search?q=org%3AIBM+MAX&unscoped_q=MAX).

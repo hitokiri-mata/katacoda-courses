@@ -1,6 +1,6 @@
 # Introduction to Helm #
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/helm/assets/helm.png">
+<img align="right" src="/javajon/courses/kubernetes-pipelines/helm/assets/helm.png" height="100" width="100">
 
 This scenario teaches you how to use most of the features in Helm, a package manager for Kubernetes. Helm simplifies discovering and deploying services to a Kubernetes cluster.
 

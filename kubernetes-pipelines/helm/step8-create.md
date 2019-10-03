@@ -26,7 +26,7 @@ In this case the Helm _create_ feature defaulted the deployed container to be th
 
 As is, this chart is ready to be deployed since all the defaults have been supplied. A complete set of sensible defaults is a good practice for any chart you author. A good README for your chart should also have a table to reflect these defaults, options and descriptions.
 
-Before deploying to Kubernetes, the _dry_run_ feature will list out the resources to the console. This allows to you inspect the injection of the values into the template without committing an installation, a helpful development technique. Observe how the container image name is injected into the template.
+Before deploying to Kubernetes, the _dry-run_ feature will list out the resources to the console. This allows to you inspect the injection of the values into the template without committing an installation, a helpful development technique. Observe how the container image name is injected into the template.
 
 `helm install --dry-run --debug ./app-chart | grep 'image: "' -n -B3 -A3`{{execute}}
 
