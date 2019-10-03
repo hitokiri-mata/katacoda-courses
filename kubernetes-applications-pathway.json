@@ -17,11 +17,6 @@
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Run RabbitMQ on Kubernetes."
-      },
-      {
-        "course_id": "mean",
-        "title": "Mean Application (coming soon)",
-        "description": "Deploy A MEAN Application On Kubernetes With Helm. Based on an article from Bitnami."
       }
     ]
   }
