@@ -30,7 +30,11 @@ It's also helpful to have a good dashboard to see how well the functions are run
 
 There is a helpful Grafana container configured for OpenFaaS found [here](https://github.com/stefanprodan/faas-grafana). Install this Grafana.
 
-`kubectl -n openfaas run --image=stefanprodan/faas-grafana:4.6.3 --port=3000 grafana`{{execute}}
+`kubectl -n openfaas run \
+--image=stefanprodan/faas-grafana:4.6.3 \
+--port=3000 \
+--generator=run-pod/v1 \
+grafana`{{execute}}
 
 Expose the dashboard as a service on a known port.
 

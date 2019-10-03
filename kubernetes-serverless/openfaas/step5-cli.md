@@ -4,9 +4,9 @@ A common way to interact with OpenFaaS is from the command line. Install the Ope
 
 When you see the ASCII logo and the version the _faas-cli_ tool will be ready.
 
-_faas-cli_ cannot work until you login to the gateway. Commands like this will report _unauthorized access_.
-
 `faas-cli list`{{execute}}
+
+**However**, _faas-cli_ cannot work until you login to the gateway. Commands like this will report _unauthorized access_.
 
 At this point there is an OpenFaaS gateway providing access to both the portal and REST API to manage the functions and OpenFaaS. Most of the CLI commands require this gateway as a parameter. To reduce the verbosity the gateway here is stored as an environment variable.
 

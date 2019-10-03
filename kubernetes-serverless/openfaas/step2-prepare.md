@@ -1,4 +1,4 @@
-There are a few things to prepare before installing OpenFaaS.
+There are a few things to prepare before installing OpenFaaS. Namespaces and a secret.
 
 ## Namespaces ##
 
@@ -10,7 +10,7 @@ The created namespaces may be listed.
 
 `kubectl get namespaces`{{execute}}
 
-If you are curious, scan the contents of the namespace creating YAML. It does more than just creating the namespaces.
+If you are curious, scan the contents of the namespace creating YAML. Labels are added to the namespaces.
 
 `curl https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml`{{execute}}.
 
