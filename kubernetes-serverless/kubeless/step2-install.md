@@ -19,4 +19,6 @@ Observe the availability of each deployment as they progress from 0 to 1:
 
 `kubectl get deployments,pods --namespace kubeless`{{execute}}
 
+It may take up to 3 to 4 minutes before all the Kubeless containers are _Running_.
+
 New functions can now be deployed to _Kubeless_.

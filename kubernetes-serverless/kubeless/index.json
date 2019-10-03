@@ -57,13 +57,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Using Kafka for PubSub Triggers",
-        "text": "step11-kafka.md",
-        "code": "clear.sh"
+        "title": "Kubeless with Serverless.com",
+        "text": "step11-serverless.md"
       },
       {
-        "title": "Kubeless with Serverless.com",
-        "text": "step12-serverless.md"
+        "title": "Using Kafka for PubSub Triggers",
+        "text": "step12-kafka.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
