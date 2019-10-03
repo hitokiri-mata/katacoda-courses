@@ -1,6 +1,6 @@
-**Note: This step is under construction and currently not complete. (TODO) **
+**Note: This step is under construction.**
 
-You can trigger any Kubeless function by a [PubSub mechanism](https://kubeless.io/docs/pubsub-functions/). The PubSub function is expected to consume input messages from a predefined topic from a messaging system. Kubeless currently supports using events from Kafka and NATS messaging systems.
+You can trigger a Kubeless function using the [PubSub mechanism](https://kubeless.io/docs/pubsub-functions/). The PubSub function is expected to consume input messages from a predefined topic from a messaging system. Kubeless currently supports consuming events from Kafka and NATS messaging systems.
 
 ## Install Kafka ##
 
@@ -10,9 +10,6 @@ Add the repo where the Kafka chart can be referenced from
 
 and install the Kafka chart.
 
-`helm install incubator/kafka --namespace kubeless --name kafka --set rbac.create=true --set kafkaTrigger.enabled=true --set kafkaTrigger.env.kafkaBrokers=brokertodo`{{execute}}
+`helm install incubator/kafka --namespace kubeless --name kafka`{{execute}}
 
-Draft: Next steps are to ensure Kubeless is aware of Kafka via Kubeless chart settings:
-
-kafkaTrigger.enabled=true
-kafkaTrigger.env.kafkaBrokers=(tbd)
+(Next todo, instructions on consuming events)
