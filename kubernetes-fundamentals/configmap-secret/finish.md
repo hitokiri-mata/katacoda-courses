@@ -20,7 +20,7 @@ With these steps you have learned:
 
 ## References ##
 
-- [__Free PDF__ of Kubernetes Up & Running: CHAPTER 11, ConfigMaps and Secrets](https://azepdf.com/kubernetes-up-and-running-aaronmsftcom.html)
+- [__Free PDF__ of Kubernetes Up & Running: CHAPTER 11, ConfigMaps and Secrets](https://aaronmsft.com/static/180300/Kubernetes_Up_and_Running.pdf)
 - [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 - [Configuring Redis using a ConfigMap](https://kubernetes.io/docs/tutorials/configuration/configure-redis-using-configmap/)

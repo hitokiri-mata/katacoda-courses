@@ -10,7 +10,7 @@ In a moment the application will be available.
 
 `kubectl get deployments,pods,services`{{execute}}
 
-Now that the the application is running navigate to the application's [interactive Swagger documentation page](http://[[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/).
+Now that the application is running navigate to the application's [interactive Swagger documentation page](http://[[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/).
 
 Obtain the service location of the application. Be sure access is via HTTP, not HTTPS.
 

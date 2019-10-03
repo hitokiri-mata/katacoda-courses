@@ -2,7 +2,7 @@ The _Kubeless_ secret sauce is your function's source code is deployed into a Ku
 
 `kubectl get configmaps`{{execute}}
 
-You can view ConfigMap and see the the deployed code here:
+You can view ConfigMap and see the deployed code here:
 
 `kubectl describe configmap fibonacci`{{execute}}
 

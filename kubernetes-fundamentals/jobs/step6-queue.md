@@ -54,7 +54,7 @@ Watch activity of pods, queue and Kubernetes dashboard
 
 Go back to the Queue portal watch the items get processed until all 100 are complete. You can also watch the progress with this _curl_.
 
-`watch -n 3 curl https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/memq/server/stats`{{execute}}
+`watch -n 3 curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/memq/server/stats`{{execute}}
 
 ## Clean Up ##
 

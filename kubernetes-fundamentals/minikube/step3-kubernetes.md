@@ -2,7 +2,7 @@ Up to this point several Minikube CLI commands have been covered. However, the p
 
 Keep in mind the _minikube_ tool is for administering the hosting of the cluster where _kubectl_ tool is for administering Kubernetes itself, regardless of where Kubernetes is running. In the beginning it may take some time to keep the purpose of these commands separate.
 
-Use a few kubectl commands to discover more about this Kubernetes instance established by Minikube
+Use a few kubectl commands to discover more about this Kubernetes instance established by Minikube.
 
 Minikube stood up a specific version of Kubernetes.
 
@@ -12,7 +12,7 @@ As promised, it's a single node cluster.
 
 `kubectl get nodes`{{execute}}
 
-There are various ways to get details about the cluster.
+There are various ways to get details about this small cluster.
 
 `kubectl cluster-info`{{execute}}
 

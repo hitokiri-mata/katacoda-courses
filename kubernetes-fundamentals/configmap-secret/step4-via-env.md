@@ -12,4 +12,4 @@ Once the pod starts, its log can be viewed. The container in the Pod has written
 
 `kubectl logs consume-via-cli`{{execute}}
 
-You can also view the Pod's log from the the Dashboard.
+You can also view the Pod's log from the Dashboard.
