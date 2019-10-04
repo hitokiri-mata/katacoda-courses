@@ -1,11 +1,7 @@
-As you see, your Kubernetes cluster is started. Verify it's ready for your use.
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
-`kubectl version && kubectl cluster-info && kubectl get nodes`{{execute}}
-
-Verify the Kubernetes cluster is empty.
-
-`kubectl get deployments,pods,services`{{execute}}
+`kubectl version --short && kubectl cluster-info && kubectl get nodes`{{execute}}
 
 The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
-`helm version`{{execute}}
+`helm version --short`{{execute}}

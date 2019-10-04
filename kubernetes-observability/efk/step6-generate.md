@@ -17,6 +17,6 @@ The log events will look something like this.
 
 Inspect the actual log events now being generated with this log command.
 
-`kubectl logs deployment/random-logger`{{execute}}
+`kubectl logs pod/random-logger`{{execute}}
 
 Don't be alarmed by the messages, these are just samples.

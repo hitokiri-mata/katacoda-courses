@@ -26,7 +26,7 @@ Helm has a working set of public repositories. More on this later, but for now t
 
 At this point Helm should be healthy.
 
-`helm version`{{execute}}
+`helm version --short`{{execute}}
 
 The current local state of Helm is kept in your environment in the _home_ location.
 

@@ -12,4 +12,4 @@ The Kubernetes API also gather the cAdvisor metrics at `/metrics`.
 
 `curl localhost:8001/metrics`{{execute}}
 
-The cAdvisor also serves up the metrics is a helpful HTML format. On Katacoda a route is provided. See the [cAdvisor page here](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/).
+The cAdvisor also serves up the metrics in a helpful HTML format. On Katacoda a route is provided. See the [cAdvisor page here](https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/).

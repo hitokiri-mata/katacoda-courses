@@ -12,7 +12,7 @@ Inspect the last _deployment_.
 
 Inspect the 3 _pods_.
 
-`kubectl get deployments,pods`{{execute}}
+`kubectl get pods`{{execute}}
 
 `kubectl describe pods`{{execute}}
 
@@ -26,7 +26,7 @@ Kubernetes also maintains a list of events.
 
 Scaling is a type of event. Scale down the pod from 3 down to 2.
 
-`kubectl scale deployment/random-logger --replicas=2`{{execute}}
+`kubectl scale pod/random-logger --replicas=2`{{execute}}
 
 Notice the last event will reflectthe scaling request.
 

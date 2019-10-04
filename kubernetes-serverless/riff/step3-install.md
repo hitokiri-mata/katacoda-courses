@@ -1,6 +1,4 @@
-# Install Riff #
-
-As you see, your Kubernetes cluster is started. Verify it's ready for your use:
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
 `kubectl cluster-info`{{execute}}
 

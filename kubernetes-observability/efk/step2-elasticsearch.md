@@ -8,7 +8,7 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 ## Install ElasticSearch ##
 
-Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for a production deployment. Here, some of the default settings are downsized to fit in this KataCoda cluster.
+Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for a production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
 
 `helm install stable/elasticsearch --name=elasticsearch --namespace=logs \
 --set client.replicas=1 \
