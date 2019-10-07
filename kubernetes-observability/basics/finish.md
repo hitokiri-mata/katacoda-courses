@@ -1,14 +1,12 @@
-The steps presented some of the quick and easy methods for inspecting a server.
-
-The goal of this scenario was to show some of the fundamental techniques. Not covered here was logging, tracing or monitoring with Prometheus. Those topics are covered in other scenarios.
+The scenario introduced some fundamental techniques to inspecting a cluster. Not covered here was logging, tracing or monitoring with Prometheus. Those topics are covered in other scenarios.
 
 ## Lessons Learned ##
 
-With these steps you have learned:
+With these steps you have learned how to:
 
-- How to access the metrics and information in cAdvisor,
-- How to inspect Kubernetes resources,
-- How to leverage Heapster.
+- access metrics information produced by each cAdvisor in each Kubelet,
+- inspect resources using the _Resource Metrics API_,
+- Viewing metrics reported by Metrics Server.
 
 ------
 <img align="left" src="/javajon/courses/kubernetes-fundamentals/first-app/assets/nfjs.png">

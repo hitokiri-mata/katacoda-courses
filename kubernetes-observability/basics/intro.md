@@ -1,11 +1,11 @@
 # Basic Kubernetes Observability #
 
-This scenario explores the basic techniques for observing the state of Kubernetes.
+This scenario explores the basic techniques for observing the state of Kubernetes using metrics.
 
-The online terminal is a pre-configured Linux environment that can be used as a regular console (you can type commands). Clicking on the `blocks of code` will execute that command in the terminal.
+In the following steps you will learn how to:
 
-In the following steps you will learn:
+- access metrics information produced by each cAdvisor in each Kubelet,
+- inspect resources using the _Resource Metrics API_,
+- Viewing metrics reported by Metrics Server.
 
-- How to access the metrics and information in cAdvisor,
-- How to inspect Kubernetes resources,
-- How to leverage Heapster.
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/first-app/assets/ui0dashboard.png" width="200">
