@@ -10,6 +10,10 @@ Inspect the last _deployment_.
 
 `kubectl describe deployment random-logger`{{execute}}
 
+Specifically, the replica state.
+
+`kubectl describe deployments | grep "Replicas:"`{{execute}}
+
 Inspect the 3 _pods_.
 
 `kubectl get pods`{{execute}}
@@ -24,11 +28,11 @@ Kubernetes also maintains a list of events.
 
 Scaling is a type of event. Scale down the pod from 3 down to 2.
 
-`kubectl scale pod/random-logger --replicas=2`{{execute}}
+`kubectl scale deployment/random-logger --replicas=2`{{execute}}
 
 Notice the last event will reflectthe scaling request.
 
-`kubectl get events`{{execute}}
+`kubectl get events --sort-by=.metadata.creationTimestamp`{{execute}}
 
 These events are not to be confused with [security audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/) which are also recorded.
 

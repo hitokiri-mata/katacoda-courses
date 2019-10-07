@@ -57,7 +57,7 @@
       {"name": "Kubernetes Dashboard", "port": 30000},
       {"name": "Queue Portal", "port": 31001}
     ]
-    },
+  },
   "backend": {
     "imageid": "kubernetes-cluster-running"
   }
