@@ -1,6 +1,6 @@
 ## Inspect Resources ##
 
-The cAdvisor data can also be observed through a variety of `kubectl describe` commands across various resources.
+The metrics data can also be observed through a variety of `kubectl describe` commands across various resources.
 
 Inspect this Kubernetes cluster only _Worker_ node.
 
@@ -15,8 +15,6 @@ Inspect the 3 _pods_.
 `kubectl get pods`{{execute}}
 
 `kubectl describe pods`{{execute}}
-
-Much of this same data is found on the cAdvisor [page](`https://[[HOST_SUBDOMAIN]]-4194-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}).
 
 ## Events ##
 
