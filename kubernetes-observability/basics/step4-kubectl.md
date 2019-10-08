@@ -1,5 +1,3 @@
-## Inspect Resources ##
-
 The metrics data can also be observed through a variety of `kubectl describe` commands across various resources.
 
 Inspect this Kubernetes cluster only _Worker_ node.

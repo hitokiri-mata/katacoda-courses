@@ -20,7 +20,7 @@
 		  "code": "clear.sh"
 		},
 		{
-		  "title": "Resource Inspection with KubeCtl",
+		  "title": "Resource Inspection",
 		  "text": "step4-kubectl.md",
 		  "code": "clear.sh"
 		},
