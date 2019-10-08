@@ -28,7 +28,7 @@ Scaling is a type of event. Scale down the pod from 3 down to 2.
 
 `kubectl scale deployment/random-logger --replicas=2`{{execute}}
 
-Notice the last event will reflectthe scaling request.
+Notice the last event will reflect the scaling request.
 
 `kubectl get events --sort-by=.metadata.creationTimestamp`{{execute}}
 

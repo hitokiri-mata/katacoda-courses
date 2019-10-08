@@ -1,6 +1,6 @@
-# Basic Kubernetes Observability #
-
 <img align="right" src="/javajon/courses/kubernetes-observability/basics/assets/ui-dashboard.png" width="600">
+
+# Basic Kubernetes Observability #
 
 This scenario explores the basic techniques for observing the state of Kubernetes using metrics.
 

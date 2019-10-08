@@ -1,4 +1,4 @@
-The de factor light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. There is no long term metrics storage, it holds just the latests metrics. Typically, the server may be installed with a Helm chart.
+The de factor light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
 `helm install stable/metrics-server \
 --name metrics-server \
@@ -16,7 +16,7 @@ If the metrics are not ready, this message will appear
 
 > `Error from server (ServiceUnavailable): the server is currently unable to handle the request`
 
-Once the metrics are ready a json dump of the metrics will appear.
+Once the metrics are ready, a JSON dump of the metrics will appear.
 
 `kubectl top node`{{execute}}
 
@@ -32,4 +32,6 @@ master   125m         6%     1049Mi          55%
 node01   84m          2%     922Mi           23%
 ```
 
-Metrics information should also be in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in a few moments, charts and line graphs will start appearing on the dashboard pages. These graphs are provided by the metrics-server.
+Metrics information is also reflected in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in pages for each resource the same Top information appears in the UI. The [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) also utilizes these vital metrics to make decisions to scale up and down Pod instances.
+
+Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.

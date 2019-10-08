@@ -10,19 +10,19 @@
 		  "code": "clear.sh"
 		},
 		{
-		  "title": "cAdvisor",
-		  "text": "step2-cadvisor.md",
-		  "code": "clear.sh"
-		},
-		{
 		  "title": "Sample Application",
-		  "text": "step3-app.md",
+		  "text": "step2-app.md",
 		  "code": "clear.sh"
 		},
 		{
 		  "title": "Resource Inspection",
-		  "text": "step4-kubectl.md",
+		  "text": "step3-kubectl.md",
 		  "code": "clear.sh"
+		},
+		{
+			"title": "cAdvisor",
+			"text": "step4-cadvisor.md",
+			"code": "clear.sh"
 		},
 		{
 		  "title": "Metrics Server",
