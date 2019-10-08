@@ -1,4 +1,12 @@
-The the running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
+The running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
+
+Inspect the whole cluster
+
+`kubectl cluster-info`{{execute}}
+
+or more verbose (and really too much)
+
+`kubectl cluster-info dump --all-namespaces`{{execute}}
 
 Inspect this Kubernetes cluster only _Worker_ node.
 
