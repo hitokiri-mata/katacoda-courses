@@ -21,11 +21,3 @@ Access the worker node statistics with this command to the Metrics API.
 The Kubernetes API aggregates cluster-wide metrics at `/metrics`.
 
 `curl localhost:8001/metrics`{{execute}}
-
-----
-
-In the past, there was no _Resource Metrics API_ and a service called _Heapster_, now deprecated, used to gather all the cAdvisor metrics and bit more manually. Around the 1.6 to 1.8 Kubernetes releases the _Resource Metrics API_ was added. In concert, Heapster was removed and _Metrics Server_ is now the de facto service that aggregates metrics from the Metrics API.
-
-Metrics server is a lighter version of Heapster. It gathers the latest metrics for reference and does not store historical data. For accumulation of trending metrics the de facto Prometheus time-series database can optionally be added to a cluster.
-
-The [exposed metrics are documented here](https://github.com/kubernetes/kube-state-metrics/tree/master/docs).

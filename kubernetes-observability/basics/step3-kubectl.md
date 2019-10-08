@@ -1,4 +1,4 @@
-The metrics data can also be observed through a variety of `kubectl describe` commands across various resources.
+The the running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
 
 Inspect this Kubernetes cluster only _Worker_ node.
 

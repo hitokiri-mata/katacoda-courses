@@ -6,7 +6,7 @@
       {
         "course_id": "basics",
         "title": "Basic Kubernetes Observability",
-        "description": "Inspection of a Kubernetes cluster"
+        "description": "Inspection of a Kubernetes cluster."
       },
       {
         "course_id": "efk",

@@ -1,6 +1,6 @@
 {
 	"title": "Basic Kubernetes Observability",
-	"description": "Inspection of a Kubernetes cluster",
+	"description": "Inspection of a Kubernetes cluster.",
 	"time":	"15 minutes",
 	"details": {
 	  "steps": [

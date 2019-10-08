@@ -34,4 +34,10 @@ node01   84m          2%     922Mi           23%
 
 Metrics information is also reflected in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in pages for each resource the same Top information appears in the UI. The [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) also utilizes these vital metrics to make decisions to scale up and down Pod instances.
 
-Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.
+In the past, there was no _Resource Metrics API_ and a service called _Heapster_, now deprecated, used to gather all the cAdvisor metrics and bit more manually. Around the 1.6 to 1.8 Kubernetes releases the _Resource Metrics API_ was added. In concert, Heapster was removed and _Metrics Server_ is now the de facto service that aggregates metrics from the Metrics API.
+
+Metrics-server is a lighter version of Heapster. It gathers the latest metrics for reference and does not store historical data. For accumulation of trending metrics the de facto Prometheus time-series database can optionally be added to a cluster.
+
+The [exposed Resource Metrics API is documented here](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/resource-metrics-api.md).
+
+Another metric gathering server is [_kube-state-metrics_](https://github.com/kubernetes/kube-state-metrics#kube-state-metrics-vs-metrics-server). It is used to provide metrics information for P[Prometheus](https://prometheus.io/). Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.
