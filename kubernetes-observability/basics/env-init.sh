@@ -12,11 +12,10 @@ helm repo update
 # Setup dashboard on port 30000
 helm install stable/kubernetes-dashboard \
 --name dash \
---set=service.type=NodePort \
---set=enableInsecureLogin=true \
---set=service.nodePort=30000 \
---set=service.externalPort=80 \
---set=image.tag=v2.0.0-beta4 \
---namespace kube-system
+--namespace kube-system \
+--set service.type=NodePort \
+--set enableInsecureLogin=true \
+--set service.nodePort=30000 \
+--set service.externalPort=80
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
