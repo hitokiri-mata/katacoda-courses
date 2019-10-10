@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "pathwayTitle": "JRE Apps in Containers",
+  "title": "JRE Apps in Containers",
+  "description": "Applying the Distillation Pattern to Containers.",
+  "difficulty":	"Intermediate",
+  "time":	"30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "A Java App, ListDir",
+        "text": "step3-app.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Into a Container",
+        "text": "step4-container.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Nginx-One", "port": 31111},
+      {"name": "Nginx-Two", "port": 31112}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

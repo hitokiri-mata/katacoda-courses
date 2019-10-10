@@ -10,7 +10,7 @@ Install the OpenFaaS operator chart referenced from that repository.
 
 The dryRun property is set to false so we can explore scaling near the end of this course.
 
-Watch the 6 deployments for OpenFaaS become _Available_. The _Available_ status column turns from 0 to 1 as each deployment is initialized.
+Watch the 7 deployments for OpenFaaS become _Available_. In about a minute all the _Available_ status column will turn from 0 to 1 as each deployment becomes active.
 
 `watch kubectl get deployments --namespace=openfaas`{{execute}}
 

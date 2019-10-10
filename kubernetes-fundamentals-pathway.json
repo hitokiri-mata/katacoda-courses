@@ -27,6 +27,11 @@
         "course_id": "configmap-secret",
         "title": "ConfigMaps and Secrets",
         "description": "Explore Kubernetes ConfigMaps and Secrets."
+      },
+      {
+        "course_id": "distillation",
+        "title": "JRE Apps in Containers",
+        "description": "Applying the Distillation Pattern to Containers."
       }
     ]
   }
