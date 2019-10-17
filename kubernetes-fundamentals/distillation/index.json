@@ -24,7 +24,7 @@
       },
       {
         "title": "Into a Container",
-        "text": "step4-container.md",
+        "text": "step4-single-stage.md",
         "code": "clear.sh"
       },
       {

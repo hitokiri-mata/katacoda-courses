@@ -14,12 +14,12 @@ This will create an executable jar.
 
 `./gradlew jar`{{execute}}
 
-The jar task creates an executable jar around 2K in size.
+The jar task creates an executable jar near 2000 bytes in size.
 
 `ll build/libs/listdir*`{{execute}}
 
 So far, this is a simple app and using our local operating system with Java installed that can build and run this application.
 
-`java -jar build/libs/listdir-1.0.jar`{{execute}}
+`java -jar build/libs/listdir-0.1.0.jar`{{execute}}
 
 As we know, relying on prerequisite installs of precises operating systems, utilities, and runtimes like Java remain points of failure between development, testing, and production. Stacks we rely on are never as idempotent as we sometimes blindly hope.

@@ -6,7 +6,7 @@ In the previous step we ran the ListDir app on some underlying operating system 
 
 Notice the Dockerfile specifies the exact version of Linux and the JRE we wish to use. Once those have been defined our application is also added into the container. Let's build a container using this definition.
 
-`docker build -t example/listdir:0.1.0`{{execute}}
+`docker build -t example/listdir-a:0.1.0 -f Dockerfile-single-stage-jar`{{execute}}
 
 After a few moments a new container is built.
 
@@ -14,7 +14,7 @@ After a few moments a new container is built.
 
 Notice the size of the binary container image is about (TODO) K. This built image with a Linux OS, a JRE, and our ListDir application can be run. Let's see how long the execution will take.
 
-`time docker run example/listdir:0.1.0`{{execute}}
+`time docker run example/listdir-a:0.1.0`{{execute}}
 
 run it a a few more times and see what the average time and variance is. It should take about TODO seconds +/- about 0.050 (TODO) seconds.
 
