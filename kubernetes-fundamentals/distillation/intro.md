@@ -1,7 +1,8 @@
 # Distilled JRE Apps in Containers #
 
 TODO - image of Java in a container (from slides)
-<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/logo_oci.png" width="200">
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/logo_oci.png" width="400">
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/java-logo.png" width="400">
 
 ## Distillation Pattern ##
 

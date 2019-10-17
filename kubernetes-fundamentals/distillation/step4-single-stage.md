@@ -2,11 +2,14 @@ What we need is more control of the environment in which our applications will b
 
 In the previous step we ran the ListDir app on some underlying operating system and Java runtime engine provided by this Katacoda instance. Let's instead define our own [idempotent](link to definition) machine stack. In the same source directory there is a packaging directory with a Dockerfile.
 
-`cat packaging/Dockerfile`{{execute}}
+`cat packaging/Dockerfile-single-stage-jar`{{execute}}
 
 Notice the Dockerfile specifies the exact version of Linux and the JRE we wish to use. Once those have been defined our application is also added into the container. Let's build a container using this definition.
 
-`docker build -t example/listdir-a:0.1.0 -f Dockerfile-single-stage-jar`{{execute}}
+`docker build \
+-f packaging/Dockerfile-single-stage-jar \
+-t example/listdir-a:0.1.0 \
+.`{{execute}}
 
 After a few moments a new container is built.
 
