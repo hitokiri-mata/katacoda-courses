@@ -1,15 +1,34 @@
-# Nginx on Kubernetes #
+# Distilled JRE Apps in Containers #
 
-<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/nginx.png">
+TODO - image of Java in a container (from slides)
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/java-in-container.png">
 
-These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get a Nginx web server running.
+## Distillation Pattern ##
+
+Explain: immutable, low attack vector, small image, less memory, fast startup time, definitive CPU and memory resources, idempotent
+
 
 You will learn how:
 
-- to use the basics of the kubectl CLI tool
-- to install Nginx on Kubernetes
-- containers are deployed as Deployments in Pods
-- a Service can provide access to a replication of Pods
+## Part I ##
+- Setup K8s
+- Setup registry
+- Java app, gradle, run executable (* record)
+- Simple dockerfile build,tag,run with Alpine (*record)
+- Introduce multi-stage build
+- Put into Portola (*record)
+-Build with Kaniko
+-JLink (*Record)
+
+## Part II ##
+- Introduce GraalVM
+- Run as hotspot replacement
+- Micronaut
+- Quarkus
+- Helidon
+- Compile with Micronaut (*Record)
+- Compile with Helidon (*Record)
+
 
 > [Nginx](https://www.nginx.com) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004. A company of the same name was founded in 2011 to provide support and Nginx plus paid software.
 

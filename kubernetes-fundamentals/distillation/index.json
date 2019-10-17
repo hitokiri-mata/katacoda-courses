@@ -1,7 +1,7 @@
 {
   "private": true,
-  "pathwayTitle": "JRE Apps in Containers",
-  "title": "JRE Apps in Containers",
+  "pathwayTitle": "Distilled JRE Apps in Containers",
+  "title": "Distilled JRE Apps in Containers",
   "description": "Applying the Distillation Pattern to Containers.",
   "difficulty":	"Intermediate",
   "time":	"30 minutes",
@@ -26,9 +26,20 @@
         "title": "Into a Container",
         "text": "step4-container.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Multi-Stage Containers",
+        "text": "step5-multi-stage.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Multi-Stage Containers",
+        "text": "step6-portola.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
+      "title": "JRE Apps in Containers",
       "text": "intro.md",
       "code": "env-init.sh",
       "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
@@ -48,9 +59,7 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nginx-One", "port": 31111},
-      {"name": "Nginx-Two", "port": 31112}
+      {"name": "Kubernetes Dashboard", "port": 30000}
     ]
   },
   "backend": {
