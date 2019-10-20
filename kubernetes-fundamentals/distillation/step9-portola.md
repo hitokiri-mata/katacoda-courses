@@ -11,5 +11,5 @@ https://aboullaite.me/protola-alpine-java/
 
 ## Build ##
 
-Todo build with multi-stage using Portola container
+TODO: build with multi-stage using Portola container
 

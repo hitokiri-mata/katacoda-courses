@@ -20,6 +20,8 @@ The jar task creates an executable jar near 2000 bytes in size.
 
 So far, this is a simple app and using our local operating system with Java installed that can build and run this application.
 
-`java -jar build/libs/listdir-0.1.0.jar`{{execute}}
+`time java -jar build/libs/listdir-0.1.0.jar`{{execute}}
+
+On overage, it should take about 0.150s to run the application.
 
 As we know, relying on prerequisite installs of precises operating systems, utilities, and runtimes like Java remain points of failure between development, testing, and production. Stacks we rely on are never as idempotent as we sometimes blindly hope.

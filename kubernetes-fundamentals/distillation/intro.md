@@ -1,27 +1,31 @@
 # Distilled JRE Apps in Containers #
 
-TODO - image of Java in a container (from slides)
-<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/logo_oci.png" width="400">
-<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/java-logo.png" width="400">
+For years one of Java's strengths was Write once, run anywhere [(WORA)](https://en.wikipedia.org/wiki/Write_once,_run_anywhere). With containers it's now polyglot and package once, run anywhere [(PORA)](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment). All this is about writing our code to be agnostic from the target.
+
+Java remains relevant for containers. However, it would appear between WORA and PORA there is some redundancy. Indeed there is an it can lead to large containers for Java.
+
+The scenario walks through various steps for distilling a container to its minimum to support your Java based application.
+
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/java-distillation.png" width="500">
 
 ## Distillation Pattern ##
 
 Explain: immutable, low attack vector, small image, less memory, fast startup time, definitive CPU and memory resources, idempotent
 
-
 You will learn how:
 
 ## Part I ##
-- Setup K8s
-- Setup registry
-- Java app, gradle, run executable (* record)
-- Simple dockerfile build,tag,run with Alpine (*record)
-- Introduce multi-stage build
+
+- Install a container registry onto Kubernetes
+- Build and run a simple Java application
+- Build and run the same application with a container
+- Introduce multi-stage container building
 - Put into Portola (*record)
 -Build with Kaniko
 -JLink (*Record)
 
 ## Part II ##
+
 - Introduce GraalVM
 - Run as hotspot replacement
 - Micronaut
@@ -29,8 +33,3 @@ You will learn how:
 - Helidon
 - Compile with Micronaut (*Record)
 - Compile with Helidon (*Record)
-
-
-> [Nginx](https://www.nginx.com) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004. A company of the same name was founded in 2011 to provide support and Nginx plus paid software.
-
-> Nginx is free and open-source software, released under the terms of a BSD-like license. A large fraction of web servers use NGINX, often as a load balancer. [-- Wikipedia](https://en.wikipedia.org/wiki/Nginx)
