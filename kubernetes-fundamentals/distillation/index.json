@@ -41,7 +41,7 @@
         "title": "Into a Multi-Stage Container",
         "text": "step7-multi-stage-jar.md",
         "code": "clear.sh"
-      }
+      },
       {
         "title": "JLink",
         "text": "step8-multi-stage-jlink.md",
