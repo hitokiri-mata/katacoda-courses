@@ -4,5 +4,5 @@ This particular one [joxit/docker-registry-ui](https://github.com/Joxit/docker-r
 
 `kubectl create -f registry-ui.yaml`{{execute}}
 
-In moment the new web interface will be available. Open the [registry web interface](
+In a moment the new web interface will be available. Open the [registry web interface](
 https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) and observe it's empty.

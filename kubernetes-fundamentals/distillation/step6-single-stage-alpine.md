@@ -6,7 +6,7 @@ Build a container using this definition.
 
 `docker build \
 -f packaging/Dockerfile-single-stage-alpine \
--t example/listdir-b-ssa:0.1.0 \
+-t $REGISTRY/listdir-b-ssa:0.1.0 \
 .`{{execute}}
 
 After a few moments a new container is built.
@@ -23,6 +23,6 @@ Notice the size of the binary container image is about 85MB. This built image st
 
 run it a a few more times and see what the average time and variance is. It should take about about 0.050 seconds. This is roughly the same as the previous slim container. Smaller image, yet works just fine.
 
-There are other Linux variants and you can also create your own, but [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux) has emerged as being one of the best base containers to use because it follows the best practices of the distillation pattern. It has a small attack surface, also called the attack vector. Once running it is immutable since it purposely omits a package manager[TODO - check that... what about apk-tools?].
+There are other Linux variants and you can also create your own, but [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux) has emerged as being one of the best base containers to use because it follows many best practices of the distillation pattern. Alpine promotes its virtues as [small, simple and secure](https://alpinelinux.org/about/).
 
 But there is more with can do with the distillation pattern in relation to idempotency.

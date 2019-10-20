@@ -28,17 +28,17 @@
         "code": "clear.sh"
       },
       {
-        "title": "Into a Container",
+        "title": "Into a Slim Container",
         "text": "step5-single-stage-slim.md",
         "code": "clear.sh"
       },
       {
-        "title": "Into a Container",
+        "title": "Into an Alpine Container",
         "text": "step6-single-stage-alpine.md",
         "code": "clear.sh"
       },
       {
-        "title": "Multi-Stage Containers",
+        "title": "Into a Multi-Stage Container",
         "text": "step7-multi-stage.md",
         "code": "clear.sh"
       },
@@ -64,7 +64,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"}
+        {"file": "*.yaml", "target": "~/"}
       ]
     }
   },
@@ -74,7 +74,8 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Registry", "port": 31000}
     ]
   },
   "backend": {
