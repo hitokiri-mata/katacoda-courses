@@ -14,7 +14,7 @@ We will build a new container using [Kaniko](https://github.com/GoogleContainerT
 
 `docker run -ti --rm -v $(pwd):/workspace \
 gcr.io/kaniko-project/executor:latest \
---dockerfile=packaging/Dockerfile-single-stage-jar \
+--dockerfile=packaging/Dockerfile-single-stage-slim \
 --destination=$REGISTRY/listdir-d-kaniko:0.1.0 \
 --insecure --skip-tls-verify`{{execute}}
 

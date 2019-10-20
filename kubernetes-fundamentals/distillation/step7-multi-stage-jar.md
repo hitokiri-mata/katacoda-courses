@@ -14,7 +14,7 @@ Build the ListDir application with the multi-stage build.
 
 `docker build \
 -f packaging/Dockerfile-multi-stage \
--t $REGISTRY/listdir-c-ms:0.1.0 \
+-t $REGISTRY/listdir-c-ms-jar:0.1.0 \
 .`{{execute}}
 
 After a few moments a new container is built.
@@ -23,12 +23,12 @@ After a few moments a new container is built.
 
 Push it to the private registry.
 
-`docker push $REGISTRY/listdir-c-ms:0.1.0`{{execute}}
+`docker push $REGISTRY/listdir-c-ms-jar:0.1.0`{{execute}}
 
 Notice the size of the binary container image is the same as the non-multi stage container. We would expect that even though the Dockerfile also has commands for building with the JDK. Remember all the preceding static building stages, except the final FROM stage, is thrown away. The same built image with a Linux OS, a JRE, and our ListDir application can be run.
 
 Let's see how long the execution will take.
 
-`time docker run $REGISTRY/listdir-c-ms:0.1.0`{{execute}}
+`time docker run $REGISTRY/listdir-c-ms-jar:0.1.0`{{execute}}
 
 run it a few more times and see what the average time is the same as the previous step. The image is not smaller nor does it run faster, but the multi-stage feature will be used in the upcoming steps.

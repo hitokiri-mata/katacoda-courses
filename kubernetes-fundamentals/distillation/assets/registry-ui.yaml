@@ -20,7 +20,7 @@ spec:
         image: joxit/docker-registry-ui:static
         env:
         - name: REGISTRY_URL
-          value: "http://private-docker-registry:5000"
+          value: "http://registry-docker-registry:5000"
         ports:
         - containerPort: 80
 ---
