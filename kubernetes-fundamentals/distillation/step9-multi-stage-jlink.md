@@ -4,6 +4,10 @@ Consider this definition.
 
 Notice the two FROM statements. The first FROM declares a container that is big and contains a Java compiler. The stage contains has all the dependencies that can compile the should code, run Gradle and produce the jar file. However this first container is much too bloated and filled with tools we would never use in production. The second FROM defines the final container and it's the smaller Alpine instance that will simply hold the JRE and jar of the application. The key line is the `COPY --from=builder` that transmits the artifact output of the first _build_ container into the last _Alpine_ container. During the container build both containers are used, however the final container image will only include the containers defined in the _last_ FROM stage. Distillation and idempotency achieved.
 
+Before we can build with JLink we need to define a default module for the ListDir project. There is already one defined, we just need to enable it in the project. Once enabled, you will not be able to compile the project with a Java version less than Java 9.
+
+`mv src/main/java/module-info.java.disabled src/main/java/module-info.java`{{execute}}
+
 Build the ListDir application with the multi-stage build.
 
 `docker build \

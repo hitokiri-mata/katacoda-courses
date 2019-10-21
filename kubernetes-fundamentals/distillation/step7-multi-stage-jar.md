@@ -6,14 +6,14 @@ Fortunately, the Docker tooling added the idea of [multi-stage](https://docs.doc
 
 Consider this definition.
 
-`cat packaging/Dockerfile-multi-stage`{{execute}}
+`cat packaging/Dockerfile-multi-stage-jar`{{execute}}
 
 Notice the two FROM statements. The first FROM declares a container that is big and contains a Java compiler. The stage contains has all the dependencies that can compile the should code, run Gradle and produce the jar file. However this first container is much too bloated and filled with tools we would never use in production. The second FROM defines the final container and it's the smaller Alpine instance that will simply hold the JRE and jar of the application. The key line is the `COPY --from=builder` that transmits the artifact output of the first _build_ container into the last _Alpine_ container. During the container build both containers are used, however the final container image will only include the containers defined in the _last_ FROM stage. Distillation and idempotency achieved.
 
 Build the ListDir application with the multi-stage build.
 
 `docker build \
--f packaging/Dockerfile-multi-stage \
+-f packaging/Dockerfile-multi-stage-jar \
 -t $REGISTRY/listdir-c-ms-jar:0.1.0 \
 .`{{execute}}
 

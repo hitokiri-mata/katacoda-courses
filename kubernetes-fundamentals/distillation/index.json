@@ -44,12 +44,12 @@
       },
       {
         "title": "JLink",
-        "text": "step8-multi-stage-jlink.md",
+        "text": "step8-jlink.md",
         "code": "clear.sh"
       },
       {
-        "title": "Kaniko",
-        "text": "step9-kaniko.md",
+        "title": "JLink into an Alpine Container",
+        "text": "step9-multi-stage-jlink.md",
         "code": "clear.sh"
       },
       {

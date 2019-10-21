@@ -1,3 +1,5 @@
+TODO - Drafting...  
+
 The Docker tooling has made building, running and managing containers relatively easy. With the standardization of the container image format, [OCI](https://en.wikipedia.org/wiki/Open_Container_Initiative), other tools have emerged offering advantages beyond the Docker tools.
 
 Tools such as:
