@@ -53,8 +53,8 @@
         "code": "clear.sh"
       },
       {
-        "title": "Portola",
-        "text": "step10-portola.md",
+        "title": "Going Native with Quarkus and Graal",
+        "text": "step10-multi-stage-quarkus.md",
         "code": "clear.sh"
       }
     ],

@@ -23,10 +23,28 @@ Push it to the private registry.
 
 `docker push $REGISTRY/listdir-d-ms-jlink:0.1.0`{{execute}}
 
-Notice the size of the binary container image is ... TODO
+Notice the size of the binary container image is now 39MB. Alpine is about 4.5MB, which means our app payload with the JRE is about 34MB.
 
 Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-d-ms-jlink:0.1.0`{{execute}}
 
-run it a few more times and see what the average time is the same as the previous step. The image is not smaller nor does it run faster, but the multi-stage feature will be used in the upcoming steps.
+The execution time is roughly the same. We have achieve a further distillation step with JLink.
+
+## Inspect Container ##
+
+You can inspect any of these build containers with the following shell entry command.
+
+`docker run -it $REGISTRY/listdir-d-ms-jlink:0.1.0 sh`{{execute}}
+
+The prompt will change to a pound sign (#) indicating you are now inside the container.
+
+Notice in the current directory is listdir.jar.
+
+`ls -l`{{execute}}
+
+Notice the Java runtime is alive and well. Remember that _this is the JRE created by Jlink_!
+
+When you are done inspecting the container exit the shell with the `exit` command. Be sure not to type it twice else you could accidentally exit from your Katacoda instance.
+
+Can we distill any more water out of this stone? Of course, let's look at compiling the Java application to native binaries with Quarkus and Graal in the next step.

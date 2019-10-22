@@ -1,6 +1,6 @@
 # Conclusion #
 
-You now understand two different techniques for starting a container on Kubernetes. Nginx is a commonly used for serving up web contents and as you can see is easy to start on Kubernetes. There are thousands of other containers that can easily be started with these same basic steps.
+You now understand a few different techniques for efficiently getting your Java application into a container.  Now it's ready to be run on Kubernetes. There are some basic ways to containerize applications which are not very efficient. With binary, native applications using Graal project such as Quarkus you now have to fairly advanced ways of creating efficient containers. Java continues toward cloud native.
 
 ## Lessons Learned ##
 
@@ -11,15 +11,19 @@ With these steps you have learned:
 - how containers are deployed as Deployments in Pods,
 - how a Service can provide access to a replication of Pods.
 
-Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target. If you are considering deploying multiple containers that make up a larger solution consider layering on Helm as a package manager for these manifests.
-
 ## References ##
 
-- [Nginx](https://www.nginx.com/)
-- [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
-- [Round robin load balancing](https://en.wikipedia.org/wiki/Round-robin_DNS)
-- [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-- [Helm, a package manager for Kubernetes](https://helm.sh/)
+- [Gradle](https://gradle.org)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [GraalVM](https://www.graalvm.org/)
+- [Quarkus](https://quarkus.io/)
+- [Multi-stage Dockerfile](https://docs.docker.com/develop/develop-images/multistage-build/)
+- [(WORA)](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)
+- [(PORA)](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment)
+- [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux)
+- [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
+- [ListDir source](https://github.com/javajon/listdir)
+- `ListDir` example code was inspired from the related article [GraalVM: Native Images in Containers](https://blogs.oracle.com/javamagazine/graalvm-native-images-in-containers) by [Oleg Šelajev](https://github.com/shelajev).
 
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/nginx/assets/nfjs.png "No Fluff Just Stuff")

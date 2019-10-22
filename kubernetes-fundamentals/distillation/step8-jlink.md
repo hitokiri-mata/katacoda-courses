@@ -1,4 +1,6 @@
-The distillation pattern is all about stripping things down to the bare essentials. This is also the goal of high cohesion in software architectures. Those things that are needed should be in the container, those things never used, should be removed. In conjunction with the evolution of containers so too has the Java ecosystem been evolving to adapt to this new type of target. Java's project _Jigsaw_ and the move to modularize the JRE starting with Java 9 has been timely and fortunate.
+Up to this point we have just been using Java version 8. The newer versions of Java work much better in containers.
+
+The distillation pattern is all producing a customized JRE that is stripped down to the bare essentials bsased on the dependency needs of your application. This is also the goal of high cohesion in software architectures. Those things that are needed should be in the container, those things never used, should be removed. In conjunction with the evolution of containers so too has the Java ecosystem been evolving to adapt to this new type of target. Java's project _Jigsaw_ and the move to modularize the JRE starting with Java 9 has been timely and fortunate.
 
 ## Java 9+ Modularity ##
 

@@ -1,4 +1,4 @@
-There is a simple application that lists the files from the current directory. It's written in Java and can readily be cloned.
+There is a simple application that lists the files from the current directory. It's written in Java and can readily be cloned. You can see the heart of the small [ListDir code here](https://raw.githubusercontent.com/javajon/listdir/master/src/main/java/org/dijure/lister/ListDir.java).
 
 `git clone https://github.com/javajon/listdir && cd listdir`{{execute}}
 
