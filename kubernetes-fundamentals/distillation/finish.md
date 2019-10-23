@@ -1,6 +1,8 @@
 # Conclusion #
 
-You now understand a few different techniques for efficiently getting your Java application into a container. Now it's ready to be run on Kubernetes. There are some basic ways to containerize applications which are not very efficient. With binary, native applications using GraalVM you now have more techniques to creating distilled containers. Java continues toward cloud native.
+**We went from a 184MB container to a 25MB container! (87% reduction)** Both containers ran the same code, from the same source, yet we were able to distill so much unneeded software out of the container. we just looked at container size, but other topics like performance and security are also important things to consider when delivering containers.
+
+You now understand a few different techniques for efficiently getting your Java application into a container. Now it's ready to be run on Kubernetes. There are some basic ways to containerize applications that are not very efficient. With binary, native applications using GraalVM you now have more techniques to creating distilled containers. Java continues toward cloud native.
 
 ## Lessons Learned ##
 
