@@ -32,7 +32,7 @@ Push it to the private registry.
 
 Did you see how fast that push was?
 
-Notice the size of the binary container image is now down to just 13MB. Alpine is about 4.5MB, which means our **Java application linked to binary form, is 8.5MB**.
+Notice the size of the binary container image is now down to just 25MB. Base Alpine is about 5MB, but we need a special version that adds glibc instead of relying on the base Alpine's musl libc. Some claim that is strange, but it works. The [frolvlad/alpine-glibc](https://github.com/Docker-Hub-frolvlad/docker-alpine-glibc) container is ~17MB. All this means our **Java application linked to binary form, is ~8.5MB**. There is no JRE here, not in the Alpine image and not in the binary.
 
 Let's see how long the execution will take.
 
