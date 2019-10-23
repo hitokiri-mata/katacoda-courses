@@ -4,7 +4,7 @@ Consider this definition.
 
 Notice in the first stage the new command line tool called `native-image`. This powerful tool takes compiled java and links it to a binary executable form native to run on the operating system. The Operating system is defined where native-image runs.
 
-This tool is all part of the GraalVM from Oracle. GraalVM offers a comprehensive ecosystem supporting a large set of languages (Java and other JVM-based languages, JavaScript, Ruby, Python, R, and C/C++ and other LLVM-based languages) and running them in different deployment scenarios (OpenJDK, Node.js, Oracle Database, or standalone).
+This tool is part of the GraalVM from Oracle. GraalVM offers a comprehensive ecosystem supporting a large set of languages (Java and other JVM-based languages, JavaScript, Ruby, Python, R, and C/C++ and other LLVM-based languages) and running them in different deployment scenarios (OpenJDK, Node.js, Oracle Database, or standalone).
 
 For Java applications it has these distillation benefits:
 - Run Java faster
@@ -19,7 +19,7 @@ Build the ListDir application with the multi-stage build.
 
 `docker build \
 -f packaging/Dockerfile-multi-stage-native \
--t $REGISTRY/listdir-e-ms-quarkus:0.1.0 \
+-t $REGISTRY/listdir-e-ms-native:0.1.0 \
 .`{{execute}}
 
 This may take a few minutes, but once complete a new container is built.
@@ -30,13 +30,15 @@ Push it to the private registry.
 
 `docker push $REGISTRY/listdir-e-ms-native:0.1.0`{{execute}}
 
+Did you see how fast that push was?
+
 Notice the size of the binary container image is now down to just 13MB. Alpine is about 4.5MB, which means our **Java application linked to binary form, is 8.5MB**.
 
 Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-e-ms-native:0.1.0`{{execute}}
 
-The execution time is roughly the same. We have achieve a further distillation step with Quarkus and Graal.
+The execution time is slightly faster. We have achieve a further distillation step with GraalVM and its native-image tool.
 
 ## Inspect Container ##
 

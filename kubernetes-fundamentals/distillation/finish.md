@@ -4,15 +4,15 @@ You now understand a few different techniques for efficiently getting your Java 
 
 ## Lessons Learned ##
 
-With these steps you have learned:
+With these steps you have learned how to:
 
-- Install a container registry onto Kubernetes
-- Build and run a simple Java application
-- Build and run the same application with a container
-- Introduce multi-stage container building
-- Leveraging Java 9+ modularity with JLink
-- Compiling Java to a native binary and run it from a container
-- Introduce GraalVM
+- install a container registry onto Kubernetes
+- build and run a simple Java application
+- build and run the same application with a container
+- use multi-stage technique for building containers
+- leverage Java 9+ modularity with JLink
+- compile Java to a native binary and run it from a container
+- start using GraalVM
 
 ## References ##
 

@@ -33,7 +33,7 @@ The execution time is roughly the same. We have achieve a further distillation s
 
 ## Inspect Container ##
 
-You can inspect any of these build containers with the following shell entry command.
+You can inspect any of these build containers with the following shell `sh` command.
 
 `docker run -it $REGISTRY/listdir-d-ms-jlink:0.1.0 sh`{{execute}}
 
@@ -47,4 +47,4 @@ Notice the Java runtime is alive and well. Remember that _this is the JRE create
 
 When you are done inspecting the container exit the shell with the `exit` command. Be sure not to type it twice else you could accidentally exit from your Katacoda instance.
 
-Can we distill any more water out of this stone? Of course, let's look at compiling the Java application to native binaries with Quarkus and Graal in the next step.
+Can we distill any more water out of this stone? Of course, let's look at compiling the Java application to native binaries with GraalVM in the next step.

@@ -8,7 +8,7 @@ For years one of Java's strengths was _write once, run anywhere_ [(WORA)](https:
 
 Java remains relevant for containers. However, it would appear between WORA and PORA there is some redundancy. If you application is running in a container and you know exactly what is in the container, why would you need a Java Runtime engine that can run anywhere? Thanks to containers they can run anywhere. What we put _inside_ our containers should be statically defined and linked as natively as possible, at build time.
 
-What if we could avoid putting a whole JRE in a container while still delivering our app sourced in Java?
+What if we could avoid putting a whole JRE in a container while still deliver our Java app?
 
 ## Distillation Pattern ##
 
@@ -26,12 +26,12 @@ The distillation pattern is about applying best practices to make your container
 | Fast execution time    | Performance pays, CPUs are a limited resources               |
 | Fast execution time    | Performance pays, memory is a limited resource               |
 
-You will learn how:
+You will learn how to:
 
-- Install a container registry onto Kubernetes
-- Build and run a simple Java application
-- Build and run the same application with a container
-- Introduce multi-stage container building
-- Leveraging Java 9+ modularity with JLink
-- Compiling Java to a native binary and run it from a container
-- Introduce GraalVM
+- install a container registry onto Kubernetes
+- build and run a simple Java application
+- build and run the same application with a container
+- use multi-stage technique for building containers
+- leverage Java 9+ modularity with JLink
+- compile Java to a native binary and run it from a container
+- start using GraalVM

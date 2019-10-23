@@ -31,4 +31,4 @@ Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-c-ms-jar:0.1.0`{{execute}}
 
-run it a few more times and see what the average time is the same as the previous step. The image is not smaller nor does it run faster, but the multi-stage feature will be used in the upcoming steps.
+Run it a few more times and see what the average time is the same as the previous step. The image is not smaller nor does it run faster, but the multi-stage feature will be used in the upcoming steps.

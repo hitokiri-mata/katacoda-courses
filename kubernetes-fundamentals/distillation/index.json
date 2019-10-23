@@ -1,5 +1,4 @@
 {
-  "private": true,
   "pathwayTitle": "Distilling Java Containers",
   "title": "Distilling Java Containers",
   "description": "Applying the Distillation Pattern to Containers.",
