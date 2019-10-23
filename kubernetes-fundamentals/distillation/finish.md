@@ -1,15 +1,18 @@
 # Conclusion #
 
-You now understand a few different techniques for efficiently getting your Java application into a container.  Now it's ready to be run on Kubernetes. There are some basic ways to containerize applications which are not very efficient. With binary, native applications using Graal project such as Quarkus you now have to fairly advanced ways of creating efficient containers. Java continues toward cloud native.
+You now understand a few different techniques for efficiently getting your Java application into a container. Now it's ready to be run on Kubernetes. There are some basic ways to containerize applications which are not very efficient. With binary, native applications using GraalVM you now have more techniques to creating distilled containers. Java continues toward cloud native.
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- how to use the basics of the kubectl CLI tool,
-- how to install Nginx on Kubernetes,
-- how containers are deployed as Deployments in Pods,
-- how a Service can provide access to a replication of Pods.
+- Install a container registry onto Kubernetes
+- Build and run a simple Java application
+- Build and run the same application with a container
+- Introduce multi-stage container building
+- Leveraging Java 9+ modularity with JLink
+- Compiling Java to a native binary and run it from a container
+- Introduce GraalVM
 
 ## References ##
 
@@ -22,6 +25,7 @@ With these steps you have learned:
 - [(PORA)](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment)
 - [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux)
 - [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
+- [Top 10 Things To Do With GraalVM](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d])
 - [ListDir source](https://github.com/javajon/listdir)
 - `ListDir` example code was inspired from the related article [GraalVM: Native Images in Containers](https://blogs.oracle.com/javamagazine/graalvm-native-images-in-containers) by [Oleg Šelajev](https://github.com/shelajev).
 

@@ -11,7 +11,7 @@ Build the ListDir application with the multi-stage build.
 -t $REGISTRY/listdir-e-ms-quarkus:0.1.0 \
 .`{{execute}}
 
-After a few moments a new container is built.
+This may take a few minutes, but once complete a new container is built.
 
 `docker images $REGISTRY/listdir*`{{execute}}
 
@@ -23,7 +23,7 @@ Notice the size of the binary container image is now (TODO ?!!))MB. Alpine is ab
 
 Let's see how long the execution will take.
 
-`time docker run $REGISTRY/listdir-e-ms-quarkusk:0.1.0`{{execute}}
+`time docker run $REGISTRY/listdir-e-ms-quarkus:0.1.0`{{execute}}
 
 The execution time is roughly the same. We have achieve a further distillation step with Quarkus and Graal.
 
@@ -43,5 +43,10 @@ Notice the Java runtime is alive and well. Remember that _this is the JRE create
 
 When you are done inspecting the container exit the shell with the `exit` command. Be sure not to type it twice else you could accidentally exit from your Katacoda instance.
 
-Can we distill any more water out of this stone? Of course, let's look at GraalVM in the next step.
+## Debugging the build container ##
 
+TODO - describe why
+
+`docker run -it -v $(pwd):/home/quarkus/listdir quay.io/quarkus/ubi-quarkus-native-s2i:19.2.0.1 sh`{{execute}}
+
+There is much more you can do with GraalVM and its associated projects at Quarkus, Micronaut and TODO.

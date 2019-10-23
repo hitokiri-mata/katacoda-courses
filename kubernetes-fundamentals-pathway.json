@@ -30,8 +30,8 @@
       },
       {
         "course_id": "distillation",
-        "title": "Distilled JRE Apps in Containers (coming soon)",
-        "description": "Applying the Container Distillation Pattern for JRE based applications."
+        "title": "Distilling Java Containers",
+        "description": "Applying the Container Distillation Pattern for Java based applications."
       }
     ]
   }

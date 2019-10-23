@@ -1,7 +1,7 @@
 {
   "private": true,
-  "pathwayTitle": "Distilled JRE Apps in Containers",
-  "title": "Distilled JRE Apps in Containers",
+  "pathwayTitle": "Distilling Java Containers",
+  "title": "Distilling Java Containers",
   "description": "Applying the Distillation Pattern to Containers.",
   "difficulty":	"Intermediate",
   "time":	"30 minutes",
@@ -53,13 +53,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Going Native with Quarkus and Graal",
-        "text": "step10-multi-stage-quarkus.md",
+        "title": "App as Native Binary",
+        "text": "step10-multi-stage-native.md",
         "code": "clear.sh"
       }
     ],
     "intro": {
-      "title": "JRE Apps in Containers",
+      "title": "Distilling Java Containers",
       "text": "intro.md",
       "code": "env-init.sh",
       "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
