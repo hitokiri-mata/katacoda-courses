@@ -3,18 +3,46 @@
     "description": "",
     "courses": [
       {
-        "pathway_id": "istio",
-        "id": "workshop/deploying-istio",
-        "course_id": "deploying-istio",
-        "title": "Deploying Istio to Kubernetes",
-        "description": "Learn how to deploy Istio to a Kubernetes cluster"
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "minikube",
+        "course_id": "minikube",
+        "title": "Minikube",
+        "description": "Introduction to Minikube as a simple Kubernetes cluster."
       },
       {
-        "pathway_id": "istio",
-        "id": "connecting-controlling-microservices/traffic-shaping",
-        "course_id": "traffic-shaping",
-        "title": "Connecting & Controlling: Traffic Shaping Microservices Connections",
-        "description": "Learn Load Balancing, Routes, Rules with Istio"
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "first-app",
+        "course_id": "first-app",
+        "title": "First App",
+        "description": "Run your first application on Kubernetes."
+      },
+      {
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "connectivity",
+        "course_id": "connectivity",
+        "title": "Pods to Services Communication",
+        "description": "How Pods communicate with Services using a DNS."
+      },
+      {
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "jobs",
+        "course_id": "jobs",
+        "title": "Jobs",
+        "description": "Explore the Jobs resource and how the pattern can be applied."
+      },
+      {
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "configmap-secret",
+        "course_id": "configmap-secret",
+        "title": "ConfigMaps and Secrets",
+        "description": "Explore Kubernetes ConfigMaps and Secrets."
+      },
+      {
+        "pathway_id": "kubernetes-fundamentals",
+        "id": "distillation",
+        "course_id": "distillation",
+        "title": "Distilling Java Containers",
+        "description": "Applying the Container Distillation Pattern for Java based applications."
       }
     ]
   }
