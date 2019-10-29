@@ -2,5 +2,12 @@
     "title": "Kubernetes Workshop (jon drafting)",
     "description": "",
     "courses": [
+      {
+        "pathway_id": "javajon",
+        "course_id": "kubernetes-fundamentals/first-app",
+        "id": "first-app",
+        "title": "First App",
+        "description": "Describe..."
+      }
     ]
   }
