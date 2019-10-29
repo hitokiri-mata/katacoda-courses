@@ -11,8 +11,9 @@
       {
         "pathway_id": "istio",
         "id": "connecting-controlling-microservices/traffic-shaping",
-        "title": "foo title",
-        "description": "bar Describe..."
+        "course_id": "traffic-shaping",
+        "title": "foo title 2",
+        "description": "bar Describe 2..."
       }
     ]
   }
