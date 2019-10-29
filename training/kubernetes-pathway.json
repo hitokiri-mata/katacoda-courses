@@ -4,8 +4,8 @@
     "courses": [
       {
         "pathway_id": "javajon",
-        "course_id": "kubernetes-fundamentals/first-app",
-        "id": "first-app",
+        "course_id": "first-app",
+        "id": "kubernetes-fundamentals/first-app",
         "title": "First App",
         "description": "Describe..."
       }
