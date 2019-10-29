@@ -4,10 +4,13 @@
     "courses": [
       {
         "pathway_id": "javajon",
-        "course_id": "first-app",
         "id": "kubernetes-fundamentals/first-app",
         "title": "First App",
         "description": "Describe..."
+      },
+      {
+        "pathway_id": "istio",
+        "id": "connecting-controlling-microservices/deploying-canary-releases"
       }
     ]
   }
