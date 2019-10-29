@@ -10,7 +10,9 @@
       },
       {
         "pathway_id": "istio",
-        "id": "connecting-controlling-microservices/deploying-canary-releases"
+        "id": "connecting-controlling-microservices/deploying-canary-releases",
+        "title": "foo title",
+        "description": "bar Describe..."
       }
     ]
   }
