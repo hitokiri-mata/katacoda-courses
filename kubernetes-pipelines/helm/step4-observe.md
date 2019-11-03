@@ -4,7 +4,7 @@ Use the _get_ command to find out what was deployed.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 
-The Pod will be in a _pending_ state while the container image is downloaded and until a Persistent Volume is available. You will see a _master_[^1] and two _slave_ pods. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The Pod will be in a _pending_ state while the container image is downloaded and until a Persistent Volume is available. You will see a _master_ and two _slave_[^1] pods. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 `kubectl apply -f pv.yaml`{{execute}}
 

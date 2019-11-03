@@ -38,7 +38,7 @@ grafana`{{execute}}
 
 Expose the dashboard as a service on a known port.
 
-`kubectl -n openfaas expose deployment grafana --type=NodePort --name=grafana`{{execute}}
+`kubectl -n openfaas expose pod grafana --type=NodePort --name=grafana`{{execute}}
 
 `kubectl patch service grafana --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31122}]'`{{execute}}
 
