@@ -1,6 +1,6 @@
 {
   "title": "First App",
-  "description": "About Kubernetes Pods",
+  "description": "Run your first application on Kubernetes.",
   "difficulty":	"Intermediate",
   "time":	"20 minutes",
   "details": {
