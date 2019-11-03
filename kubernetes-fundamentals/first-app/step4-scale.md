@@ -10,9 +10,7 @@ With all the curl requests in the loop, the single Pod instance is producing all
 
 Kubernetes spins up new and duplicated Pods and the same service begins to balance the requests across the pods.
 
-`kubectl top pod -l run=hello`{{execute T1}}
-
-The call may return and error such as _metrics not available yet_. This just means the Heapster monitoring is still initializing. In a few moments the call will work.
+`kubectl get pods -l run=hello`{{execute T1}}
 
 Scale the Pods to zero and see what happens with the same _top_ command and the requests in the other terminal.
 
@@ -34,4 +32,4 @@ A new pod should show in a moment.
 
 A few moments later the metrics will be available for the new pod.
 
-`kubectl top pod -l run=hello`{{execute T1}}
+`kubectl get pods -l run=hello`{{execute T1}}
