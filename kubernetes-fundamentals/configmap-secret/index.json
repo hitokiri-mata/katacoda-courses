@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes ConfigMaps and Secrets",
-  "description": "The fundamentals of Kubernetes ConfigMaps and Secrets",
+  "description": "The fundamentals of ConfigMaps and Secrets",
   "difficulty":	"Intermediate",
   "time":	"15 minutes",
   "details": {
