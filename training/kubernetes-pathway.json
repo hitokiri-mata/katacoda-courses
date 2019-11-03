@@ -1,20 +1,76 @@
 {
-    "title": "Kubernetes Workshop (drafting)",
-    "description": "Learn Kubernetes with your hands and mind.",
-    "courses": [
-      {
-        "pathway_id": "javajon",
-        "id": "kubernetes-fundamentals/first-app",
-        "course_id": "first-app",
-        "title": "First App",
-        "description": "Run your first application on Kubernetes."
-      },
-      {
-        "pathway_id": "istio",
-        "id": "connecting-controlling-microservices/traffic-shaping",
-        "course_id": "traffic-shaping",
-        "title": "foo title 2",
-        "description": "bar Describe 2..."
-      }
-    ]
-  }
+  "title": "Kubernetes Workshop at O'Reilly Velocity Berlin",
+  "description": "Learn Kubernetes with your hands and mind.",
+  "courses": [
+    {
+      "title": "First App",
+      "description": "Run your first application on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/first-app",
+      "course_id": "first-app"
+    },
+    {
+      "title": "Nginx",
+      "description": "Discovering how Nginx runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/nginx",
+      "course_id": "nginx"
+    },
+    {
+      "title": "RabbitMQ",
+      "description": "Discovering how RabbitMQ runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/rabbitmq",
+      "course_id": "rabbitmq"
+    },
+    {
+      "title": "R Shiny",
+      "description": "Discovering how Shiny applications run on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/r-shiny",
+      "course_id": "r-shiny"
+    },
+    {
+      "title": "Pods to Services Communication",
+      "description": "How Pods communicate with Services using a DNS.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/connectivity",
+      "course_id": "connectivity"
+    },
+    {
+      "title": "Kubernetes ConfigMaps and Secrets",
+      "description": "The fundamentals of Kubernetes ConfigMaps and Secrets",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/configmap-secret",
+      "course_id": "configmap-secret"
+    },
+    {
+      "title": "Jobs",
+      "description": "Explore the Jobs resource and how the pattern can be applied.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/jobs",
+      "course_id": "jobs"
+    },
+    {
+      "title": "Harbor Registry",
+      "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/harbor",
+      "course_id": "harbor"
+    },
+    {
+      "title": "Helm Package Manager",
+      "description": "Learn how to use Helm, the package manager for Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/helm",
+      "course_id": "helm"
+    },
+    {
+      "title": "OpenFaaS",
+      "description": "Discovering how OpenFaaS runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-serverless/openfaas",
+      "course_id": "openfaas"
+    }
+  ]
+}
