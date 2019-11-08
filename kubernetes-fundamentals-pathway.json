@@ -19,6 +19,11 @@
         "description": "How Pods communicate with Services using a DNS."
       },
       {
+        "course_id": "sidecar",
+        "title": "Sidecar containers",
+        "description": "Two containers in a Pod can share data through a shared mount.",
+      },    
+      {
         "course_id": "jobs",
         "title": "Jobs",
         "description": "Explore the Jobs resource and how the pattern can be applied."

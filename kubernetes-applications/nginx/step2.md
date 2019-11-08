@@ -10,13 +10,9 @@ Now inspect the installation in progress
 
 `kubectl get pods`{{execute}}
 
-Nginx starts fairly quickly so the Pod status may be already running creating, or initializing. To get a complete status of the deployment availability run this inspection
+Nginx starts fairly quickly so the Pod status may be already running creating, or initializing. Nginx is running once the Pod status reports `Running`.
 
-`kubectl get pods`{{execute}}.
-
-Nginx is running once the deployment _Available_ status reaches `1` and the Pod status reports `Running`. However, from outside of Kubernetes at this terminal, it cannot be easily reached.
-
-Let's change the Service type for Nginx from ClusterIP to NodePort.
+However, from outside of Kubernetes at this terminal, it cannot be easily reached. Let's change the Service type for Nginx from ClusterIP to NodePort.
 
 `kubectl expose pod nginx-one --type=NodePort`{{execute}}
 

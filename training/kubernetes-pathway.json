@@ -38,6 +38,13 @@
       "course_id": "connectivity"
     },
     {
+      "title": "Sidecar containers",
+      "description": "Two containers in a Pod can share data through a shared mount.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/sidecar",
+      "course_id": "sidecar"
+    },
+    {
       "title": "Kubernetes ConfigMaps and Secrets",
       "description": "The fundamentals of ConfigMaps and Secrets",
       "pathway_id": "javajon",

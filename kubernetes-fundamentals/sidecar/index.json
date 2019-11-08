@@ -1,0 +1,51 @@
+{
+  "pathwayTitle": "Sidecar",
+  "title": "Sidecar containers",
+  "description": "Two containers in a Pod can share data through a shared mount.",
+  "difficulty":	"Introduction",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Pod with Two Containers",
+        "text": "step2-deployment.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Query Nginx with its Sidecar",
+        "text": "step3-query.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "sidecar-pod", "port": 31111}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}
