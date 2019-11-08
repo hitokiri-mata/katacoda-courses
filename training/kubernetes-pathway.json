@@ -66,11 +66,39 @@
       "course_id": "helm"
     },
     {
+      "title": "Kubeless",
+      "description": "Discovering how Kubeless runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-serverless/kubeless",
+      "course_id": "kubeless"
+    },
+    {
       "title": "OpenFaaS",
       "description": "Discovering how OpenFaaS runs on Kubernetes.",
       "pathway_id": "javajon",
       "id": "kubernetes-serverless/openfaas",
       "course_id": "openfaas"
+    },
+    {
+      "pathwayTitle": "Distilling Java Containers",
+      "title": "Distilling Java Containers",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/distillation",
+      "course_id": "distillation"
+    },
+    {
+      "title": "Basic Kubernetes Observability",
+      "description": "Inspection of a Kubernetes cluster.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/basics",
+      "course_id": "basics"
+    },
+    {
+      "title": "Logging with EFK",
+      "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/efk",
+      "course_id": "efk"
     }
   ]
 }
