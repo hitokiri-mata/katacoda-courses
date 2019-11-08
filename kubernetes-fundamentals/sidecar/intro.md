@@ -1,6 +1,6 @@
-# Nginx on Kubernetes #
+# Sidecar containers #
 
-<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/paralyzed-dog.png">
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/nginx/assets/paralyzed-dog.png">
 
 These next steps provide a simple introduction to the idea of putting two containers in a Pod to achieve the sidecar pattern. The primary advantage of sidecars is separation of concerns. Each containers is highly cohesive in terms of responsibilities, yet they work together to provide a single solution.
 

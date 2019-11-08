@@ -1,4 +1,8 @@
-In the first deployment we simply pass a few parameters that declare to Kubernetes our intent to make Nginx available. Use this command
+There is a YAML file that associated two containers in a Pod and connects them through mouts to a shared volume between the two containers. This allows the second container to act as a sidecar. Inspect how it is created
+
+`cat sidecar-example.yaml`{{execute}}
+
+Deploy the Pod.
 
 `kubectl create -f sidecar-example.yaml`{{execute}}
 
@@ -6,7 +10,7 @@ Inspect the initialization progress.
 
 `kubectl get pods`{{execute}}
 
-Nginx starts fairly quickly so the Pod status may be already running, creating, or initializing. Nginx is running once the status the Pod status reports `Running`.
+Both containers in the Pod start fairly quickly so the Pod status may be already running, creating, or initializing. One downside is the more containers you put in a Pod, the more time it will take to create, restart and scale. Nginx is running once the status the Pod status reports `Running`.
 
 However, from outside of Kubernetes at this terminal, it cannot be easily reached. Let's change the Service type for Nginx from ClusterIP to NodePort.
 

@@ -23,6 +23,6 @@ With these steps you have learned how:
 - [Helm, a package manager for Kubernetes](https://helm.sh/)
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/nginx/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/nginx/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).

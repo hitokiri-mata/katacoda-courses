@@ -1,10 +1,10 @@
 Once available, you can exercise the service two ways. First, simply from the command line,
 
-`curl https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`curl https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 You can also watch the sidecar continuously updating the Nginx static web page with its timestamp.
 
-`while true; do sleep 1; curl -s https://2886795289-31111-elsy04.environments.katacoda.com/ | tail -2; done;`{{execute}}
+`while true; do sleep 1; curl -s https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com | tail -2; done;`{{execute}}
 
 Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
