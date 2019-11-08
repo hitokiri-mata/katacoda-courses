@@ -38,7 +38,7 @@
       "course_id": "connectivity"
     },
     {
-      "title": "Sidecar containers",
+      "title": "Sidecar Containers",
       "description": "Two containers in a Pod can share data through a shared mount.",
       "pathway_id": "javajon",
       "id": "kubernetes-fundamentals/sidecar",

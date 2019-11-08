@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "Sidecar",
-  "title": "Sidecar containers",
+  "title": "Sidecar Containers",
   "description": "Two containers in a Pod can share data through a shared mount.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
