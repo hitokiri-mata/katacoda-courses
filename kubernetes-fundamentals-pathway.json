@@ -21,7 +21,7 @@
       {
         "course_id": "sidecar",
         "title": "Sidecar containers",
-        "description": "Two containers in a Pod can share data through a shared mount.",
+        "description": "Two containers in a Pod can share data through a shared mount."
       },    
       {
         "course_id": "jobs",
