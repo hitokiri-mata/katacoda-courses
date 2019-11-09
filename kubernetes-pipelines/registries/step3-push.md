@@ -1,18 +1,18 @@
 With the new registry running, let's push a container to it. Grab an existing container.
 
-`docker pull tensorflow/tensorflow`{{execute}}
+`docker pull replicated/dockerfilelint`{{execute}}
 
 Verify the image is now cached locally.
 
-`docker images | grep tensor`{{execute}}
+`docker images | grep lint`{{execute}}
 
 Add a new tag to the new container.
 
-`docker tag tensorflow/tensorflow $REGISTRY/my-tensorflow`{{execute}}
+`docker tag replicated/dockerfilelint $REGISTRY/dockerfilelint`{{execute}}
 
 With the image pulled and with a new tag, it now can be deployed to the new registry.
 
-`docker push $REGISTRY/my-tensorflow`{{execute}}
+`docker push $REGISTRY/dockerfilelint`{{execute}}
 
 Inspect the contents of the private registry and verify the container has been pushed.
 
