@@ -17,23 +17,28 @@
         "code": "clear.sh"
       },
       {
+        "title": "Pull and push a container",
+        "text": "step3-push.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Registry Web Interface",
-        "text": "step3-ui.md",
+        "text": "step4-ui.md",
         "code": "clear.sh"
       },
       {
         "title": "Push the Container",
-        "text": "step4-populate.md",
+        "text": "step5-populate.md",
         "code": "clear.sh"
       },
       {
         "title": "Pull the Container",
-        "text": "step5-run.md",
+        "text": "step6-run.md",
         "code": "clear.sh"
       },
       {
         "title": "Explore Clare",
-        "text": "step6-clair.md"
+        "text": "step7-clair.md"
       }
   ],
     "intro": {
