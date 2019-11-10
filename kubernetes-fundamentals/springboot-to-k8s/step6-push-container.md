@@ -1,6 +1,6 @@
 Build the container. The build command assumes there is a Dockerfile in the current directory.
 
-`docker build -t $REGISTRY/hello`{{execute}}
+`docker build -t $REGISTRY/hello .`{{execute}}
 
 Push this container to the private registry on Kubernetes that was established in step 3.
 

@@ -27,6 +27,6 @@ With these steps you have learned how to:
 - [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-applications/nginx/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/springboot-to-k8s/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).
