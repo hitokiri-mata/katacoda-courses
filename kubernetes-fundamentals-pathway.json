@@ -41,7 +41,7 @@
       {
         "course_id": "distillation",
         "title": "Spring Boot to Kubernetes",
-        "description": "From a blank slate to a Spring Boot app running on Kubernetes.",
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes."
       } 
     ]
   }

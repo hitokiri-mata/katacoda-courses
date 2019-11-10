@@ -87,6 +87,13 @@
       "course_id": "openfaas"
     },
     {
+      "pathwayTitle": "Spring Boot to Kubernetes",
+      "title": "Spring Boot to Kubernetes",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/springboot-to-k8s",
+      "course_id": "springboot-to-k8s"
+    },
+    {
       "pathwayTitle": "Distilling Java Containers",
       "title": "Distilling Java Containers",
       "pathway_id": "javajon",
