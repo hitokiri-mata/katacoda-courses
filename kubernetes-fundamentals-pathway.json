@@ -34,10 +34,15 @@
         "description": "Explore Kubernetes ConfigMaps and Secrets."
       },
       {
-        "course_id": "distillation",
+        "course_id": "springboot-to-k8s",
         "title": "Distilling Java Containers",
         "description": "Applying the Container Distillation Pattern for Java based applications."
-      }
+      },
+      {
+        "course_id": "distillation",
+        "title": "Spring Boot to Kubernetes",
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes.",
+      } 
     ]
   }
   
