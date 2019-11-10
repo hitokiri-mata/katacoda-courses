@@ -4,10 +4,10 @@ metadata:
   name: $APP_NAME
 spec:
   ports:
-  - protocol: TCP
-    port: 5000
-    targetPort: 5000
+  - name: web
     nodePort: 32500
+    port: 8080
+    protocol: TCP
   selector:
     app: $APP_NAME
   type: NodePort
@@ -32,4 +32,4 @@ spec:
       - name: $APP_NAME
         image: $REGISTRY/$APP_NAME:latest
         ports:
-        - containerPort: 8080
+          - containerPort: 8080

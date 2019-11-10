@@ -1,7 +1,3 @@
-Now that the application is running obtain the service location of the application. Be sure access is via HTTP, not HTTPS.
+Now that the application is running, call its simple API.
 
-`export APP=http://127.0.0.1:32500/`{{execute}}
-
-You can exercise the application from the command line.
-
-`curl -s "${APP}/hello"`{{execute}}
+`curl -s [[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/hello"`{{execute}}
