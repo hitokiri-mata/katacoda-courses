@@ -32,4 +32,4 @@ spec:
       - name: $APP_NAME
         image: $REGISTRY/$APP_NAME:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
