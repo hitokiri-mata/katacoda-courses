@@ -57,7 +57,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "~/"}
+        {"file": "*", "target": "/root"}
       ]
     }
   },

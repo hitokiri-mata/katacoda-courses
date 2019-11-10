@@ -1,14 +1,18 @@
-Deploy the application on Kubernetes using the container image built and pushed in the previous step. The Kubernetes manifest YAML file has a $REGISTRY variable inside of it that needs to be replaced with the actual location of the private registry. Use the `envsubst` command to replace the environment variable.
+The name of the application is `hello`, so set an environment variable to that name.
 
-`cd ~ && envsubst < my-app.yaml > my-app-resolved.yaml`{{execute}}
+`export APP_NAME=hello`{{execute}}
 
-Inspect the Kubernetes resource declaration for starting the my-app application.
+Deploy the application on Kubernetes using the container image built and pushed in the previous step. The Kubernetes manifest YAML file has a $REGISTRY and $APP_NAME variable inside of it that needs to be replaced with the actual location of the private registry and application name. Use the `envsubst` command to replace the environment variables.
 
-`cat my-app-resolved`{{execute}}
+`cd ~ && envsubst < hello.yaml > hello-resolved.yaml`{{execute}}
+
+Inspect the Kubernetes resource declaration for starting the `hello` application.
+
+`cat hello-resolved`{{execute}}
 
 With the corrected location to the private registry, deploy the application.
 
-`kubectl apply -f my-app-resolved.yaml`{{execute}}
+`kubectl apply -f hello-resolved.yaml`{{execute}}
 
 In a moment the application will be available.
 

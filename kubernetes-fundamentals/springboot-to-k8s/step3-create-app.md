@@ -10,4 +10,4 @@ The Spring Boot frameworks offers an "initializr". The process create a skeletal
 -d baseDir=hello \
 | tar -xzvf -`{{execute}}
 
-In the my-app directory is the application skelton. We just need to add some code then it can be built and run.
+In the `hello` directory is the application skelton. We just need to add some code then it can be built and run.
