@@ -1,15 +1,16 @@
 ## Stage 1 : Gradle build produces the application executable jar
-FROM gradle:jdk8 as builder
+FROM gradle:jdk10 as builder
 
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build
 
+
 ## Stage 2 : Final image with JRE and application executable jar
-FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ARG DEPENDENCY=/workspace/app/target/dependency
-COPY --from=builder ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY --from=builder ${DEPENDENCY}/META-INF /app/META-INF
-COPY --from=builder ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","example.hello.demo.Application"]
+FROM openjdk:8-jre-alpine
+
+# Copy JAR into container image
+COPY --from=builder /home/gradle/src/build/libs/demo-0.0.1-SNAPSHOT.jar demo.jar
+
+# Run application using executable jar application 
+CMD ["/usr/bin/java", "-jar", "demo.jar"]
