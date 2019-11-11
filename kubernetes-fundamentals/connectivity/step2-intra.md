@@ -20,7 +20,7 @@ Because the busyboxplus container is running in the same namespace (_default_) a
 
 `curl http://nginx`{{execute}}
 
-`curl -I http://nginx:80 | grep "Thank you"`{{execute}}
+`curl -s http://nginx:80 | grep "Thank you"`{{execute}}
 
 The namespace can optionally be added to the URL.
 
