@@ -4,7 +4,7 @@ Knative, by design, has no command line interface. It's a server side framework 
 
 ## Install Istio ##
 
-`curl -L https://github.com/knative/serving/releases/download/v0.2.2/istio-lean.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+`curl -L https://github.com/knative/serving/releases/download/v0.10.0/service-istio.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
 
 `kubectl get pods --namespace istio-system`{{execute}}
 
@@ -18,7 +18,7 @@ Notice Istio adds extensions (crds) to the Kubernetes API.
 
 ## Installing Knative Serving ##
 
-`curl -L https://github.com/knative/serving/releases/download/v0.2.2/release-lite.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+`curl -L https://github.com/knative/serving/releases/download/v0.10.0/serving-core.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
 
 `kubectl get pods --namespace knative-serving`{{execute}}
 

@@ -59,6 +59,20 @@
       "course_id": "jobs"
     },
     {
+      "title": "Basic Kubernetes Observability",
+      "description": "Inspection of a Kubernetes cluster.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/basics",
+      "course_id": "basics"
+    },
+    {
+      "title": "Logging with EFK",
+      "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/efk",
+      "course_id": "efk"
+    },
+    {
       "title": "Harbor Registry",
       "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning.",
       "pathway_id": "javajon",
@@ -71,6 +85,13 @@
       "pathway_id": "javajon",
       "id": "kubernetes-pipelines/helm",
       "course_id": "helm"
+    },
+    {
+      "title": "SonarQube",
+      "description": "Code Analysis with SonarQube on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/sonarqube",
+      "course_id": "sonarqube"
     },
     {
       "title": "Kubeless",
@@ -99,20 +120,6 @@
       "pathway_id": "javajon",
       "id": "kubernetes-fundamentals/distillation",
       "course_id": "distillation"
-    },
-    {
-      "title": "Basic Kubernetes Observability",
-      "description": "Inspection of a Kubernetes cluster.",
-      "pathway_id": "javajon",
-      "id": "kubernetes-observability/basics",
-      "course_id": "basics"
-    },
-    {
-      "title": "Logging with EFK",
-      "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
-      "pathway_id": "javajon",
-      "id": "kubernetes-observability/efk",
-      "course_id": "efk"
     }
   ]
 }
