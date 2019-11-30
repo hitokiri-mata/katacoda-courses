@@ -1,5 +1,5 @@
 {
-  "title": "Kubernetes Workshop at O'Reilly Velocity Berlin",
+  "title": "Kubernetes Workshop",
   "description": "Learn Kubernetes with your hands and mind.",
   "courses": [
     {
@@ -108,18 +108,25 @@
       "course_id": "openfaas"
     },
     {
-      "pathwayTitle": "Spring Boot to Kubernetes",
       "title": "Spring Boot to Kubernetes",
+      "description": "From a blank slate to a Spring Boot app running on Kubernetes.",
       "pathway_id": "javajon",
       "id": "kubernetes-fundamentals/springboot-to-k8s",
       "course_id": "springboot-to-k8s"
     },
     {
-      "pathwayTitle": "Distilling Java Containers",
       "title": "Distilling Java Containers",
+      "description": "Applying the Distillation Pattern to Containers.",
       "pathway_id": "javajon",
       "id": "kubernetes-fundamentals/distillation",
       "course_id": "distillation"
-    }
+    },
+    {
+      "title": "Deploying Istio to Kubernetes",
+      "description": "Learn how to deploy Istio to a Kubernetes cluster",
+      "pathway_id": "istio",
+      "id": "workshop/deploying-istio",
+      "course_id": "deploying-istio"
+    }    
   ]
 }
