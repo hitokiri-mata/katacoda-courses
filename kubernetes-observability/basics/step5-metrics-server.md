@@ -1,4 +1,4 @@
-The de factor light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
+The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
 `helm install stable/metrics-server \
 --name metrics-server \
@@ -40,4 +40,4 @@ Metrics-server is a lighter version of Heapster. It gathers the latest metrics f
 
 The [exposed Resource Metrics API is documented here](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/resource-metrics-api.md).
 
-Another metric gathering server is [_kube-state-metrics_](https://github.com/kubernetes/kube-state-metrics#kube-state-metrics-vs-metrics-server). It is used to provide metrics information for P[Prometheus](https://prometheus.io/). Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.
+Another metric gathering server is [_kube-state-metrics_](https://github.com/kubernetes/kube-state-metrics#kube-state-metrics-vs-metrics-server). It is used to provide metrics information for [Prometheus](https://prometheus.io/). Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.

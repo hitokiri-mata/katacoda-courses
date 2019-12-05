@@ -1,5 +1,5 @@
 image:
-  tag: 7.7-community
+  tag: 7.9.1-community
 
 service:
   type: NodePort

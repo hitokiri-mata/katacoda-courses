@@ -2,7 +2,7 @@ Out of the box, Helm has a fixed list of known repositories that host the most c
 
 `helm repo list`{{execute}}
 
-Within these repos are stable and incubating charts. The current count, as of this writing (10/2019), is 281 charts.
+Within these repos are stable and incubating charts. The current count, as of this writing (12/2019), is 284 charts.
 
 `echo "The number of common charts is, stable: $(helm search stable | wc -l)."`{{execute}}
 

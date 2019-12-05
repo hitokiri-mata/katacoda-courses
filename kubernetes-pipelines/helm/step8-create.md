@@ -32,11 +32,11 @@ Before deploying to Kubernetes, the _dry-run_ feature will list out the resource
 
 Notice the tag version is TODO. Before we deploy the chart we could modify the values.yaml file and change the version in there, but perhaps we would like to try the new version first to verify it works. Use the `--set` command to override a default value. Here we change the Nginx container version number from `latest` to more definitive Nginx version.
 
-`helm install --dry-run --debug ./app-chart --set image.tag=1.15-alpine | grep 'image: "' -n -B3 -A3`{{execute}}
+`helm install --dry-run --debug ./app-chart --set image.tag=1.17-alpine | grep 'image: "' -n -B3 -A3`{{execute}}
 
  With the version injecting correctly, install it.
 
-`helm install --name my-app ./app-chart --set image.tag=1.15-alpine`{{execute}}
+`helm install --name my-app ./app-chart --set image.tag=1.17-alpine`{{execute}}
 
 In a moment the app will start. Inspect its progress.
 
