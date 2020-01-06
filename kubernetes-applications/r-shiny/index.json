@@ -37,7 +37,7 @@
     "assets": {
       "host01": [
         {"file": "*", "target": "/root"},
-        {"file": "dashtoken.sh", "target": "/usr/local/bin", "chmod": "+x"}
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
   },
