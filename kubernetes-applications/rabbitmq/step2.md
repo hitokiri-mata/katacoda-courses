@@ -1,8 +1,10 @@
-## Install ##
+Create a namespace for the installation target.
+
+`kubectl create namespace rabbit`{{execute}}
 
 Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
-`helm install stable/rabbitmq-ha --name my-rabbit --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`helm install my-rabbit stable/rabbitmq-ha --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
 The RabbitMQ containers take a few minutes to start. To get a complete status of the deployment availability run this inspection. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_.
 

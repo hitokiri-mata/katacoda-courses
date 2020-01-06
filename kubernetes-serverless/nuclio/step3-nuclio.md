@@ -2,9 +2,13 @@ A common Helm _chart_ is predefined for installing Nuclio. Many popular and stab
 
 `helm repo add nuclio https://nuclio.github.io/nuclio/charts`{{execute}}
 
+Create a namespace for the installation target.
+
+`kubectl create namespace nuclio`{{execute}}
+
 Install the Nuclio controller
 
-`helm install nuclio/nuclio --name=nuclio --namespace=nuclio --set dashboard.nodePort=31000`{{execute}}
+`helm install nuclio nuclio/nuclio --namespace=nuclio --set dashboard.nodePort=31000`{{execute}}
 
 Watch Nuclio starting and verify it's _Available_.
 

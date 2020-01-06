@@ -1,6 +1,6 @@
 # Includes complete Jenkins configuration in order to run Jenkins on Kubernetes
 # To install run:
-# helm install stable/jenkins --namespace jenkins --name jenkins -f ./jenkins-values.yam
+# helm install jenkins stable/jenkins --namespace jenkins -f ./jenkins-values.yam
 
 Master:
   Image: "jenkins/jenkins"

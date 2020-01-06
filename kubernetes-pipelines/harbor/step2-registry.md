@@ -6,9 +6,13 @@ Add the Harbor chart report to Helm.
 
 `helm repo add harbor https://helm.goharbor.io`{{execute}}
 
+Create a namespace for the installation target.
+
+`kubectl create namespace harbor`{{execute}}
+
 Install Harbor from the Helm chart.
 
-`helm install --name harbor harbor/harbor --namespace harbor \
+`helm install harbor harbor/harbor --namespace harbor \
 --set persistence.enabled=false \
 --set expose.tls.enabled=false \
 --set expose.type=nodePort \

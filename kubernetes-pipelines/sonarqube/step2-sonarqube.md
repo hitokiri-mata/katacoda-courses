@@ -8,9 +8,13 @@ SonarQube will be making two PersistentVolumeClaims, one for SonarQube and one f
 
 ## Install ##
 
+Create a namespace for the installation target.
+
+`kubectl create namespace sonarqube`{{execute}}
+
 Using Helm, install the SonarQube Helm chart with a few custom values.
 
-`helm install stable/sonarqube --name sonar --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
+`helm install sonar stable/sonarqube --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
 This chart bootstraps a SonarQube instance along with a PostgreSQL database. SonarQube also loads several plugins defined in the Helm chart configuration. To get a complete status of the deployment availability run this inspection.
 

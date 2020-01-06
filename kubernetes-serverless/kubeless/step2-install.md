@@ -2,9 +2,13 @@ A common Helm _chart_ is predefined for installing _Kubeless_. Normally, popular
 
 `helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}}
 
+Create a namespace for the installation target.
+
+`kubectl create namespace kubeless`{{execute}}
+
 To install Kubeless onto Kubernetes apply this command:
 
-`helm install --name my-kubeless --namespace kubeless incubator/kubeless \
+`helm install my-kubeless --namespace kubeless incubator/kubeless \
 --set ui.enabled=true \
 --set rbac.create=true \
 --set kafkaTrigger.enabled=true \

@@ -2,7 +2,7 @@ A container registry is needed during the build, push and deploy phases. While w
 
 There are many options for standing up a container registry. We prefer a high available, pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
-`helm install stable/docker-registry --name registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
+`helm install registry stable/docker-registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
 
 The registry is now available as a service. It can be listed.
 

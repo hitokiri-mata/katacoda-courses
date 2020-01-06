@@ -36,7 +36,7 @@ Notice the tag version is TODO. Before we deploy the chart we could modify the v
 
  With the version injecting correctly, install it.
 
-`helm install --name my-app ./app-chart --set image.tag=1.17-alpine`{{execute}}
+`helm install my-app ./app-chart --set image.tag=1.17-alpine`{{execute}}
 
 In a moment the app will start. Inspect its progress.
 

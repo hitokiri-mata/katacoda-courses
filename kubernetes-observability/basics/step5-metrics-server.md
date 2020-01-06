@@ -1,7 +1,6 @@
 The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
-`helm install stable/metrics-server \
---name metrics-server \
+`helm install metrics-server stable/metrics-server \
 --namespace kube-system \
 --set args[0]="--kubelet-preferred-address-types=InternalIP" \
 --set args[1]="--kubelet-insecure-tls"`{{execute}}

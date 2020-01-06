@@ -8,8 +8,12 @@ Add the repo where the Kafka chart can be referenced from
 
 `helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
 
+Create a namespace for the installation target.
+
+`kubectl create namespace kubeless`{{execute}}
+
 and install the Kafka chart.
 
-`helm install incubator/kafka --namespace kubeless --name kafka`{{execute}}
+`helm install kafka incubator/kafka --namespace kubeless`{{execute}}
 
 (Next todo, instructions on consuming events)

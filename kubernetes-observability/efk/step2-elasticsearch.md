@@ -8,9 +8,14 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 ## Install ElasticSearch ##
 
+Create a namespace for the installation target.
+
+`kubectl create namespace logs`{{execute}}
+
 Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for a production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
 
-`helm install stable/elasticsearch --name=elasticsearch --namespace=logs \
+
+`helm install elasticsearch stable/elasticsearch --namespace=logs \
 --set client.replicas=1 \
 --set master.replicas=1 \
 --set cluster.env.MINIMUM_MASTER_NODES=1 \

@@ -1,6 +1,6 @@
 ## Establish Private Registry on Kubernetes ##
 
-`helm install --name registry stable/docker-registry --set service.type=NodePort`{{execute}}
+`helm install registry stable/docker-registry --set service.type=NodePort`{{execute}}
 
 This start a private container registry that Camel K will use. To verify it is accessible find the IP and PORT of the service:
 

@@ -1,6 +1,10 @@
+Create a namespace for the installation target.
+
+`kubectl create namespace redis`{{execute}}
+
 With a known chart name, use the _install_ command to deploy the chart to your cluster.
 
-`helm install stable/redis --name my-redis`{{execute}}
+`helm install my-redis stable/redis`{{execute}}
 
 With the install command Helm will launch the required deployments, ReplicaSets, Pods, Services, ConfigMaps or any other Kubernetes resource the chart defines. View all the installed charts.
 

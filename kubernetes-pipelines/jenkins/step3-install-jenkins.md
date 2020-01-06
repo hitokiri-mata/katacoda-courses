@@ -16,9 +16,13 @@ We are interested in the stable/jenkins chart listed here
 
 `helm search stable/jenkins`{{execute}}
 
+Create a namespace for the installation target.
+
+`kubectl create namespace jenkins`{{execute}}
+
 To start Jenkins use Helm to install the stable/Jenkins chart.
 
-`helm install stable/jenkins --namespace jenkins --name jenkins -f jenkins-values.yaml`{{execute}}
+`helm install stable/jenkins jenkins --namespace jenkins -f jenkins-values.yaml`{{execute}}
 
 The jenkins-values.yaml file includes details for the Jenkins configuration to ensure it starts with all the appropriate plugins, along with its Kubernetes plugin. The Jenkins chart also installs a definition for a custom container for running Jenkins jobs. The jenkins-slave-docker:kubectl Docker container image contains the KubeCtl CLI application that the Jenkinsfile in hello-world-instrumented will call. The Jenkinsfile handles the compiling, Docker image building, deploying and canary deployment logic.
 

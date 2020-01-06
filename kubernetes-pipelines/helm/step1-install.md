@@ -10,19 +10,11 @@ This tutorial covers version 2.x of Helm with the server side component called T
 
 Interact with Helm start with a command-line tool (CLI). Helm can be downloaded from https://github.com/kubernetes/helm/releases
 
-`curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
-chmod 700 get_helm.sh
-./get_helm.sh`{{execute}}
+`curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash `{{execute}}
 
-Once installed locally a server side component needs to be started called _Tiller_. The _init_ command starts _Tiller_ and it will be available in a moment.
+Helm's default list of public repositories is initially empty. More on this later, but for now the repo cache can be updated.
 
-`helm init`{{execute}}
-
-`kubectl get pods -n kube-system | grep tiller`{{execute}}
-
-Helm has a working set of public repositories. More on this later, but for now the repo cache can be updated.
-
-`helm repo update`{{execute}}
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`{{execute}}
 
 At this point Helm should be healthy.
 
