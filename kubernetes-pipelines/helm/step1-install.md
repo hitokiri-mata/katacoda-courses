@@ -24,6 +24,6 @@ The current local state of Helm is kept in your environment in the _home_ locati
 
 `ls $(helm home)`{{execute}}
 
-The Helm init command defaults to discovering the host already set in ~/.kube/config. There is a way to change or override the host, but that's beyond the scope of this scenario.
+The Helm command defaults to discovering the host already set in ~/.kube/config. There is a way to change or override the host, but that's beyond the scope of this scenario.
 
 The next step gets right to it by installing a pre-made chart.
