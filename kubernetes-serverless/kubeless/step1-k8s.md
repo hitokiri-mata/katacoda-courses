@@ -11,6 +11,6 @@ The [Helm](https://helm.sh/) package manager used for installing applications on
 
 ## Kubernetes Dashboard ##
 
-You can administer your cluster with the `kubectl` CLI tool or through the more visual Kubernetes Dashboard. Use this script to access the protected Dashboard.
+You can administer your cluster with the `kubectl` CLI tool or use the visual Kubernetes Dashboard. Use this script to access the protected Dashboard.
 
 `dashtoken.sh`{{execute}}

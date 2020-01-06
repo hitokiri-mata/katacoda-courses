@@ -45,7 +45,10 @@
       "text": "finish.md"
     },
     "assets": {
-      "master": [{"file": "*", "target": "~/"}]
+      "master": [
+        {"file": "*", "target": "~/"},
+        {"file": ".dashtoken.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
     }
   },
   "environment": {

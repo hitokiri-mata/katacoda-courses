@@ -46,7 +46,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "/root"}
+        {"file": "*.yaml", "target": "/root"},
+        {"file": ".dashtoken.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
   },
