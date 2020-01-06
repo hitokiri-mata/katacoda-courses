@@ -6,9 +6,6 @@ apt install tree
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 
-source <(kubectl completion bash)
-source <(helm completion bash)
-
 # Helm Setup
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash 
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
@@ -20,6 +17,9 @@ helm install dash stable/kubernetes-dashboard \
 --set=enableInsecureLogin=true \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
+
+source <(kubectl completion bash)
+source <(helm completion bash)
 
 # Install buildah
 sudo apt-get update -qq
