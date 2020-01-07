@@ -20,11 +20,5 @@ source <(helm completion bash)
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
 
 # Workaround: Katacoda base image needs fixing
-#JAVA_HOME is set to JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin, should be:
-# export JAVA_HOME=JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-
-# Need Java for Gradle build
-# TODO - are these needed? Abovev should have  fixed it
-# sudo apt-get update --fix-missing
-# apt install -y openjdk-8-jdk-headless --fix
-# export JAVA_HOME=/usr/lib/jvm/default-java
+# JAVA_HOME is set to JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin, should be:
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin
