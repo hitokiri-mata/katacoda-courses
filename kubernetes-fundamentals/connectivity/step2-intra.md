@@ -40,6 +40,8 @@ If the Busybox service was created before the NGINX service the urls would still
 
 Exit the shell in the BusyBox container.
 
-`exit`{{execute}}
+`exit` 
+
+You must type this, but don't do it twice as it will exit this scenario.
 
 Tip: Try to leave most communication on port 80 or a common port the service expects to be on. Later add a meshing network like Istio. Without further code modifications Istio can step in to ensure all intra-communication is secured with mutual TLS and monitored for tracing and metrics.

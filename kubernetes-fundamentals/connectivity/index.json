@@ -17,7 +17,8 @@
       },
       {
         "title": "DNS for Services and Pods",
-        "text": "step3-dns.md"
+        "text": "step3-dns.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
