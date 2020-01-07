@@ -12,13 +12,18 @@
         "code": "clear.sh"
       },
       {
+        "title": "Communication Between Containers",
+        "text": "step2-communication.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Deploy Pod with Two Containers",
-        "text": "step2-deployment.md",
+        "text": "step3-deployment.md",
         "code": "clear.sh"
       },
       {
         "title": "Query Nginx with its Sidecar",
-        "text": "step3-query.md"
+        "text": "step4-query.md"
       }
     ],
     "intro": {
