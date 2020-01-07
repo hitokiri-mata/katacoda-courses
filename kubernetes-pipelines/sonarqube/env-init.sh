@@ -21,4 +21,4 @@ source <(helm completion bash)
 
 # Workaround: Katacoda base image needs fixing
 # JAVA_HOME is set to JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin, should be:
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
