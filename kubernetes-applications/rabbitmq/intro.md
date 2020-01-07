@@ -4,7 +4,7 @@
 
 Robust messaging for applications to connect and scale. RabbitMQ is an open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 
-These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called kubectl and helm, a few steps will get RabbitMQ running.
+These next steps provide an ideal place to start deploying and running one of your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called `kubectl` and `helm`, a few steps will get RabbitMQ running.
 
 You will learn how:
 

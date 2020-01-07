@@ -6,6 +6,7 @@ replicas: 3
 
 service:
   type: NodePort 
+  nodePort: 31000
 
 rabbitmqUsername: guest
 rabbitmqPassword: guest
