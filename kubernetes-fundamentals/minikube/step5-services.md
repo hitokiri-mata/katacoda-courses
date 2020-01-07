@@ -2,10 +2,14 @@ Minikube has a helpful command to list and inspect the Kubernetes services. Some
 
 `minikube service list`{{execute}}
 
-Notice there are already some services running in the kube-admin namespace. These are present because the corresponding Addons are enabled. Two specific services are available as NodePorts for your access, _kubernetes_dashboard and _monitoring_grafana_.
+Notice there are already some services running in the kube-admin namespace. These are present because the corresponding Addons are enabled. The _kubernetes_dashboard_ is a service that is exposed as a NodePort for your access.
 
 The URLs for these services can be listed.
 
-`minikube service --namespace kube-system monitoring-grafana --url`{{execute}}
+`minikube service --namespace kube-system kubernetes-dashboard-katacoda --url`{{execute}}
+
+You can see it's exposed as a NodePort with using a different command.
+
+`kubectl get service kubernetes-dashboard-katacoda -n kube-system`{{execute}}
 
 With this Katacoda virtualization these URLs are not accessible from your browser, however they can be reached with Katacode URLs described in the next step.
