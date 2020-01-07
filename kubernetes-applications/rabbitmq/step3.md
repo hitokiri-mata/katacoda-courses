@@ -1,6 +1,6 @@
 Once running, this Rabbit MQ portal can be seen in your browser.
 
-There is a slight problem with the chart where the NodePort port value is a random value. Most other charts allow you to set this value at installation time. For this example, we need a fixed and known port. As a workaround a patch to the portal http port number is applied.
+There is a slight defect with the chart where the NodePort port value is a random value instead of being set to 31000 as declared. Most other charts allow you to set this value at installation time. For this example, we need a fixed and known port. As a workaround a patch to the portal http port number is applied.
 
 `kubectl patch service my-rabbit-rabbitmq-ha --namespace=rabbit --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31000}]'`{{execute}}
 
