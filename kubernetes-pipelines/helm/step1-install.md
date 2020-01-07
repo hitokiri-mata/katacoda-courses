@@ -12,13 +12,13 @@ Interact with Helm start with a command-line tool (CLI). Helm can be installed f
 
 `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash `{{execute}}
 
-Helm's default list of public repositories is initially empty. More on this later, but for now the repo cache can be updated.
-
-`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`{{execute}}
-
 At this point Helm should be healthy.
 
 `helm version --short`{{execute}}
+
+Helm's default list of public repositories is initially empty. More on this later, but for now the Google chart repo can be added.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`{{execute}}
 
 The current local state of Helm is kept in your environment in the _home_ location.
 
