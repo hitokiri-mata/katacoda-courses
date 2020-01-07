@@ -12,7 +12,7 @@ This project includes a microservice directory that contains a small Spring Boot
 
 Analyze this microservices project using SonarQube as the rule engine and dashboard where the results are published.
 
-Get the SonarQube engine location.
+Get your SonarQube engine location.
 
 `SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 

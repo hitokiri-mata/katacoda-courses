@@ -30,7 +30,7 @@ Before deploying to Kubernetes, the _dry-run_ feature will list out the resource
 
 `helm install my-app ./app-chart --dry-run --debug | grep 'image: "' -n -B3 -A3`{{execute}}
 
-Notice the `ImagePullPolicy` is set to the default of `IfNotPreset`. Before we deploy the chart we could modify the values.yaml file and change the policy value in there, but perhaps we would like to try the new version first to verify it works. Use the `--set` command to override a default value. Here we change the Nginx container image ImagePullPolicy from `IfNotPreset` to `Always`.
+Notice the `ImagePullPolicy` is set to the default of `IfNotPreset`. Before we deploy the chart we could modify the values.yaml file and change the policy value in there, but perhaps we would like to locally modify a different policy setting first to verify it works. Use the `--set` command to override a default value. Here we change the Nginx container image ImagePullPolicy from `IfNotPreset` to `Always`.
 
 `helm install my-app ./app-chart --dry-run --debug --set image.pullPolicy=Always | grep 'image: "' -n -B3 -A3`{{execute}}
 

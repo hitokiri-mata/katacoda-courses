@@ -20,6 +20,8 @@ source <(helm completion bash)
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
 
 # Need Java for Gradle build
-sudo apt-get update --fix-missing
-apt install -y openjdk-8-jdk-headless --fix-missing
-export JAVA_HOME=/usr/lib/jvm/default-java
+
+# TODO - are these needed?
+# sudo apt-get update --fix-missing
+# apt install -y openjdk-8-jdk-headless --fix-missing
+# export JAVA_HOME=/usr/lib/jvm/default-java

@@ -4,7 +4,7 @@ Use the _get_ command to find out what was deployed.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 
-The Pod will be in a _pending_ state while the container image is downloaded and until a Persistent Volume is available. You will see a `my-master-0`, `my-slave-0` and `my-slave-1` pods. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The Pod will be in a _pending_ state while the container image is downloaded and until a Persistent Volume is available. You will see a `my-redis-master-0` and `my-redis-slave-0` pod. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Create a Persistent Volume for Redis.
 

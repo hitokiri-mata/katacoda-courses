@@ -24,7 +24,7 @@ Take a moment to see all the charts in the Google repo. The list is long.
 
 The charts in [Helm Hub](https://hub.helm.sh/) can be listed as well.
 
-`helm search hub --max-col-width=80 | sed -E "s/(.{70}).*$/\1/`{{execute}}
+`helm search hub --max-col-width=80 | sed -E "s/(.{70}).*$/\1/"`{{execute}}
 
 There are over 974 charts.
 
