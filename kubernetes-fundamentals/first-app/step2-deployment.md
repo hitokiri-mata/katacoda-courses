@@ -10,7 +10,7 @@ Take a look at the YAML files that defines this application.
 
 `cat echoserver.yaml`{{execute}}
 
-Notice this not only defines a `kind: Deployment`, but inside the deployment is a `ReplicaSet` of a 'Pod' and that pod consists of one `Container`. The Deployment is a preferred way of deploying applications instead of simply standing up just a Pod. You may see the advantage in the later step that scales the application.
+Notice this not only defines a `kind: Deployment`, but inside the deployment is a `ReplicaSet` of a `Pod` and that Pod consists of one `Container`. The Deployment is a preferred way of deploying applications instead of simply standing up just a Pod. You may see the advantage in the later step that scales the application.
 
 It's only about 44 MB so it downloads and starts within a few moments. Ensure the _Available_ status changes from 0 to 1.
 

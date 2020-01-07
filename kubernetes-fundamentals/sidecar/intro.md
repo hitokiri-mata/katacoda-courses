@@ -4,7 +4,7 @@
 
 These next steps provide a simple introduction to the idea of putting two containers in a Pod to achieve the sidecar pattern. The primary advantage of sidecars is separation of concerns. Each containers is highly cohesive in terms of responsibilities, yet they work together to provide a single solution.
 
-With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get a Nginx web server running along with its sidecar.
+With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get an Nginx web server running along with its sidecar.
 
 You will learn how:
 

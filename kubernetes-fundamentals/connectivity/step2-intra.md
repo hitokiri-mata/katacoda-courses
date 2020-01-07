@@ -36,7 +36,7 @@ The name of the service could be passed in as an environment variable to the con
 
 `env | grep NGINX`{{execute}}
 
-If the Busybox service was created before the NGINX service the urls would still work, but the environment settings would not be present. It's not the best idea to rely on these environment setting since the order of creation of services is not guaranteed.
+If the Busybox service was created before the Nginx service the urls would still work, but the environment settings would not be present. It's not the best idea to rely on these environment setting since the order of creation of services is not guaranteed.
 
 Exit the shell in the BusyBox container.
 
