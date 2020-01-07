@@ -6,9 +6,9 @@ Helm also helps you manage the complexities of dependency management. Charts can
 
 The Helm CLI tool deploys charts to Kubernetes. A server side component can accept the chart and submit the YAML declarations to Kubernetes. The chart is a deployable unit that can be inspected, listed, updated and removed.
 
-This tutorial covers version 2.x of Helm with the server side component called Tiller. In the upcoming version 3.x the Tiller component has been removed.
+This scenario covers version 3.x of Helm. If you are using version 2.x, it's highly advisable to move to the recent version.
 
-Interact with Helm start with a command-line tool (CLI). Helm can be downloaded from https://github.com/kubernetes/helm/releases
+Interact with Helm start with a command-line tool (CLI). Helm can be installed from https://github.com/kubernetes/helm/releases
 
 `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash `{{execute}}
 
@@ -22,7 +22,7 @@ At this point Helm should be healthy.
 
 The current local state of Helm is kept in your environment in the _home_ location.
 
-`ls $(helm home)`{{execute}}
+`helm env`{{execute}}
 
 The Helm command defaults to discovering the host already set in ~/.kube/config. There is a way to change or override the host, but that's beyond the scope of this scenario.
 

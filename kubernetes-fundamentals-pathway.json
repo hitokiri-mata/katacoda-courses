@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes Fundamentals",
     "icon": "fa-kubernetes",
-    "description": "Learn the fundamental building blocks of Kubernetes with hands-on on explanations.",
+    "description": "Learn the fundamental building blocks of Kubernetes with hands-on xplanations.",
     "courses": [
       {
         "course_id": "minikube",

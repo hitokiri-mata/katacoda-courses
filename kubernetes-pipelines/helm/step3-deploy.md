@@ -14,8 +14,6 @@ or
 
 `helm ls`{{execute}}
 
-The installed _my_redis_ chart should be listed.
-
-If you receive an error that Helm _could not find a ready tiller pod_, it means that Helm is still deploying. Wait a few moments for the tiller container image to finish downloading.
+The installed `my_redis` chart should be listed.
 
 The next step will verify the deployment status.

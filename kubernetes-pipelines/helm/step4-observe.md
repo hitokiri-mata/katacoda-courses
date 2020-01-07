@@ -20,4 +20,4 @@ You have successfully installed a [Redis cluster](https://[[HOST_SUBDOMAIN]]-311
 
 -----
 
-[^1]: Many hope Redis will follow other tech leaders and move away from the terminology of [slavery](https://en.wikipedia.org/wiki/Master/slave_(technology)) to describe their technology.
+[^1]: Many hope Redis will follow other tech leaders and move away from the terminology of [slavery](https://en.wikipedia.org/wiki/Master/slave_%28technology%29) to describe their technology.
