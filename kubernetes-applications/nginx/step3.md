@@ -24,6 +24,6 @@ Once available, you can exercise the new Service two ways. First, simply from th
 
 The same web interface for "nginx-one" can also be seen in your browser from the "nginx-two" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com
 
-As an alternative to the kubectl CLI you can also observe the pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
+As an alternative to the kubectl CLI you can also observe the Pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
 
 `token.sh`{{execute}}
