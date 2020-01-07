@@ -1,4 +1,4 @@
-Container in the same Pod have several advantages. Primarily these colocated containers benefit from fast communication channels between each other. The technique simply uses the [well established Linux inter-process communication (IPC) techniques](https://www.tldp.org/LDP/tlk/ipc/ipc.html):
+Containers in the same Pod have several advantages. Primarily these colocated containers benefit from fast communication channels between each other. The transmission of data use the [established Linux inter-process communication (IPC) techniques](https://www.tldp.org/LDP/tlk/ipc/ipc.html):
 
 - Signals
 - Pipes
@@ -15,3 +15,5 @@ Sidecars are a common pattern that takes advantage of the fact that two containe
 
 - PersistenceVolume mount: "emptyDir"
 - localhost
+
+Let's deploy a Pod with this sidecar pattern.

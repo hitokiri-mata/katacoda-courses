@@ -17,10 +17,8 @@ With these steps you have learned how:
 
 - [Shared volumes](https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/)
 - [Nginx](https://www.nginx.com/)
-- [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
-- [Round robin load balancing](https://en.wikipedia.org/wiki/Round-robin_DNS)
 - [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-- [Helm, a package manager for Kubernetes](https://helm.sh/)
+- [Linux Inter-process communications](https://www.tldp.org/LDP/tlk/ipc/ipc.html)
 
 ------
 ![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/sidecar/assets/nfjs.png "No Fluff Just Stuff")
