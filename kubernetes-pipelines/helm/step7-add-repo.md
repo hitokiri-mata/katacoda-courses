@@ -2,7 +2,7 @@ There are many other repos that you can add to Helm. If your chart is in a Githu
 
 ## fabric8 ##
 
-If you search Helm for _fabric8_, it will not be listed.
+If you search Helm for _fabric8_, nothing will be listed.
 
 `helm search repo fabric8`{{execute}}
 
