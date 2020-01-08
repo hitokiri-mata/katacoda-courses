@@ -6,13 +6,13 @@ This tutorial shows how you can easily use Kubernetes as a place to host a highl
 
 ## Lessons Learned ##
 
-With these steps you have learned how:
+With these steps you have learned how to:
 
-- to install SonarQube onto Kubernetes
-- to use Helm to install SonarQube
-- to configure SonarQube plugins with the chart
-- to access the SonarQube Dashboard
-- to analyze code and inspect results with a Gradle plugin
+- &#x2714; install SonarQube onto Kubernetes
+- &#x2714; use Helm to install SonarQube
+- &#x2714; configure SonarQube plugins with the chart
+- &#x2714; access the SonarQube Dashboard
+- &#x2714; analyze code and inspect results with a Gradle plugin
 
 ## Additional Information ##
 

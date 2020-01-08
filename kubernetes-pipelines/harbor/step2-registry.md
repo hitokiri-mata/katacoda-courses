@@ -1,4 +1,4 @@
-There are many workflows around Kubernetes that need access to one more container registries. While public registries are commonly referenced there is privacy concerns and no need to shuttle private images over the internet. Instead, private registries keep all this pushing and pulling in a local registry.
+There are many workflows around Kubernetes that need access to one more container registries. While public registries are commonly referenced there is privacy concerns and no need to shuttle private images over public networks. Instead, private registries keep all this pushing and pulling in a local registry.
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
@@ -24,7 +24,7 @@ This chart bootstraps a Harbor instance consisting of several deployed component
 
 `watch kubectl get deployments --namespace harbor`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. The Harbor server containers take about 4-5 minutes to start. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+This can take up to about 4 minutes. Once complete, the Deployments will move to the _AVAILABLE_ state (0 to 1). The Harbor server containers take about 4-5 minutes to start. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 The registry is now available as a service. It can be listed.
 

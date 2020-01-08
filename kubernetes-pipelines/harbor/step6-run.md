@@ -28,4 +28,6 @@ See the model prediction with an image without a known breast cancer mitosis.
 
 `curl -F image=@samples/false.png -XPOST "${APP}model/predict"`{{execute}}
 
-If this IBM app piques your interest you can explore the details of this application [here](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector). IBM maintains over 40 other [MAX applications in the same GitHub account](https://github.com/search?q=org%3AIBM+MAX&unscoped_q=MAX).
+If this IBM app piques your interest you can explore the details of this application [here](https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector). IBM governs many other [MAX applications in the same GitHub account](https://github.com/search?q=org%3AIBM+MAX&unscoped_q=MAX).
+
+## _Early Detection Saves Lives_ ##

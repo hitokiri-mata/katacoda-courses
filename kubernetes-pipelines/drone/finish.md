@@ -4,12 +4,12 @@ TODO...
 
 ## Lessons Learned ##
 
-With these steps you have learned how:
+With these steps you have learned how to:
 
-- Write a drone file
-- Install and interact with the command line tool (CLI)
-- Install Drone engine on Kubernetes
-- Run a full pipeline
+- &#x2714; write a drone file
+- &#x2714; install and interact with the command line tool (CLI)
+- &#x2714; install Drone engine on Kubernetes
+- &#x2714; run a full pipeline
 
 ## Additional Information ##
 

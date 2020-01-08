@@ -10,11 +10,11 @@ If you are concerned about the image size, the startup time or configuring the m
 
 With these steps you have learned how to:
 
-- write a getting started Spring Boot application
-- run a Gradle (or Maven) build when the container is built
-- push a container to a private registry on Kubernetes
-- instruct Kubernetes to start and application
-- access an application service running on Kubernetes
+- &#x2714; write a getting started Spring Boot application
+- &#x2714; run a Gradle (or Maven) build when the container is built
+- &#x2714; push a container to a private registry on Kubernetes
+- &#x2714; instruct Kubernetes to start and application
+- &#x2714; access an application service running on Kubernetes
 
 ## References ##
 

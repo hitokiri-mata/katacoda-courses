@@ -4,9 +4,9 @@ The scenario introduced some fundamental techniques to inspecting a cluster. Not
 
 With these steps you have learned how to:
 
-- access metrics information produced by each cAdvisor in each Kubelet,
-- inspect resources using the _Resource Metrics API_,
-- viewing metrics reported by Metrics Server.
+- &#x2714; access metrics information produced by each cAdvisor in each Kubelet,
+- &#x2714; inspect resources using the _Resource Metrics API_,
+- &#x2714; viewing metrics reported by Metrics Server.
 
 ------
 <img align="left" src="/javajon/courses/kubernetes-observability/basics/assets/nfjs.png">

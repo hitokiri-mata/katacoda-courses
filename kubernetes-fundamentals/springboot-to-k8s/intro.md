@@ -20,4 +20,4 @@ You will learn how to:
 - instruct Kubernetes to start and application
 - access an application service running on Kubernetes
 
-A good followup to this scenario is _Distilled JRE Apps in Containers_.
+A good followup to this scenario is _Distilling Java Containers_.

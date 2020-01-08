@@ -1,8 +1,12 @@
-Build the container. The build command assumes there is a Dockerfile in the current directory.
+Build the container. The build command assumes there is a Dockerfile in the current directory. Notice that Gradle is run inside the building stage.
 
 `docker build -t $REGISTRY/hello .`{{execute}}
 
-Push this container to the private registry on Kubernetes that was established in step 3.
+Verify the container image has been produced.
+
+`docker images "*/hello"`{{execute}}
+
+Push this container image to the private registry on Kubernetes that was installed in step 2.
 
 `docker push $REGISTRY/hello`{{execute}}
 

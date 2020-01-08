@@ -1,4 +1,4 @@
-The Spring Boot frameworks offers an "initializr". The process create a skeletal framework for holding folders and source code for opinionated build tools such as Maven and Gradle. This process can be invoked from a variety of interfaces such as [a command line tool](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#cli-init) or a [web form](https://start.spring.io/). The following interface only requires the standard `curl` utility. Passed to the curl command are a variety of parameters to help us create the desired archetype for our application.
+The Spring Boot frameworks offers an _initializr_. The process create a skeletal framework for organizing folders and source code for opinionated build tools such as Maven and Gradle. The _initializr_ can be invoked from a variety of interfaces such as [a command line tool](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#cli-init) or a [web form](https://start.spring.io/). The following interface only requires the standard `curl` utility. Passed to the curl command are a variety of parameters to help us create the desired archetype for our application.
 
 `curl -s https://start.spring.io/starter.tgz \
 -d dependencies=web,actuator \
@@ -10,4 +10,4 @@ The Spring Boot frameworks offers an "initializr". The process create a skeletal
 -d baseDir=hello \
 | tar -xzvf -`{{execute}}
 
-In the `hello` directory is the application skelton. We just need to add some code then it can be built and run.
+In the `hello` directory is the generated application skelton. We just need to add some code then it can be built and run.

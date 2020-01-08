@@ -6,12 +6,12 @@ You now understand two different techniques for starting a container on Kubernet
 
 With these steps you have learned how:
 
-- to use the basics of the kubectl CLI tool,
-- to install Nginx on Kubernetes,
-- containers are deployed as Deployments in Pods,
-- a Service can provide access to a replication of Pods,
-- two containers work together to provide a solution,
-- two containers share information through a shared file mount.
+- &#x2714; to use the basics of the kubectl CLI tool,
+- &#x2714; to install Nginx on Kubernetes,
+- &#x2714; containers are deployed as Deployments in Pods,
+- &#x2714; a Service can provide access to a replication of Pods,
+- &#x2714; two containers work together to provide a solution,
+- &#x2714; two containers share information through a shared file mount.
 
 ## References ##
 
