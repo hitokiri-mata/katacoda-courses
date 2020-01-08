@@ -6,10 +6,10 @@ Nuclio is a new serverless project, derived from Iguazio's elastic data life-cyc
 
 With these steps you have learned:
 
-- how to install Nuclio on Kubernetes,
-- how functions are deployed and removed,
-- how functions are named, exposed, and invoked,
-- how functions are listed, inspected and monitored.
+- &#x2714; how to install Nuclio on Kubernetes,
+- &#x2714; how functions are deployed and removed,
+- &#x2714; how functions are named, exposed, and invoked,
+- &#x2714; how functions are listed, inspected and monitored.
 
 ## References ##
 

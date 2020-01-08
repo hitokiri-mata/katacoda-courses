@@ -10,8 +10,8 @@ This tutorial gives you a leg up for leveraging personal and local registries. T
 
 With these steps you have learned:
 
-- how to install a private container on Kubernetes,
-- how to install web interface to list the registry contents
+- &#x2714; how to install a private container on Kubernetes,
+- &#x2714; how to install web interface to list the registry contents
 
 ## References ##
 

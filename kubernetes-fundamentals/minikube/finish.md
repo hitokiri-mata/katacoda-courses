@@ -8,11 +8,11 @@ Other courses based on Minikube follow this introduction. Now that you understan
 
 With these steps you have learned:
 
-- about Minikube installation,
-- about Minikube configuration,
-- how Minikube CLI tool differs from the Kubernetes KubeCtl tool,
-- about various cluster inspection techniques,
-- about the conveniences Minikube addons.
+- &#x2714; about Minikube installation,
+- &#x2714; about Minikube configuration,
+- &#x2714; how Minikube CLI tool differs from the Kubernetes KubeCtl tool,
+- &#x2714; about various cluster inspection techniques,
+- &#x2714; about the conveniences Minikube addons.
 
 ## References ##
 

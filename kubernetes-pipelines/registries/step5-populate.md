@@ -7,9 +7,15 @@ Clone this repository locally:
 
 `git clone https://github.com/IBM/MAX-Breast-Cancer-Mitosis-Detector.git && cd MAX-Breast-Cancer-Mitosis-Detector`{{execute}}
 
-**Build** the container image locally. There will be some warnings in red text, but you can safely ignore them. **Push** the local image to your private registry.
+**Build** the container image locally.
+
+`docker build -t $REGISTRY/max-breast-cancer-mitosis-detector .`{{execute}}
+
+There will be some warnings in red text, but you can safely ignore them. This build will take at about 2-3 minutes.
+
+**Push** the newly built, local image to your private registry.
 
 `docker push $REGISTRY/max-breast-cancer-mitosis-detector`{{execute}}
 
-Once the push is complete, verify the new container is listed in the [registry web interface](
+The image size is close to 1.5GB so it will take about 1-2 minutes to push. Once the push is complete, verify the new container is listed in the [registry web interface](
 https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/).

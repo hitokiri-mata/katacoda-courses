@@ -8,12 +8,12 @@ There are a few more important features that this scenario did not cover. Helm c
 
 With these steps you have learned:
 
-- How to install and uninstall applications,
-- What a chart provides,
-- How to list public charts,
-- How to list and add more repositories,
-- How to create your own chart,
-- How to update a chart.
+- &#x2714; How to install and uninstall applications,
+- &#x2714; What a chart provides,
+- &#x2714; How to list public charts,
+- &#x2714; How to list and add more repositories,
+- &#x2714; How to create your own chart,
+- &#x2714; How to update a chart.
 
 ## References ##
 

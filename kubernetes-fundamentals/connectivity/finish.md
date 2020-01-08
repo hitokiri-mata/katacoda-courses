@@ -14,9 +14,9 @@ Here are some addition Katacoda courses:
 
 With these steps you have learned:
 
-- how your containerized application can find and call other services,
-- how DNS providers can plug themselves into the cluster,
-- how service discovery works in Kubernetes.
+- &#x2714; how your containerized application can find and call other services,
+- &#x2714; how DNS providers can plug themselves into the cluster,
+- &#x2714; how service discovery works in Kubernetes.
 
 ## References ##
 

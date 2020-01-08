@@ -10,8 +10,8 @@ Each one of the three components is highly configurable and this scenario provid
 
 With these steps you have learned:
 
-- How to configure and deploy ElasticSearch, Fluent Bit, and Kibana on Kubernetes
-- How to generate log events and query them with Kibana
+- &#x2714; how to configure and deploy ElasticSearch, Fluent Bit, and Kibana on Kubernetes
+- &#x2714; how to generate log events and query them with Kibana
 
 ## References ##
 

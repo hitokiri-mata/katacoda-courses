@@ -6,9 +6,9 @@ Camel K is ...
 
 With these steps you have learned:
 
-- how TODO,
-- how TODO,
-- how todo.
+- &#x2714; how TODO,
+- &#x2714; how TODO,
+- &#x2714; how todo.
 
 ## References ##
 

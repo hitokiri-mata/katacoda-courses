@@ -8,10 +8,10 @@ You now understand how to run Shiny applications on Kubernetes.
 
 With these steps you have learned:
 
-- how to use the basics of the kubectl CLI tool,
-- how to install Shiny applications on Kubernetes,
-- how containers are deployed as Deployments in Pods,
-- how a Service can provide access to a replication of Pods.
+- &#x2714; how to use the basics of the kubectl CLI tool,
+- &#x2714; how to install Shiny applications on Kubernetes,
+- &#x2714; how containers are deployed as Deployments in Pods,
+- &#x2714; how a Service can provide access to a replication of Pods.
 
 Use this same technique to create your own containers containing your own Shiny solutions.
 

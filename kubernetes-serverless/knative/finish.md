@@ -6,8 +6,8 @@
 
 With these steps you have learned:
 
-- how to install Knative Kubernetes,
-- how to install and invoke function on Knative.
+- &#x2714; how to install Knative Kubernetes,
+- &#x2714; how to install and invoke function on Knative.
 
 ## References ##
 

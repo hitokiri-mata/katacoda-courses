@@ -6,8 +6,8 @@
 
 With these steps you have learned:
 
-- how to install Riff, Knative and Istio on Kubernetes,
-- how to install and invoke functions from the Riff CLI interface.
+- &#x2714; how to install Riff, Knative and Istio on Kubernetes,
+- &#x2714; how to install and invoke functions from the Riff CLI interface.
 
 ## References ##
 

@@ -5,4 +5,4 @@ This particular one [joxit/docker-registry-ui](https://github.com/Joxit/docker-r
 `kubectl create -f registry-ui.yaml`{{execute}}
 
 In a moment the new web interface will be available. Open the [registry web interface](
-https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) and observe it's empty.
+https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) and observe it hosts the single _dockerfilelint_ container image.

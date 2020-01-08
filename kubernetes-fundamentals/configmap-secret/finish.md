@@ -14,9 +14,9 @@ Lastly, enable RBAC and protect your Kubernetes API. Unprotected access to the c
 
 With these steps you have learned:
 
-- how to create configuration data in the form of ConfigMaps and Secrets,
-- how Pods make configuration accessible for applications in containers,
-- how secrets should remain secrets.
+- &#x2714; how to create configuration data in the form of ConfigMaps and Secrets,
+- &#x2714; how Pods make configuration accessible for applications in containers,
+- &#x2714; how secrets should remain secrets.
 
 ## References ##
 
