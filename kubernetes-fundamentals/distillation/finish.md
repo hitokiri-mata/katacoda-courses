@@ -23,8 +23,8 @@ With these steps you have learned how to:
 - [GraalVM](https://www.graalvm.org/)
 - [Quarkus](https://quarkus.io/)
 - [Multi-stage Dockerfile](https://docs.docker.com/develop/develop-images/multistage-build/)
-- [(WORA)](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)
-- [(PORA)](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment)
+- [WORA](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)
+- [PORA](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment)
 - [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux)
 - [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
 - [Top 10 Things To Do With GraalVM](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d])
@@ -32,6 +32,6 @@ With these steps you have learned how to:
 - `ListDir` example code was inspired from the related article [GraalVM: Native Images in Containers](https://blogs.oracle.com/javamagazine/graalvm-native-images-in-containers) by [Oleg Šelajev](https://github.com/shelajev).
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kkubernetes-fundamentals/distillation/assets/nfjs.png "No Fluff Just Stuff")
+![No Fluff Just Stuff](/javajon/courses/kubernetes-fundamentals/distillation/assets/nfjs.png "No Fluff Just Stuff")
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).
