@@ -23,7 +23,7 @@ The distillation pattern is about applying best practices to make your container
 | Small attack surface   | Remove access points like ports and file mounts              |
 | Small container images | Remove all thing not used, reduce storage and transmit costs |
 | Fast startup time      | Expect ephemeral containers to fail, restart and scale       |
-| Fast execution time    | Performance pays, CPUs and memory are a limited resources               |
+| Fast execution time    | Performance pays, CPUs and memory are a limited resources    |
 
 You will learn how to:
 
