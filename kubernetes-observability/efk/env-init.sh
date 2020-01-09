@@ -2,8 +2,13 @@
 
 launch.sh
 
-# Helm# Helm Setup
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash 
+# Helm Setup
+FOLDER=helmer
+mkdir $FOLDER && pushd $FOLDER
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+popd && rm -rf $FOLDER
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 # Setup dashboard on port 30000

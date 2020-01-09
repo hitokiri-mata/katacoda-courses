@@ -8,7 +8,7 @@ For years one of Java's strengths was _write once, run anywhere_ [(WORA)](https:
 
 Java remains relevant for containers. However, it would appear between WORA and PORA there is some redundancy. If you application is running in a container and you know exactly what is in the container, why would you need a Java Runtime engine that can run anywhere? Thanks to containers they can run anywhere. What we put _inside_ our containers should be statically defined and linked as natively as possible, at build time.
 
-What if we could avoid putting a whole JRE in a container while still deliver our Java app?
+What if we could avoid putting a whole JRE in a container yet still deliver a working Java app? Blasphemy.
 
 ## Distillation Pattern ##
 
