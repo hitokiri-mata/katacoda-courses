@@ -27,7 +27,7 @@ With these steps you have learned how to:
 - [PORA](https://www.theserverside.com/feature/How-the-Docker-Engine-simplifies-DevOps-from-staging-to-deployment)
 - [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux)
 - [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
-- [Top 10 Things To Do With GraalVM](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d])
+- [Top 10 Things To Do With GraalVM](https://chrisseaton.com/truffleruby/tenthings/)
 - [ListDir source](https://github.com/javajon/listdir)
 - `ListDir` example code was inspired from the related article [GraalVM: Native Images in Containers](https://blogs.oracle.com/javamagazine/graalvm-native-images-in-containers) by [Oleg Šelajev](https://github.com/shelajev).
 
