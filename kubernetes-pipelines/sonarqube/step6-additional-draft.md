@@ -1,6 +1,6 @@
 Aside from SonarQube there are other ways to analyze a project. Use Gradle to run a series of tasks related to performing static code analysis.
 
-**Note: The Analysis Plugins are currently being upgraded and may not function.**
+**Note: This step is a draft. The Analysis Plugins are currently being upgraded and may not function.**
 
 `./gradlew check`{{execute}}
 
