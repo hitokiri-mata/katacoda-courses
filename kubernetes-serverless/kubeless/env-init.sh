@@ -3,7 +3,8 @@
 launch.sh
 
 # Helm Setup
-# TODO - Helm chart appears not to be compatible with Helm V3.
+# TODO - Helm chart appears not to be compatible with Helm V3, so this is still using Helm V2
+helm init
 
 source <(kubectl completion bash)
 source <(helm completion bash)

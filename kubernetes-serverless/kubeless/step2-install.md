@@ -8,7 +8,7 @@ Create a namespace for the installation target.
 
 To install Kubeless onto Kubernetes apply this command:
 
-`helm install my-kubeless incubator/kubeless \
+`helm install --name my-kubeless incubator/kubeless \
 --namespace kubeless \
 --set ui.enabled=true \
 --set rbac.create=true`{{execute}}
