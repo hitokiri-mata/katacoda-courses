@@ -2,7 +2,7 @@ Minikube has a helpful command to list and inspect the Kubernetes services. Some
 
 `minikube service list`{{execute}}
 
-Notice there are already some services running in the kube-admin namespace. These are present because the corresponding Addons are enabled. The _kubernetes_dashboard_ is a service that is exposed as a NodePort for your access.
+Notice there are already some services running in the _kube-system_ namespace. These are present because the corresponding Addons are enabled. The _kubernetes-dashboard-katacoda_ is a service that is exposed as a NodePort for your access.
 
 The URLs for these services can be listed.
 

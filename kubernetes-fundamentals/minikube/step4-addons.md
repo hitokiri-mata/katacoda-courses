@@ -1,4 +1,4 @@
-Minikube has an addons features that deployed common sets of solutions on Kubernetes. These common sets are configured to best opinions and tested to ensure they work correctly with the Minikube Kubernetes combination.
+Minikube has an addons features that simplifies the setup of common sets of solutions on Kubernetes. These common sets are configured to best opinions and tested to ensure they work correctly with the Minikube Kubernetes combination.
 
 View the list of available addons and see which ones are enabled.
 
@@ -6,13 +6,11 @@ View the list of available addons and see which ones are enabled.
 
 Some of these services may be recognizable. For instance, _efk_ is the popular _ElasticSearch, FluentD, Kabana_ use for logging output from containers and microservices.
 
-Also, to communicate between services a DNS is used, there are two DNS flavors in this list and one is enabled.
-
-_Metrics-server_ is a monitoring solution for containers on Kubernetes. (Heapster preceded metrics-server but has fallen out of favor.) If you run top for the nodes, the request will return and error.
+_Metrics-server_ is a monitoring solution for containers on Kubernetes. (Heapster preceded metrics-server and now metrics-server is the preferred solution.) If you run top for the nodes, the request will return and error.
 
 `kubectl top node`{{execute}}
 
-MEtrics-server will, over time, add data that the top feature can reference. Enable the addon and try the top command again.
+The error is because the metrics-server has not been started. Once started, Metrics-server will gradually add data that the _top_ feature can reference. Enable the addon and try the top command again.
 
 `minikube addons enable metrics-server`{{execute}}
 

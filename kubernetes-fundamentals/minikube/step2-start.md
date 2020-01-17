@@ -32,4 +32,4 @@ You can delete the Minikube cluster, but don't as we have more to learn.
 
 Typically you can also ssh into Minikube, but this Katacoda instance limits this for security defense.
 
-`minikube ssh'
+`minikube ssh`
