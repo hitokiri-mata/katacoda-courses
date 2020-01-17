@@ -59,11 +59,6 @@
       {
         "title": "Kubeless with Serverless.com",
         "text": "step11-serverless.md"
-      },
-      {
-        "title": "Using Kafka for PubSub Triggers",
-        "text": "step12-kafka.md",
-        "code": "clear.sh"
       }
     ],
     "intro": {

@@ -8,11 +8,10 @@ Create a namespace for the installation target.
 
 To install Kubeless onto Kubernetes apply this command:
 
-`helm install my-kubeless --namespace kubeless incubator/kubeless \
+`helm install my-kubeless incubator/kubeless \
+--namespace kubeless \
 --set ui.enabled=true \
---set rbac.create=true \
---set kafkaTrigger.enabled=true \
---set kafkaTrigger.env.kafkaBrokers=kafka:9092`{{execute}}
+--set rbac.create=true`{{execute}}
 
 As part of the installation there will be two Pods started in the new `kubeless` namespace on your Kubernetes cluster.
 
