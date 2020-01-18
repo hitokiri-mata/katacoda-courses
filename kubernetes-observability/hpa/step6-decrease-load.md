@@ -1,4 +1,4 @@
-Remove the stressor and observe he scaling down.  This will save you money.
+Stop the load testing requests and observe how the HPA reacts by scaling down the Pod count. This will save you money.
 
 Go back _Terminal 2_ from the Tab above and break out of the loop.
 

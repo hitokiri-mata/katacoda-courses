@@ -4,7 +4,7 @@ The distillation pattern is all producing a customized JRE that is stripped down
 
 ## Java 9+ Modularity ##
 
-It's unlikely our applications, even our ginormous monolithic WARs. do not use every feature found in the JRE. So would these extra modules appear in our container? For instance, if our code or 3rd party libraries never imported the `import java.sql` then Java 9 modularization allows us to strip out the JDBC API.  
+It's unlikely our applications, even our ginormous monolithic WARs. do not use every feature found in the JRE. So would these extra modules appear in our container? For instance, if our code or 3rd party libraries never imported the `import java.sql` then Java 9 modularization allows us to strip out the JDBC API.
 
 Starting with Java 9, two helpful utilities were added called JDeps and JLink assist in finding used modules and excluding unused modules. These tools enable the distillation pattern the JRE.
 

@@ -2,7 +2,7 @@
 
 **You know know how to create, build, deploy and run a Spring Boot application on Kubernetes.**
 
-It can get more complex than this with different dependencies, Java versions and base container flavors. However this is a great starting point.  
+It can get more complex than this with different dependencies, Java versions and base container flavors. However this is a great starting point.
 
 If you are concerned about the image size, the startup time or configuring the memory and CPU head over to the scenario _Distilled JRE Apps in Containers_.
 

@@ -1,8 +1,8 @@
 {
 	"private": true,
 
-	"title": "Basic Kubernetes Observability",
-	"description": "Inspection of a Kubernetes cluster.",
+	"title": "Scaling Your Applications, Automatically",
+	"description": "Discover how the Horizontal Pod Autoscalar (HPA) can keep your customers happy while saving you money.",
 	"time":	"15 minutes",
 	"details": {
 	  "steps": [
@@ -22,9 +22,9 @@
 		  "code": "clear.sh"
 		},
 		{
-			"title": "Apply Pressure",
-			"text": "step4-increase-load.md",
-			"code": "clear.sh"
+		  "title": "Apply Pressure",
+		  "text": "step4-increase-load.md",
+		  "code": "clear.sh"
 		},
 		{
 		  "title": "Declare HPA Criteria",
@@ -64,4 +64,3 @@
 	  "imageid": "kubernetes-cluster-running"
 	}
   }
-  
