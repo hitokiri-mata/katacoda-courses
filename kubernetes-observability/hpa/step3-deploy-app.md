@@ -18,6 +18,16 @@ The app defines an index.php page which performs some CPU intensive computations
 ?>
 ```
 
+Pods defined inside DaemonSets, StatefulSet, Jobs and CronJobs are not scaled with replication so HPA only scale Pods defined inside Deployment of ReplicaSet objects.
+
 Deploy the app to your Kubernetes cluster.
 
-`kubectl run php-apache --generator=run-pod/v1 --image=k8s.gcr.io/hpa-example --requests=cpu=200m --expose --port=80`{{execute}}
+`kubectl create deployment php-apache --image=k8s.gcr.io/hpa-example`{{execute}}
+
+Expose the Deployment with a Service and make the Service Type NodePort.
+
+`kubectl expose deployment php-apache --name=nodeport --port=80 --target-port=8080 --type=NodePort  --overrides '{ "apiVersion": "v1","spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":8080,"nodePort":300001}]}}`{{execute}}
+
+The Pod with its Service will be available in a moment.
+
+`kubectl get deployments,pods,services`{{execute}}

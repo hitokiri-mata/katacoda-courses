@@ -23,7 +23,11 @@ If the metrics are not ready you may get this message.
 
 > `Error from server (ServiceUnavaliable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)`
 
-However, once the metrics are available the normal message should look like this:
+or
+
+> `error: metrics not available yet`
+
+However, once the metrics are available the normal message should look similar this:
 
 ```
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%

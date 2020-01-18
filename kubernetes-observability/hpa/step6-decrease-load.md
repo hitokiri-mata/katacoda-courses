@@ -6,6 +6,6 @@ Once complete use this ```clear```{{execute interrupt T2}} to break out of the w
 
 Go back to _Terminal 1_ and notice the Pods shutting down.
 
-`watch kubectl get pods`{{execute T1}}
+`watch kubectl get deployments,pods,services`{{execute T1}}
 
 Once complete use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

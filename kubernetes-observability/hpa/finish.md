@@ -1,4 +1,4 @@
-The scenario introduced the fundamental techniques to scale up and down your Pods in a Kubernetes cluster using the Horizontal Pod AutoScalar (HPA). There are more complex rules that can be applied to the HPA triggering logic and the HPA can reference metrics from other metrics registeries such as Prometheus.
+The scenario introduced the fundamental techniques to scale up and down your Pods in a Kubernetes cluster using the Horizontal Pod AutoScalar (HPA). There are more complex rules that can be applied to the HPA triggering logic and the HPA can reference metrics from other metrics registeries such as Prometheus. The HPA uses the standardized [Custom Metrics API](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-custom-metrics) to reference metrics from different sources.
 
 ## Lessons Learned ##
 
@@ -20,6 +20,6 @@ With these steps you have learned how to:
 - [Locust Helm Chart](https://github.com/helm/charts/tree/master/stable/locust)
 
 ------
-<img align="left" src="/javajon/courses/kubernetes-observability/basics/assets/nfjs.png">
+<img align="left" src="/javajon/courses/kubernetes-observability/hpa/assets/nfjs.png">
 
 For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).

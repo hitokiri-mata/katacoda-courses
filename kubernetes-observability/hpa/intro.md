@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-observability/basics/assets/sheep.png" width="400">
+<img align="right" src="/javajon/courses/kubernetes-observability/hpa/assets/sheep.png" width="400">
 
 # Scaling Your Applications, Automatically #
 
@@ -16,8 +16,8 @@ Basic automatic scaling is simply achieved by declaring the CPU threshold and th
 
 In the following steps you will learn how to:
 
-- install the metrics-server for gathering metrics
-- install a pod that can be scaled
+- install the metrics-server for gathering metrics,
+- install a pod that can be scaled,
 - define the scaling rules and the number of pods to scale up and down,
-- how to increase service demand to trigger scaling up
-- how to observe scaling up and down
+- how to increase service demand to trigger scaling up,
+- how to observe scaling up and down.
