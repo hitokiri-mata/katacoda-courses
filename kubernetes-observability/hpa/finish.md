@@ -7,8 +7,8 @@ With these steps you have learned how to:
 - &#x2714; install the metrics-server for gathering metrics,
 - &#x2714; install a pod that can be scaled,
 - &#x2714; define the scaling rules and the number of pods to scale up and down,
-- &#x2714; how to increase service demand to trigger scaling up,
-- &#x2714; how to observe scaling up and down.
+- &#x2714; increase service demand to trigger scaling up,
+- &#x2714; observe scaling up and down.
 
 ## References ##
 
