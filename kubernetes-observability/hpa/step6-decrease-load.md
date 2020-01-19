@@ -6,7 +6,7 @@ The Kubernetes cluster you are running is version 1.14 and this version only sup
 
 `kubectl version --short=true && \
 kubectl api-versions | grep autoscaling && \
-cat hpa.yaml | grep apiVersion`{{execute}}
+cat hpa.yaml | grep apiVersion`{{execute T1}}
 
 Kubernetes version 1.17 released an improved HPA controller that responds to `apiVersion:v2beta2`
 
