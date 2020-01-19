@@ -20,6 +20,6 @@ Inspect the state of the HPA with the describe command.
 
 With the HPA enabled notice more Pods are started. It will be take about a minute before you start seeing the Pods scale up.
 
-`watch kubectl get pods && kubectl top pods`{{execute}}
+`watch "kubectl get pods && echo "" && kubectl top pods && echo "" && kubectl get hpa "`{{execute}}
 
 Once complete use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

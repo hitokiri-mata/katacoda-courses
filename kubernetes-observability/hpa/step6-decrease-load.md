@@ -41,6 +41,6 @@ Go back _Terminal 2_ from the Tab above and break out of the loop. Use this ```c
 
 Go back to _Terminal 1_ and notice all but 2 `php-apache` Pods will shutdown after the default **5 minute** window.
 
-`watch kubectl get deployments,pods,services`{{execute T1}}
+`watch "kubectl get pods && echo "" && kubectl top pods && echo "" && kubectl get hpa "`{{execute T1}}
 
 Once complete use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
