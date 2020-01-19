@@ -16,6 +16,7 @@ With these steps you have learned how to:
 - [Horizontal Pod Scaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [Cluster Node Scaling](https://github.com/kubernetes/autoscaler)
 - [Vertical Pod Scaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler)
+- [Resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
 - [Load testing tool, Locus](https://docs.locust.io/en/stable/what-is-locust.html)
 - [Locust Helm Chart](https://github.com/helm/charts/tree/master/stable/locust)
 
