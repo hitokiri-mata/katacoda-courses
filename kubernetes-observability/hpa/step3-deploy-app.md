@@ -22,17 +22,9 @@ Pods defined inside DaemonSets, StatefulSet, Jobs and CronJobs are not scaled wi
 
 Deploy the app to your Kubernetes cluster.
 
-`kubectl create deployment php-apache --image=k8s.gcr.io/hpa-example --requests=cpu=500m,memory=500M`{{execute}}
+`kubectl create php-apache.yaml`{{execute}}
 
 Notice the `--requests` setting. When a Pod is deployed these quotas must be specified for the metrics to expect the scaler to make observations and decisions upon. For instance, if you omit the cpu quota for the Pod the HPA will log `missing request for cpu`.
-
-Expose the Deployment with a Service.
-
-`kubectl expose deployment php-apache --name=php-apache --port=80`{{execute}}
-
-Expose the Deployment with a Service and make the Service Type NodePort.
-TODO - needed nodeport?
-`kubectl expose deployment php-apache --name=php-apache --port=80 --target-port=8080 --type=NodePort  --overrides '{ "apiVersion": "v1","spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":8080,"nodePort":30001}]}}'`{{execute}}
 
 The Pod with its Service will be available in a moment.
 

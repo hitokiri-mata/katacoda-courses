@@ -7,7 +7,7 @@ The de facto light monitoring application for Kubernetes is [metrics-server](htt
 
 This will install the server in the kube-system namespace along with the last two parameters that allow it to work well in this ephemeral Katacoda cluster.
 
-In a few minutes you should be able to list metrics using the following command:
+In a few moments you should be able to list metrics using the following command:
 
 `kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"`{{execute}}
 
@@ -37,7 +37,7 @@ node01   84m          2%     922Mi           23%
 
 Pod information can also be observered.
 
-`kubectl top node --all-namespaces`{{execute}}
+`kubectl top pods --all-namespaces`{{execute}}
 
 Metrics information is also reflected in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in pages for each resource the same Top information appears in the UI. The [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) also utilizes these vital metrics to make decisions to scale up and down Pod instances.
 
