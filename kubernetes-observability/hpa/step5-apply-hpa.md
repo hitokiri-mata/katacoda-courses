@@ -1,7 +1,16 @@
 Declare the HPA criteria.
 
+Simple autoscaling declarations can be applied directly with the Kubectl.
 
-`kubectl autoscale deployments/php-apache --cpu-percent=40 --min=1 --max=10`{{execute T1}}
+`kubectl autoscale deployments/php-apache --cpu-percent=40 --min=1 --max=10`
+
+Hwoever, the default scale down window is 5 minutes. For production that value or longer makes sense, but for this demonstation with want to shorten that scale down window. A hpa.yal file adjusts the behavior with the `scaleDown.stabilizationWindowSeconds` setting. Inspect the HPA declaration for scaling the ph-apache deployment.
+
+`cat hpa.yaml`{{execute}}
+
+Apply these HPA rules.
+
+`kubectl create -f hpa.yaml`{{execute}}
 
 A new HPA is now registered. Inspect the HPA list.
 
