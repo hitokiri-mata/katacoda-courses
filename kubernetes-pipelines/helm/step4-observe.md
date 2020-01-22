@@ -2,7 +2,7 @@ Helm deploys all the pods, replication controllers and services. The pod will be
 
 Use the _get_ command to find out what was deployed.
 
-`watch kubectl get deployments,pods,services`{{execute}}
+`watch kubectl get deployments,pods,services -n redis`{{execute}}
 
 The Pod will be in a _pending_ state while the container image is downloaded and until a Persistent Volume is available. You will see a `my-redis-master-0` and `my-redis-slave-0` pod. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
@@ -16,7 +16,7 @@ and ensure Redis has permissions to write to these mount points.
 
 Now, notice Redis will change to _running_.
 
-`watch kubectl get deployments,pods,services`{{execute}}
+`watch kubectl get deployments,pods,services -n redis`{{execute}}
 
 The Pods will move to the _ContainerCreating_ state then once complete, the Pods will move to the _running_ state. It will be a few moments and all the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
