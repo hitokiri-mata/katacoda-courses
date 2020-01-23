@@ -27,11 +27,6 @@
         "course_id": "drone",
         "title": "Drone (coming soon)",
         "description": "Run Drone on Kubernetes. Use containers to drop pre‑configured steps into your pipeline."
-      },
-      {
-        "course_id": "sonarqube",
-        "title": "SonarQube",
-        "description": "Static code analysis with SonarQube on Kubernetes."
       }
     ]
   }
