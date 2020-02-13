@@ -17,7 +17,7 @@
         "course_id": "tekton",
         "title": "Tekton Pipelines",
         "description": "Build and deploy a Node.js app with Tekton Pipeline."
-      }
+      },
       {
         "course_id": "helm",
         "title": "Helm",
