@@ -1,6 +1,6 @@
 Clone the source for the sample Node.js project and inspect the code.
 
-`git clone https://github.com/javajon/node-js-tekton`
+`git clone https://github.com/javajon/node-js-tekton`{{execute}}
 
 Navigate into the directory.
 

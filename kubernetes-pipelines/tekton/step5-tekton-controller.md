@@ -13,4 +13,5 @@ Ctrl-C.
 New Custom Resources have been defined for Tekton
 
 `kubectl get crds`{{execute}}
+
 `kubectl get pipelines`{{execute}}

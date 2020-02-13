@@ -17,12 +17,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Add Dashboard or Registry",
+        "title": "Add Dashboard for Registry",
         "text": "step3-registry-ui.md",
         "code": "clear.sh"
       },
       {
-        "title": "Analyze Project with SonarQube",
+        "title": "Clone Example Node.js App",
         "text": "step4-git-clone.md",
         "code": "clear.sh"
       },
@@ -64,13 +64,14 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.dijure.com)"
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "host01": [
+        {"file": "*.yaml", "target": "~/"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }

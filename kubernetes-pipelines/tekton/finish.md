@@ -21,6 +21,7 @@ With these steps you have learned:
 * [IBM tutorial on Tekton](https://developer.ibm.com/tutorials/deploy-a-hello-world-application-on-kubernetes-using-tekton-pipelines/
 * [Kubernetes Podcast on Tekton](https://kubernetespodcast.com/episode/047-tekton/)
 * [Tekton Operator](https://github.com/tektoncd/operator)
+* [Tekton Plugin for VSCode](https://github.com/redhat-developer/vscode-tekton)
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see this example in action. [Code Analysis and Team Culture](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson)
 
 ------

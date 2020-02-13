@@ -2,12 +2,12 @@
 
 launch.sh
 
-# Helm Setup
+# Helm Setup (v3.1.0)
 FOLDER=helmer
 mkdir $FOLDER && pushd $FOLDER
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
+curl -fsSL -o helm.gz https://get.helm.sh/helm-v3.1.0-linux-amd64.tar.gz
+tar -zxvf helm.gz
+mv ./linux-amd64/helm /usr/local/bin
 popd && rm -rf $FOLDER
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
@@ -22,8 +22,8 @@ helm install dash stable/kubernetes-dashboard \
 source <(kubectl completion bash)
 source <(helm completion bash)
 
-{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
-
 # Workaround: Katacoda base image needs fixing
 # JAVA_HOME is set to JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin, should be:
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+
+{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
