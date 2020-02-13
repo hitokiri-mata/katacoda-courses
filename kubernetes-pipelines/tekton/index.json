@@ -1,0 +1,92 @@
+{
+  "pathwayTitle": "Tekton Pipelines",
+  "title": "Tekton Pipelines",
+  "description": "Build and deploy a Node.js app with Tekton Pipeline",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Local Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Add Dashboard or Registry",
+        "text": "step3-registry-ui.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Analyze Project with SonarQube",
+        "text": "step4-git-clone.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Tekton Controller",
+        "text": "step5-tekton-controller.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Tekton CLI tool (tnk)",
+        "text": "step6-tekton-cli.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Declare Pipeline Resources",
+        "text": "step7-resources.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Declare Pipeline Tasks",
+        "text": "step8-tasks.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Declare Pipeline",
+        "text": "step9-pipeline.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Declare Runner for Pipeline",
+        "text": "step10-pipeline-run.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Access Application",
+        "text": "step11-application.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Registry", "port": 31000}, 
+      {"name": "Application", "port": 32000}
+    ]
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
