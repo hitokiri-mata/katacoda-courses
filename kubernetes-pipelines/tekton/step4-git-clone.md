@@ -8,7 +8,7 @@ Navigate into the directory.
 
 Inspect some of the files.
 
-`tree`
+`tree`{{execute}}
 
 `cat src/app.js`{{execute}}
 

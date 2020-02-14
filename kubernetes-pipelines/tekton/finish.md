@@ -25,9 +25,10 @@ With these steps you have learned:
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see this example in action. [Code Analysis and Team Culture](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson)
 
 ------
-![Jonathan Johnson](/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.png "No Fluff Just Stuff")
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" height="100" width="100">
 
-<center>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist
-
+<center>
+Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist
+<p>
 For a deeper understanding of these topics and more join [Jonathan Johnson](https://www.dijure.com) at various conferences, symposiums, workshops and meetups.
 </center>
