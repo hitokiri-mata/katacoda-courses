@@ -10,15 +10,23 @@ When Kubernetes pulls an image a secret needs to be associated with the image re
 
 Generate a standard [htpasswd](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) using this name and password.
 
-HTPASSWD=`docker run --entrypoint htpasswd registry:2 -Bbn $REGISTRY_USER $REGISTRY_PASSWORD`
+`HTPASSWD=$(docker run --entrypoint htpasswd registry:2 -Bbn $REGISTRY_USER $REGISTRY_PASSWORD)`{{execute}}
 
 ## Install the Registry
 
-`helm install private stable/docker-registry --namespace kube-system \
+`helm install private stable/docker-registry --namespace kube-system`{{execute}}
+
 --set image.tag=2.7.1 \
 --set htpasswd=$HTPASSWD \
 --set service.type=NodePort \
 --set service.nodePort=31500`{{execute}}
+
+## Install the Registry Proxies
+
+`helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
+
+`helm install --name my-release incubator/kube-registry-proxy`{{execute}}
+
 
 Create a Kubernetes Secret for image registry pulls based on the user `Grace` with the password.
 
