@@ -1,6 +1,6 @@
 # SonarQube on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" height="100" width="100">
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="300">
 
 > Tekton Pipelines is a Kubernetes extension that installs and runs on your Kubernetes cluster. It defines a set of Kubernetes Custom Resources that act as building blocks from which you can assemble CI/CD pipelines. Once installed, Tekton Pipelines becomes available via the Kubernetes CLI (kubectl) and via API calls, just like pods and other resources. Tekton is open-source and part of the CD Foundation, a Linux Foundation project. [-- Tekton Project](https://github.com/tektoncd/pipeline)
 
@@ -10,7 +10,7 @@ Tekton Pipelines are:
 - Decoupled
 - Typed
 
-This scenario allows you to experience Tekton pipelines by allowing you to install Tekton on Kubernetes then defines a pipeline that builds, deploys and runs an example Node.js application.
+This scenario provides you to experience Tekton pipelines by allowing you to install Tekton on Kubernetes then define a pipeline that builds, deploys and runs an example Node.js application.
 
 You will learn:
 

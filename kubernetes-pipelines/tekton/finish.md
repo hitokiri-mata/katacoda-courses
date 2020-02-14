@@ -18,17 +18,19 @@ With these steps you have learned:
 
 * [Tekton](https://tekton.dev)
 * [Continuous Deliver Foundation](https://cd.foundation/)
-* [IBM tutorial on Tekton](https://developer.ibm.com/tutorials/deploy-a-hello-world-application-on-kubernetes-using-tekton-pipelines/
+* [IBM tutorial on Tekton](https://developer.ibm.com/tutorials/deploy-a-hello-world-application-on-kubernetes-using-tekton-pipelines/)
 * [Kubernetes Podcast on Tekton](https://kubernetespodcast.com/episode/047-tekton/)
 * [Tekton Operator](https://github.com/tektoncd/operator)
 * [Tekton Plugin for VSCode](https://github.com/redhat-developer/vscode-tekton)
-* Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see this example in action. [Code Analysis and Team Culture](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson)
+* Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see [this example and more in action](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson).
 
 ------
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" height="100" width="100">
-
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="200">
 <center>
-Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist
-<p>
 For a deeper understanding of these topics and more join [Jonathan Johnson](https://www.dijure.com) at various conferences, symposiums, workshops and meetups.
+<p>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<p>
+<p>
+<p>
 </center>

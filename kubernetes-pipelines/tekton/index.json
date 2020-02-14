@@ -52,13 +52,18 @@
         "code": "clear.sh"
       },
       {
+        "title": "Declare Service Account",
+        "text": "step10-service-account.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Declare Runner for Pipeline",
-        "text": "step10-pipeline-run.md",
+        "text": "step11-pipeline-run.md",
         "code": "clear.sh"
       },
       {
         "title": "Access Application",
-        "text": "step11-application.md"
+        "text": "step12-application.md"
       }
     ],
     "intro": {
