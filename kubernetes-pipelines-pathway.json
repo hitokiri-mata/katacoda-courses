@@ -27,11 +27,6 @@
         "course_id": "jenkins",
         "title": "Jenkins",
         "description": "Run Jenkins on Kubernetes."
-      },
-      {
-        "course_id": "drone",
-        "title": "Drone (coming soon)",
-        "description": "Run Drone on Kubernetes. Use containers to drop pre‑configured steps into your pipeline."
       }
     ]
   }
