@@ -35,4 +35,6 @@ Each resource can be acted upon using the typical verbs `create`, `delete`, `des
 
 `tkn resources --help`{{execute}}
 
-Once you submit some declarations for the pipeline we will revisit this `tkn` tool.
+Once you submit some declarations for the pipeline we will revisit this `tkn` tool. 
+
+There is also a [VSCode plugin for Tekton](https://github.com/redhat-developer/vscode-tekton) that matches the functionality of the CLI tool and provides editor support for the Tekton resource YAML files.
