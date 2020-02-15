@@ -18,7 +18,7 @@ The Tekton Operator will define several new resources, all currently return empt
 
 `kubectl get images,pipelineruns,pipelines,taskruns,tasks,pipelineresources`{{execute}}
 
-Next, you will define the pipeline. The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top level PipelineRun it references sub definitions to complete your request.
+Next, you will define the pipeline. The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top-level PipelineRun it references sub definitions to complete your request.
 
 ```
 Pipeline Run

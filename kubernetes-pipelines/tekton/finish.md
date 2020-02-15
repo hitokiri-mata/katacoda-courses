@@ -1,8 +1,8 @@
 # Conclusion #
 
-<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
 
-While there are numerous, complimenting and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize on the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
+While there are numerous, complimenting and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
 This tutorial shows how you can easily use Kubernetes as the underlying platform for running Tekton based Pipelines. CI/CD is a great place for your team to start understanding how to leverage the distributed and high availability nature of Kubernetes.
 
@@ -28,10 +28,10 @@ With these steps you have learned:
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see [this example and more in action](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson).
 
 ------
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100">
+<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100">
 <center>
 For a deeper understanding of these topics and more join [Jonathan Johnson](http://www.dijure.com) at various conferences, symposiums, workshops and meetups.
 <p>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
-<p><p><p>·
+<p><p><p><p>·
 </center>

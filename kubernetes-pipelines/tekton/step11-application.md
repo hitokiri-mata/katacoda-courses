@@ -8,7 +8,7 @@ You can also check the dashboard and soon the app will appear as three pods in t
 
 ## Access Application
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/breastcancerawareness.jpg" width="150">
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/breastcancerawareness.png" width="150">
 
 View the [Node.js application](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
 
