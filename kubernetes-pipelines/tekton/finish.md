@@ -33,5 +33,8 @@ With these steps you have learned:
 For a deeper understanding of these topics and more join [Jonathan Johnson](http://www.dijure.com) at various conferences, symposiums, workshops and meetups.
 <p>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
-<p><p><p><p>·
+<p>
+<p>
+<p>
+<p>·
 </center>
