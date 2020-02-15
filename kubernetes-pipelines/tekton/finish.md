@@ -16,7 +16,8 @@ With these steps you have learned:
 
 ## Additional Information ##
 
-* [Tekton](https://tekton.dev)
+* [Tekton Project](https://tekton.dev)
+* [Tekton Documentation](https://github.com/tektoncd/pipeline/tree/master/docs)
 * [Continuous Deliver Foundation](https://cd.foundation/)
 * [IBM tutorial on Tekton](https://developer.ibm.com/tutorials/deploy-a-hello-world-application-on-kubernetes-using-tekton-pipelines/)
 * [Kubernetes Podcast on Tekton](https://kubernetespodcast.com/episode/047-tekton/)
@@ -30,6 +31,7 @@ With these steps you have learned:
 For a deeper understanding of these topics and more join [Jonathan Johnson](https://www.dijure.com) at various conferences, symposiums, workshops and meetups.
 <p>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<p>
 <p>
 <p>
 </center>

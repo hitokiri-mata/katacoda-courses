@@ -4,6 +4,10 @@ View the Pods and its exposed Service.
 
 `kubectl get deployments,pods,services`{{execute}}
 
+You can also check the dashboard and soon the app will appear as three pods in the default namespace.
+
 ## Access Application
 
 View the [Node.js application](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
+
+**&#x2714; You did it!** A Tekton CI/CD pipeline based on Kubernetes has built, deployed, and served your application.

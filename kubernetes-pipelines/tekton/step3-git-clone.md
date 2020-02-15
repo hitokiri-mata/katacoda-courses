@@ -1,3 +1,5 @@
+The scenario will reference a small example Node.js application that has already be written and placed in a public source repository. The project also contains all the YAML files to define the pipeline and allow the pipeline to build the application in a container and run it on this Kubernetes cluster.
+
 Clone the source for the sample Node.js project and inspect the code.
 
 `git clone https://github.com/javajon/node-js-tekton`{{execute}}
@@ -10,9 +12,15 @@ Inspect some of the files.
 
 `apt-get install tree -y -qq && tree`{{execute}}
 
+Here is the small application code,
+
 `cat src/app.js`{{execute}}
 
+Here is the container definition for the app.
+
 `cat src/Dockerfile`{{execute}}
+
+Here is the standard Deployment and Service manifests that start the application on Kubernetes.
 
 `cat src/deploy.yaml`{{execute}}
 
