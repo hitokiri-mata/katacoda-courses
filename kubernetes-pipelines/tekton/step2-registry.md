@@ -2,58 +2,29 @@ There are many workflows around Kubernetes that need access to one more containe
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
-## Setup a Secret for Pushing and Pulling
-
-When Kubernetes pulls an image a secret needs to be associated with the image reference. The secret name and password needs to be created and provided when the registry is deployed and as a Kubernetes Secret. The password will just be a random sequence.
-
-`REGISTRY_USER="Grace" && REGISTRY_PASSWORD=$(openssl rand -base64 40)`{{execute}}
-
-Generate a standard [htpasswd](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) using this name and password.
-
-`HTPASSWD=$(docker run --entrypoint htpasswd registry:2 -Bbn $REGISTRY_USER $REGISTRY_PASSWORD)`{{execute}}
-
 ## Install the Registry
 
 `helm install private stable/docker-registry --namespace kube-system`{{execute}}
-
---set image.tag=2.7.1 \
---set htpasswd=$HTPASSWD \
---set service.type=NodePort \
---set service.nodePort=31500`{{execute}}
 
 ## Install the Registry Proxies
 
 `helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
 
-`helm install --name my-release incubator/kube-registry-proxy`{{execute}}
+`helm install registry-proxy incubator/kube-registry-proxy \
+--set registry.host=private-docker-registry.kube-system \
+--set registry.port=5000 \
+--set hostPort=5000 \
+--namespace kube-system`{{execute}}
 
+The registry is now available as a service.
 
-Create a Kubernetes Secret for image registry pulls based on the user `Grace` with the password.
+## Install Registry UI
 
-`kubectl create secret docker-registry regcred \
---docker-server=http://private-docker-registry:5000 \
---docker-username=$REGISTRY_USER \
---docker-password=$REGISTRY_PASSWORD \
---docker-email=jj@dijure.com`{{execute}}
+It's always helpful to have a decent web interface in front of your registry. There are a few open solutions out there that all run as containers.
 
-The registry is now available as a service. It can be listed.
+This particular one [joxit/docker-registry-ui](https://github.com/Joxit/docker-registry-ui) is solid and provides a clean interface. Merci beaucoup, [Jones Magloire](https://joxit.dev/).
 
-`kubectl get service --namespace kube-system`{{execute}}
+`kubectl create -f registry-ui.yaml`{{execute}}
 
-The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so it's necessary to consistently refer to the registry from the command line and from within the cluster. In this scenario case we can simply use 127.0.0.0. Use port-forward to expose the registry.
-
-`kubectl port-forward --namespace kube-system \
-$(kubectl get po -n kube-system | grep private-docker-registry | \
-awk '{print $1;}') 5000:5000 &`{{execute}}
-
-After the port-forward command press _enter_ to restore the command prompt. Assign an environment variable to the common registry location.
-
-`export REGISTRY=127.0.0.1:31500`{{execute}}
-
-It will be a few moments before the registry deployment reports it's _Available_ with a _1_.
-
-`kubectl get deployments private-docker-registry --namespace kube-system`{{execute}}
-
-Once the registry is serving, inspect the contents of the empty registry.
-
-`curl $REGISTRY/v2/_catalog`{{execute}}
+In a moment the new web interface will be available. Open the [registry web interface](
+https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) and observe it hosts the single _dockerfilelint_ container image.

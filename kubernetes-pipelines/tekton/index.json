@@ -17,53 +17,48 @@
         "code": "clear.sh"
       },
       {
-        "title": "Add Dashboard for Registry",
-        "text": "step3-registry-ui.md",
-        "code": "clear.sh"
-      },
-      {
         "title": "Clone Example Node.js App",
-        "text": "step4-git-clone.md",
+        "text": "step3-git-clone.md",
         "code": "clear.sh"
       },
       {
         "title": "Deploy Tekton Controller",
-        "text": "step5-tekton-controller.md",
+        "text": "step4-tekton-controller.md",
         "code": "clear.sh"
       },
       {
         "title": "Install Tekton CLI tool (tnk)",
-        "text": "step6-tekton-cli.md",
+        "text": "step5-tekton-cli.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline Resources",
-        "text": "step7-resources.md",
+        "text": "step6-resources.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline Tasks",
-        "text": "step8-tasks.md",
+        "text": "step7-tasks.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline",
-        "text": "step9-pipeline.md",
+        "text": "step8-pipeline.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Service Account",
-        "text": "step10-service-account.md",
+        "text": "step9-service-account.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Runner for Pipeline",
-        "text": "step11-pipeline-run.md",
+        "text": "step10-pipeline-run.md",
         "code": "clear.sh"
       },
       {
         "title": "Access Application",
-        "text": "step12-application.md"
+        "text": "step11-application.md"
       }
     ],
     "intro": {
