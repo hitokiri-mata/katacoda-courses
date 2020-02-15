@@ -28,11 +28,9 @@ With these steps you have learned:
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see [this example and more in action](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson).
 
 ------
-<p style="margin-left: 8em;padding: 0 7em 2em 0;border-width: 1px; border-color: gray; border-style:solid;">
+<p style="text-align: center; padding: 2em; margin 2em; border-;: 1px; border-color: olive;  border-radius: 12px; border-style:outset">
 <img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100">
-<center>
-For a deeper understanding of these topics and more join [Jonathan Johnson](http://www.dijure.com) at various conferences, symposiums, workshops and meetups.
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
-</center>
 </p>
