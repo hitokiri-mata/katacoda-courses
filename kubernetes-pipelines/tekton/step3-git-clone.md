@@ -12,6 +12,8 @@ Inspect some of the files.
 
 `apt-get install tree -y -qq && tree`{{execute}}
 
+<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/nodejs.jpg" width="150">
+
 Here is the small application code,
 
 `cat src/app.js`{{execute}}

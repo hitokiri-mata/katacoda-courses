@@ -1,6 +1,6 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
+<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
 
 While there are numerous, complimenting and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize on the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
