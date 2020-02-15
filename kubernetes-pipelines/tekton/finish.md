@@ -28,13 +28,11 @@ With these steps you have learned:
 * Visit the No Fluff Just Stuff [tour](https://nofluffjuststuff.com) and see [this example and more in action](https://www.nofluffjuststuff.com/conference/speaker/jonathan_johnson).
 
 ------
+<div>
 <img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100">
 <center>
 For a deeper understanding of these topics and more join [Jonathan Johnson](http://www.dijure.com) at various conferences, symposiums, workshops and meetups.
 <p>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
-<p>
-<p>
-<p>
-<p>·
 </center>
+</div>
