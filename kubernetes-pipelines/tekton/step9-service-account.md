@@ -1,4 +1,4 @@
-Before we run a Pipeline we have to recognize that real pipeline will run tasks that will eventaully need access to restricted resources such as repositories (git) and registries (container or chart registries). These resources are access through secrets. To access secrets the Pipelines as associated with ServiceAccounts.  The Services accounts have roles that allow them to access specific Kubernetes Secrets.
+Before we run a Pipeline we have to recognize that pipelines will run tasks that will eventaully need access to restricted resources such as repositories (e.g. git) and registries (e.g. container and chart registries). These resources are accessed through secrets. To use secrets the Pipelines are associated with ServiceAccounts.  The Services accounts have roles that allow them to access specific Kubernetes Secrets.
 
 Before we can proceed to the next step in this scenario we need to precede it with a setup a ServiceAccount.
 

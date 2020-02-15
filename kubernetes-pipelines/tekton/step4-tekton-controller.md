@@ -1,6 +1,6 @@
 ## Install Tekton Controller
 
-The Tekton engine will run your pipelines. Tekton follow the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton
+The Tekton engine will run your pipelines. Tekton follows the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton
 
 `kubectl apply --filename https://storage.googleapis.com/tekton-releases/latest/release.yaml`{{execute}}
 
@@ -18,7 +18,7 @@ The Tekton Operator will define several new resources, all currently return empt
 
 `kubectl get images,pipelineruns,pipelines,taskruns,tasks,pipelineresources`{{execute}}
 
-Next, you will define the pipeline. The pipeline is not just one file, it a collection of modular and decoupled resource types that definitions the decoupled elements of your pipeline. When you define the top level pipelinerun it references sub definitions to complete your request.
+Next, you will define the pipeline. The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top level PipelineRun it references sub definitions to complete your request.
 
 ```
 Pipeline Run

@@ -1,6 +1,6 @@
-Because Tekton is a Kubenretes Operator, it's can be completly administered using the standard Kubenrtes manifests using the defined customer resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command line tool called `tkn` can also manage these same Tekton resources. 
+Because Tekton is a Kubenretes Operator, it's can be completely administered using the standard Kubenetes manifests using the defined custome resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command line tool called `tkn` can optionally manage these same Tekton resources. 
 
-Install the optional `tkn` command line tool.
+Install the `tkn` command line tool.
 
 ```bash
 sudo apt update;sudo apt install -y gnupg && \
@@ -19,7 +19,7 @@ Like many command line tools you will also want to add the CLI autocompletion. A
 
 `source <(tkn completion bash)`{{execute}}
 
-With the `tnk` tool installed instead of running this,
+With the `tkn` tool installed instead of running this,
 
 `kubectl get pipelineresources`{{execute}}
 
@@ -27,12 +27,12 @@ you can run this,
 
 `tkn resources list`{{execute}}
 
-To see the resources you can manage use the CLI without any options
+To see the resources you can manage, invoke the command without any options.
 
-`tnk`{{execute}}
+`tkn`{{execute}}
 
 Each resource can be acted upon using the typical verbs `create`, `delete`, `describe`, `list`.
 
-`tnk resources --help`{{execute}}
+`tkn resources --help`{{execute}}
 
-Once you submit some declarations for the pipeline we will revisit this `tnk` tool.
+Once you submit some declarations for the pipeline we will revisit this `tkn` tool.

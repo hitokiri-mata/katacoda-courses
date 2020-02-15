@@ -4,7 +4,7 @@ The [Tekton Pipelines project](https://tekton.dev/) provides Kubernetes-style re
 
 <img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
 
-Tekton is an open-source project that formed as a sub project of the [Knative](https://knative.dev/) project in March of 2019. Using established Kubernetes style declarations whole pipelines can be declared. The pipelines run on Kubernetes like any other process. Each steps runs as an independent container. Tekton also helps normalize and standardize the terms and methods for forming and running pipelines. Tekton pipelines can compliment a variety of popular CI/CD engines. For more information also see the [Continuous Delivery Foundation (CDF)](https://cd.foundation/).
+Tekton is an open-source project that formed as a sub project of the [Knative](https://knative.dev/) project in March of 2019. Using established Kubernetes style declarations whole pipelines can be declared. The pipelines run on Kubernetes like any other process. Each step runs as an independent container. Tekton also helps normalize and standardize the terms and methods for forming and running pipelines. Tekton pipelines can compliment a variety of popular CI/CD engines. For more information also see the [Continuous Delivery Foundation (CDF)](https://cd.foundation/).
 
 This scenario demonstrates the building, deploying and running a Node.js application using Tekton on Kubernetes.
 

@@ -27,7 +27,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Install Tekton CLI tool (tnk)",
+        "title": "Install Tekton CLI tool (tkn)",
         "text": "step5-tekton-cli.md",
         "code": "clear.sh"
       },

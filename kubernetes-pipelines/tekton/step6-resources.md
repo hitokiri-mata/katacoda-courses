@@ -1,6 +1,6 @@
 Pipeline Resources are entities that define the locations for inputs ingested and outputs produced by the steps in Tasks.
 
-For our pipeline we have define the Git repo where the application source code resides.
+For our pipeline we have defined the Git repo where the application source code resides.
 
 `cat pipeline/git-resource.yaml`{{execute}}
 
