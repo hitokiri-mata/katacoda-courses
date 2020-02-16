@@ -22,11 +22,6 @@
         "course_id": "helm",
         "title": "Helm",
         "description": "Learn how to use Helm, a package manager for Kubernetes."
-      },
-      {
-        "course_id": "jenkins",
-        "title": "Jenkins",
-        "description": "Run Jenkins on Kubernetes."
       }
     ]
   }

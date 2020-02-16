@@ -1,4 +1,5 @@
 {
+  "private": "true",
   "pathwayTitle": "jenkins",
   "title": "Jenkins",
   "description": "Discovering how Jenkins runs on Kubernetes.",
