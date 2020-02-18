@@ -2,7 +2,7 @@ While automatically scaling up you instances is vital to help maintain a consist
 
 ## API version Note ##
 
-The Kubernetes cluster you are running is version 1.14 and this version only support `apiVersion: autoscaling/v1` as you can see in the HPA.yaml manifest and through this api version check.
+The Kubernetes cluster you are running is version 1.14 and this version only supports `apiVersion: autoscaling/v1` as you can see in the HPA.yaml manifest and through this api version check.
 
 `kubectl version --short=true && \
 kubectl api-versions | grep autoscaling && \

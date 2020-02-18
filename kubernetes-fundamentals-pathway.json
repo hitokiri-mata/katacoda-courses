@@ -42,7 +42,12 @@
         "course_id": "distillation",
         "title": "Distilling Java Containers",
         "description": "Applying the Container Distillation Pattern for Java based applications."
-      } 
+      },
+      {
+        "course_id": "playground-1.17",
+        "title": "Kubernete 1.17 Playground",
+        "description": "Experiment with Kubernetes 1.17"
+      }
     ]
   }
   
