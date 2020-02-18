@@ -1,16 +1,15 @@
 {
   "title": "Kubernete 1.17 Playground",
   "description": "Experiment with Kubernetes 1.17",
+  "icon": "fa-kubernetes",
   "difficulty":	"Intermediate",
   "time":	"10 minutes",
   "details": {
     "steps": [
-      {
-        "title": "Your Kubernetes Cluster",
-        "text": "step1-k8s.md",
-        "code": "clear.sh"
-      }
+      { "title": "Your Kubernetes Cluster", "text": "step1-k8s.md", "code": "clear.sh" }
     ],
+    "intro": { "text": "intro.md", "code": "env-init.sh", "credits": "[Jonathan Johnson](http://www.dijure.com)" },
+    "finish": { "text": "finish.md" },
     "assets": {
       "host01": [
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
@@ -27,6 +26,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.17"
+    "imageid": "kubernetes:1.17"
   }
 }
