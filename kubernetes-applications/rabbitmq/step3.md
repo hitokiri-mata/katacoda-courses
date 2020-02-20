@@ -1,5 +1,7 @@
-Once running, this Rabbit MQ portal can be seen in your browser.
+Once running, this Rabbit MQ portal can be seen in your browser. Direct your browser to the "RabbitMQ Portal" from tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/.
 
-Now, you can direct your browser to the "RabbitMQ Portal" from tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/.
+Login with:
 
-Login with the user name _guest_ and password _guest_.
+- user name: _guest_
+- password: _guest_
+
