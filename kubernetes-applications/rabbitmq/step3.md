@@ -4,4 +4,3 @@ Login with:
 
 - user name: _guest_
 - password: _guest_
-

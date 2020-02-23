@@ -24,6 +24,11 @@
         "title": "Kubernetes Observability",
         "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a cluster.",
         "id": "kubernetes-observability"
+      },
+      {
+        "title": "Kubernetes Machine Learning",
+        "description": "Learn techniques for building, modeling and serving Machine Learning solutions on Kubernetes.",
+        "id": "kubernetes-ml"
       }
     ],
     "scenarios": []
