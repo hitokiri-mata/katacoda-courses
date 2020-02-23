@@ -22,25 +22,14 @@ helm install dash stable/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
-# Kubeflow
-
+# Kubeflow CLI
 curl -LO http://assets.joinscrapbook.com/kubeflow/kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 tar -xvf kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 mv kfctl /usr/local/bin/
 chmod +x /usr/local/bin/kfctl
 rm kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 
-export KF_NAME=kf-test
-
-export BASE_DIR=/opt
-export KF_DIR=${BASE_DIR}/${KF_NAME}
-
-export CONFIG_URI="https://raw.githubusercontent.com/kubeflow/manifests/v0.7-branch/kfdef/kfctl_k8s_istio.0.7.1.yaml"
-rm -rf ${KF_DIR}
-mkdir -p ${KF_DIR}
-
-cd ${KF_DIR}
-
+# Kubeflow Persistence
 cat <<EOF > /tmp/pv.yml
 apiVersion: v1
 kind: PersistentVolume
@@ -65,17 +54,28 @@ for i in `seq 10`; do
    ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no node01 "mkdir -p /opt/vol/pv$i; chmod 777 /opt/vol/pv$i"
 done
 
-n=0
-until [ $n -ge 5 ]
-do
-  rm -rf ${KF_DIR}
-  mkdir -p ${KF_DIR}
+# Install Kubeflow
+export BASE_DIR=/opt
+export KF_NAME=kf-test
+export KF_DIR=${BASE_DIR}/${KF_NAME}
+export CONFIG_URI="https://raw.githubusercontent.com/kubeflow/manifests/v0.7-branch/kfdef/kfctl_k8s_istio.0.7.1.yaml"
+rm -rf ${KF_DIR}
+mkdir -p ${KF_DIR}
+cd ${KF_DIR}
 
-  cd ${KF_DIR}
-   kfctl apply -V -f ${CONFIG_URI} && break
-   n=$[$n+1]
-   sleep 2
-done
+kfctl apply -V -f ${CONFIG_URI} && break
+
+# n=0
+# until [ $n -ge 5 ]
+# do
+#   rm -rf ${KF_DIR}
+#   mkdir -p ${KF_DIR}
+#   cd ${KF_DIR}
+
+#    kfctl apply -V -f ${CONFIG_URI} && break
+#    n=$[$n+1]
+#    sleep 2
+# done
 
 kubectl -n kubeflow get all
 
