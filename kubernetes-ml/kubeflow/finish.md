@@ -1,10 +1,10 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-ml/kubeflow/assets/kubeflow.jpg">
+<img align="right" src="/javajon/courses/kubernetes-ml/kubeflow/assets/kubeflow.jpg" width="400">
 
 Kubeflow is an open, community driven project to make it easy to deploy and manage an Machine Learning stack on Kubernetes.
 
-This experimental scenario is in the process of drafting. However, you will see that a functional Kubeflow instance  will be running and is open to experimentation. If you know Kubeflow, your feedback to support@katacoda.com and jonathan.johnson@dijure.com would be helpful.
+This scenario is in the process of drafting. However, you will see that a functional Kubeflow instance will be running and is open to experimentation. If you know Kubeflow, your feedback to support@katacoda.com and jonathan.johnson@dijure.com would be helpful.
 
 ## Lessons Learned ##
 
