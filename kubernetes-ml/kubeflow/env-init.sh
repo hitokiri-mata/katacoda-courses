@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Log for analysis of startup
-set -x
-
 launch.sh
 
 # Helm Setup (v3.1.0)
@@ -63,21 +60,22 @@ rm -rf ${KF_DIR}
 mkdir -p ${KF_DIR}
 cd ${KF_DIR}
 
-kfctl apply -V -f ${CONFIG_URI} && break
+# Install Kubeflow (insanity that we have to try it in a loop!)
+i=0
+while [ $i -le 8 ]
+do
+  kfctl apply -V -f ${CONFIG_URI}
 
-# n=0
-# until [ $n -ge 5 ]
-# do
-#   rm -rf ${KF_DIR}
-#   mkdir -p ${KF_DIR}
-#   cd ${KF_DIR}
+  EXITCODE=$?
+  if [ $EXITCODE -eq 0 ]; then
+    break;
+  fi
 
-#    kfctl apply -V -f ${CONFIG_URI} && break
-#    n=$[$n+1]
-#    sleep 2
-# done
-
-kubectl -n kubeflow get all
+  echo Number: $i
+  rm -rf *
+  sleep 2
+  ((i++))
+done
 
 # Completions
 source <(kfctl completion bash)
