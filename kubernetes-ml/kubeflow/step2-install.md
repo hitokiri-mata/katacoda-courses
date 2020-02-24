@@ -18,14 +18,14 @@ Verify the command line tool is available.
 
 `kfctl version`{{execute}}
 
-Whenever you add a CLI tool, often there will be a completion feature.
+Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the the context for the command line parameters using the tab key.
 
 `source <(kfctl completion bash)`{{execute}}
 
 
 ## Persistence
 
-Create 10 Persistent Volumes that will eventually be bound to by Kubeflow services
+Create 10 Persistent Volumes that will eventually be bound to by Kubeflow services.
 
 ```
 for i in {1..10}; do
@@ -50,7 +50,7 @@ mkdir -p ${KF_DIR}
 cd ${KF_DIR}
 ```{{execute}}
 
-Using the kfctl tool Install Kubeflow. Unfortunatelly, due to some idempodency problem, the installation need to be tried in a loop until it works. We expect this problem will be addressed in the near future.
+Using the kfctl tool Install Kubeflow. Unfortunately, due to some idempotency problem, the installation must be attempted in a loop until it works. We expect this problem will be addressed in the near future.
 
 ```
 for i in {1..10}; do
@@ -63,5 +63,8 @@ for i in {1..10}; do
 
   rm -rf *
   sleep 2
+  clear
 done
 ```{{execute}}
+
+It will take a few minutes for all the services to be available. Next, investigate all the services in the Kubeflow stack.

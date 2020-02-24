@@ -20,6 +20,11 @@
         "title": "Your Kubeflow platform",
         "text": "step3-kubeflow.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Kubeflow Dashboard",
+        "text": "step4-dashboard.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
