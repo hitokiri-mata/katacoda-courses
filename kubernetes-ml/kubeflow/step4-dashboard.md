@@ -1,4 +1,4 @@
-Upon first arrival the Dashboard will ask to create a first working space called a Namespace. Use the defaulted `anonymous` This namespace you name will coincide with a Kubernetes Namespace.
+Upon first arrival the Dashboard will ask to create a first working space called a Namespace. Use the suggested name `anonymous` This namespace you name will coincide with a Kubernetes Namespace.
 
 `kubectl get namespaces`{{execute}}
 

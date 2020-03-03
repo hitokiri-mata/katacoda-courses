@@ -27,6 +27,10 @@ Additional topics may be added to this lesson:
 - [Kubeless observability](https://kubeless.io/docs/monitoring/)
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-serverless/kubeless/assets/nfjs.png "No Fluff Just Stuff")
+<p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
+<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<br><br>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+</p>
 
-For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).

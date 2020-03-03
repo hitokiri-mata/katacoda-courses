@@ -29,6 +29,10 @@ With these steps you have learned:
 > The faas-netes controller is the most tested, stable and supported version of the OpenFaaS integration with Kubernetes. In contrast the OpenFaaS Operator (used in this scenario) is based upon the codebase and features from faas-netes, but offers a tighter integration with Kubernetes through [CustomResourceDefinitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRD). This means you can type in `kubectl get functions` to list the CRD that make this `Kind: function` possible.
 
 ------
-![No Fluff Just Stuff](/javajon/courses/kubernetes-serverless/openfaas/assets/nfjs.png "No Fluff Just Stuff")
+<p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
+<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<br><br>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+</p>
 
-For a deeper understanding of these topics and more join me, [Jonathan Johnson](https://nofluffjuststuff.com/conference/speaker/jonathan_johnson), for a transcendent experience on the [No Fluff Just Stuff Software Symposium Tour](https://nofluffjuststuff.com).

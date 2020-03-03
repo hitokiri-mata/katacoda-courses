@@ -1,6 +1,6 @@
 {
-  "title": "Kubernete 1.17 Playground",
-  "description": "Experiment with Kubernetes 1.17",
+  "title": "Kubernetes 1.17 Playground",
+  "description": "A place to experiment with Kubernetes 1.17",
   "icon": "fa-kubernetes",
   "difficulty":	"Intermediate",
   "time":	"10 minutes",

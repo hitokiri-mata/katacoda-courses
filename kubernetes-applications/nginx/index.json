@@ -13,12 +13,12 @@
       },
       {
         "title": "Deploy Nginx with CLI Technique",
-        "text": "step2-kubeflow.md",
+        "text": "step2-deploy-cli.md",
         "code": "clear.sh"
       },
       {
         "title": "Deploy Nginx with Manifest Technique",
-        "text": "step3.md"
+        "text": "step3-deploy-yaml.md"
       }
     ],
     "intro": {

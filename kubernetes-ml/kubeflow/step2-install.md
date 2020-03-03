@@ -67,4 +67,6 @@ for i in {1..10}; do
 done
 ```{{execute}}
 
-It will take a few minutes for all the services to be available. Next, investigate all the services in the Kubeflow stack.
+It will take a 5-10 minutes for all the services to be available. There are over 500 distinct resources that are created as part of the Kubeflow platform. Kubeflow is a project where many people are working to orchestrate all these resources into a sensible workflow for developing, deploying, serving and eventing your machine learning solutions.
+
+While it's starting you can investigate the various services in the Kubeflow stack.
