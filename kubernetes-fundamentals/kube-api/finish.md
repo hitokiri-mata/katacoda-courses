@@ -9,7 +9,7 @@ With these steps you have learned:
 - &#x2714; how to access the API via `kubectl`,
 - &#x2714; how to introspect objects in the cluster vi the API,
 - &#x2714; how to access the cluster API locally through a Proxy,
-- &#x2714; how to list api-resources,
+- &#x2714; how to reference api-resources and api-versions
 - &#x2714; how to `Explain` and `Describe` resources.
 
 ## Special Thank You
