@@ -2,7 +2,7 @@
   "title": "Kubernetes 1.17 Playground",
   "description": "A place to experiment with Kubernetes 1.17",
   "icon": "fa-kubernetes",
-  "difficulty":	"Intermediate",
+  "difficulty":	"Beginner",
   "time":	"10 minutes",
   "details": {
     "steps": [

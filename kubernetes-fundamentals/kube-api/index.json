@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes ConfigMaps and Secrets",
-  "description": "The fundamentals of ConfigMaps and Secrets",
+  "title": "Kubernetes API",
+  "description": "Discover the API through which you can control all Kubernetes objects.",
   "difficulty":	"Beginner",
   "time":	"15 minutes",
   "details": {
@@ -11,38 +11,30 @@
         "code": "clear.sh"
       },
       {
-        "title": "Create",
-        "text": "step2-create.md",
+        "title": "API via Command Line",
+        "text": "step2-kc-api.md",
         "code": "clear.sh"
       },
       {
-        "title": "Command Line Arguments",
-        "text": "step3-via-cli.md",
+        "title": "Proxy",
+        "text": "step3-proxy.md",
         "code": "clear.sh"
       },
       {
-        "title": "Environment Variables",
-        "text": "step4-via-env.md",
+        "title": "API-Resources",
+        "text": "step4-api-resources.md",
         "code": "clear.sh"
       },
       {
-        "title": "Volume Mounts",
-        "text": "step5-via-volume.md",
+        "title": "Explaining Resources",
+        "text": "step5-explain.md",
         "code": "clear.sh"
-      },
-      {
-        "title": "Create Secret",
-        "text": "step6-secret-create.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Read Secret",
-        "text": "step7-secret-read.md"
       }
     ],
     "intro": {
       "text": "intro.md",
-      "code": "env-init.sh"
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
     },
     "finish": {
       "text": "finish.md"
@@ -50,7 +42,7 @@
     "assets": {
       "host01": [
         {"file": "*", "target": "/root"},
-        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"} 
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
   },
@@ -61,7 +53,10 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}
-    ]
+    ],
+    "terminals": [
+      {"name": "Terminal 2", "target": "host01"}
+    ]    
     },
   "backend": {
     "imageid": "kubernetes-cluster-running"

@@ -1,7 +1,7 @@
 {
   "title": "First App",
   "description": "Run your first application on Kubernetes.",
-  "difficulty":	"Intermediate",
+  "difficulty":	"Beginner",
   "time":	"20 minutes",
   "details": {
     "steps": [
