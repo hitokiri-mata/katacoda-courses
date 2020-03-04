@@ -14,13 +14,13 @@ With these steps you have learned:
 
 ## Special Thank You
 
-To [Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scenario from [his labs found here](https://github.com/kensipe?tab=repositories).  
+To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).  
 
 ## References ##
 
 - [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
-
-
+- [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [jq](https://stedolan.github.io/jq/)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
