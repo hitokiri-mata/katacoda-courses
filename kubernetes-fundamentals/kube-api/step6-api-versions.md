@@ -12,11 +12,11 @@ These are all the versions behind the api root path `/apis/`. In the version lis
 
 `batch/v1` and `batch/v1beta`
 
-If you look back at the api-resource you will notice two resources appeared in that API Group.
+If you look back at the api-resource you will notice two resources appeared in that `batch` API Group.
 
 `kubectl api-resources | grep jobs`{{execute}}
 
-Notice Job and CronJob appear in this list. This means you can use the api-resource of `batch/v1` or `batch/v1beta` if those are both listed as versions for batch.
+Notice CronJobs and Jobs appear in this list. This means you can use the api-resource of `batch/v1` or `batch/v1beta` if those are both listed as versions for batch.
 
 This means that when you define a Job then you can declare either of these for a Job definition.
 

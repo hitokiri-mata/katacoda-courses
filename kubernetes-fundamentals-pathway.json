@@ -19,6 +19,11 @@
         "description": "Discover the API through which you can control all Kubernetes objects."
       },
       {
+        "course_id": "crds",
+        "title": "Custom Resource Definitions",
+        "description": "Extending Kubernetes with your own custom resources."
+      },
+      {
         "course_id": "connectivity",
         "title": "Pods to Services Communication",
         "description": "How Pods communicate with Services using a DNS."

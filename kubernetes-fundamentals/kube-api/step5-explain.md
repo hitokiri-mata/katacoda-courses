@@ -10,15 +10,6 @@ Notice the status field `phase`.  Let's display that as an output.
 
 `kubectl get ns -o custom-columns=NAME:.metadata.name,PHASE:.status.phase`{{execute}}
 
-Example output:
-```
-NAME                 PHASE
-default              Active
-kube-node-lease      Active
-kube-public          Active
-kube-system          Active
-```
-
 `Explain` is useful to help understanding the structure of types deployed in Kubernetes. It comes into even more use when the resource are custom and provided by other Operators outside the Kubernetes documentation.
 
 ## Describe
