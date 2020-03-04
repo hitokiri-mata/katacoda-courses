@@ -53,6 +53,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}
+      {"name": "Swagger API", "port": "8080"}
     ],
     "terminals": [
       {"name": "Terminal 2", "target": "host01"}

@@ -8,7 +8,7 @@ Almost all resources at this high level report roughly the same apiVersion, kind
 
 Notice the status field `phase`.  Let's display that as an output.
 
-`kubectl get ns -o custom-columns=NAME:.metadata.name,PHASE:.status.phase`
+`kubectl get ns -o custom-columns=NAME:.metadata.name,PHASE:.status.phase`{{execute}}
 
 Example output:
 ```
@@ -17,10 +17,9 @@ default              Active
 kube-node-lease      Active
 kube-public          Active
 kube-system          Active
-local-path-storage   Active
 ```
 
-Explain is incredibly useful in understanding the structure of types deployed in Kubernetes. It comes into even more use when the resource are custom and provided by other Operators outside the Kubernetes documentation.
+`Explain` is useful to help understanding the structure of types deployed in Kubernetes. It comes into even more use when the resource are custom and provided by other Operators outside the Kubernetes documentation.
 
 ## Describe
 
