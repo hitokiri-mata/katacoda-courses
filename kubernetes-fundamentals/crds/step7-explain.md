@@ -10,7 +10,6 @@ Apply this CRD.
 
 `kubectl apply -f thermometer-with-validation-crd.yaml`{{execute}}
 
-
 Now the `Explain` command will reveals details about the resource definition.
 
 `kubectl explain thermometer`{{execute}}

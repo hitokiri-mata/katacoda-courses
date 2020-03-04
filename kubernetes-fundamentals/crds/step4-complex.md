@@ -8,7 +8,7 @@ In you current directory there is a YAML file for a thermometer for Solkholm Swe
 
 Notice the YAML has the name and namespace (as the location) and units defined. Apply this declaration.
 
-`kubectl apply -f stockholm-thermometer.yaml`
+`kubectl apply -f stockholm-thermometer.yaml`{{execute}}
 
 Get the resource information.
 

@@ -1,10 +1,17 @@
-apiVersion: apiextensions.k8s.io/v1
+apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: thermometers.d2iq.com
 spec:
   group: d2iq.com
-  versions: v1
+  version: v1
+    additionalPrinterColumns:
+      - name: Unit
+        type: string
+        JSONPath: .spec.unit
+      - name: Temperature
+        type: string
+        JSONPath: .status.temperature
   names:
     kind: Thermometer
     plural: thermometers
@@ -12,10 +19,3 @@ spec:
       - trm
       - trms
   scope: Namespaced
-  additionalPrinterColumns:
-    - name: Unit
-      type: string
-      JSONPath: .spec.unit
-    - name: Temperature
-      type: string
-      JSONPath: .status.temperature

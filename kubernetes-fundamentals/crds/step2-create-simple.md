@@ -12,15 +12,19 @@ spec:
     kind: Thermometer
     plural: thermometers
     shortNames:
-      - therm
+      - trm
+      - trms
   scope: Namespaced
-EOF```{{execute}}
+EOF
+```{{execute}}
 
 In the above statement the `cat <<EOF >` command created a new YAML file in your current directory.
 
 `cat thermometer-crd.yaml`{{execute}}
 
-In this CRD definition the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource. Later we will get to defining other attributes like units.
+>> In this scenario we are using Kubernetes v1.14, which has an apiVersion of `apiextensions.k8s.io/v1beta1` for CRDs. If you are using Kubernetes v1.16 or newer, then v1 can be used, which has a [slightly improved CRD format](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definition-versioning/#specify-multiple-versions).
+
+In this CRD definition the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource.Later we will get to defining other attributes like units.
 
 Before we give this declaration to your cluster, let's see what is currently on the cluster. There should be no pre-existing CRDs.
 
@@ -50,6 +54,6 @@ Notice in the last command we added a [verbosity request](https://kubernetes.io/
 
 The CRD definition just defines the resource type and while Kubernetes recognizes the type, there are no instances of the Thermometer resource type.
 
-`kubectl get therm`{{execute}}
+`kubectl get trms`{{execute}}
 
 In the next step, let's add a Thermometer based on this type.

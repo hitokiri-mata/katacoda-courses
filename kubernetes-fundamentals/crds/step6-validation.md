@@ -16,7 +16,7 @@ Next, let's add a schema to the CRD using open API v3 Schema. The following sche
 
 Delete the associated CRDs.
 
-`kubectl delete crd  --all`
+`kubectl delete crd  --all`{{execute}}
 
 and reapply the CRD that contains the validation.
 
