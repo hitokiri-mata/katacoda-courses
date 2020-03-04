@@ -29,6 +29,11 @@
         "title": "Explaining Resources",
         "text": "step5-explain.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "API-Versions",
+        "text": "step6-api-versions.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
