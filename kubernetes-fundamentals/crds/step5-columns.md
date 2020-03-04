@@ -2,7 +2,7 @@ Just as objects in programming languages can have attributes, a resource can als
 
 The `thermometer-detailed-crd.yaml` includes the `additionalPrinterColumns` section.
 
-`cat thermometer-B-crd.yaml`{{execute}}
+`cat thermometer-with-columns-crd.yaml`{{execute}}
 
 See how two new columns are defined under the `versions` group. Apply this new CRDs declaration for the thermometers.
 
@@ -10,6 +10,6 @@ See how two new columns are defined under the `versions` group. Apply this new C
 
 Now, see the new columns appear.
 
-`kubectl get therm -A`{{execute}}
+`kubectl get trm -A`{{execute}}
 
 Brilliant. Next, let's explore validation.

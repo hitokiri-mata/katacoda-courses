@@ -14,8 +14,7 @@ spec:
     shortNames:
       - therm
   scope: Namespaced
-EOF
-```{{execute}}
+EOF```{{execute}}
 
 In the above statement the `cat <<EOF >` command created a new YAML file in your current directory.
 
@@ -27,7 +26,7 @@ Before we give this declaration to your cluster, let's see what is currently on 
 
 `kubectl get crds`{{execute}}
 
-And of course, Kubernetes has no knowledge of a Thermometer.
+And of course, Kubernetes has no knowledge of a Thermometer and a small error ensues.
 
 `kubectl get thermometers`{{execute}}
 

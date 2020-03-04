@@ -1,56 +1,18 @@
-6. Explaining CRDs
+With the current CRD the `Explain` command will not work.
 
-In the CRD manifest, define the following just after `scope: Namespaced`
+`kubectl explain thermometer`{{execute}}
 
-```yaml
-  scope: Namespaced
-  preserveUnknownFields: false
-```
+An additional change to the schema allows the `Explain` command to work. Notice in this CRD definition the added setting `preserveUnknownFields` on line 10 is set to false.
+
+`cat -n thermometer-with-validation-crd.yaml`{{execute}}
+
+Apply this CRD.
+
+`kubectl apply -f thermometer-with-validation-crd.yaml`{{execute}}
+
+
+Now the `Explain` command will reveals details about the resource definition.
+
+`kubectl explain thermometer`{{execute}}
 
 The `preserveUnknownFields` is not needed for CRD v1, but it is needed for v1beta1.  The combination of this field set to false AND the defined schema enables the `k explain` such as:
-
-```bash
-k explain therm --recursive
-KIND:     Thermometer
-VERSION:  d2iq.com/v1
-
-DESCRIPTION:
-     Thermometer is the Schema for the Thermometer API.
-
-FIELDS:
-   apiVersion	<string>
-   kind	<string>
-   metadata	<Object>
-      annotations	<map[string]string>
-      clusterName	<string>
-      creationTimestamp	<string>
-      deletionGracePeriodSeconds	<integer>
-      deletionTimestamp	<string>
-      finalizers	<[]string>
-      generateName	<string>
-      generation	<integer>
-      labels	<map[string]string>
-      managedFields	<[]Object>
-         apiVersion	<string>
-         fieldsType	<string>
-         fieldsV1	<map[string]>
-         manager	<string>
-         operation	<string>
-         time	<string>
-      name	<string>
-      namespace	<string>
-      ownerReferences	<[]Object>
-         apiVersion	<string>
-         blockOwnerDeletion	<boolean>
-         controller	<boolean>
-         kind	<string>
-         name	<string>
-         uid	<string>
-      resourceVersion	<string>
-      selfLink	<string>
-      uid	<string>
-   spec	<Object>
-      unit	<string>
-   status	<Object>
-      temperature	<number>
-```

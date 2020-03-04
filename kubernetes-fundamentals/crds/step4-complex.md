@@ -1,6 +1,6 @@
 Create a namespace, for example, to specify a country.
 
-'kubectl create namespace sweden`{{execute}}
+`kubectl create namespace sweden`{{execute}}
 
 In you current directory there is a YAML file for a thermometer for Solkholm Sweden.
 
@@ -12,13 +12,13 @@ Notice the YAML has the name and namespace (as the location) and units defined. 
 
 Get the resource information.
 
-`kubectl get therm -A`{{execute}}
+`kubectl get trm -A`{{execute}}
 
 This is as expected by our previous example. Wouldn't it be nice if the displayed output included more information regarding the resource details?
 
 Before continuing let's erase the blackboard. Remove the resources.
 
-`kubectl delete therms -n default --all`{{execute}}
+`kubectl delete trm -n default --all`{{execute}}
 
 Remove the definition.
 
