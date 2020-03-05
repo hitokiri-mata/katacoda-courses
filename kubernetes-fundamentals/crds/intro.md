@@ -8,4 +8,4 @@ In this scenario you will learn how to:
 
 - Create a CRD and define custom attribute
 - Discover how your CRD becomes a new resource
-- Add, inspect and remove instances of a customer resource
+- Add, inspect and remove instances of a custom resource

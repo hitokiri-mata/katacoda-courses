@@ -1,18 +1,14 @@
 # Conclusion #
 
-TOODO: Custom Resource Defintion (CRDs) is the mechanism used to add new `kind`s into a kubernetes cluster.  It makes the kubernetes API extensible.  When added with controllers watching the CRDs, enables a custom declarative experience.
-
-The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command line tools, language libraries and internal controllers and operators all use this exact same API for all CRUD operations toward Kubernetes.
+Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. Its all part of the extensibility of Kubernetes and it API. When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to access the API via `kubectl`,
-- &#x2714; how to introspect objects in the cluster vi the API,
-- &#x2714; how to access the cluster API locally through a Proxy,
-- &#x2714; how to reference api-resources and api-versions
-- &#x2714; how to `Explain` and `Describe` resources.
+- &#x2714; how to create a CRD and define custom attribute,
+- &#x2714; how how your CRD becomes a new resource,
+- &#x2714; how to add, inspect and remove instances of a custom resource.
 
 ## Special Thank You
 
@@ -22,6 +18,7 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scena
 
 - [Extend the Kubernetes API with CustomResourceDefinitions](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/)
 - [Additional Printer Columns](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#additional-printer-columns)
+- [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 - [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [jq](https://stedolan.github.io/jq/)
 

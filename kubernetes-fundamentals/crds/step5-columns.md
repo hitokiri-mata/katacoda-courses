@@ -6,7 +6,7 @@ The `thermometer-detailed-crd.yaml` includes the `additionalPrinterColumns` sect
 
 See how two new columns are defined under the `versions` group. Apply this new CRDs declaration for the thermometers.
 
-`kubernetes apply -f thermometer-with-columns-crd.yaml`{{execute}}
+`kubectl apply -f thermometer-with-columns-crd.yaml`{{execute}}
 
 Now, see the new columns appear.
 

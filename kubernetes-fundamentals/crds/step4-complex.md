@@ -22,7 +22,7 @@ Before continuing let's erase the blackboard. Remove the resources.
 
 Remove the definition.
 
-`kubectl delete crd therms`{{execute}}
+`kubectl delete crd trms`{{execute}}
 
 Clean slate.
 
