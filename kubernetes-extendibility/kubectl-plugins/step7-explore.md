@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugin/assets/iceburg.jpg" width="300">
+<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/iceburg.jpg" width="200">
 
 We only looked at the tip of the iceburg. At this point, feel free to explore the other plugins using this Katascoda instance.
 

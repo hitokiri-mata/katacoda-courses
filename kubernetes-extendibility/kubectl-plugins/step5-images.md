@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugin/assets/popeye.png" width="300">
+<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/popeye.png" width="300">
 
 Images and Outdated
 

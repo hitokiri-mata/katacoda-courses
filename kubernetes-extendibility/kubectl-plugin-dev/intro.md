@@ -1,6 +1,6 @@
 # Kubernetes API #
 
-![Kubernetes](/javajon/courses/kubernetes-extendability/kube-api/assets/kubernetes.png "Kubernetes")
+![Kubernetes](/javajon/courses/kubernetes-extendibility/kube-api/assets/kubernetes.png "Kubernetes")
 
 
 TODO
