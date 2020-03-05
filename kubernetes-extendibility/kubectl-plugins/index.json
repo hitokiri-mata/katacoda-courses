@@ -1,5 +1,5 @@
 {
-  "title": "Kubectl CLI plugin",
+  "title": "Kubectl CLI plugins",
   "description": "Extend Kubernetes with plugins added to the kubectl CLI tool.",
   "difficulty":	"Beginner",
   "time":	"15 minutes",
@@ -11,28 +11,33 @@
         "code": "clear.sh"
       },
       {
-        "title": "API via Command Line",
-        "text": "step2-kc-api.md",
+        "title": "Install Krew",
+        "text": "step2-install-krew.md",
         "code": "clear.sh"
       },
       {
-        "title": "Proxy",
-        "text": "step3-proxy.md",
+        "title": "Score",
+        "text": "step3-score.md",
         "code": "clear.sh"
       },
       {
-        "title": "API-Resources",
-        "text": "step4-api-resources.md",
+        "title": "Popeye",
+        "text": "step4-popeye.md",
         "code": "clear.sh"
       },
       {
-        "title": "Explaining Resources",
-        "text": "step5-explain.md",
+        "title": "Container Images",
+        "text": "step5-images.md",
         "code": "clear.sh"
       },
       {
-        "title": "API-Versions",
-        "text": "step6-api-versions.md",
+        "title": "Updating and Upgrading",
+        "text": "step6-updates.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Explore",
+        "text": "step7-explore.md",
         "code": "clear.sh"
       }
     ],
