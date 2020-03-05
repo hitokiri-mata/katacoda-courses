@@ -12,4 +12,6 @@ Now, see the new columns appear.
 
 `kubectl get trm -A`{{execute}}
 
-Brilliant. Next, let's explore validation.
+Now there is more information shown. The temperatures are blank because this is intended to be filled in by an application. Brilliant.
+
+Next, let's explore validation.

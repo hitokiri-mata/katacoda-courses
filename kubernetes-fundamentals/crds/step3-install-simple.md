@@ -17,7 +17,7 @@ This declaration can be applied to your Kubernetes cluster.
 
 `kubectl apply -f thermometer-another.yaml`{{execute}}
 
-You ow have a new Thermometer resource. This are not new Pods, Containers, or Service, instead it is just a presentation of a... Thermometer.
+Now you have a new Thermometer resource. This is not a new Pod, Container, or Service, instead it is just a representation of a Thermometer.
 
 `kubectl get trm -A`{{execute}}
 
