@@ -1,6 +1,6 @@
 # Kubernetes Custom Resource Definitions #
 
-![Kubernetes](/javajon/courses/kubernetes-fundamentals/minikube/assets/kubernetes.png "Kubernetes")
+![Kubernetes](/javajon/courses/kubernetes-extendability/crds/assets/kubernetes.png "Kubernetes")
 
 This scenario takes you through the essentials of defining new Kubernetes Custom Resource Definitions (CRDs). You will extend Kubernetes by creating new resources beyond the standard ones you normally get with any Kubernetes cluster. Once you understand CRDs this will lead you to understanding how to further extend Kubernetes using the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
