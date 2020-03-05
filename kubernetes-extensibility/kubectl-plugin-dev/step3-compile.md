@@ -1,9 +1,9 @@
-Compile
+Make sure the environment is setup correct by 
 
-Make sure the environment is setup correct by `make cli` which will build the cli or `make` which will build and test.
+`make cli`{{execute}}
 
-`go run cmd/kubectl-example/main.go`{{execute}}
+which will build the cli or 
 
-or
+`make`{{execute}} 
 
-`go run cmd/kubectl-example/main.go version`{{execute}}
+which will build and test.

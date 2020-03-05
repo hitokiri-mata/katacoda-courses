@@ -63,10 +63,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}
-    ],
-    "terminals": [
-      {"name": "Terminal 2", "target": "host01"}
-    ]    
+    ]
     },
   "backend": {
     "imageid": "kubernetes-cluster-running"

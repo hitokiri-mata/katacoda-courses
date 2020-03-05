@@ -22,38 +22,43 @@
         "code": "clear.sh"
       },
       {
+        "title": "Compile",
+        "text": "step4-run.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install",
-        "text": "step4-install.md",
+        "text": "step5-install.md",
         "code": "clear.sh"
       },
       {
         "title": "Test",
-        "text": "step5-test.md",
+        "text": "step6-test.md",
         "code": "clear.sh"
       },
       {
         "title": "Inspect",
-        "text": "step6-inspect-source.md",
+        "text": "step7-inspect-source.md",
         "code": "clear.sh"
       },
       {
         "title": "Modify",
-        "text": "step7-modify.md",
+        "text": "step8-modify.md",
         "code": "clear.sh"
       },
       {
         "title": "Flags and Status",
-        "text": "step8-flags-status.md",
+        "text": "step9-flags-status.md",
         "code": "clear.sh"
       },
       {
         "title": "REST Client",
-        "text": "step9-rest-client.md",
+        "text": "step10-rest-client.md",
         "code": "clear.sh"
       },
       {
         "title": "Add Pod",
-        "text": "step10-add-pod.md",
+        "text": "step11-add-pod.md",
         "code": "clear.sh"
       }
     ],
@@ -79,11 +84,8 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}
-    ],
-    "terminals": [
-      {"name": "Terminal 2", "target": "host01"}
-    ]    
-    },
+    ]
+  },
   "backend": {
     "imageid": "kubernetes-cluster-running"
   }
