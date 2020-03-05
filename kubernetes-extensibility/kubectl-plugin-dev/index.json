@@ -1,7 +1,7 @@
 {
   "private": "true",
   "title": "Kubectl CLI Plugin Development",
-  "description": "Extend Kubernetes with plugins added to the kubectl CLI tool.",
+  "description": "Extend Kubernetes with your custom plugin added to the kubectl CLI tool.",
   "difficulty":	"Beginner",
   "time":	"15 minutes",
   "details": {
@@ -12,28 +12,48 @@
         "code": "clear.sh"
       },
       {
-        "title": "API via Command Line",
-        "text": "step2-kc-api.md",
+        "title": "Clone Skeleton Source",
+        "text": "step2-clone.md",
         "code": "clear.sh"
       },
       {
-        "title": "Proxy",
-        "text": "step3-proxy.md",
+        "title": "Compile",
+        "text": "step3-compile.md",
         "code": "clear.sh"
       },
       {
-        "title": "API-Resources",
-        "text": "step4-api-resources.md",
+        "title": "Install",
+        "text": "step4-install.md",
         "code": "clear.sh"
       },
       {
-        "title": "Explaining Resources",
-        "text": "step5-explain.md",
+        "title": "Test",
+        "text": "step5-test.md",
         "code": "clear.sh"
       },
       {
-        "title": "API-Versions",
-        "text": "step6-api-versions.md",
+        "title": "Inspect",
+        "text": "step6-inspect-source.md",
+        "code": "clear.sh"
+      }
+      {
+        "title": "Modify",
+        "text": "step7-modify.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Flags and Status",
+        "text": "step8-flags-status.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "REST Client",
+        "text": "step9-rest-client.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Add Pod",
+        "text": "step10-add-pod.md",
         "code": "clear.sh"
       }
     ],
