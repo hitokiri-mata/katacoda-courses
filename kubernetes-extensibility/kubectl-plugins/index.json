@@ -26,7 +26,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Container Images",
+        "title": "Listing Container Images",
         "text": "step5-images.md",
         "code": "clear.sh"
       },

@@ -1,4 +1,4 @@
-To demonstrate Horizontal Pod Autoscaler (HPA) we will use a custom container image based on the php-apache image. This image is part of the Kuberentes project to demonstrate CPU load. The Dockerfile has the following content:
+To demonstrate Horizontal Pod Autoscaler (HPA) we will use a custom container image based on the php-apache image. This image is part of the Kubernetes project to demonstrate CPU load. The Dockerfile has the following content:
 
 ```
 FROM php:5-apache

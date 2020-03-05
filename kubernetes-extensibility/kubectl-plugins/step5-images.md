@@ -1,8 +1,12 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/popeye.png" width="300">
+<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/unsplash.png" width="300">
 
-Images and Outdated
+## Images and Outdated Plugins
 
-[Popeye](https://github.com/derailed/popeye) is a utility that scans live Kubernetes cluster and reports potential issues with deployed resources and configurations. Get the plugin description.
+Developers, architects and administrators can all get insights into what's running on the cluster just by looking at the containers.
+
+Plugins:
+- **Image**: List container images used in the cluster.
+- **Outdated**: List outdated container images running in a cluster
 
 Install the plugins.
 
@@ -10,10 +14,12 @@ Install the plugins.
 
 `kubectl krew install outdated`{{execute}}
 
-Enumerate the list of containers used currently in your cluster.
+List all the containers across all namespaces in your cluster.
 
-`kubectl images`{{execute}}
+`kubectl images -A`{{execute}}
 
-Show the list of images that have newer versions.
+List all the containers across all namespaces in your cluster showing which are current or could be updated.
 
 `kubectl outdated`{{execute}}
+
+Like all plugin, these plugins have further command line options. See `--help` for options.

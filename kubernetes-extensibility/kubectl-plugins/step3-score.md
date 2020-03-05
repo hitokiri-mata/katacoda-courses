@@ -14,13 +14,13 @@ Locally there is a canonical nginx.yaml files copied directly from the Kubernete
 
 `kubectl krew score nginx.yaml`{{execute}}
 
-Other score commands are available through help.
+Other Score commands are available through help.
 
 `kubectl krew score --help`{{execute}}
 
 Hm... to bad, no `fix` command.
 
-Try the analysis against resources in your cluster. First, deploy NGINX
+Try the analysis against resources in your cluster. First, deploy NGINX.
 
 `kubectl create -f nginx.yaml`{{execute}}
 

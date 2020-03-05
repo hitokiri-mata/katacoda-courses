@@ -1,6 +1,6 @@
 <img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/iceburg.jpg" width="200">
 
-We only looked at the tip of the iceburg. At this point, feel free to explore the other plugins using this Katascoda instance.
+We only looked at the tip of the iceburg. At this point, feel free to explore the other plugins using this Katacoda instance.
 
 `kubectl krew list`{{execute}}
 

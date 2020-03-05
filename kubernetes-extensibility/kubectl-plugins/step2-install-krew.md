@@ -12,7 +12,7 @@ KREW=./krew-"$(uname | tr '[:upper:]' '[:lower:]')_amd64" &&
 popd
 ```{{execute}}
 
-This will take a moment to complete. If you did this on a local machine you might want to add this to you system path.
+This will take a moment to complete. If you did this on a local machine you will want to add this to your system path.
 
 `export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"`{{execute}}
 
@@ -28,8 +28,4 @@ Explore the plugin list look at the list.
 
 `kubectl krew search`{{execute}}
 
-There are **so many helpful plugins** in this list and it hard to single out just one, but lets explore a few.
-
-
-
-
+There are **so many helpful plugins** in this list. The next steps will showcase just a few of them, but I would encourage you to use this scenario instance to install a try out of a few others that pique your interests.
