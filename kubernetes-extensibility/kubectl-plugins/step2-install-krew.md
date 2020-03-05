@@ -1,7 +1,8 @@
 <img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/krew.png" width="300">
-There are a [few ways to install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) based on your environment, but for this Katacoda scenario we will choose the recommended commands for Bash.
 
-Install Krew as a plugin for kubectl.
+Krew is a tool that makes it easy to use kubectl plugins. Krew helps you discover plugins, install and manage them on your machine. It is similar to tools like apt, dnf or brew. 
+
+There are a [few ways to install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) based on your environment, but for this Katacoda scenario we will choose the recommended commands for Bash. Install Krew as a plugin for kubectl.
 
 ```
 pushd "$(mktemp -d)" &&
@@ -21,7 +22,7 @@ Krew is now available so verify its version.
 
 `kubectl krew version`{{execute}}
 
-First and foremost, Krew is a collector of close to 84 plugins.
+The installation was a big ugly, but now that you have Krew, all the other plugin installations are clean and neat. First and foremost, Krew is a collector of close to 84 plugins.
 
 `kubectl krew search | wc -l`{{execute}}
 

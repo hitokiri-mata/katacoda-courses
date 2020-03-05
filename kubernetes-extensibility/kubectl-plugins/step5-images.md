@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/unsplash.png" width="300">
+<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/containers-unsplash.png" width="250">
 
 ## Images and Outdated Plugins
 

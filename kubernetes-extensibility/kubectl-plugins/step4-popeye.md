@@ -10,7 +10,7 @@ Install the plugin.
 
 Other commands are available through help.
 
-`kubectl krew popeye --help`{{execute}}
+`kubectl popeye --help`{{execute}}
 
 Try the analysis against default namespace where NGINX is deployed from the previous step.
 
