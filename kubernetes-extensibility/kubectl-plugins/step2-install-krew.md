@@ -1,3 +1,4 @@
+<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/krew.png" width="300">
 There are a [few ways to install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) based on your environment, but for this Katacoda scenario we will choose the recommended commands for Bash.
 
 Install Krew as a plugin for kubectl.
