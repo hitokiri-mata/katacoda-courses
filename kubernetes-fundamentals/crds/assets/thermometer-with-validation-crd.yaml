@@ -4,20 +4,15 @@ metadata:
   name: thermometers.d2iq.com
 spec:
   group: d2iq.com
-
   version: v1
-
-  preserveUnknownFields: false
-
   names:
     kind: Thermometer
     plural: thermometers
     shortNames:
       - trm
       - trms
-
   scope: Namespaced
-
+  preserveUnknownFields: false
   additionalPrinterColumns:
     - name: Unit
       type: string
@@ -25,7 +20,6 @@ spec:
     - name: Temperature
       type: string
       JSONPath: .status.temperature
-
   validation:
     openAPIV3Schema:
       type: object

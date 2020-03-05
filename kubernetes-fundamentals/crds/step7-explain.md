@@ -1,8 +1,17 @@
+TODO: Waiting for Katacoda instance of K8s v1.15+
+put in index.json
+      {
+        "title": "Explain Command",
+        "text": "step7-explain.md",
+        "code": "clear.sh"
+      }
+
+
 With the current CRD the `Explain` command will not work.
 
 `kubectl explain thermometer`{{execute}}
 
-An additional change to the schema allows the `Explain` command to work. Notice in this CRD definition the added setting `preserveUnknownFields` on line 10 is set to false.
+An additional change to the schema allows the `Explain` command to work. Notice in this CRD definition the added setting `preserveUnknownFields` on line 15 is set to false.
 
 `cat -n thermometer-with-validation-crd.yaml`{{execute}}
 

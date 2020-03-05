@@ -1,3 +1,11 @@
+TODO: Waiting for Katacoda instance of K8s v1.15+
+put in index.json
+      {
+        "title": "Validate Declaration of Resource",
+        "text": "step6-validation.md",
+        "code": "clear.sh"
+      },
+
 Let's try a new Thermometer resourse that defines a different city, such as:
 
 `cat gothenburg-thermometer.yaml`{{execute}}

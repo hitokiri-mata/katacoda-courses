@@ -5,4 +5,5 @@ metadata:
     namespace: sweden
 spec:
     unit: Celsius
+    temperature: 5
     foo: test
