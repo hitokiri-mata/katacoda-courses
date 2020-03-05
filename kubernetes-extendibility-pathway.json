@@ -1,67 +1,22 @@
 {
-    "title": "Kubernetes Fundamentals",
+    "title": "Kubernetes Extensibility",
     "icon": "fa-kubernetes",
-    "description": "Learn the fundamental building blocks of Kubernetes with hands-on xplanations.",
+    "description": "Learn techniques for extending Kubernetes beyond its default features and resources",
     "courses": [
-      {
-        "course_id": "minikube",
-        "title": "Minikube",
-        "description": "Introduction to Minikube as a simple Kubernetes cluster."
-      },
-      {
-        "course_id": "first-app",
-        "title": "First App",
-        "description": "Run your first application on Kubernetes."
-      },
-      {
-        "course_id": "kube-api",
-        "title": "Kubernetes API",
-        "description": "Discover the API through which you can control all Kubernetes objects."
-      },
       {
         "course_id": "crds",
         "title": "Custom Resource Definitions",
-        "description": "Extending Kubernetes with your own custom resources."
+        "description": "Extending Kubernetes with your own custom resources (CRDs)."
       },
       {
-        "course_id": "kubectl-plugin",
+        "course_id": "kubectl-plugins",
         "title": "Kubectl CLI plugin",
-        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool.",
-        },    
-      {
-        "course_id": "connectivity",
-        "title": "Pods to Services Communication",
-        "description": "How Pods communicate with Services using a DNS."
+        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
       },
       {
-        "course_id": "sidecar",
-        "title": "Sidecar Containers",
-        "description": "Two containers in a Pod can share data through a shared mount."
-      },    
-      {
-        "course_id": "jobs",
-        "title": "Jobs",
-        "description": "Explore the Jobs resource and how the pattern can be applied."
-      },
-      {
-        "course_id": "configmap-secret",
-        "title": "ConfigMaps and Secrets",
-        "description": "Explore Kubernetes ConfigMaps and Secrets."
-      },
-      {
-        "course_id": "springboot-to-k8s",
-        "title": "Spring Boot to Kubernetes",
-        "description": "From a blank slate to a Spring Boot app running on Kubernetes."
-      },
-      {
-        "course_id": "distillation",
-        "title": "Distilling Java Containers",
-        "description": "Applying the Container Distillation Pattern for Java based applications."
-      },
-      {
-        "course_id": "playground-1.17",
-        "title": "Kubernetes 1.17 Playground",
-        "description": "A place to experiment with Kubernetes 1.17"
+        "course_id": "kubectl-plugin-dev",
+        "title": "Kubectl CLI Plugin Development",
+        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
       }
     ]
   }
