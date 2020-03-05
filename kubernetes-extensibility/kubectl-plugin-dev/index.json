@@ -35,7 +35,7 @@
         "title": "Inspect",
         "text": "step6-inspect-source.md",
         "code": "clear.sh"
-      }
+      },
       {
         "title": "Modify",
         "text": "step7-modify.md",
