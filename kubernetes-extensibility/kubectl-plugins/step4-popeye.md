@@ -16,4 +16,4 @@ Try the analysis against default namespace where NGINX is deployed from the prev
 
 `kubectl popeye -n default`{{execute}}
 
-The report will overlap with some of the finding from Score.  The more these tools find, the better.
+The report will overlap with some of the finding from Score. The more these tools find, the better.

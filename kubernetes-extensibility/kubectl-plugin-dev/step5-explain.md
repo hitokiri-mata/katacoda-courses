@@ -2,11 +2,11 @@ The `Explain` command is a great way to understand the defined structure of a re
 
 `kubectl explain ns`{{execute}}
 
-Almost all resources at this high level report roughly the same apiVersion, kind, metadata, spec, status information.  In order to get the full structure of this kind use the `--recursive` flag.
+Almost all resources at this high level report roughly the same apiVersion, kind, metadata, spec, status information. In order to get the full structure of this kind use the `--recursive` flag.
 
 `kubectl explain ns --recursive`{{execute}}
 
-Notice the status field `phase`.  Let's display that as an output.
+Notice the status field `phase`. Let's display that as an output.
 
 `kubectl get ns -o custom-columns=NAME:.metadata.name,PHASE:.status.phase`{{execute}}
 

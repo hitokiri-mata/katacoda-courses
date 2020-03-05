@@ -26,9 +26,9 @@
         "id": "kubernetes-observability"
       },
       {
-        "title": "Kubernetes Extendibility",
+        "title": "Kubernetes Extensibility",
         "description": "Learn techniques for extending Kubernetes beyond its default features and resources",
-        "id": "kubernetes-extendibility"
+        "id": "kubernetes-extensibility"
       },
       {
         "title": "Kubernetes Machine Learning",

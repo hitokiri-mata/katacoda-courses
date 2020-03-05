@@ -1,10 +1,10 @@
 # Kubernetes API #
 
-![Kubernetes](/javajon/courses/kubernetes-extendibility/kube-api/assets/kubernetes.png "Kubernetes")
+![Kubernetes](/javajon/courses/kubernetes-extensibility/kube-api/assets/kubernetes.png "Kubernetes")
 
 
 TODO
-The focus of this lab is to become familiar with kubectl plugin development.  Through this lab you great a plugin that will interact with a Kubernetes cluster. 
+The focus of this lab is to become familiar with kubectl plugin development. Through this lab you great a plugin that will interact with a Kubernetes cluster.
 
 
 This scenario takes you through the basics of accessing and exploring the Kubernetes API. The API is use to create, read, update, and delete ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) and Kubernetes object or resource.

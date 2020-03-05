@@ -1,6 +1,6 @@
 # Conclusion #
 
-Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. Its all part of the extensibility of Kubernetes and it API. When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
+Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. CRDs are  all part of the extensibility of Kubernetes and it API. CRDs are in widespread use as a Kubernetes extensibility mechanism and have been available in beta since the 1.7 release. The 1.16 release marks the graduation of CRDs to general availability (GA). When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
 ## Lessons Learned ##
 
@@ -12,7 +12,7 @@ With these steps you have learned:
 
 ## Special Thank You
 
-To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).  
+To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).
 
 ## References ##
 

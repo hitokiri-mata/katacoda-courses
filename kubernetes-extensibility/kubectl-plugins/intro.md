@@ -1,6 +1,6 @@
 # Kubernetes API #
 
-![Kubernetes](/javajon/courses/kubernetes-extendibility/kube-plugins/assets/kubernetes.png "Kubernetes")
+![Kubernetes](/javajon/courses/kubernetes-extensibility/kube-plugins/assets/kubernetes.png "Kubernetes")
 
 The Kubectl command line tool comes with a plugin feature. These useful plugins are mostly underutilized by the community. Here you will explore the list of [community supported plugins](https://github.com/kubernetes-sigs/krew-index/) that can be added to your kubectl CLI tool. They really are quite handy.
 

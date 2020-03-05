@@ -23,4 +23,4 @@ Now the `Explain` command will reveals details about the resource definition.
 
 `kubectl explain thermometer`{{execute}}
 
-The `preserveUnknownFields` is not needed for CRD v1, but it is needed for v1beta1.  The combination of this field set to false AND the defined schema enables the `k explain` such as:
+The `preserveUnknownFields` is not needed for CRD v1, but it is needed for v1beta1. The combination of this field set to false AND the defined schema enables the `k explain` such as:

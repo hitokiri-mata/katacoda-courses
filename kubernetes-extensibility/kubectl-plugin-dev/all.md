@@ -10,7 +10,7 @@ Or fork and clone
 
 Step 2: Compile
 
-Make sure the environment is setup correct by `make cli` which will build the cli or `make` which will build and test.  
+Make sure the environment is setup correct by `make cli` which will build the cli or `make` which will build and test.
 
 Step 3. Run CLI from Go
 
@@ -23,7 +23,7 @@ will run the project.
 
 Step 3: Build and Install
 
-`make cli-install` will build and install the new example plugin into `$GOPATH/bin`.  Assuming that is in your `$PATH`, the following should now be possible.
+`make cli-install` will build and install the new example plugin into `$GOPATH/bin`. Assuming that is in your `$PATH`, the following should now be possible.
 
 ```bash
 k example version
@@ -77,7 +77,7 @@ With the `podClient` we can query for a list
 	}
 ```
 
-The list that is return is an object which has type information AND contains a list of the pod objects we are interested in.  This is a common pattern in kubernetes object access.  The follow code checks to see if there are any objects and prints a line for each pod found.
+The list that is return is an object which has type information AND contains a list of the pod objects we are interested in. This is a common pattern in kubernetes object access. The follow code checks to see if there are any objects and prints a line for each pod found.
 
 ```go
 	if len(list.Items) == 0 {

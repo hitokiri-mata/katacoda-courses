@@ -30,7 +30,7 @@ apiVersion: batch/v1beta
 kind: Job
 ```
 
-At the end of the version list there is a simple line of `v1`.  This is the version for all the other core resources that are not part of a API group, like a Pod.
+At the end of the version list there is a simple line of `v1`. This is the version for all the other core resources that are not part of a API group, like a Pod.
 
 ```
 apiVersion: v1
