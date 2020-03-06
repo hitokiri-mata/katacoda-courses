@@ -1,4 +1,4 @@
-Test against your cluster
+The plugin already has code implemented for the `resources` command and it has a API client that can introspect your Kubernetes cluster resources.
 
 `kubectl example resources`{{execute}}
 

@@ -32,12 +32,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Test",
+        "title": "Test Against Cluster",
         "text": "step6-test.md",
         "code": "clear.sh"
       },
       {
-        "title": "Inspect",
+        "title": "Inspect Plugin Source",
         "text": "step7-inspect-source.md",
         "code": "clear.sh"
       },

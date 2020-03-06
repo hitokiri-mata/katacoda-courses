@@ -1,4 +1,4 @@
-Currently, if you test the Pod listing feature it returns a placeholder message.
+Currently, if you test the Pod list command it returns just a placeholder message.
 
 `kubectl example pod list`{{execute}}
 

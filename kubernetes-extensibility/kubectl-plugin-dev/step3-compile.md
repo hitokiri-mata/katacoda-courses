@@ -1,4 +1,4 @@
-Build the plugin as a CLI tool.
+Without modifying any code, build the code.
 
 `make cli`{{execute}}
 

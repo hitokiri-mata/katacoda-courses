@@ -1,16 +1,15 @@
 # Conclusion #
 
-The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command line tools, language libraries and internal controllers and operators all use this exact same API for all CRUD operations toward Kubernetes.
+Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/) are quite helpful. But sometimes, what the community offers is not what you you need. Fortunately, you can code you own plugin to solve specific problems related to your domain. If you do create a plugin that can help others, consider adding it to the public community of kubectl plugins.
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to access the API via `kubectl`,
-- &#x2714; how to introspect objects in the cluster vi the API,
-- &#x2714; how to access the cluster API locally through a Proxy,
-- &#x2714; how to reference api-resources and api-versions
-- &#x2714; how to `Explain` and `Describe` resources.
+- &#x2714; how to layout the source directory structure for a Kubectl plugin,
+- &#x2714; how to connect implementation logic to command,
+- &#x2714; how to work with client references that can administer Kubernetes,
+- &#x2714; how to list and create Pods via a custom plugin
 
 ## Special Thank You
 
@@ -18,9 +17,10 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspire this scena
 
 ## References ##
 
+- [Extend kubectl with plugins](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/)
+- [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/)
 - [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
-- [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-- [jq](https://stedolan.github.io/jq/)
+- [Plugin Example Skeleton from **Ken Sipe**](https://github.com/codementor/k8s-cli)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
