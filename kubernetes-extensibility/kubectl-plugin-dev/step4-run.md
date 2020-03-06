@@ -2,6 +2,6 @@ Although the code is intended to be a plugin for kubectl, it can also be run as 
 
 `go run cmd/kubectl-example/main.go`{{execute}}
 
-or
+and
 
 `go run cmd/kubectl-example/main.go version`{{execute}}
