@@ -1,6 +1,18 @@
-Up to this point, you have only queried Kubernetes for information. In this step, you will add a Pod programmatically. You will be working with the `pod_add` file. Find the code that reads `fmt.Printf("adding a pod\n")` and replace with the following:
+Up to this point, you have only queried Kubernetes for information (the R in [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)). In this step, you will add a Pod programmatically. 
 
-This step will require the following additions to the imports:
+Currently, if you test the Pod add feature it returns a placeholder message.
+
+`kubectl example pod add an-attempt`{{execute}}
+
+and the request does not work, no new Pods.
+
+`kubectl get pods`{{execute}}
+
+# Code Add Pod Logic
+
+You will be working with the file `k8s-cli/pkg/cmd/pod_add.go`{{open}}.
+
+Like you did for `pod_list`, add these imports at the top of the `pod_add` file.
 
 ```go
 	apiv1 "k8s.io/api/core/v1"
@@ -9,15 +21,14 @@ This step will require the following additions to the imports:
 	"github.com/codementor/k8s-cli/pkg/example/env"
 ```{{copy}}
 
-Similar to the first pod list, we need a client and a podClient.
+Find the code that reads `fmt.Printf("adding a pod\n")` and replace with the following:
 
 ```go
 	client := env.NewClientSet(&Settings)
-
 	podsClient := client.CoreV1().Pods(apiv1.NamespaceDefault)
 ```{{copy}}
 
-Next we need to define the pod using the v1.Pod API.
+Right after those lines, define the Pod using the v1.Pod API.
 
 ```go
 	pod := &apiv1.Pod{
@@ -38,7 +49,8 @@ Next we need to define the pod using the v1.Pod API.
 
 Notice the setting of `Name`, `Image` and `Labels`.
 
-Now create it.
+Right after those lines, pass this reference to a Pod declaration as a request to podsClient to create the Pod.
+
 ```go
 	pp, err := podsClient.Create(pod)
 	if err != nil {
@@ -48,10 +60,28 @@ Now create it.
 	fmt.Fprintf(p.out, "Pod %v created with rev: %v\n", pp.Name, pp.ResourceVersion)
 ```{{copy}}
 
-Notice we get another object back from create which contains updates to the object we passed.
+Notice we get another object back (`pp`) from create which contains updates to the instantiated Pod.
+
+# Test
+
+`go run cmd/kubectl-example/main.go pod incredible`{{execute}}
 
 Let's check the cluster.
 
+`kubectl get pods`{{execute}}
+
+Incredible, the new Pod is there as instructed via your plugin!
+
+Generate the new plugin.
+
+`make cli`{{execute}}
+
+Test the new Pod adding feature via the plugin.
+
+`kubectl example pod add it-just-gets-better`{{execute}}
+
+This Pods list is obtained using the REST client calls you just added.
+
 `kubectl get pods`
 
-There they are, the new Pods your created via your plugin!
+Now you know how to programmatically administer Kubernetes via kubectl plugins. Let you creativity run wild.

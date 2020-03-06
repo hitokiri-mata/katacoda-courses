@@ -52,7 +52,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "REST Client for Pod List",
+        "title": "RESTifarian Pod List",
         "text": "step10-rest-client.md",
         "code": "clear.sh"
       },
