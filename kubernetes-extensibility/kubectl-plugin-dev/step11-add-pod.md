@@ -20,7 +20,7 @@ Like you did for `pod_list`, add these imports at the top of the `pod_add` file.
   "github.com/codementor/k8s-cli/pkg/example/env"
 ```{{copy}}
 
-Find the code that reads `fmt.Printf("adding a pod\n")` and replace with the following:
+At the bottom of the file in the `run` fuctions, find the code that reads `fmt.Printf("adding a pod\n")` and replace with:
 
 ```go
   client := env.NewClientSet(&Settings)
@@ -63,7 +63,7 @@ Notice we get another object back (`pp`) from create which contains updates to t
 
 # Test
 
-`go run cmd/kubectl-example/main.go pod incredible`{{execute}}
+`go run cmd/kubectl-example/main.go pod add incredible`{{execute}}
 
 Let's check the cluster.
 
@@ -73,7 +73,7 @@ Incredible, the new Pod is there as instructed via your plugin!
 
 Generate the new plugin.
 
-`make cli`{{execute}}
+`make cli-install`{{execute}}
 
 Test the new Pod adding feature via the plugin.
 
@@ -81,6 +81,6 @@ Test the new Pod adding feature via the plugin.
 
 This Pods list is obtained using the REST client calls you just added.
 
-`kubectl get pods`
+`kubectl get pods`{{execute}}
 
 Now you know how to programmatically administer Kubernetes via kubectl plugins. Let you creativity run wild.

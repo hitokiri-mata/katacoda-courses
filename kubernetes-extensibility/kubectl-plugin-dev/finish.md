@@ -21,6 +21,8 @@ To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspire this scena
 - [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/)
 - [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
 - [Plugin Example Skeleton from **Ken Sipe**](https://github.com/codementor/k8s-cli)
+- [Github: sample-cli-plugin](https://github.com/kubernetes/sample-cli-plugin)
+- [client-go](https://github.com/kubernetes/client-go)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

@@ -30,8 +30,9 @@ Next, change the previous pod listing logic the in `run` function code for the `
 
 Now the `pods --status=t/f` flag will provide additional output for the list.
 
-`go run cmd/kubectl-example/main.go  pod list --status=true`{{execute}}
-`go run cmd/kubectl-example/main.go  pod list --status=f`{{execute}}
+`go run cmd/kubectl-example/main.go pod list --status=true`{{execute}}
+
+`go run cmd/kubectl-example/main.go pod list --status=f`{{execute}}
 
 Generate the new plugin.
 

@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "title": "Kubectl CLI Plugin Development",
   "description": "Extend Kubernetes with your custom plugin added to the kubectl CLI tool.",
   "difficulty":	"Intermediate",

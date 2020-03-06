@@ -48,7 +48,7 @@ Now the `pods list` use uses the REST client to provide the same Pod list.
 
 Generate the new plugin.
 
-`make cli`{{execute}}
+`make cli-install`{{execute}}
 
 Test the new Pod listing feature via the plugin.
 
