@@ -1,6 +1,6 @@
-Let's add another pod list, but using the REST client. Find the code `fmt.Printf("add pod list code using the rest client\n")` in `cmd/kubectl-example/pod_list.go`{{open}} and replace with the following:
+Let's add another pod list, but using the REST client. Find the code `fmt.Printf("add pod list code using the rest client\n")` in `k8s-cli/cmd/kubectl-example/pod_list.go`{{open}} and replace with the following:
 
-Get a client, but first, we are going to use the **REST client**. Look in the `cmd/kubectl-example/environment.go`{{open}} file at the differences.
+Get a client, but first, we are going to use the **REST client**. Look in the `k8s-cli/cmd/kubectl-example/environment.go`{{open}} file at the differences.
 
 ```go
 	client := env.NewRestClient(&Settings)

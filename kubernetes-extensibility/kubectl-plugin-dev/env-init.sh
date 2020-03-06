@@ -25,6 +25,7 @@ source <(helm completion bash)
 # Enable metrics - probes failing and crashing on this instance.
 # helm install metrics-server stable/metrics-server --namespace kube-system 
 
-mkdir dev && cd dev
+mkdir dev
+cd dev
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

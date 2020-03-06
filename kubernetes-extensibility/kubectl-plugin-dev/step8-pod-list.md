@@ -1,10 +1,10 @@
-Currently, if you test the Pod listing feature.
+Currently, if you test the Pod listing feature it returns a placeholder message.
 
-`kubectl example pods`{{execute}}
+`kubectl example pod list`{{execute}}
 
-it returns a placeholder message and does not really return a list of Pods. This step will add some GoLang code that lists Pods. The Pods will be in a list of [structure object](https://www.golangprograms.com/go-language/struct.html) references.
+ We want it to instead return a list of Pods. This step will add some code that enumerates the Pods. The Pods will be in a list of [structure object](https://www.golangprograms.com/go-language/struct.html) references.
 
-Click on this file to open it in the editor `cmd/kubectl-example/pod_list.go`{{open}}. At line 71 replace the placeholder message `fmt.Printf("add pod list code using direct object references\n")` with the following:
+Click on this file to open it in the editor `k8s-cli/cmd/kubectl-example/pod_list.go`{{open}}. Near line 67 replace the placeholder message `fmt.Printf("add pod list code using direct object references\n")` with the following:
 
 ```go
 	// Acquire a kube client and a pods client

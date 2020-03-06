@@ -2,7 +2,7 @@ Another make task will build be application as a plugin for `kubectl`.
 
 `make cli-install`{{execute}}
 
-The plugin binary now in the GoLang bin directory.
+The plugin binary is now in the GoLang bin directory.
 
 `ls $GOPATH/bin`{{execute}}
 

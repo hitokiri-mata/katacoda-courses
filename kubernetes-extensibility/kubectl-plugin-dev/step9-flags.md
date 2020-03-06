@@ -1,6 +1,6 @@
 Often with commands, like `Pods` you may want to add a command flag (or switch). In this step you will add a flag for filtering on Pod status when using the `pods` command.
 
-In the same file `cmd/kubectl-example/pod_list.go`{{open}}:
+In the same file `k8s-cli/cmd/kubectl-example/pod_list.go`{{open}}:
 
 - Find where it reads `// status boolean` and add the following code `status bool`{{copy}} to the struct.
 - Find where it reads `// status flag` and add the following code to add as a flag.
