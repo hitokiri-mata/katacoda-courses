@@ -14,14 +14,16 @@ In the same file `k8s-cli/pkg/example/cmd/pod_list.go`{{open}}:
 
 ## Code When Status Flag True
 
-Next, change the previous pod listing logic the in `run` function code such that when the status flag is true it will provide a different output.
+Next, change the previous pod listing logic the in `run` function code for the `for` loop such that when the status flag is true it will provide a different output.
 
 ```go
+  for _, item := range list.Items {
     if p.status {
       fmt.Fprintf(p.out, "pod %v in namespace: %v, status: %v\n", item.Name, item.Namespace, item.Status.Phase)
     } else {
-      // non-status pod details output
+      fmt.Fprintf(p.out, "Pod %v in Namespace: %v\n", item.Name, item.Namespace)
     }
+  }
 ```{{copy}}
 
 # Test
