@@ -41,6 +41,7 @@ The return list is an object that has type information AND contains a list of th
     fmt.Printf("No Pods discovered.\n")
     return nil
   }
+  
   for _, item := range list.Items {
     fmt.Fprintf(p.out, "Pod %v in Namespace: %v\n", item.Name, item.Namespace)
   }
@@ -63,7 +64,7 @@ View your Pods list again.
 
 `go run cmd/kubectl-example/main.go pod list`{{execute}}
 
-Try this via the plugin.
+Try this new list feature via the plugin.
 
 `make cli-install`{{execute}}
 
