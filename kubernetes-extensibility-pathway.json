@@ -10,7 +10,7 @@
       },
       {
         "course_id": "kubectl-plugins",
-        "title": "Kubectl CLI plugins",
+        "title": "Kubectl CLI Plugins",
         "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
       },
       {

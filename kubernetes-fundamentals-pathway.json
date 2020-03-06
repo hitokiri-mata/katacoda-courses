@@ -19,11 +19,6 @@
         "description": "Discover the API through which you can control all Kubernetes objects."
       },
       {
-        "course_id": "crds",
-        "title": "Custom Resource Definitions",
-        "description": "Extending Kubernetes with your own custom resources."
-      },
-      {
         "course_id": "kubectl-plugin",
         "title": "Kubectl CLI plugins",
         "description": "Extend Kubernetes with plugins added to the kubectl CLI tool.",

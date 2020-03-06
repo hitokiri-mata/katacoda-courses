@@ -1,4 +1,4 @@
-Run the plungin as an application.
+Run the plugin as an application.
 
 
 `go run cmd/kubectl-example/main.go`{{execute}}

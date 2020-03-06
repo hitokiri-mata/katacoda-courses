@@ -1,4 +1,4 @@
-# Kubernetes API #
+# Creating A Kubectl Plugin #
 
 ![Kubernetes](/javajon/courses/kubernetes-extensibility/kubectl-plugin-dev/assets/kubernetes.png "Kubernetes")
 

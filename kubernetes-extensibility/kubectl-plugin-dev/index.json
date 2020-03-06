@@ -22,7 +22,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Compile",
+        "title": "Run",
         "text": "step4-run.md",
         "code": "clear.sh"
       },
