@@ -72,7 +72,6 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -80,6 +79,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
+    "uieditorpath": "/root/dev",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
