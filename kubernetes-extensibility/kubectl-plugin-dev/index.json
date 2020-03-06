@@ -42,22 +42,22 @@
         "code": "clear.sh"
       },
       {
-        "title": "Modify",
-        "text": "step8-modify.md",
+        "title": "Command for Pod List",
+        "text": "step8-pod-list.md",
         "code": "clear.sh"
       },
       {
-        "title": "Flags and Status",
-        "text": "step9-flags-status.md",
+        "title": "Command Flags",
+        "text": "step9-flags.md",
         "code": "clear.sh"
       },
       {
-        "title": "REST Client",
+        "title": "REST Client for Pod List",
         "text": "step10-rest-client.md",
         "code": "clear.sh"
       },
       {
-        "title": "Add Pod",
+        "title": "Adding a Pod",
         "text": "step11-add-pod.md",
         "code": "clear.sh"
       }
@@ -79,7 +79,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [

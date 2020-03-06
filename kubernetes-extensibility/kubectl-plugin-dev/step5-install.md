@@ -1,10 +1,12 @@
-Install
+Another make target will build be application as a plugin for `kubectl`.
 
-`make cli-install` {{execute}}
+`make cli-install`{{execute}}
 
-will build and install the new example plugin into `$GOPATH/bin`. Assuming that is in your `$PATH`, the following should now be possible.
+The plugin binary now in the GoLang bin directory 
 
-```bash
-k example version
-Example Version: version.Info{GitVersion:"0.1.0", GitCommit:"64e04046", BuildDate:"2020-01-30T22:00:17Z", GoVersion:"go1.13.7", Compiler:"gc", Platform:"darwin/amd64"}
-```
+`ls $GOPATH/bin`{{execute}}
+
+Because this directory is in your `$PATH`, this is not a plugin available for `kubectl`.
+
+`kubectl example version`{{execute}}
+

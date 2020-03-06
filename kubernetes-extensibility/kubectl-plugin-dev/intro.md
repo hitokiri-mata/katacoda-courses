@@ -2,12 +2,7 @@
 
 ![Kubernetes](/javajon/courses/kubernetes-extensibility/kubectl-plugin-dev/assets/kubernetes.png "Kubernetes")
 
-
-TODO
-The focus of this lab is to become familiar with kubectl plugin development. Through this lab you great a plugin that will interact with a Kubernetes cluster.
-
-
-This scenario takes you through the basics of accessing and exploring the Kubernetes API. The API is use to create, read, update, and delete ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) and Kubernetes object or resource.
+This scenario takes you through the introductory steps for developing a kubectl plugin. Through this scenario you create a plugin that will interact with a Kubernetes cluster. While its written in Go the steps will guide you, even if you are a bit new at writing code in GoLang.
 
 In this scenario you will learn how to:
 

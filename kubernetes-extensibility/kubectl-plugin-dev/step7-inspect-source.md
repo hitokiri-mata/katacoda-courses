@@ -1,13 +1,9 @@
 Explore the Project
 
-Start with
+Click on the file name to open the file `pkg/example/cmd/root.go`{{open}}
 
-`cat root.go`{{execute}}
+Inspect the source to see how commands in Go are created.
 
- and understand how commands in Go are created.
+Click on the file name to open the file `cmd/kubectl-example/main.go`{{open}}
 
-Look at 
-
-`cat main.go`{{execute}}
-
- which is the starting point but for this project isn't very interesting.
+Inspect the source to see how this is the starting point. This project is just an example so there is not much here, but it's a starting point for you.

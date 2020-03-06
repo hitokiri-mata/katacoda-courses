@@ -1,9 +1,7 @@
-Make sure the environment is setup correct by 
+Build the plugin as a CLI tool.
 
 `make cli`{{execute}}
 
-which will build the cli or 
+Alternatively, you can execute simple just `make` which will run the same `cli` build and include the tests.
 
-`make`{{execute}} 
-
-which will build and test.
+`make`{{execute}}

@@ -17,7 +17,7 @@ Basic automatic scaling is simply achieved by declaring the CPU threshold and th
 In the following steps you will learn how to:
 
 - install the metrics-server for gathering metrics,
-- install a pod that can be scaled,
+- install a Pod that can be scaled,
 - define the scaling rules and the number of pods to scale up and down,
 - increase service demand to trigger scaling up,
 - observe scaling up and down.

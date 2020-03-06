@@ -32,7 +32,7 @@ Kubernetes also maintains a list of events.
 
 `kubectl get events`{{execute}}
 
-Scaling is a type of event. Scale down the pod from 3 down to 2.
+Scaling is a type of event. Scale down the Pod from 3 down to 2.
 
 `kubectl scale deployment/random-logger --replicas=2`{{execute}}
 

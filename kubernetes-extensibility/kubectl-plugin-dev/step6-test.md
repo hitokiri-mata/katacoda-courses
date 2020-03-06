@@ -5,7 +5,6 @@ Test against your cluster
  while kubectl context is set to an active cluster should result in the following:
 
 ```bash
-k example resources
 Name                           	Namespaced	Kind                          
 replicationcontrollers         	true      	ReplicationController         
 namespaces                     	false     	Namespace                     
