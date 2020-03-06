@@ -6,7 +6,7 @@ This scenario takes you through the introductory steps for developing a kubectl 
 
 In this scenario you will learn how to:
 
-- Layout the source directory structure for a Kubectl plugin
+- Layout the source directory structure for a kubectl plugin
 - Connect implementation logic to command
 - Work with client references that can administer Kubernetes
 - List and create Pods via a custom plugin

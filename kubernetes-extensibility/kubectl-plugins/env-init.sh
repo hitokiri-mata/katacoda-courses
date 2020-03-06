@@ -25,6 +25,4 @@ source <(helm completion bash)
 # Enable metrics
 helm install metrics-server stable/metrics-server --namespace kube-system 
 
-pause
-
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

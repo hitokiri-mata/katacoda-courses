@@ -6,7 +6,7 @@ Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community sup
 
 With these steps you have learned:
 
-- &#x2714; how to layout the source directory structure for a Kubectl plugin,
+- &#x2714; how to layout the source directory structure for a kubectl plugin,
 - &#x2714; how to connect implementation logic to command,
 - &#x2714; how to work with client references that can administer Kubernetes,
 - &#x2714; how to list and create Pods via a custom plugin

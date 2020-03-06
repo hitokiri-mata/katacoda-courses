@@ -10,41 +10,40 @@ and the request does not work, no new Pods.
 
 # Code Add Pod Logic
 
-You will be working with the file `k8s-cli/pkg/cmd/pod_add.go`{{open}}.
+You will be working with the file `k8s-cli/pkg/example/cmd/pod_add.go`{{open}}.
 
 Like you did for `pod_list`, add these imports at the top of the `pod_add` file.
 
 ```go
-	apiv1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-
-	"github.com/codementor/k8s-cli/pkg/example/env"
+  apiv1 "k8s.io/api/core/v1"
+  metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+  "github.com/codementor/k8s-cli/pkg/example/env"
 ```{{copy}}
 
 Find the code that reads `fmt.Printf("adding a pod\n")` and replace with the following:
 
 ```go
-	client := env.NewClientSet(&Settings)
-	podsClient := client.CoreV1().Pods(apiv1.NamespaceDefault)
+  client := env.NewClientSet(&Settings)
+  podsClient := client.CoreV1().Pods(apiv1.NamespaceDefault)
 ```{{copy}}
 
 Right after those lines, define the Pod using the v1.Pod API.
 
 ```go
-	pod := &apiv1.Pod{
-		ObjectMeta: metav1.ObjectMeta{
-			Name:   name,
-			Labels: map[string]string{"app": "demo"},
-		},
-		Spec: apiv1.PodSpec{
-			Containers: []apiv1.Container{
-				{
-					Name:  name,
-					Image: p.image,
-				},
-			},
-		},
-	}
+  pod := &apiv1.Pod{
+    ObjectMeta: metav1.ObjectMeta{
+      Name:   name,
+      Labels: map[string]string{"app": "demo"},
+    },
+    Spec: apiv1.PodSpec{
+      Containers: []apiv1.Container{
+        {
+          Name:  name,
+          Image: p.image,
+        },
+      },
+    },
+  }
 ```{{copy}}
 
 Notice the setting of `Name`, `Image` and `Labels`.
@@ -52,12 +51,12 @@ Notice the setting of `Name`, `Image` and `Labels`.
 Right after those lines, pass this reference to a Pod declaration as a request to podsClient to create the Pod.
 
 ```go
-	pp, err := podsClient.Create(pod)
-	if err != nil {
-		return err
-	}
+  pp, err := podsClient.Create(pod)
+  if err != nil {
+    return err
+  }
 
-	fmt.Fprintf(p.out, "Pod %v created with rev: %v\n", pp.Name, pp.ResourceVersion)
+  fmt.Fprintf(p.out, "Pod %v created with rev: %v\n", pp.Name, pp.ResourceVersion)
 ```{{copy}}
 
 Notice we get another object back (`pp`) from create which contains updates to the instantiated Pod.
