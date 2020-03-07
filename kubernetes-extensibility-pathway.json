@@ -19,7 +19,7 @@
         "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
       },
       {
-        "course_id": "kubebuild",
+        "course_id": "kubebuilder",
         "title": "Develop an Operator with Kubebuilder",
         "description": "Coming soon: Learn how to control custom resources with Kubebuilder based Operators."
       },
