@@ -10,20 +10,26 @@ For _AtStatus_ you need to add a string variable named `Phase`.
 
 To complete the types definition and for controller convenience define the following phases in the `api/v1alpha1/at_types.go`{{open}} file.
 
+```go
 const (
 	PhasePending = "PENDING"
 	PhaseRunning = "RUNNING"
 	PhaseDone    = "DONE"
 )
+```{{copy}}
 
 ## Build
 
-With these modifications you are ready to build.
+With these modifications you are ready to build and generate files in the config folder.
 
 `make manifests`{{execute}}
 
+Apply the CRDs to your running Kubernetes cluster.
+
+'make install`{{execute}}
+
 ## Test
 
-This will generate files in the config folder AND/OR make install which will apply the CRDs to your running Kubernetes cluster. After make install ensure the CRD for `At` is installed.
+With these updates, ensure the updated controller for `At` resources is installed.
 
 `kubectl get crds`{{execute}}

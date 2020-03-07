@@ -1,4 +1,4 @@
-Run the following command to create a new API (group/version) as cnat/v1alpha1 and the new Kind (CRD) _At_ assocaited with the API.
+Run the create command to create a new API (group/version) as cnat/v1alpha1 and the new Kind (CRD) _At_ associated with the API.
 
 ```bash
 kubebuilder create api \

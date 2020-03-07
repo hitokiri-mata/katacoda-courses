@@ -2,7 +2,7 @@ Kubebuild requires Go 1.13+. Ensure we have a good version as a prerequisite.
 
 `go version`{{execute}}
 
-Create a Go project directory your new controller.
+Create a Go project directory for your new controller.
 
 `export GO111MODULE=on`{{execute}}
 

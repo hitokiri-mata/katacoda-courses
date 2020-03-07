@@ -27,7 +27,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "todo",
+        "title": "Define CRD",
         "text": "step5-def-crd.md",
         "code": "clear.sh"
       },
@@ -52,8 +52,8 @@
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step10-.md",
+        "title": "Conclusion",
+        "text": "step10-conclusion.md",
         "code": "clear.sh"
       }
     ],
@@ -74,7 +74,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/root/dev",
+    "uieditorpath": "/opt/go/src",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [

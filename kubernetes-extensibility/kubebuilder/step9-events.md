@@ -2,9 +2,7 @@ This step is extra credit for you. It explores how your Kubebuilder Operator can
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice there are no "events" registered for this object. This step of the lab changes that.
-
-In the `controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so that it looks like:
+Notice in the description there are no "events" registered for this object. The next step will enable the events listing. In the `controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so it looks like:
 
 ```go
 // AtReconciler reconciles a At object
@@ -37,7 +35,7 @@ With this new code, the `describe` command will present the list of Kubernetes e
 
 ## Imports
 
-The following are the imports needed for the at_controller.go for the changes indicated in this lab.
+The following are the imports needed for the `controllers/at_controller.go`{{open}}  for the changes indicated in this lab.
 
 import (
 	"context"

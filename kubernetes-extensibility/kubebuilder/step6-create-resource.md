@@ -2,7 +2,7 @@ Create a custom resource based on this new `At` CRD.
 
 Create a YAML file.
 
-`touch at-sample.yaml`{{echo}}
+`touch at-sample.yaml`{{execute}}
 
 Click on this file `at-sample.yaml`{{open}} to open it in the editor. Add this text to the opened YAML file in the editor.
 

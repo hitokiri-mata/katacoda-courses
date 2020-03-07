@@ -100,9 +100,11 @@ Finishing the Reconcile function, insert the code below after the if body that s
 	}
 ```{{copy}}
 
-If you run the controller again make run you should see phase status changing for the CR but it never fully gets to "Done". This is because the controller isn't watching Pods yet.
+Run the controller again.
 
-The final modification is in the SetupWithManager function. Make the following changes:
+`make run`{{execute}}
+
+You will see the phase status changing for the CR but it never fully gets to "Done". This is because the controller isn't watching Pods yet. The final modification is in the SetupWithManager function. Make the following changes:
 
 ```go
 	return ctrl.NewControllerManagedBy(mgr).
