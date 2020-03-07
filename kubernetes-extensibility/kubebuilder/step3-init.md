@@ -1,11 +1,12 @@
-Kubebuild requres Go 1.13+. Ensure we have a good version as a prerequisite,
+Kubebuild requires Go 1.13+. Ensure we have a good version as a prerequisite.
 
 `go version`{{execute}}
+
+Create a Go project directory your new controller.
 
 `export GO111MODULE=on`{{execute}}
 
 `mkdir -p $GOPATH/src/example; cd $GOPATH/src/example`{{execute}}
-
 
 Kubebuild has an init command that creates a local directory populated with the skelton to start writing your Operator.
 

@@ -1,4 +1,4 @@
-Install the near latest Kubebuilder that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book.
+Install the latest Kubebuilder that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book.
 
 ```bash
 version=2.3.0

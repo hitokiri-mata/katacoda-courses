@@ -1,14 +1,18 @@
 # Conclusion #
 
-TODO
+You now have a better understanding how to write an Operator using the Kubebuilder. The real goal of this scenario is to show you the power of extending Kubernetes with your own custom resources and coding controllers that are dedicated to observing and managing your custom resources.
+
+There are some other competing Operator frameworks out there such as the Operator-SDK, Metacontroller and **KUDO**. In fact, KUDO is built using the Kubebuilder project and is open source, governed by D2IQ. KUDO is a much easier way to write an Operator as it embraces a declarative form over an imperative Go based controller. The KUDO project is built using the Kubebuilder project. In this Katacoda course head over to the scenario for learning KUDO and hopefully you will see why it was created to make writing Operators even easier.
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to todo,
-- &#x2714; how to todo,
-- &#x2714; how to todo,
+- &#x2714; how to modify, build and test code in a Kubebuilder skeleton project,
+- &#x2714; how to create a CRD through Go structs and, automation,
+- &#x2714; how to define RBACs created through generation from code annotations,
+- &#x2714; how to create a controller for observing and managing the _at_ custom resources,
+- &#x2714; how to associate Kubernetes events back to the managed resources.
 
 ## Special Thank You
 
@@ -16,11 +20,13 @@ To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspire this scena
 
 ## References ##
 
-- [Extend kubectl with plugins](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/)
-- [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/)
-- [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
-- [Plugin Example Skeleton from **Ken Sipe**](https://github.com/codementor/k8s-cli)
+- [Article: Kubebuild origin](
+https://kubernetes.io/blog/2018/08/10/introducing-kubebuilder-an-sdk-for-building-kubernetes-apis-using-crds/)
+- [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+- [custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions)
 - [The Kubebuilder book](https://book.kubebuilder.io/)
+- [cnat](https://github.com/programming-kubernetes/cnat)
+- [Kuberbuilder with cnat, deprecated](https://github.com/programming-kubernetes/cnat/tree/master/cnat-kubebuilder)
 - [client-go](https://github.com/kubernetes/client-go)
 
 ------

@@ -1,20 +1,19 @@
-# Creating and Operator based on Kubebuilder #
+# Creating an Operator based on Kubebuilder #
 
 <img align="right" src="/javajon/courses/kubernetes-extensibility/kubebuilder/assets/kubebuilder.png" width="300">
 
-This scenario lets you experience developing an Operator with Kubebuilder. You will create a CRD through Golang structs and automation. You will see how RBACs are created through generation from code annotations. Then you will create a controller for working with the CRD.
+In this scenario you will experience what it's like to create and run a Kubernetes Operator that manages a custom resource. The Operator is created using the Kubebuilder tool. The custom resources will be called "At"s.
 
-This lab and code was inspired by the previous work of [cnat](https://github.com/programming-kubernetes/cnat) (cloud native at akin to Linux at command) and an outdated tutorial on [Kuberbuilder with cnat](https://github.com/programming-kubernetes/cnat/tree/master/cnat-kubebuilder). That code is out of date for the current versions of controller-runtime and Kubebuilder. Using it as a reference you will notice some nice improvements to standard patterns in controller-runtime.
+[Kubebuilder](https://kubebuilder.io/) was released as open source in August from 2018. Two software engineers, Phillip Wittrock and Sunil Arora from Google, founded the project. Kubebuilder is now governed by (TODO).
 
-The basics of this operator is that we will have an at CRD which takes a time and command. A controller will monitor the CRD and Pods. The controller will create at kinds and will create a pod to run the command if the time has past. Once the pod is finished running, the controller will update the CR regarding the pod status.
+The [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) is a very important technique to extend and build upon the basic features of Kubernetes. Operators are controllers that have roles that observe and manage associated [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions). There are a variety of projects that provides tools to build Operators. [Kubebuilder](https://kubebuilder.io/) is one prominent techniques.
 
-## Kuberbuilder ##
-
-Kubebuilder is a framework for building Kubernetes APIs using [custom resource definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions).
+This scenario stands on the shoulders of others. `At` is a popular command in Linux that allows you to schedule a command to run the in the future. There is a project called [cnat](https://github.com/programming-kubernetes/cnat) and it stands for _cloud native at_. There is also an outdated tutorial on [Kuberbuilder with cnat](https://github.com/programming-kubernetes/cnat/tree/master/cnat-kubebuilder). Many improvements were applied to Kuberbuilder which deprecated that tutorial. Recently, [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) created a updated lab inspired from _at_, _cnat_ and the old tutorial. In turn, this scenario is a translation of Ken's lab onto Katacoda. You now get to enjoy the broad shoulders of open source and the cloud native community.
 
 In this scenario you will learn how to:
 
-- todo
-- todo
-- todo
-- todo
+- Modify, build and test code in a Kubebuilder skeleton project
+- Create a new CRD call _at_ through Go structs and automation
+- Define RBACs created through generation from code annotations
+- Create a controller for observing and managing the _at_ custom resources
+- Associate Kubernetes events back to the managed resources

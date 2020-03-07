@@ -1,12 +1,10 @@
-Advanced: Using the kubernete events
-
-Take a look a the description of the resource.
+This step is extra credit for you. It explores how your Kubebuilder Operator can respond to Kubernetes events. Take a look a the description of the resource.
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice there are no "events" against this object. This step of the lab changes that.
+Notice there are no "events" registered for this object. This step of the lab changes that.
 
-Add the Recorder record.EventRecorder to the AtReconciler struct so that it looks like:
+In the `controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so that it looks like:
 
 ```go
 // AtReconciler reconciles a At object
@@ -16,9 +14,9 @@ type AtReconciler struct {
 	Scheme *runtime.Scheme
 	Recorder record.EventRecorder
 }
-```
+```{{copy}}
 
-This struct is initialized in main.go, Modify this file to the following:
+This struct is initialized in `main.go`{{open}}. Modify this file to the following:
 
 ```go
 if err = (&controllers.AtReconciler{
@@ -28,11 +26,11 @@ if err = (&controllers.AtReconciler{
 		Recorder: mgr.GetEventRecorderFor("at-controller"),	
 ```{{copy}}
 
-Now modify the at_controller.go code to record the events for each transition of the phase status. Below is an example of when the phase is set to "Pending"
+Now modify the `controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. Below is an example of when the phase is set to "Pending".
 
 r.Recorder.Event(instance, "Normal", "PhaseChange", cnatv1alpha1.PhasePending)
 
-The results of a describe after this modification will now look like:
+With this new code, the `describe` command will present the list of Kubernetes events on related to the resource.
 
 `kubectl describe at at-sample`{{execute}}
 

@@ -1,4 +1,4 @@
-Create a custom resource based on this new `AT` CRD.
+Create a custom resource based on this new `At` CRD.
 
 Create a YAML file.
 
@@ -20,7 +20,7 @@ You can either type in the YAML file (best way to learn) or click on the `Copy t
 
 ## Advanced: Printer Columns
 
-How about adding a printer column? The following build tags can be placed before type At struct.
+How about adding a printer column? The following build tags can be placed before type `At struct`.
 
 ```yaml
 // +kubebuilder:object:root=true
@@ -38,6 +38,6 @@ Reinstall the manifests.
 
 Retrieve the custom resource.
 
-`kubectl get at`{{execute}}
+`kubectl get ats`{{execute}}
 
-The new column appears.
+The new print column appears.

@@ -1,4 +1,4 @@
-Now that we have a CRD to work with let's focus on the controller.
+Now that we have a CRD to work with let's focus on the controller to manage these _At_ resources.
 
 Click on this `controllers/at_controller.go`{{open}} file to open it in the editor. There are two tags to generate RBAC for the CRD, however this controller will need permission for Pods as well.
 
@@ -25,7 +25,7 @@ Working on the func (r *AtReconciler) Reconcile function, change the logger to a
 	logger.Info("== Reconciling At")
 ```{{copy}}
 
-Following the logger, is a good place for fetching instances of the CR for At as follows:
+Following these logger line, add this code to fetching instances of the CR for At.
 
 ```go
 	// Fetch the At instance
@@ -41,36 +41,38 @@ Following the logger, is a good place for fetching instances of the CR for At as
 	}
 ```{{copy}}
 
-Now that we have an instance defined by the request namespacedname, lets check to see if it has a status, if not, lets initialize.
+Now that we have an instance defined by the request namespacedname, check to see if it has a status, if not, let's initialize.
 
 ```go
-	// If no phase set, default to pending (the initial phase):
-	if instance.Status.Phase == "" {
-		instance.Status.Phase = cnatv1alpha1.PhasePending
-		cnatv1alpha1.PhasePending)
-	}
+  // If no phase set, default to pending (the initial phase):
+  if instance.Status.Phase == "" {
+    instance.Status.Phase = cnatv1alpha1.PhasePending
+    cnatv1alpha1.PhasePending)
+  }
 ```{{copy}}
 
 While there is some additional logic you will want to add for working an instance through it's phases, lets follow this up with an update which will define the end of our function just prior to a return.
 
 ```go
-	// Update the At instance, setting the status to the respective phase:
-	err = r.Status().Update(context.TODO(), instance)
-	if err != nil {
-		return reconcile.Result{}, err
-	}
+  // Update the At instance, setting the status to the respective phase:
+  err = r.Status().Update(context.TODO(), instance)
+  if err != nil {
+	return reconcile.Result{}, err
+  }
 
-	return ctrl.Result{}, nil
+  return ctrl.Result{}, nil
 ```{{copy}}
 
-It's now possible to see some work within this controller. Re-create the install
+## Test
+
+With this new code your controller. test the functionality. Re-create the install to setup new RBAC manifests.
 
 `make install`{{execute}}
 
-to setup new RBAC manifests. Run the controller.
+Run the controller.
 
 `make run`{{execute}}
 
-If you have an instance of at, after running the controller the status should have been updated... try
+Request from your controller the list of _at_ resources.
 
 `kubectl get at`{{execute}}

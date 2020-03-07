@@ -1,7 +1,7 @@
 Completing the controller requires adding a couple of support functions for creating the Pod and checking the schedule. Add the following functions to the `controllers/at_controller.go`{{open}} file.
 
 ```go
-// newPodForCR returns a busybox pod with the same name/namespace as the cr
+// newPodForCR returns a busybox Pod with the same name/namespace as the CR
 func newPodForCR(cr *cnatv1alpha1.At) *corev1.Pod {
 	labels := map[string]string{
 		"app": cr.Name,
@@ -111,3 +111,11 @@ The final modification is in the SetupWithManager function. Make the following c
 		Owns(&corev1.Pod{}).
 		Complete(r)
 ```{{copy}}
+
+## Test
+
+To see the fruits of your labor recompile and try the describe command again.
+
+`make install`{{execute}}
+
+`kubectl get ats`{{execute}}
