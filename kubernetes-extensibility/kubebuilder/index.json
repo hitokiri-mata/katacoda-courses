@@ -1,0 +1,92 @@
+{
+  "private": "true",
+  "title": "Develop an Operator with Kubebuilder",
+  "description": "Coming soon: Learn how to control custom resources with Kubebuilder based Operators.",
+  "difficulty":	"Intermediate",
+  "time":	"25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "InstalK kubebuilder",
+        "text": "step2-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Initialize Kuberbuilder Project",
+        "text": "step3-init.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step4-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step5-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step6-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step7--source.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step8-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step9-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step10-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "todo",
+        "text": "step11-.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/dev",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

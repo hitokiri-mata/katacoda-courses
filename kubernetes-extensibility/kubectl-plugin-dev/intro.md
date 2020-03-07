@@ -2,7 +2,7 @@
 
 ![Kubernetes](/javajon/courses/kubernetes-extensibility/kubectl-plugin-dev/assets/kubernetes.png "Kubernetes")
 
-This scenario takes you through the introductory steps for developing a kubectl plugin. You will create a plugin that will interact with a Kubernetes cluster. While the plugin is it's written in Go the steps will gently guide you, even if you are a bit new at writing code in GoLang.
+This scenario takes you through the introductory steps for developing a kubectl plugin. You will create a plugin that will interact with a Kubernetes cluster. While the plugin is it's written in Go the steps will gently guide you, even if you are a bit new at writing code in Golang.
 
 In this scenario you will learn how to:
 
