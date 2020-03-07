@@ -7,4 +7,4 @@ kubebuilder create api \
  --kind At
  ```{{execute}}
 
-Review the generated files. `todo/main.go`{{open}} has changed. Review `api/v1alpha1/at_types.go`{{open}} and `controllers/at_controller.go`{{open}}.
+Answer yes ('Y') to the two questions. Review the generated files. `main.go`{{open}} has changed. Review `api/v1alpha1/at_types.go`{{open}} and `controllers/at_controller.go`{{open}}.
