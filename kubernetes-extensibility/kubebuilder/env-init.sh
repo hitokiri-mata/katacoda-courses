@@ -34,7 +34,7 @@ os=$(go env GOOS)
 arch=$(go env GOARCH)
 
 # Remove existing Go install
-sudo rm -rf /usr/local/go`{{execute}}
+sudo rm -rf /usr/local/go
 
 # Install new Go version
 curl -L https://dl.google.com/go/go${version}.${os}-${arch}.tar.gz | tar -xz -C /usr/local
