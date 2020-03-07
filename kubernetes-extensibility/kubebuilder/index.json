@@ -12,7 +12,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "InstalK kubebuilder",
+        "title": "Install Kubebuilder",
         "text": "step2-install.md",
         "code": "clear.sh"
       },
@@ -22,8 +22,8 @@
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step4-.md",
+        "title": "Add API",
+        "text": "step4-add-api.md",
         "code": "clear.sh"
       },
       {

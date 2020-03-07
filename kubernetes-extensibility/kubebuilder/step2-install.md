@@ -1,14 +1,16 @@
-Install the near latest Kubebuilder that was tested with this scenario. This installation follows the recommendation found in the Kubebuilder book.
+Install the near latest Kubebuilder that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book.
 
 ```bash
-version=1.0.8
-arch=amd64
+version=2.3.0
+os=$(go env GOOS)
+arch=$(go env GOARCH)
 
-curl -L -O "https://github.com/kubernetes-sigs/kubebuilder/releases/download/v${version}/kubebuilder_${version}_darwin_${arch}.tar.gz"
+# download kubebuilder and extract it to tmp
+curl -L https://go.kubebuilder.io/dl/${version}/${os}/${arch} | tar -xz -C /tmp/
 
-tar -zxvf kubebuilder_${version}_darwin_${arch}.tar.gz
-mv kubebuilder_${version}_darwin_${arch} kubebuilder && sudo mv kubebuilder /usr/local/
-
+# move to a long-term location and put it on your path
+# (you'll need to set the KUBEBUILDER_ASSETS env var if you put it somewhere else)
+sudo mv /tmp/kubebuilder_${version}_${os}_${arch} /usr/local/kubebuilder
 export PATH=$PATH:/usr/local/kubebuilder/bin
 ```{{execute}}
 

@@ -12,7 +12,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "InstalK kubebuilder",
+        "title": "Install KUDO",
         "text": "step2-install.md",
         "code": "clear.sh"
       },
