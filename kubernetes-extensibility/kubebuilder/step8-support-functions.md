@@ -1,4 +1,4 @@
-Completing the controller requires adding a couple of support functions for creating the Pod and checking the schedule. Add the following functions to the `controllers/at_controller.go`{{open}} file.
+Completing the controller requires adding a couple of support functions for creating the Pod and checking the schedule. Add the following functions to the `example/controllers/at_controller.go`{{open}} file.
 
 ```go
 // newPodForCR returns a busybox Pod with the same name/namespace as the CR

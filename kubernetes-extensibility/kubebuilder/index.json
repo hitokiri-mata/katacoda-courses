@@ -27,7 +27,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Define CRD",
+        "title": "Define CRD in at_types.go",
         "text": "step5-def-crd.md",
         "code": "clear.sh"
       },

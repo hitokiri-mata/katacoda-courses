@@ -4,7 +4,7 @@ Create a YAML file.
 
 `touch at-sample.yaml`{{execute}}
 
-Click on this file `at-sample.yaml`{{open}} to open it in the editor. Add this text to the opened YAML file in the editor.
+Click on this file `example/at-sample.yaml`{{open}} to open it in the editor. Add this text to the opened YAML file in the editor.
 
 ```yaml
 apiVersion: cnat.my.domain/v1alpha1

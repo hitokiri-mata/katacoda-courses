@@ -4,7 +4,7 @@
 
 In this scenario you will experience what it's like to create and run a Kubernetes Operator that manages a custom resource. The Operator is created using the Kubebuilder tool. The custom resources will be called "At"s.
 
-[Kubebuilder](https://kubebuilder.io/) was released as open source in August from 2018. Two technical staff members from Google, [Phillip Wittrock](https://www.linkedin.com/in/phillipwittrock/) and Sunil Arora, founded the project. Kubebuilder is now governed by (TODO).
+[Kubebuilder](https://kubebuilder.io/) was released as open source in August from 2018. Two technical staff members from Google, [Phillip Wittrock](https://www.linkedin.com/in/phillipwittrock/) and Sunil Arora, founded the project. Kubebuilder is now a Kubernetes special interest group (SIG) under Apache License 2.0.
 
 The [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) is a very important technique to extend and build upon the basic features of Kubernetes. Operators are controllers that have roles that observe and manage associated [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions). There are a variety of projects that provides tools to build Operators. [Kubebuilder](https://kubebuilder.io/) is one prominent techniques.
 

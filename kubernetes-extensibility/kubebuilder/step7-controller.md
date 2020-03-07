@@ -1,6 +1,6 @@
 Now that we have a CRD to work with let's focus on the controller to manage these _At_ resources.
 
-Click on this `controllers/at_controller.go`{{open}} file to open it in the editor. There are two tags to generate RBAC for the CRD, however this controller will need permission for Pods as well.
+Click on this `example/controllers/at_controller.go`{{open}} file to open it in the editor. There are two tags to generate RBAC for the CRD, however this controller will need permission for Pods as well.
 
 find:
 

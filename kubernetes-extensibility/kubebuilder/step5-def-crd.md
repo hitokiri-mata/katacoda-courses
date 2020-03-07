@@ -1,14 +1,29 @@
 In this step you will code some details for the CRD.
 
-## Modify
+## Modify Structs
 
-Click on this `api/v1alpha1/at_types.go`{{open}} file to open it in the editor. Change the Spec and Status. This requires changes to _AtSpec_ and _AtStatus_ respectively. You'll notice a defined _Foo_ in _AtSpec_ which should be removed.
+Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the editor. 
 
-For _AtSpec_ add _Schedule_ and _Command_, both are strings. You will need the json... annotation and can use the generated _Foo_ as an example.
+The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
-For _AtStatus_ you need to add a string variable named `Phase`.
+For `AtSpec struct` add `Schedule` and `Command`, both are strings. Remove the Foo line.
 
-To complete the types definition and for controller convenience define the following phases in the `api/v1alpha1/at_types.go`{{open}} file.
+```go
+  // Specifications for "at" scheduling
+  Schedule string `json:"schedule,omitempty"`
+  Command string `json:"command,omitempty"`
+```{{copy}}
+
+For `AtStatus struct` you add a string variable named `Phase`.
+
+```go
+  // Specifications for "at" status
+  Phase string `json:"phase,omitempty"`
+```{{copy}}
+
+## Add Phase Constants
+
+To complete the types definition and for controller convenience define the following phases in the same `example/api/v1alpha1/at_types.go`{{open}} file.
 
 ```go
 const (
@@ -18,6 +33,8 @@ const (
 )
 ```{{copy}}
 
+Add this `const` section just after the `structs` you just modified.
+
 ## Build
 
 With these modifications you are ready to build and generate files in the config folder.
@@ -26,7 +43,7 @@ With these modifications you are ready to build and generate files in the config
 
 Apply the CRDs to your running Kubernetes cluster.
 
-'make install`{{execute}}
+`make install`{{execute}}
 
 ## Test
 

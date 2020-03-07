@@ -2,7 +2,7 @@ This step is extra credit for you. It explores how your Kubebuilder Operator can
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice in the description there are no "events" registered for this object. The next step will enable the events listing. In the `controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so it looks like:
+Notice in the description there are no "events" registered for this object. The next step will enable the events listing. In the `example/controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so it looks like:
 
 ```go
 // AtReconciler reconciles a At object
@@ -14,7 +14,7 @@ type AtReconciler struct {
 }
 ```{{copy}}
 
-This struct is initialized in `main.go`{{open}}. Modify this file to the following:
+This struct is initialized in `example/main.go`{{open}}. Modify this file to the following:
 
 ```go
 if err = (&controllers.AtReconciler{
@@ -24,7 +24,7 @@ if err = (&controllers.AtReconciler{
 		Recorder: mgr.GetEventRecorderFor("at-controller"),	
 ```{{copy}}
 
-Now modify the `controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. Below is an example of when the phase is set to "Pending".
+Now modify the `example/controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. Below is an example of when the phase is set to "Pending".
 
 r.Recorder.Event(instance, "Normal", "PhaseChange", cnatv1alpha1.PhasePending)
 
@@ -32,10 +32,9 @@ With this new code, the `describe` command will present the list of Kubernetes e
 
 `kubectl describe at at-sample`{{execute}}
 
-
 ## Imports
 
-The following are the imports needed for the `controllers/at_controller.go`{{open}}  for the changes indicated in this lab.
+The following are the imports needed for the `example/controllers/at_controller.go`{{open}}  for the changes indicated in this lab.
 
 import (
 	"context"

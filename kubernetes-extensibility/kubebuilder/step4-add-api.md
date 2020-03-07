@@ -7,4 +7,10 @@ kubebuilder create api \
  --kind At
  ```{{execute}}
 
-Answer yes ('Y') to the two questions. Review the generated files. `main.go`{{open}} has changed. Review `api/v1alpha1/at_types.go`{{open}} and `controllers/at_controller.go`{{open}}.
+Answer no ('N') to the two questions for creating a "Resource" and a "Controller".
+
+Familiarize yourself with the generated files.
+
+- `example//main.go`{{open}}
+- `example/api/v1alpha1/at_types.go`{{open}}
+- `example/controllers/at_controller.go`{{open}}
