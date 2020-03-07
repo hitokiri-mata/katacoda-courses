@@ -2,6 +2,7 @@
 
 launch.sh
 
+
 # Helm Setup (v3.1.1)
 FOLDER=helmer
 mkdir $FOLDER && pushd $FOLDER
@@ -10,6 +11,7 @@ tar -zxvf helm.gz
 mv ./linux-amd64/helm /usr/local/bin
 popd && rm -rf $FOLDER
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
 
 # Setup dashboard on port 30000
 helm install dash stable/kubernetes-dashboard \
@@ -25,7 +27,20 @@ source <(helm completion bash)
 # Enable metrics - probes failing and crashing on this instance.
 # helm install metrics-server stable/metrics-server --namespace kube-system 
 
-mkdir dev
-cd dev
+
+# Upgrade Go
+version=1.14
+os=$(go env GOOS)
+arch=$(go env GOARCH)
+
+# Remove existing Go install
+sudo rm -rf /usr/local/go`{{execute}}
+
+# Install new Go version
+curl -L https://dl.google.com/go/go${version}.${os}-${arch}.tar.gz | tar -xz -C /usr/local
+
+
+# Ensure file browser and editor start in clean directory
+cd /opt/go/src
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

@@ -28,37 +28,32 @@
       },
       {
         "title": "todo",
-        "text": "step5-.md",
+        "text": "step5-def-crd.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step6-.md",
+        "title": "Create Resource from Definition",
+        "text": "step6-create-resource.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step7-.md",
+        "title": "Controller",
+        "text": "step7-controller.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step8-.md",
+        "title": "Controller Support Functions",
+        "text": "step8-support-functions.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step9-.md",
+        "title": "Kubernetes Events",
+        "text": "step9-events.md",
         "code": "clear.sh"
       },
       {
         "title": "todo",
         "text": "step10-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step11-.md",
         "code": "clear.sh"
       }
     ],
