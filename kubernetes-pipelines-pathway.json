@@ -21,7 +21,12 @@
       {
         "course_id": "helm",
         "title": "Helm",
-        "description": "Learn how to use Helm, a package manager for Kubernetes."
+        "des,cription": "Learn how to use Helm, a package manager for Kubernetes."
+      },
+      {
+        "course_id": "sonarqube",
+        "title": "SonarQube",
+        "description": "Code Analysis with SonarQube on Kubernetes."
       }
     ]
   }

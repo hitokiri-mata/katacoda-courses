@@ -6,7 +6,7 @@ Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the 
 
 The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
-For `AtSpec struct` add `Schedule` and `Command`, both are strings. Remove the Foo line.
+For `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the Foo line.
 
 ```go
   // Specifications for "at" scheduling
@@ -14,7 +14,9 @@ For `AtSpec struct` add `Schedule` and `Command`, both are strings. Remove the F
   Command string `json:"command,omitempty"`
 ```{{copy}}
 
-For `AtStatus struct` you add a string variable named `Phase`.
+You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
+
+For `AtStatus struct`, add a string variable named `Phase`.
 
 ```go
   // Specifications for "at" status
@@ -23,7 +25,7 @@ For `AtStatus struct` you add a string variable named `Phase`.
 
 ## Add Phase Constants
 
-To complete the types definition and for controller convenience define the following phases in the same `example/api/v1alpha1/at_types.go`{{open}} file.
+To complete the types definition, and for controller convenience, define the following phases in the same `example/api/v1alpha1/at_types.go`{{open}} file.
 
 ```go
 const (
@@ -37,7 +39,7 @@ Add this `const` section just after the `structs` you just modified.
 
 ## Build
 
-With these modifications you are ready to build and generate files in the config folder.
+With these modifications build and generate files in the config folder.
 
 `make manifests`{{execute}}
 
@@ -47,6 +49,8 @@ Apply the CRDs to your running Kubernetes cluster.
 
 ## Test
 
-With these updates, ensure the updated controller for `At` resources is installed.
+With these updates, ensure the updated controller and CRDs for `At` are installed.
 
 `kubectl get crds`{{execute}}
+
+Your new Operator is alive! However, the list is empty. In the next step you will create a new `at` resource.
