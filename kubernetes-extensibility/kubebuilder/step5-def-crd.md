@@ -29,9 +29,9 @@ To complete the types definition, and for controller convenience, define the fol
 
 ```go
 const (
-	PhasePending = "PENDING"
-	PhaseRunning = "RUNNING"
-	PhaseDone    = "DONE"
+  PhasePending = "PENDING"
+  PhaseRunning = "RUNNING"
+  PhaseDone    = "DONE"
 )
 ```{{copy}}
 
@@ -53,4 +53,8 @@ With these updates, ensure the updated controller and CRDs for `At` are installe
 
 `kubectl get crds`{{execute}}
 
-Your new Operator is alive! However, the list is empty. In the next step you will create a new `at` resource.
+You now new Kubernetes resource type. Further details about hte resource can also be explored.
+
+`kubectl describe crd ats.cnat.my.domain`{{execute}}
+
+In the next step you will create a new `at` resource.
