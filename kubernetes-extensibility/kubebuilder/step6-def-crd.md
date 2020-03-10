@@ -1,4 +1,4 @@
-In this step you will code some details for the CRD and create a CRD on yuor cluster. Currently there are no CRDs defined.
+In this step you will code some details for the CRD that will in subsequently create a CRD on your cluster. Currently there are no CRDs defined.
 
 `kubectl get crds`{{execute}}
 
@@ -14,8 +14,7 @@ For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove t
   // Specifications for "at" scheduling
   Schedule string `json:"schedule,omitempty"`
   Command string `json:"command,omitempty"`
-```
-{{copy}}
+```{{copy}}
 
 You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
 
@@ -24,8 +23,7 @@ Just below, for the `AtStatus struct`, add a string variable named `Phase`.
 ```go
   // Specifications for "at" status
   Phase string `json:"phase,omitempty"`
-```
-{{copy}}
+```{{copy}}
 
 ## Add Phase Constants
 
@@ -37,8 +35,7 @@ const (
   PhaseRunning = "RUNNING"
   PhaseDone    = "DONE"
 )
-```
-{{copy}}
+```{{copy}}
 
 Add this `const` section just after the `structs` you just modified.
 
@@ -60,6 +57,6 @@ With these updates, ensure the updated controller and CRDs for `At` are installe
 
 You now new Kubernetes resource type. Further details about hte resource can also be explored.
 
-`kubectl describe crd ats.cnat.my.domain`{{execute}}
+`kubectl describe crd ats`{{execute}}
 
 In the next step you will create a new `at` resource.

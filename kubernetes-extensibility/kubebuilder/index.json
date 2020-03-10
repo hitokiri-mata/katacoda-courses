@@ -3,7 +3,7 @@
   "title": "Develop an Operator with Kubebuilder",
   "description": "Learn how to control custom resources with Kubebuilder based Operators.",
   "difficulty":	"Intermediate",
-  "time":	"25 minutes",
+  "time":	"30 minutes",
   "details": {
     "steps": [
       {

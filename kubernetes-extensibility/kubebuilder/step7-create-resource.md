@@ -11,9 +11,8 @@ metadata:
   name: at-sample
 spec:
   schedule: "2020-01-30T10:02:00Z"
-  command: "echo 'I think I get this.'"
-```
-{{copy}}
+  command: 'echo "Something from the past told me to do this now: $(date --utc +%FT%TZ)"'
+```{{copy}}
 
 You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Notice in the specification section where the schedule and command is specified. For the declared schedule time you may want to change the date to a server time a few minutes from now.
 
@@ -36,14 +35,11 @@ As a bonus feature, add a printer column for the Phase status. In the `example/a
 // +kubebuilder:printcolumn:JSONPath=".status.phase", name=Phase, type=string
 // At is the Schema for the ats API
 type At struct {
-	metav1.TypeMeta   `json:",inline"`
-	metav1.ObjectMeta `json:"metadata,omitempty"`
+  metav1.TypeMeta   `json:",inline"`
+  metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   AtSpec   `json:"spec,omitempty"`
-	Status AtStatus `json:"status,omitempty"`
-	
-  // Specifications for "at" status
-  Phase string `json:"phase,omitempty"`
+  Spec   AtSpec   `json:"spec,omitempty"`
+  Status AtStatus `json:"status,omitempty"`
 }
 ```{{copy}}
 

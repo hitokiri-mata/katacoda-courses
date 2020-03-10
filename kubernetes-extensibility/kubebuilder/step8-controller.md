@@ -8,8 +8,10 @@ This step will be adding some code so replace the whole import block at the top 
 
 ```go
 import (
+  // Core GoLang contexts
   "context"
 
+  // 3rd party and SIG contexts
   "github.com/go-logr/logr"
   "k8s.io/apimachinery/pkg/api/errors"
   "k8s.io/apimachinery/pkg/runtime"
@@ -17,7 +19,8 @@ import (
   "sigs.k8s.io/controller-runtime/pkg/client"
   "sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-  cnatv1alpha1 "github.com/codementor/cnat/api/v1alpha1"
+  // Local Operator contexts
+  cnatv1alpha1 "example/api/v1alpha1"
 )
 ```{{copy}}
 
@@ -44,10 +47,9 @@ Continuing with updating the code inside the `Reconcile` function, change the lo
 ```go
   logger := r.Log.WithValues("namespace", req.NamespacedName, "at", req.Name)
   logger.Info("== Reconciling At")
-```
-{{copy}}
+```{{copy}}
 
-Following these logger line, add this code to fetching instances of the CR for At.
+Following these logger lines, add this code block to fetching instances of the CR for At.
 
 ```go
   // Fetch the At instance
@@ -61,8 +63,7 @@ Following these logger line, add this code to fetching instances of the CR for A
     // Error reading the object - requeue the request:
     return reconcile.Result{}, err
   }
-```
-{{copy}}
+```{{copy}}
 
 Now that we have an instance defined by the request namespacedname, check to see if it has a status, if not, let's initialize.
 
@@ -71,8 +72,7 @@ Now that we have an instance defined by the request namespacedname, check to see
   if instance.Status.Phase == "" {
     instance.Status.Phase = cnatv1alpha1.PhasePending
   }
-```
-{{copy}}
+```{{copy}}
 
 While there is some additional logic you will want to add for working an instance through it's phases, lets follow this up with an update which will define the end of our function just prior to the last return statement.
 
@@ -82,8 +82,7 @@ While there is some additional logic you will want to add for working an instanc
   if err != nil {
     return reconcile.Result{}, err
   }
-```
-{{copy}}
+```{{copy}}
 
 ## Test
 
@@ -93,12 +92,12 @@ With this new code your controller. test the functionality. Re-create the instal
 
 Run the controller.
 
-`make run`{{execute}}
+`make run`{{execute T2}}
 
 Request from your controller the list of _at_ resources.
 
 `kubectl get ats`{{execute}}
 
-`kubectl get at at-sample`{{execute}}
+`kubectl describe at at-sample`{{execute}}
 
 Your new Operator is alive!

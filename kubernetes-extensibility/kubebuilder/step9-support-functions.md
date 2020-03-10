@@ -5,13 +5,14 @@ Implement the controller details by adding two support functions and modifying a
 This step will be adding some code so replace the whole import block at the top to support the additional code.
 
 ```go
-
 import (
+  // Core GoLang contexts
   "context"
   "fmt"
   "strings"
   "time"
 
+  // 3rd party and SIG contexts
   "github.com/go-logr/logr"
   corev1 "k8s.io/api/core/v1"
   "k8s.io/apimachinery/pkg/api/errors"
@@ -24,9 +25,10 @@ import (
   "sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
   "sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-  cnatv1alpha1 "github.com/codementor/cnat/api/v1alpha1"
+  // Local Operator contexts
+  cnatv1alpha1 "example/api/v1alpha1"
 )
-
+```{{copy}}
 
 ## Add Function newPodForCR
 
@@ -149,12 +151,12 @@ Test the improvements to the controller.
 
 Run the controller again.
 
-`make run`{{execute}}
+`make run`{{execute T2}}
 
 View the results.
 
 `kubectl get ats`{{execute}}
 
-`kubectl get at at-sample`{{execute}}
+`kubectl describe at at-sample`{{execute}}
 
 You will see the phase status changing for the resource but it never fully gets to "Done". This is because the controller isn't watching Pods yet.
