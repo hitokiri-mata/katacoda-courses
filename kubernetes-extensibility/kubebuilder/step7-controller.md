@@ -1,6 +1,33 @@
-Now that we have a CRD to work with let's focus on the controller to manage these _At_ resources.
+Now that we have a CRD to work with, this next step focuses on the controller to manage these _At_ resources.
 
 Click on this `example/controllers/at_controller.go`{{open}} file to open it in the editor. There are Kuberbuilder markers that define the access control (RBAC) for the CRD, however this controller will need permission for Pods as well.
+
+## Add Imports
+
+This step will be adding some code so add these following imports to support the code.
+
+```go
+import (
+  "context"
+  "fmt"
+  "strings"
+  "time"
+
+  "github.com/go-logr/logr"
+  corev1 "k8s.io/api/core/v1"
+  "k8s.io/apimachinery/pkg/api/errors"
+  metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+  "k8s.io/apimachinery/pkg/runtime"
+  "k8s.io/apimachinery/pkg/types"
+  "k8s.io/client-go/tools/record"
+  ctrl "sigs.k8s.io/controller-runtime"
+  "sigs.k8s.io/controller-runtime/pkg/client"
+  "sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
+  "sigs.k8s.io/controller-runtime/pkg/reconcile"
+
+  cnatv1alpha1 "github.com/codementor/cnat/api/v1alpha1"
+)
+```{{code}}
 
 ## Update Reconcile Function
 
@@ -77,5 +104,7 @@ Run the controller.
 Request from your controller the list of _at_ resources.
 
 `kubectl get at`{{execute}}
+
+`kubectl get at at-sample`{{execute}}
 
 Your new Operator is alive!

@@ -2,11 +2,11 @@ In this step you will code some details for the CRD.
 
 ## Modify Structs
 
-Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the editor. 
+Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the editor.
 
 The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
-For `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the Foo line.
+For `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it.
 
 ```go
   // Specifications for "at" scheduling

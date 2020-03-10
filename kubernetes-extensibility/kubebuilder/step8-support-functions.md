@@ -1,7 +1,11 @@
-Completing the controller requires adding a couple of support functions for creating the Pod and checking the schedule. Add the following functions to the `example/controllers/at_controller.go`{{open}} file.
+Implement the controller details by adding two support functions and modifying another. These modifications will create the Pod and checking the schedule. Open the `example/controllers/at_controller.go`{{open}} file to edit the controller implementations.
+
+## Add Function newPodForCR
+
+Add the following function that will create new Pods per the resource specification.
 
 ```go
-// newPodForCR returns a busybox Pod with the same name/namespace as the CR
+// newPodForCR returns a busybox Pod with same name/namespace declared in resource
 func newPodForCR(cr *cnatv1alpha1.At) *corev1.Pod {
   labels := map[string]string {
     "app": cr.Name,
@@ -22,7 +26,13 @@ func newPodForCR(cr *cnatv1alpha1.At) *corev1.Pod {
     },
   }
 }
+```{{copy}}
 
+## Add Function timeUntilSchedule
+
+Add the following function that calculates the scheduled time per the resource specification.
+
+```go
 // timeUntilSchedule parses the schedule string and returns the time until the schedule.
 // When it is overdue, the duration is negative.
 func timeUntilSchedule(schedule string) (time.Duration, error) {
@@ -36,26 +46,28 @@ func timeUntilSchedule(schedule string) (time.Duration, error) {
 }
 ```{{copy}}
 
-Finishing the Reconcile function, insert the code below after the if body that sets the `instance.Status.Phase = cnatv1alpha1.PhasePending`:
+## Append to Reconcile Function
+
+Add the logic for phase adjustments. Finishing the existing Reconcile function by inserting the following switch block just after the code body that sets the `instance.Status.Phase = cnatv1alpha1.PhasePending`.
 
 ```go
-// Now let's make the main case distinction: implementing
+  // Make the main case distinction: implementing
   // the state diagram PENDING -> RUNNING -> DONE
   switch instance.Status.Phase {
     case cnatv1alpha1.PhasePending:
       logger.Info("Phase: PENDING")
-      // As long as we haven't executed the command yet, we need to check if it's time already to act:
+      // As long as we haven't executed the command yet, we need to check if it's time already to act
       logger.Info("Checking schedule", "Target", instance.Spec.Schedule)
       // Check if it's already time to execute the command with a tolerance of 2 seconds:
       d, err := timeUntilSchedule(instance.Spec.Schedule)
       if err != nil {
         logger.Error(err, "Schedule parsing failure")
-        // Error reading the schedule. Wait until it is fixed.
+        // Error reading schedule. Wait until it is fixed.
         return reconcile.Result{}, err
       }
       logger.Info("Schedule parsing done", "Result", fmt.Sprintf("diff=%v", d))
       if d > 0 {
-        // Not yet time to execute the command, wait until the scheduled time
+        // Not yet time to execute command, wait until the scheduled time
         return reconcile.Result{RequeueAfter: d}, nil
       }
       logger.Info("It's time!", "Ready to execute", instance.Spec.Command)
@@ -71,8 +83,8 @@ Finishing the Reconcile function, insert the code below after the if body that s
       }
       found := &corev1.Pod{}
       err = r.Get(context.TODO(), types.NamespacedName{Name: pod.Name, Namespace: pod.Namespace}, found)
-      // Try to see if the pod already exists and if not
-      // (which we expect) then create a one-shot pod as per spec:
+      // Try to see if the Pod already exists and if not
+      // (which we expect) then create a one-shot Pod as per spec:
       if err != nil && errors.IsNotFound(err) {
         err = r.Create(context.TODO(), pod)
         if err != nil {
@@ -87,38 +99,34 @@ Finishing the Reconcile function, insert the code below after the if body that s
         logger.Info("Container terminated", "reason", found.Status.Reason, "message", found.Status.Message)
         instance.Status.Phase = cnatv1alpha1.PhaseDone
       } else {
-        // don't requeue because it will happen automatically when the pod status changes
+        // don't requeue because it will happen automatically when the Pod status changes
         return reconcile.Result{}, nil
     }
-	
-	case cnatv1alpha1.PhaseDone:
+
+    case cnatv1alpha1.PhaseDone:
       logger.Info("Phase: DONE")
       return reconcile.Result{}, nil
-	
-	default:
+
+    default:
       logger.Info("NOP")
       return reconcile.Result{}, nil
   }
 ```{{copy}}
 
+# Test
+
+Test the improvements to the controller.
+
+`make install`{{execute}}
+
 Run the controller again.
 
 `make run`{{execute}}
 
-You will see the phase status changing for the CR but it never fully gets to "Done". This is because the controller isn't watching Pods yet. The final modification is in the SetupWithManager function. Make the following changes:
+View the results.
 
-```go
-  return ctrl.NewControllerManagedBy(mgr).
-    For(&cnatv1alpha1.At{}).
-    Owns(&cnatv1alpha1.At{}).
-    Owns(&corev1.Pod{}).
-    Complete(r)
-```{{copy}}
+`kubectl get at`{{execute}}
 
-## Test
+`kubectl get at at-sample`{{execute}}
 
-To see the fruits of your labor recompile and try the describe command again.
-
-`make install`{{execute}}
-
-`kubectl get ats`{{execute}}
+You will see the phase status changing for the resource but it never fully gets to "Done". This is because the controller isn't watching Pods yet.
