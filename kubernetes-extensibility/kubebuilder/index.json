@@ -12,48 +12,53 @@
         "code": "clear.sh"
       },
       {
+        "title": "`at` CLI utility",
+        "text": "step2-at.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install Kubebuilder",
-        "text": "step2-install.md",
+        "text": "step3-install.md",
         "code": "clear.sh"
       },
       {
         "title": "Initialize Kuberbuilder Project",
-        "text": "step3-init.md",
+        "text": "step4-init.md",
         "code": "clear.sh"
       },
       {
         "title": "Add API",
-        "text": "step4-add-api.md",
+        "text": "step5-add-api.md",
         "code": "clear.sh"
       },
       {
         "title": "Define CRD in at_types.go",
-        "text": "step5-def-crd.md",
+        "text": "step6-def-crd.md",
         "code": "clear.sh"
       },
       {
         "title": "Create Resource from Definition",
-        "text": "step6-create-resource.md",
+        "text": "step7-create-resource.md",
         "code": "clear.sh"
       },
       {
         "title": "Controller",
-        "text": "step7-controller.md",
+        "text": "step8-controller.md",
         "code": "clear.sh"
       },
       {
         "title": "Controller Support Functions",
-        "text": "step8-support-functions.md",
+        "text": "step9-support-functions.md",
         "code": "clear.sh"
       },
       {
         "title": "Watch Pods",
-        "text": "step9-watch-pods.md",
+        "text": "step10-watch-pods.md",
         "code": "clear.sh"
       },
       {
         "title": "Kubernetes Events",
-        "text": "step10-events.md",
+        "text": "step11-events.md",
         "code": "clear.sh"
       }
     ],
@@ -67,6 +72,7 @@
     },
     "assets": {
       "host01": [
+        {"file": "at-example.txt", "target": "/opt/go/src", "chmod": "+x"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }

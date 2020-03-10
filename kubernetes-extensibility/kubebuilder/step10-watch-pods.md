@@ -2,7 +2,7 @@
 
 Make the final modification to the existing SetupWithManager function to watch the Pods.
 
-```go
+```goat 
   return ctrl.NewControllerManagedBy(mgr).
     For(&cnatv1alpha1.At{}).
     Owns(&cnatv1alpha1.At{}).

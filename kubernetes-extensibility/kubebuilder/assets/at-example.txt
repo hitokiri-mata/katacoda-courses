@@ -1,0 +1,1 @@
+echo "Something from the past told me to do this now: $(date --utc +%FT%TZ)" > /tmp/at-example-result.txt
