@@ -1,5 +1,33 @@
 Implement the controller details by adding two support functions and modifying another. These modifications will create the Pod and checking the schedule. Open the `example/controllers/at_controller.go`{{open}} file to edit the controller implementations.
 
+## More Imports
+
+This step will be adding some code so replace the whole import block at the top to support the additional code.
+
+```go
+
+import (
+  "context"
+  "fmt"
+  "strings"
+  "time"
+
+  "github.com/go-logr/logr"
+  corev1 "k8s.io/api/core/v1"
+  "k8s.io/apimachinery/pkg/api/errors"
+  metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+  "k8s.io/apimachinery/pkg/runtime"
+  "k8s.io/apimachinery/pkg/types"
+  "k8s.io/client-go/tools/record"
+  ctrl "sigs.k8s.io/controller-runtime"
+  "sigs.k8s.io/controller-runtime/pkg/client"
+  "sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
+  "sigs.k8s.io/controller-runtime/pkg/reconcile"
+
+  cnatv1alpha1 "github.com/codementor/cnat/api/v1alpha1"
+)
+
+
 ## Add Function newPodForCR
 
 Add the following function that will create new Pods per the resource specification.
@@ -125,7 +153,7 @@ Run the controller again.
 
 View the results.
 
-`kubectl get at`{{execute}}
+`kubectl get ats`{{execute}}
 
 `kubectl get at at-sample`{{execute}}
 

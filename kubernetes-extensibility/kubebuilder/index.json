@@ -12,7 +12,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "`at` CLI utility",
+        "title": "The at Command",
         "text": "step2-at.md",
         "code": "clear.sh"
       },

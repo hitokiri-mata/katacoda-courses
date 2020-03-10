@@ -1,4 +1,6 @@
-In this step you will code some details for the CRD.
+In this step you will code some details for the CRD and create a CRD on yuor cluster. Currently there are no CRDs defined.
+
+`kubectl get crds`{{execute}}
 
 ## Modify Structs
 
@@ -6,22 +8,24 @@ Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the 
 
 The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
-For `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it.
+For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it.
 
 ```go
   // Specifications for "at" scheduling
   Schedule string `json:"schedule,omitempty"`
   Command string `json:"command,omitempty"`
-```{{copy}}
+```
+{{copy}}
 
 You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
 
-For `AtStatus struct`, add a string variable named `Phase`.
+Just below, for the `AtStatus struct`, add a string variable named `Phase`.
 
 ```go
   // Specifications for "at" status
   Phase string `json:"phase,omitempty"`
-```{{copy}}
+```
+{{copy}}
 
 ## Add Phase Constants
 
@@ -33,7 +37,8 @@ const (
   PhaseRunning = "RUNNING"
   PhaseDone    = "DONE"
 )
-```{{copy}}
+```
+{{copy}}
 
 Add this `const` section just after the `structs` you just modified.
 

@@ -12,7 +12,8 @@ metadata:
 spec:
   schedule: "2020-01-30T10:02:00Z"
   command: "echo 'I think I get this.'"
-```{{copy}}
+```
+{{copy}}
 
 You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Notice in the specification section where the schedule and command is specified. For the declared schedule time you may want to change the date to a server time a few minutes from now.
 
@@ -28,7 +29,7 @@ You can always come back to the file, edit the time and reapply the request.
 
 As a bonus feature, add a printer column for the Phase status. In the `example/api/v1alpha1/at_types.go`{{open}} file, replace the `At struct` so is has the added Kubebuilder markers (as comments) placed above the `At struct` block.
 
-```yaml
+```go
 // +kubebuilder:object:root=true
 // +kubebuilder:subresource:status
 // +kubebuilder:printcolumn:JSONPath=".spec.schedule", name=Schedule, type=string
@@ -40,7 +41,11 @@ type At struct {
 
 	Spec   AtSpec   `json:"spec,omitempty"`
 	Status AtStatus `json:"status,omitempty"`
-}```{{copy}}
+	
+  // Specifications for "at" status
+  Phase string `json:"phase,omitempty"`
+}
+```{{copy}}
 
 Reinstall the manifests.
 
@@ -51,3 +56,5 @@ Retrieve the custom resource.
 `kubectl get ats`{{execute}}
 
 The new print column appears.
+
+The column is there. but the value is blank because you have a little more code to write.
