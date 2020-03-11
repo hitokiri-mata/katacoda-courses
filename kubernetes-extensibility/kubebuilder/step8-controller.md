@@ -15,9 +15,9 @@ import (
   "github.com/go-logr/logr"
   "k8s.io/apimachinery/pkg/api/errors"
   "k8s.io/apimachinery/pkg/runtime"
-  ctrl "sigs.k8s.io/controller-runtime"
   "sigs.k8s.io/controller-runtime/pkg/client"
   "sigs.k8s.io/controller-runtime/pkg/reconcile"
+  ctrl "sigs.k8s.io/controller-runtime"
 
   // Local Operator contexts
   cnatv1alpha1 "example/api/v1alpha1"
@@ -25,6 +25,8 @@ import (
 ```{{copy}}
 
 ## Update Reconcile Function
+
+### Add Markers
 
 Just above the Reconcile function, find these markers:
 
@@ -42,12 +44,16 @@ and right after those markers add these markers to give the controller Pod manag
 
 They are just in the form of comment before the function. Follow this link for [Kubebuilder markers](https://book.kubebuilder.io/reference/markers.html) if you are curious.
 
+### Change Logger
+
 Continuing with updating the code inside the `Reconcile` function, change the logger to a specific logger name and with some defined structure as follows:
 
 ```go
   logger := r.Log.WithValues("namespace", req.NamespacedName, "at", req.Name)
   logger.Info("== Reconciling At")
 ```{{copy}}
+
+### Fetching At Instance
 
 Following these logger lines, add this code block to fetching instances of the CR for At.
 
@@ -65,6 +71,8 @@ Following these logger lines, add this code block to fetching instances of the C
   }
 ```{{copy}}
 
+### Check Phase Value
+
 Now that we have an instance defined by the request namespacedname, check to see if it has a status, if not, let's initialize.
 
 ```go
@@ -74,7 +82,9 @@ Now that we have an instance defined by the request namespacedname, check to see
   }
 ```{{copy}}
 
-While there is some additional logic you will want to add for working an instance through it's phases, lets follow this up with an update which will define the end of our function just prior to the last return statement.
+### Update Status
+
+Finish the Reconcile method with an update to the resource status just prior to the last return statement.
 
 ```go
   // Update the At instance, setting the status to the respective phase:
@@ -83,6 +93,8 @@ While there is some additional logic you will want to add for working an instanc
     return reconcile.Result{}, err
   }
 ```{{copy}}
+
+There is some additional logic you will want to add for working an instance through it's phases, however it's time to test again.
 
 ## Test
 

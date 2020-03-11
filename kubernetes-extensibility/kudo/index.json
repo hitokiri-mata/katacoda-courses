@@ -17,48 +17,23 @@
         "code": "clear.sh"
       },
       {
-        "title": "Initialize Kuberbuilder Project",
-        "text": "step3-init.md",
+        "title": "Create Operator from Scratch",
+        "text": "step3-create.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step4-.md",
+        "title": "Package Operator",
+        "text": "step4-package.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step5-.md",
+        "title": "Initialize KUDO",
+        "text": "step5-initialize.md",
         "code": "clear.sh"
       },
       {
-        "title": "todo",
-        "text": "step6-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step7-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step8-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step9-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step10-.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "todo",
-        "text": "step11-.md",
+        "title": "Host Your Operator in Local Repo",
+        "text": "step6-host-operator.md",
         "code": "clear.sh"
       }
     ],
