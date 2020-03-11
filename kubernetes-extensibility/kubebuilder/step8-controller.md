@@ -86,18 +86,18 @@ While there is some additional logic you will want to add for working an instanc
 
 ## Test
 
-With this new code your controller. test the functionality. Re-create the install to setup new RBAC manifests.
+With this new code your controller. test the functionality. Setup the new RBAC by re-installing the manifests.
 
 `make install`{{execute}}
 
 Run the controller.
 
-`make run`{{execute T2}}
+`cd /opt/go/src/example && make run`{{execute interrupt T2}}
 
 Request from your controller the list of _at_ resources.
 
-`kubectl get ats`{{execute}}
+`kubectl get ats`{{execute T1}}
 
-`kubectl describe at at-sample`{{execute}}
+`kubectl describe at at-sample`{{execute T1}}
 
 Your new Operator is alive!

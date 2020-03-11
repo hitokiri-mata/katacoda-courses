@@ -8,15 +8,20 @@ Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the 
 
 The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
-For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it.
+For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it. Here is the new AtSpec to replace the existing one.
 
 ```go
+// AtSpec defines the desired state of an At resource
+type AtSpec struct {
+  // INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+  // Important: Run "make" to regenerate code after modifying this file
+
   // Specifications for "at" scheduling
   Schedule string `json:"schedule,omitempty"`
   Command string `json:"command,omitempty"`
-```{{copy}}
+}```{{copy}}
 
-You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
+You can either type in the new lines (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
 
 Just below, for the `AtStatus struct`, add a string variable named `Phase`.
 

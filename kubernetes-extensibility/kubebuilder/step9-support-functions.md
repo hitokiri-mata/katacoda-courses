@@ -19,7 +19,6 @@ import (
   metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
   "k8s.io/apimachinery/pkg/runtime"
   "k8s.io/apimachinery/pkg/types"
-  "k8s.io/client-go/tools/record"
   ctrl "sigs.k8s.io/controller-runtime"
   "sigs.k8s.io/controller-runtime/pkg/client"
   "sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
@@ -47,11 +46,11 @@ func newPodForCR(cr *cnatv1alpha1.At) *corev1.Pod {
       Labels:    labels,
     },
     Spec: corev1.PodSpec {
-      Containers: []corev1.Container {
+      Containers: []corev1.Container {{
         Name:    "busybox",
         Image:   "busybox",
         Command: strings.Split(cr.Spec.Command, " "),
-      },
+      }},
       RestartPolicy: corev1.RestartPolicyOnFailure,
     },
   }
@@ -145,18 +144,16 @@ Add the logic for phase adjustments. Finishing the existing Reconcile function b
 
 # Test
 
-Test the improvements to the controller.
+Test the improvements to the controller. Run the controller again.
 
-`make install`{{execute}}
-
-Run the controller again.
-
-`make run`{{execute T2}}
+`cd /opt/go/src/example && make run`{{execute interrupt T2}}
 
 View the results.
 
-`kubectl get ats`{{execute}}
+`kubectl get ats`{{execute T1}}
 
-`kubectl describe at at-sample`{{execute}}
+Notice, now the Status column has a `PENDING` value in it.
+
+`kubectl describe at at-sample`{{execute T1}}
 
 You will see the phase status changing for the resource but it never fully gets to "Done". This is because the controller isn't watching Pods yet.

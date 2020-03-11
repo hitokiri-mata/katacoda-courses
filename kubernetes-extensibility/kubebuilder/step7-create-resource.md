@@ -14,11 +14,7 @@ spec:
   command: 'echo "Something from the past told me to do this now: $(date --utc +%FT%TZ)"'
 ```{{copy}}
 
-You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Notice in the specification section where the schedule and command is specified. For the declared schedule time you may want to change the date to a server time a few minutes from now.
-
-`date -d "$(date --utc +%FT%TZ) + 10 min" +%FT%TZ`{{execute}}
-
-Copy the date and paste it into the YAML file. Submit this resource declaration to Kubernetes.
+You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Notice in the specification section where the schedule and command is specified. Later you will apply a better scheduled time. Submit this resource declaration to Kubernetes.
 
 `kubectl apply -f at-sample.yaml`{{execute}}
 
@@ -45,11 +41,11 @@ type At struct {
 
 Reinstall the manifests.
 
-`make install`{{execute}}
+`cd /opt/go/src/example && make run`{{execute interrupt T2}}
 
 Retrieve the custom resource.
 
-`kubectl get ats`{{execute}}
+`kubectl get ats`{{execute T1}}
 
 The new print column appears.
 
