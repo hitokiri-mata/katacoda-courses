@@ -2,7 +2,7 @@ This step is extra credit for you. It explores how your Kubebuilder Operator can
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice in this description there are no "events" registered for this object. The next step enables the events listing. In the `example/controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so it looks like:
+Notice in this description there are no "events" listed (`<none>`) for this object. The next step enables the events listing. In the `example/controllers/at_controller.go`{{open}} file add the Recorder record.EventRecorder to the AtReconciler struct so it looks like:
 
 ```go
 // AtReconciler reconciles an At object
@@ -14,7 +14,7 @@ type AtReconciler struct {
 }
 ```{{copy}}
 
-This struct is initialized in . Add thos the `example/main.go`{{open}} file this  following:
+Where this struct is initialized in the `example/main.go`{{open}} file, add the Recorder line.
 
 ```go
 if err = (&controllers.AtReconciler {

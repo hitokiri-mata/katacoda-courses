@@ -90,9 +90,9 @@ With this new code your controller. test the functionality. Setup the new RBAC b
 
 `make install`{{execute}}
 
-Run the controller.
+`Re-run the controller.`{{execute interrupt T2}}
 
-`cd /opt/go/src/example && make run`{{execute interrupt T2}}
+`cd /opt/go/src/example && make run`{{execute T2}}
 
 Request from your controller the list of _at_ resources.
 

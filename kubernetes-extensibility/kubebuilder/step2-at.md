@@ -37,4 +37,5 @@ Within a minute there will be a new file.
 
 `watch cat /tmp/at-example-result.txt`{{execute}}
 
-When the future tasks runs a new file appears and you see the echoed message. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>. Now you understand how `at` works. Invthe rest of this scenario you will use this concept for creating an `at` like Operator on Kubernetes.
+When the future tasks runs a new file appears and you see the echoed message. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>. Now you understand how `at` works. In the rest of this scenario you will use this concept for creating an `at` like Operator on Kubernetes.
+    

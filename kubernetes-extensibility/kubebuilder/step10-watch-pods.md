@@ -15,15 +15,15 @@ By adding the `Pod{}` line this allow the Controller to have visibility into the
 
 ## Run Controller
 
-To see all the fruits of your labor run the controller again.
+To see all the fruits of your labor `Re-run the controller.`{{execute interrupt T2}}
 
-`cd /opt/go/src/example && make run`{{execute interrupt T2}}
+`cd /opt/go/src/example && make run`{{execute T2}}
 
 ## Create New At Resource
 
 Create another custom resource based with a better schedule. Create an empty YAML file for the new resource.
 
-`touch at-sample-two.yaml`{{execute}}
+`touch at-sample-two.yaml`{{execute T1}}
 
 Click on this file `example/at-sample-two.yaml`{{open}} to open it in the editor. Add the following declaration to the opened YAML file in the editor.
 

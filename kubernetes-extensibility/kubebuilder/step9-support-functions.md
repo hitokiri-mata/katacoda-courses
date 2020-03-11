@@ -144,9 +144,9 @@ Add the logic for phase adjustments. Finishing the existing Reconcile function b
 
 # Test
 
-Test the improvements to the controller. Run the controller again.
+Test the improvements to the controller. `Re-run the controller.`{{execute interrupt T2}}
 
-`cd /opt/go/src/example && make run`{{execute interrupt T2}}
+`cd /opt/go/src/example && make run`{{execute T2}}
 
 View the results.
 

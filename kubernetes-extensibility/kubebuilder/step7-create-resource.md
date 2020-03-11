@@ -39,9 +39,13 @@ type At struct {
 }
 ```{{copy}}
 
-Reinstall the manifests.
+Re-apply the CRDs to your running Kubernetes cluster.
 
-`cd /opt/go/src/example && make run`{{execute interrupt T2}}
+`make install`{{execute}}
+
+`Re-run the controller.`{{execute interrupt T2}}
+
+`cd /opt/go/src/example && make run`{{execute T2}}
 
 Retrieve the custom resource.
 
