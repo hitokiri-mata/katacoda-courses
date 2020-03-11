@@ -16,6 +16,8 @@ To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspire this scena
 
 ## References ##
 
+- [KUDO]()
+- [KUDO Development Community](https://kudo.dev/community/) 
 - [Extend kubectl with plugins](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/)
 - [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/)
 - [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)

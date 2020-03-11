@@ -2,32 +2,31 @@ This step explores how to host an operator repository on your local system.
 
 Build the Local index file.
 
-`kubectl kudo repo index ~/repo`{{execute}}
+`kubectl kudo repo index ~/repo`{{execute T1}}
 
 Start the Repository HTTP server.
 
 ```bash
-pushd ~/repo
+cd ~/repo
 python -m SimpleHTTPServer 80&
-popd
-```{{execute}}
+```{{execute T2}}
 
 Add the local repository to the KUDO client.
 
-`kubectl kudo repo add local http://localhost`{{execute}}
+`kubectl kudo repo add local http://localhost`{{execute T1}}
 
 Set the local repository to the default KUDO context.
 
-`kubectl kudo repo context local`{{execute}}
+`kubectl kudo repo context local`{{execute T1}}
 
 Confirm the KUDO context.
 
-`kubectl kudo repo list`{{execute}}
+`kubectl kudo repo list`{{execute T1}}
 
 The * next to local indicates that it is the default context for the KUDO client.
 
 Verify you are using the local repository for an installation. Using the verbose CLI output flag (-v) with KUDO it is possible to trace from where an operator is being installed from.
 
-`kubectl kudo install first-operator -v 9`{{execute}}
+`kubectl kudo install first-operator -v 9`{{execute T1}}
 
-The output will indicate the operator is now running, albeit locally.
+The output will indicate the operator is now running, albeit locally. You will also see appropriate output in the terminal running python http server in the second terminal tab.
