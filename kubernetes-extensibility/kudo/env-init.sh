@@ -8,4 +8,7 @@ source <(helm completion bash)
 mkdir dev
 cd dev
 
-{ clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null
+# Insure tree is available, not all Katacoda instance have it consistently available.
+apt update && apt install tree
+
+{ clear && echo 'Kubernetes is ready.'; } 2> /dev/null

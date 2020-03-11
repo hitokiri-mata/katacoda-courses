@@ -14,8 +14,9 @@ This creates the main structure of the Operator that can be viewed using the tre
 
 `tree`{{execute}}
 
-<div class="info">
+<div class="alert alert-warning alert-dismissible fade show">
   <p><strong>Additionally</strong> If you added the -i flag with `package new` command you would be prompted for each operator detail.</p>
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 
 ## Add a Maintainer
@@ -74,9 +75,10 @@ Description: Number of replicas that should be run as part of the deployment
 These above add commands have created the entirety of the first-operator with the exception of the details in the template/deployment.yaml file. To complete this operator execute the following:
 
 ```bash
-cat << EOF > operator/templates/deployment.yaml
+cat <<EOF > operator/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
+kubernetesVersion: 1.13.0
 metadata:
   name: nginx-deployment
 spec:
