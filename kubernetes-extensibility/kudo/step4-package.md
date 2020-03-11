@@ -8,12 +8,8 @@ Since this is a Katacoda instance, we can safely wipe the entire repo directory 
 
 Bundle the operator code into a tarball as a package.
 
-`kubectl kudo package create repository/first-operator/operator/ --destination=~/repo`{{execute}}
+`kubectl kudo package create operator/ --destination=~/repo`{{execute}}
 
-You now have a new single file package for the operator.
+You now have a new package for the operator.
 
 `tree ~/repo`{{execute}}
-
-or?
-
-`ls ~/repo`{{execute}}

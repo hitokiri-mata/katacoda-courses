@@ -8,7 +8,7 @@ Start the Repository HTTP server.
 
 ```bash
 pushd ~/repo
-python -m http.server 80&
+python -m SimpleHTTPServer 80&
 popd
 ```{{execute}}
 

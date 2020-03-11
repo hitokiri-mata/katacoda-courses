@@ -1,4 +1,4 @@
-There is a server side component to KUDO. This server side component, is itself a Kubernetes Operator as is manages all KUDO based operator.
+There is a server side component to KUDO. This server side component, is itself a Kubernetes Operator as is manages all KUDO based operatorxs.
 
 `kubectl kudo init --wait`{{execute}}
 
@@ -8,6 +8,10 @@ The `init` instruction will:
 - Create kudo-system namespace
 - Deploy the KUDO controller
 
-The initialization of the KUDO controller is verified by confirming that the kudo-controller-manager-0 is in a **Running** status.
+Verify the KUDO controller is initialized when the `kudo-controller-manager-0` Pod has a **Running** status.
 
-`kubectl get -n kudo-system pod`{{execute}}
+`kubectl get -n kudo-system pods`{{execute}}
+
+Also, new custom resource definitions associated with the KUDO controller are also available.
+
+`kubectl get crds`{{execute}}
