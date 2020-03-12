@@ -99,7 +99,7 @@ EOF
 
 ## Special Adjustment for Kubernetes Version
 
-There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: 0.10.0` line. Add this line:
+There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `first-operator/operator/operator.yaml`{{open}} file just after the `kudoVersion: 0.10.0` line. Add this line:
 
 `kubernetesVersion: 1.14.0`{{copy}}
 

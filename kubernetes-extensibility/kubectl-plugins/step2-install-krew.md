@@ -22,7 +22,7 @@ Krew is now available so verify its version.
 
 `kubectl krew version`{{execute}}
 
-The installation was a bit lengthy, but now that you have Krew, all the other plugin installations are clean and neat. First and foremost, Krew is a collector of close to 84 plugins.
+The installation was a bit lengthy, but now that you have Krew, all the other plugin installations are clean and neat. First and foremost, Krew is a collector of close to 87 plugins.
 
 `kubectl krew search | wc -l`{{execute}}
 

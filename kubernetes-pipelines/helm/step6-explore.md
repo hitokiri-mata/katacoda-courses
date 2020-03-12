@@ -16,7 +16,7 @@ The stable chart count is consistently increasing with the maturing Kubernetes e
 - `helm search repo tensorflow`{{execute}}
 - `helm search repo stable/redis`{{execute}}
 
-You can also search for charts on the Helm Hub by changing the above `repo` to `hub`. 
+You can also search for charts on the Helm Hub by changing the above `repo` to `hub`.
 
 Take a moment to see all the charts in the Google repo. The list is long.
 

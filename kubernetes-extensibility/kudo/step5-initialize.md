@@ -1,4 +1,4 @@
-There is a server side component to KUDO. This server side component, is itself a Kubernetes Operator as is manages all KUDO based operatorxs.
+There is a server side component to KUDO. This server side component is itself a Kubernetes Operator as is manages all KUDO based Operators. Initialize the server side component.
 
 `kubectl kudo init --wait`{{execute}}
 
