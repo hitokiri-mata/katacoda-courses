@@ -21,12 +21,12 @@
       {
         "course_id": "kubebuilder",
         "title": "Develop an Operator with Kubebuilder",
-        "description": "Coming soon: Learn how to control custom resources with Kubebuilder based Operators."
+        "description": "Learn how to control custom resources with Kubebuilder based Operators."
       },
       {
         "course_id": "kudo",
         "title": "Develop an Operator with KUDO",
-        "description": "Coming soon: Learn how to control custom resources with KUDO based Operators."
+        "description": "Learn how to control custom resources with KUDO based Operators."
       }
     ]
   }
