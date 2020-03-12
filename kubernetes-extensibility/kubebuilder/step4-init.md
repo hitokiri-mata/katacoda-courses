@@ -8,7 +8,7 @@ Create a Go project directory for your new controller.
 
 `mkdir -p $GOPATH/src/example; cd $GOPATH/src/example`{{execute}}
 
-Kubebuild has an init command that creates a local directory populated with the skelton to start writing your Operator.
+Kubebuild has an init command that creates a local directory populated with the skeleton to start writing your Operator.
 
 `kubebuilder init --domain my.domain`{{execute}}
 

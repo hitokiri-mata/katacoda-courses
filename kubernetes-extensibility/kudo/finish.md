@@ -17,7 +17,7 @@ With these steps you have learned:
 
 ## Special Thank You ##
 
-To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspire this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).
+To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspired this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).
 
 ## References ##
 

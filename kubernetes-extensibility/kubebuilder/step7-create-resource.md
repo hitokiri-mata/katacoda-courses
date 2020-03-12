@@ -1,8 +1,4 @@
-Create a custom resource based on this new `At` CRD. Create an empty YAML file for the new resource.
-
-`touch at-sample.yaml`{{execute}}
-
-Click on this file `example/at-sample.yaml`{{open}} to open it in the editor. Add the following declaration to the opened YAML file in the editor.
+Create a custom resource based on this new `At` CRD. Click on this file `example/at-sample.yaml`{{open}} to open it in the editor. Add the following declaration to the opened YAML file in the editor.
 
 ```yaml
 apiVersion: cnat.my.domain/v1alpha1
@@ -43,7 +39,7 @@ Re-apply the CRDs to your running Kubernetes cluster.
 
 `make install`{{execute}}
 
-`Re-run the controller.`{{execute interrupt T2}}
+Re-run the controller.
 
 `cd /opt/go/src/example && make run`{{execute T2}}
 

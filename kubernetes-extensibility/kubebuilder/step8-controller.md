@@ -1,6 +1,6 @@
 Now that we have a CRD to work with, this next step focuses on the controller to manage these _At_ resources.
 
-Click on this `example/controllers/at_controller.go`{{open}} file to open it in the editor. There are Kuberbuilder markers that define the access control (RBAC) for the CRD, however this controller will need permission for Pods as well.
+Click on this `example/controllers/at_controller.go`{{open}} file to open it in the editor. There are Kuberbuilder markers that define the access control (RBAC) for the CRD, however, this controller will need permission for Pods as well.
 
 ## Add Imports
 
@@ -94,7 +94,7 @@ Finish the Reconcile method with an update to the resource status just prior to 
   }
 ```{{copy}}
 
-There is some additional logic you will want to add for working an instance through it's phases, however it's time to test again.
+There is some additional logic you will want to add for working an instance through its phases, however, it's time to test again.
 
 ## Test
 

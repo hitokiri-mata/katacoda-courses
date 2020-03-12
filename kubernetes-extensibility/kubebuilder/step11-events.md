@@ -2,7 +2,7 @@ This step is extra credit for you. It explores how your Kubebuilder Operator can
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice in this description there are no "events" listed (`<none>`) for this object. The next instructions enables the events listing.
+Notice in this description there are no "events" listed (`<none>`) for this object. The next instructions enable the events listing.
 
 ## Controller Changes for Events
 

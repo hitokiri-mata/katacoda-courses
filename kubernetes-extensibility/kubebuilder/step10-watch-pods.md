@@ -11,7 +11,7 @@ func (r *AtReconciler) SetupWithManager(mgr ctrl.Manager) error {
     Complete(r)
 }```{{copy}}
 
-By adding the `Pod{}` line this allow the Controller to have visibility into the Pod events.
+By adding the `Pod{}` line this allows the Controller to have visibility into the Pod events.
 
 ## Run Controller
 
@@ -21,7 +21,7 @@ To see all the fruits of your labor `Re-run the controller.`{{execute interrupt 
 
 ## Create New At Resource
 
-Create another custom resource based with a better schedule. Create an empty YAML file for the new resource.
+Create another custom resource with a better schedule. Create an empty YAML file for the new resource.
 
 `touch at-sample-two.yaml`{{execute T1}}
 
