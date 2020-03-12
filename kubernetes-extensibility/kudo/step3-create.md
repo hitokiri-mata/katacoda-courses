@@ -14,9 +14,8 @@ This creates the main structure of the Operator that can be viewed using the tre
 
 `tree`{{execute}}
 
-<div class="alert alert-warning alert-dismissible fade show">
-  <p><strong>Additionally</strong> If you added the -i flag with `package new` command you would be prompted for each operator detail.</p>
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
+<div class="w3-panel w3-green">
+  <p>If you added the -i flag with `package new` command you would be prompted for each operator detail.</p>
 </div>
 
 ## Add a Maintainer
@@ -78,7 +77,6 @@ These above add commands have created the entirety of the first-operator with th
 cat <<EOF > operator/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
-kubernetesVersion: 1.13.0
 metadata:
   name: nginx-deployment
 spec:
@@ -98,3 +96,11 @@ spec:
             - containerPort: 80
 EOF
 ```{{execute}}
+
+## Special Adjustment for Kubernetes Version
+
+There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: 0.10.0` line. Add this line:
+
+`kubernetesVersion: 1.14.0`{{copy}}
+
+That's all it takes to write a basic KUDO Operator. In the next steps well package it up and run the Operator.

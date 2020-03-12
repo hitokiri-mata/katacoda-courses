@@ -12,6 +12,6 @@ Verify the KUDO controller is initialized when the `kudo-controller-manager-0` P
 
 `kubectl get -n kudo-system pods`{{execute}}
 
-Also, new custom resource definitions associated with the KUDO controller are also available.
+Also, a few new custom resource definitions are associated with the KUDO controller.
 
 `kubectl get crds`{{execute}}

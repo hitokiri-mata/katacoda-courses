@@ -23,7 +23,7 @@ To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspire this scena
 - [Article: Kubebuild origin](
 https://kubernetes.io/blog/2018/08/10/introducing-kubebuilder-an-sdk-for-building-kubernetes-apis-using-crds/)
 - [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
-- [custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions)
+- [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions)
 - [The Kubebuilder book](https://book.kubebuilder.io/)
 - [cnat](https://github.com/programming-kubernetes/cnat)
 - [Kuberbuilder with cnat, deprecated](https://github.com/programming-kubernetes/cnat/tree/master/cnat-kubebuilder)
