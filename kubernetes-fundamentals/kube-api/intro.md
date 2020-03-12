@@ -7,7 +7,7 @@ This scenario takes you through the basics of accessing and exploring the Kubern
 In this scenario you will learn how to:
 
 - Access the API via `kubectl`
-- Introspect objects in the cluster vi the API
+- Introspect objects in the cluster via the API
 - Access the cluster API locally through a Proxy
 - Discover api-resources and api-versions
 - Discover the Explain and Describe commands

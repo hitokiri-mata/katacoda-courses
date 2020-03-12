@@ -19,11 +19,6 @@
         "description": "Discover the API through which you can control all Kubernetes objects."
       },
       {
-        "course_id": "kubectl-plugin",
-        "title": "Kubectl CLI plugins",
-        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool.",
-        },    
-      {
         "course_id": "connectivity",
         "title": "Pods to Services Communication",
         "description": "How Pods communicate with Services using a DNS."

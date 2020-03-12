@@ -6,6 +6,6 @@ This scenario takes you through the essentials of defining new Kubernetes Custom
 
 In this scenario you will learn how to:
 
-- Create a CRD and define custom attribute
+- Create a CRD and define custom attributes
 - Discover how your CRD becomes a new resource
 - Add, inspect and remove instances of a custom resource

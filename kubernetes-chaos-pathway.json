@@ -1,0 +1,13 @@
+{
+    "title": "Kubernetes Chaos",
+    "icon": "fa-kubernetes",
+    "description": "Discover different technique to embrace Choas Engingeeering on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "kubeinvaders",
+        "title": "KubeInvaders",
+        "description": "Destroy Pods as if they were aliens."
+      }
+    ]
+  }
+  

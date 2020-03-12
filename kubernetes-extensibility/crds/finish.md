@@ -6,7 +6,7 @@ Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into 
 
 With these steps you have learned:
 
-- &#x2714; how to create a CRD and define custom attribute,
+- &#x2714; how to create a CRD and define custom attributes,
 - &#x2714; how how your CRD becomes a new resource,
 - &#x2714; how to add, inspect and remove instances of a custom resource.
 
