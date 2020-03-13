@@ -71,7 +71,7 @@ Start the new controller your just modified.
 
 `make run`{{execute T2}}
 
-`kubectl describe at at-sample`{{execute T1}
+`kubectl describe at at-sample`{{execute T1}}
 
 Now, these events are there. Also, the controller have successfully created two of the NGINX Pods that you asked it to create and manage earlier in step 7.
 
