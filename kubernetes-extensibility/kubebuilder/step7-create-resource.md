@@ -39,14 +39,14 @@ Re-apply the CRDs to your running Kubernetes cluster.
 
 `make install`{{execute}}
 
-Re-run the controller.
+It's time to run your controller since it will serve the information for the Phase column. Run the controller.
 
 `cd /opt/go/src/example && make run`{{execute T2}}
+ 
+Notice it is running in a different terminal so you can return to this tab so see its activity.
 
 Retrieve the custom resource.
 
 `kubectl get ats`{{execute T1}}
 
-The new print column appears.
-
-The column is there. but the value is blank because you have a little more code to write.
+Great, your new Operator is alive! The new `PHASE` column appears. The column is there. but the value is blank because you have a little more code to write.

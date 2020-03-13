@@ -31,7 +31,7 @@ Verify you are using the local repository for an installation. Using the verbose
 
 The output will indicate the operator is now running, albeit locally. You will also see appropriate output in the second terminal tab running the Python http server.
 
-The end result of this Operator that you have written is there are two new Nginx Pods running. In step 3 you created a declaration for the Nginx servers, but did not directly submit them to Kubernetes.  Instead when you deployed the Operator it took care of those management details. It's a simple example, but it works.
+The end result of this Operator that you have written is there are two new Nginx Pods running. In step 3 you created a declaration for the Nginx servers, but did not directly submit them to Kubernetes. Instead when you deployed the Operator it took care of those management details. It's a simple example, but it works.
 
 `kubectl get deployments,pods`{{execute}}
 

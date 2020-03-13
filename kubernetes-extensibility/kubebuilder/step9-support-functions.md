@@ -77,7 +77,16 @@ func timeUntilSchedule(schedule string) (time.Duration, error) {
 
 ## Append to Reconcile Function
 
-Add the logic for phase adjustments. Finishing the existing Reconcile function by inserting the following switch block just after the code body that sets the `instance.Status.Phase = cnatv1alpha1.PhasePending`.
+Add the logic for phase adjustments. In the Reconcile function find this if block.
+
+```go
+  // If no phase set, default to pending (the initial phase):
+  if instance.Status.Phase == "" {
+    instance.Status.Phase = cnatv1alpha1.PhasePending
+  }
+```
+
+Finishing the function by inserting the following lengthy switch block just after that if block.
 
 ```go
   // Make the main case distinction: implementing
@@ -130,7 +139,7 @@ Add the logic for phase adjustments. Finishing the existing Reconcile function b
       } else {
         // don't requeue because it will happen automatically when the Pod status changes
         return reconcile.Result{}, nil
-    }
+      }
 
     case cnatv1alpha1.PhaseDone:
       logger.Info("Phase: DONE")
@@ -144,16 +153,22 @@ Add the logic for phase adjustments. Finishing the existing Reconcile function b
 
 # Test
 
-Test the improvements to the controller. `Re-run the controller.`{{execute interrupt T2}}
+With this new code your controller, test the new functionality.
 
-`cd /opt/go/src/example && make run`{{execute T2}}
+`make install`{{execute}}
+
+`Terminate the running controller.`{{execute interrupt T2}}
+
+Start the new controller your just modified.
+
+`make run`{{execute T2}}
 
 View the results.
 
 `kubectl get ats`{{execute T1}}
 
-Notice, now the Status column has a `PENDING` value in it.
+Notice, now the Status column still has changed from `PENDING` to `RUNNING`. Check the events.
 
 `kubectl describe at at-sample`{{execute T1}}
 
-You will see the phase status changing for the resource but it never fully gets to "Done". This is because the controller isn't watching Pods yet.
+The description is also reporting `RUNNING`. However, even though the phase status is changing it never fully gets to `DONE`. This is because the controller isn't watching pods yet. Also, notice at the end the Events reports `<none>`. You will work these items next.

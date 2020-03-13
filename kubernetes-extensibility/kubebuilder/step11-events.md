@@ -2,7 +2,7 @@ This step is extra credit for you. It explores how your Kubebuilder Operator can
 
 `kubectl describe at at-sample`{{execute}}
 
-Notice in this description there are no "events" listed (`<none>`) for this object. The next instructions enable the events listing.
+Notice in this description there are no event (`Events: <none>`) for this object. The next instructions enable the events listing.
 
 ## Controller Changes for Events
 
@@ -16,7 +16,7 @@ Add the Record context to the import list at the top.
 
 ### Add EventRecorder
 
-Add the Recorder line to the struct.
+Find the `AtReconciler` struct and at a Recorder line to the last line of the struct.
 
 ```go
 // AtReconciler reconciles an At object
@@ -28,7 +28,7 @@ type AtReconciler struct {
 }
 ```{{copy}}
 
-Now modify the `example/controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. You will want to add each of these recording instructions to the respective case in the switch statements.
+Now modify the `example/controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. You will want to add each of these recording instructions to the respective cases in the switch statement you added in a previous step. Add them just after the logging statement at the top of each case block.
 
 For `case cnatv1alpha1.PhasePending:`
 
@@ -57,6 +57,20 @@ if err = (&controllers.AtReconciler {
 
 # Test
 
-With this new code, the `describe` command will present the list of Kubernetes events on related to the resource.
+With this new code, the `describe` command will present the list of Kubernetes events on related to the resource. Test the new functionality.
+
+`make install`{{execute}}
+
+`Terminate the running controller.`{{execute interrupt T2}}
+
+Start the new controller your just modified.
+
+`make run`{{execute T2}}
 
 `kubectl describe at at-sample`{{execute}}
+
+Now, these events are there. Also, the controller have successfully created two of the NGINX Pods that you asked it to create and manage earlier in step 7.
+
+`kubectl get pods`{{execute}}
+
+With this you have completed your first Kubebuilder based controller.

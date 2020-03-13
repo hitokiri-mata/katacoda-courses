@@ -28,14 +28,14 @@ import (
 
 ### Add Markers
 
-Just above the Reconcile function, find these markers:
+Just above the Reconcile function, find these markers.
 
 ```go
 // +kubebuilder:rbac:groups=cnat.mydomain.com,resources=ats,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=cnat.mydomain.com,resources=ats/status,verbs=get;update;patch
 ```
 
-and right after those markers add these markers to give the controller Pod management permissions:
+Right after those two markers add these two new markers to give the controller Pod management permission.
 
 ```go
 // +kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
@@ -46,7 +46,11 @@ They are just in the form of comment before the function. Follow this link for [
 
 ### Change Logger
 
-Continuing with updating the code inside the `Reconcile` function, change the logger to a specific logger name and with some defined structure as follows:
+Continuing with updating the code inside the `Reconcile` function, change this logger line
+
+`	_ = r.Log.WithValues("at", req.NamespacedName)`
+
+to a specific logger name with some defined structure as follows:
 
 ```go
   logger := r.Log.WithValues("namespace", req.NamespacedName, "at", req.Name)
@@ -84,7 +88,7 @@ Now that we have an instance defined by the request namespacedname, check to see
 
 ### Update Status
 
-Finish the Reconcile method with an update to the resource status just prior to the last return statement.
+Finish the Reconcile function with an update to the resource status just prior to the last return statement.
 
 ```go
   // Update the At instance, setting the status to the respective phase:
@@ -98,18 +102,22 @@ There is some additional logic you will want to add for working an instance thro
 
 ## Test
 
-With this new code your controller. test the functionality. Setup the new RBAC by re-installing the manifests.
+With this new code your controller, test the functionality. Setup the new RBAC by re-installing the manifests.
 
 `make install`{{execute}}
 
-`Re-run the controller.`{{execute interrupt T2}}
+`Terminate the running controller.`{{execute interrupt T2}}
 
-`cd /opt/go/src/example && make run`{{execute T2}}
+Start the new controller your just modified.
+
+`make run`{{execute T2}}
 
 Request from your controller the list of _at_ resources.
 
 `kubectl get ats`{{execute T1}}
 
+Great, your new Operator is alive! Notice now the `PHASE` now has the value `PENDING`.
+
 `kubectl describe at at-sample`{{execute T1}}
 
-Your new Operator is alive!
+The description show the phase state as well. However, notice at the end the Events reports `<none>`. You will work on that next.
