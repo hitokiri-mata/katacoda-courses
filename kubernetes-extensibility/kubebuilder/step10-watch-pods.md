@@ -19,7 +19,7 @@ With this new code your controller, test the new functionality.
 
 `make install`{{execute}}
 
-`Terminate the running controller.`{{execute interrupt T2}}
+`echo "Terminate the running controller."`{{execute interrupt T2}}
 
 Start the new controller your just modified.
 

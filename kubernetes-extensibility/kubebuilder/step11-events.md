@@ -65,7 +65,7 @@ With this new code, the `describe` command will present the list of Kubernetes e
 
 `make install`{{execute}}
 
-`Terminate the running controller.`{{execute interrupt T2}}
+`echo "Terminate the running controller."`{{execute interrupt T2}}
 
 Start the new controller your just modified.
 

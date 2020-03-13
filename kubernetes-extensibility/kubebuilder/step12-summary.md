@@ -1,4 +1,4 @@
-With the controller complete, try creating an new resource and watch how the At function works.  First clear the previous at resource just for clarity and to verify the controller will correctly clean up your pods.
+With the controller complete, try creating an new resource and watch how the At function works. First clear the previous at resource just for clarity and to verify the controller will correctly clean up your pods.
 
 Delete the old at resource.
 
@@ -8,7 +8,7 @@ Verify the resources and Pods are gone.
 
 `kubectl get ats,pods`{{execute}}
 
-Create another custom resource with a better schedule. Click on this file example/at-sample-two.yaml to open it in the editor. Like before, add the following declaration to the opened YAML file in the editor.
+Create another custom resource with a better schedule. Click on this file `example/at-sample-two.yaml`{{open}} to open it in the editor. Like before, add the following declaration to the opened YAML file in the editor.
 
 ```yaml
 apiVersion: cnat.my.domain/v1alpha1
@@ -30,15 +30,13 @@ Copy the date and paste it into the YAML file and **immediately** Submit this re
 
 The new At are now listed.
 
-`kubectl get ats`{{execute}}
+`kubectl get ats,pods`{{execute}}
 
 Watch for the new Pod to be created by your At controller in a minute or so.
 
 `watch kubectl get pods`{{execute}}
 
-Once the Pod appears this means the schedule has triggered. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>. Check the Phase.
-
-`kubectl get ats`{{execute}}
+Once the Pod appears this means the schedule has triggered. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Check the events in the resource.
 

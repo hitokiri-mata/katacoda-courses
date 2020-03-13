@@ -106,7 +106,7 @@ With this new code your controller, test the functionality. Setup the new RBAC b
 
 `make install`{{execute}}
 
-`Terminate the running controller.`{{execute interrupt T2}}
+`echo "Terminate the running controller."`{{execute interrupt T2}}
 
 Start the new controller your just modified.
 
@@ -120,7 +120,7 @@ Great, your new Operator is alive! Notice now the `PHASE` now has the value `PEN
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description show the phase state as well. However, the phase is still pending. Also, notice there are not pods started.
+The description show the phase state as well. However, the phase is still pending. Also, notice there are no Pods started.
 
 `kubectl get pods`{{execute}}
 
