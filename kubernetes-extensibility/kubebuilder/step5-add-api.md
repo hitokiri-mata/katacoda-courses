@@ -14,3 +14,5 @@ Familiarize yourself with the generated files.
 - `example/main.go`{{open}}
 - `example/api/v1alpha1/at_types.go`{{open}}
 - `example/controllers/at_controller.go`{{open}}
+
+In the following steps you will be adding code to these files to implement your controller details.

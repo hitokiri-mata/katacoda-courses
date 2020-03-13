@@ -7,7 +7,7 @@ metadata:
   name: at-sample
 spec:
   schedule: "2020-01-30T10:02:00Z"
-  command: 'echo "Something from the past told me to do this now: $(date --utc +%FT%TZ)"'
+  command: 'echo "Something from the past told me to do this now."'
 ```{{copy}}
 
 You can either type in the YAML file (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Notice in the specification section where the schedule and command is specified. Later you will apply a better scheduled time. Submit this resource declaration to Kubernetes.

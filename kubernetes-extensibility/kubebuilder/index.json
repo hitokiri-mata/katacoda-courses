@@ -59,6 +59,10 @@
         "title": "Kubernetes Events",
         "text": "step11-events.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Create Fresh At Resource",
+        "text": "step12-summary.md"
       }
     ],
     "intro": {

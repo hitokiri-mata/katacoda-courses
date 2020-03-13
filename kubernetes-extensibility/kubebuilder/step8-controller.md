@@ -120,4 +120,8 @@ Great, your new Operator is alive! Notice now the `PHASE` now has the value `PEN
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description show the phase state as well. However, notice at the end the Events reports `<none>`. You will work on that next.
+The description show the phase state as well. However, the phase is still pending. Also, notice there are not pods started.
+
+`kubectl get pods`{{execute}}
+
+In the next step you will work on getting the phase to advance to the next step of `RUNNING`.

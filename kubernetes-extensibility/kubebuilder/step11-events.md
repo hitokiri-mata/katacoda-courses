@@ -48,11 +48,15 @@ For `case cnatv1alpha1.PhaseDone:`
 Where this struct is initialized in the `example/main.go`{{open}} file, add the Recorder line.
 
 ```go
-if err = (&controllers.AtReconciler {
-  Client:   mgr.GetClient(),
-  Log:      ctrl.Log.WithName("controllers").WithName("At"),
-  Scheme:   mgr.GetScheme(),
-  Recorder: mgr.GetEventRecorderFor("at-controller"),
+  if err = (&controllers.AtReconciler {
+    Client:   mgr.GetClient(),
+    Log:      ctrl.Log.WithName("controllers").WithName("At"),
+    Scheme:   mgr.GetScheme(),
+    Recorder: mgr.GetEventRecorderFor("at-controller"),
+  }).SetupWithManager(mgr); err != nil {
+    setupLog.Error(err, "unable to create controller", "controller", "At")
+    os.Exit(1)
+  }
 ```{{copy}}
 
 # Test
@@ -67,10 +71,10 @@ Start the new controller your just modified.
 
 `make run`{{execute T2}}
 
-`kubectl describe at at-sample`{{execute}}
+`kubectl describe at at-sample`{{execute T1}
 
 Now, these events are there. Also, the controller have successfully created two of the NGINX Pods that you asked it to create and manage earlier in step 7.
 
-`kubectl get pods`{{execute}}
+`kubectl get pods`{{execute T1}}
 
-With this you have completed your first Kubebuilder based controller.
+In the last step, let's try to your controller with a new resource with an actual scheduled task.

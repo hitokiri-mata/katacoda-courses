@@ -171,4 +171,8 @@ Notice, now the Status column still has changed from `PENDING` to `RUNNING`. Che
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description is also reporting `RUNNING`. However, even though the phase status is changing it never fully gets to `DONE`. This is because the controller isn't watching pods yet. Also, notice at the end the Events reports `<none>`. You will work these items next.
+The description is also reporting `RUNNING`. However, even though the phase status is changing it never fully gets to `DONE`. This is because the controller isn't watching Pods yet. Also, notice at the end the Events reports `<none>`. There has also been a little Pod activity, but it's not quite right.
+
+`kubectl get pods`{{execute}}
+
+You will work on implementing these features next.
