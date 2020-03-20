@@ -39,6 +39,11 @@
         "description": "Explore Kubernetes ConfigMaps and Secrets."
       },
       {
+        "course_id": "podpreset",
+        "title": "Pod Presets",
+        "description": "Separating concerns by injecting Pod Preset fields into matching Pods."
+      },
+      {
         "course_id": "springboot-to-k8s",
         "title": "Spring Boot to Kubernetes",
         "description": "From a blank slate to a Spring Boot app running on Kubernetes."
