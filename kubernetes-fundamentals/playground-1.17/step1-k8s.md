@@ -1,5 +1,7 @@
 Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use. This is a playground where to can experiment with Kubernetes version 1.17.
 
+> EXPERIMENTAL: This playground is currently experiencing startup problems and we are working on resolving this issue.
+
 `kubectl version --short && \
 kubectl get componentstatus && \
 kubectl get nodes && \

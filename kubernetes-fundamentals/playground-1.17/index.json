@@ -8,7 +8,7 @@
     "steps": [
       { "title": "Your Kubernetes Cluster", "text": "step1-k8s.md", "code": "clear.sh" }
     ],
-    "intro": { "text": "intro.md", "code": "env-init.sh", "credits": "[Jonathan Johnson](http://www.dijure.com)" },
+    "intro": { "text": "intro.md", "credits": "[Jonathan Johnson](http://www.dijure.com)" },
     "finish": { "text": "finish.md" },
     "assets": {
       "host01": [
