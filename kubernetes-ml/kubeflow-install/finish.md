@@ -1,6 +1,6 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-ml/kubeflow/assets/kubeflow.jpg" width="300">
+<img align="right" src="/javajon/courses/kubernetes-ml/kubeflow-install/assets/kubeflow.jpg" width="300">
 
 Kubeflow is an open, community driven project to make it easy to deploy and manage an Machine Learning stack on Kubernetes.
 
@@ -10,9 +10,8 @@ This scenario is in the process of drafting. However, you will see that a functi
 
 With these steps you have learned:
 
-- &#x2714; how to ...
-- &#x2714; how to ...
-- &#x2714; how to ...
+- &#x2714; how to install Kubeflow on Kubernetes,
+- &#x2714; how to access Kubeflow tools.
 
 ## References ##
 

@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "Kubeflow",
-  "title": "Kubeflow",
-  "description": "Discover Kubeflow on Kubernetes.",
+  "title": "Kubeflow Raw Installation",
+  "description": "Discover How to Install Kubeflow on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {

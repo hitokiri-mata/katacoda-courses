@@ -19,7 +19,6 @@ helm install dash stable/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
-
 # Completions
 source <(kubectl completion bash)
 source <(helm completion bash)
