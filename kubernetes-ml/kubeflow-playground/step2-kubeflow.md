@@ -16,10 +16,3 @@ There are several new Custom Resource Definitions (CRDs) that have been installe
 
 `kubectl get crds`{{execute}}
 
-The standard command line tool for Kubeflow, `kfctl` is also available.
-
-`kfctl version`{{execute}}
-
-Once the deployments are all available navigate to the [Kubeflow dashboard](https://[[HOST_SUBDOMAIN]]-31380-[[KATACODA_HOST]].environments.katacoda.com/) and start exploring its features.
-
-Next, let's connect to Kubeflow and explore with the Dashboard.

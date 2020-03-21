@@ -1,6 +1,6 @@
 {
-  "pathwayTitle": "KubeflowExperimental",
-  "title": "Kubeflow (experimental)",
+  "pathwayTitle": "KubeflowPlayground",
+  "title": "Kubeflow Playground",
   "description": "Discover Kubeflow on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
@@ -12,18 +12,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Installing Kubeflow",
-        "text": "step2-install.md",
+        "title": "Your Kubeflow Platform",
+        "text": "step2-kubeflow.md",
         "code": "clear.sh"
       },
       {
-        "title": "Your Kubeflow platform",
-        "text": "step3-kubeflow.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Kubeflow Dashboard",
-        "text": "step4-dashboard.md",
+        "title": "Kubeflow Tools",
+        "text": "step3-tools.md",
         "code": "clear.sh"
       }
     ],

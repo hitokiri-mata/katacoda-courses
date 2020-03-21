@@ -18,10 +18,9 @@ Verify the command line tool is available.
 
 `kfctl version`{{execute}}
 
-Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the the context for the command line parameters using the tab key.
+Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command line parameters using the tab key.
 
 `source <(kfctl completion bash)`{{execute}}
-
 
 ## Persistence
 
