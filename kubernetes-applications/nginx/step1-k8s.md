@@ -11,7 +11,7 @@ The [Helm](https://helm.sh/) package manager used for installing applications on
 
 `helm version --short`{{execute}}
 
-<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/k8s-dash.png" width="150">
+<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/k8s-dash.png" width="200">
 
 ## Kubernetes Dashboard ##
 
