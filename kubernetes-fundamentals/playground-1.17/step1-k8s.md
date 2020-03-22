@@ -1,6 +1,6 @@
-Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use. This is a playground where to can experiment with Kubernetes version 1.17.
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/playground-1.17/assets/k8s-logo.png" width="100">
 
-> EXPERIMENTAL: This playground is currently experiencing startup problems and we are working on resolving this issue.
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
 `kubectl version --short && \
 kubectl get componentstatus && \
@@ -10,6 +10,8 @@ kubectl cluster-info`{{execute}}
 The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
 `helm version --short`{{execute}}
+
+<img align="right" src="/javajon/courses/kubernetes-fundamentals/playground-1.17/assets/k8s-dash.png" width="200">
 
 ## Kubernetes Dashboard ##
 

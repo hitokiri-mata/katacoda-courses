@@ -1,3 +1,5 @@
+<img align="right" src="/javajon/courses/kubernetes-observability/basics/assets/k8s-logo.png" width="100">
+
 For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
 `kubectl version --short && \
@@ -8,6 +10,8 @@ kubectl cluster-info`{{execute}}
 The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
 
 `helm version --short`{{execute}}
+
+<img align="right" src="/javajon/courses/kubernetes-observability/basics/assets/k8s-dash.png" width="200">
 
 ## Kubernetes Dashboard ##
 

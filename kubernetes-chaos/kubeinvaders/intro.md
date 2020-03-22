@@ -1,6 +1,6 @@
-# Nginx on Kubernetes #
+# KubeInvaders on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-applications/nginx/assets/nginx.png">
+<img align="right" src="/javajon/courses/kubernetes-choas/kubeinvaders/assets/kubeinvaders.png">
 
 These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get an Nginx web server running.
 
