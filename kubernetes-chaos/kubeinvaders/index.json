@@ -17,8 +17,12 @@
         "code": "clear.sh"
       },
       {
+        "title": "Add Alien Pods",
+        "text": "step3-add-pods.md"
+      }
+      {
         "title": "Play KubeInvaders",
-        "text": "step3-play.md"
+        "text": "step4-play.md"
       }
     ],
     "intro": {

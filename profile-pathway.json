@@ -31,6 +31,11 @@
         "id": "kubernetes-extensibility"
       },
       {
+        "title": "Kubernetes Chaos",
+        "description": "Discover different technique to embrace Choas Engingeeering on Kubernetes.",
+        "id": "kubernetes-chaos"
+      },
+      {
         "title": "Kubernetes Machine Learning",
         "description": "Learn techniques for building, modeling and serving Machine Learning solutions on Kubernetes.",
         "id": "kubernetes-ml"

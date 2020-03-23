@@ -1,16 +1,18 @@
 # KubeInvaders on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-choas/kubeinvaders/assets/kubeinvaders.png">
+## Lighthearted Look at Chaos and Kubernetes Resilience 
 
-These next steps provide an ideal place to start deploying and running your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called _kubectl_, a few steps will get an Nginx web server running.
+> Adopting chaos engineering strategies for your production environment is really useful, because it is the only way to test if a system supports unexpected destructive events.
+
+<img align="right" src="/javajon/courses/kubernetes-choas/kubeinvaders/assets/kubeinvaders.gif" width=300>
+
+KubeInvaders is a lighthearted gamified way of learning chaos engineering on Kubernetes. It's like Space Invaders but the aliens are the Pods. The game was create by **[Eugenio Marzo](https://www.linkedin.com/in/eugenio-marzo-646a6742/?originalSubdomain=it)**.
 
 You will learn how:
 
-- to use the basics of the kubectl CLI tool
-- to install Nginx on Kubernetes
-- containers are deployed as Deployments in Pods
-- a Service can provide access to a replication of Pods
+- to install KubeInvaders onto Kubernetes
+- to Play!
+- to experiment with Pods and resilience
 
-> [Nginx](https://www.nginx.com) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004. A company of the same name was founded in 2011 to provide support and Nginx plus paid software.
+Eugenio Marzo offers a [blog entry on the game](https://devopstribe.it/) and it has been featured on the [Kubernetes blog](https://kubernetes.io/blog/2020/01/22/kubeinvaders-gamified-chaos-engineering-tool-for-kubernetes/). This Katacoda scenario is another learning channel for you to experiment with chaos!
 
-> Nginx is free and open-source software, released under the terms of a BSD-like license. A large fraction of web servers use NGINX, often as a load balancer. [-- Wikipedia](https://en.wikipedia.org/wiki/Nginx)

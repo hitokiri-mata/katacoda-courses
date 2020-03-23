@@ -45,7 +45,6 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
