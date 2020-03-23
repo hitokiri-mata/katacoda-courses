@@ -1,4 +1,6 @@
-Start playing the game and try to kill some alien Pods. As aliens are killed, come back to the watch in the terminal and see how Kubernetes is repairing the Pods.
+Start playing the game and try to kill some alien Pods. Just above the command line there is a tab labeled _Play KubeInvaders_, or toy can click on this [link](https://[[HOST_SUBDOMAIN]]-30016-[[KATACODA_HOST]].environments.katacoda.com).
+
+As aliens are killed, come back to the watch in the terminal and see how Kubernetes is repairing the Pods.
 
 `watch kubectl get deployments,pods --all-namespaces -l app-purpose=chaos`{{execute}}
 
