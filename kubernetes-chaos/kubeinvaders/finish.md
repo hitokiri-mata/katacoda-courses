@@ -1,6 +1,6 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-chaos/kubeinvaders/assets/eugenio-marzo.jfif" width=200>
+<img align="right" src="/javajon/katacoda-courses/kubernetes-chaos/kubeinvaders/assets/eugenio-marzo.jfif" width=200>
 
 Well, that was fun. Thank you **[Eugenio Marzo](https://www.linkedin.com/in/eugenio-marzo-646a6742/?originalSubdomain=it)** for sharing this fun channel for learning.
 
