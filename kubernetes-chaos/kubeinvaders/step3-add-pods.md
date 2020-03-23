@@ -1,4 +1,4 @@
-Let's fill your your cluster will some aliens. First, add a few simple NGINX pods to the default namespace.
+Let's fill your cluster will some aliens. First, add a few simple NGINX Pods to the default namespace.
 
 `kubectl create deployment nginx --image=nginx`{{execute}}
 
@@ -18,4 +18,4 @@ Label the Deployments and Pods so you can watch their status.
 
 `kubectl label deployment,pod app-purpose=chaos -l app=ghost --namespace more-apps`{{execute}}
 
-In the next step, observe the running aliens.
+In the next step, kill and observe the aliens!
