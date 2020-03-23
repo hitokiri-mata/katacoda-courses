@@ -6,15 +6,15 @@ Once complete use this ```clear```{{execute interrupt}} to break out of the watc
 
 ## Game Play Keys
 
-| Input           | Action                                           |
-|-----------------|--------------------------------------------------|
-|     space       | Fire! Apply chaos.                               |
-|     arrow keys  | Move you chaos ship and aim.                     |
-|     n           | Change namespace.                                |
-|     a           | Switch to automatic mode.                        |
-|     m           | Switch to manual mode.                           |
-|     h           | Show special keys.                               |
-|     q           | Hide help for special keys.                      |
-|     i           | Show pod's name. Move the ship towards an alien. |
+| Input       | Action                                           |
+|-------------|--------------------------------------------------|
+|     space   | Fire! Apply chaos.                               |
+|     arrows  | Move you chaos ship and aim.                     |
+|     n       | Change namespace.                                |
+|     a       | Switch to automatic mode.                        |
+|     m       | Switch to manual mode.                           |
+|     h       | Show special keys.                               |
+|     q       | Hide help for special keys.                      |
+|     i       | Show pod's name. Move the ship towards an alien. |
 
 Enjoy!
