@@ -1,10 +1,10 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-choas/kubeinvaders/assets/eugenio-marzo.jfif" width=200>
+<img align="right" src="/javajon/courses/kubernetes-chaos/kubeinvaders/assets/eugenio-marzo.jfif" width=200>
 
 Well, that was fun. Thank you **[Eugenio Marzo](https://www.linkedin.com/in/eugenio-marzo-646a6742/?originalSubdomain=it)** for sharing this fun channel for learning.
 
-While this example is lighthearted, it highlights a importance of [chaos engineering](https://en.wikipedia.org/wiki/Chaos_engineering) to ensuring your applications remain healthy on Kubernetes. It's important your apps resist the [pathogens](http://www.rgoarchitects.com/Files/fallacies.pdf) that exist on distributed cloud native platform.
+While this example is lighthearted, it highlights the importance of [chaos engineering](https://en.wikipedia.org/wiki/Chaos_engineering) to ensuring your applications remain healthy on Kubernetes. It's important your apps resist the [pathogens](http://www.rgoarchitects.com/Files/fallacies.pdf) that exist on distributed cloud native platform.
 
 With these steps you have learned:
 
@@ -22,7 +22,7 @@ With these steps you have learned:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+<img align="left" src="/javajon/courses/kubernetes-chaos/kubeinvaders/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
 For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>

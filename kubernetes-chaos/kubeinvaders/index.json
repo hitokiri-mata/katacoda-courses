@@ -35,7 +35,6 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -47,8 +46,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nginx-One", "port": 31111},
-      {"name": "Nginx-Two", "port": 31112}
+      {"name": "Play KubeInvaders!", "port": 30016}
     ]
   },
   "backend": {

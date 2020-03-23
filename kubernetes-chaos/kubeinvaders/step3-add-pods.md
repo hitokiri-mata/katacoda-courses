@@ -12,10 +12,10 @@ Next, add a few more Pods (aliens) to a second namespace.
 
 `kubectl scale deployment/busybox --namespace more-apps --replicas=4`{{execute}}
 
-Label the deployments so you can watch  their status.
+Label the Deployments and Pods so you can watch their status.
 
-`kubectl label deployment nginx app-purpose=chaos --namespace default`{{execute}}
+`kubectl label deployment,pod nginx app-purpose=chaos -l app=nginx --namespace default`{{execute}}
 
-`kubectl label deployment busybox app-purpose=chaos --namespace more-apps`{{execute}}
+`kubectl label deployment,pod app-purpose=chaos -l app=busybox --namespace more-apps`{{execute}}
 
 In the next step, observe the running aliens.
