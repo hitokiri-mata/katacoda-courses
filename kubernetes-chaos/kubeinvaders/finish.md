@@ -4,13 +4,15 @@
 
 Well, that was fun. Thank you **[Eugenio Marzo](https://www.linkedin.com/in/eugenio-marzo-646a6742/?originalSubdomain=it)** for sharing this fun channel for learning.
 
-While this example is lighthearted, it highlights the importance of [chaos engineering](https://en.wikipedia.org/wiki/Chaos_engineering) to ensuring your applications remain healthy on Kubernetes. It's important your apps resist the [pathogens](http://www.rgoarchitects.com/Files/fallacies.pdf) that exist on distributed cloud native platform.
-
 With these steps you have learned:
 
 - &#x2714; how to install KubeInvaders onto Kubernetes,
 - &#x2714; how to play!,
 - &#x2714; how to experiment with Pods and resilience.
+
+While this example is lighthearted, it highlights the importance of [chaos engineering](https://en.wikipedia.org/wiki/Chaos_engineering) to ensuring your applications remain healthy on Kubernetes. It's important your apps resist the [pathogens](http://www.rgoarchitects.com/Files/fallacies.pdf) that exist on distributed cloud native platform.
+
+> In the last year we've seen Chaos Engineering move from a much talked-about idea to an accepted, mainstream approach to improving and assuring distributed system resilience. As organizations large and small begin to implement Chaos Engineering as an operational process, we're learning how to apply these techniques safely at scale. The approach is definitely not for everyone, and to be effective and safe, it requires organizational support at scale. -- [Thoughtworks Radar](https://www.thoughtworks.com/radar/techniques/chaos-engineering)
 
 ## References ##
 

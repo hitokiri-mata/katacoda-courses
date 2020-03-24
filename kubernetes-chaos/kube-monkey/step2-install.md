@@ -1,4 +1,4 @@
-Create a namespace for the game application.
+Create a namespace for the the Kube Monkey service.
 
 `kubectl create namespace kube-monkey`{{execute}}
 
@@ -24,10 +24,8 @@ Check the deployment and ensure it starts.
 
 `kubectl -n default rollout status deployment my-monkey-kube-monkey`{{execute}}
 
-Normally, the debug setting would not be set to true and the period of when Kube Monkey creates the schedule is defined in the configuration. Normally these schedules would be planned to occur on a daily basis or over the course of several days. For this Katacoda scenario in demo mode the schedule is create every 30 seconds and the planned events run right away.
+Normally, the debug setting would not be set to true and the period of when Kube Monkey creates the schedule is defined in the configuration. The Kube Monkey describes the details of setting up a schedule using the variety of configurations values. Normally these schedules would be planned to occur on a daily basis or over the course of several days. For this Katacoda scenario in demo mode the schedule is create every 30 seconds and the planned events run right away.
 
 You can periodically check the Kube Monkey log to see its scheduling events and Pod killing activity.
 
 `kubectl logs deployment.apps/my-monkey-kube-monkey -n default`{{execute}}
-
-
