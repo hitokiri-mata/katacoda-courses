@@ -1,6 +1,6 @@
 # KubeInvaders on Kubernetes #
 
-> Adopting chaos engineering strategies for your production environment is really useful, because it is the only way to test if a system supports unexpected destructive events.
+> Adopting chaos engineering strategies for your production environment is useful, because it is the only way to test if a system supports unexpected destructive events.
 
 <img align="right" src="/javajon/courses/kubernetes-chaos/kubeinvaders/assets/kubeinvaders.gif" width=500>
 

@@ -19,6 +19,10 @@ helm install dash stable/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
+# Install pygmentize for source hilighting
+apt-get -y install python-pygments
+alias catc='pygmentize -g'
+
 source <(kubectl completion bash)
 source <(helm completion bash)
 
