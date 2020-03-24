@@ -2,6 +2,10 @@
 
 launch.sh
 
+# Install pygmentize for source hilighting
+apt-get -y install python-pygments
+alias catc='pygmentize -g'
+
 # Helm Setup (v3.1.2)
 FOLDER=helmer
 mkdir $FOLDER && pushd $FOLDER
@@ -18,10 +22,6 @@ helm install dash stable/kubernetes-dashboard \
 --set=enableInsecureLogin=true \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
-
-# Install pygmentize for source hilighting
-apt-get -y install python-pygments
-alias catc='pygmentize -g'
 
 source <(kubectl completion bash)
 source <(helm completion bash)
