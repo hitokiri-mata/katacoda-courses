@@ -1,12 +1,17 @@
 {
     "title": "Kubernetes Chaos",
     "icon": "fa-kubernetes",
-    "description": "Discover different technique to embrace Chaos Engingeeering on Kubernetes.",
+    "description": "Discover different techniques to embrace Chaos Engineering on Kubernetes.",
     "courses": [
       {
         "course_id": "kubeinvaders",
         "title": "KubeInvaders",
         "description": "Destroy Pods as if they were aliens."
+      },
+      {
+        "course_id": "kube-monkey",
+        "title": "Kube Monkey",
+        "description": "Randomly delete Kubernetes Pods to encourage development of failure-resilient services."
       }
     ]
   }
