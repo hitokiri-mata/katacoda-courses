@@ -1,6 +1,6 @@
 # Kube Monkey on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-chaos/kube-monkey/assets/jilbert-ebrahimi-pVEcNabAg9o-unsplash.jpg" width=500>
+<img align="right" alt="Credit: Photo by Jilbert Ebrahimi on Unsplash" title="Credit: Photo by Jilbert Ebrahimi on Unsplash" src="/javajon/courses/kubernetes-chaos/kube-monkey/assets/jilbert-ebrahimi-pVEcNabAg9o-unsplash.jpg" width=400>
 
 > Adopting chaos engineering strategies for your production environment is useful, because it is the only way to test if a system supports unexpected destructive events.
 
