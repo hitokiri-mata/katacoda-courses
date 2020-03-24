@@ -4,7 +4,7 @@ Create a namespace for the game application.
 
 Grab the source code that contains the Helm chart.
 
-`git clone https://github.com/asobti/kube-monkey && cd kube-monkey/helm`{{execute}}
+`git clone https://github.com/asobti/kube-monkey && pushd kube-monkey/helm`{{execute}}
 
 Install Kube Monkey using the Helm chart.
 
@@ -16,6 +16,10 @@ Install Kube Monkey using the Helm chart.
   --set config.debug.schedule_immediate_kill=true
 ```{{execute}}
 
+Return to the default directory.
+
+`popd`{{execute}}
+
 Check the deployment and ensure it starts.
 
 `kubectl -n default rollout status deployment my-monkey-kube-monkey`{{execute}}
@@ -24,4 +28,6 @@ Normally, the debug setting would not be set to true and the period of when Kube
 
 You can periodically check the Kube Monkey log to see its scheduling events and Pod killing activity.
 
-`kubectl logs -f deployment.apps/my-monkey-kube-monkey -n default`{{execute}}
+`kubectl logs deployment.apps/my-monkey-kube-monkey -n default`{{execute}}
+
+
