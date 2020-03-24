@@ -10,7 +10,7 @@ Next, add a few more Pods to a second namespace.
 
 The Deployments and Pods are labeled to both mark these Pods a potential victim targets of the Kube Monkey Pod killer. They are also labeled for easy observability. See the labels applied to the deployment and Pod template.
 
-`pygmentize -g nginx.yaml`{{execute}}
+`ccat nginx.yaml`{{execute}}
 
 The labels used for opting in Pods as potential chaos victims are documents in the [Kube Monkey readme](https://github.com/asobti/kube-monkey#opting-in-to-chaos).
 

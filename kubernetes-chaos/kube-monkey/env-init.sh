@@ -2,8 +2,9 @@
 
 launch.sh
 
-# Install pygmentize for source hilighting
-apt -y -q install python-pygments
+# Allow pygmentize for source hilighting
+echo 'alias ccat="docker run -it -v \"$(pwd)\":/workdir -w /workdir whalebrew/pygmentize"' >> ~/.bashrc
+source ~/.bashrc
 
 # Helm Setup (v3.1.2)
 FOLDER=helmer
