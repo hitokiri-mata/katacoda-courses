@@ -1,5 +1,7 @@
 # Kube Monkey on Kubernetes #
 
+<img align="right" src="/javajon/courses/kubernetes-chaos/kube-monkey/assets/jilbert-ebrahimi-pVEcNabAg9o-unsplash.jpg" width=500>
+
 > Adopting chaos engineering strategies for your production environment is useful, because it is the only way to test if a system supports unexpected destructive events.
 
 **Kube Monkey** is an implementation of Netflix’s chaos monkey for Kubernetes clusters. It periodically schedules a list of pods termination events to test the fault tolerance of your highly available system.
