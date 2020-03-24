@@ -4,7 +4,6 @@ launch.sh
 
 # Install pygmentize for source hilighting
 apt-get -y install python-pygments
-alias catc='pygmentize -g'
 
 # Helm Setup (v3.1.2)
 FOLDER=helmer
