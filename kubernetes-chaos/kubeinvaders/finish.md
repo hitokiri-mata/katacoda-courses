@@ -17,6 +17,7 @@ While this example is lighthearted, it highlights the importance of [chaos engin
 ## References ##
 
 - [Kubernetes blog](https://kubernetes.io/blog/2020/01/22/kubeinvaders-gamified-chaos-engineering-tool-for-kubernetes/)- [Eugenio Marzo blog](https://devopstribe.it/)
+- [Principles of Chaos Engineering](http://principlesofchaos.org/)
 - [Fallacies of Distributed Computing Explained (PDF)](http://www.rgoarchitects.com/Files/fallacies.pdf)
 - [Eugenio Marzo](https://www.linkedin.com/in/eugenio-marzo-646a6742/?originalSubdomain=it)
 - [KubeInvaders GitHub](https://github.com/lucky-sideburn/KubeInvaders)
