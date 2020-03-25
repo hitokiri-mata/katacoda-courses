@@ -12,6 +12,6 @@ The Deployments and Pods are labeled to both mark these Pods a potential victim 
 
 `ccat nginx.yaml`{{execute}}
 
-The labels used for opting in Pods as potential chaos victims are documents in the [Chaoskube readme](https://github.com/helm/charts/tree/master/stable/chaoskube#configuration).
+The deployment and Pod template have the label `app-purpose: chaos` which make the Pod an eligible target for Chaoskube since that was the label target provided as a configuration value in the Helm chart installation.
 
 In the next step, observe the running containers and how they are randomly disrupted.

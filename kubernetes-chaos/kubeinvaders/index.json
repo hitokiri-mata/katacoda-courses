@@ -3,7 +3,7 @@
   "title": "KubeInvaders",
   "description": "Destroy Pods as if they were aliens.",
   "difficulty":	"Introduction",
-  "time":	"10 minutes",
+  "time":	"15 minutes",
   "details": {
     "steps": [
       {

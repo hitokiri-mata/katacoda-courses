@@ -3,7 +3,7 @@
   "title": "Chaoskube",
   "description": "Periodically kills random pods in your Kubernetes cluster.",
   "difficulty":	"Introduction",
-  "time":	"10 minutes",
+  "time":	"15 minutes",
   "details": {
     "steps": [
       {

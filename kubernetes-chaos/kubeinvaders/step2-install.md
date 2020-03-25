@@ -8,7 +8,15 @@ Grab the source code that contains the Helm chart.
 
 Install the game using the Helm chart.
 
-`helm install kubeinvaders ./helm-charts/kubeinvaders --version 0.1.1 --namespace kubeinvaders --set service.type=NodePort --set ingress.enabled=false --set target_namespace="default\,more-apps" --set route_host=[[HOST_SUBDOMAIN]]-30016-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+```
+helm install kubeinvaders ./helm-charts/kubeinvaders \
+--version 0.1.1 \
+--namespace kubeinvaders \
+--set service.type=NodePort \
+--set ingress.enabled=false \
+--set target_namespace="default\,more-apps" \
+--set route_host=[[HOST_SUBDOMAIN]]-30016-[[KATACODA_HOST]].environments.katacoda.com
+```{{execute}}
 
 Change the service NodePort value to the same one specified as the Helm chart parameter. (This is a workaround as the Helm chart does not currently have the ability to specify the NodePort value.)
 

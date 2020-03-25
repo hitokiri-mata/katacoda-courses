@@ -3,7 +3,7 @@
   "title": "Kube Monkey",
   "description": "Randomly delete Kubernetes Pods to encourage development of failure-resilient services.",
   "difficulty":	"Introduction",
-  "time":	"10 minutes",
+  "time":	"15 minutes",
   "details": {
     "steps": [
       {

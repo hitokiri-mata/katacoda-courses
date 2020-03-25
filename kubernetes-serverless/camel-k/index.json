@@ -46,7 +46,7 @@
     },
     "assets": {
       "master": [
-        {"file": "*", "target": "~/"},
+        {"file": "*.yaml", "target": "~/"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }

@@ -10,4 +10,4 @@ You will learn how:
 
 - to install Kube Monkey onto Kubernetes
 - to enable Kube Monkey demo mode to quickly see it in action
-- to install and label applications to them eligible targets for chaos
+- to install and label applications to make them eligible targets for chaos

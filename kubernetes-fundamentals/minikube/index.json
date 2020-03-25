@@ -50,7 +50,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"}      ]
+        {"file": "*.yaml", "target": "/root"}      ]
     }
   },
   "environment": {
