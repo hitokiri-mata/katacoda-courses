@@ -12,7 +12,13 @@
         "course_id": "kube-monkey",
         "title": "Kube Monkey",
         "description": "Randomly delete Kubernetes Pods to encourage development of failure-resilient services."
+      },
+      {
+        "course_id": "chaoskube",
+        "title": "Chaoskube",
+        "description": "Periodically kills random pods in your Kubernetes cluster."
       }
+
     ]
   }
   

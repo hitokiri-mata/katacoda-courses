@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "chaoskube",
   "title": "Chaoskube",
-  "description": "Randomly delete Kubernetes Pods to encourage development of failure-resilient services.",
+  "description": "Periodically kills random pods in your Kubernetes cluster.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
