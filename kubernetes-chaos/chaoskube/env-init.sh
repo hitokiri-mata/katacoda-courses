@@ -11,7 +11,7 @@ source ~/.bashrc
 HELM_VERSION=v3.1.2
 FOLDER=helmer
 mkdir $FOLDER && pushd $FOLDER
-curl -fsSL -o helm.gz https://get.helm.sh/helm-$(HELM_VERSION)-linux-amd64.tar.gz
+curl -fsSL -o helm.gz https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz
 tar -zxvf helm.gz
 mv ./linux-amd64/helm /usr/local/bin
 popd && rm -rf $FOLDER
