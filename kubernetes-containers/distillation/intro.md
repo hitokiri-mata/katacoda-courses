@@ -1,6 +1,6 @@
 # Distilled JRE Apps in Containers #
 
-<img align="right" src="/javajon/courses/kubernetes-fundamentals/distillation/assets/java-distillation.png" width="500">
+<img align="right" src="/javajon/courses/kubernetes-containers/distillation/assets/java-distillation.png" width="500">
 
 The scenario walks through a series of steps for distilling a container to its minimum to support your Java application.
 

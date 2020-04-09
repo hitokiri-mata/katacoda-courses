@@ -1,0 +1,18 @@
+{
+    "title": "Containers for Kubernetes",
+    "icon": "fa-kubernetes",
+    "description": "Learn how to to build distilled containers, expecially when they run on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "go",
+        "title": "Go Apps in Containers",
+        "description": "Packaging a Go Application in a Container."
+      },
+      {
+        "course_id": "distillation",
+        "title": "Distilling Java Containers",
+        "description": "Applying the Container Distillation Pattern for Java based applications."
+      }
+    ]
+  }
+  

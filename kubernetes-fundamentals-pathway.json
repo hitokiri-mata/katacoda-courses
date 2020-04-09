@@ -49,11 +49,6 @@
         "description": "From a blank slate to a Spring Boot app running on Kubernetes."
       },
       {
-        "course_id": "distillation",
-        "title": "Distilling Java Containers",
-        "description": "Applying the Container Distillation Pattern for Java based applications."
-      },
-      {
         "course_id": "playground-1.17",
         "title": "Kubernetes 1.17 Playground",
         "description": "A place to experiment with Kubernetes 1.17"
