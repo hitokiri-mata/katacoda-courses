@@ -2,8 +2,8 @@
 
 launch.sh
 
-# Force an extra newline after curl commands
-echo '-w "\n"' > ~/.curlrc
+# Common curl switches
+echo '-s' > ~/.curlrc
 
 # Allow pygmentize for source hilighting
 docker pull whalebrew/pygmentize

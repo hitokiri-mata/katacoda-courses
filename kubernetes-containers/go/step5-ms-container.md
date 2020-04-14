@@ -64,7 +64,7 @@ The container is built and slightly larger than the _Basic_ application, but sti
 
 Run the application from the container.
 
-`docker run --name restafarian-gin restafarian-gin:0.0.1 | jq .`{{execute T1}}
+`docker run --name restafarian-gin restafarian-gin:0.0.1`{{execute T1}}
 
 Obtain the IP of the running container to be used in the curl commands.
 
