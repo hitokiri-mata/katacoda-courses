@@ -52,14 +52,16 @@ and now the service lists the address for this exposed service's NodePort.
 
 `kubectl get services`{{execute}}.
 
+Obtain the public URL to the service.
+
+`SERVICE_URL=$(https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com)`{{execute}}
+
 The REST interface for restafarian service can invoked like before.
 
-SERVICE_URL=$(https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com)
+`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 
-`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" $SERVICE_URL/ideas/v1/ | jq .`{{execute T2}}
+`curl --data "topic=Cancer&idea=Schedule+my+next+scan" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 
-`curl --data "topic=Cancer&idea=Schedule+my+next+scan" $SERVICE_URL/ideas/v1/ | jq .`{{execute T2}}
-
-`curl $SERVICE_URL/ideas/v1/ | jq .`{{execute T2}}
+`curl $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 
 There is much to explore in Go, especially when you run applications as microservices packaged in containers. This scenario has started you on that path.
