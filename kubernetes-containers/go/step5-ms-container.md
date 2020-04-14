@@ -28,33 +28,33 @@ With the application serving on a port, you can exercise the REST calls. The cal
 
 List the ideas.
 
-`curl http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl http://localhost:8080/ideas/v1/ | jq .`{{execute T2}}
 
 The model starts with one idea. Add some new ideas.
 
-`curl --data "topic=Pomodoro Technique&idea=Install+timer+app" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Pomodoro Technique&idea=Install+timer+app" http://localhost:8080/ideas/v1/ | jq .`{{execute T2}}
 
-`curl --data "topic=Learning&idea=Explore+some+scenarios" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Learning&idea=Explore+some+scenarios" http://localhost:8080/ideas/v1/ | jq .`{{execute T2}}
 
-`curl http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl http://localhost:8080/ideas/v1/ | jq .`{{execute T2}}
 
 Edit one of the ideas.
 
-`curl --data "topic=Learning&idea=Explore+more+Kubernetes+with+Katacodas" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
+`curl --data "topic=Learning&idea=Explore+more+Kubernetes+with+Katacodas" -X PATCH http://localhost:8080/ideas/v1/3 | jq .`{{execute T2}}
 
 And verify the change
 
-`curl http://localhost:8080/ideas/v1/3`{{execute T2}}
+`curl http://localhost:8080/ideas/v1/3 | jq .`{{execute T2}}
 
 Now that you installed the Pomodoro time app, you can delete the idea.
 
-`curl -X "DELETE" http://localhost:8080/ideas/v1/2`{{execute T2}}
+`curl -X "DELETE" http://localhost:8080/ideas/v1/2 | jq .`{{execute T2}}
 
 So you see the microservice application works and is ready for containerization. Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Container
 
-This application is placed into a container just as we did with the previous example with the _Basic_ application using a multi-stage Docker file.
+This application is placed into a container just as we did with the previous example with the _Basic_ application using a multi-stage Dockerfile.
 
 `docker build -t restafarian-gin:0.0.1 .`{{execute T1}}
 
@@ -64,7 +64,7 @@ The container is built and slightly larger than the _Basic_ application, but sti
 
 Run the application from the container.
 
-`docker run --name restafarian-gin restafarian-gin:0.0.1`{{execute T1}}
+`docker run --name restafarian-gin restafarian-gin:0.0.1 | jq .`{{execute T1}}
 
 Obtain the IP of the running container to be used in the curl commands.
 
@@ -72,10 +72,10 @@ Obtain the IP of the running container to be used in the curl commands.
 
 Like before, you can send the REST commands.
 
-`curl http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
+`curl http://SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
 
-`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
 
-`curl http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
+`curl http://SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
 
 Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

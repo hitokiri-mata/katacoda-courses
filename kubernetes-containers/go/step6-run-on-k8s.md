@@ -30,7 +30,7 @@ Run the container you built in the previous step on your Kubernetes cluster. The
 
 `kubectl run restafarian --image=$REGISTRY/restafarian-gin:0.0.1 --generator=run-pod/v1 --port=8080`{{execute}}
 
-Even if you have never used Kubernetes, this command should look fairly similar to the Docker run commands. Now inspect the installation in progress.
+Even if you have never used Kubernetes, this command should look fairly similar to the `docker run` commands. Now inspect the installation in progress.
 
 `kubectl get pods`{{execute}}
 
@@ -54,8 +54,10 @@ and now the service lists the address for this exposed service's NodePort.
 
 The REST interface for restafarian service can invoked like before.
 
-`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
+`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/ | jq .`{{execute T2}}
 
-`curl --data "topic=Cancer&idea=Schedule+my+next+scan" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
+`curl --data "topic=Cancer&idea=Schedule+my+next+scan" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/ | jq .`{{execute T2}}
 
-`curl https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/ideas/v1/`{{execute T2}}
+`curl https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/ideas/v1/ | jq .`{{execute T2}}
+
+There is much to explore in Go, especially when you run applications as microservices packaged in containers. This scenario has started you on that path.

@@ -39,7 +39,7 @@ Now, run it.
 
 `docker run hello:0.0.1 `{{execute}}
 
-With just a few lines of code both the application source and the Dockerfile source define the execution. With the Docker build and run commands the application is running. That was easy.
+With just a few lines of code both the application source and the Dockerfile source define the execution. With the container build and run commands the application is running. That was easy.
 
 However, there are a few problems with the container.
 

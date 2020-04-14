@@ -2,13 +2,13 @@
 
 launch.sh
 
+# Force an extra newline after curl commands
+echo '-w "\n"' > ~/.curlrc
+
 # Allow pygmentize for source hilighting
 docker pull whalebrew/pygmentize
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
 source ~/.bashrc
-
-# Force an extra newline after curl commands
-echo '-w "\n"' >> ~/.curlrc
 
 # Helm setup
 HELM_VERSION=v3.1.2
