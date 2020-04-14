@@ -79,4 +79,3 @@ Like before, you can send the REST commands.
 `curl http://$SERVICE_IP/ideas/v1/ | jq .`{{execute T2}}
 
 Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-
