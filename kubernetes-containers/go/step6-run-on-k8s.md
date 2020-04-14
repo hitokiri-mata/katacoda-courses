@@ -54,7 +54,7 @@ and now the service lists the address for this exposed service's NodePort.
 
 The REST interface for restafarian service can invoked like before.
 
-`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awareness+month" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
+`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
 
 `curl --data "topic=Cancer&idea=Schedule+my+next+scan" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
 

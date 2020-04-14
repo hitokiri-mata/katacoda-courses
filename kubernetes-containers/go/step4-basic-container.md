@@ -41,7 +41,7 @@ Even though Basic is a larger application than Hello, the container image is *mu
 
 > Keep as few things as possible in your image. If you can compile your app into a single statically linked binary, adding this binary to the scratch image allows you to get a final image that contains only your app and nothing else. By reducing the number of tools packaged in your image, you reduce what a potential attacker can do in your container. For more information, see Build the smallest image possible. --[Google Cloud docs](https://cloud.google.com/solutions/best-practices-for-building-containers#file_system_content)
 
-**If you are going to package Go in containers, use this multi-stage technique.**
+**If you are going to package Go based applications in containers, use this multi-stage technique and only ship the compiled binary form of the app.**
 
 Run the application from the container and see if the weather has changed.
 
