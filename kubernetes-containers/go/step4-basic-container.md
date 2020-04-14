@@ -21,7 +21,7 @@ The application has a single dependency. The dependency is already defined in th
 
 With the dependency installed, run the app.
 
-`go run main.go`{{execute}}
+`go run *.go`{{execute}}
 
 Delightful, there is the weather. The interesting part in this step is how to package the application in a container.
 

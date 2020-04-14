@@ -22,7 +22,7 @@ Nothing here is more than 100 lines of code and hopefully it's clean enough for 
 
 Before we get into containers, let's run the application.
 
-`go run main.go`{{execute}}
+`go run *.go`{{execute}}
 
 With the application serving on a port, you can exercise the REST calls. The calls will be invoked in a separate terminal.
 
