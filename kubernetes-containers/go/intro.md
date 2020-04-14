@@ -11,4 +11,4 @@ You will learn how:
 - package a Go microservice in a container
 - run a Go microservice on Kubernetes
 
-> [Go](https://golang.org/) Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+> [Go](https://golang.org/) is an open source programming language that makes it easy to build simple, reliable, and efficient software.

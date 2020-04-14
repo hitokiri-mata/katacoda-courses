@@ -6,13 +6,20 @@ The next step we look at a new application.
 
 The functionality is still simple in a single file, but builds a bit more logic. The application grabs weather data from the [MetaWeather source](https://www.metaweather.com/) and with some JSON fiddling it extracts the text description of the current weather in London. I'm sure you can guess what it might often say.
 
-> These are my two drops of rain Waiting on the window-pane... -- A. A. Milne
+> These are my two drops of rain
+> Waiting on the window-pane... -- A. A. Milne
 
 The code is in just three small functions.
 
 `ccat main.go`{{execute}}
 
 The application has some additional imports and dependencies, so using Go's module dependencies these have been added to the go.mod file. The key dependency is tidwall/gjson, a common API when you are writing microservices. Before we look at the container creation, let's see how the application works.
+
+The application has a single dependency. The dependency is already defined in the code in go.mod, but that is for a newer version of Go.  Thie Katacoda instance has an older version of Go installed.  We could upgrade Go, but instead will just use the old way of updating dependencies.
+
+`go get github.com/tidwall/gjson`{{execute}}
+
+With the dependency installed, run the app.
 
 `go run main.go`{{execute}}
 
