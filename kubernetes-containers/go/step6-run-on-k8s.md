@@ -56,6 +56,8 @@ Obtain the public URL to the service.
 
 `SERVICE_URL=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
+## Call REST API
+
 The REST interface for restafarian service can be invoked like before.
 
 `curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
