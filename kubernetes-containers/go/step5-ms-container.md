@@ -12,7 +12,7 @@ This application uses a 3rd party Go library called [**Gin**](https://github.com
 
 The main has 5 calls out to functions in the router code.
 
-`ccat router.go`{{execute}}
+`ccat routes.go`{{execute}}
 
 The router maps these REST contexts to the model functions.
 
@@ -32,15 +32,15 @@ List the ideas.
 
 The model starts with one idea. Add some new ideas.
 
-`curl --data "topic=Pomodoro Technique&idea=Install a timer app" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Pomodoro Technique&idea=Install+timer+app" http://localhost:8080/ideas/v1/`{{execute T2}}
 
-`curl --data "topic=Learning&idea=Explore some scenarios" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Learning&idea=Explore+some+scenarios" http://localhost:8080/ideas/v1/`{{execute T2}}
 
 `curl http://localhost:8080/ideas/v1/`{{execute T2}}
 
 Edit one of the ideas.
 
-`curl --data "topic=Learning&idea=Explore more Kubernetes with Katacodas" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
+`curl --data "topic=Learning&idea=Explore+more+Kubernetes+with+Katacodas" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
 
 And verify the change
 
@@ -68,7 +68,7 @@ Run the application from the container.
 
 Like before, you can send the same REST commands.
 
-`curl --data "topic=Learning&idea=What is Union of Concerned Scientists‎?" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://localhost:8080/ideas/v1/`{{execute T2}}
 `curl http://localhost:8080/ideas/v1/`{{execute T2}}
 
 Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
