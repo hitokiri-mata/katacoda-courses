@@ -2,6 +2,11 @@
 
 launch.sh
 
+# Allow pygmentize for source hilighting
+docker pull whalebrew/pygmentize
+echo 'alias ccat="docker run -it -v \"$(pwd)\":/workdir -w /workdir whalebrew/pygmentize"' >> ~/.bashrc
+source ~/.bashrc
+
 # Helm setup
 HELM_VERSION=v3.1.2
 curl -fsSL https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz | tar -zxvf - -C /usr/local/bin/ linux-amd64/helm --strip=1

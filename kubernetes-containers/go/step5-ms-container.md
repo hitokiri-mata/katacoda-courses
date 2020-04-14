@@ -1,0 +1,73 @@
+The last two examples showed a simple, socially awkward applications that say hello and talk about the weather. Nowadays most microservices stand up on seom ports and serve up JSON responses to REST based calls. Some developer use gRPC or GraphQL, but that's a separate topic and Katacoda. For this example we use a common go framework for handling REST events. The application allows to you maintain a list of ideas or notes. It's simple to just to show how to implementing the CRUD (Create, Read, Update, Delete) actions for a list of items. Take a look at the application source.
+
+`cd ~/go-examples/basic && ls -l`{{execute}}
+
+Notice there are three *.go files. The model hold the data structure for the list of items and the functions to manipulate the model. The routes are the functions that map the REST requests to the model functions to manipulate the items list. You might also call it the controller. Lasting the main is the entry point to the service that serves on a port. To start, take a look at the main.
+
+`ccat main.go`{{execute}}
+
+This application uses a 3rd party go library called [**Gin**](https://github.com/gin-gonic/gin). Gin is a HTTP framework for matching REST requests to functions. There are a few other popular Go based [HTTP Web frameworks](https://github.com/avelino/awesome-go#web-frameworks) out there, but this Gin project has a significant amount of GitHub stars due to its performance and simplicity. Not a bad choice, and forgive me if it's not the one you prefer.
+
+The main has 5 calls out to functions in the router.fo code.
+
+`ccat router.go`{{execute}}
+
+The router maps these REST contexts to the model functions.
+
+`ccat model.go`{{execute}}
+
+Nothing here is more than 100 lines of code and hopefully its easy for you to understand. This example does not include an actual datastore, as it's out of the scope of this scenario. Instead the _datastore_ is just an in memory array of _Ideas_. Each Idea is a Go structure with two elements, a topic and idea text. The application simply lists, creates, delete and updated these ideas.
+
+Before we get into containers, let's run the application.
+
+`go run main.go`{{execute}}
+
+With the application servering on a port, you can exercise the REST calls. The calls will be invoked in a separate terminal.
+
+List the ideas.
+
+`curl http://localhost:8080/ideas/v1/`{{execute}}
+
+The model starts with one idea. Add some new ideas.
+
+`curl --data "topic=Pomodoro Technique&idea=Install a timer app" http://localhost:8080/ideas/v1/`{{execute T2}}
+
+`curl --data "topic=Learning&idea=Explore some scenarios" http://localhost:8080/ideas/v1/`{{execute T2}}
+
+`curl http://localhost:8080/ideas/v1/`{{execute T2}}
+
+Edit one of the ideas.
+
+`curl --data "topic=Learning&idea=Explore more Katacodas on Kubernetes" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
+
+And verify the change
+
+`curl http://localhost:8080/ideas/v1/3`{{execute T2}}
+
+Now that you installed the Pomodoro time app, you can delete the idea.
+
+`curl -X "DELETE" http://localhost:8080/ideas/v1/2`{{execute T2}}
+
+So you see the microservice application works and is ready for containerization. Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+# Container
+
+This application is placed into a container just as we did with the previous example with the _Basic_ application using a multi-stage Docker file.
+
+`docker build -t restafarian-gin:0.0.1`{{execute T1}}
+
+The container is built and slightly larger than the _Basic_ application, but still significantly smaller than the _Hello_ application.
+
+`docker images | grep restafarian`{{execute T1}}
+
+Run the application from the container.
+
+`docker run restafarian-gin:0.0.1`{{execute T1}}
+
+Like before, you can send the same REST commands.
+
+`curl --data "topic=Learning&idea=What is Union of Concerned Scientists‎?" http://localhost:8080/ideas/v1/`{{execute T2}}
+`curl http://localhost:8080/ideas/v1/`{{execute T2}}
+
+Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
