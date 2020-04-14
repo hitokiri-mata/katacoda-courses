@@ -54,7 +54,7 @@ and now the service lists the address for this exposed service's NodePort.
 
 Obtain the public URL to the service.
 
-`SERVICE_URL=$(https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com)`{{execute}}
+`SERVICE_URL=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
 The REST interface for restafarian service can invoked like before.
 
