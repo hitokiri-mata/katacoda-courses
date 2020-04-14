@@ -14,22 +14,27 @@
       },
       {
         "title": "Small Go Service",
-        "text": "step2-app.md",
+        "text": "step2-source.md",
         "code": "clear.sh"
       },
       {
         "title": "Basic Container",
-        "text": "step3-basic-container.md",
+        "text": "step3-hello.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Basic Container",
+        "text": "step4-basic-container.md",
         "code": "clear.sh"
       },
       {
         "title": "Multi-stage Container",
-        "text": "step4-ms-container.md",
+        "text": "step5-ms-container.md",
         "code": "clear.sh"
       },
       {
         "title": "Run on Kubernetes",
-        "text": "step5-run-on-k8s.md"
+        "text": "step6-run-on-k8s.md"
       }
     ],
     "intro": {
