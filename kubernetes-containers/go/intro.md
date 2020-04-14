@@ -1,7 +1,6 @@
 # Go Apps in Containers on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-containers/go/assets/golang.png">
-
+<img align="right" src="/javajon/courses/kubernetes-containers/go/assets/golang.png" width="300">
 These next steps provide an ideal place to start writing application in Go to run on Kubernetes. Each step will take you from raw Go code, to packaging it in a container to running your containered application on Kubernetes.
 
 You will learn how:

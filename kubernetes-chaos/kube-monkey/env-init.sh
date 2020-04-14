@@ -4,7 +4,7 @@ launch.sh
 
 # Allow pygmentize for source hilighting
 docker pull whalebrew/pygmentize
-echo 'alias ccat="docker run -it -v \"$(pwd)\":/workdir -w /workdir whalebrew/pygmentize"' >> ~/.bashrc
+echo 'function ccat { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize; }' >> ~/.bashrc
 source ~/.bashrc
 
 # Helm setup
