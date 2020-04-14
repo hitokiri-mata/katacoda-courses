@@ -72,10 +72,10 @@ Obtain the IP of the running container to be used in the curl commands.
 
 Like before, you can send the REST commands.
 
-`curl http://$SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
+`curl http://$SERVICE_IP/ideas/v1/ | jq .`{{execute T2}}
 
-`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://$SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
+`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://$SERVICE_IP/ideas/v1/ | jq .`{{execute T2}}
 
-`curl http://$SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
+`curl http://$SERVICE_IP/ideas/v1/ | jq .`{{execute T2}}
 
 Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
