@@ -6,7 +6,12 @@
       {
         "course_id": "go",
         "title": "Go Apps in Containers on Kubernetes",
-        "description": "Packaging a Go Application in a Container."
+        "description": "Packaging Go Applications in Containers."
+      },
+      {
+        "course_id": "springboot-to-k8s",
+        "title": "Spring Boot to Kubernetes",
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes."
       },
       {
         "course_id": "distillation",
