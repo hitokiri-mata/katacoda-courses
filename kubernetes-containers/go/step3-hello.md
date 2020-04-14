@@ -1,6 +1,6 @@
 To start, the Hello application is very small.
 
-`cd hello`{{execute}}
+`cd hello && ls -l`{{execute}}
 
 The `main.go` holds the only Go source.
 

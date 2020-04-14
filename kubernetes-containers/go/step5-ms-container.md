@@ -28,7 +28,7 @@ With the application serving on a port, you can exercise the REST calls. The cal
 
 List the ideas.
 
-`curl http://localhost:8080/ideas/v1/`{{execute}}
+`curl http://localhost:8080/ideas/v1/`{{execute T2}}
 
 The model starts with one idea. Add some new ideas.
 
@@ -40,7 +40,7 @@ The model starts with one idea. Add some new ideas.
 
 Edit one of the ideas.
 
-`curl --data "topic=Learning&idea=Explore more Katacodas on Kubernetes" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
+`curl --data "topic=Learning&idea=Explore more Kubernetes with Katacodas" -X PATCH http://localhost:8080/ideas/v1/3`{{execute T2}}
 
 And verify the change
 

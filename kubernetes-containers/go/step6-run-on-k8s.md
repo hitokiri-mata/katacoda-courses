@@ -1,4 +1,4 @@
-Up to now we have just been concentrating on Go and putting you applications in containers. This Katacoda instance also is a running Kubernetes cluster. 
+Up to now we have just been concentrating on Go and putting you applications in containers. This Katacoda instance also is a running Kubernetes cluster.
 
 `kubectl get componentstatus`{{execute}}
 
@@ -20,13 +20,15 @@ In a moment, once the registry is serving, inspect the contents of the empty reg
 
 Push your app container image to the private registry running on you Kubernetes cluster.
 
+`docker build -t $REGISTRY/restafarian-gin:0.0.1`{{execute}}
+
 `docker push $REGISTRY/restafarian-gin:0.0.1`{{execute}}
 
 ## Run Application
 
 Run the container you built in the previous step on your Kubernetes cluster. The container image comes from the registry.
 
-`kubectl run restafarian --image=restafarian-gin:0.0.1 --generator=run-pod/v1 --port=8080`{{execute}}
+`kubectl run restafarian --image=$REGISTRY/restafarian-gin:0.0.1 --generator=run-pod/v1 --port=8080`{{execute}}
 
 Even if you have never used Kubernetes, this command should look fairly similar to the Docker run commands. Now inspect the installation in progress.
 
@@ -52,8 +54,8 @@ and now the service lists the address for this exposed service's NodePort.
 
 The REST interface for restafarian service can invoked like before.
 
-`curl --data "topic=Cancer&idea=October is Breast Cancer Awareness month" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
+`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awareness+month" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
 
-`curl --data "topic=Cancer&idea=Schedule my next scan" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
+`curl --data "topic=Cancer&idea=Schedule+my+next+scan" https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com//ideas/v1/`{{execute T2}}
 
 `curl https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/ideas/v1/`{{execute T2}}

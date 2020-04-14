@@ -10,6 +10,8 @@ There is already a local version of Go tools installed for this Katacoda instanc
 
 `go version`{{execute}}
 
+> **If the version is less than version `1.12.6` this this Katacoda instance started with the wrong version. This happens sometimes and is a known problem. If this is the case restart this scenario until the version is correct.**
+
 `go env`{{execute}}
 
 The next step will explore a fundamental Hello Go application.
