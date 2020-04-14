@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "pathwayTitle": "go",
   "title": "Go Apps in Containers on Kubernetes",
   "description": "Packaging a Go Application in a Container.",
