@@ -64,11 +64,18 @@ The container is built and slightly larger than the _Basic_ application, but sti
 
 Run the application from the container.
 
-`docker run restafarian-gin:0.0.1`{{execute T1}}
+`docker run --name restafarian-gin restafarian-gin:0.0.1`{{execute T1}}
 
-Like before, you can send the same REST commands.
+Obtain the IP of the running container to be used in the curl commands.
 
-`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://localhost:8080/ideas/v1/`{{execute T2}}
-`curl http://localhost:8080/ideas/v1/`{{execute T2}}
+`SERVICE_IP=$(docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' restafarian-gin)`{{execute}}
+
+Like before, you can send the REST commands.
+
+`curl http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
+
+`curl --data "topic=Learning&idea=What+is+Union+of+Concerned+Scientists‎?" http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
+
+`curl http://SERVICE_IP:8080/ideas/v1/`{{execute T2}}
 
 Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
