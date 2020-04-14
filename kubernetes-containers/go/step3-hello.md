@@ -29,7 +29,7 @@ In just a few lines it defines:
 
 Given this Dockerfile, create the container image.
 
-`docker build -it hello:0.0.1 .`{{execute}}
+`docker build -t hello:0.0.1 .`{{execute}}
 
 This image is built.
 

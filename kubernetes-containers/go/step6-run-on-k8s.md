@@ -2,11 +2,33 @@ Up to now we have just been concentrating on Go and putting you applications in 
 
 `kubectl get componentstatus`{{execute}}
 
-Run the container you built in the previous step on your Kubernetes cluster.
+## Install Registry
+
+We need a registry where Kubernetes can pull the restafarian container so first install the registry on Kubernetes.
+
+`helm install registry stable/docker-registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
+
+Assign an environment variable to the common registry location.
+
+`export REGISTRY=[[HOST_SUBDOMAIN]]-31500-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+
+In a moment, once the registry is serving, inspect the contents of the empty registry.
+
+`curl $REGISTRY/v2/_catalog`{{execute}}
+
+## Push to Registry
+
+Push your app container image to the private registry running on you Kubernetes cluster.
+
+`docker push $REGISTRY/restafarian-gin:0.0.1`{{execute}}
+
+## Run Application
+
+Run the container you built in the previous step on your Kubernetes cluster. The container image comes from the registry.
 
 `kubectl run restafarian --image=restafarian-gin:0.0.1 --generator=run-pod/v1 --port=8080`{{execute}}
 
-Evening if you have never used Kubernetes, this command should look fairly similar to the Docker run commands. Now inspect the installation in progress.
+Even if you have never used Kubernetes, this command should look fairly similar to the Docker run commands. Now inspect the installation in progress.
 
 `kubectl get pods`{{execute}}
 

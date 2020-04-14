@@ -1,7 +1,7 @@
 {
   "private": "true",
   "pathwayTitle": "go",
-  "title": "Go Apps in Containers",
+  "title": "Go Apps in Containers on Kubernetes",
   "description": "Packaging a Go Application in a Container.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
@@ -13,22 +13,22 @@
         "code": "clear.sh"
       },
       {
-        "title": "Small Go Service",
+        "title": "Grab Some Source",
         "text": "step2-source.md",
         "code": "clear.sh"
       },
       {
-        "title": "Basic Container",
+        "title": "Smallest Go App",
         "text": "step3-hello.md",
         "code": "clear.sh"
       },
       {
-        "title": "Basic Container",
+        "title": "Basic App Container",
         "text": "step4-basic-container.md",
         "code": "clear.sh"
       },
       {
-        "title": "Multi-stage Container",
+        "title": "Microservice App Container",
         "text": "step5-ms-container.md",
         "code": "clear.sh"
       },
@@ -58,9 +58,7 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Nginx-One", "port": 31111},
-      {"name": "Nginx-Two", "port": 31112}
+      {"name": "Kubernetes Dashboard", "port": 30000}
     ]
   },
   "backend": {

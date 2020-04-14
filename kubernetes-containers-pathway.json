@@ -5,7 +5,7 @@
     "courses": [
       {
         "course_id": "go",
-        "title": "Go Apps in Containers",
+        "title": "Go Apps in Containers on Kubernetes",
         "description": "Packaging a Go Application in a Container."
       },
       {

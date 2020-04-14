@@ -1,25 +1,26 @@
 # Conclusion #
 
-You now understand two different techniques for starting a container on Kubernetes. Nginx is a commonly used for serving up web contents and as you can see is easy to start on Kubernetes. There are thousands of other containers that can easily be started with these same basic steps.
+You now understand different techniques for writing Go apps and packaging them in efficient containers for Kubernetes. Go is a popular language to write containerized apps. The language was designed for simplicity and efficiency. These are attractive goals when you are writing many application containers for Kubernetes.
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to use the basics of the kubectl CLI tool,
-- &#x2714; how to install Nginx on Kubernetes,
-- &#x2714; how containers are deployed as Deployments in Pods,
-- &#x2714; how a Service can provide access to a replication of Pods.
+- &#x2714; how to write some basic Go applications,
+- &#x2714; how to write a basic microservice in Go,
+- &#x2714; how to package a Go microservice in a container,
+- &#x2714; how to run a Go microservice on Kubernetes.
 
-Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target. If you are considering deploying multiple containers that make up a larger solution consider layering on Helm as a package manager for these manifests.
+Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target. 
 
 ## References ##
 
-- [Nginx](https://www.nginx.com/)
-- [Managing Resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
-- [Round robin load balancing](https://en.wikipedia.org/wiki/Round-robin_DNS)
-- [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-- [Helm, a package manager for Kubernetes](https://helm.sh/)
+- [GoLang](https://www.nginx.com/)
+- [GoLang Releases](https://golang.org/doc/devel/release.html))
+- [Scratch Containers](https://cloud.google.com/solutions/best-practices-for-building-containers#file_system_content)
+- [Gin](https://github.com/gin-gonic/gin)
+- [Multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+- [MetaWeather source](https://www.metaweather.com/)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
