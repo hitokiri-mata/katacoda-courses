@@ -1,22 +1,27 @@
 {
     "title": "Containers for Kubernetes",
     "icon": "fa-kubernetes",
-    "description": "Learn how to to build distilled containers, expecially when they run on Kubernetes.",
-    "courses": [
+    "description": "Learn how to build distilled containers, expecially when they run on Kubernetes.",
+    "courses": [    
+      {
+        "course_id": "oci",
+        "title": "OCI Containers",
+        "description": "Disecting the OCI container format"
+      },
       {
         "course_id": "go",
         "title": "Go Apps in Containers on Kubernetes",
-        "description": "Packaging Go Applications in Containers."
+        "description": "Packaging Go Applications in Containers"
       },
       {
         "course_id": "springboot-to-k8s",
         "title": "Spring Boot to Kubernetes",
-        "description": "From a blank slate to a Spring Boot app running on Kubernetes."
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes"
       },
       {
         "course_id": "distillation",
         "title": "Distilling Java Containers",
-        "description": "Applying the Container Distillation Pattern for Java based applications."
+        "description": "Applying the Container Distillation Pattern for Java based applications"
       }
     ]
   }
