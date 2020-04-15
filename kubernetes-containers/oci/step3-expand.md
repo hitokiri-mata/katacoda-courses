@@ -1,6 +1,6 @@
 Expand the Redis container image from the tar file.
 
-`tar -tf redis.tar`{{execute}}
+`tar -xf redis.tar`{{execute}}
 
 See the files.
 

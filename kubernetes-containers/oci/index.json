@@ -1,4 +1,5 @@
 {
+  "private": "true",
   "pathwayTitle": "oci",
   "title": "OCI Containers",
   "description": "Disecting the OCI container format",
@@ -13,7 +14,7 @@
       },
       {
         "title": "Pull and Save",
-        "text": "step2-save.md",
+        "text": "st ep2-save.md",
         "code": "clear.sh"
       },
       {
