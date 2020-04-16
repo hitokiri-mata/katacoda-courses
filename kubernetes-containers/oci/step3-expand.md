@@ -8,4 +8,4 @@ See the files.
 
 Inspect the manifest.json file.
 
-`ccat manifest.json`{{execute}}
+`cat manifest.json | jq .`{{execute}}
