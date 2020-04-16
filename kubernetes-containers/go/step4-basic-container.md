@@ -4,10 +4,14 @@ The next step we look at a new application.
 
 <img align="right" src="/javajon/courses/kubernetes-containers/go/assets/metaweather.png" width="200">
 
-The functionality is still simple in a single file, but builds a bit more logic. The application grabs weather data from the [MetaWeather source](https://www.metaweather.com/) and with some JSON fiddling it extracts the text description of the current weather in London. I'm sure you can guess what it might often say.
+The functionality is still simple in a single file, but builds a bit more logic. The application grabs weather data from the [MetaWeather source](https://www.metaweather.com/) and with some JSON fiddling it extracts the text description of the current weather in London. I'm sure you can guess what it might often say. These two English artists reflect the same sentiment.
 
 > These are my two drops of rain<br>
 > Waiting on the window-pane... -- A. A. Milne
+
+> And here, if I'm very much mistaken, comes the eclipse...<br>
+> Rain. Uh-hmm. Well, what a shame, the rain is beginning to come down now here at Lord's...<br>
+> -- Monty Python, Eclipse of the Sun
 
 The code is in just three small functions.
 
@@ -35,7 +39,7 @@ In the first Dockerfile for Hello, it has just one `FROM` statement. This Docker
 
 It takes a bit longer to build, but it's worth it.
 
-`docker images | grep hello && docker images | grep basic`{{execute}}
+`docker images | grep hello; docker images | grep basic`{{execute}}
 
 Even though Basic is a larger application than Hello, the container image is *much* smaller (8 MB vs 800 MB). Also notice that the base image of the last stage is `FROM scratch`. Since you just have a binary executable, this minimal, immutable layer is all you need.
 

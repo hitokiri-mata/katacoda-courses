@@ -60,7 +60,7 @@ Obtain the public URL to the service.
 
 The REST interface for restafarian service can be invoked like before.
 
-`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awarenessmonth" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
+`curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awareness+month" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 
 `curl --data "topic=Cancer&idea=Schedule+my+next+scan" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 
