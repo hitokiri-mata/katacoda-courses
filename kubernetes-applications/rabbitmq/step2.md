@@ -6,7 +6,7 @@ Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](http
 
 `helm install my-rabbit stable/rabbitmq-ha --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
-The RabbitMQ containers take a few minutes to start. To get a complete status of provisioning sequence run this inspection.
+The RabbitMQ containers take a few minutes to start. To get a complete status of provisioning this sequence, run this inspection.
 
 `watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
 

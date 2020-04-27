@@ -16,7 +16,7 @@ However, from outside of Kubernetes at this terminal, it cannot be easily reache
 
 `kubectl expose pod nginx-one --type=NodePort`{{execute}}
 
-Now check the service list and notice the nginx-one service now is listed with an high port number.
+Now check the service list and notice the nginx-one service now is listed with a high port number.
 
 `kubectl get services`{{execute}}.
 
@@ -28,6 +28,6 @@ and now the service lists the address for this exposed service's NodePort.
 
 `kubectl get services`{{execute}}.
 
-The web interface for nginx-one can be seen from the tab "Nginx-One" above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
+The web interface for nginx-one can be seen from the tab "Nginx-One" above the command line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 Next, let's explore a better way to deploy the same application.

@@ -1,4 +1,4 @@
-Kubernetes relies on manifests as declarations for desired the state of the cluster. When you submit a manifest, the Kubernetes components such as the controller, scheduler and Kubelets will busily help you by accepting this new state and ensure the cluster matches the declaration you specified. Nothing you do with Kubernetes is scripted with long and imperative scripts. Instead, a series of declarative manifests simply state the truth and the Kubernetes reconciliation engine (controller) will ensure your statements of truth matches the reality of the cluster. If it does not, notifications can be queried or published.
+Kubernetes relies on manifests as declarations for the desired state of the cluster. When you submit a manifest, the Kubernetes components such as the controller, scheduler, and Kubelets will busily help you by accepting this new state and ensure the cluster matches the declaration you specified. Nothing you do with Kubernetes is scripted with long and imperative scripts. Instead, a series of declarative manifests simply state the truth and the Kubernetes reconciliation engine (controller) will ensure your statements of truth matches the reality of the cluster. If it does not, notifications can be queried or published.
 
 Inspect the declaration for Nginx.
 
@@ -10,7 +10,7 @@ Let's send this manifest declaration to our Kubernetes cluster.
 
 `kubectl create -f nginx.yaml`{{execute}}
 
-Notice the manifest defines both a `Kind: Deployment` and a `Kind: Service`. The Deployment defines the Nginx in a container and in a Pod. The Service provides an access point and load balancer in front of the Pod. This specific deployment has three Pods specified.
+Notice the manifest defines both a `Kind: Deployment` and a `Kind: Service`. The Deployment defines the Nginx in a container and a Pod. The Service provides an access point and load balancer in front of the Pod. This specific deployment has three Pods specified.
 
 As we did in the previous step, inspect the starting resources. This time they are named `nginx-two`.
 
@@ -18,12 +18,12 @@ As we did in the previous step, inspect the starting resources. This time they a
 
 Notice in this deployment there are three Pods declared. The Service will load balance between the Pods, round-robin style.
 
-Once available, you can exercise the new Service two ways. First, simply from the command line.
+Once available, you can exercise the new Service in two ways. First, simply from the command line.
 
 `curl https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
-The same web interface for "nginx-one" can also be seen in your browser from the "nginx-two" tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com
+The same web interface for "nginx-one" can also be seen in your browser from the "nginx-two" tab above the command line area or this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com
 
-As an alternative to the kubectl CLI you can also observe the Pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
+As an alternative to the kubectl CLI, you can also observe the Pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
 
 `token.sh`{{execute}}
