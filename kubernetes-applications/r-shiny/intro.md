@@ -1,6 +1,6 @@
 # Shiny R Applications on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-applications/r-shiny/assets/shiny.png">
+<img align="right" src="./assets/shiny.png">
 
 Interact. Analyze. Communicate.
 
@@ -13,4 +13,4 @@ You will learn how:
 - containers are deployed as Deployments in Pods
 - a Service can provide access to a Pod
 
-[Shiny](https://shiny.rstudio.com/) is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, html widgets, and JavaScript actions.
+[Shiny](https://shiny.rstudio.com/) is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, HTML widgets, and JavaScript actions.

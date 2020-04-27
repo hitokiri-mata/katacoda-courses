@@ -1,6 +1,6 @@
 # Conclusion #
 
-Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/) are quite helpful. But sometimes, what the community offers is not what you you need. Fortunately, you can code you own plugin to solve specific problems related to your domain. If you do create a plugin that can help others, consider adding it to the public community of kubectl plugins.
+Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/) are quite helpful. But sometimes, what the community offers is not what you need. Fortunately, you can code you own plugin to solve specific problems related to your domain. If you do create a plugin that can help others, consider adding it to the public community of kubectl plugins.
 
 ## Lessons Learned ##
 
@@ -26,8 +26,8 @@ To [**Ken Sipe**](https://www.linkedin.com/in/kensipe/) as he inspired this scen
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-extensibility/kubectl-plugin-dev/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

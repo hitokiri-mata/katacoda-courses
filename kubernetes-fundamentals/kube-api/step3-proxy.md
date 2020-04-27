@@ -2,7 +2,7 @@ There is a proxy command that will allow you to access the cluster via localhost
 
 `kubectl proxy 8001&`{{execute}}
 
-Hit enter to ensure you get the shell prompt back. With this proxy you can access the Kubernetes API locally at the specified port.
+Hit enter to ensure you get the shell prompt back. With this proxy, you can access the Kubernetes API locally at the specified port.
 
 `curl localhost:8001`{{execute}}
 

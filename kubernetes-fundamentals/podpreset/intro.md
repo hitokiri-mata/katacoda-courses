@@ -1,6 +1,6 @@
 # Pod Presets #
 
-<img align="right" width="300" src="/javajon/courses/kubernetes-fundamentals/podpreset/assets/pod-inject.png">
+<img align="right" width="300" src="./assets/pod-inject.png">
 
 Pod Presets is a construct that was added in Kubernetes v1.10.
 
@@ -21,7 +21,7 @@ PodPresets allow Pod template authors to automate adding repetitive information 
 PodPreset: PodPresets allows setting a template for your pods. Upon pod creation, the controller iterates over all PodPresets and if your pod matches, the preset is applied to your pod. It can be useful to provide a baseline for all pods or attaching specific ConfigMap or Volumes to pods.
 
 When the Pod labels match an existing PodPreset with a matching label selector then preset values are injected into the Pod. One or more PodPresets can be matched to a Pod, as long as the values injected do not collide.
-Q: Is order of definition important?  Shouldn't be.
+Q: Is the order of definition important?  Shouldn't be.
 
 You can exclude specific pods from being injected using the podpreset.admission.kubernetes.io/exclude: "true".
 

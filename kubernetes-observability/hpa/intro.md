@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-observability/hpa/assets/sheep.png" width="400">
+<img align="right" src="./assets/sheep.png" width="400">
 
 # Scaling Your Applications, Automatically #
 

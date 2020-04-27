@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-observability/basics/assets/ui-dashboard.png" width="600">
+<img align="right" src="./assets/ui-dashboard.png" width="600">
 
 # Basic Kubernetes Observability #
 

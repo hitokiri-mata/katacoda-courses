@@ -18,8 +18,7 @@ Now, the Pod inspection will report the updated container.
 
 2\. Another way is to modify the YAML then apply the change with the _update_ command.
 
-Restore the Pod's container 3
-image the version back to the original version
+Restore the Pod's container image version back to the original version.
 
 `kubectl replace -f echoserver.yaml`{{execute}}
 

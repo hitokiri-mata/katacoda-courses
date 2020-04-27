@@ -10,7 +10,7 @@ These instructions have been adapted from [Getting started]https://projectriff.i
 
 There are a set of helpful solutions that allow serverless functions to run:
 
-- Riff is the command line tool, CLI
+- Riff is the command-line tool, CLI
 - Knative (pronounced kay-nay-tiv) extends Kubernetes to provide a set of middleware components that are essential to build modern, source-centric, and container-based applications that can run anywhere: on premises, in the cloud, or even in a third-party data center.
 - Istio is a service mesh for Kubernetes
 - Kubernetes is the container management system that targets a variety of cloud and data center resources. An operating system for your data center.

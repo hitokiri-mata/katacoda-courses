@@ -2,7 +2,7 @@ Deploy a simple application called [_echoserver_](https://console.cloud.google.c
 
 `kubectl create -f echoserver.yaml`{{execute}}
 
-> A simpler way to do this is with the _run_ command, but this only creates a Pod. We actually want a Deployment with a ReplicaSet.
+> A simpler way to do this is with the _run_ command, but this only creates a Pod. We want a Deployment with a ReplicaSet.
 
 > `kubectl run hello --image=k8s.gcr.io/echoserver:1.9 --generator=run-pod/v1 --port=8080`
 
@@ -16,4 +16,4 @@ It's only about 44 MB so it downloads and starts within a few moments. Ensure th
 
 `kubectl get deployments,pods`{{execute}}
 
-With this the application is running, however it's not accessible. A service is needed for access.
+With this the application is running, however, it's not accessible. A service is needed for access.

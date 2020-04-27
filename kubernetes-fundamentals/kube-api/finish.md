@@ -1,6 +1,6 @@
 # Conclusion #
 
-The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command line tools, language libraries and internal controllers and operators all use this exact same API for all CRUD operations toward Kubernetes.
+The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command-line tools, language libraries, and internal controllers and operators all use this same API for all CRUD operations toward Kubernetes.
 
 ## Lessons Learned ##
 
@@ -24,8 +24,8 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspired this scen
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-fundamentals/kube-api/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

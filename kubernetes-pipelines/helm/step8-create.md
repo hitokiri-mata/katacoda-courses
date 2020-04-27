@@ -1,4 +1,4 @@
-Charts are helful when creating your own solutions. Application charts are often a combination on 3rd party public charts as well as your own. The first step is to create your own chart.
+Charts are helpful when creating your own solutions. Application charts are often a combination on 3rd party public charts as well as your own. The first step is to create your own chart.
 
 `helm create app-chart`{{execute}}
 
@@ -10,7 +10,7 @@ All of your Kubernetes resource definitions in YAML files are located in the tem
 
 `cat app-chart/templates/deployment.yaml | grep 'kind:' -n -B1 -A5`{{execute}}
 
-Notice it looks like a normal deployment yaml with the `kind: Deployment` defined. However, there is new syntax sugar using double braces `{{ .. }}`. The is the templating mechanism that Helm uses to inject values into this template. Instead of hard coding in values instead this templating injects values. The templating language has many features by leveraging the Go templating API.
+Notice it looks like a normal deployment YAML with the `kind: Deployment` defined. However, there is new syntax sugar using double braces `{{ .. }}`. This is the templating mechanism that Helm uses to inject values into this template. Instead of hard coding in values, this templating injects values. The templating language has many features by leveraging the Go templating API.
 
 What about defining the container image for the deployment? That is an injected value as well.
 
@@ -22,7 +22,7 @@ Notice the `{{ .Values.image.repository }}`, this is where the container name ge
 
 Notice the templating key uses the dot ('.') notation to navigate and extract the values from the hierarchy in the values.yaml.
 
-In this case the Helm _create_ feature defaulted the deployed container to be the ubiquitous demonstration application _nginx_.
+In this case, the Helm _create_ feature defaulted the deployed container to be the ubiquitous demonstration application _nginx_.
 
 As is, this chart is ready to be deployed since all the defaults have been supplied. A complete set of sensible defaults is a good practice for any chart you author. A good README for your chart should also have a table to reflect these defaults, options and descriptions.
 

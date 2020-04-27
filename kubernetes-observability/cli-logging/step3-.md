@@ -17,6 +17,4 @@ kubectl logs $POD_ONE
 
 kubectl logs -l app=random-logger
 
-
-
 kubectl get pods -l app=random-logger -o custom-columns=:metadata.name

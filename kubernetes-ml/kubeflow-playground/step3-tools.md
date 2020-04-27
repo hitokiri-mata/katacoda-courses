@@ -1,10 +1,10 @@
 ## Kubeflow CLI
 
-The standard command line tool for Kubeflow, `kfctl` is also available.
+The standard command-line tool for Kubeflow, `kfctl` is also available.
 
 `kfctl version`{{execute}}
 
-Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command line parameters using the tab key.
+Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command-line parameters using the tab key.
 
 `source <(kfctl completion bash)`{{execute}}
 

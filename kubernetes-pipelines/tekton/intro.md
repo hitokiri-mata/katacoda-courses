@@ -2,7 +2,7 @@
 
 The [Tekton Pipelines project](https://tekton.dev/) provides Kubernetes-style resources for declaring [CI](https://martinfowler.com/articles/continuousIntegration.html) / [CD](https://martinfowler.com/bliki/ContinuousDelivery.html) style pipelines.
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
+<img align="right" src="./assets/tekton.png" width="400">
 
 Tekton is an open-source project that formed as a subproject of the [Knative](https://knative.dev/) project in March of 2019. Using established Kubernetes style declarations whole pipelines can be declared. The pipelines run on Kubernetes like any other process. Each step runs as an independent container. Tekton also helps normalize and standardize the terms and methods for forming and running pipelines. Tekton pipelines can complement a variety of popular CI/CD engines. For more information also see the [Continuous Delivery Foundation (CDF)](https://cd.foundation/).
 

@@ -40,7 +40,7 @@ If the Busybox service was created before the Nginx service the urls would still
 
 Exit the shell in the BusyBox container.
 
-`exit` 
+`exit`
 
 You must type this, but don't do it twice as it will exit this scenario.
 

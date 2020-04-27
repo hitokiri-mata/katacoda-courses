@@ -46,8 +46,8 @@ The same ConfigMaps can also be explored in the [Kubernetes dashboard](https://[
 
 Once the configuration data is stored in ConfigMaps, the containers can access the data. Pods grant their containers access to the ConfigMaps through these three techniques:
 
-- through the application command line arguments,
+- through the application command-line arguments,
 - through the system environment variables accessible by the application,
 - through a specific read-only file accessible by the application.
 
-The next steps explore these access techniques.
+The next steps, explore these access techniques.

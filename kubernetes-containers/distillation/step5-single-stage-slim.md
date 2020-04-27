@@ -1,6 +1,6 @@
-What we need is more control of the environment in which our applications will be developed, tested and deploy upon. This environmental control is called infrastructure-as-code. This is a major contributor to widening adoption of using containers in our industry. As developers of business solutions we now have more control of the stack our applications depends on. This increased power to control [idempotency](https://en.wikipedia.org/wiki/Idempotence) means we say less often, "Not sure what your problem is, works on my machine."
+What we need is more control of the environment in which our applications will be developed, tested, and deploy upon. This environmental control is called infrastructure-as-code. This is a major contributor to widening the adoption of using containers in our industry. As developers of business solutions, we now have more control of the stack our applications depend upon. This increased power to control [idempotence](https://en.wikipedia.org/wiki/Idempotence) means we say less often, "Not sure what your problem is, works on my machine."
 
-In the previous step, we ran the ListDir app on some underlying operating system and Java runtime engine provided by this Katacoda instance. Let's instead define our own idempotent machine stack. In the same source directory there is a packaging directory with a Dockerfile.
+In the previous step, we ran the ListDir app on some underlying operating system and Java runtime engine provided by this Katacoda instance. Let's instead define our idempotent machine stack. In the same source directory, there is a packaging directory with a Dockerfile.
 
 `cat packaging/Dockerfile-single-stage-slim`{{execute}}
 
@@ -25,6 +25,6 @@ Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-a-sss:0.1.0`{{execute}}
 
-Run it a a few more times and see what the average time and variance is. It should take about 1 second, +/- 1/3 of a second.
+Run it a few more times and watch the average time and variance. It should take about 1 second, +/- 1/3 of a second.
 
 Compare this time to running the application natively. It adds some latency to get the application to start. This is the cost of starting the container. However, we now have much more control over the environment including the OS and the JRE version.

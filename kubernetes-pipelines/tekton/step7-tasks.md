@@ -14,9 +14,9 @@ Inspect each Task and see how they is comprised of distinct, modular, and sequen
 
 Pods in Kubernetes are comprised of one or more containers. Each Tekton Task runs as a Kubernetes Pod. Each Step in the Task runs as a separate container in the Task's Pod.
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/mess.jpg" width="150">
+<img align="right" src="./assets/mess.jpg" width="150">
 
-Everything the steps need is either in the containers or are referenced as Tekton resources. Older CI/CD engines would reply on enormous plugins that were jammed into a global space on the engine. This let to many [anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) like `shoot the messenger` and `dependency hell`. This monolithic plugin ball of mud is avoided with Tekton by having each step as modular and atomic steps that contain all the details and dependencies to complete their sole responsibilities. Since a Task is a Pod you also are leveraging the distributed computing nature of Kubernetes and all the CPUs, memory and I/O across your clustered machines.
+Everything the steps need is either in the containers or are referenced as Tekton resources. Older CI/CD engines would rely on enormous plugins that were jammed into a global space on the engine. This let to many [anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) like `shoot the messenger` and `dependency hell`. This monolithic plugin ball of mud is avoided with Tekton by having each step as modular and atomic steps that contain all the details and dependencies to complete their sole responsibilities. Since a Task is a Pod you also are leveraging the distributed computing nature of Kubernetes and all the CPUs, memory, and I/O across your clustered machines.
 
 Apply these Tasks declarations.
 

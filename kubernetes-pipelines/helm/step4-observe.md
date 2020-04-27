@@ -18,6 +18,6 @@ Now, notice Redis will change to _running_.
 
 `watch kubectl get deployments,pods,services -n redis`{{execute}}
 
-The Pods will move to the _ContainerCreating_ state then once complete, the Pods will move to the _running_ state. It will be a few moments and all the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The Pods will move to the _ContainerCreating_ state. Once complete, the Pods will move to the _running_ state. It will be a few moments and all the Deployments will eventually move to the _available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 You have successfully installed a [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes.

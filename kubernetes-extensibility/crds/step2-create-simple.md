@@ -32,7 +32,7 @@ The resource is also available through the Kubernetes API.
 
 Notice in the last command we added a [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. With it set to level 9 (highest) we get a bit more insight into how the `kubectl` command is obtaining the resource information.
 
-The above command also piped the output to `jq` to pretty-print the json with syntax highlights. 
+The above command also piped the output to `jq` to pretty-print the json with syntax highlights.
 
 The CRD definition just defines the resource type and while Kubernetes recognizes the type, there are no instances of the Thermometer resource type.
 

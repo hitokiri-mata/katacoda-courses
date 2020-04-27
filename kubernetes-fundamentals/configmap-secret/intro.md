@@ -4,7 +4,7 @@ The 3rd factor (Configuration) of the [Twelve-Factor App Methodology](https://en
 
 > Configuration that varies between deployments should be stored in the environment.
 
-The last place the source of truth for a configuration would be inside the application, container or Pod since these artifacts are deployed to a variety of places with a variety of changing contexts. Anything that is configurable, changeable or varies between contexts should be submitted separately for each deployments. By not putting the configuration in the codebase, this also protects the 1st factor (Codebase):
+The last place the source of truth for a configuration would be inside the application, container or Pod since these artifacts are deployed to a variety of places with a variety of changing contexts. Anything that is configurable, changeable or varies between contexts should be submitted separately for each deployment. By not putting the configuration in the codebase, this also protects the 1st factor (Codebase):
 
 > There should be exactly one codebase for a deployed service with the codebase being used for many deployments.
 
@@ -16,7 +16,7 @@ A core component of the Kubernetes management plane is etcd. Etcd is a high-avai
 
 Pods provide containerized applications access to ConfigMaps and Secrets with three techniques:
 
-1. Command line arguments
+1. command-line arguments
 1. Environment variables
 1. Files in a volume
 

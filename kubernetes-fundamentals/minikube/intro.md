@@ -22,7 +22,7 @@ This scenario takes you through the basics of using Minikube. In the following s
 - Use locally for testing and learning
 - Supplies convenience addons for common solutions found in many clusters
 - Works well with virtual machines such as VirtualBox
-- Administer the single node cluster from the command line tool
+- Administer the single node cluster from the command-line tool
 - Well documented and supported by the community
 
 Minikube is _not_ a full blown high-available cluster and should never be considered for production deployments or where security, performance and stability is expected. However, it's a very approachable tool to learn the core concepts of Kubernetes.

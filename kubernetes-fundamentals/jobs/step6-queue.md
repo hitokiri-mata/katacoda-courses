@@ -10,7 +10,7 @@ Start the work queue.
 
 ## Submit Items to Queue ##
 
-Produce a collection of work items and place onto queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
+Produce a collection of work items and place onto a queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
 
 `QUEUE_POD=$(kubectl get pods -l app=work-queue,component=queue -o jsonpath='{.items[0].metadata.name}')`{{execute}}
 
@@ -22,7 +22,7 @@ View the _enqueued_ items count, it will be 100.
 
 `curl localhost:8080/memq/server/stats`{{execute}}
 
-You can also see the queue in the portal. Because of Katacoda's virtualization you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service.
+You can also see the queue in the portal. Because of Katacoda's virtualization, you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service.
 
 These commands will expose the service externally to Katacoda's subdomain scheme.
 
@@ -40,15 +40,15 @@ Notice the same port number is placed in the subdomain of the URL.
 
 ## Process Work Items ##
 
-Inspect the new Jobs that will consume and work on this enqueued items. Notice the resource is defined with 5 jobs to run in parallel. Once all the queued items have been processed the jobs will complete.
+Inspect the new Jobs that will consume and work on these enqueued items. Notice the resource is defined with 5 jobs to run in parallel. Once all the queued items have been processed the jobs will complete.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
 
-Create the parallel consumer Job.
+Create a parallel consumer Job.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
 
-Watch activity of pods, queue and Kubernetes dashboard
+Watch the Pod activity, queue, and Kubernetes dashboard.
 
 `kubectl get pods`{{execute}}
 

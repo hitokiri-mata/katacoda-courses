@@ -20,4 +20,4 @@ This chart bootstraps a SonarQube instance along with a PostgreSQL database. Son
 
 `watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. The `deployment.extensions/sonar-sonarqube` deployment may take 2-3 minutes before it reports `Available'. The behavior of the plugins can effect the startup time. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete, the Pods will move to the _running_ state. The `deployment.extensions/sonar-sonarqube` deployment may take 2-3 minutes before it reports `Available'. The behavior of the plugins can affect startup time. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

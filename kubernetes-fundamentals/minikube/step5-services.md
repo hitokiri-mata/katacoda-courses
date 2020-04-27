@@ -12,4 +12,4 @@ You can see it's exposed as a NodePort with using a different command.
 
 `kubectl get service kubernetes-dashboard-katacoda -n kube-system`{{execute}}
 
-With this Katacoda virtualization these URLs are not accessible from your browser, however they can be reached with Katacode URLs described in the next step.
+With this Katacoda virtualization, these URLs are not accessible from your browser, however they can be reached with Katacode URLs described in the next step.

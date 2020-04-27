@@ -35,7 +35,7 @@ Metrics information is also reflected in the dashboard. Launch the [Kubernetes d
 
 In the past, there was no _Resource Metrics API_ and a service called _Heapster_, now deprecated, used to gather all the cAdvisor metrics and bit more manually. Around the 1.6 to 1.8 Kubernetes releases the _Resource Metrics API_ was added. In concert, Heapster was removed and _Metrics Server_ is now the de facto service that aggregates metrics from the Metrics API.
 
-Metrics-server is a lighter version of Heapster. It gathers the latest metrics for reference and does not store historical data. For accumulation of trending metrics the de facto Prometheus time-series database can optionally be added to a cluster.
+Metrics-server is a lighter version of Heapster. It gathers the latest metrics for reference and does not store historical data. For the accumulation of trending metrics, the de facto Prometheus time-series database can optionally be added to a cluster.
 
 The [exposed Resource Metrics API is documented here](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/resource-metrics-api.md).
 

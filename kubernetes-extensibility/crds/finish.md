@@ -1,6 +1,6 @@
 # Conclusion #
 
-Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. CRDs are  all part of the extensibility of Kubernetes and it API. CRDs are in widespread use as a Kubernetes extensibility mechanism and have been available in beta since the 1.7 release. The 1.16 release marks the graduation of CRDs to general availability (GA). When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
+Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. CRDs are all part of the extensibility of Kubernetes and it API. CRDs are in widespread use as a Kubernetes extensibility mechanism and have been available in beta since the 1.7 release. The 1.16 release marks the graduation of CRDs to general availability (GA). When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
 ## Lessons Learned ##
 
@@ -24,8 +24,8 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspired this scen
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-extensibility/crds/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

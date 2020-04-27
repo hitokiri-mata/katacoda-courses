@@ -2,7 +2,7 @@ Create a namespace, for example, to specify a country.
 
 `kubectl create namespace sweden`{{execute}}
 
-In you current directory there is a YAML file for a thermometer for Solkholm Sweden.
+In you current directory there is a YAML file for a thermometer for Stockholm Sweden.
 
 `cat stockholm-thermometer.yaml`{{execute}}
 

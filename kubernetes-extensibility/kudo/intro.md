@@ -1,6 +1,6 @@
 # Creating and Operator based on KUDO #
 
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kudo/assets/kudo.png" width="400">
+<img align="right" src="./assets/kudo.png" width="400">
 
 Kubernetes Universal Declarative Operator (KUDO) provides a declarative approach to building production-grade Kubernetes Operators covering the entire application lifecycle.
 

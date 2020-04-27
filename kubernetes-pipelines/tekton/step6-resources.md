@@ -1,6 +1,6 @@
 Pipeline Resources are entities that define the locations for inputs ingested and outputs produced by the steps in Tasks.
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/git.png" width="150">
+<img align="right" src="./assets/git.png" width="150">
 
 We have defined the Git repo where the application source code resides.
 

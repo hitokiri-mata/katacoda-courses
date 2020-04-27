@@ -34,4 +34,4 @@ When first creating the YAML file you can skip using the _base64_ command and in
 
 `cat my-secret.yaml`{{execute}}
 
-In this step we see how secrets are created and submitted as a resources to Kubernetes. The next step will  read these secrets.
+In this step, we see how secrets are created and submitted as resources to Kubernetes. The next step will read these secrets.

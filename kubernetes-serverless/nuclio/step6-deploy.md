@@ -16,4 +16,4 @@ Execute the new function.
 
 `nuctl invoke -n nuclio helloworld`{{execute}}
 
-Go back to the portal and inspect and run it from there as well. In the dashboard select the _nuclio_ namespace from the drop down and click on the _default_ project. There you will see the _helloworld_ function.
+Go back to the portal and inspect and run it from there as well. In the dashboard select the _nuclio_ namespace from the drop-down and click on the _default_ project. There you will see the _helloworld_ function.

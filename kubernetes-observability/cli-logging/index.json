@@ -1,4 +1,5 @@
 {
+	"private": "true",
 	"title": "Basic Kubernetes Observability",
 	"description": "Inspection of a Kubernetes cluster.",
 	"time":	"15 minutes",

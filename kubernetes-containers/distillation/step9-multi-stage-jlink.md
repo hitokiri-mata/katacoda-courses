@@ -2,7 +2,7 @@ Consider this definition.
 
 `cat packaging/Dockerfile-multi-stage-jlink`{{execute}}
 
-Notice the two FROM statements. The first FROM declares a container that is big and contains a Java compiler. The stage contains has all the dependencies that can compile the should code, run Gradle and produce the jar file. However this first container is much too bloated and filled with tools we would never use in production. The second FROM defines the final container and it's the smaller Alpine instance that will simply hold the JRE and jar of the application. The key line is the `COPY --from=builder` that transmits the artifact output of the first _build_ container into the last _Alpine_ container. During the container build both containers are used, however the final container image will only include the containers defined in the _last_ FROM stage. Distillation and idempotency achieved.
+Notice the two FROM statements. The first FROM declares a container that is big and contains a Java compiler. The stage contains has all the dependencies that can compile the should code, run Gradle, and produce the jar file. However, this first container is much too bloated and filled with tools we would never use in production. The second FROM defines the final container and it's the smaller Alpine instance that will simply hold the JRE and jar of the application. The key line is the `COPY --from=builder` that transmits the artifact output of the first _build_ container into the last _Alpine_ container. During the container build, both containers are used, however, the final container image will only include the containers defined in the _last_ FROM stage. Distillation and idempotency achieved.
 
 Before we can build with JLink we need to define a default module for the ListDir project. There is already one defined, we just need to enable it in the project. Once enabled, you will not be able to compile the project with a Java version less than Java 9.
 
@@ -29,7 +29,7 @@ Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-d-ms-jlink:0.1.0`{{execute}}
 
-The execution time is roughly the same. We have achieve a further distillation step with JLink.
+The execution time is roughly the same and we have achieved a further distillation step with JLink.
 
 ## Inspect Container ##
 

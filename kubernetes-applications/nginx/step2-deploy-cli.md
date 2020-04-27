@@ -28,6 +28,6 @@ and now the service lists the address for this exposed service's NodePort.
 
 `kubectl get services`{{execute}}.
 
-The web interface for nginx-one can be seen from the tab "Nginx-One" above the command line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
+The web interface for nginx-one can be seen from the tab "Nginx-One" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/
 
 Next, let's explore a better way to deploy the same application.

@@ -8,7 +8,7 @@ There is another way to get a consolidated list of versions.
 
 `kubectl api-versions`{{execute}}
 
-These are all the versions behind the api root path `/apis/`. In the version list most of the lines are composed of two parts separated with a slash (/). The left token is the API Group and the right side is the version in that group. Such as
+These are all the versions behind the API root path `/apis/`. In the version list most of the lines are composed of two parts separated with a slash (/). The left token is the API Group and the right side is the version in that group. Such as
 
 `batch/v1` and `batch/v1beta`
 

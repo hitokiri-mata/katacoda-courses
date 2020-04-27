@@ -1,6 +1,6 @@
-Because Tekton is a Kubernetes Operator, it's can be completely administered using the standard Kubernetes manifests using the defined custom resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command line tool called `tkn` can optionally manage these same Tekton resources. 
+Because Tekton is a Kubernetes Operator, it's can be completely administered using the standard Kubernetes manifests using the defined custom resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command-line tool called `tkn` can optionally manage these same Tekton resources. 
 
-Install the `tkn` command line tool.
+Install the `tkn` command-line tool.
 
 ```bash
 sudo apt update;sudo apt install -y gnupg && \
@@ -15,7 +15,7 @@ Verify the CLI tool is installed and can control the Tekton control plane.
 
 `tkn version`{{execute}}
 
-Like many command line tools, you will also want to add the CLI autocompletion. As you type lengthy commands the tab key will make the best guess to fill in the command details.
+Like many command-line tools, you will also want to add the CLI autocompletion. As you type lengthy commands the tab key will make the best guess to fill in the command details.
 
 `source <(tkn completion bash)`{{execute}}
 

@@ -1,8 +1,8 @@
 # Conclusion #
 
-You now have a better understanding of how to write an Operator using the Kubebuilder. The real goal of this scenario is to show you the power of extending Kubernetes with your own custom resources and coding controllers that are dedicated to observing and managing your custom resources.
+You now have a better understanding of how to write an Operator using the Kubebuilder. The real goal of this scenario is to show you the power of extending Kubernetes with your a custom resources and coding controllers that are dedicated to observing and managing your custom resources.
 
-There are some other competing Operator frameworks such as the Operator-SDK, Metacontroller and **KUDO**. KUDO, governed by D2IQ, may be an easier way to write an Operator as it embraces a declarative form over an imperative Go based controller. In this Katacoda course head over to the scenario for learning KUDO and hopefully you will see why it was created to make writing Operators even easier.
+There are some other competing Operator frameworks such as the Operator-SDK, Metacontroller and **KUDO**. KUDO, governed by D2IQ, may be an easier way to write an Operator as it embraces a declarative form over an imperative Go-based controller. In this Katacoda course head over to the scenario for learning KUDO and hopefully you will see why it was created to make writing Operators even easier.
 
 ## Lessons Learned ##
 
@@ -31,8 +31,8 @@ https://kubernetes.io/blog/2018/08/10/introducing-kubebuilder-an-sdk-for-buildin
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-extensibility/kubebuilder/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

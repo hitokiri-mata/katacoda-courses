@@ -1,8 +1,8 @@
 # Kubeflow on Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-ml/kubeflow-insstall/assets/kubeflow.jpg" width="300">
+<img align="right" src="./assets/kubeflow.jpg" width="300">
 
-Kubeflow is an open, community driven project to make it easy to deploy and manage an Machine Learning stack on Kubernetes.
+Kubeflow is an open, community-driven project to make it easy to deploy and manage an Machine Learning stack on Kubernetes.
 
 This scenario currently being drafted. However, you will see that a functional Kubeflow instance will be running and is open to experimentation. If you know Kubeflow, your feedback to support@katacoda.com and jonathan.johnson@dijure.com would be helpful.
 

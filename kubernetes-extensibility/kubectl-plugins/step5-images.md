@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/containers-unsplash.png" width="250">
+<img align="right" src="./assets/containers-unsplash.png" width="250">
 
 ## Images and Outdated Plugins
 
@@ -22,4 +22,4 @@ List all the containers across all namespaces in your cluster showing which are 
 
 `kubectl outdated`{{execute}}
 
-Like all plugin, these plugins have further command line options. See `--help` for options.
+Like all plugin, these plugins have further command-line options. See `--help` for options.

@@ -10,13 +10,13 @@ Each deployment becomes available once the `AVAILABLE` status changes from `0` t
 
 `kubectl get pods --namespace kubeflow`{{execute}}
 
-This whole Kubeflow framework will be available once these Pods all report `Running`. On a production cluster or a higher performing development or test cluster this Kubeflow stack would take less time to start and would normally be already running.
+This whole Kubeflow framework will be available once these Pods all report `Running`. On a production cluster or a higher performing development or test cluster, this Kubeflow stack would take less time to start and would normally be already running.
 
 There are several new Custom Resource Definitions (CRDs) that have been installed on behalf of the Kubeflow Operator.
 
 `kubectl get crds`{{execute}}
 
-The standard command line tool for Kubeflow, `kfctl` is also available.
+The standard command-line tool for Kubeflow, `kfctl` is also available.
 
 `kfctl version`{{execute}}
 

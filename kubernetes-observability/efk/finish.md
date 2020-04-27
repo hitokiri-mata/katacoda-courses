@@ -1,6 +1,6 @@
 # Conclusion #
 
-This stack is a good example of how Kubernetes can be used to bring distinct tools together so they can work in concert for a larger solution. In this case for log aggregation. Because Fluent Bit is installed as a DaemonSet it will be on every node dutifully collection the log streams and sending them to ElasticSearch where in turn Kibana offers a viewport into specific data based on your queries. 
+This stack is a good example of how Kubernetes can be used to bring distinct tools together so they can work in concert for a larger solution. In this case for log aggregation. Because Fluent Bit is installed as a DaemonSet it will be on every node dutifully collection the log streams and sending them to ElasticSearch where in turn Kibana offers a viewport into specific data based on your queries.
 
 It's important your application also logs the transaction [correlation IDs](https://twitter.com/samnewman/status/862255875125366786?lang=en) as a way to gather log events from a known transaction. This is also true for transaction tracing (a separate Katacoda scenario, [Transaction Tracing](https://www.katacoda.com/javajon/courses/kubernetes-observability)).
 
@@ -23,9 +23,8 @@ With these steps you have learned:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-observability/efk/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>
-

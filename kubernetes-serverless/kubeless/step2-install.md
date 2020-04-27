@@ -16,7 +16,7 @@ To install Kubeless onto Kubernetes apply this command:
 As part of the installation there will be two Pods started in the new `kubeless` namespace on your Kubernetes cluster.
 
 - The _Kubeless_ controller deployment will watch for function objects to be created.
-- The _Kubeless_ ui deployment serves up a browser based dashboard showing the functions
+- The _Kubeless_ UI deployment serves up a browser-based dashboard showing the functions
 
 Observe the availability of each deployment as they progress from 0 to 1:
 

@@ -1,6 +1,6 @@
-Camel K has a command line interface for installing, inspecting, running functions on Kubernetes. Camel K also leverages the advantages of Knative and Istio.
+Camel K has a command-line interface for installing, inspecting, running functions on Kubernetes. Camel K also leverages the advantages of Knative and Istio.
 
-Apply this command to install the executable Linux binary for the Command Line Interface (CLI) called _kamel_.
+Apply this command to install the executable Linux binary for the command-line Interface (CLI) called _kamel_.
 
 `curl -Lo kamel.gz https://github.com/apache/camel-k/releases/download/0.0.4/camel-k-client-0.0.4-linux-64bit.tar.gz && tar xvzf kamel.gz && sudo mv kamel /usr/local/bin/`{{execute}}
 

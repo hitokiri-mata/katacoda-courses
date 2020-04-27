@@ -1,4 +1,4 @@
-A huge advantage of running application on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be longer running and incur notable CPU and memory consumption. A helpful ways to solve performance problems is running the jobs in parallel. Instead of each job creating a series of keys serially,3 have multiple jobs work on smaller units of work.
+A huge advantage of running applications on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be long-running and incur notable CPU and memory consumption. A technique to solve performance problems is to run the jobs in parallel. Instead of each job creating a series of keys serially,3 have multiple jobs work on smaller units of work.
 
 ## A Race ##
 
@@ -14,7 +14,7 @@ This time we will watch for is the duration result. By inspecting the status tim
 
 `echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
-Once the seconds number appears, take note of it.
+Once the `seconds` duration value appears, take note of it.
 
 `export SERIAL_DURATION=$(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime)))`{{execute}}
 
@@ -54,13 +54,12 @@ Once the seconds number appears, take note of it.
 
 Let's take a look at the race results between the serial and parallel execution of the key generation job.
 
-
 `clear && echo -e "For over a decade prophets have voiced the contention that the organization of a single computer has reached its limits and that truly significant advances can be made only by interconnection of a multiplicity of computers. - Gene Amdahl in 1967.\n\nThe results are in:\nSerial: $SERIAL_DURATION\nParallel: $PARALLEL_DURATION"`{{execute}}
 
-The high the number of keys to generate will correlate to a larger gap in time between these two techniques.
+The higher the number of keys to generate will correlate to a larger gap in time between these two techniques.
 
 Finally, delete the 2 jobs by filtering on a label.
 
 `kubectl delete jobs --selector chapter=jobs`{{execute}}
 
-However, to fully take advantage of parallelism some asynchronous message queuing should also be woven into the mix. Next step is to leverage a queue.
+However, to fully take advantage of parallelism some asynchronous message queuing should also be woven into the mix. In the next step you will leverage a queue.

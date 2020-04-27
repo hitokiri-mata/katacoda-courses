@@ -1,4 +1,4 @@
-There are many other repos that you can add to Helm. If your chart is in a Github account, the location can be registered to Helm so it can pull the chart from that source.
+There are many other repositories that you can add to Helm. If your chart is in a Github account, the location can be registered to Helm so it can pull the chart from that source.
 
 ## fabric8 ##
 

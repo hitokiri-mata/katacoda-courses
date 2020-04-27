@@ -8,7 +8,7 @@ Install the OpenFaaS operator chart referenced from that repository.
 
 `helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set operator.create=true --set basic_auth=true --set rbac=false --set faasIdler.dryRun=false --set faasIdler.inactivityDuration=10s`{{execute}}
 
-The dryRun property is set to false so we can explore scaling near the end of this course.
+The `dryRun` property is set to false so we can explore scaling near the end of this course.
 
 Watch the 7 deployments for OpenFaaS become _Available_. In about a minute all the _Available_ status column will turn from 0 to 1 as each deployment becomes active.
 

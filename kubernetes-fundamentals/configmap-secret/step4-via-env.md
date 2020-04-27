@@ -8,7 +8,7 @@ Create the Pod.
 
 `kubectl create -f consume-via-env.yaml`{{execute}}
 
-Once the pod starts, its log can be viewed. The container in the Pod has written its environments variables to the console, which is now visible in the Pod's log.
+Once the pod starts, its log can be viewed. The container in the Pod has written its environment variables to the console, which is now visible in the Pod's log.
 
 `kubectl logs consume-via-cli`{{execute}}
 

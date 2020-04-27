@@ -4,7 +4,7 @@ We will scale the hello Pod up and down. First, in another terminal start a cont
 
 `while true; do curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/ -w 'Time: %{time_total}' | grep -E 'Hostname|Time' | xargs; done`{{execute T2}}
 
-With all the curl requests in the loop, the single Pod instance is producing all the responses. However with distributed systems with a deep pool of resources it's very common to add more processes that can service multiple requests. Ask Kubernetes to scaling up the _echoservice_ across more Pods.
+With all the curl requests in the loop, the single Pod instance is producing all the responses. However, with distributed systems with a deep pool of resources it's very common to add more processes that can service multiple requests. Ask Kubernetes to scaling up the _echoservice_ across more Pods.
 
 `kubectl scale deployment hello --replicas=3`{{execute T1}}
 
@@ -16,13 +16,13 @@ The single service for these 3 pods now has the IPs of the three pods and load b
 
 `kubectl describe service hello | grep "Endpoints"`{{execute}}
 
-Look at the other terminal and in a few moments the output will indicate the load balancer is rotating the requests across the three nodes.
+Look at the other terminal and in a few moments, the output will indicate the load balancer is rotating the requests across the three nodes.
 
 Scale the Pods to zero and see what happens with the same _top_ command and the requests in the other terminal.
 
 `kubectl scale deployment hello --replicas=0`{{execute T1}}
 
-The list will show the pods Terminating, then in a moment the list will be blank.
+The list will show the pods Terminating, then in a moment, the list will be blank.
 
 `kubectl get pods`{{execute T1}}
 

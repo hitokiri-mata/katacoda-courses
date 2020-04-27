@@ -1,4 +1,4 @@
-Kubernetes is not very helpful if you cannot make changes to it and start adding applications. To start editing Kubernetes, explore the command line tool and the dashboard to see how changes can be applied and verified.
+Kubernetes is not very helpful if you cannot make changes to it and start adding applications. To start editing Kubernetes, explore the command-line tool and the dashboard to see how changes can be applied and verified.
 
 As a simple exercise create two namespaces.
 

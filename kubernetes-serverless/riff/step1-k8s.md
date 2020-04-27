@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-serverless/riff/assets/k8s-logo.png" width="100">
+<img align="right" src="./assets/k8s-logo.png" width="100">
 
 For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
@@ -11,7 +11,7 @@ The [Helm](https://helm.sh/) package manager used for installing applications on
 
 `helm version --short`{{execute}}
 
-<img align="right" src="/javajon/courses/kubernetes-serverless/riff/assets/k8s-dash.png" width="200">
+<img align="right" src="./assets/k8s-dash.png" width="200">
 
 ## Kubernetes Dashboard ##
 

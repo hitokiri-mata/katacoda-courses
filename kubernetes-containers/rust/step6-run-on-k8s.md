@@ -1,4 +1,4 @@
-Up to now we have just been concentrating on Go and putting you applications in containers. This Katacoda instance also is a running Kubernetes cluster.
+Up to now we have just been concentrating on Go and putting your applications in containers. This Katacoda instance also is a running Kubernetes cluster.
 
 `kubectl get componentstatus`{{execute}}
 

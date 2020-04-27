@@ -43,11 +43,11 @@ Notice how OpenFaaS tracks how many times the markdown function was invoked in t
 
 `faas-cli list --verbose`{{execute}}
 
-The _Replicas_ columns relates to performance and scaling that will be explored in an upcoming step.
+The _Replicas_ column relates to performance and scaling that will be explored in an upcoming step.
 
 ## Kubernetes Resources ##
 
-In Kubernetes notice all these functions are now represented by deployments in the openfaas-fn namespace.
+In Kubernetes notice, all these functions are now represented by deployments in the openfaas-fn namespace.
 
 `kubectl get deployments --namespace openfaas-fn`{{execute}}
 

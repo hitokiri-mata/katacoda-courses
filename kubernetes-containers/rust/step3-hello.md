@@ -43,9 +43,9 @@ With just a few lines of code both the application source and the Dockerfile sou
 
 However, there are a few problems with the container.
 
-- This is a simple application and is contrived compared to real application.
-- The size of the container is horribly large. Over 800MB, we can do much better.
-- The whole Go ecosystem is in the contain and all we want to do is to run our app. This is wasteful.
+- This is a simple application and is contrived compared to a real application.
+- The size of the container is excessively large. Over 800MB, we can do much better.
+- The whole Go ecosystem is in the container and all we want to do is to run our app. This is wasteful.
 
 This step is an academic, brute force attempt to put a Go application in a container. While it works, never do this for your real containers.
 

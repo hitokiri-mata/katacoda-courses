@@ -2,7 +2,7 @@ For this scenario, Katacoda has just started a fresh Kubernetes cluster for you.
 
 `kubectl cluster-info`{{execute}}
 
-Riff is a command line interface for running functions on Knative on Kubernetes. Install the command line binary.
+Riff is a command-line interface for running functions on Knative on Kubernetes. Install the command-line binary.
 
 `curl -Lo riff-linux-amd64.tgz https://github.com/projectriff/riff/releases/download/v0.2.0/riff-linux-amd64.tgz && tar xvzf riff-linux-amd64.tgz && sudo mv riff /usr/local/bin/`{{execute}}
 

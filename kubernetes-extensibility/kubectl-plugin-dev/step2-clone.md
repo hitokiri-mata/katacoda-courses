@@ -10,4 +10,4 @@ Inspect the source.
 
 > If the tree command reports `The program 'tree' is currently not installed.` then this specific instance of Katacoda did not start correctly. This is a known issue that occasionally appears. Simply restart this scenario to get a new, and hopefully correct Katacoda instance and return here.
 
-You can also browse and the files by selecting files in the directory list and code editor above the command line. In the following steps you will be using the editor and copy/paste features to modify this skeleton code.
+You can also browse and the files by selecting files in the directory list and code editor above the command line. In the following steps, you will be using the editor and copy/paste features to modify this skeleton code.

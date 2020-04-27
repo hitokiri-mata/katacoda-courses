@@ -7,7 +7,7 @@ OpenFaaS is an independent project created by [Alex Ellis](https://www.alexellis
 With these steps you have learned:
 
 - &#x2714; how to install OpenFaaS on Kubernetes,
-- &#x2714; how to interact with OpenFaaS from the command line and its portal,
+- &#x2714; how to interact with OpenFaaS from the command-line and its portal,
 - &#x2714; how functions are deployed and removed,
 - &#x2714; how functions are named, exposed, and invoked,
 - &#x2714; how functions are listed, inspected and monitored,
@@ -30,8 +30,8 @@ With these steps you have learned:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-serverless/openfaas/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

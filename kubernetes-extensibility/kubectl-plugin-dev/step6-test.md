@@ -2,4 +2,4 @@ The plugin already has code implemented for the `resources` command and it has a
 
 `kubectl example resources`{{execute}}
 
-This will list this Kubernetes cluster resources along with their Names, Namespaced status and Kind alias. The `resources` command is an example of code that was already written. In the next step, you will code your own command.
+This will list this Kubernetes cluster resources along with their Names, Namespace status, and Kind alias. The `resources` command is an example of code that was already written. In the next step, you will code a custom command.

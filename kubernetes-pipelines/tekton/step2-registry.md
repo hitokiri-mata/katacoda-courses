@@ -1,4 +1,4 @@
-There are many workflows around Kubernetes that need access to one or more container registries. While public registries are commonly referenced there are privacy concerns and no needs to shuttle private images over public networks. Instead, private registries keep all this pushing and pulling in a local registry.
+Many Kubernetes workflows that need access to one or more container registries. While public registries are commonly referenced there are privacy concerns and no needs to shuttle private images over public networks. Instead, private registries keep all this pushing and pulling in a local registry.
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart for Docker Registry](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
@@ -8,8 +8,7 @@ There are many options for standing up a container registry. We prefer a pure Ku
 
 ## Install Registry Proxies as Node Daemons
 
-In the subsequent steps, the pipeline will build a container and deploy them to this registry. The Docker Engine on each Kubernetes node has tight security rules around pulling images from registries. Especially registries that are deemed as “insecure". Docker requires pulls to be SSL and with authentication. However, oftentimes you are just wanting to use the private registry just within the cluster. The Docker engine will pull from a "localhost" registry without triggering its security precautions. We run a [kube-registry-proxy](https://github.com/helm/charts/blob/master/incubator/kube-registry-proxy/README.md) on each node in the cluster,
-exposing a port on the node (via the hostPort value), which Docker accepts as acceptable since it is accessed by localhost.
+In the subsequent steps, the pipeline will build a container and deploy them to this registry. The Docker Engine on each Kubernetes node has tight security rules around pulling images from registries. Especially registries that are deemed as “insecure". Docker requires pulls to be SSL and with authentication. However, oftentimes you are just wanting to use the private registry just within the cluster. The Docker engine will pull from a "localhost" registry without triggering its security precautions. We run a [kube-registry-proxy](https://github.com/helm/charts/blob/master/incubator/kube-registry-proxy/README.md) on each node in a cluster, exposing a port on the node (via the hostPort value), which Docker accepts as acceptable since it is accessed by localhost.
 
 The [kube-registry-proxy](https://github.com/helm/charts/blob/master/incubator/kube-registry-proxy/README.md) is available in this repo.
 

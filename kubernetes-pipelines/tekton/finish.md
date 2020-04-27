@@ -1,6 +1,6 @@
 # Conclusion #
 
-<img align="right" src="/javajon/courses/kubernetes-pipelines/tekton/assets/tekton.png" width="400">
+<img align="right" src="./assets/tekton.png" width="400">
 
 While there are numerous, complimenting and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
@@ -29,8 +29,8 @@ With these steps you have learned:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="/javajon/courses/kubernetes-pipelines/tekton/assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops and meetups.
+<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
+For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

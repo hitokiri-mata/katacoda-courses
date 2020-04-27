@@ -1,4 +1,4 @@
-Another technique used get the same Pod Listing is using the REST client. 
+Another technique used to get the same Pod Listing is using the REST client.
 
 Currently, if you test the Pod list2 (alternate form with the `2`) command it returns just a placeholder message.
 

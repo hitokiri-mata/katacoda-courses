@@ -1,4 +1,4 @@
-<img align="right" src="/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/krew.png" width="300">
+<img align="right" src="./assets/krew.png" width="300">
 
 Krew is a tool that helps you discover, install, and manage plugins registered with your kubectl tool. It is similar to tools like apt, dnf or brew.
 

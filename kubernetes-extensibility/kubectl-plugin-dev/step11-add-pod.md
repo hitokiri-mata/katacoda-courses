@@ -1,6 +1,6 @@
-Up to this point, you have only queried Kubernetes for information (the R in [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)). In this step, you will add a Pod programmatically. 
+Up to this point, you have only queried Kubernetes for information (the R in [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)). In this step, you will add a Pod programmatically.
 
-Currently, if you test the Pod add command it returns just a placeholder message.
+Currently, if you test the Pod `add` command it returns just a placeholder message.
 
 `kubectl example pod add an-attempt`{{execute}}
 

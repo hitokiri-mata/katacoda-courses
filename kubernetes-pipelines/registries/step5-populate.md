@@ -17,5 +17,4 @@ There will be some warnings in red text, but you can safely ignore them. This bu
 
 `docker push $REGISTRY/max-breast-cancer-mitosis-detector`{{execute}}
 
-The image size is close to 1.5GB so it will take about 1-2 minutes to push. Once the push is complete, verify the new container is listed in the [registry web interface](
-https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/).
+The image size is close to 1.5GB so it will take about 1-2 minutes to push. Once the push is complete, verify the new container is listed in the [registry web interface](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/).

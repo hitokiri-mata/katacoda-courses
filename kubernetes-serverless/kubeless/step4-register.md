@@ -13,7 +13,7 @@ To deploy a Python function, the Kubeless CLI tool needs some information:
 
 With the above, here is a breakdown of this function registration request:
 
-- kubeless function deploy _fibonacci_ tells Kubeless to register a new function named fibonacci. The function will be accessible over the Web using this name. This doesn’t need to be the same as the function name used inside the code (this is instead specified using the --handler option).
+- kubeless function deploy _fibonacci_ tells Kubeless to register a new function named `fibonacci`. The function will be accessible over the Web using this name. This doesn’t need to be the same as the function name used inside the code (this is instead specified using the --handler option).
 
 - --runtime python3.6 tells Kubeless to use Python 3.6 to execute the code. Other runtimes are available such as: Java, NodeJS, Ruby, PHP, Go, .NET and Ballerina. You can also supply a [custom runtime](https://kubeless.io/docs/runtimes/) as a container.
 
@@ -21,7 +21,7 @@ With the above, here is a breakdown of this function registration request:
 
 - --from-file /tmp/fibonacci.py tells Kubeless to upload and use the /tmp/fibonacci.py file as the source for the function. It is possible to pass a function in other ways.
 
-You can list the new function with the kubeless CLI:
+You can list the new function with the Kubeless CLI:
 
 `kubeless function list`{{execute}}
 

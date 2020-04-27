@@ -1,4 +1,4 @@
-Install serverless
+Install the Serverless CLI.
 
 `npm install serverless -g`{{execute}}
 

@@ -1,4 +1,4 @@
-SonarQube is not limited to just Java. It offers code analysis of these 25+ languages:
+SonarQube is not limited to just Java. It offers code analysis of these 27+ languages:
 
 ![Multiple languages](/javajon/courses/kubernetes-pipelines/sonarqube/assets/multiple-languages.png "Code Analysis for multiple languages.")
 
@@ -8,4 +8,4 @@ More language and features are discussed in the [community forum](https://commun
 
 Along with the growing language support is a [rich ecosystem of 70+ plugins](https://docs.sonarqube.org/display/PLUG/Plugin+Library) driven by the SonarSource community.
 
-SonarQube and its community of plugins teaches all of us to [become better engineers](https://en.wikipedia.org/wiki/List_of_software_bugs). Consider contributing to these open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).
+SonarQube and its community of plugins teach all of us to [become better engineers](https://en.wikipedia.org/wiki/List_of_software_bugs). Consider contributing to these open source efforts or [join the SonarSource team](https://www.sonarsource.com/company/jobs/).

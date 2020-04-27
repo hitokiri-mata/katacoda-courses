@@ -2,7 +2,7 @@
 
 Katacoda has exposed the NodePort 31000 to access Kibana from your browser. 
 
-[Access Kibana](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/). There is also a tab above the command line area labeled `Kibana` that takes you to the same Kibana portal.
+[Access Kibana](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/). There is also a tab above the command-line area labeled `Kibana` that takes you to the same Kibana portal.
 
 ## Security ##
 

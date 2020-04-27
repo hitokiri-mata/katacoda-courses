@@ -21,8 +21,8 @@ Notice the size of the binary container image is about 85MB. This built image st
 
 `time docker run $REGISTRY/listdir-b-ssa:0.1.0`{{execute}}
 
-Run it a few more times and see what the average time and variance is. It should take about 1 second, +/- 1/3 of a second. This is roughly has the same startup and execution time as the previous slim container. Smaller image, yet works just fine.
+Run it a few more times and see what the average time and variance is. It should take about 1 second, +/- 1/3 of a second. This is roughly the same startup and execution time as the previous slim container. Smaller image, yet works just fine.
 
-There are other Linux variants and you can also create your own, but [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux) has emerged as being one of the common base containers to use because it follows many best practices of the distillation pattern. Alpine promotes its virtues as [small, simple and secure](https://alpinelinux.org/about/).
+There are other Linux variants and you can also create your own, but [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux) has emerged as being one of the common base containers to use because it follows many best practices of the distillation pattern. Alpine promotes its virtues as [small, simple, and secure](https://alpinelinux.org/about/).
 
-But there is more with can do with the distillation pattern in relation to idempotency.
+But there is more with can do with the distillation pattern related to idempotence.

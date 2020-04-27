@@ -1,10 +1,10 @@
 # Chaoskube on Kubernetes #
 
-<img align="right" alt="Chaoskube" title="Chaoskube" src="/javajon/courses/kubernetes-chaos/chaoskube/assets/chaoskube.png" width=300>
+<img align="right" alt="Chaoskube" title="Chaoskube" src="./assets/chaoskube.png" width=300>
 
 > Adopting chaos engineering strategies for your production environment is useful, because it is the only way to test if a system supports unexpected destructive events.
 
-**Chaoskube** periodically kills random Pods in your Kubernetes cluster which allow you to test how your system behaves under arbitrary Pod failures. Chaoskube is a tool designed by Martin Linkhorst and its [open source is found here](https://github.com/linki/chaoskube).
+**Chaoskube** periodically kills random Pods in your Kubernetes cluster which allows you to test how your system behaves under arbitrary Pod failures. Chaoskube is a tool designed by Martin Linkhorst and its [open source is found here](https://github.com/linki/chaoskube).
 
 You will learn how:
 

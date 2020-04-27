@@ -6,7 +6,7 @@ Notice there are three *.go files. The `model` holds the data structure for the 
 
 `ccat main.go`{{execute}}
 
-<img align="right" src="/javajon/courses/kubernetes-containers/go/assets/gin.png" width="200">
+<img align="right" src="./assets/gin.png" width="200">
 
 This application uses a 3rd party Go library called [**Gin**](https://github.com/gin-gonic/gin). Gin is a HTTP framework for matching REST requests to functions. There are a few other popular Go based [HTTP Web frameworks](https://github.com/avelino/awesome-go#web-frameworks), but this Gin project has a significant amount of GitHub stars due to its performance and simplicity. Not a bad choice, and forgive me if it's not the one you prefer.
 

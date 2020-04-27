@@ -1,6 +1,6 @@
 # Spring Boot to Kubernetes #
 
-<img align="right" src="/javajon/courses/kubernetes-containers/springboot-to-k8s/assets/spring-boot-logo.png" width="300">
+<img align="right" src="./assets/spring-boot-logo.png" width="300">
 
 The scenario walks through a series of steps that go from a blank slate of no code to running a Spring Boot application on Kubernetes. Starting with a blank Kubernetes cluster and an empty source code directory these steps will:
 

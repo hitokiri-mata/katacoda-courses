@@ -6,7 +6,7 @@ You can view ConfigMap and see the deployed code here:
 
 `kubectl describe configmap fibonacci`{{execute}}
 
-When the kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_. These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
+When the Kubeless CLI tool registers your function it sends a custom and declarative Kubernetes manifest file. The file itself has a custom Kubernetes _kind_. These kinds are registered as CRDs. The list of CRDs for Kubeless can be found with this
 
 `kubectl get crds --namespace kubeless`{{execute}}
 

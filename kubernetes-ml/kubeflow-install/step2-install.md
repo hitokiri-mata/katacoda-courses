@@ -1,6 +1,6 @@
-To setup Kubeflow on this Kubernetes cluster three things need to be completed:
+To set up Kubeflow on this Kubernetes cluster three things need to be completed:
 
-1. Command line tool installation
+1. command-line tool installation
 2. Persistence reservation
 3. Kubeflow framework installation
 
@@ -14,11 +14,11 @@ chmod +x /usr/local/bin/kfctl
 rm kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 ```{{execute}}
 
-Verify the command line tool is available.
+Verify the command-line tool is available.
 
 `kfctl version`{{execute}}
 
-Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command line parameters using the tab key.
+Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command-line parameters using the tab key.
 
 `source <(kfctl completion bash)`{{execute}}
 

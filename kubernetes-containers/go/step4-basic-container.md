@@ -2,7 +2,7 @@ The next step we look at a new application.
 
 `cd ~/go-examples/basic && ls -l`{{execute}}
 
-<img align="right" src="/javajon/courses/kubernetes-containers/go/assets/metaweather.png" width="200">
+<img align="right" src="./assets/metaweather.png" width="200">
 
 The functionality is still simple in a single file, but builds a bit more logic. The application grabs weather data from the [MetaWeather source](https://www.metaweather.com/) and with some JSON fiddling it extracts the text description of the current weather in London. I'm sure you can guess what it might often say. These two English artists reflect the same sentiment.
 

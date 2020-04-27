@@ -18,4 +18,4 @@ Currently, it's on a random Kubernetes NodePort (some value above 30000) and thi
 
 Ideally this port adjustment should have happened when the Kubeless Helm chart was installed, but the chart currently does not allow the NodePort value to be specified. As a workaround, we adjust the port after installation with the above command. We can now point your browser to the service that serves up the Kubeless UI
 
-The Kubeless UI is located as a tab above the command line area or from this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
+The Kubeless UI is located as a tab above the command-line area or from this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/

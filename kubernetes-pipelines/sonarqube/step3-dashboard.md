@@ -5,6 +5,6 @@ The SonarQube service is exposed as a NodePort but at a random value. This chart
 View the SonarQube dashboard here: [SonarQube Dashboard](
 https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/).
 
-You can login as admin / admin and view the pre-installed select plugins.
+You can logcin as admin / admin and view the pre-installed select plugins.
 
 Notice the dashboard reports the number of analyzed projects is zero. With SonarQube running it's now ready to analyze a project.
