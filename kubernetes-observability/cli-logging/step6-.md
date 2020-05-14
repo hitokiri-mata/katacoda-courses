@@ -2,8 +2,6 @@ kubectl get pods -l app=random-logger
 
 kubectl get pods -o=jsonpath="{.items[*]['metadata.name']}"
 
-kubectl get pods -o=jsonpath="{.items[*]['metadata.name']}"
-
 kubectl logs $POD_ONE -l app=random-logger
 
 kubectl logs $(kubectl get pods -o=jsonpath="{.items[0]['metadata.name']}")

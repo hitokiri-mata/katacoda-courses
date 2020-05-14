@@ -1,4 +1,4 @@
-Before exploring observability topics, start a small application to provide something to observe.
+Before exploring the observability topic of logging, start a small application that continuously generates log events.
 
 Run 3 instances of the _random-logger_ container to start generating continuously random logging events.
 
@@ -12,4 +12,4 @@ The 3 pods will start shortly.
 
 `kubectl get pods`{{execute}}
 
-Thank you to _Vicente Zepeda_ for providing this beautifully simple container. The [source code is here](https://github.com/chentex/random-logger).
+> Thank you to _Vicente Zepeda_ for providing this beautifully simple container. The [source code is here](https://github.com/chentex/random-logger).
