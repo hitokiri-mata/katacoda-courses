@@ -12,4 +12,4 @@ The 3 pods will start shortly.
 
 `kubectl get pods`{{execute}}
 
-Thank you to _Vicente Zepeda_ for providing this beautifully simple container. The [source code is here](https://github.com/chentex/random-logger).
+> Thank you to _Vicente Zepeda_ for providing this beautifully simple container. The [source code is here](https://github.com/chentex/random-logger).

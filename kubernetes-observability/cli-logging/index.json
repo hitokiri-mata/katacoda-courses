@@ -16,29 +16,20 @@
 		  "code": "clear.sh"
 		},
 		{
-			"title": "Events",
-			"text": "step3-events.md",
-			"code": "clear.sh"
-		},
-		{
-		  "title": "Component Logs",
-		  "text": "step5-about.md",
+		  "title": "Cluster Events",
+		  "text": "step3-events.md",
 		  "code": "clear.sh"
 		},
 		{
-			"title": "TODO",
-			"text": "step6-.md",
-			"code": "clear.sh"
+		  "title": "Container Logs",
+		  "text": "step4-container-logs.md",
+		  "code": "clear.sh"
 		},
 		{
-			"title": "Stern",
-			"text": "step7-stern.md"
-		},
-		{
-			"title": "TODO",
-			"text": "step8-.md"
+			"title": "Stern: A Log Aggregation Tool",
+			"text": "step5-stern.md"
 		}
-		],
+	  ],
 	  "intro": {
 		"text": "intro.md",
 		"code": "env-init.sh",
