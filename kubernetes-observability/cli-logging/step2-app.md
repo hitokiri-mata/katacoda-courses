@@ -1,14 +1,14 @@
 Before exploring the observability topic of logging, start a small application that continuously generates log events.
 
-Run 3 instances of the _random-logger_ container to start generating continuously random logging events.
+Run the _random-logger_ container in a Pod to start generating continuously random logging events.
 
 `kubectl create deployment random-logger --image=chentex/random-logger`{{execute}}
 
-Scale to 3 instances.
+Scale to three Pods.
 
 `kubectl scale deployment/random-logger --replicas=3`{{execute}}
 
-The 3 pods will start shortly.
+The Pods will start shortly.
 
 `kubectl get pods`{{execute}}
 

@@ -1,4 +1,4 @@
-Most developers will be interested in inspecting application logs, mostly to understand the execution of events when thing go awry.
+Most developers will be interested in inspecting application logs, mostly to understand the execution sequences when thing go awry.
 
 [Factor 11, Logs, of _The Twelve-Factor App_](https://12factor.net/logs) states all logs should be treated as event streams. The last thing you want when managing multiple, distributed applications is trying to find where each application has routed and stored its logs. If you implement custom and variant locations with inconsistent rules for persistence and rotation, then your application will get in the way when engineers try to diagnose problems on a distributed cluster. Your apps should never be concerned about the management of logs, instead the apps should simply output to a common stream. The standard streams for apps in containers are _stdout_ and _stderr_.
 
@@ -34,16 +34,17 @@ You can also see the 50 lines of a single Pod.
 
 ## Continuous Stream to Stdout
 
-`kubectl logs -f my-pod`{{execute}}
+Sometimes you may want to observe and application by watching the accumulating log lines. Use the `follow=true | -f` switch to stream the events to stdout.
 
-When all Deployments report _Available_ and the Pods report _Running_ use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+`kubectl logs -f deployment/random-logger`{{execute}}
 
-TODO - Verify But `-f`, a well as `--tail`, cannot be used when the `--selector | -l` flag is used.
+As the application generates a new log event each second, a new log event will appear. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-## Selecting a Container
+## Logs from a Specific Container
 
-kubectl logs -f my-pod -c my-container              # stream pod container logs (stdout, multi-container case)
-kubectl logs -f -l name=myLabel --all-containers 
+Sometimes there is more than one container in a Pod. To see the log from a specific container in a Pod the `-container=<name> | -c=<name>` switch can be used.
+
+`kubectl logs $POD_0 -c random-logger`{{execute}}
 
 ## Viewing Logs from Dead Pods
 
@@ -53,9 +54,12 @@ The following command will create and immediately end with the Pod with status o
 
 `kubectl get pods`{{execute}}
 
+Once the Pod has reached the `Complete` status try to get the log.
+
 `kubectl logs busybox-test-pod-status`{{execute}}
 
-However, using the `previous=true` flag will reveal the old output.
+Notice the log is blank. However, using the `previous=true | -p` flag will reveal the old output.
 
 `kubectl logs busybox-test-pod-status --previous=true`{{execute}}
 
+This `BadRequest` message is the log from the previously terminated container.

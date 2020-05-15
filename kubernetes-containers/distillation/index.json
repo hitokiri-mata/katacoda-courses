@@ -61,7 +61,7 @@
       "title": "Distilling Java Containers",
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](https://www.linkedin.com/in/javajon)"
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
     },
     "finish": {
       "text": "finish.md"

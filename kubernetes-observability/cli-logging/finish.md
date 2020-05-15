@@ -1,4 +1,6 @@
-The scenario introduced some fundamental techniques to inspecting events and application logs on Kubernetes. Because Kubernetes is distributed, you cannot just just reference logs from a single directory. You learned about the common command-line tools to inspect the logs. Beyond this scenario, explore the Daemonset and Sidecar patterns that collect and stream logs to stream aggregators such as ElasticSearch.
+The scenario introduced some fundamental techniques to inspecting events and application logs on Kubernetes. You learned about the common command-line tools to inspect the logs. Because Kubernetes is distributed, you cannot just just inspect logs found in a single directory.
+
+ Beyond this scenario, explore techniques to automate log aggregation and synchronization. Logs are stored in the /var/log/container and /var/log/pods directories, which as considered ephemeral. DaemonSets on the Nodes and Sidecars in the Pods can sync these logs to other services. The other services, like ElasticSearch, offer reliable long-term persistence, rich queries, end even automatic eventing based on the rules often defined by Site Reliability Engineers (SREs). As a next step, explore the _Logging with EFK_ scenario.
 
 ## Lessons Learned ##
 
@@ -9,8 +11,6 @@ With these steps you have learned how to:
 - &#x2714; inspect Node logs,
 - &#x2714; inspect container logs across multiple Pods,
 - &#x2714; use some convenient command-line tools to view log aggregations.
-
-After this scenario, you may want to explore the _Logging with EFK_ scenario.
 
 ## References ##
 

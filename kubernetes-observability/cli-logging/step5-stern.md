@@ -1,3 +1,5 @@
+> Stern allows you to tail multiple pods on Kubernetes and multiple containers within the Pod. Each result is color coded for quicker debugging.
+
 Download and install Stern.
 
 `wget https://github.com/wercker/stern/releases/download/1.11.0/stern_linux_amd64`{{execute}}
@@ -7,6 +9,12 @@ Download and install Stern.
 Verify Stern is working.
 
 `stern --version`{{execute}}
+
+Observer the random-logger using Stern.
+
+`stern random-logger`{{execute}}
+
+The color coding is a helpful improvement to see the distinction events from the three Pods. Stern default to streaming the logs to stdout. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Other Log Tailers
 
