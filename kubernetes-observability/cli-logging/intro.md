@@ -1,4 +1,4 @@
-<img align="right" src="./assets/logs-stream.jpg" width="300" alt="Logs on Vancouver River, Tony Hisgett, Flickr">
+<img align="right" src="./assets/logs-stream.jpg" width="250" alt="Logs on Vancouver River, Tony Hisgett, Flickr">
 
 # Kubernetes Logging #
 
