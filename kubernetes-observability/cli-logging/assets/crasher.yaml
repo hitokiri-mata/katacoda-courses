@@ -1,5 +1,3 @@
-# A Pod that will  intentionally fail after a few log outputs.
-# For demonstrating the "kubectl logs --previous" feature.
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,16 +5,16 @@ metadata:
   labels:
     app: crasher
 spec:
-  restartPolicy: Never 
+  restartPolicy: Never
   containers:
     - name: container-a
       image: chentex/random-logger
-    livenessProbe:
-      httpGet:
-        path: /healthz
-        port: 8080
-        httpHeaders:
-        - name: Custom-Header
-          value: Awesome
-      initialDelaySeconds: 10
-      periodSeconds: 3
+      livenessProbe:
+        httpGet:
+          path: /healthz
+          port: 8080
+          httpHeaders:
+            - name: Custom-Header
+              value: Awesome
+        initialDelaySeconds: 10
+        periodSeconds: 3

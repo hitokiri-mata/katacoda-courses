@@ -97,7 +97,7 @@ Access the logs, you still have to specify the specific container when there is 
 
 When containers crash the current logs are not available without the `--previous=true | -p` flag. Sometimes it's important to obtain the logs from crashed containers to diagnose the cause. The following command will create a Pod that will fail in a few seconds. The Pod will log a few lines and the readiness probe will fail to responed and Kubernetes will kill the Pod.
 
-`kubectl run -f crasher.yaml`{{execute}}
+`kubectl create -f crasher.yaml`{{execute}}
 
 `kubectl get pods`{{execute}}
 
