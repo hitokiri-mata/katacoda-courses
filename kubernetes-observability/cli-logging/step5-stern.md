@@ -14,11 +14,11 @@ Observer the random-logger using Stern.
 
 `stern random-logger`{{execute}}
 
-The color coding is a helpful improvement to see the distinction events from the three Pods. Stern default to streaming the logs to stdout. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The color coding is a helpful improvement to see the distinction events from the three Pods. Stern defaults to streaming the logs to stdout. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Other Log Tailers
 
-There are other open source projects similar to Stern.
+There are other open-source projects similar to Stern.
 
 [Kubetail](https://github.com/johanhaleby/kubetail)
 > Bash script that enables you to aggregate (tail/follow) logs from multiple Pods into one stream. This is the same as running "kubectl logs -f " but for multiple Pods.
