@@ -4,9 +4,13 @@ Most developers will be interested in inspecting application logs, mostly to und
 
 The [documentation for `kubectl logs`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) states these options:
 
-`$ kubectl logs [-f] [-p] (POD | TYPE/NAME) [-c CONTAINER]`
+## Logs Command
 
-Let's explore these options and nuances.
+The usage pattern for the Logs command is:
+
+`$ kubectl logs [-f] [-p] (POD | TYPE/NAME) [-c CONTAINER] [options]`
+
+Let's explore these switches, options, and nuances.
 
 Your deployment of random-logger simply streams logs to stdout with a shell script [echo statement](https://github.com/chentex/random-logger/blob/master/entrypoint.sh). Inspect the current logs from the container inside the Pod, as part of the deployment.
 
@@ -46,7 +50,7 @@ But a `--tail=-1`, which normally is a request for all lines, will be ignored.
 
 Sometimes you may want to observe and application by watching the accumulating log lines. Use the `follow=true | -f` switch to stream the events to stdout.
 
-`kubectl logs -f deployment/random-logger`{{execute}}
+`kubectl logs --selector app=random-logger --tail=1 --follow=true`{{execute}}
 
 As the application generates a new log event each second, a new log event will appear. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
@@ -66,7 +70,7 @@ Instead, add a specific container name of the log stream you wish to inspect.
 
 `kubectl logs --selector app=bipedal -c=container-b`{{execute}}
 
-If you want all the logs from all the containers just add the `--all-containers=true` switch.
+If you want all the logs from all the containers, add the `--all-containers=true` switch.
 
 `kubectl logs pod/bipedal --all-containers=true -f --since=3s --timestamps=true`{{execute}}
 
@@ -79,9 +83,9 @@ In this case, this line demonstrates a few extra helpful switches:
 | `--timestamp=true`  | to show all times                     |
 | `--prefix=true` *   | to reveal the pod and container names |
 
-* The `--prefix` option has been added in the newer Kubernetes version 1.17.
-
 Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+* The `--prefix` option has been added in the newer Kubernetes version 1.17. Use the help to get the features enabled for your version of kubectl, `kubectl logs --help`.
 
 ## Access Logs From Pod's Service
 
@@ -101,15 +105,15 @@ When containers crash the current logs are not available without the `--previous
 
 `kubectl get pods`{{execute}}
 
-The Pod will run and after about 10 seconds it will change to the `CrashLoopBack`  status. Once crashed, try to get its logs.
+The Pod will run and after moments it will crash due to the failed liveness probe then a new Pods will start. Observe the current Pod log.
 
 `kubectl logs crasher`{{execute}}
 
-The log list is blank. However, using the `previous=true | -p` flag will reveal the old output.
+This log list is from the currently running Pod, but what if you want to see the logs from the previously crashed Pod. Using the `previous=true | -p` flag will reveal the logs from the previously running container.
 
-`kubectl logs crasher --previous=true`{{execute}}
+`watch kubectl logs crasher --previous=true`{{execute}}
 
-In a real application, perhaps this log would give you a clue why the app failed.
+The watch was applied so you can see the list changing after each crash. In a real application, perhaps this log would give you a clue why the app failed. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Conclusion
 

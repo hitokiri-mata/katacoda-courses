@@ -1,16 +1,16 @@
-Events are the collections of logs generated when state change events occur in a Kubernetes cluster. These are not your application events, on your application data plane. Instead, these are the journal of changes to the cluster, on the control plane. Kubernetes administrators will be keenly interested in these log details to get insights into resource events on the cluster.
+Events capture the create, read, update, and delete ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) transitions for the cluster objects during their lifecycles. These are not your application events, on your application data plane. Instead, these are the journal of changes to the cluster, on the control plane. Kubernetes administrators are keenly interested in these log details to gain insights into cluster resource events.
 
 `kubectl get events`{{execute}}
 
-In the listing, you can see events related to you starting the application during the previous step. These are the create, read, update, and delete ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) events for the container lifecycle.
+At the end of this listing, you can see events related to starting the application during the previous step.
 
-The listing only reveals events associated with activities specific to the `default` namespace. To see events related to the cluster components specify a namespace, such as `kube-system`.
+The listing only reveals events associated with activities specific to the `default` namespace. To see events related to the cluster components specify the`kube-system` namespace.
 
 `kubectl get events --namespace=kube-system`{{execute}}
 
-These cluster events are stored in _etcd_ and managed by Kubernetes. Because these events accumulate, the older ones are automatically purged. The typical default is one hour, and there is a setting called _time-to-live_ that on some clusters can be adjusted through the `kube-apiserver --event-ttl`. This time is kept short because if too many events accumulate within the _time-to-live_ period, it's possible _etcd_ can overfill. Additional tools can stream these events to other channels such as ElasticSearch and persistent data stores.
+These cluster events are stored in _etcd_ and managed by Kubernetes. Because these events accumulate, the older ones are automatically purged. The typical default is one hour, and there is a setting called _time-to-live_ that on some clusters can be adjusted through the `kube-apiserver --event-ttl`. This time is kept short because if too many events accumulate within the _time-to-live_ period, it's possible _etcd_ can overfill. Additional tools can stream these events to other channels such as Elasticsearch and persistent data stores.
 
-In the list there is a column labeled `OBJECT`. You can query for specific objects by name.
+In the list, there is a column labeled `OBJECT`. You can query for specific objects by name.
 
 `kubectl get event --field-selector=involvedObject.name=random-logger`{{execute}}
 
@@ -34,7 +34,7 @@ In a moment, inspect the Eventrouter log and to see the type of data it will syn
 
 ## Deeper into Kubelet and Linux Weeds
 
-The Kubelet is the primary “node agent” that runs on each node. It's not a container, it's a Linux process that is core to Kubernetes.
+The Kubelet is the primary “node agent” that runs on each node. It's not a container, it's a Linux process core to Kubernetes.
 
 `ps -lC "kubelet"`{{execute}}
 

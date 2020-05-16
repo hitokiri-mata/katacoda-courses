@@ -8,7 +8,6 @@ With these steps you have learned how to:
 
 - &#x2714; ensure your 12-factor application generates logs to streams,
 - &#x2714; inspect Kubernetes cluster events,
-- &#x2714; inspect Node logs,
 - &#x2714; inspect container logs across multiple Pods,
 - &#x2714; use some convenient command-line tools to view log aggregations.
 

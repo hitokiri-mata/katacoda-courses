@@ -5,7 +5,7 @@ metadata:
   labels:
     app: crasher
 spec:
-  restartPolicy: Never
+  restartPolicy: Always
   containers:
     - name: container-a
       image: chentex/random-logger
@@ -16,5 +16,6 @@ spec:
           httpHeaders:
             - name: Custom-Header
               value: Awesome
-        initialDelaySeconds: 10
-        periodSeconds: 3
+        initialDelaySeconds: 3
+        periodSeconds: 2
+        failureThreshold: 1
