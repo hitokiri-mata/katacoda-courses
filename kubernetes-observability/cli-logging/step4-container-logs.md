@@ -105,15 +105,15 @@ When containers crash the current logs are not available without the `--previous
 
 `kubectl get pods`{{execute}}
 
-The Pod will run and after moments it will crash due to the failed liveness probe then a new Pods will start. Observe the current Pod log.
+The Pod will run and after moments it will crash due to the failed liveness probe.  then a new Pods will start. Observe the current Pod log.
 
 `kubectl logs crasher`{{execute}}
 
 This log list is from the currently running Pod, but what if you want to see the logs from the previously crashed Pod. Using the `previous=true | -p` flag will reveal the logs from the previously running container.
 
-`watch kubectl logs crasher --previous=true`{{execute}}
+`watch "kubectl get pods  && echo "—•••••••—" && kubectl logs crasher --previous=true"`{{execute}}
 
-The watch was applied so you can see the list changing after each crash. In a real application, perhaps this log would give you a clue why the app failed. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The watch was applied so you can see the list changing after each crash. It will happen about every 45 seconds. In a real application, perhaps this log would give you a clue why the app failed. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Conclusion
 

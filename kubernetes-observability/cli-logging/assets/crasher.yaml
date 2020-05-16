@@ -10,12 +10,10 @@ spec:
     - name: container-a
       image: chentex/random-logger
       livenessProbe:
-        httpGet:
-          path: /healthz
-          port: 8080
-          httpHeaders:
-            - name: Custom-Header
-              value: Awesome
         initialDelaySeconds: 3
-        periodSeconds: 2
+        periodSeconds: 10
         failureThreshold: 1
+        successThreshold: 1
+        tcpSocket:
+          port: 80
+        timeoutSeconds: 2

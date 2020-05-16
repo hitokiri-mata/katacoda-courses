@@ -1,5 +1,4 @@
 {
-	"private": "true",
 	"title": "Kubernetes Logging",
 	"description": "Discover where your app logs are stored and how to inspect them.",
 	"time":	"15 minutes",

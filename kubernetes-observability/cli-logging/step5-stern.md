@@ -12,7 +12,7 @@ Verify Stern is working.
 
 Observer the random-logger using Stern.
 
-`stern random-logger`{{execute}}
+`stern random-logger --tail=1`{{execute}}
 
 The color coding is a helpful improvement to see the distinction events from the three Pods. Stern defaults to streaming the logs to stdout. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
