@@ -1,5 +1,4 @@
-<img align="right" src="./assets/logs-stream.jpg" width="400">
-[Logs Vancouver - Tony Hisgett, Flickr](https://www.flickr.com/photos/hisgett/220279395)
+<img align="right" src="./assets/logs-stream.jpg" width="300" alt="Logs on Vancouver River, Tony Hisgett, Flickr">
 
 # Kubernetes Logging #
 

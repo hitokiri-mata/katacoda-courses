@@ -12,7 +12,7 @@ Your deployment of random-logger simply streams logs to stdout with a shell scri
 
 `kubectl logs deployment/random-logger`{{execute}}
 
-It's hard to tell from this output, but you are only seeing the log from one of the Pods in the scale group of three. When logs are requested by `deployment/<name>` the API randomly chooses only one from the replicated Pods, not all of them.
+It's hard to tell from this output, but you are only seeing the log from one of the Pods in the scale group of three. When `logs` are requested by `deployment/<name>` the API randomly chooses only one from the replicated Pods, not all of them. The log it picks is reported at the beginning of the listing, something like `Found 3 pods, using pod/random-logger...`.
 
 You can also get the logs from a specific Pod. Get the name of the first Pod.
 
@@ -36,11 +36,11 @@ You can get a longer list.
 
 `kubectl logs --selector app=random-logger --tail=50 && kubectl logs --selector app=random-logger --tail=50 | echo "Log lines $(wc -l)"`{{execute}}
 
-Its 150 lines, as you see the 50 lines from each of the 3 Pods.
+It's 150 lines, as you see the 50 lines from each of the 3 Pods. If you had hundreds of pods and requested lots of lines, it's a good way to rattle the comfort of a Site Reliability Engineer. You might even get the lights to flicker.
 
-But a `--tail=-1` for all lines will fail when there is more than one Pod.
+But a `--tail=-1`, which normally is a request for all lines, will be ignored.
 
-`kubectl logs --selector app=random-logger --tail=-1"`{{execute}}
+`kubectl logs --selector app=random-logger --tail=-1 | echo "Log lines $(wc -l)"`{{execute}}
 
 ## Continuous Stream to Stdout
 
@@ -48,7 +48,7 @@ Sometimes you may want to observe and application by watching the accumulating l
 
 `kubectl logs -f deployment/random-logger`{{execute}}
 
-As the application generates a new log event each second, a new log event will appear. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+As the application generates a new log event each second, a new log event will appear. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Logs from a Specific Container
 
@@ -66,40 +66,57 @@ Instead, add a specific container name of the log stream you wish to inspect.
 
 `kubectl logs --selector app=bipedal -c=container-b`{{execute}}
 
-## Accessing Log from the Pod's Service
+If you want all the logs from all the containers just add the `--all-containers=true` switch.
+
+`kubectl logs pod/bipedal --all-containers=true -f --since=3s --timestamps=true`{{execute}}
+
+In this case, this line demonstrates a few extra helpful switches:
+
+| Switch              | Description                           |
+|---------------------|---------------------------------------|
+| `-f`                | to stream                             |
+| `--since=3s`        | most recent entries                   |
+| `--timestamp=true`  | to show all times                     |
+| `--prefix=true` *   | to reveal the pod and container names |
+
+* The `--prefix` option has been added in the newer Kubernetes version 1.17.
+
+Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+## Access Logs From Pod's Service
 
 You can also access the logs from the Service that fronts the Pod. Expose the bipedal Pod with a Service.
 
-`kubectl expose deployment/bipedal --port-80`{{execute}}
+`kubectl expose pod/bipedal --port=80`{{execute}}
 
 Access the logs, you still have to specify the specific container when there is more than one.
 
-`kubectl logs -f service/bipedal -c=container-a`{{execute}}
+`kubectl logs service/bipedal -c=container-a`{{execute}}
 
 ## Viewing Logs from Dead Pods
 
-When containers crash the current logs are not available without the `--previous=true | -p` flag. Sometimes it's important to obtain the logs from crashed containers to diagnose the cause. The following command will create and immediately end with the Pod status of _Completed_.
+When containers crash the current logs are not available without the `--previous=true | -p` flag. Sometimes it's important to obtain the logs from crashed containers to diagnose the cause. The following command will create a Pod that will fail in a few seconds. The Pod will log a few lines and the readiness probe will fail to responed and Kubernetes will kill the Pod.
 
-`kubectl run busybox-test-pod-status --image=busybox --restart=Never -- /bin/true`{{execute}}
+`kubectl run -f crasher.yaml`{{execute}}
 
 `kubectl get pods`{{execute}}
 
-Once the Pod has reached the `Complete` status try to get the log.
+The Pod will run and after about 10 seconds it will change to the `CrashLoopBack`  status. Once crashed, try to get its logs.
 
-`kubectl logs busybox-test-pod-status`{{execute}}
+`kubectl logs crasher`{{execute}}
 
-Notice the log is blank. However, using the `previous=true | -p` flag will reveal the old output.
+The log list is blank. However, using the `previous=true | -p` flag will reveal the old output.
 
-`kubectl logs busybox-test-pod-status --previous=true`{{execute}}
+`kubectl logs crasher --previous=true`{{execute}}
 
-This `BadRequest` message is the log from the previously terminated container.
+In a real application, perhaps this log would give you a clue why the app failed.
 
 ## Conclusion
 
 That covers `$ kubectl logs [-f] [-p] (POD | TYPE/NAME) [-c CONTAINER]`. What trips people often are these key points:
 
 1. If there is more than one container, the specific container -c needs to be specified.
-1. If aggregation is requested from multiple Pods, then tail=-1 and `follow=true | -f` switch will not work.
+1. If aggregation is requested from multiple Pods, the tail=-1 switch will be ignored.
 1. Use `previous=true | -p` switch for debugging crashed Pods.
 
 Another point that may not be obvious is the `logs` command will collect logs from containers yet you are never concerned where those containers are running in the cluster. Kubernetes is protecting you from having to root around for log files across your datacenter.
