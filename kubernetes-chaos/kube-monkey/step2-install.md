@@ -8,7 +8,7 @@ Grab the source code that contains the Helm chart.
 
 Install Kube Monkey using the Helm chart.
 
-`helm install my-monkey kubemonkey -n kube-monkey -f my-monkey.yaml`{{execute}}
+`helm install my-monkey kubemonkey -n kube-monkey -f ~/my-monkey.yaml`{{execute}}
 
 Return to the default directory.
 

@@ -1,12 +1,12 @@
 {
     "title": "Containers for Kubernetes",
     "icon": "fa-kubernetes",
-    "description": "Learn how to build distilled containers, expecially when they run on Kubernetes.",
+    "description": "Learn how to build distilled containers, especially when they run on Kubernetes.",
     "courses": [    
       {
         "course_id": "oci",
-        "title": "OCI Containers",
-        "description": "Disecting the OCI container format"
+        "title": "Decomposing an Image Binary",
+        "description": "Dissecting the OCI container format"
       },
       {
         "course_id": "go",
