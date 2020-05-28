@@ -2,11 +2,11 @@ Try the following to reveal all the API resources.
 
 `kubectl get --raw /`{{execute}}
 
-In this list is namespaces, so request the namespaces.
+At the top of this list is _v1_ and under that is _namespaces_, so request the namespaces.
 
 `kubectl get --raw /api/v1/namespaces`{{execute}}
 
-Once of the namespaces is called `default`, so request details on the default namespace.
+One of the namespaces is called `default`, so request details on the default namespace.
 
 `kubectl get --raw /api/v1/namespaces/default`{{execute}}
 
