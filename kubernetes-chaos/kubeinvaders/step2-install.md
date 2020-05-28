@@ -14,7 +14,6 @@ Install the game using the Helm chart.
 
 ```
 helm install kubeinvaders ./helm-charts/kubeinvaders \
---version 0.1.1 \
 --namespace kubeinvaders \
 --set service.type=NodePort \
 --set ingress.enabled=false \
