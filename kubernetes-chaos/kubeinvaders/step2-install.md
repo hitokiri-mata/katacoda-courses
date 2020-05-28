@@ -6,6 +6,10 @@ Grab the source code that contains the Helm chart.
 
 `git clone https://github.com/lucky-sideburn/KubeInvaders && cd KubeInvaders`{{execute}}
 
+> Note: The latest version you just pulled down has a [blocking defect](https://github.com/lucky-sideburn/KubeInvaders/issues/21) in the latest Helm chart code. No big deal, this happens sometimes especially if we rely on "latest", so we will revert the source to a version that was tested successfully with this scenario. Revert to a working version.
+
+`git checkout dfd2625ee1555205d1b562a18492e7e1ac4e3b94 --quiet`{{execute}}
+
 Install the game using the Helm chart.
 
 ```
