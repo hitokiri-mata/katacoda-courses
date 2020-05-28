@@ -1,4 +1,4 @@
-At sometime between a period of 30 to 90 seconds, Kube Monkey will be killing your targeted Pods. Notice as Pods are deleted, the Kubernetes resilience feature is making sure they are restored.
+At some period between 30 to 90 seconds, Kube Monkey will be killing your targeted Pods. Notice as Pods are deleted, the Kubernetes resilience feature is making sure they are restored.
 
 `watch kubectl get deployments,pods --all-namespaces -l app-purpose=chaos`{{execute}}
 
