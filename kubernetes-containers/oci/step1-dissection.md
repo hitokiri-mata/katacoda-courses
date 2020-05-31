@@ -32,4 +32,4 @@ Inspect the files in the last layer.
 
 `tree last-layer`{{execute}}
 
-This single file makes sense because it's the last instruction in the Redis Dockfile that would cause a layer to be created, [on line 100 here](https://github.com/docker-library/redis/blob/master/6.0/Dockerfile).
+This single file makes sense because it's the last instruction in the Redis Dockfile that would cause a layer to be created, [on line 100 here](https://github.com/docker-library/redis/blob/master/6.0/Dockerfile#L100).

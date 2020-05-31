@@ -4,7 +4,7 @@
   "title": "Decomposing Container Images",
   "description": "Dissecting the OCI container format",
   "difficulty":	"Introduction",
-  "time":	"10 minutes",
+  "time":	"15 minutes",
   "details": {
     "steps": [
       {
@@ -38,9 +38,9 @@
     },
     "assets": {
       "host01": [
-        {"file": "Dockerfile-*", "target": "/root"},
-        {"file": "*.py", "target": "/root"},
-        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+        {"file": "Dockerfile-A", "target": "/root"},
+        {"file": "Dockerfile-B", "target": "/root"},
+        {"file": "fibonacci.py", "target": "/root"}
       ]
     }
   },

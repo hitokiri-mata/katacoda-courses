@@ -34,5 +34,9 @@ Inspect the empty container and verify it's truly empty.
 
 `dive empty`{{execute}}
 
-Inspect the BusyBox container and notice all the commands are present and the image efficiency is a 100%. Next, let's look at some less efficient containers.
+Inspect the BusyBox container.
+
+`dive buxybox`{{execute}}
+
+Notice all the commands are present and the image efficiency is a 100%. Next, let's look at some less efficient containers.
 

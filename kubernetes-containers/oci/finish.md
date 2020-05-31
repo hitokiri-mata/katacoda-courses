@@ -1,5 +1,6 @@
 # Conclusion #
 
+<img align="right" src="./assets/linux-foundation-logo.png" width="300">
 You now understand ...
 
 ## Lessons Learned ##
