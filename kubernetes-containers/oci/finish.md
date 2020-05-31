@@ -18,7 +18,7 @@ Hopefully, you also understand how Kubernetes is a new type of data center _oper
 - [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/)
 - [OCI Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/spec.md)
 - [Demystifying the Open Container Initiative (OCI) Specifications](https://www.docker.com/blog/demystifying-open-container-initiative-oci-specifications/)
-- [Tar Files](https://en.wikipedia.org/wiki/Tar_(computing))
+- <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a> 
 - [BusyBox](https://busybox.net/FAQ.html)
 - [Moby Project](https://github.com/moby/moby)
 - [Dive](https://github.com/wagoodman/dive)
