@@ -1,20 +1,20 @@
-A container image is a [tar file](https://en.wikipedia.org/wiki/Tar_\(computing\)) containing tar files. Internally, each tar file is a layer. Once all tar files have been extracted to a local filesystem, you can explore the details of the layers.
+A container image is a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a> containing tar files. Internally, each tar file is a layer. Once all tar files have been extracted to a local filesystem, you can explore the details of the layers.
 
 Using the docker tool, pull the layers of a Redis container image onto this filesystem.
 
 `docker pull redis:6.0.4-alpine3.11`{{execute}}
 
-Create a scratch location to inspect the Redis files.
-
-`mkdir redis && cd redis`{{execute}}
-
 Export the image into a raw tar format.
 
 `docker save redis:6.0.4-alpine3.11 > redis.tar`{{execute}}
 
+Create a scratch location to inspect the Redis files.
+
+`mkdir redis && cd redis`{{execute}}
+
 Extract the files from the tar.
 
-`tar -xvf redis.tar`{{execute}}
+`tar -xvf ../redis.tar`{{execute}}
 
 All of the contents along with the layer tar files are now viewable.
 

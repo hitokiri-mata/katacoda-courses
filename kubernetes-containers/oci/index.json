@@ -42,12 +42,9 @@
     "showdashboard": true,
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
-    "icon": "fa-kubernetes",
-    "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}
-    ]
+    "icon": "fa-kubernetes"
   },
   "backend": {
-    "imageid": "kubernetes-cluster2-running"
+    "imageid": "docker"
   }
 }

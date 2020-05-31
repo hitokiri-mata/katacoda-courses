@@ -5,6 +5,8 @@ launch.sh
 # Common curl switches
 echo '-s' > ~/.curlrc
 
+apt install tree
+
 # Allow pygmentize for source hilighting
 docker pull whalebrew/pygmentize
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc

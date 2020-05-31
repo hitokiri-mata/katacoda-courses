@@ -1,7 +1,7 @@
 <img align="right" src="./assets/linux-foundation-logo.png" width="300">
-<img align="right" src="./assets/oci-logo.png" width="300">
 The file that represents the definition of a container is called a container image. When a container runtime engine unpacks these files from the image and starts them on the operating system, then the container instance is running. In the end, containers are just normal processes that run on the operating system, commonly Linux.
 
+<img align="right" src="./assets/oci-logo.png" width="300">
 How containers run and how container runtime engines work is interesting and often important to understand. The best place to start looking is the container image format and contents.
 
 You will learn:
