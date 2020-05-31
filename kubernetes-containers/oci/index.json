@@ -38,9 +38,9 @@
     },
     "assets": {
       "host01": [
-        {"file": "Dockerfile-A", "target": "/root"},
-        {"file": "Dockerfile-B", "target": "/root"},
-        {"file": "fibonacci.py", "target": "/root"}
+        {"file": "Dockerfile-A", "target": "~/"},
+        {"file": "Dockerfile-B", "target": "~/"},
+        {"file": "fibonacci.py", "target": "~/"}
       ]
     }
   },

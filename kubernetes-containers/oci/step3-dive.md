@@ -4,17 +4,19 @@
 
 A tool for exploring a container image, layer contents, and discovering ways to shrink the size of your OCI image.
 
-Install the Dive tool.
+Return to the root directory and install the Dive tool.
+
+`cd ~`{{execute}}
 
 `wget -q https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb`{{execute}}
 
 `apt install ./dive_0.9.2_linux_amd64.deb`{{execute}}
 
-and verified it is working.
+and verified it's working.
 
 `dive --version`{{execute}}
 
-Dive runs in two modes with an interactive text user interface in the shell or as a command line tool tuned for integration into your continuous integration pipelines.
+Dive runs in two modes with an interactive text user interface in the shell or as a command-line tool tuned for integration into your continuous integration pipelines.
 
 ## Interactive
 
@@ -36,7 +38,10 @@ Inspect the empty container and verify it's truly empty.
 
 Inspect the BusyBox container.
 
-`dive buxybox`{{execute}}
+`dive busybox`{{execute}}
 
-Notice all the commands are present and the image efficiency is a 100%. Next, let's look at some less efficient containers.
+Notice all the commands are present and the image efficiency is at 100%. Next, let's look at some less efficient containers.
 
+You can explore other containers from other registries.
+
+`dive bitnami/kafka:2.5.0`{{execute}}
