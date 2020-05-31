@@ -1,6 +1,4 @@
-## CI/CD Pipeline Integration
-
-This tool can also be added to your pipeline and can alert you when it encounters large or bloated containers that surpass a threshold defined by you.
+This tool can also be added to your pipeline to alert you when it encounters large or bloated containers that surpass a your defined thresholds.
 
 Let's build two containers with Python that can illustrate a process for tuning containers.
 
@@ -14,7 +12,7 @@ Build the container.
 
 `docker build -t fibonacci-a --file Dockerfile-a .`{{execute}}
 
-And run the container.
+Run the container.
 
 `docker run fibonacci-a`{{execute}}
 
@@ -28,7 +26,11 @@ View the report.
 
 There are many details, so instead pick out some key findings.
 
-`cat dive-report-a.json | jq .`{{execute}}
+```
+echo "              Size: $(cat dive-report-a.json | jq .image.sizeBytes) bytes" && \
+echo "       Inefficient: $(cat dive-report-a.json | jq .image.inefficientBytes) bytes" && \
+echo "Inefficiency score: $(cat dive-report-a.json | jq .image.efficiencyScore)"
+```{{execute}}
 
 ### Trimmed Container (b)
 
@@ -36,11 +38,13 @@ The Dockerfile-b is a typical revision of a Dockerfile for Python with several b
 
 `cat Dockerfile-b`{{execute}}
 
-There are more best practices and tuning that can be done, but let's start with this. Build the container.
+There are more best practices, tuning, and opinions that can be applied, but let's start with this. 
+
+Build the container.
 
 `docker build -t fibonacci-b --file Dockerfile-b .`{{execute}}
 
-And run the container.
+Run the container.
 
 `docker run fibonacci-b`{{execute}}
 
@@ -50,5 +54,15 @@ Let's see what the Dive tool thinks of this container. Generate the report.
 
 With both container reports generated, compare the key findings.
 
-`cat dive-report-a.json | jq .`{{execute}}
-`cat dive-report-b.json | jq .`{{execute}}
+```
+echo "Container Image a" && \
+echo "              Size: $(cat dive-report-a.json | jq .image.sizeBytes) bytes" && \
+echo "       Inefficient: $(cat dive-report-a.json | jq .image.inefficientBytes) bytes" && \
+echo "Inefficiency score: $(cat dive-report-a.json | jq .image.efficiencyScore)" && \
+echo "" && echo "Container Image b" && \
+echo "              Size: $(cat dive-report-b.json | jq .image.sizeBytes) bytes" && \
+echo "       Inefficient: $(cat dive-report-b.json | jq .image.inefficientBytes) bytes" && \
+echo "Inefficiency score: $(cat dive-report-b.json | jq .image.efficiencyScore)"
+```{{execute}}
+
+With this too you can add thresholds to these values so you can be notified or to actually break your pipeline when newly built containers exceed your limits for bloat. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when you containers scale across your cluster. Documentation on the [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).

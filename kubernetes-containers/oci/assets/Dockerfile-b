@@ -1,10 +1,10 @@
-FROM 3.8.3-alpine3.11
+FROM python:3.8.3-alpine3.11
 
 COPY requirements.txt /tmp/
 
 RUN pip install -r /tmp/requirements.txt
 
-RUN useradd --create-home appuser
+RUN adduser -D appuser
 WORKDIR /home/appuser
 USER appuser
 

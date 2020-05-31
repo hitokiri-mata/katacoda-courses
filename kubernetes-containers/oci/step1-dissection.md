@@ -1,5 +1,3 @@
-TEST - REMOVE - 0.0.2
-
 A container image is a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a> containing tar files. Internally, each tar file is a layer. Once all tar files have been extracted to a local filesystem, you can explore the details of the layers.
 
 Using the docker tool, pull the layers of a Redis container image onto this filesystem.

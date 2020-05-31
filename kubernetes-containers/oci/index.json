@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "pathwayTitle": "oci",
   "title": "Decomposing Container Images",
   "description": "Dissecting the OCI container format",
