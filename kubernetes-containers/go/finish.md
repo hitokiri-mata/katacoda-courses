@@ -16,7 +16,7 @@ Hopefully you also understand how Kubernetes is a new type of data center _opera
 ## References ##
 
 - [GoLang](https://www.nginx.com/)
-- [GoLang Releases](https://golang.org/doc/devel/release.html))
+- [GoLang Releases](https://golang.org/doc/devel/release.html)
 - [Scratch Containers](https://cloud.google.com/solutions/best-practices-for-building-containers#file_system_content)
 - [Gin](https://github.com/gin-gonic/gin)
 - [Multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)

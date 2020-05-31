@@ -1,26 +1,24 @@
 # Conclusion #
 
-You now understand different techniques for writing Go apps and packaging them in efficient containers for Kubernetes. Go is a popular language to write containerized apps. The language was designed for simplicity and efficiency. These are attractive goals when you are writing many application containers for Kubernetes.
+You now understand ...
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to write some basic Go applications,
-- &#x2714; how to write a basic microservice in Go,
-- &#x2714; how to package a Go microservice in a container,
-- &#x2714; how to run a Go microservice on Kubernetes.
+- &#x2714; The directories and files that make up container image binaries.
+- &#x2714; How to create a runnable container without writing a Dockerfile.
+- &#x2714; How to install and use the _Dive_ tool to inspect container images.
 
-Hopefully you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
+Hopefully, you also understand how Kubernetes is a new type of data center _operating system_ that can run your applications - across multiple nodes on your local laptop, a rack of servers, or any cloud target.
 
 ## References ##
 
-- [GoLang](https://www.nginx.com/)
-- [GoLang Releases](https://golang.org/doc/devel/release.html))
-- [Scratch Containers](https://cloud.google.com/solutions/best-practices-for-building-containers#file_system_content)
-- [Gin](https://github.com/gin-gonic/gin)
-- [Multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
-- [MetaWeather source](https://www.metaweather.com/)
+- [Demystifying the Open Container Initiative (OCI) Specifications](https://www.docker.com/blog/demystifying-open-container-initiative-oci-specifications/)
+- [Tar Files](https://en.wikipedia.org/wiki/Tar_(computing))
+- [BusyBox](https://busybox.net/FAQ.html)
+- [Moby Project](https://github.com/moby/moby)
+- [Dive](https://github.com/wagoodman/dive)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

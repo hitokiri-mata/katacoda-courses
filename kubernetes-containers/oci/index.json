@@ -1,30 +1,25 @@
 {
   "private": "true",
   "pathwayTitle": "oci",
-  "title": "Decomposing an Image Binary",
+  "title": "Decomposing Container Images",
   "description": "Dissecting the OCI container format",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
     "steps": [
       {
-        "title": "TODO",
-        "text": "step1-.md",
+        "title": "Container Image Dissection",
+        "text": "step1-dissection.md",
         "code": "clear.sh"
       },
       {
-        "title": "Pull and Save",
-        "text": "step2-save.md",
+        "title": "Creating Empty Image",
+        "text": "step2-create.md",
         "code": "clear.sh"
       },
       {
-        "title": "Expand",
-        "text": "step3-expand.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "TODO",
-        "text": "step4-.md",
+        "title": "Dive",
+        "text": "step3-dive.md",
         "code": "clear.sh"
       }
     ],

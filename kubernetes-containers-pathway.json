@@ -5,7 +5,7 @@
     "courses": [    
       {
         "course_id": "oci",
-        "title": "Decomposing an Image Binary",
+        "title": "Decomposing Container Images",
         "description": "Dissecting the OCI container format"
       },
       {

@@ -1,13 +1,11 @@
-# Go Apps in Containers on Kubernetes #
+# Decomposing Container Images #
 
-<img align="right" src="./assets/golang.png" width="300">
+<img align="right" src="./assets/linux-foundation-logo.png" width="300">
+<img align="right" src="./assets/oci-logo.png" width="300">
 These next steps provide an ideal place to start writing application in Go to run on Kubernetes. Each step will take you from raw Go code, to packaging it in a container to running your containered application on Kubernetes.
 
-You will learn how:
+You will learn:
 
-- write some basic Go applications
-- write a basic microservice in Go
-- package a Go microservice in a container
-- run a Go microservice on Kubernetes
-
-> [Go](https://golang.org/) is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+- The directories and files that make up container image binaries.
+- How to create a runnable container without writing a Dockerfile.
+- How to install and use the _Dive_ tool to inspect container images.
