@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM 3.8.3-alpine3.11
 
 COPY requirements.txt /tmp/
 
@@ -10,4 +10,5 @@ USER appuser
 
 COPY fibonacci.py .
 
-CMD [ "python", "./fibonacci.py" ]
+ENTRYPOINT [ "python", "./fibonacci.py" ]
+CMD ["10"]

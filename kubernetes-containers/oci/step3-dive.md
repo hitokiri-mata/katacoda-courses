@@ -4,9 +4,9 @@
 
 A tool for exploring a container image, layer contents, and discovering ways to shrink the size of your OCI image.
 
-Return to the root directory and install the Dive tool.
+Return to the default directory and install the Dive tool.
 
-`cd ~`{{execute}}
+`cd ~/tutorial`{{execute}}
 
 `wget -q https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb`{{execute}}
 

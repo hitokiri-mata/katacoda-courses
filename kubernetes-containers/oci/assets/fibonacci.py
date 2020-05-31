@@ -1,3 +1,5 @@
+import sys
+
 def fibonacci(n):
   if n == 0:
     return 0
@@ -15,3 +17,6 @@ def sequence(length):
 def values(event, context):
   length = event['data']['length']
   return sequence(int(length))
+
+n = int(sys.argv[1])
+sequence(n+1)
