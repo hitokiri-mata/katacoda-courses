@@ -6,7 +6,7 @@ You now understand ...
 
 With these steps you have learned:
 
-- &#x2714; The directories and files that make up container image binaries.
+- &#x2714; The directory and file ingredients of container image binaries.
 - &#x2714; How to create a runnable container without writing a Dockerfile.
 - &#x2714; How to install and use the _Dive_ tool to inspect container images.
 
@@ -14,6 +14,8 @@ Hopefully, you also understand how Kubernetes is a new type of data center _oper
 
 ## References ##
 
+- [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/)
+- [OCI Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/spec.md)
 - [Demystifying the Open Container Initiative (OCI) Specifications](https://www.docker.com/blog/demystifying-open-container-initiative-oci-specifications/)
 - [Tar Files](https://en.wikipedia.org/wiki/Tar_(computing))
 - [BusyBox](https://busybox.net/FAQ.html)
