@@ -16,7 +16,7 @@ Build the container.
 
 And run the container.
 
-`docker run fibonacci-a 5`{{execute}}
+`docker run fibonacci-a`{{execute}}
 
 Let's see what the Dive tool thinks of this container. Generate the report.
 
@@ -42,7 +42,7 @@ There are more best practices and tuning that can be done, but let's start with 
 
 And run the container.
 
-`docker run fibonacci-b 5`{{execute}}
+`docker run fibonacci-b`{{execute}}
 
 Let's see what the Dive tool thinks of this container. Generate the report.
 

@@ -1,7 +1,7 @@
 # Conclusion #
 
 <img align="right" src="./assets/linux-foundation-logo.png" width="300">
-You now understand ...
+There are other container formats, but the industry is moving toward this standard and governed OCI format. With this scenario, you now understand it's a collection of tars where each tar is a layer. With this knowledge its also easy to inspect the contents of a container for inspecting and debugging purposes. With this standard OCI format, you can see why there is a growing variety of tools that can build, run, and introspect OCI containers images.
 
 ## Lessons Learned ##
 
@@ -18,7 +18,7 @@ Hopefully, you also understand how Kubernetes is a new type of data center _oper
 - [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/)
 - [OCI Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/spec.md)
 - [Demystifying the Open Container Initiative (OCI) Specifications](https://www.docker.com/blog/demystifying-open-container-initiative-oci-specifications/)
-- <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a> 
+- <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a>
 - [BusyBox](https://busybox.net/FAQ.html)
 - [Moby Project](https://github.com/moby/moby)
 - [Dive](https://github.com/wagoodman/dive)

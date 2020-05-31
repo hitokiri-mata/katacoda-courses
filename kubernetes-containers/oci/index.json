@@ -38,10 +38,10 @@
     },
     "assets": {
       "client": [
-        {"file": "fibonacci.py", "target": "~/"},
-        {"file": "requirements.txt", "target": "~/"},
         {"file": "Dockerfile-a", "target": "~/"},
-        {"file": "Dockerfile-b", "target": "~/"}
+        {"file": "Dockerfile-b", "target": "~/"},
+        {"file": "fibonacci.py", "target": "~/"},
+        {"file": "requirements.txt", "target": "~/"}
       ]
     }
   },
