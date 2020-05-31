@@ -19,9 +19,7 @@ The previous idea of importing a tar file can be extended to create an entire im
 
 Next, we'll use BusyBox as the base to create a functional container by just using this tar and import technique. BusyBox combines tiny versions of many common UNIX utilities into a single small executable. Install Busybox locally.
 
-`apt-get install busybox-static`{{execute}}
-
-
+`apt install busybox-static`{{execute}}
 
 Docker provides [a script](https://github.com/moby/moby/blob/a575b0b1384b2ba89b79cbd7e770fbeb616758b3/contrib/mkimage/busybox-static) to download the BusyBox [rootfs](https://www.kernel.org/doc/Documentation/filesystems/ramfs-rootfs-initramfs.txt)
 

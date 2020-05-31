@@ -8,7 +8,7 @@ This `at` command is available on a variety of operating system, including this 
 
 First, install the utility using the standard `apt` package manager.
 
-`apt-get install at --yes -qq`{{execute}}
+`apt install at --yes -qq`{{execute}}
 
 Verify the utility now responds.
 

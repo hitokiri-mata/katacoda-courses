@@ -5,8 +5,7 @@ launch.sh
 # Common curl switches
 echo '-s' > ~/.curlrc
 
-apt-get update
-apt-get install wget
-apt install tree
+apt update
+apt install tree --yes
 
 { clear && echo 'Linux with Docker is ready.'; } 2> /dev/null
