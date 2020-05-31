@@ -4,8 +4,6 @@
 
 A tool for exploring a container image, layer contents, and discovering ways to shrink the size of your OCI image.
 
-<img align="right" src="https://github.com/wagoodman/dive/raw/master/.data/demo.gif" width="300">
-
 Install the Dive tool.
 
 `wget -q https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb`{{execute}}
@@ -32,58 +30,9 @@ The third panel in the interactive mode provides a summary of the efficiency and
 
 To exit the interactive mode, use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-## CI/CD Pipeline Integration
+Inspect the empty container and verify it's truly empty.
 
-This tool can also be added to your pipeline and can alert you when it encounters large or bloated containers that surpass a threshold defined by you.
+`dive empty`{{execute}}
 
-Let's build two containers with Python that can illustrate a process for tuning containers.
-
-### Bloated Container (A)
-
-The first container will be a fat container using a Dockerfile that has several bad practices.
-
-`cat Dockerfile-A`{{execute}}
-
-Build the container.
-
-`docker build -t fibonacci-A --file Dockerfile-A .`{{execute}}
-
-And run the container.
-
-`docker run fibonacci-A 5`{{execute}}
-
-Let's see what the Dive tool thinks of this container. Generate the report.
-
-`dive fibonacci-A -j dive-report-A.json`{{execute}}
-
-View the report.
-
-`cat dive-report-A.json | jq .`{{execute}}
-
-There are many details, so instead pick out some key findings.
-
-`cat dive-report-A.json | jq .`{{execute}}
-
-### Trimmed Container B
-
-The B Dockerfine is a typical revision of a Dockerfile for Python with several best practices applied.
-
-`cat Dockerfile-A`{{execute}}
-
-There are more best practices and tuning that can be done, but let's start with this. Build the container.
-
-`docker build -t fibonacci-B --file Dockerfile-B .`{{execute}}
-
-And run the container.
-
-`docker run fibonacci-B 5`{{execute}}
-
-Let's see what the Dive tool thinks of this container. Generate the report.
-
-`dive fibonacci-B -j dive-report-B.json`{{execute}}
-
-With both container reports generated, compare the key findings.
-
-`cat dive-report-A.json | jq .`{{execute}}
-`cat dive-report-B.json | jq .`{{execute}}
+Inspect the BusyBox container and notice all the commands are present and the image efficiency is a 100%. Next, let's look at some less efficient containers.
 

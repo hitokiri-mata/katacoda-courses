@@ -20,14 +20,16 @@ All of the contents along with the layer tar files are now viewable.
 
 `tree`{{execute}}
 
-
-
-`cat repositories`{{execute}}
-
-The image also includes the manifest.json file that defines the metadata about the image, such as version information and tag names. The [schema for the manifest.json](https://github.com/opencontainers/image-spec/blob/master/manifest.md) file follows the OCI specification. Inspect the manifest.
+The image includes the manifest.json file that defines the metadata about the image, such as version information and tag names. The [schema for the manifest.json](https://github.com/opencontainers/image-spec/blob/master/manifest.md) file follows the OCI specification. Inspect the manifest.
 
 `cat manifest.json | jq .`{{execute}}
 
 Extracting a layer will reveal the specific files contained for that layer.
 
-`tar -xvf a9cc4ace48cd792ef888ade20810f82f6c24aaf2436f30337a2a712cd054dc97/layer.tar`{{execute}}
+`mkdir last-layer && tar -xvf 014d4966196e17dec4032a93660d4be192558c0a654af6347a6e012742079d6c/layer.tar -C last-layer`{{execute}}
+
+Inspect the files in the last layer.
+
+`tree last-layer`{{execute}}
+
+This single file makes sense because it's the last instruction in the Redis Dockfile that would cause a layer to be created, [on line 100 here](https://github.com/docker-library/redis/blob/master/6.0/Dockerfile).

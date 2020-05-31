@@ -21,6 +21,11 @@
         "title": "Dive",
         "text": "step3-dive.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Dive with Pipelines",
+        "text": "step4-dive-pipeline.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
@@ -33,7 +38,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "/root"},
+        {"file": "Dockerfile-*", "target": "/root"},
+        {"file": "*.py", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
