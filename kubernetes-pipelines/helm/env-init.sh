@@ -3,7 +3,7 @@
 launch.sh
 
 apt update
-apt install tree --yes
+apt install tree --yes -qq
 
 source <(kubectl completion bash)
 

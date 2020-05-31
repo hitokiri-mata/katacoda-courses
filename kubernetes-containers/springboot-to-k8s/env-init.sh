@@ -3,7 +3,7 @@
 launch.sh
 
 apt update
-apt install tree --yes
+apt install tree --yes -qq
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH

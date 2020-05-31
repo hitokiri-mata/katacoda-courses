@@ -10,6 +10,6 @@ cd dev
 
 # Insure tree is available, not all Katacoda instance have it consistently available.
 apt update
-apt install tree --yes
+apt install tree --yes -qq
 
 { clear && echo 'Kubernetes is ready.'; } 2> /dev/null

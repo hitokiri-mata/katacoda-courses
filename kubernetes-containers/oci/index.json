@@ -37,10 +37,10 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
+      "client": [
+        {"file": "fibonacci.py", "target": "~/"},
         {"file": "Dockerfile-A", "target": "~/"},
-        {"file": "Dockerfile-B", "target": "~/"},
-        {"file": "fibonacci.py", "target": "~/"}
+        {"file": "Dockerfile-B", "target": "~/"}
       ]
     }
   },
