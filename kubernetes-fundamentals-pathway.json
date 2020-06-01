@@ -42,11 +42,6 @@
         "course_id": "podpreset",
         "title": "Pod Presets",
         "description": "Separating concerns by injecting Pod Preset fields into matching Pods."
-      },
-      {
-        "course_id": "playground-1.17",
-        "title": "Kubernetes 1.17 Playground",
-        "description": "A place to experiment with Kubernetes 1.17"
       }
     ]
   }
