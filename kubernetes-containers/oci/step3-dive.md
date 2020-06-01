@@ -16,7 +16,7 @@ and verified it's working.
 
 `dive --version`{{execute}}
 
-Dive runs in two modes with an interactive text user interface in the shell or as a command-line tool tuned for integration into your continuous integration pipelines.
+Dive runs in two modes with an interactive text user interface (TUI) in the shell or as a command-line tool tuned for integration into your continuous integration pipelines.
 
 ## Interactive
 
