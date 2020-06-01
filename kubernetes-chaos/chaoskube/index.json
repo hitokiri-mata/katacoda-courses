@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "chaoskube",
   "title": "Chaoskube",
-  "description": "Periodically kills random pods in your Kubernetes cluster.",
+  "description": "Periodically kills random Pods in your Kubernetes cluster.",
   "difficulty":	"Introduction",
   "time":	"15 minutes",
   "details": {

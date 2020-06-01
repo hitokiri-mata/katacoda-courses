@@ -2,7 +2,7 @@ The `Explain` command is a great way to understand the defined structure of a re
 
 `kubectl explain ns`{{execute}}
 
-Almost all resources at this high-level report roughly the same apiVersion, kind, metadata, spec, status information. To get the full structure of this kind then use the `--recursive` flag.
+Almost all resources at this high level report roughly the same apiVersion, kind, metadata, spec, status information. To get the full structure of this kind then use the `--recursive` flag.
 
 `kubectl explain ns --recursive`{{execute}}
 

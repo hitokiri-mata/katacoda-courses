@@ -12,7 +12,7 @@ helm install chaoskube stable/chaoskube -n chaoskube \
   --set interval=20s
 ```{{execute}}
 
-The parameters instruct Chaoskube to kill Pods every 20 seconds. The targeted Pods are any with the label app-purpose=chaos, and the kube-system namespace has be explicitly excluded (!) from the list of namespaces to look for Pods to kill. There are a few other parameters covered in the [Helm chart documentation](https://github.com/helm/charts/tree/master/stable/chaoskube#configuration).
+The parameters instruct Chaoskube to kill Pods every 20 seconds. The targeted Pods are any with the label app-purpose=chaos, and the kube-system namespace has to be explicitly excluded (!) from the list of namespaces to look for Pods to kill. There are a few other parameters covered in the [Helm chart documentation](https://github.com/helm/charts/tree/master/stable/chaoskube#configuration).
 
 You can periodically check the Chaoskube log to see its Pod killing activity.
 

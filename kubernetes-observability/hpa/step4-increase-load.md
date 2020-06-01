@@ -2,7 +2,7 @@ Without any scaling logic applied we can apply stress to the single instance PHP
 
 `kubectl run -i --tty load-generator --image=busybox /bin/sh`{{execute T2}}
 
-Hit enter for command prompt. Exercise the service in a loop.
+Hit Enter for command prompt. Exercise the service in a loop.
 
 `while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done`{{execute T2}}
 

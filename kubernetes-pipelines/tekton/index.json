@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "Tekton Pipelines",
   "title": "Tekton Pipelines",
-  "description": "Build and deploy a Node.js app with Tekton Pipeline",
+  "description": "Build and deploy a Node.js app with Tekton Pipelines.",
   "difficulty":	"Introduction",
   "time":	"20 minutes",
   "details": {

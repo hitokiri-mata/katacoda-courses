@@ -4,11 +4,11 @@ Chaoskube can be one of the tools in your toolbox for approaching testing with C
 
 With these steps you have learned:
 
-- &#x2714; how to install Chaoskube onto Kubernetes,
-- &#x2714; how to adjust the Helm chart configuration to quickly see it in action,
-- &#x2714; how to install and label applications to make them eligible targets for chaos.
+- &#x2714; How to install Chaoskube onto Kubernetes
+- &#x2714; How to adjust the Helm chart configuration to quickly see it in action
+- &#x2714; How to install and label applications to make them eligible targets for chaos
 
-> In the last year, we've seen Chaos Engineering move from a much talked-about idea to an accepted, mainstream approach to improving and assuring distributed system resilience. As organizations large and small begin to implement Chaos Engineering as an operational process, we're learning how to apply these techniques safely at scale. The approach is definitely not for everyone, and to be effective and safe, it requires organizational support at scale. -- [Thoughtworks Radar](https://www.thoughtworks.com/radar/techniques/chaos-engineering)
+> In the last year we've seen Chaos Engineering move from a much talked-about idea to an accepted, mainstream approach to improving and assuring distributed system resilience. As organizations large and small begin to implement Chaos Engineering as an operational process, we're learning how to apply these techniques safely at scale. The approach is definitely not for everyone, and to be effective and safe, it requires organizational support at scale. -- [ThoughtWorks Radar](https://www.thoughtworks.com/radar/techniques/chaos-engineering)
 
 ## References ##
 
