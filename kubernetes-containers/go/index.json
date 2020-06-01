@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "go",
-  "title": "Go Apps in Containers on Kubernetes",
+  "title": "Kubernetes Containers: Go Apps to Kubernetes",
   "description": "Packaging Go Applications in Containers.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",

@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "oci",
-  "title": "Decomposing Container Images",
+  "title": "Kubernetes Containers: Decomposing Images",
   "description": "Dissecting the OCI container format",
   "difficulty":	"Introduction",
   "time":	"15 minutes",
