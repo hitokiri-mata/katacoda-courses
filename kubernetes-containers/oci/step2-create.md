@@ -1,8 +1,8 @@
-A container image is just a tar of file. Fully, it is a tar of tars with some metadata. Therefore, an empty image can be created using the tar command below.
+A container image is a tar of tars with some metadata. Therefore, an empty image can be created using the tar command below.
 
 `tar cv --files-from /dev/null | docker import - empty`{{execute}}
 
-When importing the far file, the docker tool will add the required metadata.
+When importing the tar file, the docker tool will add the required metadata.
 The command creates the image and reports the image id and is now in the images list.
 
 `docker images`{{execute}}

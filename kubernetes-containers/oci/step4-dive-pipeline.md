@@ -1,6 +1,6 @@
-This tool can also be added to your pipeline to alert you when it encounters large or bloated containers that surpass a your defined thresholds.
+This tool can also be added to your CI/CD pipelines to alert you when it encounters inneficient and bloated containers that surpass your defined thresholds.
 
-Let's build two containers with Python that can illustrate a process for tuning containers.
+Let's build two containers with the same Python code to illustrate the process for tuning containers.
 
 ### Bloated Container (a)
 
@@ -38,7 +38,7 @@ The Dockerfile-b is a typical revision of a Dockerfile for Python with several b
 
 `cat Dockerfile-b`{{execute}}
 
-There are more best practices, tuning, and opinions that can be applied, but let's start with this. 
+There are more best (or better) practices, tuning, and opinions that can be applied, but let's start with this.
 
 Build the container.
 
@@ -65,4 +65,7 @@ echo "       Inefficient: $(cat dive-report-b.json | jq .image.inefficientBytes)
 echo "Inefficiency score: $(cat dive-report-b.json | jq .image.efficiencyScore)"
 ```{{execute}}
 
-With this too you can add thresholds to these values so you can be notified or to actually break your pipeline when newly built containers exceed your limits for bloat. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when you containers scale across your cluster. Documentation on the [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).
+With this tool you can add thresholds to these values. You can be notified or force your pipeline to stop when newly built containers exceed your acceptable limits. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when you containers scale across your cluster. Documentation on the [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).
+
+<img align="right" src="./assets/alex-goodman-jpg" width="200">
+Tip of the hat to [Alex Goodman](https://github.com/wagoodman) for this community contribution.

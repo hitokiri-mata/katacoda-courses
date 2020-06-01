@@ -1,7 +1,7 @@
-The file that represents the definition of a container is called a container image. When a container runtime engine unpacks these files from the image and starts them on the operating system, then the container instance is running. In the end, containers are just normal processes that run on the operating system, commonly Linux.
+A container image is a binary file that follows a specific standard. The emerging standard for this format is OCI governed by the Open Container Initiative as part of the Linux Foundation.  When a container runtime engine unpacks these files from the image and starts them on the operating system, then the container instance is running. In the end, containers are just normal processes that run on the operating system, commonly Linux.
 
 <img align="right" src="./assets/oci-logo.png" width="300">
-How containers run and how container runtime engines work is interesting and often important to understand. The best place to start looking is the container image format and contents.
+How containers are built and how container runtime engines interpret these images is interesting and often important to understand. The best place to start understanding how they function is to start with the container image payload.
 
 You will learn:
 
