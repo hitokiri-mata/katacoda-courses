@@ -1,4 +1,4 @@
-A container image is a tar of tars with some metadata. Therefore, an empty image can be created using the tar command below.
+A container image is a tar of tars with some metadata. ([Tartar sauce](https://en.wikipedia.org/wiki/Tartar_sauce)?) Therefore, an empty image can be created using the tar command below.
 
 `tar cv --files-from /dev/null | docker import - empty`{{execute}}
 
@@ -17,6 +17,7 @@ The container runtime appropriately reports `No command specified.`
 
 The previous idea of importing a tar file can be extended to create an entire image from scratch.
 
+<img align="right" src="./assets/busybox.png" width="100">
 Next, we'll use BusyBox as the base to create a functional container by just using this tar and import technique. BusyBox combines tiny versions of many common UNIX utilities into a single small executable. Install Busybox locally.
 
 `apt install busybox-static`{{execute}}
@@ -39,7 +40,7 @@ As before, the directory can be converted into a tar and automatically imported 
 
 `tar -C busybox -c . | docker import - busybox`{{execute}}
 
-You have create a container image.
+You have created a container image.
 
 `docker images`{{execute}}
 

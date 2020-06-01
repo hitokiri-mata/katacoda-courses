@@ -6,7 +6,8 @@ Using the docker tool, pull the layers of a Redis container image onto this file
 
 Export the image into a raw tar format.
 
-`docker save redis:6.0.4-alpine3.11 > redis.tar`{{execute}}
+`docker save redis:6.0.4-alp<img align="right" src="./assets/tar.png" width="100">
+ine3.11 > redis.tar`{{execute}}
 
 Create a scratch location to inspect the Redis files.
 

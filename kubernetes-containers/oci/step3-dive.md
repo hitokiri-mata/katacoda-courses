@@ -22,6 +22,7 @@ Dive runs in two modes with an interactive text user interface in the shell or a
 
 To see the tool in action let's look at the internals of the _Redis_ container image created during the last step using Dive's text user interface.
 
+<img align="right" src="./assets/redis.png" width="100">
 `dive redis`{{execute}}
 
 In the interactive UI there are three panels; Layers, Current Layer Contents, and Image Details. The top-left is the listing of container layers. Move the highlighter up and down with the arrow keys to select a layer. Each layer's contents appear on the right-side panel. Press the tab key to switch between the layer view (left) and the layer's file tree (right). There are key command hints at the bottom and more [key bindings](https://github.com/wagoodman/dive#keybindings) can be found here]. Take a moment to explore the tool.

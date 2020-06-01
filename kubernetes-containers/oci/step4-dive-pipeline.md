@@ -4,6 +4,7 @@ Let's build two containers with the same Python code to illustrate the process f
 
 ### Bloated Container (a)
 
+<img align="right" src="./assets/python.png" width="100">
 The first container will be a fat container using a Dockerfile that has several bad practices.
 
 `cat Dockerfile-a`{{execute}}
@@ -67,5 +68,5 @@ echo "Inefficiency score: $(cat dive-report-b.json | jq .image.efficiencyScore)"
 
 With this tool you can add thresholds to these values. You can be notified or force your pipeline to stop when newly built containers exceed your acceptable limits. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when you containers scale across your cluster. Documentation on the [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).
 
-<img align="right" src="./assets/alex-goodman-jpg" width="200">
+<img align="right" src="./assets/alex-goodman.jpg" width="200">
 Tip of the hat to [Alex Goodman](https://github.com/wagoodman) for this community contribution.
