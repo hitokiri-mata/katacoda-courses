@@ -9,6 +9,8 @@ The first container will be a fat container using a Dockerfile that has several 
 
 `cat Dockerfile-a`{{execute}}
 
+This example was inspired by the article, _[Broken by default: why you should avoid most Dockerfile examples, by Itamar Turner-Trauring](https://pythonspeed.com/articles/dockerizing-python-is-hard/)_, where the bad practices are outlined.
+
 Build the container.
 
 `docker build -t fibonacci-a --file Dockerfile-a .`{{execute}}
@@ -17,7 +19,7 @@ Run the container.
 
 `docker run fibonacci-a`{{execute}}
 
-Let's see what the Dive tool thinks of this container. Generate the report.
+From this the first 10 Fibonacci numbers are produced. Let's see what the Dive tool thinks of this container. Generate the report.
 
 `dive fibonacci-a -j dive-report-a.json`{{execute}}
 

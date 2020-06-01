@@ -1,7 +1,7 @@
 # Conclusion #
 
 <img align="right" src="./assets/linux-foundation-logo.png" width="300">
-There are other container formats, but the industry is moving toward this standard and governed OCI format. With this scenario, you now understand it's a collection of tars where each tar is a layer. With this knowledge it's also easy to inspect the contents of a container for inspecting and debugging purposes. With this standard OCI format, you can see why there is a growing variety of tools that can build, run, and introspect OCI containers images.
+There are other container formats, but the industry is moving toward this standard and governed OCI format. With this scenario, you now understand it's a collection of tars where each tar is a layer. With this knowledge. it's now easy to inspect the contents of a container for discovery and debugging purposes. With this standard OCI format, you can see why there is a growing variety of tools that can build, run, and introspect OCI containers images.
 
 ## Lessons Learned ##
 
@@ -21,7 +21,9 @@ Hopefully, you also understand how Kubernetes is a new type of data center _oper
 - <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a>
 - [BusyBox](https://busybox.net/FAQ.html)
 - [Moby Project](https://github.com/moby/moby)
+- _[Broken by default: why you should avoid most Dockerfile examples, by Itamar Turner-Trauring](https://pythonspeed.com/articles/dockerizing-python-is-hard/)_
 - [Dive](https://github.com/wagoodman/dive)
+- [Alex Goodman](https://github.com/wagoodman)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

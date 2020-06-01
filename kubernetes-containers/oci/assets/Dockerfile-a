@@ -5,4 +5,4 @@ COPY fibonacci.py /
 
 RUN pip install flask
 
-CMD [ "python", "./fibonacci.py", "5" ]
+CMD [ "python", "./fibonacci.py", "10" ]
