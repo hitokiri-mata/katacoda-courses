@@ -18,6 +18,9 @@ helm install dash stable/kubernetes-dashboard \
 source <(kubectl completion bash)
 source <(helm completion bash)
 
+apt update -qq
+apt install tree --yes
+
 # Enable metrics - probes failing and crashing on this instance.
 # helm install metrics-server stable/metrics-server --namespace kube-system 
 
