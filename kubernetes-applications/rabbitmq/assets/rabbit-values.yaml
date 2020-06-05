@@ -1,12 +1,19 @@
-# To install:
-# kubectl create namespace rabbit
-# helm install my-rabbit stable/rabbitmq-ha --namespace rabbit -f rabbit-values.yaml
+# Customize of rabbitmq-ha chart found here: 
+# https://github.com/helm/charts/tree/master/stable/rabbitmq-ha
 
-replicas: 3
+# Requested Rabbit MQ "nodes" (StatefulSet Pods), not to be confused with Kubernetes "nodes".
+replicaCount: 3
 
+# Exposed as NodePort for demonstration purposes, typically a ClusterIP
 service:
   type: NodePort 
   managerNodePort: 31000
 
+# Admin creditentials, use these for sign in to RabbitMQ dashboard
 rabbitmqUsername: guest
 rabbitmqPassword: guest
+
+# No monitoring at the moment, but may add soon
+prometheus:
+  operator:
+    enabled: false
