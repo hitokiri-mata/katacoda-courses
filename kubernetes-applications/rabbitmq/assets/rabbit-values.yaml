@@ -4,12 +4,12 @@
 # Requested Rabbit MQ "nodes" (StatefulSet Pods), not to be confused with Kubernetes "nodes".
 replicaCount: 3
 
-# Exposed as NodePort for demonstration purposes, typically a ClusterIP
+# Exposed dashboard as NodePort for demonstration purposes.
 service:
   type: NodePort 
   managerNodePort: 31000
 
-# Admin creditentials, use these for sign in to RabbitMQ dashboard
+# Admin credentials, use these for sign in to RabbitMQ dashboard
 rabbitmqUsername: guest
 rabbitmqPassword: guest
 
