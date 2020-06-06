@@ -1,6 +1,6 @@
 # RabbitMQ on Kubernetes #
 
-<img align="right" src="./assets/rabbitmq.png">
+<img align="right" width="300" src="./assets/rabbitmq.png">
 
 Robust messaging for applications to connect and scale. RabbitMQ is an open-source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 
