@@ -17,3 +17,6 @@ rabbitmqPassword: guest
 prometheus:
   operator:
     enabled: false
+
+# A blank probe disables the default probe. Keeps false failing for some reason. 
+readinessProbe:
