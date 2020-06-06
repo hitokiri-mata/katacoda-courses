@@ -2,7 +2,7 @@
 
 launch.sh
 
-apt update
+apt update > /dev/null 2>&1 
 apt install tree --yes -qq
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
@@ -26,10 +26,10 @@ source <(helm completion bash)
 
 # TODO - would be nice to add instructional step to "alias docker=podman"
 # Install buildah
-# sudo apt update -qq
+# sudo apt update > /dev/null 2>&1
 # sudo apt install -qq -y software-properties-common
 # sudo add-apt-repository -y ppa:projectatomic/ppa
-# sudo apt update -qq
+# sudo apt update > /dev/null 2>&1
 # sudo apt -qq -y install buildah
 
 # Install podman

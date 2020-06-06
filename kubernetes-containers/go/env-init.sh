@@ -26,7 +26,7 @@ helm install dash stable/kubernetes-dashboard \
 source <(kubectl completion bash)
 source <(helm completion bash)
 
-apt update -qq
-apt install tree --yes
+apt update > /dev/null 2>&1
+apt install tree --yes -qq
 
 { clear && echo 'Kubernetes with Helm is ready.'; } 2> /dev/null

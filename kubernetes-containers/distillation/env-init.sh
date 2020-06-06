@@ -26,10 +26,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #TODO - Drafting - perhaps instead of installing these build with podman using tekton pipeline
 # Install buildah
-# sudo apt update -qq
+# sudo apt update > /dev/null 2>&1
 # sudo apt install -qq -y software-properties-common
 # sudo add-apt-repository -y ppa:projectatomic/ppa
-# sudo apt update -qq
+# sudo apt update > /dev/null 2>&1
 # sudo apt -qq -y install buildah
 
 # Install podman

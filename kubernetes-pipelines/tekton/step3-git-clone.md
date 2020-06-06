@@ -10,7 +10,7 @@ Navigate into the directory.
 
 Inspect some of the files.
 
-`apt install tree --yes -qq && tree`{{execute}}
+`apt update > /dev/null 2>&1 && apt install tree --yes -qq`{{execute}}
 
 <img align="right" src="./assets/nodejs.png" width="150">
 
