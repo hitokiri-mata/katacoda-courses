@@ -1,6 +1,6 @@
 # First Kubernetes Application #
 
-![Kubernetes](/javajon/courses/kubernetes-fundamentals/minikube/assets/kubernetes.png "Kubernetes")
+![Kubernetes](./assets/kubernetes.png "Kubernetes")
 
 This scenario takes you through the basics of deploying an application on Kubernetes. The application is nothing notable, but it's simple enough to get started. In the following steps you will learn:
 
