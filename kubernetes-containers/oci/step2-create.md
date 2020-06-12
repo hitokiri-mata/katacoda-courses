@@ -11,7 +11,9 @@ The container image is ready, but as the container doesn't contain anything, it 
 
 `docker run empty`{{execute}}
 
-The container runtime appropriately reports `No command specified.`
+The container runtime appropriately reports 
+
+> `No command specified.`
 
 ## Create Image without Dockerfile
 

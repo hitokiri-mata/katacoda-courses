@@ -6,7 +6,7 @@ A tool for exploring a container image, layer contents, and discovering ways to 
 
 Return to the default directory and install the _Dive_ tool.
 
-`cd ~/tutorial`{{execute}}
+`cd ~/`{{execute}}
 
 `wget -q https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb`{{execute}}
 
