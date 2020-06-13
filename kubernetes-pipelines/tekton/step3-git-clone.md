@@ -8,9 +8,9 @@ Navigate into the directory.
 
 `cd node-js-tekton`{{execute}}
 
-Inspect some of the files.
+Inspect the layout of the source files.
 
-`apt update > /dev/null 2>&1 && apt install tree --yes -qq`{{execute}}
+`tree`{{execute}}
 
 <img align="right" src="./assets/nodejs.png" width="150">
 

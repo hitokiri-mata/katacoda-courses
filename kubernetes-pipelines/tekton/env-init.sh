@@ -18,6 +18,9 @@ helm install dash stable/kubernetes-dashboard \
 source <(kubectl completion bash)
 source <(helm completion bash)
 
+apt update
+apt install tree --yes -qq
+
 # Workaround: Katacoda base image needs fixing
 # JAVA_HOME is set to JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin, should be:
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre

@@ -1,19 +1,14 @@
 Because Tekton is a Kubernetes Operator, it can be completely administered using the standard Kubernetes manifests using the defined custom resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command-line tool called `tkn` can optionally manage these same Tekton resources. 
 
-Install the `tkn` command-line tool.
+Install the `tkn` command-line tool by getting the tar and extracting the binary to the path.
 
-```bash
-sudo apt update > /dev/null 2>&1 && \
-sudo apt install -y gnupg && \
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3EFE0E0A2F2F60AA && \
-echo "deb http://ppa.launchpad.net/tektoncd/cli/ubuntu eoan main"|sudo tee /etc/apt/sources.list.d/tektoncd-ubuntu-cli.list && \
-sudo apt update > /dev/null 2>&1 && \
-sudo apt install -y tektoncd-cli
-```{{execute}}
+`curl -LO https://github.com/tektoncd/cli/releases/download/v0.10.0/tkn_0.10.0_Linux_x86_64.tar.gz`{{execute}}
+
+`tar xvzf tkn_0.10.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn`{{execute}}
 
 More details on its various installation forms is in the [installation documentation](https://github.com/tektoncd/cli).
 
-Verify the CLI tool is installed and can control the Tekton control panel.
+Verify the CLI tool is installed and ready to control the Tekton control panel.
 
 `tkn version`{{execute}}
 
