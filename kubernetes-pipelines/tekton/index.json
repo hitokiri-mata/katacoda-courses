@@ -82,9 +82,10 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "Registry", "port": 31000}, 
-      {"name": "Application", "port": 32000}
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Registry", "port": 31000},
+      {"name": "Application", "port": 32000},
+      {"name": "Tekton dashboard", "port": 32500}
     ]
     },
   "backend": {
