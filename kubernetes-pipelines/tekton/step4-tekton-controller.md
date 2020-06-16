@@ -27,3 +27,12 @@ Pipeline Run
             Steps
                 Resources
 ```
+
+## Install Tekton dashboard
+[Tekton Dashboard](https://github.com/tektoncd/dashboard) is a general purpose, web-based UI for Tekton Pipelines and Tekton triggers resources.
+
+`kubectl create -f ~/tekton-dashboard-release.yaml`{{execute}}
+
+In a moment the new web interface for Tekton dashboard will be available. Open the [Tekton dashboard](
+https://[[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/).
+The pipeline,pipeline-run you will define in the next steps will be displayed in this UI.

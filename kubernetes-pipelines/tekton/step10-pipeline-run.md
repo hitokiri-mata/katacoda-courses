@@ -12,10 +12,17 @@ Verify the Resource has been declared.
 
 `tkn pipelineruns list`{{execute}}
 
-The pipeline is now running! 
+The pipeline is now running!
 
 `tkn pipelineruns describe application-pipeline-run`{{execute}}
 
-Check the Registry from the tab above and in a moment a new _app_ container will appear in the list.
+- Check the [Registry](
+https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/) from the tab above and in a moment a new _app_ container will appear in the list.
+
+- Check the [Tekton dashboard](
+https://[[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/) from the tab above and you will see pipeline running which will do build and deploy in stages
+
+
+
 
 Next, check the application.
