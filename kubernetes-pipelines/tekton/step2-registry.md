@@ -28,7 +28,7 @@ This proxy is deployed as a [DaemonSet](https://kubernetes.io/docs/concepts/work
 
 It's always helpful to have a decent web interface in front of your container image registry. There are a few open solutions out there that all run as containers. This particular one, [joxit/docker-registry-ui](https://github.com/Joxit/docker-registry-ui), is solid and provides a clean interface. Merci beaucoup, [Jones Magloire](https://joxit.dev/).
 
-`kubectl create -f registry-ui.yaml`{{execute}}
+`kubectl apply -f registry-ui.yaml`{{execute}}
 
 In a moment the new web interface will be available. Open the [registry web interface](
 https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/). Observe that the container list is empty (0 images). The pipeline you will define in the next steps will add a new container here.

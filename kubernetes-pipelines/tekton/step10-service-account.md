@@ -2,7 +2,7 @@ Before we run a Pipeline we have to recognize that pipelines will run tasks that
 
 Before we can proceed, set up a ServiceAccount.
 
-`kubectl create -f pipeline/service-account.yaml`{{execute}}
+`kubectl apply -f pipeline/service-account.yaml`{{execute}}
 
 This example is simple because both the readability of the source code repo and the container image registry are not protected with a secret. Therefore, we are just setting up a simple role.
 
