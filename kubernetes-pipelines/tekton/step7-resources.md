@@ -2,6 +2,16 @@ Pipeline Resources are entities that define the locations for inputs ingested an
 
 <img align="right" src="./assets/git.png" width="150">
 
+You will define the pipeline. The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top-level PipelineRun it references sub definitions to complete your request.
+
+```
+Pipeline Run
+    Pipeline
+        Tasks
+            Steps
+                Resources
+```
+
 We have defined the Git repo where the application source code resides.
 
 `cat pipeline/git-resource.yaml`{{execute}}

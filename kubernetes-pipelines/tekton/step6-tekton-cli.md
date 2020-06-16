@@ -1,4 +1,4 @@
-Because Tekton is a Kubernetes Operator, it can be completely administered using the standard Kubernetes manifests using the defined custom resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command-line tool called `tkn` can optionally manage these same Tekton resources. 
+Because Tekton is a Kubernetes Operator, it can be completely administered using the standard Kubernetes manifests using the defined custom resources that have been associated with the Tekton controllers. You can use the kubectl tool as a way to manually manage these resources. For convenience, a command-line tool called `tkn` can optionally manage these same Tekton resources.
 
 Install the `tkn` command-line tool by getting the tar and extracting the binary to the path.
 

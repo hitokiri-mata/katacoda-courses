@@ -1,5 +1,3 @@
-## Install Tekton Controller
-
 The Tekton engine will run your pipelines. Tekton follows the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton
 
 `kubectl apply --filename https://storage.googleapis.com/tekton-releases/latest/release.yaml`{{execute}}
@@ -18,21 +16,4 @@ The Tekton Operator will define several new resources, all currently return empt
 
 `kubectl get images,pipelineruns,pipelines,taskruns,tasks,pipelineresources`{{execute}}
 
-Next, you will define the pipeline. The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top-level PipelineRun it references sub definitions to complete your request.
-
-```
-Pipeline Run
-    Pipeline
-        Tasks
-            Steps
-                Resources
-```
-
-## Install Tekton dashboard
-[Tekton Dashboard](https://github.com/tektoncd/dashboard) is a general purpose, web-based UI for Tekton Pipelines and Tekton triggers resources.
-
-`kubectl create -f ~/tekton-dashboard-release.yaml`{{execute}}
-
-In a moment the new web interface for Tekton dashboard will be available. Open the [Tekton dashboard](
-https://[[HOST_SUBDOMAIN]]-32500-[[KATACODA_HOST]].environments.katacoda.com/).
-The pipeline,pipeline-run you will define in the next steps will be displayed in this UI.
+Next, add the Tekton dashboard.

@@ -27,38 +27,43 @@
         "code": "clear.sh"
       },
       {
+        "title": "Deploy Tekton Dashboard",
+        "text": "step5-tekton-dashboard.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install Tekton CLI tool (tkn)",
-        "text": "step5-tekton-cli.md",
+        "text": "step6-tekton-cli.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline Resources",
-        "text": "step6-resources.md",
+        "text": "step7-resources.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline Tasks",
-        "text": "step7-tasks.md",
+        "text": "step8-tasks.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Pipeline",
-        "text": "step8-pipeline.md",
+        "text": "step9-pipeline.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Service Account",
-        "text": "step9-service-account.md",
+        "text": "step10-service-account.md",
         "code": "clear.sh"
       },
       {
         "title": "Declare Runner for Pipeline",
-        "text": "step10-pipeline-run.md",
+        "text": "step11-pipeline-run.md",
         "code": "clear.sh"
       },
       {
         "title": "Access Application",
-        "text": "step11-application.md"
+        "text": "step12-application.md"
       }
     ],
     "intro": {
@@ -84,8 +89,8 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
       {"name": "Registry", "port": 31000},
-      {"name": "Application", "port": 32000},
-      {"name": "Tekton dashboard", "port": 32500}
+      {"name": "Tekton Dashboard", "port": 31500},
+      {"name": "Application", "port": 32000}
     ]
     },
   "backend": {
