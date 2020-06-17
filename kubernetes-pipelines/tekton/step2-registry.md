@@ -4,6 +4,12 @@ There are many options for standing up a container registry. We prefer a pure Ku
 
 ## Install the Registry
 
+First, add the stable chart repository.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install the registry chart.
+
 `helm install private stable/docker-registry --namespace kube-system`{{execute}}
 
 ## Install Registry Proxies as Node Daemons
