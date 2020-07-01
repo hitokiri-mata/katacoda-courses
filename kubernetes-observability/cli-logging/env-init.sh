@@ -8,6 +8,7 @@ curl -fsSL https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz | tar -zxvf
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 # Setup dashboard on port 30000
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --namespace kube-system \
 --set=image.tag=v2.0.3 \
