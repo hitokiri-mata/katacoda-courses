@@ -6,7 +6,7 @@ Deploy a simple application called [_echoserver_](https://console.cloud.google.c
 
 > `kubectl run hello --image=k8s.gcr.io/echoserver:1.9 --generator=run-pod/v1 --port=8080`
 
-Take a look at the YAML files that defines this application.
+Take a look at the YAML file that defines this application.
 
 `cat echoserver.yaml`{{execute}}
 
@@ -16,4 +16,4 @@ It's only about 44 MB so it downloads and starts within a few moments. Ensure th
 
 `kubectl get deployments,pods`{{execute}}
 
-With this the application is running, however it's not accessible. A service is needed for access.
+With this the application is running, however, it's not accessible. A service is needed for access.

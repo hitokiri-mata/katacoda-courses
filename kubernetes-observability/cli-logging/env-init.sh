@@ -8,9 +8,9 @@ curl -fsSL https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz | tar -zxvf
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 # Setup dashboard on port 30000
-helm install dash stable/kubernetes-dashboard \
+helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --namespace kube-system \
---set=image.tag=v2.0.0 \
+--set=image.tag=v2.0.3 \
 --set=service.type=NodePort \
 --set=enableInsecureLogin=true \
 --set=service.nodePort=30000 \
