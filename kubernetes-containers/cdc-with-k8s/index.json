@@ -2,7 +2,7 @@
   "private": "true",
   "pathwayTitle": "Consumer-driven Contracts with Kubernetes",
   "title": "Consumer-driven Contracts with Kubernetes",
-  "description": "Learn how to use the Pact Foundation's framework for CDC testing.",
+  "description": "(v0.0.1) Learn how to use the Pact Foundation's framework for CDC testing.",
   "difficulty":	"Beginner",
   "time":	"20 minutes",
   "details": {
@@ -83,9 +83,6 @@
     },
     "assets": {
       "host01": [
-        {"file": "Dockerfile", "target": "/root"},
-        {"file": "*.yaml", "target": "/root"},
-        {"file": "*.java", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
