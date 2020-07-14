@@ -12,11 +12,11 @@ Build the h2-seeder container using the provided Dockerfile and world.sql databa
 
 Build and tag the h2-seeder container image.
 
-`docker build -t localhost:5000/$(basename $PWD):0.0.1 .`{{execute}}
+`docker build -t http://localhost:5000/$(basename $PWD):0.0.1 .`{{execute}}
 
 Push the container image to the private registry on your Kubernetes cluster.
 
-`docker push localhost:5000/$(basename $PWD):0.0.1`{{execute}}
+`docker push http://localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 
 Inspect the registry to see the container image has been pushed.
 
@@ -24,14 +24,22 @@ Inspect the registry to see the container image has been pushed.
 
 ## Start H2 database
 
-<img align="right" src="./assets/H2-DIAG.png" width="300">
+<img align="right" src="./assets/h2-diag.png" width="300">
 Apply this manifest declaration to set up a Pod and Service for H2. The h2-seeder is defined in the manifest as an initContainer.
 
 `kubectl apply -f ../cluster/h2-world.yaml`{{execute}}
 
 ## Verify H2 database
 
-<img align="right" src="./assets/h2-login.png" width="300">
+It will take a moment for the broker Pods to be running. Check their status.
+
+`kubectl get pods`{{execute}}
+
+<img align="right" src="./assets/h2-connect.png" width="300">
 
 In a few moments, the Deployment will be available at a NodePort. Explore the [H2 database](
 https://[[HOST_SUBDOMAIN]]-30100-[[KATACODA_HOST]].environments.katacoda.com/) and verify the population data is present. The H2 database serves a convenient web interface for you to interact with the database. When you are presented with the connection information just put in `jdbc:h2:/h2-data/world`{{copy}} for the jdbc driver url and leave the username and password blank.
+
+<img align="right" src="./assets/h2-query.png" width="300">
+
+Use the Connect button to enter the SQL explorer. Enter `select * from country`{{copy}} to verify the database has been seeded.

@@ -33,3 +33,15 @@ Once the registry is serving, inspect the contents of the empty registry.
 When it's running and healthy, you will see an empty list.
 
 `{"repositories":[]}`
+
+Docker tags require the address of the registry to be in the tag. If we push and pull from the registry, the registry name tag must be the same when we are on the client or within Kubernetes. Within your cluster, the registry is available at localhost:5000. Use a port-forwarding command to make this client's localhost:5000 to be the same registry.
+
+`kubectl port-forward -n kube-system service/registry-docker-registry 5000:5000 &`{{execute}}
+
+This port forwarding will run in the background for the remainder of this scenario. If you do not see the Linux $ prompt, just hit enter.
+
+Now you can access the registry via localhost.
+
+`curl http://localhost:5000/v2/_catalog`{{execute}}
+
+Later, you will see docker push commands and YAML container references both using http://localhost:5000.
