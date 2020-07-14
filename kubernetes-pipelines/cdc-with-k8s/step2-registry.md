@@ -2,6 +2,8 @@ It's helpful to have a container registry during the build, push, and deploy pha
 
 ## Install registry
 
+<img align="right" src="./assets/pact-io.png" width="150">
+
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
 Add the repo where the chart is hosted.

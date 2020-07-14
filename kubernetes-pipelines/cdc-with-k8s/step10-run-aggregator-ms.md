@@ -12,7 +12,7 @@ Spring Boot with Gradle (or Maven) has a convenient task called _bootBuildImage_
 
 Push the container image to the private registry on your Kubernetes cluster.
 
-`docker push http://localhost:5000/$(basename $PWD):0.0.1`{{execute}}
+`docker push localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 
 Inspect the registry to see the container image has been pushed.
 
