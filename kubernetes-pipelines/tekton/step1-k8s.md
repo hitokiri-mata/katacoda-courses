@@ -1,8 +1,5 @@
 <img align="right" src="./assets/k8s-logo.png" width="100">
 
-
-> **This scenario is currently suffering from a known problem with accessing NodePorts and will not function. This issue will be resolved soon. Come back in a few days.**
-
 For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
 
 `kubectl version --short && \

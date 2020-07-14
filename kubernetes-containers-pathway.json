@@ -22,11 +22,6 @@
         "course_id": "distillation",
         "title": "Distilling Java Containers",
         "description": "Applying the Container Distillation Pattern for Java applications"
-      },
-      {
-        "course_id": "cdc-with-k8s",
-        "title": "Consumer-driven Contracts with Kubernetes",
-        "description": "(drafting v0.0.5) Learn how to use the Pact Foundation's framework for CDC testing."
       }
     ]
   }
