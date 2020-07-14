@@ -18,23 +18,23 @@
         "code": "clear.sh"
       },
       {
+        "title": "Application and Services Overview",
+        "text": "step3-about-app.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Clone Source",
-        "text": "step3-clone-source.md",
+        "text": "step4-clone-source.md",
         "code": "clear.sh"
       },
       {
         "title": "Add Pact Broker",
-        "text": "step4-broker.md",
+        "text": "step5-broker.md",
         "code": "clear.sh"
       },
       {
         "title": "Generate Pact from Consumer",
-        "text": "step5-consumer.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Application and Services Overview",
-        "text": "step6-about-app.md",
+        "text": "step6-consumer.md",
         "code": "clear.sh"
       },
       {
