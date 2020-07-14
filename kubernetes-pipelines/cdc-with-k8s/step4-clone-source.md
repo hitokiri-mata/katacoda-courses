@@ -1,10 +1,10 @@
-In this scenario you will build and deploys all the source code. To save time and stay focused on Pact, the source code is pre-written, but you will build and deploy it to experience the "feel" of the development workflow. There are a variety of ways to make the workflows, this scenario shows the basic approach.
+You will build and deploy all the source code for this scenario. To save time and stay focused on Pact, the source code is pre-written, but you will build and deploy it to experience the "feel" of the development workflow. There are a variety of ways to organize the workflows, this scenario shows the basic approach.
 
 ## About the application
 
 ## Clone source code
 
-All of the microservices and other source is in a single git repository. Clone the source into this scenario.
+All of the source is in a single git repository. Clone the source into this scenario.
 
 `git clone https://github.com/javajon/cdc-with-k8s`{{execute}}
 
@@ -27,7 +27,7 @@ There are 6 directories with these purposes.
 | pact            | Here is one consumer. The Node.js code is independent of the Kubernetes cluster and by running a Pact test is creates a Pact contract |
 | world-pop       | A microservice that serves the world population data found in the H2 database. |
 
-In a simple summary, the aggregator serves data combining the daily covid-19 metrics with the world population. Here is a networking representation of the each container/microservice.
+In summary, the aggregator serves data combining the daily covid-19 metrics with the world population. Here is a networking representation Pods relationships.
 
 TODO - diagram
 
