@@ -1,6 +1,6 @@
 To start writing a kubectl plugin, it's best to start with a skeleton source where you can readily start adding code for the various commands.
 
-[**Ken Sipe**]([Ken Sipe](https://www.linkedin.com/in/kensipe/) created the origin of the scenario and has provided a helpful skeleton for you to get started. Clone the source code to this scenario's local directory.
+[**Ken Sipe**](https://www.linkedin.com/in/kensipe/) created the origin of the scenario and has provided a helpful skeleton for you to get started. Clone the source code to this scenario's local directory.
 
 `git clone https://github.com/codementor/k8s-cli && cd k8s-cli`{{execute}}
 
