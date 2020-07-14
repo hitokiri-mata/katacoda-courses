@@ -16,6 +16,10 @@ In a moment, once the registry is serving, inspect the contents of the empty reg
 
 `curl $REGISTRY/v2/_catalog`{{execute}}
 
+When it's running and healthy, you will see an empty list.
+
+`{"repositories":[]}`
+
 ## Push to Registry
 
 Push your app container image to the private registry running on you Kubernetes cluster.
