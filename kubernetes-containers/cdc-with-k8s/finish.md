@@ -16,6 +16,9 @@ With these steps you have learned how to:
 
 ## References ##
 
+- [Pact](https://pact.io/)
+- [Martin Fowler on CDC](https://martinfowler.com/articles/consumerDrivenContracts.html)
+- [Thoughtworks Tech Radar on Pact](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing)
 - [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
 - [Spring Boot in a Container](https://spring.io/blog/2018/11/08/spring-boot-in-a-container)
 - [Spring Boot initializr](https://github.com/spring-io/initializr)

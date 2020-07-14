@@ -1,35 +1,37 @@
-cd cluster
+A low-level container in this application is a small database that contains world population data. You will use it as a read-only datastores that contains the populations for the countries of the world, as well as the populations and locations of major cities. The [H2 database](https://www.h2database.com/html/main.html) is a classing relational database written in Java and runs in a container.
 
-Inspect the script that will install the applications
+The H2 database comes from a public container image and it needs to be seeded with the population data. Provided in this example is a SQL script that will seed a relational database, so we need to create an "initContainer" that will run next to the H2 container and seed it with the country and city population data when it starts. The InitContainer pattern is very common for ensuring Pods are in the correct state when started, especially datastores.
 
-`cat install-app.sh`{{execute}}
+Move to the _h2-seeder_ directory.
 
-`./install-app.sh`{{execute}}
+`cd ~/cdc-with-k8s/h2-seeder`{{execute}}
 
-## H2 Database
+## Build H2-seeder container image
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30100-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+Build the h2-seeder container using the provided Dockerfile and world.sql database. Take a look at the Dockerfile to see how when it runs is uses an H2 RunScript utility to inject the world.sql into the H2 database that is assumed to be local, in the same Pod.
 
-Connect and explore...
+Build and tag the h2-seeder container image.
 
-## World Population Microservice
+`docker build -t localhost:5000/$(basename $PWD):0.0.1 .`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
+Push the container image to the private registry on your Kubernetes cluster.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
+`docker push localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/cities`{{execute}}
+Inspect the registry to see the container image has been pushed.
 
-## Covid-19 Daily Data
+`curl $REGISTRY/v2/_catalog`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
+## Start H2 database
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
+<img align="right" src="./assets/H2-DIAG.png" width="300">
+Apply this manifest declaration to set up a Pod and Service for H2. The h2-seeder is defined in the manifest as an initContainer.
 
-## Aggregator
+`kubectl apply -f ../cluster/h2-world.yaml`{{execute}}
 
-Public API or Gateway
+## Verify H2 database
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
+<img align="right" src="./assets/h2-login.png" width="300">
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
+In a few moments, the Deployment will be available at a NodePort. Explore the [H2 database](
+https://[[HOST_SUBDOMAIN]]-30100-[[KATACODA_HOST]].environments.katacoda.com/) and verify the population data is present. The H2 database serves a convenient web interface for you to interact with the database. When you are presented with the connection information just put in `jdbc:h2:/h2-data/world`{{copy}} for the jdbc driver url and leave the username and password blank.

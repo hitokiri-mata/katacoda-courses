@@ -1,3 +1,4 @@
-`cd ~/aggregator`{{execute}}
+Now that everything is started.
+
 
 `./gradlew pactVerify`{{execute}}

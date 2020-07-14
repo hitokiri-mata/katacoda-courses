@@ -1,4 +1,5 @@
 <img align="right" src="./assets/pact-foundation.png" width="300">
+
 <img align="right" src="./assets/pact-io.png" width="300">
 
 The scenario walks through a ...

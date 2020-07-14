@@ -1,35 +1,35 @@
-cd cluster
+TODO about the service...
 
-Inspect the script that will install the applications
+Move to the _world-pop_ directory.
 
-`cat install-app.sh`{{execute}}
+`cd ~/cdc-with-k8s/world-pop`{{execute}}
 
-`./install-app.sh`{{execute}}
+## Build microservice container image
 
-## H2 Database
+Spring Boot with Gradle (or Maven) has a convenient task called _bootBuildImage_. Without having to write a Dockfile this task will bundle the Java application into an optimized container image. Build and tag the  microservice container image.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30100-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`./gradlew bootBuildImage --imageName=localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 
-Connect and explore...
+Push the container image to the private registry on your Kubernetes cluster.
 
-## World Population Microservice
+`docker push localhost:5000/$(basename $PWD):0.0.1`{{execute}}
+
+Inspect the registry to see the container image has been pushed.
+
+`curl $REGISTRY/v2/_catalog`{{execute}}
+
+## Start microservice
+
+Apply this manifest declaration to set up a Pod and Service for the microservice.
+
+`kubectl apply -f ../cluster/$(basename $PWD).yaml`{{execute}}
+
+## Verify microservice
+
+In a few moments, the Deployment will be available at a NodePort. Explore the data with these rest calls.
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/cities`{{execute}}
-
-## Covid-19 Daily Data
-
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
-
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
-
-## Aggregator
-
-Public API or Gateway
-
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
-
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}

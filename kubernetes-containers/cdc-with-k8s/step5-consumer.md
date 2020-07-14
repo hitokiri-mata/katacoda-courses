@@ -1,6 +1,8 @@
-Go to the Pact directory.
+Move to the _pact_ directory.
 
-`cd ~/pact`{{execute}}
+`cd ~/cdc-with-k8s/pact`{{execute}}
+
+For this example, the consumer is written in Node.js. The Pact framework works with many languages including Node.js and Java used in this scenario. The current list of [supported languages](https://docs.pact.io/implementation_guides/other_languages) makes it attractive to Kubernetes and containers where mixing languages is common.
 
 Define access to the Pact Broker.
 
