@@ -8,6 +8,8 @@ Verify the pacts on the producer side.
 
 `./gradlew pactVerify`{{execute}}
 
+**`BUILD FAILED`**
+
 You will see that the verification failed. **This shows us that a consumer disagrees with the producer. This disagreement is fantastic because it's unveiling a defect before it rolls further o production.**
 
 If you inspect all the percentCases fields from the producer, they are all zero. 
