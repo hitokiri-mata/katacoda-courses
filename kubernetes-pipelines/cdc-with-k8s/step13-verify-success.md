@@ -1,4 +1,20 @@
-`cd ~/cdc-with-k8s/aggregator`{{execute}}
+Rebuild the container new a revised SemVer number.
+
+`./gradlew bootBuildImage --imageName=localhost:5000/$(basename $PWD):0.0.2`{{execute}}
+
+Push the corrected container image to the private registry on your Kubernetes cluster.
+
+`docker push localhost:5000/$(basename $PWD):0.0.2`{{execute}}
+
+Patch the current deployment to use the new container version.
+
+`kubectl patch deployment aggregator -p \
+  '{"spec":{"template":{"spec":{"containers":[{"name":"aggregator","image":"localhost:5000/aggregator:0.0.1"}]}}}}'`{{execute}}
+
+Verify a new Pod has been started.
+
+`kubectl get pods,deployments,services -l app=$(basename $PWD)`{{execute}}
+
+Finally, run the pactValidation again and let's see if that bug has been squashed.
 
 `./gradlew pactVerify`{{execute}}
-

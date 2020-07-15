@@ -2,7 +2,7 @@ It's helpful to have a container registry during the build, push, and deploy pha
 
 ## Install registry
 
-<img align="right" src="./assets/pact-io.png" width="150">
+<img align="right" src="./assets/registry.png" width="200">
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
@@ -46,7 +46,7 @@ This port forwarding will run in the background for the remainder of this scenar
 
 Now you can access the registry via localhost.
 
-`curl http://localhost:5000/v2/_catalog | jq .`{{execute}}
+`curl -s http://localhost:5000/v2/_catalog | jq .`{{execute}}
 
 This means when you push to localhost:5000 your container images will be routed to the private registry running as a service on Kubernetes.
 

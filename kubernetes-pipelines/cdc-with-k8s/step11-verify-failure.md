@@ -7,3 +7,23 @@ Be sure you are in the _aggregator_ directory.
 Verify the pacts on the producer side.
 
 `./gradlew pactVerify`{{execute}}
+
+You will see that the verification failed. **This shows us that a consumer disagrees with the producer. This disagreement is fantastic because it's unveiling a defect before it rolls further o production.**
+
+If you inspect all the percentCases fields from the producer, they are all zero. 
+
+`curl -s https://2886795326-30103-ollie08.environments.katacoda.com/countries/percapita | jq . | grep percentCases`{{execute}}
+
+The consumer contracts all expect the percentage of infection values to be greater than zero. The consumer code is written with these rules.
+
+`expect(Number(response[0].percentCases)).toBeGreaterThan(0.0);`
+
+`percentCases: term({ generate: "0.3333", matcher: "^([0-9]*[1-9][0-9]*(\.[0-9]+)?|[0]+\.[0-9]*[1-9][0-9]*)$" }),`
+
+So for some reason, the producer is producing only zeros. A typical defect on any normal day.
+
+<img align="right" src="./assets/alexanderpope.png" width="200">
+
+> To err is Humane; to Forgive, Divine. -Alexander Pope
+
+But in this case, let's not forgive and just fix the problem.

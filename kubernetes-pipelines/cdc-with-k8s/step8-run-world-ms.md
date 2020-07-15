@@ -36,8 +36,8 @@ In a few moments, the Deployment will be available at a NodePort. Explore the da
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/ping; echo`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/countries; | jq .`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/countries | jq .`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/cities; | jq .`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/cities | jq .`{{execute}}
 
 You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30101-[[KATACODA_HOST]].environments.katacoda.com/countries).

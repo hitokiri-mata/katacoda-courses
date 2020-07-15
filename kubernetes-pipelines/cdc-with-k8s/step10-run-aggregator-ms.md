@@ -32,7 +32,7 @@ The microservice will be running in a moment, so check it's status.
 
 In a few moments, the Deployment will be available at a NodePort. Explore the data with these rest calls.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/ping'; echo`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/ping; echo`{{execute}}
 
 List all the countries.
 
@@ -40,10 +40,10 @@ List all the countries.
 
 Get a single country.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com//countries/ind | jq .`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/ind | jq .`{{execute}}
 
 Get the top countries with the highest infections per capita.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com//countries/percapita | jq .`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/percapita | jq .`{{execute}}
 
-You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com//countries/percapita).
+You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com  /countries/percapita).
