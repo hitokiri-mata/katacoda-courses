@@ -18,7 +18,7 @@ Push the container image to the private registry on your Kubernetes cluster.
 
 Inspect the registry to see the container image has been pushed.
 
-`curl $REGISTRY/v2/_catalog`{{execute}}
+`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 ## Start microservice
 
@@ -34,8 +34,8 @@ The microservice will be running in a moment, so check it's status.
 
 In a few moments, the Deployment will be available at a NodePort. Explore the data with these rest calls.
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/ping`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/ping; echo`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/countries`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/metrics; | jq .`{{execute}}
 
-`curl -s https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/cities`{{execute}}
+You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30102-[[KATACODA_HOST]].environments.katacoda.com/metrics).

@@ -9,9 +9,6 @@ TODO
 3. TODO
 
 
-
-<img align="right" src="./assets/pact-io.png" width="300">
-
 You will learn how to:
 
 - TODO...

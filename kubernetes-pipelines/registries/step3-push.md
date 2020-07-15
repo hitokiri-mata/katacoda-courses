@@ -16,4 +16,4 @@ With the image pulled and with a new tag, it now can be deployed to the new regi
 
 Inspect the contents of the private registry and verify the container has been pushed.
 
-`curl $REGISTRY/v2/_catalog`{{execute}}
+`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}

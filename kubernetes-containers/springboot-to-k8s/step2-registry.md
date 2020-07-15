@@ -18,4 +18,4 @@ It will be a few moments before the registry deployment reports it's _Available_
 
 Once the registry is serving, inspect the contents of the empty registry.
 
-`curl $REGISTRY/v2/_catalog`{{execute}}
+`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}

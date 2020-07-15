@@ -30,13 +30,13 @@ It will be a few moments before the registry deployment reports it's _Available_
 
 Once the registry is serving, inspect the contents of the empty registry.
 
-`curl $REGISTRY/v2/_catalog`{{execute}}
+`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 When it's running and healthy, you will see an empty list.
 
 `{"repositories":[]}`
 
-## Localhost:5000
+## Registry Proxy for localhost:5000
 
 Docker tags require the address of the registry to be in the tag. If we push and pull from the registry, the registry name tag must be the same when we are on the client or within Kubernetes. Within your cluster, the registry is available at localhost:5000. Use a port-forwarding command to make this client's localhost:5000 to be the same registry.
 
@@ -46,13 +46,18 @@ This port forwarding will run in the background for the remainder of this scenar
 
 Now you can access the registry via localhost.
 
-`curl http://localhost:5000/v2/_catalog`{{execute}}
+`curl http://localhost:5000/v2/_catalog | jq .`{{execute}}
 
 This means when you push to localhost:5000 your container images will be routed to the private registry running as a service on Kubernetes.
 
 But what happens in the Pod specification when you want to pull the image using the tag localhost:5000? We can add a proxy that runs as a DaemonSet that will resolve localhost:5000 to the registry whenever a Pod requests a container from localhost:5000. Install the proxy.
 
+Add the repo where the chart is hosted.
+
 `helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
+
+Install the chart.
+
 `helm install registry-proxy incubator/kube-registry-proxy -n kube-system --set registry.host=registry-docker-registry.kube-system.svc.cluster.local --set registry.port=5000 --set hostPort=5000`{{execute}}
 
 For mature environments, you would have an official host name with a load balancer and an ingress that would resolve to a hardened registry service, albeit still running on Kubernetes.
