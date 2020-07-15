@@ -8,7 +8,7 @@ For this example, the consumer is written in Node.js. The Pact framework works w
 
 ## Generate Pact Contracts
 
-Update npm for this environment.
+Update npm for this environment. This may take a moment as it sorts out the [un-un-publishing of left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/).
 
 `npm install`{{execute}}
 
@@ -18,7 +18,7 @@ Produce the Pact file. This application uses Jest for driving the testing.
 
 Once complete, a new Pact is created. Inspect the pact json file.
 
-`jq -C . pacts/consumer-provider.json  | more`{{execute}}
+`jq -C . consumer_a-aggregator.json | more`{{execute}}
 
 ## Publish Pacts to Pact Broker
 

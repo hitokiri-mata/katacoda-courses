@@ -24,7 +24,7 @@ Inspect the registry to see the container image has been pushed.
 
 ## Start H2 database
 
-<img align="right" src="./assets/h2-diag.png" width="200">
+<img align="right" src="./assets/h2-diag.png" width="220">
 Apply this manifest declaration to set up a Pod and Service for H2. The h2-seeder is defined in the manifest as an initContainer.
 
 `kubectl apply -f ../cluster/h2-world.yaml`{{execute}}

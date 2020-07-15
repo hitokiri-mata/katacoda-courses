@@ -8,7 +8,7 @@ Move to the _aggregator_ directory.
 
 Spring Boot with Gradle (or Maven) has a convenient task called _bootBuildImage_. Without having to write a Dockfile this task will bundle the Java application into an optimized container image. Build and tag the  microservice container image.
 
-`./gradlew bootBuildImage --imageName=http://localhost:5000/$(basename $PWD):0.0.1`{{execute}}
+`./gradlew bootBuildImage --imageName=localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 
 Push the container image to the private registry on your Kubernetes cluster.
 
@@ -23,6 +23,10 @@ Inspect the registry to see the container image has been pushed.
 Apply this manifest declaration to set up a Pod and Service for the microservice.
 
 `kubectl apply -f ../cluster/$(basename $PWD).yaml`{{execute}}
+
+The microservice will be running in a moment, so check it's status.
+
+`kubectl get pods,deployments,services -l app=$(basename $PWD)`{{execute}}
 
 ## Verify microservice
 
