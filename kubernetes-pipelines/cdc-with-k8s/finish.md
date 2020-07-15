@@ -19,6 +19,8 @@ With these steps you have learned how to:
 - [Pact](https://pact.io/)
 - [Pact Broker](https://github.com/pact-foundation/pact_broker)
 - [Marie Drake, Contract Testing with Pact.js and Jest](https://www.mariedrake.com/post/contract-testing-with-pact-js-and-jest)
+- [Jest - delightful JavaScript Testing Framework](https://jestjs.io/)
+- [jest-pact](https://github.com/pact-foundation/jest-pact)
 - [Martin Fowler on CDC](https://martinfowler.com/articles/consumerDrivenContracts.html)
 - [Thoughtworks Tech Radar on Pact](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing)
 - [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)

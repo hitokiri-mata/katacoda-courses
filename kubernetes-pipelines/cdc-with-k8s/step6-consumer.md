@@ -12,9 +12,11 @@ Update npm for this environment. This may take a moment as it sorts out the [un-
 
 `npm install`{{execute}}
 
-Produce the Pact file. This application uses Jest for driving the testing.
+Produce the Pact file. This application uses Jest for driving the testing. Run two tests that will generate two contracts.
 
-`npm run test:consumer`{{execute}}
+`npm run test:consumer-a`{{execute}}
+
+`npm run test:consumer-b`{{execute}}
 
 Once complete, a new Pact is created. Inspect the pact json file.
 
