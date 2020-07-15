@@ -11,7 +11,7 @@ Patch the current deployment to use the new container version.
 `kubectl patch deployment aggregator -p \
   '{"spec":{"template":{"spec":{"containers":[{"name":"aggregator","image":"localhost:5000/aggregator:0.0.2"}]}}}}'`{{execute}}
 
-Verify a new Pod has been started.
+Verify a new Pod has been started. The Pod declaration the image is `imagePullPolicy: Always`, which means the Pod will pull the new container image.
 
 `kubectl get pods,deployments,services -l app=$(basename $PWD)`{{execute}}
 

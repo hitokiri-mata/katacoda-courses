@@ -8,11 +8,13 @@ Look at the code in models/Country.java.
 
 `sed -n '{;=;p}' src/main/java/com/dijure/aggregator/models/Country.java | sed "N;s/\n/ /g" | sed -n '65,70p;!d'`{{execute}}
 
-There's the bugger... Someone left in some testing code with an experimentation comment. [Oh... the humanity.](https://www.youtube.com/watch?v=kEpLncBG_Nw)
+**There's the bugger...** Someone left in some testing code with an experimentation comment! [Oh... the humanity.](https://www.youtube.com/watch?v=kEpLncBG_Nw)
 
-Remove the offending line.
+Find and remove the offending line.
 
-`sed -i '67d' src/main/java/com/dijure/aggregator/models/Country.java`{{execute}}
+`OFFENDING_LINE=$(sed -n '\|population = 0;|=' src/main/java/com/dijure/aggregator/models/Country.java)`{{execute}}
+
+`sed -i "${OFFENDING_LINE}d" src/main/java/com/dijure/aggregator/models/Country.java`{{execute}}
 
 Verify the [moth has been removed from the relay](https://en.wikipedia.org/wiki/Software_bug).
 
