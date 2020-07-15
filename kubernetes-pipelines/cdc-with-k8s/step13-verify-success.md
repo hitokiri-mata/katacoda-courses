@@ -1,4 +1,4 @@
-Rebuild the container new a revised SemVer number.
+Rebuild the new container with an increased SemVer number. We bump the patch value, since it's a bug fix.
 
 `./gradlew bootBuildImage --imageName=localhost:5000/$(basename $PWD):0.0.2`{{execute}}
 
@@ -9,7 +9,7 @@ Push the corrected container image to the private registry on your Kubernetes cl
 Patch the current deployment to use the new container version.
 
 `kubectl patch deployment aggregator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"aggregator","image":"localhost:5000/aggregator:0.0.1"}]}}}}'`{{execute}}
+  '{"spec":{"template":{"spec":{"containers":[{"name":"aggregator","image":"localhost:5000/aggregator:0.0.2"}]}}}}'`{{execute}}
 
 Verify a new Pod has been started.
 

@@ -46,4 +46,4 @@ Get the top countries with the highest infections per capita.
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/percapita | jq .`{{execute}}
 
-You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com  /countries/percapita).
+You can also try it [in your browser](https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/percapita).

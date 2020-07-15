@@ -12,7 +12,7 @@ You will see that the verification failed. **This shows us that a consumer disag
 
 If you inspect all the percentCases fields from the producer, they are all zero. 
 
-`curl -s https://2886795326-30103-ollie08.environments.katacoda.com/countries/percapita | jq . | grep percentCases`{{execute}}
+`curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/percapita | jq . | grep percentCases`{{execute}}
 
 The consumer contracts all expect the percentage of infection values to be greater than zero. The consumer code is written with these rules.
 
@@ -22,7 +22,7 @@ The consumer contracts all expect the percentage of infection values to be great
 
 So for some reason, the producer is producing only zeros. A typical defect on any normal day.
 
-<img align="right" src="./assets/alexanderpope.png" width="200">
+<img align="right" src="./assets/alexanderpope.jpg" width="200">
 
 > To err is Humane; to Forgive, Divine. -Alexander Pope
 

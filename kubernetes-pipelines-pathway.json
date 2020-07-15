@@ -31,7 +31,7 @@
       {
         "course_id": "cdc-with-k8s",
         "title": "Consumer-driven Contracts with Kubernetes",
-        "description": "(drafting v0.0.13) Learn how to use the Pact Foundation's framework for CDC testing."
+        "description": "(drafting v0.0.14) Learn how to use the Pact Foundation's framework for CDC testing."
       }
     ]
   }
