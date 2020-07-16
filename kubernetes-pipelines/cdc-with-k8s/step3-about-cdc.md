@@ -7,9 +7,9 @@ The "consumer-driven" prefix simply states an additional philosophical position 
 
 >-- Matt Fellows, [What is contract testing and why should I try it?](https://pactflow.io/blog/author/matt/)
 
-<img align="right" src="./assets/hoe-pact-works.png" width="350">
+<img src="./assets/how-pact-works.png" width="400">
 You are encouraged to read more, especially here:
 
 [How Pact Works](https://docs.pact.io/how-pact-works#slide-1)
 
-But, for now let's get to working with this scenario.
+But, for now, let's get working with this scenario.

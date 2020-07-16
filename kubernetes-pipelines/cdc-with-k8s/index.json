@@ -4,6 +4,7 @@
   "description": "Learn how to use the Pact Foundation's framework for CDC testing.",
   "difficulty":	"Advanced",
   "time":	"30 minutes",
+  "lifetime": "180",
   "details": {
     "steps": [
       {

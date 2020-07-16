@@ -29,6 +29,6 @@ There are 6 directories with these purposes.
 
 In summary, the aggregator serves data combining the daily COVID-19 metrics with the world population. Here is a networking representation Pods relationships.
 
-<img align="right" src="./assets/app-arch.png" width="400">
+<img src="./assets/app-arch.png" width="400">
 
 In the following steps, you will go into each directory where you will build, tag, push and start each container on you Kubernetes cluster.

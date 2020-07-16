@@ -10,7 +10,7 @@ Move to the _covid-19_ directory.
 
 ## Build microservice container image
 
-Spring Boot with Gradle (or Maven) has a convenient task called _bootBuildImage_. Without having to write a Dockfile this task will bundle the Java application into an optimized container image. Build and tag the  microservice container image.
+Spring Boot with Gradle (or Maven) has a convenient task called _bootBuildImage_. Without having to write a Dockerfile this task will bundle the Java application into an optimized container image. Build and tag the  microservice container image.
 
 `./gradlew bootBuildImage --imageName=localhost:5000/$(basename $PWD):0.0.1`{{execute}}
 

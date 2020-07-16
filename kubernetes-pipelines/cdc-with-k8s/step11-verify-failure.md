@@ -10,7 +10,7 @@ Verify the pacts on the producer side.
 
 **`BUILD FAILED`**
 
-You will see that the verification failed. **This shows us that a consumer disagrees with the producer. This disagreement is fantastic because it's unveiling a defect before it rolls further o production.**
+You will see that the verification failed. **This shows us that a consumer disagrees with the producer. This disagreement is fantastic because it's unveiling a defect _before_ it rolls further to production.**
 
 If you inspect all the percentCases fields from the producer, they are all zero. 
 
