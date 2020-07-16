@@ -1,5 +1,3 @@
-<img align="right" src="./assets/broken.jpg" width="275">
-
 Now that everything is started.
 
 Be sure you are in the _aggregator_ directory.
@@ -10,11 +8,12 @@ Verify the pacts on the producer side.
 
 `./gradlew pactVerify`{{execute}}
 
+<img align="right" src="./assets/broken.jpg" width="200">
 **`BUILD FAILED`**
 
 You will see that the verification failed. **This shows us that a consumer disagrees with the producer. This disagreement is fantastic because it's unveiling a defect _before_ it rolls further to production.**
 
-If you inspect all the percentCases fields from the producer, they are all zero. 
+If you inspect all the percentCases fields from the producer, they are all zero.
 
 `curl -s https://[[HOST_SUBDOMAIN]]-30103-[[KATACODA_HOST]].environments.katacoda.com/countries/percapita | jq . | grep percentCases`{{execute}}
 

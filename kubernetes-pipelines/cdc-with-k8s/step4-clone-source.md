@@ -4,7 +4,7 @@ You will build and deploy all the source code for this scenario. To save time an
 
 ## Clone source code
 
-All of the source is in a single git repository. Clone the source into this scenario.
+All of the code is in a single git repository. Clone the repo into this scenario.
 
 `git clone https://github.com/javajon/cdc-with-k8s`{{execute}}
 
@@ -31,4 +31,4 @@ In summary, the aggregator serves data combining the daily COVID-19 metrics with
 
 <img src="./assets/app-arch.png" width="400">
 
-In the following steps, you will go into each directory where you will build, tag, push and start each container on you Kubernetes cluster.
+In the following steps, you will go into each directory where you will build, tag, push, and start each container on your Kubernetes cluster.
