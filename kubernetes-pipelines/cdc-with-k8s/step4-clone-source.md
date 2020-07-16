@@ -24,7 +24,7 @@ There are 6 directories with these purposes.
 | cluster         | A collection of Kubernetes YAML based manifests that define how each microservice, Pod, Deployment, and Service will run on your Kubernetes cluster. |
 | covid-19        | A microservice that serves the covid-19 data, updated daily, for each country on our blue marble. |
 | h2-seeder       | A small container that runs as an _initContainer_ that seeds the H2 database Pod when it starts. The data is the human population for all the countries and major cities on our blue marble. |
-| pact            | Here is one consumer. The Node.js code is independent of the Kubernetes cluster and by running a Pact test is creates a Pact contract |
+| pact            | Here is one consumer. The Node.js code is independent of the Kubernetes cluster and by running a Pact test it creates a Pact contract |
 | world-pop       | A microservice that serves the world population data found in the H2 database. |
 
 In summary, the aggregator serves data combining the daily COVID-19 metrics with the world population. Here is a networking representation Pods relationships.

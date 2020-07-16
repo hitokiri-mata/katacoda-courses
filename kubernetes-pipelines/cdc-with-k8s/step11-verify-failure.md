@@ -1,3 +1,5 @@
+<img align="right" src="./assets/broken.jpg" width="275">
+
 Now that everything is started.
 
 Be sure you are in the _aggregator_ directory.

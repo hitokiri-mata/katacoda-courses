@@ -10,11 +10,11 @@ Consumers can work with customer requirements and evolving APIs by mocking up ne
 
 With these steps you have learned how to:
 
-- &#x2714; set up a Pack Broker on Kubernetes
-- &#x2714; write a consumer that defines and published Pact contracts
+- &#x2714; set up a Pact Broker on Kubernetes
+- &#x2714; write a consumer that defines and publishes Pact contracts
 - &#x2714; deploy and run a few Spring Boot microservices on Kubernetes
 - &#x2714; connect microservices to a database and public data source
-- &#x2714; verify the consumer Pacts against a producer
+- &#x2714; verify the consumer pacts against a producer
 - &#x2714; find API defects and fix them
 
 ## References ##

@@ -12,9 +12,9 @@ You will explore a sample application composed of several microservices. The app
 
 You will learn how to:
 
-1. set up a Pack Broker on Kubernetes
-2. write a consumer that defines and published Pact contracts
+1. set up a Pact Broker on Kubernetes
+2. write a consumer that defines and publishes Pact contracts
 3. deploy and run a few Spring Boot microservices on Kubernetes
 4. connect microservices to a database and public data source
-5. verify the consumer Pacts against a producer
+5. verify the consumer pacts against a producer
 6. find API defects and fix them
