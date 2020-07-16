@@ -27,8 +27,8 @@ There are 6 directories with these purposes.
 | pact            | Here is one consumer. The Node.js code is independent of the Kubernetes cluster and by running a Pact test is creates a Pact contract |
 | world-pop       | A microservice that serves the world population data found in the H2 database. |
 
-In summary, the aggregator serves data combining the daily covid-19 metrics with the world population. Here is a networking representation Pods relationships.
+In summary, the aggregator serves data combining the daily COVID-19 metrics with the world population. Here is a networking representation Pods relationships.
 
-TODO - diagram
+<img align="right" src="./assets/app-arch.png" width="400">
 
 In the following steps, you will go into each directory where you will build, tag, push and start each container on you Kubernetes cluster.

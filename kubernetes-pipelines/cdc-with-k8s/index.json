@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "pathwayTitle": "Consumer-driven Contracts with Kubernetes",
   "title": "Consumer-driven Contracts with Kubernetes",
   "description": "Learn how to use the Pact Foundation's framework for CDC testing.",
@@ -48,7 +47,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Run Covid-19 Microservice",
+        "title": "Run COVID-19 Microservice",
         "text": "step9-run-covid-ms.md",
         "code": "clear.sh"
       },

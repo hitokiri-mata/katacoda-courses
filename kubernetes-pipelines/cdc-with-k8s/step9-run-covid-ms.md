@@ -1,6 +1,8 @@
-<img align="right" src="./assets/nicholas-bartos-CzZcuJABONQ-unsplash.jpg" width="300">
-TODO about the service...
+<img align="right" src="./assets/csse.png" width="275">
 
+This is a Spring Boot based Microservice that reads COVID-19 metrics from a public CSV file. This microservice offers REST endpoints to get the data from the `/metrics`. Data is provided in the JSON format.
+
+This data is aggregated from various other public sources and is curated by [Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)](https://systems.jhu.edu/) in this public [Git repo(https://github.com/CSSEGISandData/COVID-19). The data is updated daily.
 
 Move to the _covid-19_ directory.
 

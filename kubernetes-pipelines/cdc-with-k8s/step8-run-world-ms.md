@@ -1,6 +1,5 @@
-TODO about the service...
-
 <img align="right" src="./assets/Annual-World-Population-since-10-thousand-BCE-for-OWID-800x498.png" width="350">
+This is a Spring Boot based Microservice that simply reads world population data from the H2 database using SQL select calls. It offers REST endpoints to get the populations from `/countries` and `/cities`. Data is provided in the JSON format.
 
 Move to the _world-pop_ directory.
 

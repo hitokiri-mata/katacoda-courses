@@ -1,4 +1,7 @@
-TODO about the service...
+<img align="right" src="./assets/nicholas-bartos-CzZcuJABONQ-unsplash.jpg" width="275">
+This microservice is called the Aggregator as it follows the common architecture pattern of an aggregator. It provides a single API gateway to access the other two microservice; world-pop and convid-19. The data from the two other microservices are merge into responses where COVID-19 data is merged with population data. With population data, you can get visibility in infection rates based on percapita.
+
+** THIS DATA SHOULD NOT BE USED FOR ANYTHING OUTSIDE THE CONFINES OF THIS SCENARIO. **
 
 Move to the _aggregator_ directory.
 

@@ -1,28 +1,31 @@
 # Conclusion #
 
-**You now know how to create, build, deploy and run a Spring Boot application on Kubernetes.**
+Hopefully, you can now start to see how changing the perspective of test by embracing the consumer perspectives can be a powerful testing technique, especially for Microservices.
 
-TODO
+With an established library of contacts, a producer writer can have much more confidence when making adjustments to the API that others consumer. With any change they can run pactVerify, to help understand the impact of changes to their consumers.
+
+Consumers can work with customer requirements and evolving APIs by mocking up new communication scenarios. Those new contacts can be published and verified against their providers. The Pacts provide opportunities for conversations and understanding impacts of change while maintaining a clean separation between the producers and consumers.
 
 ## Lessons Learned ##
 
 With these steps you have learned how to:
 
-- &#x2714; write a getting started Spring Boot application
-- &#x2714; run a Gradle (or Maven) build when the container is built
-- &#x2714; push a container to a private registry on Kubernetes
-- &#x2714; instruct Kubernetes to start and application
-- &#x2714; access an application service running on Kubernetes
+- &#x2714; set up a Pack Broker on Kubernetes
+- &#x2714; write a consumer that defines and published Pact contracts
+- &#x2714; deploy and run a few Spring Boot microservices on Kubernetes
+- &#x2714; connect microservices to a database and public data source
+- &#x2714; verify the consumer Pacts against a producer
+- &#x2714; find API defects and fix them
 
 ## References ##
 
-- [Pact](https://pact.io/)
+- [Consumer-Driven Contracts: A Service Evolution Pattern, Ian Robinson, 2006](https://martinfowler.com/articles/consumerDrivenContracts.html)
+- [Thoughtworks Tech Radar on Pact](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing)
+- [Pact Foundation](https://pact.io/)
 - [Pact Broker](https://github.com/pact-foundation/pact_broker)
 - [Marie Drake, Contract Testing with Pact.js and Jest](https://www.mariedrake.com/post/contract-testing-with-pact-js-and-jest)
 - [Jest - delightful JavaScript Testing Framework](https://jestjs.io/)
 - [jest-pact](https://github.com/pact-foundation/jest-pact)
-- [Martin Fowler on CDC](https://martinfowler.com/articles/consumerDrivenContracts.html)
-- [Thoughtworks Tech Radar on Pact](https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing)
 - [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
 - [Spring Boot in a Container](https://spring.io/blog/2018/11/08/spring-boot-in-a-container)
 - [Spring Boot initializr](https://github.com/spring-io/initializr)

@@ -1,10 +1,14 @@
-TODO - about hte consumer...
+With the Pact framework, it's the consumers that create the Pacts. Independent of the producers or any service, the consumers write testing code that creates conversations with local mocked services. The Mocks are the consumer's perspectives of how the producers should react to the consumer's requests.
+
+<img align="right" src="./assets/nodejs.png" width="250">
+This particular consumer is written in Node.js. It also uses Jest - a delightful JavaScript Testing Framework with a focus on simplicity. The Pact framework works with many languages and testing fromworks including Node.js and Java used in this scenario. The current list of [supported languages](https://docs.pact.io/implementation_guides/other_languages) makes it attractive for use with Kubernetes where we often mix languages in different containers.
+
+<img align="right" src="./assets/jest.png" width="250">
+This example is directly based on the work from [Marie Drake](https://www.mariedrake.com/). Marie has a helpful post [Contract Testing with Pact.js and Jest](https://www.mariedrake.com/post/contract-testing-with-pact-js-and-jest) that describes in more detail how this works. This scenario only scratches the surface and Marie Drake describes many more of its capabilities.
 
 Move to the _pact_ directory.
 
 `cd ~/cdc-with-k8s/pact`{{execute}}
-
-For this example, the consumer is written in Node.js. The Pact framework works with many languages including Node.js and Java used in this scenario. The current list of [supported languages](https://docs.pact.io/implementation_guides/other_languages) makes it attractive for use with Kubernetes where we often mix languages in different containers.
 
 ## Generate Pact Contracts
 
