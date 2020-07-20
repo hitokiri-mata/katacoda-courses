@@ -2,7 +2,8 @@
 	"private": "true",
 	"title": "Troubleshooting your Horizontal Pod AutoScaler",
 	"description": "Test your skills by fixing the automatic scaling of your Pods.",
-    "time": "15 minutes",
+	"difficulty": "Intermediate",
+    "time": "30 minutes",
 	"details": {
 	  "steps": [
 		{
@@ -30,16 +31,20 @@
 		  "text": "step5-apply-hpa-syntax.md",
 		  "code": "clear.sh",
 		  "verify": "step5-verify.sh",
-		  "answer": "step5-answer.sh"
+		  "answer": "step5-answer.md"
 		},
 		{
-			"title": "Declare HPA Criteria",
-			"text": "step6-apply-hpa-spec.md",
-			"code": "clear.sh",
-			"verify": "step6-verify.sh",
-			"answer": "step6-answer.sh"
-		  }
-		],
+		  "title": "Declare HPA Criteria",
+		  "text": "step6-apply-hpa-spec.md",
+		  "code": "clear.sh",
+		  "verify": "step6-verify.sh",
+		  "answer": "step6-answer.md"
+		},
+		{
+		  "title": "Congratulations",
+		  "text": "step7-congrats.md",
+		}
+	  ],
 	  "intro": {
 		"text": "intro.md",
 		"code": "env-init.sh",

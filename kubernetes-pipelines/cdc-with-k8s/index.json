@@ -2,7 +2,7 @@
   "pathwayTitle": "Consumer-driven Contracts with Kubernetes",
   "title": "Consumer-driven Contracts with Kubernetes",
   "description": "Learn how to use the Pact Foundation's framework for CDC testing.",
-  "difficulty":	"Advanced",
+  "difficulty":	"Intermediate",
   "time":	"30 minutes",
   "lifetime": "180",
   "details": {
