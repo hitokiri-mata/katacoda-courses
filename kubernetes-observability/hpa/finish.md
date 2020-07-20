@@ -1,4 +1,4 @@
-The scenario introduced the fundamental techniques to scale up and down your Pods in a Kubernetes cluster using the Horizontal Pod AutoScalar (HPA). There are more complex rules that can be applied to the HPA triggering logic and the HPA can reference metrics from other metrics registeries such as Prometheus. The HPA uses the standardized [Custom Metrics API](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-custom-metrics) to reference metrics from different sources.
+The scenario introduced the fundamental techniques to scale up and down your Pods in a Kubernetes cluster using the Horizontal Pod AutoScaler (HPA). There are more complex rules that can be applied to the HPA triggering logic and the HPA can reference metrics from other metrics registeries such as Prometheus. The HPA uses the standardized [Custom Metrics API](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-custom-metrics) to reference metrics from different sources.
 
 ## Lessons Learned ##
 

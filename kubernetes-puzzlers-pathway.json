@@ -1,0 +1,13 @@
+{
+    "title": "Kubernetes Puzzlers",
+    "icon": "fa-kubernetes",
+    "description": "Learn Kubernetes by solving some problems. Apply your excellent diagnosing skills to fix broken scenarios. Some are tricky, are you up for the challenge?",
+    "courses": [
+      {
+        "course_id": "puzzler-hpa",
+        "title": "Troubleshooting your Horizontal Pod AutoScaler",
+        "description": "Test your skills by fixing the automatic scaling of your Pods."
+      }
+    ]
+  }
+  

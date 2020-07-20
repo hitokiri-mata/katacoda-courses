@@ -1,6 +1,6 @@
 {
 	"title": "Scaling Your Applications, Automatically",
-	"description": "Discover how the Horizontal Pod Autoscalar (HPA) can give you consistent performance while saving costs.",
+	"description": "Discover how the Horizontal Pod Autoscaler (HPA) can give you consistent performance while saving costs.",
 	"time": "15 minutes",
 	"details": {
 	  "steps": [

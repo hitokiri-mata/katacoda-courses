@@ -2,7 +2,7 @@ Simple autoscaling declarations can be applied directly with the Kubectl.
 
 `kubectl autoscale deployments/php-apache --cpu-percent=40 --min=1 --max=10`
 
-However, we will declare the HPA rules with a YAML baed manifest.
+However, we will declare the HPA rules with a YAML manifest.
 
 `cat hpa.yaml`{{execute T1}}
 
