@@ -1,4 +1,5 @@
 {
+	"private": "true",
 	"title": "Troubleshooting your Horizontal Pod AutoScaler",
 	"description": "Test your skills by fixing the automatic scaling of your Pods.",
     "time": "15 minutes",

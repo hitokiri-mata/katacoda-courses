@@ -6,7 +6,7 @@
       {
         "course_id": "puzzler-hpa",
         "title": "Troubleshooting your Horizontal Pod AutoScaler",
-        "description": "Test your skills by fixing the automatic scaling of your Pods."
+        "description": "(drafting 0.0.1) Test your skills by fixing the automatic scaling of your Pods."
       }
     ]
   }
