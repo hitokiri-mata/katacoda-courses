@@ -34,7 +34,7 @@
 		},
 		{
 			"title": "Declare HPA Criteria",
-			"text": "step-apply-hpa-spec.md",
+			"text": "step6-apply-hpa-spec.md",
 			"code": "clear.sh",
 			"verify": "step6-verify.sh",
 			"answer": "step6-answer.sh"
