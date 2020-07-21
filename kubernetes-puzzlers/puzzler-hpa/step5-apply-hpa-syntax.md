@@ -1,4 +1,4 @@
-Your goal is to apply a HPA declaration to instruct the HPA controller on what is should scale.
+Your goal is to apply a HPA declaration to instruct the HPA controller to scale your php-apache Pods.
 
 Inspect the YAML manifest.
 
