@@ -32,9 +32,9 @@ or
 However, once the metrics are available the normal message should look similar to this:
 
 ```
-NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
-master   137m         6%     1222Mi          64%
-node01   120m         6%     665Mi           17%
+NAME           CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
+controlplane   265m         13%    925Mi           48%
+node01         262m         13%    843Mi           21%
 ```
 
 Pod information can also be observed.

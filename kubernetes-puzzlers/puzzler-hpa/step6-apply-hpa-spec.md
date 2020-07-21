@@ -1,6 +1,6 @@
 With the HPA now deployed we would expect more Pods to be started with all the CPU backpressure running in Terminal 2. You should be seeing several Pods by now.
 
-`watch "kubectl get pods && echo "" && kubectl top pods && echo "" && kubectl get hpa"`{{execute T3}}
+`watch "kubectl get deployments && echo "" && kubectl get pods -l app=php-apache && echo "" && kubectl top pods -l app=php-apache && echo "" && kubectl get hpa"`{{execute T3}}
 
 If you are not seeing more than one Pod, then something is still wrong.
 
