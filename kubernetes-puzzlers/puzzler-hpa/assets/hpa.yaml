@@ -7,7 +7,7 @@ spec:
   maxReplicas: 2
   minReplicas: 2
   scaleTargetRef:
-    apiVersion: extensions/v1
+    apiVersion: apps/v1
     kind: Deployment
     name: pep-apache
   targetCPUUtilizationPercentage: ".40"

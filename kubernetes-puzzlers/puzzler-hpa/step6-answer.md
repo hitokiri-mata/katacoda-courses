@@ -10,7 +10,7 @@ spec:
   maxReplicas: 10                    <--
   minReplicas: 2
   scaleTargetRef:
-    apiVersion: extensions/v1
+    apiVersion: apps/v1
     kind: Deployment
     name: php-apache                 <--
   targetCPUUtilizationPercentage: 40

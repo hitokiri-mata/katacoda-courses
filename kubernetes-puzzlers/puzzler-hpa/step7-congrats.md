@@ -15,10 +15,9 @@ spec:
   maxReplicas: 10
   minReplicas: 2
   scaleTargetRef:
-    apiVersion: extensions/v1
+    apiVersion: apps/v1
     kind: Deployment
     name: php-apache
   targetCPUUtilizationPercentage: 40
 ```
-
 These are all mistakes that anyone can make, especially if you are going to fast, not being careful, and not understanding how the declaration works.
