@@ -5,6 +5,5 @@ HPA_COUNT=$(echo $HPA_OBJECT | grep -c 'apache')
 
 if [ "$HPA_COUNT" -eq "1" ]
 then 
-  exit 0
+  echo 'done'
 fi
-exit 1;
