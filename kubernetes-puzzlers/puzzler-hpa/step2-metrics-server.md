@@ -1,9 +1,11 @@
-The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
+The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-sigs/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
-`helm install metrics-server stable/metrics-server \
+`helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
+
+`helm install metrics-server bitnami/metrics-server \
 --namespace kube-system \
---set args[0]="--kubelet-preferred-address-types=InternalIP" \
---set args[1]="--kubelet-insecure-tls"`{{execute}}
+--set apiService.create=true \
+--set extraArgs.kubelet-preferred-address-types=InternalIP,extraArgs.kubelet-insecure-tls=true`{{execute}}
 
 This will install the server in the kube-system namespace along with the last two parameters that allow it to work well in this ephemeral Katacoda cluster.
 
@@ -27,15 +29,15 @@ or
 
 > `error: metrics not available yet`
 
-However, once the metrics are available the normal message should look similar this:
+However, once the metrics are available the normal message should look similar to this:
 
 ```
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
-master   125m         6%     1049Mi          55%
-node01   84m          2%     922Mi           23%
+master   137m         6%     1222Mi          64%
+node01   120m         6%     665Mi           17%
 ```
 
-Pod information can also be observered.
+Pod information can also be observed.
 
 `kubectl top pods --all-namespaces`{{execute}}
 

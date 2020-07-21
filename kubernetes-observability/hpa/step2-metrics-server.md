@@ -27,7 +27,7 @@ or
 
 > `error: metrics not available yet`
 
-However, once the metrics are available the normal message should look similar this:
+However, once the metrics are available the normal message should look similar to this:
 
 ```
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
@@ -35,7 +35,7 @@ master   125m         6%     1049Mi          55%
 node01   84m          2%     922Mi           23%
 ```
 
-Pod information can also be observered.
+Pod information can also be observed.
 
 `kubectl top pods --all-namespaces`{{execute}}
 

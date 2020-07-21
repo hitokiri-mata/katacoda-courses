@@ -12,6 +12,7 @@ With these steps you have learned how to:
 
 ## References ##
 
+- [Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server)
 - [Horizontal Pod Autoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 - [Horizontal Pod Scaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [Cluster Node Scaling](https://github.com/kubernetes/autoscaler)
