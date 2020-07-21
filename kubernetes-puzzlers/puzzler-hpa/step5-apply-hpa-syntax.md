@@ -1,4 +1,4 @@
-You goal is to apply a HPA declaration to instruct the HPA controller on what is should scale.
+Your goal is to apply a HPA declaration to instruct the HPA controller on what is should scale.
 
 Inspect the YAML manifest.
 
@@ -10,13 +10,13 @@ Apply these HPA rules.
 
 However, for this puzzler, something is wrong.
 
-For this puzzler, try editing the hpa.yaml file with `edit` (vi, vim) and try to correct the syntax error. 
+For this puzzler, try editing the hpa.yaml file with `edit` (vi, vim) and try to correct the syntax error.
 
 `vi hpa.yaml`{{execute}}
 
 In the vi editor type 'I' for insert, make you edit, and type `esc + :` then `wq` to save and exit. Once corrected, try again.
 
->> Vi is my favorite text editor. I've been using it for years...I can't figure out how to exit. `¯\_(ツ)_/¯`
+> Vi is my favorite text editor. I've been using it for years...I can't figure out how to exit. `¯\_(ツ)_/¯`
 
 Try again.
 
