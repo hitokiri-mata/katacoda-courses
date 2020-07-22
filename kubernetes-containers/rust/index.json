@@ -1,7 +1,8 @@
 {
-  "pathwayTitle": "go",
-  "title": "Go Apps in Containers on Kubernetes",
-  "description": "Packaging Go Applications in Containers.",
+  "private": true
+  "pathwayTitle": "rust",
+  "title": "Rust Apps in Containers on Kubernetes",
+  "description": "Packaging Rust Applications in Containers.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {

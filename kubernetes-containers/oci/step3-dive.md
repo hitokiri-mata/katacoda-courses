@@ -10,7 +10,7 @@ Return to the default directory and install the _Dive_ tool.
 
 `wget -q https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb`{{execute}}
 
-`apt install ./dive_0.9.2_linux_amd64.deb`{{execute}}
+`apt -qq install ./dive_0.9.2_linux_amd64.deb`{{execute}}
 
 Verify it's installed and working.
 

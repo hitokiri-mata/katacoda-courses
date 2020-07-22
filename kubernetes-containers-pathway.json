@@ -9,14 +9,19 @@
         "description": "Dissecting the OCI container format"
       },
       {
+        "course_id": "springboot-to-k8s",
+        "title": "Spring Boot to Kubernetes",
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes"
+      },
+      {
         "course_id": "go",
         "title": "Go Apps in Containers on Kubernetes",
         "description": "Packaging Go Applications in Containers"
       },
       {
-        "course_id": "springboot-to-k8s",
-        "title": "Spring Boot to Kubernetes",
-        "description": "From a blank slate to a Spring Boot app running on Kubernetes"
+        "course_id": "rust",
+        "title": "Rust Apps in Containers on Kubernetes",
+        "description": "Packaging Rust Applications in Containers"
       },
       {
         "course_id": "distillation",
