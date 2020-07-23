@@ -11,8 +11,11 @@ echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebre
 source ~/.bashrc
 
 # Enable metrics
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install metrics-server bitnami/metrics-server --version=4.2.1 --namespace kube-system 
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm install metrics-server stable/metrics-server \
+--namespace kube-system \
+--set args[0]='--kubelet-preferred-address-types=InternalIP' \
+--set args[1]='--kubelet-insecure-tls'
 
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/

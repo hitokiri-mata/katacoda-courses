@@ -2,6 +2,10 @@ Create a namespace for the installation target.
 
 `kubectl create namespace redis`{{execute}}
 
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
 With a known chart name, use the _install_ command to deploy the chart to your cluster.
 
 `helm install my-redis stable/redis --namespace redis`{{execute}}

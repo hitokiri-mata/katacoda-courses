@@ -20,6 +20,10 @@ Create a namespace for the installation target.
 
 `kubectl create namespace jenkins`{{execute}}
 
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
 To start Jenkins use Helm to install the stable/Jenkins chart.
 
 `helm install stable/jenkins jenkins --namespace jenkins -f jenkins-values.yaml`{{execute}}

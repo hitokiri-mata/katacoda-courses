@@ -12,6 +12,10 @@ Create a namespace for the installation target.
 
 `kubectl create namespace sonarqube`{{execute}}
 
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
 Using Helm, install the SonarQube Helm chart with a few custom values.
 
 `helm install sonar stable/sonarqube --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
