@@ -4,7 +4,7 @@ Create a namespace, for example, to specify a country.
 
 In you current directory there is a YAML file for a thermometer for Stockholm Sweden.
 
-`cat stockholm-thermometer.yaml`{{execute}}
+`caty stockholm-thermometer.yaml`{{execute}}
 
 Notice the YAML has the name and namespace (as the location) and units defined. Apply this declaration.
 

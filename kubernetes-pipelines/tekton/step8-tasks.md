@@ -7,9 +7,9 @@ For our pipeline, we have defined two tasks:
 
 Inspect each task and see how it is composed of distinct, modular, and sequential steps.
 
-`cat pipeline/task-build-src.yaml`{{execute}}
+`caty pipeline/task-build-src.yaml`{{execute}}
 
-`cat pipeline/task-deploy.yaml`{{execute}}
+`caty pipeline/task-deploy.yaml`{{execute}}
 
 Pods in Kubernetes are composed of one or more containers. Each Tekton task runs as a Kubernetes Pod. Each step in the task runs as a separate container in the task's Pod.
 

@@ -11,7 +11,7 @@ EOF
 
 The YAML file has been created.
 
-`cat thermometer-another.yaml`{{execute}}
+`caty thermometer-another.yaml`{{execute}}
 
 This declaration can be applied to your Kubernetes cluster.
 

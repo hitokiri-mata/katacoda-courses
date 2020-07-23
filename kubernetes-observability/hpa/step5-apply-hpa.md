@@ -4,7 +4,7 @@ Simple autoscaling declarations can be applied directly with the Kubectl.
 
 However, we will declare the HPA rules with a YAML manifest.
 
-`cat hpa.yaml`{{execute T1}}
+`caty hpa.yaml`{{execute T1}}
 
 Apply these HPA rules.
 

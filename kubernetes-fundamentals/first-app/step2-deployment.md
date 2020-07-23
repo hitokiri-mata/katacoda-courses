@@ -8,7 +8,7 @@ Deploy a simple application called [_echoserver_](https://console.cloud.google.c
 
 Take a look at the YAML file that defines this application.
 
-`cat echoserver.yaml`{{execute}}
+`caty echoserver.yaml`{{execute}}
 
 Notice this not only defines a `kind: Deployment`, but inside the deployment is a `ReplicaSet` of a `Pod` and that Pod consists of one `Container`. The Deployment is a preferred way of deploying applications instead of simply standing up just a Pod. You may see the advantage in the later step that scales the application.
 

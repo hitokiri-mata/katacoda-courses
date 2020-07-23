@@ -24,6 +24,6 @@ Here is the container definition for the app:
 
 Here are the standard Deployment and Service manifests that start the application on Kubernetes:
 
-`cat src/deploy.yaml`{{execute}}
+`caty src/deploy.yaml`{{execute}}
 
 At this point, we could build the application into a container and deploy on Kubernetes using a series of command-line tools. However, most things deployed to Kubernetes should be infrastructure-as-code, including the recipes that continuously deliver application updates as we fix and evolve our applications. This CI/CD process is often captured in source code for CI/CD pipelines. Tekton allows you to declare your pipelines in code.

@@ -2,7 +2,7 @@ This example shows how a Pod accesses configuration data from the ConfigMap by p
 
 View the resource definition.
 
-`cat consume-via-env.yaml`{{execute}}
+`caty consume-via-env.yaml`{{execute}}
 
 Create the Pod.
 

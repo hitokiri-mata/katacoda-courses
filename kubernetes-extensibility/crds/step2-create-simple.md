@@ -1,6 +1,6 @@
 Let's begin by inspecting a small, example YAML file that declares a simple Thermometer.
 
-`cat thermometer-crd.yaml`{{execute}}
+`caty thermometer-crd.yaml`{{execute}}
 
 In this CRD definition the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource. Later we will get to defining other attributes like units.
 

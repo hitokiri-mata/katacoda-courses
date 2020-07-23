@@ -2,6 +2,12 @@
 
 launch.sh
 
+# Syntax highlighting for YAML
+snap install yq  --no-wait
+function caty() {
+  cat "$@" | yq -C read -
+}
+
 # Common curl switches
 echo '-s' >> ~/.curlrc
 

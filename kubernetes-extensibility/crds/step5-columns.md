@@ -2,7 +2,7 @@ Just as objects in programming languages can have attributes, a resource can als
 
 The `thermometer-with-columns-crd.yaml` includes the `additionalPrinterColumns` section.
 
-`cat thermometer-with-columns-crd.yaml`{{execute}}
+`caty thermometer-with-columns-crd.yaml`{{execute}}
 
 See how two new columns are defined under the `versions` group. Apply this new CRDs declaration for the thermometers.
 

@@ -8,7 +8,7 @@ Clone the serverless-kubeless repo and check the example function
 
 `cd serverless-kubeless/examples/get-python`{{execute}}
 
-`cat serverless.yml`{{execute}}
+`caty serverless.yml`{{execute}}
 
 Download dependencies
 

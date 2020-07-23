@@ -2,7 +2,7 @@ PipelineRuns are entities that declare the trigger to run a pipeline. The trigge
 
 We have defined the PipelineRun.
 
-`cat pipeline/pipeline-run.yaml`{{execute}}
+`caty pipeline/pipeline-run.yaml`{{execute}}
 
 Notice the provided parameters and ServiceAccount which will be offered contexts to the tasks. Apply this PipelineResource declaration.
 

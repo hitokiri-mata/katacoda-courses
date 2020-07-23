@@ -1,6 +1,6 @@
 Shown here is a YAML file that associates two containers in a Pod. The containers communicate with each other through shared path mounts. This allows the second container to act as a sidecar. Inspect how the Pod is created.
 
-`cat sidecar-example.yaml`{{execute}}
+`caty sidecar-example.yaml`{{execute}}
 
 Deploy the Pod.
 

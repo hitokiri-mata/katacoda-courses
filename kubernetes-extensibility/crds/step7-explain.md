@@ -13,7 +13,7 @@ With the current CRD the `Explain` command will not work.
 
 An additional change to the schema allows the `Explain` command to work. Notice in this CRD definition the added setting `preserveUnknownFields` on line 15 is set to false.
 
-`cat -n thermometer-with-validation-crd.yaml`{{execute}}
+`caty thermometer-with-validation-crd.yaml | cat -n -`{{execute}}
 
 Apply this CRD.
 
