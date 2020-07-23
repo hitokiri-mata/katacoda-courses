@@ -12,7 +12,11 @@ Create a namespace for the installation target.
 
 `kubectl create namespace logs`{{execute}}
 
-Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for a production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
 
 `helm install elasticsearch stable/elasticsearch --namespace=logs \
 --set client.replicas=1 \

@@ -1,6 +1,10 @@
 The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-sigs/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
+Add the chart repository for the Helm chart to be installed.
+
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
+
+Install the chart.
 
 `helm install metrics-server bitnami/metrics-server \
 --namespace kube-system \

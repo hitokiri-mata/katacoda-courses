@@ -1,6 +1,18 @@
 ## Establish Private Registry on Kubernetes ##
 
-`helm install registry stable/docker-registry --set service.type=NodePort`{{execute}}
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install the chart.
+
+```
+helm install registry stable/docker-registry \
+  --version docker-registry-1.9.4 \
+  --namespace kube-system \
+  --set service.type=NodePort \
+  --set service.nodePort=31500
+```{{execute}}
 
 This start a private container registry that Camel K will use. To verify it is accessible find the IP and PORT of the service:
 

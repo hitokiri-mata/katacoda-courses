@@ -6,7 +6,7 @@ launch.sh
 echo '-s' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
-docker pull -q whalebrew/pygmentize &
+docker pull -q whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
 source ~/.bashrc
 source <(kubectl completion bash)

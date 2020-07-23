@@ -2,7 +2,19 @@ It's helpful to have a container registry during the build, push, and deploy pha
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 
-`helm install registry stable/docker-registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install the chart.
+
+```
+helm install registry stable/docker-registry \
+  --version docker-registry-1.9.4 \
+  --namespace kube-system \
+  --set service.type=NodePort \
+  --set service.nodePort=31500
+```{{execute}}
 
 The registry is now available as a service. It can be listed.
 

@@ -10,7 +10,7 @@ First, add the stable chart repository.
 
 Install the registry chart.
 
-`helm install private stable/docker-registry --namespace kube-system`{{execute}}
+`helm install registry stable/docker-registry --version docker-registry-1.9.4 --namespace kube-system`{{execute}}
 
 ## Install Registry Proxies as Node Daemons
 

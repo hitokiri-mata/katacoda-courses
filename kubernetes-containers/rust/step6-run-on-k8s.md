@@ -6,7 +6,19 @@ Up to now we have just been concentrating on Go and putting your applications in
 
 We need a registry where Kubernetes can pull the restafarian container so first install the registry on Kubernetes.
 
-`helm install registry stable/docker-registry --namespace kube-system --set service.type=NodePort --set service.nodePort=31500`{{execute}}
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install the chart.
+
+```
+helm install registry stable/docker-registry \
+  --version docker-registry-1.9.4 \
+  --namespace kube-system \
+  --set service.type=NodePort \
+  --set service.nodePort=31500
+```{{execute}}
 
 Assign an environment variable to the common registry location.
 
