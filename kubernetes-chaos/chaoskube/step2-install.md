@@ -2,13 +2,18 @@ Create a namespace for the Chaoskube service.
 
 `kubectl create namespace chaoskube`{{execute}}
 
-Install Chaoskube using the Helm chart.
+Add the repo source of the Chaoskube Helm chart.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install Chaoskube using its Helm chart.
 
 ```
 helm install chaoskube stable/chaoskube \
+  --version 3.1.4 \
   --namespace chaoskube \
   --set dryRun=false \
-  --set namespaces="!kube-system" \
+  --set 'namespaces=!kube-system' \
   --set labels=app-purpose=chaos \
   --set interval=20s
 ```{{execute}}
