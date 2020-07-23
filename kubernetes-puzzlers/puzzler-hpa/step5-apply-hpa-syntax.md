@@ -2,7 +2,7 @@ Your goal is to apply a HPA declaration to instruct the HPA controller to scale 
 
 Inspect the YAML manifest.
 
-`caty hpa.yaml`{{execute T1}}
+`ccat hpa.yaml`{{execute T1}}
 
 Apply these HPA rules.
 

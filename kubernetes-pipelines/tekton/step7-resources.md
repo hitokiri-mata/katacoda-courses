@@ -14,7 +14,7 @@ Pipeline Run
 
 We have defined the Git repo where the application source code resides.
 
-`caty pipeline/git-resource.yaml`{{execute}}
+`ccat pipeline/git-resource.yaml`{{execute}}
 
 Apply this PipelineResource declaration.
 

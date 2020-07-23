@@ -8,7 +8,7 @@ put in index.json
 
 Let's try a new Thermometer resourse that defines a different city, such as:
 
-`caty gothenburg-thermometer.yaml`{{execute}}
+`ccat gothenburg-thermometer.yaml`{{execute}}
 
 Will it successfully apply?
 
@@ -20,7 +20,7 @@ Get all the current Thermometers.
 
 Next, let's add a schema to the CRD using open API v3 Schema. The following schema has the validation section added.
 
-`caty thermometer-with-validation-crd.yaml`{{execute}}
+`ccat thermometer-with-validation-crd.yaml`{{execute}}
 
 Delete the associated CRDs.
 

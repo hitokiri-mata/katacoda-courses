@@ -2,17 +2,14 @@
 
 launch.sh
 
-# Syntax highlighting for YAML
-snap install yq  --no-wait
-function caty() {
-  cat "$@" | yq -C read -
-}
-
 # Common curl switches
 echo '-s' >> ~/.curlrc
 
-# Allow pygmentize for source highlighting
-docker pull whalebrew/pygmentize
+# Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
+docker pull -q whalebrew/pygmentize &
+echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
+source ~/.bashrc# Allow pygmentize for source highlighting
+docker pull -q whalebrew/pygmentize &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir     whalebrew/pygmentize $1; }' >> ~/.bashrc
 source ~/.bashrc
 

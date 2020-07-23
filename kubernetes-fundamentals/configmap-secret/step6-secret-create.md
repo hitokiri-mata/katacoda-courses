@@ -22,7 +22,7 @@ A better way to define Secrets is with a resource YAML file in this form.
 
 Look inside the YAML.
 
-`caty secret.yaml`{{execute}}
+`ccat secret.yaml`{{execute}}
 
 When the YAML file was create the password text came from the output of this _base64_ command.
 
@@ -32,6 +32,6 @@ When first creating the YAML file you can skip using the _base64_ command and in
 
 `kubectl create secret generic db-password --from-literal=password=MyDbPassw0rd --dry-run -o yaml > my-secret.yaml`{{execute}}
 
-`caty my-secret.yaml`{{execute}}
+`ccat my-secret.yaml`{{execute}}
 
 In this step, we see how secrets are created and submitted as resources to Kubernetes. The next step will read these secrets.

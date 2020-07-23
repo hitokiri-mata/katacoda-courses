@@ -1,6 +1,6 @@
 Instead of using the Kubeless CLI, it is possible to deploy Kubeless Functions directly using the Kubernetes API and creating Function objects. A manifest can be defined and submitted to Kubernetes with the `kubectl create` command. Take a look at this example manifest
 
-`caty ruby-example.yaml`{{execute}}
+`ccat ruby-example.yaml`{{execute}}
 
 Notice at the top the manifest Kind is _Function_. The Kind Function is not part of the core set of Kubernetes Kinds. Instead, this Kind is an extension added by the Kubeless framework. This illustrates the extensibility of Kubernetes to allow custom extensions to the Kubernetes API. The Kubernetes feature of custom resource definitions (CRDs) permits this solution. To see the CRDs that Kubeless has added run this
 

@@ -34,7 +34,7 @@ The template runs 10 jobs where each job generates 10 keys. For a better race co
 
 Notice now the `keygen-num-to-gen` setting is set to `=1`.
 
-`caty job-parallel.yaml`{{execute}}
+`ccat job-parallel.yaml`{{execute}}
 
 Run the jobs in parallel.
 

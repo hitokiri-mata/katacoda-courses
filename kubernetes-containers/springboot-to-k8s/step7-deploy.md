@@ -8,7 +8,7 @@ Deploy the application on Kubernetes using the container image built and pushed 
 
 Inspect the Kubernetes resource declaration for starting the `hello` application.
 
-`caty hello-resolved.yaml`{{execute}}
+`ccat hello-resolved.yaml`{{execute}}
 
 With the corrected location to the private registry, deploy the application.
 

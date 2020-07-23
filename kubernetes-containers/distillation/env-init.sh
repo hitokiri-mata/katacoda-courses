@@ -2,16 +2,13 @@
 
 launch.sh
 
-# Syntax highlighting for YAML
-snap install yq  --no-wait
-function caty() {
-  cat "$@" | yq -C read -
-}
-
 # Common curl switches
 echo '-s' >> ~/.curlrc
 
-# Setup dashboard on port 30000
+# Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
+docker pull -q whalebrew/pygmentize &
+echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
+source ~/.bashrc# Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --version=2.3.0 \

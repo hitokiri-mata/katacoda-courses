@@ -30,7 +30,7 @@ OK, your right, we skipped the update of CRUD. From the CLI one way to achieve t
 
 A better way to define ConfigMaps is with a resource YAML file in this form.
 
-`caty ucs-org.yaml`{{execute}}
+`ccat ucs-org.yaml`{{execute}}
 
 The same _create_ command can be used to submit a YAML resource file.
 

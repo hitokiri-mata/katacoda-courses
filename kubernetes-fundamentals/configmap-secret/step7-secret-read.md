@@ -10,7 +10,7 @@ The secret has two values _username_ and _password_.
 
 View the definition of the Pod that will access this secret.
 
-`caty kuard.yaml`{{execute}}
+`ccat kuard.yaml`{{execute}}
 
 Launch the Kuard application and associate a service with its Pod.
 

@@ -2,7 +2,7 @@ Kubernetes relies on manifests as declarations for the desired state of the clus
 
 Inspect the declaration for Nginx.
 
-`caty nginx.yaml`{{execute}}
+`ccat nginx.yaml`{{execute}}
 
 Typically manifests are sources stored in version control in YAML file format. Kubernetes also accepts manifests in JSON form but since we often edit these files, the YAML format tends to be easier to read and edit than JSON. These source files are examples of [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code).
 

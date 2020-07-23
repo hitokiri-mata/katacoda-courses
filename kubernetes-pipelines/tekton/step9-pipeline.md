@@ -4,7 +4,7 @@ Pipelines are entities that group a series of Tasks that accomplish a specific b
 
 For our pipeline, we have defined the two sequential tasks to build and deploy the application.
 
-`caty pipeline/pipeline.yaml`{{execute}}
+`ccat pipeline/pipeline.yaml`{{execute}}
 
 Apply this Pipeline declaration.
 

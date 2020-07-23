@@ -6,8 +6,8 @@ launch.sh
 echo '-s' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
-docker pull whalebrew/pygmentize
-echo 'function catc() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
+docker pull -q whalebrew/pygmentize &
+echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1; }' >> ~/.bashrc
 source ~/.bashrc
 
 # Setup dashboard on port 30000
