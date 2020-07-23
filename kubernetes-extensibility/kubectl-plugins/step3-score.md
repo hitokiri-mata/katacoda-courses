@@ -22,7 +22,7 @@ Hm... to bad, no `fix` command.
 
 Try the analysis against resources in your cluster. First, deploy NGINX.
 
-`kubectl create -f nginx.yaml`{{execute}}
+`kubectl apply -f nginx.yaml`{{execute}}
 
 Run the analysis.
 
@@ -30,6 +30,6 @@ Run the analysis.
 
 This will take a few moments to see a similar report.
 
-You can also run score against your Helm charts.
+You can also run `score` against your Helm charts.
 
 `helm template my-app | kubectl score -`

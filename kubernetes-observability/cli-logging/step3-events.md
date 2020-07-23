@@ -26,7 +26,7 @@ There are many tools for routing events to other services. As an example, Heptio
 
 Give it a try, install Eventrouter.
 
-`kubectl create -f https://raw.githubusercontent.com/heptiolabs/eventrouter/master/yaml/eventrouter.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/heptiolabs/eventrouter/master/yaml/eventrouter.yaml`{{execute}}
 
 In a moment, inspect the Eventrouter log and to see the type of data it will sync to other sources (if the sync was to be configured).
 

@@ -18,7 +18,7 @@ Notice when the secret is returned it's not the same string that was passed in, 
 
 A better way to define Secrets is with a resource YAML file in this form.
 
-`kubectl create -f secret.yaml`{{execute}}
+`kubectl apply -f secret.yaml`{{execute}}
 
 Look inside the YAML.
 

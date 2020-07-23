@@ -6,6 +6,6 @@ View the resource definition.
 
 Create the Pod.
 
-`kubectl create -f consume-via-vol.yaml`{{execute}}
+`kubectl apply -f consume-via-vol.yaml`{{execute}}
 
 Using the [Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/), inspect the Pod log and information page to see mapped data.

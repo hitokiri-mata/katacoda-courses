@@ -34,7 +34,7 @@ A better way to define ConfigMaps is with a resource YAML file in this form.
 
 The same _create_ command can be used to submit a YAML resource file.
 
-`kubectl create -f ucs-org.yaml`{{execute}}
+`kubectl apply -f ucs-org.yaml`{{execute}}
 
 Then, view it.
 

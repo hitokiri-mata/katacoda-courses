@@ -1,12 +1,12 @@
 Fill your cluster will some Pods. First, add a few simple NGINX Pods to the default namespace.
 
-`kubectl create -f nginx.yaml`{{execute}}
+`kubectl apply -f nginx.yaml`{{execute}}
 
 Next, add a few more Pods to a second namespace.
 
 `kubectl create namespace more-apps`{{execute}}
 
-`kubectl create --namespace more-apps -f ghost.yaml`{{execute}}
+`kubectl apply --namespace more-apps -f ghost.yaml`{{execute}}
 
 The Deployments and Pods are labeled to both mark these Pods a potential victim targets of the Kube Monkey Pod killer. They are also labeled for easy observability. See the labels applied to the deployment and Pod template.
 

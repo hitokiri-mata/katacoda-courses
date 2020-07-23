@@ -8,7 +8,7 @@ However, we will declare the HPA rules with a YAML manifest.
 
 Apply these HPA rules.
 
-`kubectl create -f hpa.yaml`{{execute T1}}
+`kubectl apply -f hpa.yaml`{{execute T1}}
 
 A new HPA is now registered. Inspect the HPA list.
 

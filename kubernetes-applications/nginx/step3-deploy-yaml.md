@@ -8,7 +8,7 @@ Typically manifests are sources stored in version control in YAML file format. K
 
 Let's send this manifest declaration to our Kubernetes cluster.
 
-`kubectl create -f nginx.yaml`{{execute}}
+`kubectl apply -f nginx.yaml`{{execute}}
 
 Notice the manifest defines both a `Kind: Deployment` and a `Kind: Service`. The Deployment defines the Nginx in a container and a Pod. The Service provides an access point and load balancer in front of the Pod. This specific deployment has three Pods specified.
 

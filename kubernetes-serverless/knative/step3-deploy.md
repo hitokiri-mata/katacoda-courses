@@ -4,7 +4,7 @@ To deploy an application on Knative the same kubectl CLI tool can be used just l
 
 Notice the kind _Service_ and the apiVersion that defines its context. Using this services resource and YAML, deploy an example Hello World application written in Go. The code and app container has already been published to a registry.
 
-`kubectl create -f https://raw.githubusercontent.com/knative/docs/master/docs/serving/samples/hello-world/helloworld-go/service.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/knative/docs/master/docs/serving/samples/hello-world/helloworld-go/service.yaml`{{execute}}
 
 Confirm the service has been deployed.
 

@@ -8,7 +8,7 @@ Notice at the top the manifest Kind is _Function_. The Kind Function is not part
 
 Now, let's try running a function submitted by definition through a Kubernetes manifest file
 
-`kubectl create -f ruby-example.yaml`{{execute}}
+`kubectl apply -f ruby-example.yaml`{{execute}}
 
 Wait until the deployment is _Available_.
 

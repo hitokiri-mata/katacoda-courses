@@ -4,7 +4,7 @@ Shown here is a YAML file that associates two containers in a Pod. The container
 
 Deploy the Pod.
 
-`kubectl create -f sidecar-example.yaml`{{execute}}
+`kubectl apply -f sidecar-example.yaml`{{execute}}
 
 Inspect the initialization progress.
 

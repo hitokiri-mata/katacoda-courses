@@ -2,7 +2,7 @@ An immediate benefit Kubernetes provides developers of containers is a level pla
 
 To start communicating to a Service and its associated Pod, install a small, typical NGINX application. Add a [Nginx](https://hub.docker.com/_/nginx/) deployment with an associated service named "nginx" to the _default_ namespace:
 
-`kubectl create -f https://raw.githubusercontent.com/javajon/kubernetes-fundamentals/master/nginx/nginx.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/javajon/kubernetes-fundamentals/master/nginx/nginx.yaml`{{execute}}
 
 Verify the Nginx deployment is _available_ (1) with two runnings pods and a service.
 

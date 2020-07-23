@@ -1,6 +1,6 @@
 Deploy a simple application called [_echoserver_](https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/echoserver?gcrImageListsize=30).
 
-`kubectl create -f echoserver.yaml`{{execute}}
+`kubectl apply -f echoserver.yaml`{{execute}}
 
 > A simpler way to do this is with the _run_ command, but this only creates a Pod. We actually want a Deployment with a ReplicaSet.
 

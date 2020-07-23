@@ -6,6 +6,6 @@ View the resource definition.
 
 Create the Pod.
 
-`kubectl create -f consume-via-cli.yaml`{{execute}}
+`kubectl apply -f consume-via-cli.yaml`{{execute}}
 
 Using the Dashboard, inspect the Pod log and information page to see mapped data.

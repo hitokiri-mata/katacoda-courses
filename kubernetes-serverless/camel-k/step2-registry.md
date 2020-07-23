@@ -14,4 +14,4 @@ This start a private container registry that Camel K will use. To verify it is a
 
 ## Add Portal for Container Registry ##
 
-`kubectl create -f cluster/registry-ui`{{execute}}
+`kubectl apply -f cluster/registry-ui`{{execute}}

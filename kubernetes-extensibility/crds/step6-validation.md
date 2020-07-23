@@ -12,7 +12,7 @@ Let's try a new Thermometer resourse that defines a different city, such as:
 
 Will it successfully apply?
 
-`kubectl create -f gothenburg-thermometer.yaml`{{execute}}
+`kubectl apply -f gothenburg-thermometer.yaml`{{execute}}
 
 Get all the current Thermometers.
 

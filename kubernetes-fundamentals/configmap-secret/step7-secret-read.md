@@ -14,9 +14,9 @@ View the definition of the Pod that will access this secret.
 
 Launch the Kuard application and associate a service with its Pod.
 
-`kubectl create -f kuard.yaml`{{execute}}
+`kubectl apply -f kuard.yaml`{{execute}}
 
-`kubectl create -f kuard-service.yaml`{{execute}}
+`kubectl apply -f kuard-service.yaml`{{execute}}
 
 The kuard application portal can be seen at this link
 
