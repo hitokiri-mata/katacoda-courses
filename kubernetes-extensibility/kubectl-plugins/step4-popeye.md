@@ -1,4 +1,4 @@
-<img align="right" src="./assets/popeye.png" width="300">
+<img align="right" src="./assets/popeye.png" width="150">
 
 [Popeye](https://github.com/derailed/popeye) is a utility that scans live Kubernetes cluster and reports potential issues with deployed resources and configurations. Get the plugin description.
 

@@ -1,4 +1,4 @@
-<img align="right" src="./assets/containers-unsplash.png" width="250">
+<img align="right" src="./assets/containers-unsplash.jpg" width="200">
 
 ## Images and Outdated Plugins
 

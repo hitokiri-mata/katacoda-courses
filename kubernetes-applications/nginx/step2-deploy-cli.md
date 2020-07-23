@@ -2,7 +2,7 @@ The command-line interface (CLI) used to manage Kubernetes is appropriately name
 
 `kubectl version`{{execute}}
 
-In the first deployment we simply pass a few parameters that declare to Kubernetes our intent to make Nginx available. Use this command.
+In the first deployment, we simply pass a few parameters that declare to Kubernetes our intent to make Nginx available. Use this command.
 
 `kubectl run nginx-one --image=nginx --generator=run-pod/v1 --port=80`{{execute}}
 

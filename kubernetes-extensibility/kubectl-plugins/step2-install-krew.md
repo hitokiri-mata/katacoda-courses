@@ -1,4 +1,4 @@
-<img align="right" src="./assets/krew.png" width="300">
+<img align="right" src="./assets/krew.png" width="150">
 
 Krew is a tool that helps you discover, install, and manage plugins registered with your kubectl tool. It is similar to tools like apt, dnf or brew.
 
@@ -22,7 +22,7 @@ Krew is now available so verify its version.
 
 `kubectl krew version`{{execute}}
 
-The installation was a bit lengthy, but now that you have Krew, all the other plugin installations are clean and neat. First and foremost, Krew is a collector of close to 87 plugins.
+The installation was a bit lengthy, but now that you have Krew, all the other plugin installations are clean and neat. First and foremost, Krew is a collector of more than 110 plugins.
 
 `kubectl krew search | wc -l`{{execute}}
 

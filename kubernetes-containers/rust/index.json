@@ -1,5 +1,5 @@
 {
-  "private": true
+  "private": true,
   "pathwayTitle": "rust",
   "title": "Rust Apps in Containers on Kubernetes",
   "description": "Packaging Rust Applications in Containers.",

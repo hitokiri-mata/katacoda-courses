@@ -6,4 +6,4 @@ Invoke the function.
 
 `$(riff service invoke square --text -- -w '\n' -d 8)`{{execute}}
 
-As a function it will return 64, the square of the 8 passed in.
+As a function, it will return 64, the square of the 8 passed in.

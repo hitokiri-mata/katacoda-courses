@@ -36,7 +36,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "/root"},
+        {"file": "shiny-demo.yaml", "target": "/root"},
+        {"file": "shiny-wordcloud.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -53,6 +54,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }

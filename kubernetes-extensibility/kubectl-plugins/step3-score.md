@@ -1,4 +1,4 @@
-<img align="right" src="./assets/score.png" width="300">
+<img align="right" src="./assets/score.png" width="150">
 
 [kube-score](https://github.com/zegl/kube-score) is a tool that performs static code analysis of your Kubernetes object definitions. The tool outputs a list of recommendations of what you can improve to make your application more secure and resilient.
 
