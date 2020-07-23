@@ -5,7 +5,8 @@ launch.sh
 # Syntax highlighting for YAML
 snap install yq  --no-wait
 function caty() {
-  cat "$@" | yq -C read -
+  docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $1;
+  # cat "$@" | yq -C read -
 }
 
 # Common curl switches

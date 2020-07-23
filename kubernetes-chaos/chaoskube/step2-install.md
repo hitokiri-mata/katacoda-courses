@@ -5,9 +5,10 @@ Create a namespace for the Chaoskube service.
 Install Chaoskube using the Helm chart.
 
 ```
-helm install chaoskube stable/chaoskube -n chaoskube \
+helm install chaoskube stable/chaoskube \
+  --namespace chaoskube \
   --set dryRun=false \
-  --set namespaces=!kube-system \
+  --set namespaces="!kube-system" \
   --set labels=app-purpose=chaos \
   --set interval=20s
 ```{{execute}}
