@@ -4,7 +4,7 @@ First, declare the Deployment
 
 `kubectl apply -f shiny-demo.yaml`{{execute}}
 
-The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection.
+The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a status of the deployment availability run this inspection.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 

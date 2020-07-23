@@ -16,7 +16,7 @@ Using Helm, install the SonarQube Helm chart with a few custom values.
 
 `helm install sonar stable/sonarqube --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
 
-This chart bootstraps a SonarQube instance along with a PostgreSQL database. SonarQube also loads several plugins defined in the Helm chart configuration. To get a complete status of the deployment availability run this inspection.
+This chart bootstraps a SonarQube instance along with a PostgreSQL database. SonarQube also loads several plugins defined in the Helm chart configuration. To get a status of the deployment availability run this inspection.
 
 `watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}
 

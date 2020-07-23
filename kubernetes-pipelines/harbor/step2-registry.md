@@ -20,7 +20,7 @@ Install Harbor from the Helm chart.
 
 A few of the persistence and security features have been disabled for this Katacoda example. 
 
-This chart bootstraps a Harbor instance consisting of several deployed components. To get a complete status of the deployment availability run this inspection.
+This chart bootstraps a Harbor instance consisting of several deployed components. To get a status of the deployment availability run this inspection.
 
 `watch kubectl get deployments --namespace harbor`{{execute}}
 

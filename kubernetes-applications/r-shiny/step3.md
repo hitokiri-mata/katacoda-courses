@@ -2,7 +2,7 @@ Provisioning a Shiny application that generates a word cloud is easily done by i
 
 `kubectl apply -f shiny-wordcloud.yaml`{{execute}}
 
-The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection.
+The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a status of the deployment availability run this inspection.
 
 `watch kubectl get deployments,pods,services`{{execute}}
 

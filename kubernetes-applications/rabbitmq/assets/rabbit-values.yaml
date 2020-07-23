@@ -10,5 +10,9 @@ service:
   managerNodePort: 31000
 
 # Admin credentials, use these for sign in to RabbitMQ dashboard
-auth.username: guest
-auth.password: guest
+auth:
+  username: guest
+  password: guest
+
+persistence:
+  enabled: false
