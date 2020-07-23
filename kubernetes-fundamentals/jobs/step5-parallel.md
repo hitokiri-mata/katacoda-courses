@@ -30,7 +30,7 @@ Notice now in the `spec:` the two settings have been applied to ensure the paral
 
 The template runs 10 jobs where each job generates 10 keys. For a better race comparison we want 10 jobs that each generate a single key, so the template will be slightly modified using _sed_ to change the `keygen-num-to-gen` value from 10 to 1.
 
-`curl -s https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-3-job-parallel.yaml | sed '/num-to-gen=/s/=.*/=1"/' > job-parallel.yaml`{{execute}}
+`curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-3-job-parallel.yaml | sed '/num-to-gen=/s/=.*/=1"/' > job-parallel.yaml`{{execute}}
 
 Notice now the `keygen-num-to-gen` setting is set to `=1`.
 
@@ -44,7 +44,7 @@ Again, by inspecting the status times in the job's YAML the duration time can be
 
 `echo "Duration: $(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
-Once the seconds number appears, take note of it.
+Once the number of seconds appears, take note of it.
 
 `export PARALLEL_DURATION=$(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime)))`{{execute}}
 

@@ -30,7 +30,7 @@ It will be a few moments before the registry deployment reports it's _Available_
 
 Once the registry is serving, inspect the contents of the empty registry.
 
-`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 When it's running and healthy, you will see an empty list.
 
@@ -46,7 +46,7 @@ This port forwarding will run in the background for the remainder of this scenar
 
 Now you can access the registry via localhost.
 
-`curl -s http://localhost:5000/v2/_catalog | jq .`{{execute}}
+`curl http://localhost:5000/v2/_catalog | jq .`{{execute}}
 
 This means when you push to localhost:5000 your container images will be routed to the private registry running as a service on Kubernetes.
 

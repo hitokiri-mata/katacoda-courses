@@ -2,6 +2,10 @@
 
 launch.sh
 
+# Common curl switches
+echo '-s' >> ~/.curlrc
+
+
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm install dash kubernetes-dashboard/kubernetes-dashboard \

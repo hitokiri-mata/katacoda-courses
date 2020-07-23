@@ -2,6 +2,10 @@
 
 launch.sh
 
+# Common curl switches
+echo '-s' >> ~/.curlrc
+
+
 source <(kubectl completion bash)
 source <(helm completion bash)
 

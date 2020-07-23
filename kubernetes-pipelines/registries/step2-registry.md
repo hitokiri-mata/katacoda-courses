@@ -27,7 +27,7 @@ It will be a few moments before the registry deployment reports it's _Available_
 
 Once the registry is serving, inspect the contents of the empty registry.
 
-`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 When it's running and healthy, you will see an empty list.
 

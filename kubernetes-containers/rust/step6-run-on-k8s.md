@@ -14,7 +14,7 @@ Assign an environment variable to the common registry location.
 
 In a moment, once the registry is serving, inspect the contents of the empty registry.
 
-`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 When it's running and healthy, you will see an empty list.
 
@@ -33,7 +33,7 @@ Push your app container image to the private registry running on you Kubernetes 
 
 Run the container you built in the previous step on your Kubernetes cluster. The container image comes from the registry.
 
-`kubectl run restafarian --image=$REGISTRY/restafarian-gin:0.0.1 --generator=run-pod/v1 --port=8080`{{execute}}
+`kubectl run restafarian --image=$REGISTRY/restafarian-gin:0.0.1 --port=8080`{{execute}}
 
 Even if you have never used Kubernetes, this command should look fairly similar to the `docker run` commands. Now inspect the installation in progress.
 

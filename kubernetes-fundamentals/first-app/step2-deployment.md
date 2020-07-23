@@ -4,7 +4,7 @@ Deploy a simple application called [_echoserver_](https://console.cloud.google.c
 
 > A simpler way to do this is with the _run_ command, but this only creates a Pod. We actually want a Deployment with a ReplicaSet.
 
-> `kubectl run hello --image=k8s.gcr.io/echoserver:1.9 --generator=run-pod/v1 --port=8080`
+> `kubectl run hello --image=k8s.gcr.io/echoserver:1.9 --port=8080`
 
 Take a look at the YAML file that defines this application.
 

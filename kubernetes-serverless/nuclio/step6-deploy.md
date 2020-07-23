@@ -10,7 +10,7 @@ Deploy the function to Nuclio on Kubernetes. This will involve building the code
 
 Inspect the contents and see the new container has been deployed.
 
-`curl -s $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
 
 Execute the new function.
 

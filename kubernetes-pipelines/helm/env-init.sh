@@ -2,6 +2,10 @@
 
 launch.sh
 
+# Common curl switches
+echo '-s' >> ~/.curlrc
+
+
 apt update > /dev/null 2>&1
 apt install tree --yes -qq
 

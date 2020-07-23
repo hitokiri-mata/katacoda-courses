@@ -12,7 +12,7 @@ Now, let's communicate with the service. Communication is easy with the assistan
 
 Start and enter a [Busybox container](https://docs.docker.com/samples/library/busybox/) in a separate Pod in the same Namespace.
 
-`kubectl run curl-test --image=radial/busyboxplus:curl --generator=run-pod/v1 -i --tty --rm`{{execute}}
+`kubectl run curl-test --image=radial/busyboxplus:curl -i --tty --rm`{{execute}}
 
 Shortly the terminal will assume the prompt _inside_ the Busybox container. Try these examples.
 
@@ -20,7 +20,7 @@ Because the busyboxplus container is running in the same namespace (_default_) a
 
 `curl http://nginx`{{execute}}
 
-`curl -s http://nginx:80 | grep "Thank you"`{{execute}}
+`curl --silent http://nginx:80 | grep "Thank you"`{{execute}}
 
 The namespace can optionally be added to the URL.
 
