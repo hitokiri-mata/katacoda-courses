@@ -4,7 +4,7 @@ Create a namespace for the installation target.
 
 Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
-`helm install my-rabbit stable/rabbitmq-ha --version 1.46.1 --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`helm install my-rabbit bitnami/rabbitmq --version 7.5.6 --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
 The RabbitMQ containers take a few minutes to start. To get a complete status of provisioning this sequence, run this inspection.
 

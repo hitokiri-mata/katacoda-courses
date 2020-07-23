@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: r-shiny
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: r-shiny
   template:
     metadata:
       labels:

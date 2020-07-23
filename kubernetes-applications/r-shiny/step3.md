@@ -1,6 +1,6 @@
 Provisioning a Shiny application that generates a word cloud is easily done by invoking this command. Declare the Deployment and Service exposing the endpoint 31112.
 
-`kubectl create -f shiny-wordcloud.yaml`{{execute}}
+`kubectl apply -f shiny-wordcloud.yaml`{{execute}}
 
 The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection.
 

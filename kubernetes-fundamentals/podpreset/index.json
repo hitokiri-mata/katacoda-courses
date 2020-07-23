@@ -52,6 +52,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster2-running"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }

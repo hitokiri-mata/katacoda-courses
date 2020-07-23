@@ -35,7 +35,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "/root"},
+        {"file": "nginx.yaml", "target": "/root"},
+        {"file": "ghost.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -50,6 +51,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster2-running"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }

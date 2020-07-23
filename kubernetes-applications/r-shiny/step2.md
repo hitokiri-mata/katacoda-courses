@@ -2,7 +2,7 @@ Provisioning a Shiny demonstration is easily done by invoking this command. Decl
 
 First, declare the Deployment
 
-`kubectl create -f shiny-demo.yaml`{{execute}}
+`kubectl apply -f shiny-demo.yaml`{{execute}}
 
 The Shiny server takes about a minute to start. Watch the Deployment _AVAILABLE_ state change from _0_ to _1_. To get a complete status of the deployment availability run this inspection.
 
