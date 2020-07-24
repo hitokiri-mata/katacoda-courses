@@ -4,4 +4,4 @@ Install Fluent Bit and pass the ElasticSearch service endpoint as a chart parame
 
 `helm install fluent-bit stable/fluent-bit --namespace=logs --set backend.type=es --set backend.es.host=elasticsearch-client`{{execute}}
 
-Fluent Bit is starting and will become available in a few minutes. In the meantime, move onto the next installation step.
+Fluent Bit is starting and will become available in a few moments. In the meantime, move onto the next installation step.

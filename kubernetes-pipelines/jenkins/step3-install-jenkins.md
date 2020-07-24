@@ -38,7 +38,7 @@ Verify Jenkins is starting with this Kubernetes introspection command:
 
 `kubectl get deployments,pods -n jenkins`{{execute}}
 
-Run this command until the deployment changes the *Available* status from 0 to 1. This will take a few minutes.
+Run this command until the deployment changes the *Available* status from 0 to 1. This will take a few moments.
 
 There will now be a Jenkins service running that you can access through a Kubernetes NodePort. List the available services with this:
 

@@ -25,7 +25,7 @@ Let's see how long the execution will take.
 
 `time docker run $REGISTRY/listdir-e-ms-quarkus:0.1.0`{{execute}}
 
-The execution time is roughly the same. We have achieve a further distillation step with Quarkus and Graal.
+The execution time is roughly the same. We have achieved a further distillation step with Quarkus and Graal.
 
 ## Inspect Container ##
 

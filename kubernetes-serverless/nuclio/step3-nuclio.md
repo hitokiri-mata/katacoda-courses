@@ -8,7 +8,7 @@ Create a namespace for the installation target.
 
 Install the Nuclio controller
 
-`helm install nuclio nuclio/nuclio --namespace=nuclio --set dashboard.nodePort=31000`{{execute}}
+`helm install nuclio nuclio/nuclio --version 0.6.13 --namespace=nuclio --set dashboard.nodePort=31000`{{execute}}
 
 Watch Nuclio starting and verify it's _Available_.
 

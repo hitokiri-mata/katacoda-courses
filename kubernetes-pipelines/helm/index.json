@@ -53,7 +53,8 @@
         ],
         "intro": {
             "text": "intro.md",
-            "code": "env-init.sh",
+            "courseData": "init-background.sh",
+      "code": "init-foreground.sh",
             "credits": ""
         },
         "finish": {

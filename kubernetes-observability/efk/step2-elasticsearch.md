@@ -31,4 +31,4 @@ Deploy the public Helm chart for ElasticSearch. The chart's default settings are
 --set data.persistence.storageClass=elasticsearch-data \
 --set data.persistence.size=5Gi`{{execute}}
 
-ElasticsSearch is starting and will become available in a few minutes. In the meantime, move onto the next installation step.
+ElasticsSearch is starting and will become available in a few moments. In the meantime, move onto the next installation step.

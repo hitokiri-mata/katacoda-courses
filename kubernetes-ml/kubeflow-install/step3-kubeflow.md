@@ -6,7 +6,7 @@ The deployments are starting up.
 
 `kubectl get deployment --namespace kubeflow`{{execute}}
 
-Each deployment becomes available once the `AVAILABLE` status changes from `0` to `1`. It takes a few minutes for all the Pod associated with the Deployments and Services to download their containers and get them started.
+Each deployment becomes available once the `AVAILABLE` status changes from `0` to `1`. It takes a few moments for all the Pod associated with the Deployments and Services to download their containers and get them started.
 
 `kubectl get pods --namespace kubeflow`{{execute}}
 

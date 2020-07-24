@@ -12,7 +12,7 @@ Install the chart.
 
 `helm install my-rabbit bitnami/rabbitmq --version 7.5.6 --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
-The RabbitMQ containers take a few minutes to start. To get a status of provisioning this sequence, run this inspection.
+The RabbitMQ containers take a few moments to start. To get a status of provisioning this sequence, run this inspection.
 
 `watch kubectl get services,statefulsets,pods --namespace rabbit`{{execute}}
 

@@ -49,7 +49,8 @@
     "intro": {
       "title": "Spring Boot to Kubernetes",
       "text": "intro.md",
-      "code": "env-init.sh",
+      "courseData": "init-background.sh",
+      "code": "init-foreground.sh",
       "credits": "[Jonathan Johnson](http://www.dijure.com)"
     },
     "finish": {

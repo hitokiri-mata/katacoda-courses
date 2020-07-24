@@ -8,7 +8,7 @@ Install the chart.
 
 ```
 helm install registry stable/docker-registry \
-  --version docker-registry-1.9.4 \
+  --version 1.9.4 \
   --namespace kube-system \
   --set service.type=NodePort \
   --set service.nodePort=31500
