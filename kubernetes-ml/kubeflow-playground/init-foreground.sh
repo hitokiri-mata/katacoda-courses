@@ -9,7 +9,7 @@ show_progress()
 
   echo -n "Starting scenario"
   while true; do
-    sudo grep -i "done" /opt/backgroundfinished &> /dev/null
+    sudo grep -i "done" /opt/.backgroundfinished &> /dev/null
     if [[ "$?" -ne 0 ]]; then
       temp="${spinstr#?}"
       printf " [%c]  " "${spinstr}"
