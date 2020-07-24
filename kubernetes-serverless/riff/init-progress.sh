@@ -4,7 +4,7 @@ show_progress()
 {
   local -r pid="${1}"
   local -r delay='0.75'
-  local spinstr='\|/-'
+  local spinstr='|/-'
   local temp
 
   echo -n "Starting scenario"
