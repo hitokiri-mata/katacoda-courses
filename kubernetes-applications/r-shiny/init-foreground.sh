@@ -45,9 +45,9 @@ show_progress () {
 }
 
 start_progress () {
-  show_progress &
-  progress_pid=$!
-
+  read < <( show_progress & echo $! )
+  progress_pid=$REPLY
+  
   # Catch any exit and stop progress animation
   trap cleanup SIGINT EXIT INT QUIT TERM
 
