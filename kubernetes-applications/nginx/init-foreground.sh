@@ -1,4 +1,6 @@
 #!/bin/bash
 
 source ./init-foreground-support.sh
-clear && show_progress
+clear && start_progress
+
+ll

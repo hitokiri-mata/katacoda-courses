@@ -20,7 +20,7 @@ cleanup () {
 # Catch any exit and stop progress animation
 trap cleanup SIGINT EXIT INT QUIT TERM
 
-show_progress () {
+start_progress () {
   echo -n "$START_MESSAGE "
 
   # Periodically check for background signal or user Ctrl-C interuption
