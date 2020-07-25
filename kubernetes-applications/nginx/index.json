@@ -33,7 +33,10 @@
     "assets": {
       "host01": [
         {"file": "nginx.yaml", "target": "/root"},
-        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"},
+        {"file": "start/init-foreground-support.sh", "target": "/usr/local/etc", "chmod": "+x"},
+        {"file": "start/init-progress.sh", "target": "/usr/local/etc", "chmod": "+x"},
+        {"file": "start/spinner.json", "target": "/usr/local/etc"}
       ]
     }
   },

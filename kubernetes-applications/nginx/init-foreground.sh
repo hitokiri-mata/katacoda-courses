@@ -1,6 +1,4 @@
 #!/bin/bash
 
-source ./init-foreground-support.sh
+source /usr/local/etc/init-foreground-support.sh
 clear && start_progress
-
-ll
