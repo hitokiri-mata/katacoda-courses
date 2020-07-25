@@ -1,4 +1,5 @@
 #!/bin/bash
 
-source /usr/local/etc/init-foreground-support.sh
-clear && start_progress
+pushd /usr/local/etc
+source init-foreground-support.sh
+clear && start_progress && popd

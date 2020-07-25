@@ -7,7 +7,7 @@ START_MESSAGE='Starting scenario'                    # Message before the progre
 END_NORMAL_MESSAGE='Scenario ready. You have a running Kubernetes cluster.'
 END_KILLED_MESSAGE='Interupted. This scenario may still be initializing.'
 
-source /usr/local/etc/init-progress.sh
+source init-progress.sh
 show_progress &
 progress_pid=$!
 
