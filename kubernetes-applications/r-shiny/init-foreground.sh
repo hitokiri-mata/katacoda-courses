@@ -13,7 +13,7 @@ INTERVAL=.25
 SPINNER_NORMAL=$(tput sgr0)        # Reset encoding
 symbols=("▐⠂       ▌" "▐⠈       ▌" "▐ ⠂      ▌" "▐ ⠠      ▌" "▐  ⡀     ▌" "▐  ⠠     ▌" "▐   ⠂    ▌" "▐   ⠈    ▌" "▐    ⠂   ▌" "▐    ⠠   ▌" "▐     ⡀  ▌" "▐     ⠠  ▌" "▐      ⠂ ▌" "▐      ⠈ ▌" "▐       ⠂▌" "▐       ⠠▌" "▐       ⡀▌" "▐      ⠠ ▌" "▐      ⠂ ▌" "▐     ⠈  ▌" "▐     ⠂  ▌" "▐    ⠠   ▌" "▐    ⡀   ▌" "▐   ⠠    ▌" "▐   ⠂    ▌" "▐  ⠈     ▌" "▐  ⠂     ▌" "▐ ⠠      ▌" "▐ ⡀      ▌" "▐⠠       ▌")
 
-local progress_pid
+progress_pid=0
 
 cleanup () {
   kill $progress_pid >/dev/null 2>&1
@@ -45,13 +45,13 @@ show_progress () {
 }
 
 start_progress () {
-  read < <( show_progress & echo $! )
-  progress_pid=$REPLY
-  
+  show_progress &
+  progress_pid=$!
+
   # Catch any exit and stop progress animation
   trap cleanup SIGINT EXIT INT QUIT TERM
 
-  echo -n "$START_MESSAGE "
+  clear && echo -n "$START_MESSAGE "
 
   # Periodically check for background signal or user Ctrl-C interuption
   end_message=$END_NORMAL_MESSAGE
