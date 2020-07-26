@@ -5,7 +5,7 @@ This was tricky, you found a total of 4 problems all causing the HPA not to work
 - `maxreplicas` should be larger than the `minreplicas`, such as `maxreplicas: 10`
 - The name of the Pod and the target of the HPA was wrong, should not have been `pep-apache`, but rather `php-apache`.
 
-```
+```yaml
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:

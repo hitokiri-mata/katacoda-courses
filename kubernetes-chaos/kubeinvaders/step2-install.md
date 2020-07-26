@@ -8,7 +8,7 @@ Grab the source code that contains the Helm chart.
 
 Install the game using the Helm chart.
 
-```
+```bash
 helm install kubeinvaders ./helm-charts/kubeinvaders \
 --namespace kubeinvaders \
 --set service.type=NodePort \

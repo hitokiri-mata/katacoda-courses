@@ -29,7 +29,7 @@ View the report.
 
 There are many details, so instead pick out some key findings.
 
-```
+```bash
 echo "              Size: $(cat dive-report-a.json | jq .image.sizeBytes) bytes" && \
 echo "       Inefficient: $(cat dive-report-a.json | jq .image.inefficientBytes) bytes" && \
 echo "Inefficiency score: $(cat dive-report-a.json | jq .image.efficiencyScore)"
@@ -57,7 +57,7 @@ Let's see what the Dive tool thinks of this container. Generate the report.
 
 With both container reports generated, compare the key findings.
 
-```
+```bash
 echo "Container Image a" && \
 echo "              Size: $(cat dive-report-a.json | jq .image.sizeBytes) bytes" && \
 echo "       Inefficient: $(cat dive-report-a.json | jq .image.inefficientBytes) bytes" && \

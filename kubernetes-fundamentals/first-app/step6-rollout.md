@@ -16,14 +16,13 @@ Now, the Pod inspection will report the updated container.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-2\. Another way is to modify the YAML then apply the change with the _update_ command.
+2\. Another way is to modify the YAML then apply the change with the _replace_ command.
 
-Restore the Pod's container 3
-image the version back to the original version
+After trying the above `set image` change the image back using the `replace` which will move the container back to version 1.9 as specified in the YAML.
 
 `kubectl replace -f echoserver.yaml`{{execute}}
 
-Verify the version has been restored.
+Verify the version has been restored to 1.9.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 

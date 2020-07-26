@@ -1,6 +1,6 @@
 To demonstrate Horizontal Pod Autoscaler (HPA) we will use a custom container image based on the php-apache image. This image is part of the Kubernetes project to demonstrate CPU load. The Dockerfile has the following content:
 
-```
+```dockerfile
 FROM php:5-apache
 ADD index.php /var/www/html/index.php
 RUN chmod a+rx index.php
@@ -8,7 +8,7 @@ RUN chmod a+rx index.php
 
 The app defines an index.php page which performs some CPU intensive computations:
 
-```
+```php
 <?php
   $x = 0.0001;
   for ($i = 0; $i <= 1000000; $i++) {

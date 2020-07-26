@@ -8,7 +8,7 @@ Add the chart repository for the Helm chart to be installed.
 
 Install the chart.
 
-```
+```bash
 helm install registry stable/docker-registry \
   --version 1.9.4 \
   --namespace kube-system \

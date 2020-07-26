@@ -10,6 +10,6 @@ Use this ```clear```{{execute interrupt}} to break out of the watch or press <kb
 
 The same Nginx output from the `sidecar-pod` can also be seen in your browser from the _sidecar-pod_ tab above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com
 
-As an alternative to the kubectl CLI you can also observe the Pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
+As an alternative to the kubectl CLI, you can also observe the Pod logs in the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/). Use this script to access the protected Dashboard.
 
 `token.sh`{{execute}}

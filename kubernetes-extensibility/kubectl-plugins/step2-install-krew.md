@@ -4,7 +4,7 @@ Krew is a tool that helps you discover, install, and manage plugins registered w
 
 There are a [few ways to install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) based on your environment, but for this Katacoda scenario we choose the recommended commands for Bash. Install Krew as a plugin for kubectl.
 
-```
+```bash
 pushd "$(mktemp -d)" &&
 curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.{tar.gz,yaml}" &&
 tar zxvf krew.tar.gz &&

@@ -1,6 +1,6 @@
 The HPA manifest has three additional problems. The arrows are your hints. Can you see them now?
 
-```
+```yaml
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
@@ -16,4 +16,4 @@ spec:
   targetCPUUtilizationPercentage: 40
 ```
 
-Edit your corrections and re-apply. Which to see if the scaling kicks in.
+Edit your corrections and re-apply and see if the scaling kicks in.

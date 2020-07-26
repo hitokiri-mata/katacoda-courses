@@ -6,7 +6,7 @@ Run this container to start generating random log events.
 
 The log events will look something like this.
 
-```
+```bash
 ...
 2019-03-27T11:06:25+0000 INFO takes the value and converts it to string.
 2019-03-27T11:06:29+0000 DEBUG first loop completed.

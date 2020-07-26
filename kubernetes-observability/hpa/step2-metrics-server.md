@@ -32,7 +32,7 @@ or
 
 However, once the metrics are available the normal message should look similar to this:
 
-```
+```bash
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
 master   125m         6%     1049Mi          55%
 node01   84m          2%     922Mi           23%

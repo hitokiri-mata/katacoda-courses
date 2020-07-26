@@ -28,7 +28,7 @@ If the metrics are not ready you may get this message.
 
 However, once the metrics are available the normal message should look like this:
 
-```
+```bash
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
 master   125m         6%     1049Mi          55%
 node01   84m          2%     922Mi           23%

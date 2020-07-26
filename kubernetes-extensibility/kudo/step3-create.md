@@ -61,7 +61,7 @@ Step 1 name: everything
 
 This command uses an interactive prompt to construct the details of the parameter. Here is an example interaction:
 
-```
+```bash
 $ kubectl kudo package add parameter
 Parameter Name: replicas
 Default Value: 2

@@ -8,7 +8,7 @@ Notice there are three *.go files. The `model` holds the data structure for the 
 
 <img align="right" src="./assets/gin.png" width="200">
 
-This application uses a 3rd party Go library called [**Gin**](https://github.com/gin-gonic/gin). Gin is a HTTP framework for matching REST requests to functions. There are a few other popular Go based [HTTP Web frameworks](https://github.com/avelino/awesome-go#web-frameworks), but this Gin project has a significant amount of GitHub stars due to its performance and simplicity. Not a bad choice, and forgive me if it's not the one you prefer.
+This application uses a 3rd party Go library called [**Gin**](https://github.com/gin-gonic/gin). Gin is a HTTP framework for matching REST requests to functions. There are a few other popular Go-based [HTTP Web frameworks](https://github.com/avelino/awesome-go#web-frameworks), but this Gin project has a significant amount of GitHub stars due to its performance and simplicity. Not a bad choice, and forgive me if it's not the one you prefer.
 
 The main has 5 calls out to functions in the router code.
 
@@ -18,7 +18,7 @@ The router maps these REST contexts to the model functions.
 
 `ccat model.go`{{execute}}
 
-Nothing here is more than 100 lines of code and hopefully it's clean enough for you to understand the gist of what is coded. This example does not include an datastore, as it's out of the scope of this scenario. Instead the _datastore_ is just an in memory array of _Ideas_. Each Idea is a Go structure with two elements, a topic and idea text. The application simply lists, creates, delete and updated these ideas.
+Nothing here is more than 100 lines of code and hopefully it's clean enough for you to understand the gist of what is coded. This example does not include an datastore, as it's out of the scope of this scenario. Instead, the _datastore_ is just an in-memory array of _Ideas_. Each Idea is a Go structure with two elements, a topic and idea text. The application simply lists, creates, delete, and updated these ideas.
 
 Before we get into containers, let's run the application.
 

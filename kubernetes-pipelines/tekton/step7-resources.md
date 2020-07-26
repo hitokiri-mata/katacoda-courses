@@ -4,7 +4,7 @@ Pipeline Resources are entities that define the locations for inputs ingested an
 
 The pipeline is not just one file, rather it's a collection of modular and decoupled resource types that definitions the elements of your pipeline. When you define the top-level PipelineRun it references sub definitions to complete your request.
 
-```
+```text
 Pipeline Run
     Pipeline
         Tasks

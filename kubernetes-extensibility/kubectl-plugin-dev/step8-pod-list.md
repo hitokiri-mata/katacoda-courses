@@ -55,7 +55,7 @@ Test your new implementation by requesting a list of pods.
 
 The empty list logic worked. Add 3 Pods.
 
-```
+```bash
 kubectl create deployment nginx --image=nginx
 kubectl scale deployment nginx --replicas=3
 ```{{execute}}

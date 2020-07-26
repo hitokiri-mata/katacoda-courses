@@ -6,7 +6,7 @@ To set up Kubeflow on this Kubernetes cluster three things need to be completed:
 
 ## Kubeflow CLI
 
-```
+```bash
 curl -LO http://assets.joinscrapbook.com/kubeflow/kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 tar -xvf kfctl_v0.7.1-2-g55f9b2a_linux.tar.gz
 mv kfctl /usr/local/bin/
@@ -26,7 +26,7 @@ Whenever you add a CLI tool, often there will be a completion feature that will 
 
 Create 10 Persistent Volumes that will eventually be bound to by Kubeflow services.
 
-```
+```bash
 for i in {1..10}; do
    cat pv.yaml | sed "s/volname/pv$i/g" | sed "s/volsize/50Gi/g" | sed "s#volpath#/opt/vol/pv$i#" | kubectl apply -f -
    mkdir -p "/opt/vol/pv$i"
@@ -39,7 +39,7 @@ done
 
 Prepare an installation folder and variables.
 
-```
+```bash
 export BASE_DIR=/opt
 export KF_NAME=kf-install
 export KF_DIR=${BASE_DIR}/${KF_NAME}
@@ -51,7 +51,7 @@ cd ${KF_DIR}
 
 Using the kfctl tool Install Kubeflow. Unfortunately, due to some idempotency problem, the installation must be attempted in a loop until it works. We expect this problem will be addressed in the near future.
 
-```
+```bash
 for i in {1..10}; do
   kfctl apply -V -f ${CONFIG_URI}
 

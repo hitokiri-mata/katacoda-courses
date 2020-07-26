@@ -8,7 +8,7 @@ Add the chart repository for the Helm chart to be installed.
 
 Install the chart.
 
-```
+```bash
 helm install chaoskube stable/chaoskube \
   --version 3.1.4 \
   --namespace chaoskube \

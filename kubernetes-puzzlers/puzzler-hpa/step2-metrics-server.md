@@ -35,7 +35,7 @@ or
 
 However, once the metrics are available the normal message should look similar to this:
 
-```
+```bash
 NAME           CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
 controlplane   265m         13%    925Mi           48%
 node01         262m         13%    843Mi           21%

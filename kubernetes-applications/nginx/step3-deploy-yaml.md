@@ -20,7 +20,7 @@ Notice in this deployment there are three Pods declared. The Service will load b
 
 Once available, you can exercise the new Service in two ways. First, simply from the command line.
 
-`curl https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+`lynx https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com --dump`{{execute}}
 
 The same web interface for "nginx-one" can also be seen in your browser from the "nginx-two" tab above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com
 

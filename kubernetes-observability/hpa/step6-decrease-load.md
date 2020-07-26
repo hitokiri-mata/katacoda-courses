@@ -12,7 +12,7 @@ Kubernetes version 1.17 released an improved HPA controller that responds to `ap
 
 The v2beta2 version of the HPA offers many more declarations to control the scaling up and scaling down behavior. For instance, for this demo, there is a window to allow the scaling down to happen much faster than the default five minutes. There is another flag on the Kubernetes cluster called `horizontal-pod-autoscaler-downscale-delay`, but that would have to be established before the cluster started which is why the newer versions of HPA allow settings such as these behaviors.
 
-```
+```yaml
   behavior:
     scaleDown:
       stabilizationWindowSeconds: 60

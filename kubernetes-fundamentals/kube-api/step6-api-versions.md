@@ -20,19 +20,19 @@ Notice CronJobs and Jobs appear in this list. This means you can use the api-res
 
 This means that when you define a Job then you can declare either of these for a Job definition.
 
-```
+```yaml
 apiVersion: batch/v1
 kind: Job
 ```
 or
-```
+```yaml
 apiVersion: batch/v1beta
 kind: Job
 ```
 
 At the end of the version list there is a simple line of `v1`. This is the version for all the other core resources that are not part of a API group, like a Pod.
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 ```

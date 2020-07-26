@@ -66,6 +66,9 @@ start_progress () {
 
   stty sane; tput cnorm; clear
   printf "%s\n\n" "${end_message}"
+  
+  # Pick up any changes during background
+  source ~/.bashrc
 }
 
 clear && start_progress
