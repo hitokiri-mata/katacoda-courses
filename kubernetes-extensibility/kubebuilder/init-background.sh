@@ -8,7 +8,7 @@ trap 'exec 2>&4 1>&3' 0 1 2 3
 exec 1>/var/log/init-background.log 2>&1
 set -x	
 
-# Common curl switches
+# Common curl switches (however, use `lynx url --dump` when you can)
 echo '-s' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
