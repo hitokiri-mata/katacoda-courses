@@ -1,6 +1,6 @@
 {
   "title": "Custom Resource Definitions",
-  "description": "Extending Kubernetes with your own custom resources (CRDs).",
+  "description": "Extending Kubernetes by defining new custom resources (CRDs).",
   "difficulty":	"Beginner",
   "time":	"15 minutes",
   "details": {
@@ -37,7 +37,7 @@
       },
       {
         "title": "Explain Command",
-        "text": "step7-explain.md",
+        "text": "step7-explain.md"
       }
     ],
     "intro": {
