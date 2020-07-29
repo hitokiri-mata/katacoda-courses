@@ -6,7 +6,7 @@ You can also watch the sidecar continuously update the Nginx static web page wit
 
 `while true; do sleep 1; curl -s https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com | tail -2; done;`{{execute}}
 
-Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 The same Nginx output from the `sidecar-pod` can also be seen in your browser from the _sidecar-pod_ tab above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com
 

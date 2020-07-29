@@ -50,7 +50,7 @@ Now that you installed the Pomodoro time app, you can delete the idea.
 
 `curl -X "DELETE" http://localhost:8080/ideas/v1/2 | jq .`{{execute T2}}
 
-So you see the microservice application works and is ready for containerization. Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+So you see the microservice application works and is ready for containerization. Stop the server by returning to the first Terminal tab and use this `clear`{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Container
 
@@ -78,4 +78,4 @@ Like before, you can send the REST commands.
 
 `curl http://$SERVICE_IP:8080/ideas/v1/ | jq .`{{execute T2}}
 
-Stop the server by returning to the first Terminal tab and use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Stop the server by returning to the first Terminal tab and use this `clear`{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

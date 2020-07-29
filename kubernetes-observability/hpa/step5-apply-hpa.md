@@ -22,4 +22,4 @@ With the HPA enabled notice more Pods are started. It will be take about a minut
 
 `watch "kubectl get pods && echo "" && kubectl top pods && echo "" && kubectl get hpa"`{{execute T1}}
 
-Once complete use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete use this `clear`{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

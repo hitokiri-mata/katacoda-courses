@@ -14,7 +14,7 @@ Put some load on the function by repeating the request in a loop.
 
 Navigate to the Grafana dashboard and notice the rising Replica scaling value. OpenFaaS is not scaling up new function instances to handle the increased load. Go to the OpenFaaS portal and notice the rising of the replicas with all the invocation counts. Go to the Kubernetes dashboard and in the openfaas-fn namespaces notice all the pods that are scaled up to handle the load.
 
-Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Now that the activity has stopped, quickly start this watch.
 

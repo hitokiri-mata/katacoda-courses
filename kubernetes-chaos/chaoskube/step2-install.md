@@ -26,4 +26,4 @@ You can periodically check the Chaoskube log to see its Pod killing activity.
 
 `kubectl -n chaoskube logs -f $POD`{{execute}}
 
-When you are done watching the log use this ```clear```{{execute interrupt}} to break out of the watch (-f) or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+When you are done watching the log use this `clear`{{execute interrupt}} to break out of the watch (-f) or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

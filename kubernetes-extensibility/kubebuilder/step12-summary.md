@@ -36,7 +36,7 @@ Watch for the new Pod to be created by your At controller in a minute or so.
 
 `watch kubectl get pods`{{execute}}
 
-Once the Pod appears this means the schedule has triggered. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once the Pod appears this means the schedule has triggered. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Check the events in the resource.
 

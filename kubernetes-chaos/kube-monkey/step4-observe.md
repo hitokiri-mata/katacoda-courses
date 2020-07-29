@@ -2,6 +2,6 @@ At some period between 30 to 90 seconds, Kube Monkey will be killing your target
 
 `watch kubectl get deployments,pods --all-namespaces -l app-purpose=chaos`{{execute}}
 
-Once complete use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 In a real chaos testing platform, you should complement this Pod killing activity with automated tests to ensure these disruptions are either unnoticed or acceptable for your business processes.

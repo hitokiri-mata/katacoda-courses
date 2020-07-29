@@ -52,7 +52,7 @@ Sometimes you may want to observe and application by watching the accumulating l
 
 `kubectl logs --selector app=random-logger --tail=1 --follow=true`{{execute}}
 
-As the application generates a new log event each second, a new log event will appear. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+As the application generates a new log event each second, a new log event will appear. Use this `clear`{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Logs from a Specific Container
 
@@ -83,7 +83,7 @@ In this case, this line demonstrates a few extra helpful switches:
 | `--timestamp=true`  | to show all times                     |
 | `--prefix=true` *   | to reveal the pod and container names |
 
-Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Use this `clear`{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 * The `--prefix` option has been added in the newer Kubernetes version 1.17. Use the help to get the features enabled for your version of kubectl, `kubectl logs --help`.
 
@@ -113,7 +113,7 @@ This log list is from the currently running Pod, but what if you want to see the
 
 `watch "kubectl get pods  && echo "—•••••••—" && kubectl logs crasher --previous=true"`{{execute}}
 
-The watch was applied so you can see the list changing after each crash. It will happen about every 45 seconds. In a real application, perhaps this log would give you a clue why the app failed. Use this ```clear```{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+The watch was applied so you can see the list changing after each crash. It will happen about every 45 seconds. In a real application, perhaps this log would give you a clue why the app failed. Use this `clear`{{execute interrupt}} to break out of the streaming or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ## Conclusion
 

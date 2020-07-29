@@ -37,10 +37,10 @@ More on these newer behavior features is [here](https://kubernetes.io/docs/tasks
 
 So, if you are willing to wait the default 5 minutes you can watch the Pods automatically scale down. Stop the load testing requests and observe how the HPA reacts by scaling down the Pod count.
 
-Go back _Terminal 2_ from the Tab above and break out of the loop. Use this ```clear```{{execute interrupt T2}} to break out of the loop or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Go back _Terminal 2_ from the Tab above and break out of the loop. Use this `clear`{{execute interrupt T2}} to break out of the loop or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Go back to _Terminal 1_ and notice all but 2 `php-apache` Pods will shutdown after the default **5 minutes** window.
 
 `watch "kubectl get pods && echo "" && kubectl top pods && echo "" && kubectl get hpa "`{{execute T1}}
 
-Once complete use this ```clear```{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Once complete use this `clear`{{execute interrupt T1}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.

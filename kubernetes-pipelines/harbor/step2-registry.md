@@ -24,7 +24,7 @@ This chart bootstraps a Harbor instance consisting of several deployed component
 
 `watch kubectl get deployments --namespace harbor`{{execute}}
 
-This can take up to about 4 minutes. Once complete, the Deployments will move to the _AVAILABLE_ state (0 to 1). The Harbor server containers take about 4-5 minutes to start. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+This can take up to about 4 minutes. Once complete, the Deployments will move to the _AVAILABLE_ state (0 to 1). The Harbor server containers take about 4-5 minutes to start. All the Deployments will eventually move to the _Available (1)_ state. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 The registry is now available as a service. It can be listed.
 

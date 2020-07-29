@@ -31,7 +31,7 @@ The tool also allows you to select and delete files or directories from the laye
 
 The third panel in the interactive mode provides a summary of the efficiency and potential waste found.
 
-To exit the interactive mode, use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+To exit the interactive mode, use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Inspect the _empty_ container image and verify it's truly empty.
 
