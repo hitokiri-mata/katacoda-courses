@@ -15,7 +15,7 @@ helm install metrics-server bitnami/metrics-server \
   --set extraArgs.kubelet-preferred-address-types=InternalIP
 ```{{execute}}
 
-This will install the server in the kube-system namespace. In a few moments you should be able to list metrics using the following command:
+This will install the server in the kube-system namespace. It also add a new API endpoint named `metrics.k8s.io`. In a few moments you should be able to list metrics using the following command:
 
 `kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
 

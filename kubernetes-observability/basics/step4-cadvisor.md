@@ -14,15 +14,15 @@ For this small Kubernetes cluster on Katacoda, the two node names can be listed.
 
 Open a proxy to the Kubernetes API port.
 
-`   `{{execute}}
+`kubectl proxy > /dev/null &`{{execute}}
 
 Query the metrics for the master node.
 
-`curl localhost:8001/api/v1/nodes/$NODE_0/proxy/metrics/ | jq`{{execute}}
+`curl localhost:8001/api/v1/nodes/$NODE_0/proxy/metrics`{{execute}}
 
 Query the metrics for the worker node.
 
-`curl localhost:8001/api/v1/nodes/$NODE_1/proxy/metrics/ | jq`{{execute}}
+`curl localhost:8001/api/v1/nodes/$NODE_1/proxy/metrics`{{execute}}
 
 The Kubernetes API aggregates cluster-wide metrics at `/metrics`.
 

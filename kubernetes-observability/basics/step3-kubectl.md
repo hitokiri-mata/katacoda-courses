@@ -1,8 +1,8 @@
 ## General Inspection of a Cluster
 
-When you first start interacting with a running cluster there are a few commands to help you get oriented on health and state.
+When you first start interacting with a running cluster there are a few commands to help you get oriented with its health and state.
 
-Inspect the whole clusters general state.
+Inspect the cluster general state.
 
 `kubectl cluster-info`{{execute}}
 
@@ -10,7 +10,7 @@ Inspect this Kubernetes cluster only _Worker_ node.
 
 `kubectl describe node node01`{{execute}}
 
-Obtain a complete dump of the cluster state to a directory.
+For deeper details, you can generate a complete dump of the cluster state to a directory.
 
 `kubectl cluster-info dump --all-namespaces --output-directory=cluster-state --output=json`{{execute}}
 
@@ -20,11 +20,10 @@ This creates a directory where each file is a report on all the nodes and namesp
 
 There is a wealth of information you can mine.
 
-> Show me all the container images names in the `kube-system` namespace.
+- Show me all the container images names in the `kube-system` namespace.
 `jq '.items[].status.containerStatuses[].image' cluster-state/kube-system/pods.json`{{execute}}
 
-> Show me when all the container images were started in the default namespace.
-
+- Show me when all the container images were started in the default namespace.
 `jq '.items[].status.containerStatuses[] | [.image, .state[].startedAt]' cluster-state/default/pods.json`{{execute}}
 
 ## General Inspection for a Deployment
