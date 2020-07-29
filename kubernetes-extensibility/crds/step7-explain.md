@@ -1,13 +1,4 @@
-TODO: Waiting for Katacoda instance of K8s v1.15+
-put in index.json
-      {
-        "title": "Explain Command",
-        "text": "step7-explain.md",
-        "code": "clear.sh"
-      }
-
-
-With the current CRD the `Explain` command will not work.
+With the current CRD, the `Explain` command will not work.
 
 `kubectl explain thermometer`{{execute}}
 
@@ -19,7 +10,7 @@ Apply this CRD.
 
 `kubectl apply -f thermometer-with-validation-crd.yaml`{{execute}}
 
-Now the `Explain` command will reveals details about the resource definition.
+Now the `Explain` command reveals details about the resource definition.
 
 `kubectl explain thermometer`{{execute}}
 

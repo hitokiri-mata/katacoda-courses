@@ -1,6 +1,6 @@
 An immediate benefit Kubernetes provides developers of containers is a level playing field for communicating between containers. Each container runs in a Pod, each Pod is fronted by a Service that routes traffic to its associated Pods, round-robin style. While each Pod in Kubernetes' network plane is assigned a virtual IP, you should not to connect to containers with these IPs. In fact, within your container code there should typically be no coupling to the Kubernetes ecosystem.
 
-To start communicating to a Service and its associated Pod, install a small, typical NGINX application. Add a [Nginx](https://hub.docker.com/_/nginx/) deployment with an associated service named "nginx" to the _default_ namespace:
+To start communicating to a Service and its associated Pod, install a small, typical NGINX application. Add a [Nginx](https://hub.docker.com/_/nginx/) deployment with an associated service named _nginx_ to the _default_ namespace:
 
 `kubectl apply -f https://raw.githubusercontent.com/javajon/kubernetes-fundamentals/master/nginx/nginx.yaml`{{execute}}
 
@@ -30,13 +30,13 @@ Here is the full URL to the service.
 
 `curl --silent http://nginx.default.svc.cluster.local:80 | grep "Thank you"`{{execute}}
 
-As a developer your code would simply reach out to these URLs created from the assigned service names.
+As a developer, your code would simply reach out to these URLs created from the assigned service names.
 
-The name of the service could be passed in as an environment variable to the container. Since the Busybox container was installed after NGINX, the Busybox environment already has information about the various URLS to access the other services. See them listed.
+The name of the service could be passed in as an environment variable to the container. Since the Busybox container was installed after NGINX, the Busybox environment already has information about the various URLs to access the other services. See them listed.
 
 `env | grep NGINX`{{execute}}
 
-If the Busybox service was created before the Nginx service the urls would still work, but the environment settings would not be present. It's not the best idea to rely on these environment setting since the order of creation of services is not guaranteed.
+If the Busybox service was created before the Nginx service the URLs would still work, but the environment settings would not be present. It's not the best idea to rely on these environment settings since the order of creation of services is not guaranteed.
 
 Exit the shell in the BusyBox container.
 

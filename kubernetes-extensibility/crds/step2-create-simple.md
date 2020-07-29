@@ -28,7 +28,7 @@ Thermometer is now an api-resource.
 
 The resource is also available through the Kubernetes API.
 
-`kubectl get -v=9 --raw /apis/d2iq.com/v1/thermometers | jq .`{{execute}}
+`kubectl get -v=9 --raw /apis/d2iq.com/v1/thermometers | jq`{{execute}}
 
 Notice in the last command we added a [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. With it set to level 9 (highest) we get a bit more insight into how the `kubectl` command is obtaining the resource information.
 

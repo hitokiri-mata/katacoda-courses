@@ -6,7 +6,7 @@ Both ConfigMaps and Secrets are stored in etcd, but the way you submit secrets i
 
 `kubectl get secret db-password`{{execute}}
 
-`kubectl get secret db-password -o yaml`{{execute}}
+`kubectl get secret db-password -o json | jq`{{execute}}
 
 Notice when the secret is returned it's not the same string that was passed in, `password: TXlEYlBhc3N3MHJk`. It _is_ the same data, just _encoded_ in 64bit form. Kubernetes stores the data assigned to a secret in 64 bit form. __Never__ confuse _encoding_ with _encryption_, as they are two very different concepts. Values encoded are not encrypted. The encoding is to allow a wider variety of values for secrets. You can easily decode the text with a simple _base64_ command to reveal the original password text.
 

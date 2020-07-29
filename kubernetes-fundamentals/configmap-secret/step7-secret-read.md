@@ -6,7 +6,7 @@ From the previous steps, there is a secret in the cluster called _db-creds_.
 
 The secret has two values _username_ and _password_.
 
-`kubectl get secret db-creds -o yaml`{{execute}}
+`kubectl get secret db-password -o json | jq`{{execute}}
 
 View the definition of the Pod that will access this secret.
 

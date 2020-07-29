@@ -1,12 +1,4 @@
-TODO: Waiting for Katacoda instance of K8s v1.15+
-put in index.json
-      {
-        "title": "Validate Declaration of Resource",
-        "text": "step6-validation.md",
-        "code": "clear.sh"
-      },
-
-Let's try a new Thermometer resourse that defines a different city, such as:
+Let's try a new Thermometer resource that defines a different city, such as:
 
 `ccat gothenburg-thermometer.yaml`{{execute}}
 
@@ -36,4 +28,4 @@ Try reapplying the Gothenburg Thermometer declaration again.
 
 Try Stockholm manifest again.
 
-`kubectl apply -f stokholm-thermometer.yaml`{{execute}}
+`kubectl apply -f stockholm-thermometer.yaml`{{execute}}
