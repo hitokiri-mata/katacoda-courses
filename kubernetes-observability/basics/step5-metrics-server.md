@@ -8,7 +8,7 @@ Install the chart.
 
 ```bash
 helm install metrics-server bitnami/metrics-server \
-  --version=4.3.0 \
+  --version=4.2.2 \
   --namespace kube-system \
   --set apiService.create=true \
   --set extraArgs.kubelet-insecure-tls=true \
