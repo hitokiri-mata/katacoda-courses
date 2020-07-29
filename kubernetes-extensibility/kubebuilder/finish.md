@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now have a better understanding of how to write an Operator using the Kubebuilder. The real goal of this scenario is to show you the power of extending Kubernetes with your a custom resources and coding controllers that are dedicated to observing and managing your custom resources.
 

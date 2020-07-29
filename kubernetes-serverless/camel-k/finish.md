@@ -1,4 +1,3 @@
-# Conclusion #
 
 Camel K is ...
 

@@ -1,4 +1,3 @@
-# Conclusion #
 
 Hopefully, you can now start to see how changing the perspective of test by embracing the consumer perspectives can be a powerful testing technique, especially for Microservices.
 

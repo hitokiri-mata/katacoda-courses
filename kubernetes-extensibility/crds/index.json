@@ -37,6 +37,7 @@
       }
     ],
     "intro": {
+      "title": "Kubernetes Custom Resource Definitions",
       "text": "intro.md",
       "courseData": "init-background.sh",
       "code": "init-foreground.sh",

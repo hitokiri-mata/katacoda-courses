@@ -1,4 +1,3 @@
-# Conclusion #
 
 > Knative is a new open source project started by engineers from Google, [Pivotal](https://pivotal.io/knative), and other industry leaders. It’s a collection of components that extend Kubernetes. It includes three major parts: Serving, Build, and Eventing.
 

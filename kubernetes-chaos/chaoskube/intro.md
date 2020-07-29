@@ -1,5 +1,3 @@
-# Chaoskube on Kubernetes #
-
 <img align="right" alt="Chaoskube" title="Chaoskube" src="./assets/chaoskube.png" width=300>
 
 > Adopting chaos engineering strategies for your production environment is useful, because it is the only way to test if a system supports unexpected destructive events. -- [KubeInvaders](https://kubernetes.io/blog/2020/01/22/kubeinvaders-gamified-chaos-engineering-tool-for-kubernetes)

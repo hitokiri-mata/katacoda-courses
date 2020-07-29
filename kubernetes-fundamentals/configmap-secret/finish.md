@@ -1,5 +1,3 @@
-# Conclusion #
-
 Keeping configurations and secrets out of your codebase is an important guideline for application on Kubernetes. Kubernetes can be deployed to a variety of data center targets and your application should also accommodate these different contextual settings. You learned, the environment configuration can all be stored in ConfigMaps and Secrets. This allows your applications to reference these configurations as environmental resources.
 
 ## Secrets and Protection ##

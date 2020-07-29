@@ -16,11 +16,11 @@ Inspect the layout of the source files.
 
 Here is the small application code:
 
-`cat src/app.js`{{execute}}
+`ccat src/app.js`{{execute}}
 
 Here is the container definition for the app:
 
-`cat src/Dockerfile`{{execute}}
+`ccat src/Dockerfile`{{execute}}
 
 Here are the standard Deployment and Service manifests that start the application on Kubernetes:
 

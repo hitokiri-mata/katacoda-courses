@@ -41,6 +41,7 @@
       }
     ],
     "intro": {
+      "title": "ConfigMaps and Secrets",
       "text": "intro.md",
       "courseData": "init-background.sh",
       "code": "init-foreground.sh",

@@ -1,4 +1,3 @@
-# Conclusion #
 
 Although this was a very simple Operator, you should now be familiar with the tooling and procedures needed to start developing real Operators used to solve some of your more intricate software lifecycle management challenges.
 

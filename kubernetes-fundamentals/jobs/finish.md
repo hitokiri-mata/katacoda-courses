@@ -1,4 +1,3 @@
-# Conclusion #
 
 Job are much like Pods, but differ since they terminate once the task is completed. The Job feature ensures the job complete successfully and can optionally rerun the tasks until a success is reported. 
 

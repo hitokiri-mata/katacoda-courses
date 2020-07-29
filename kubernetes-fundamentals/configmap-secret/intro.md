@@ -1,5 +1,3 @@
-# ConfigMaps and Secrets #
-
 The 3rd factor (Configuration) of the [Twelve-Factor App Methodology](https://en.wikipedia.org/wiki/Twelve-Factor_App_methodology) states:
 
 > Configuration that varies between deployments should be stored in the environment.

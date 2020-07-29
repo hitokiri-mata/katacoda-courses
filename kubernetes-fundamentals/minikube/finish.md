@@ -1,4 +1,3 @@
-# Conclusion #
 
 Minikube runs locally on your laptop for free and is a great way to learn and experiment with Kubernetes. While it's just a single node solution, Minikube provides much of the same experiences found on larger multi-node clusters.
 

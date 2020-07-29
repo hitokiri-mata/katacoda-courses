@@ -7,7 +7,7 @@ Let's build two containers with the same Python code to illustrate the process f
 <img align="right" src="./assets/python.png" width="100">
 The first container will be a fat container using a Dockerfile that has several bad practices.
 
-`cat Dockerfile-a`{{execute}}
+`ccat Dockerfile-a`{{execute}}
 
 This example was inspired by the article, _[Broken by default: why you should avoid most Dockerfile examples, by Itamar Turner-Trauring](https://pythonspeed.com/articles/dockerizing-python-is-hard/)_, where the bad practices are outlined.
 
@@ -25,7 +25,7 @@ From this the first 10 Fibonacci numbers are produced. Let's see what the Dive t
 
 View the report.
 
-`cat dive-report-a.json | jq .`{{execute}}
+`ccat dive-report-a.json | jq .`{{execute}}
 
 There are many details, so instead pick out some key findings.
 
@@ -39,7 +39,7 @@ echo "Inefficiency score: $(cat dive-report-a.json | jq .image.efficiencyScore)"
 
 The Dockerfile-b is a typical revision of a Dockerfile for Python with several best practices applied.
 
-`cat Dockerfile-b`{{execute}}
+`ccat Dockerfile-b`{{execute}}
 
 There are more best (or better) practices, tuning, and opinions that can be applied, but let's start with this.
 

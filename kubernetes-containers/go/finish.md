@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now understand different techniques for writing Go apps and packaging them in efficient containers for Kubernetes. Go is a popular language to write containerized apps. The language was designed for simplicity and efficiency. These are attractive goals when you are writing many application containers for Kubernetes.
 

@@ -1,4 +1,3 @@
-# Conclusion #
 
 <img align="right" src="./assets/kubeflow.jpg" width="300">
 

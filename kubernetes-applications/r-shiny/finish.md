@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now understand how to run Shiny applications on Kubernetes.
 

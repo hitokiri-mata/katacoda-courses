@@ -1,4 +1,3 @@
-# Conclusion #
 
 Kube Monkey can be one of the tools in your toolbox for approaching testing with Chaos on Kubernetes.
 

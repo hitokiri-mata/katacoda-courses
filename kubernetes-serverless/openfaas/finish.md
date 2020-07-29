@@ -1,4 +1,3 @@
-# Conclusion #
 
 OpenFaaS is an independent project created by [Alex Ellis](https://www.alexellis.io/) that is being built and shaped by a growing community of contributors. Kubernetes provides this serverless framework a resilient and scalable cluster where OpenFaaS can compliment other solutions in the same shared data center.
 

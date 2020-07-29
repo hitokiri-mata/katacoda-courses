@@ -1,4 +1,3 @@
-# Conclusion #
 
 <img align="right" src="./assets/eugenio-marzo.jpg" width=200>
 

@@ -1,4 +1,3 @@
-# Conclusion #
 
 The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command-line tools, language libraries, and internal controllers and operators all use this same API for all CRUD operations toward Kubernetes.
 

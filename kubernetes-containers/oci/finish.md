@@ -1,4 +1,3 @@
-# Conclusion #
 
 <img align="right" src="./assets/linux-foundation-logo.png" width="300">
 There are other container formats, but the industry is moving toward this standard and governed OCI format. With this scenario, you now understand it's a collection of tars where each tar is a layer. With this knowledge. it's now easy to inspect the contents of a container for discovery and debugging purposes. With this standard OCI format, you can see why there is a growing variety of tools that can build, run, and introspect OCI containers images.

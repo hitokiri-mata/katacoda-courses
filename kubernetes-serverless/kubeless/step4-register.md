@@ -27,7 +27,7 @@ You can list the new function with the Kubeless CLI:
 
 While the function is deploying inspect the actual Python function source code:
 
-`cat fibonacci.py`{{execute}}
+`ccat fibonacci.py`{{execute}}
 
 With the deploy command, Kubeless automatically created a Kubernetes deployment and service for your function. Observe that a Deployment containing your function is running and exposed as a service in the default namespace:
 

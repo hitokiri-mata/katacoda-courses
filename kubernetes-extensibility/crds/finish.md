@@ -1,5 +1,3 @@
-# Conclusion #
-
 Custom Resource Definitions (CRDs) are a mechanism used to add new `kind`s into a Kubernetes cluster. CRDs are all part of the extensibility of Kubernetes and it API. CRDs are in widespread use as a Kubernetes extensibility mechanism and have been available in beta since the 1.7 release. The 1.16 release marks the graduation of CRDs to general availability (GA). When added with controllers watching the CRDs, enables a custom declarative experience. You now have a solid introduction to the powerful [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
 ## Lessons Learned ##

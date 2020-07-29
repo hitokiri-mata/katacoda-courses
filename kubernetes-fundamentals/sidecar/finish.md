@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now understand two different techniques for starting a container on Kubernetes. Nginx is commonly used for serving up web content and as you can see is easy to start on Kubernetes. There are thousands of other containers that can easily be started with these same basic steps.
 

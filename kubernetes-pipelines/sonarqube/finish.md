@@ -1,4 +1,3 @@
-# Conclusion #
 
 Most developers who know about static code analysis know about SonarQube. While each language typically has specific linting and code analysis tools, SonarQube offers unifying tools for many languages and teams. Additionally, SonarQube with its database offers the additional dimension of time to trend your metrics over time.
 

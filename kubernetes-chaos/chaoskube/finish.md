@@ -1,5 +1,3 @@
-# Conclusion #
-
 Chaoskube can be one of the tools in your toolbox for approaching testing with Chaos on Kubernetes.
 
 With these steps you have learned:

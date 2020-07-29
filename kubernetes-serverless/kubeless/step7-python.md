@@ -1,6 +1,6 @@
 To review, here is a very simple Python function. Just two lines:
 
-`cat get.py`{{execute}}
+`ccat get.py`{{execute}}
 
 Register the function
 

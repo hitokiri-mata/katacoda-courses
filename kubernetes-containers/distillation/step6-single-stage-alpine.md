@@ -1,6 +1,6 @@
 Despite the name "slim" for the base of the previous container we can do better to reduce the image size. Containers derived from _Alpine_ are much smaller than then slim bases. Let's switch to use Alpine an see the image size difference.
 
-`cat packaging/Dockerfile-single-stage-alpine`{{execute}}
+`ccat packaging/Dockerfile-single-stage-alpine`{{execute}}
 
 Build a container using this definition.
 

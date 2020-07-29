@@ -1,4 +1,3 @@
-# Conclusion #
 
 Discovering services through simple labels provided from environment settings makes calling other services easy from your application. When you decide on a Kubernetes cluster to use, one of the first things you should investigate is what service flavor provides the DNS resolutions.
 

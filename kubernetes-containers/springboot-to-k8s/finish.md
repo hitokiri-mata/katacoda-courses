@@ -1,4 +1,3 @@
-# Conclusion #
 
 **You now know how to create, build, deploy and run a Spring Boot application on Kubernetes.**
 

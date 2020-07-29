@@ -1,6 +1,6 @@
 Here is some sample code to populate the skeleton project.
 
-`cat HelloApplication.java`{{execute}}
+`ccat HelloApplication.java`{{execute}}
 
 Add the code to the project.
 

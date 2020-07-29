@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now understand two different techniques for using Pod Presets with Kubernetes. It key advantage is you can define a common configuration that remains separate and can be applied to multiple Pod declarations.
 

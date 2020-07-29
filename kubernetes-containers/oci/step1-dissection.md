@@ -23,7 +23,7 @@ All of the contents along with the layer tar files are now viewable.
 
 The image includes the manifest.json file that defines the metadata about the image, such as version information and tag names. The [schema for the manifest.json](https://github.com/opencontainers/image-spec/blob/master/manifest.md) file follows the OCI specification. Inspect the manifest.
 
-`cat manifest.json | jq .`{{execute}}
+`ccat manifest.json | jq .`{{execute}}
 
 Extracting a layer will reveal the specific files contained for that layer.
 

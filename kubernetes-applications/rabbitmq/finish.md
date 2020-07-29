@@ -1,4 +1,3 @@
-# Conclusion #
 
 You now understand how to run a basic configuration of RabbitMQ on Kubernetes. Actual production deployment can certainly be more complex to support persistence and higher availability. If the existing Helm chart is insufficient, consider contributing to the project or create one for your own needs.
 

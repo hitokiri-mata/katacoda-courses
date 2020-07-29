@@ -1,4 +1,3 @@
-# Conclusion #
 
 <img align="right" src="./assets/tekton.png" width="400">
 

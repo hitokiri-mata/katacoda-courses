@@ -26,6 +26,7 @@
       }
     ],
     "intro": {
+      "title": "Chaoskube on Kubernetes",
       "text": "intro.md",
       "courseData": "init-background.sh",
       "code": "init-foreground.sh",

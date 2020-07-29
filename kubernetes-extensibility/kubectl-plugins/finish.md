@@ -1,4 +1,3 @@
-# Conclusion #
 
 Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/) are quite helpful. Share these with your fellow cloud native enthusiasts and have them explore this scenario to discover helpful tools and tricks. Also, consider contributing to these open source efforts or even submitting your own plugin.
 

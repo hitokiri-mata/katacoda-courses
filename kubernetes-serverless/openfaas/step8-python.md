@@ -10,7 +10,7 @@ Create the structure and files for the new function.
 
 In the current directory, there is a pre-written Fibonacci Python code example. Notice at the top is the "handle" method that OpenFaaS expects as a signature for the function.
 
-`cat fibonacci.py`{{execute}}
+`ccat fibonacci.py`{{execute}}
 
 Copy the example Python code into the generated directory.
 

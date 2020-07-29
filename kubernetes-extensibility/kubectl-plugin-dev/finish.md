@@ -1,4 +1,3 @@
-# Conclusion #
 
 Kubectl offers a helpful plugin feature to extend Kubernetes. The [Community supported plugins](https://github.com/kubernetes-sigs/krew-index/) are quite helpful. But sometimes, what the community offers is not what you need. Fortunately, you can code you own plugin to solve specific problems related to your domain. If you do create a plugin that can help others, consider adding it to the public community of kubectl plugins.
 
