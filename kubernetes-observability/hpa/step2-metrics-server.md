@@ -6,7 +6,7 @@ Add the chart repository for the Helm chart to be installed.
 
 Install the chart.
 
-`helm install metrics-server bitnami/metrics-server --version=4.2.1 --namespace kube-system`{{execute}}
+`helm install metrics-server bitnami/metrics-server --version=4.2.2 --namespace kube-system`{{execute}}
 
 This will install the server in the kube-system namespace.
 

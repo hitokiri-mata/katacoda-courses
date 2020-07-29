@@ -1,12 +1,22 @@
 The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
+## TODO - Drafting ... Enable metrics
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+```bash
+helm install metrics-server stable/metrics-server \
+--namespace kube-system \
+--set args[0]='--kubelet-preferred-address-types=InternalIP' \
+--set args[1]='--kubelet-insecure-tls'
+```{{execute}}
+
 Add the chart repository for the Helm chart to be installed.
 
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
 
 Install the chart.
 
-`helm install metrics-server bitnami/metrics-server --version=4.2.1 --namespace kube-system`{{execute}}
+`helm install metrics-server bitnami/metrics-server --version=4.2.2 --namespace kube-system`{{execute}}
 
 This will install the server in the kube-system namespace along with the last two parameters that allow it to work well in this ephemeral Katacoda cluster.
 
@@ -24,7 +34,7 @@ Once the metrics are ready, a JSON dump of the metrics will appear.
 
 If the metrics are not ready you may get this message.
 
-> `Error from server (ServiceUnavaliable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)`
+> `Error from server (ServiceUnavailable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)`
 
 However, once the metrics are available the normal message should look like this:
 

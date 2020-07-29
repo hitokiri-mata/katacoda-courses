@@ -33,7 +33,6 @@ There is a helpful Grafana container configured for OpenFaaS found [here](https:
 `kubectl -n openfaas run \
 --image=stefanprodan/faas-grafana:4.6.3 \
 --port=3000 \
---generator=run-pod/v1 \
 grafana`{{execute}}
 
 Expose the dashboard as a service on a known port.

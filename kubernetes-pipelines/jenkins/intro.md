@@ -15,7 +15,7 @@ This demonstration covers these topics:
 - Monitoring canary deployments
 - Rollback canary
 
-> Canary release is a technique to reduce the risk of introducing a new software version in production by slowly rolling out the change to a small subset of users before rolling it out to the entire infrastructure and making it available to everybod. - [MartinFowler.com](https://martinfowler.com/bliki/CanaryRelease.html)
+> Canary release is a technique to reduce the risk of introducing a new software version in production by slowly rolling out the change to a small subset of users before rolling it out to the entire infrastructure and making it available to everybody. - [MartinFowler.com](https://martinfowler.com/bliki/CanaryRelease.html)
 
 ## Instructions Overview ##
 

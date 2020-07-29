@@ -4,7 +4,7 @@ Inspect the declaration for Nginx.
 
 `ccat nginx.yaml`{{execute}}
 
-Typically manifests are sources stored in version control in YAML file format. Kubernetes also accepts manifests in JSON form but since we often edit these files, the YAML format tends to be easier to read and edit than JSON. These source files are examples of [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code).
+Typically manifests are sources stored in version control in YAML file format. Kubernetes also accepts manifests in JSON form but since we often edit these files, the YAML format tends to be easier to read and edit than JSON. These source files are examples of infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
 
 Let's send this manifest declaration to our Kubernetes cluster.
 

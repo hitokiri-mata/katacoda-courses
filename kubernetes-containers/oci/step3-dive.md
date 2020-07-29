@@ -27,7 +27,7 @@ To see the tool in action let's look at the internals of the _Redis_ container i
 
 In the interactive TUI, there are three panels; Layers, Current Layer Contents, and Image Details. The top-left is the listing of container layers. Move the highlighter up and down with the arrow keys to select a layer. Each layer's contents appear on the right-side panel. Press the tab key to switch between the layer view (left) and the layer's file tree (right). There are key command hints at the bottom and more [key bindings](https://github.com/wagoodman/dive#keybindings) can be found here]. Take a moment to explore the tool.
 
-The tool also allows you to select and delete files or directories from the layers. This can help you understand how to trim your containers. _Dive_ can be a handy tool for experimenting, but you should refrain from using this UI as part of your continuous delivery process. The real trimming should happen when you define the containers with infrastructure-as-code.
+The tool also allows you to select and delete files or directories from the layers. This can help you understand how to trim your containers. _Dive_ can be a handy tool for experimenting, but you should refrain from using this UI as part of your continuous delivery process. The real trimming should happen when you define the containers with infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
 
 The third panel in the interactive mode provides a summary of the efficiency and potential waste found.
 
