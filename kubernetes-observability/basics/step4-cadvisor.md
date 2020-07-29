@@ -7,22 +7,23 @@ Each node exposes statistics continuously updated by cAdvisor. For your cluster,
 For this small Kubernetes cluster on Katacoda, the two node names can be listed.
 
 `export NODE_0=$(kubectl get nodes -o=jsonpath="{.items[0].metadata.name}")`{{execute}}
+
 `export NODE_1=$(kubectl get nodes -o=jsonpath="{.items[1].metadata.name}")`{{execute}}
 
-`echo "The master node is $NODE_0" && echo "The worker node is $NODE_1"`{{execute}}
+`echo -e "The master node is $NODE_0 \nThe worker node is $NODE_1"`{{execute}}
 
 Open a proxy to the Kubernetes API port.
 
-`kubectl proxy &`{{execute}}
+`   `{{execute}}
 
 Query the metrics for the master node.
 
-`curl localhost:8001/api/v1/nodes/$NODE_0/proxy/metrics`{{execute}}
+`curl localhost:8001/api/v1/nodes/$NODE_0/proxy/metrics/ | jq`{{execute}}
 
 Query the metrics for the worker node.
 
-`curl localhost:8001/api/v1/nodes/$NODE_1/proxy/metrics`{{execute}}
+`curl localhost:8001/api/v1/nodes/$NODE_1/proxy/metrics/ | jq`{{execute}}
 
 The Kubernetes API aggregates cluster-wide metrics at `/metrics`.
 
-`curl localhost:8001/metrics`{{execute}}
+`curl localhost:8001/metrics/ | jq`{{execute}}

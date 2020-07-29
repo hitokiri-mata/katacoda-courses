@@ -1,4 +1,4 @@
-The scenario introduced some fundamental techniques to inspecting a cluster. Not covered here was logging, tracing, or monitoring with Prometheus. Those topics are covered in other scenarios.
+The scenario introduced some fundamental techniques to inspecting a cluster and its control plane components. Additional topics on observability related to logging, tracing, or monitoring with Prometheus are covered in other scenarios.
 
 ## Lessons Learned ##
 

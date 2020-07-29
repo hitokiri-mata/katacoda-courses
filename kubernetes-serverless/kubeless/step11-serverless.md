@@ -32,7 +32,7 @@ Now, call the function
 
 or
 
-`curl localhost:8080/api/v1/namespaces/default/services/hello:8080/proxy/ && echo`{{execute}}
+`curl localhost:8080/api/v1/namespaces/default/services/hello:8080/proxy/ | jq`{{execute}}
 
 Check the logs
 

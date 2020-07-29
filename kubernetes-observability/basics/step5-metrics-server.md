@@ -1,28 +1,24 @@
 The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
 
-## TODO - Drafting ... Enable metrics
+Add the chart repository for the Helm chart to be installed.
+
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
+Install the chart.
 
 ```bash
 helm install metrics-server stable/metrics-server \
+--version 2.11.1 \
 --namespace kube-system \
 --set args[0]='--kubelet-preferred-address-types=InternalIP' \
 --set args[1]='--kubelet-insecure-tls'
 ```{{execute}}
 
-Add the chart repository for the Helm chart to be installed.
-
-`helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
-
-Install the chart.
-
-`helm install metrics-server bitnami/metrics-server --version=4.2.2 --namespace kube-system`{{execute}}
-
 This will install the server in the kube-system namespace along with the last two parameters that allow it to work well in this ephemeral Katacoda cluster.
 
 In a few minutes you should be able to list metrics using the following command:
 
-`kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"`{{execute}}
+`kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes | jq"`{{execute}}
 
 If the metrics are not ready, this message will appear
 
@@ -39,9 +35,9 @@ If the metrics are not ready you may get this message.
 However, once the metrics are available the normal message should look like this:
 
 ```bash
-NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
-master   125m         6%     1049Mi          55%
-node01   84m          2%     922Mi           23%
+NAME           CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
+controlplane   138m         6%     991Mi           52%
+node01         79m          3%     575Mi           14%
 ```
 
 Metrics information is also reflected in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in pages for each resource the same Top information appears in the UI. The [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) also utilizes these vital metrics to make decisions to scale up and down Pod instances.

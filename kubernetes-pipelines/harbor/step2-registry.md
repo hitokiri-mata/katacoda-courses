@@ -32,9 +32,11 @@ The registry is now available as a service. It can be listed.
 
 The Docker tag, push and pull commands must all have the same host name for the image. Docker also requires SSL access, so it's necessary to consistently refer to the registry from the command-line and from within the cluster. In this scenario case we can simply use 127.0.0.0. Use port-forward to expose the registry.
 
-`kubectl port-forward --namespace harbor \
+```bash
+kubectl port-forward --namespace harbor \
 $(kubectl get po -n harbor | grep harbor-registry | \
-awk '{print $1;}') 5000:5000 &`{{execute}}
+awk '{print $1;}') 5000:5000 > /dev/null &
+`''{{execute}}
 
 Assign an environment variable to the common registry location.
 

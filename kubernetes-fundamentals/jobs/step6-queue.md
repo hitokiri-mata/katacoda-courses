@@ -14,13 +14,13 @@ Produce a collection of work items and place onto a queue. First, use port forwa
 
 `QUEUE_POD=$(kubectl get pods -l app=work-queue,component=queue -o jsonpath='{.items[0].metadata.name}')`{{execute}}
 
-`kubectl port-forward $QUEUE_POD 8080:8080 &`{{execute}}
+`kubectl port-forward $QUEUE_POD 8080:8080 > /dev/null &`{{execute}}
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-6-load-queue.sh | bash`{{execute}}
 
 View the _enqueued_ items count, it will be 100.
 
-`curl localhost:8080/memq/server/stats`{{execute}}
+`curl localhost:8080/memq/server/stats | jq`{{execute}}
 
 You can also see the queue in the portal. Because of Katacoda's virtualization, you cannot address this URL from your browser, but you can use Katacoda's domain as the URL to the same service.
 

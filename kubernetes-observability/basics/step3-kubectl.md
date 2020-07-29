@@ -1,16 +1,35 @@
-The running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
+## General Inspection of a Cluster
 
-Inspect the whole cluster
+When you first start interacting with a running cluster there are a few commands to help you get oriented on health and state.
+
+Inspect the whole clusters general state.
 
 `kubectl cluster-info`{{execute}}
-
-or more verbose (and really too much)
-
-`kubectl cluster-info dump --all-namespaces`{{execute}}
 
 Inspect this Kubernetes cluster only _Worker_ node.
 
 `kubectl describe node node01`{{execute}}
+
+Obtain a complete dump of the cluster state to a directory.
+
+`kubectl cluster-info dump --all-namespaces --output-directory=cluster-state --output=json`{{execute}}
+
+This creates a directory where each file is a report on all the nodes and namespaces.
+
+`tree cluster-state`{{execute}}
+
+There is a wealth of information you can mine.
+
+> Show me all the container images names in the `kube-system` namespace.
+`jq '.items[].status.containerStatuses[].image' cluster-state/kube-system/pods.json`{{execute}}
+
+> Show me when all the container images were started in the default namespace.
+
+`jq '.items[].status.containerStatuses[] | [.image, .state[].startedAt]' cluster-state/default/pods.json`{{execute}}
+
+## General Inspection for a Deployment
+
+The running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
 
 Inspect the last _deployment_.
 
@@ -26,9 +45,9 @@ Inspect the 3 _pods_.
 
 `kubectl describe pods`{{execute}}
 
-## Events ##
+## Events
 
-Kubernetes also maintains a list of events.
+Kubernetes also maintains a history of events.
 
 `kubectl get events`{{execute}}
 
@@ -42,7 +61,7 @@ Notice the last event will reflect the scaling request.
 
 These events are not to be confused with [security audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/) which are also recorded.
 
-## Inspecting Containers ##
+## Inspecting Containers
 
 You can also typically get into a running container and inspect it as well. Get the name of the first Pod.
 

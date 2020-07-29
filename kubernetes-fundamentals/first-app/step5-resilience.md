@@ -10,7 +10,7 @@ Get the list of running pods.
 
 Delete one of the Pods.
 
-`kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)&`{{execute}}
+`kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)> /dev/null &`{{execute}}
 
 Watch how Kubernetes recovers from the glitch.
 
