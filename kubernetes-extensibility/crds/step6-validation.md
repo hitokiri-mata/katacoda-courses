@@ -2,22 +2,22 @@ Let's try a new Thermometer resource that defines a different city, such as:
 
 `ccat gothenburg-thermometer.yaml`{{execute}}
 
-In the spec section there are two attributes,
+In the spec section, there are two attributes.
 
 ```yaml
     unit: Celsius
-    example: 'not printed'
+    foo: test
 ```
 
 Will it apply successfully?
 
 `kubectl apply -f gothenburg-thermometer.yaml`{{execute}}
 
-No, because with the printer columns specification that is enough to reject the `foo` key and value.
+No, because with the `x-kubernetes-preserve-unknown-fields: true` was not present and there is no schema defined for `foo`.
 
 `kubectl get trm -A`{{execute}}
 
-Next, let's add a schema to the CRD using the open API v3 Schema. The following schema has a expanded `schema` section added, along with `status`.
+Next, let's add a schema to the CRD using the open API v3 Schema. The following schema has an expanded `schema` section added, along with `status`.
 
 `ccat thermometer-crd-with-validation.yaml`{{execute}}
 
@@ -33,7 +33,7 @@ Try Stockholm manifest again.
 
 `kubectl apply -f stockholm-thermometer.yaml`{{execute}}
 
-Both thermometer resource declarations \fail because the attributes in the spec sections do not meet the schema requirements.
+Both thermometer resource declarations fail because the attributes in the spec sections do not meet the schema requirements.
 
 Let's add two correct Thermometers that will pass.
 

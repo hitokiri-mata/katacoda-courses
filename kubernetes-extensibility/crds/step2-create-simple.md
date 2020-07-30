@@ -1,6 +1,6 @@
 Let's begin by inspecting a small, example YAML file that declares a simple Thermometer.
 
-`ccat thermometer-crd-minimal`{{execute}}
+`ccat thermometer-crd-minimal.yaml`{{execute}}
 
 In this CRD definition, the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource. Later we will define features that we can add to this specification. In its current form, its the most simplistic.
 

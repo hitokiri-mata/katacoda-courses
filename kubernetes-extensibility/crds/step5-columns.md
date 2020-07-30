@@ -12,6 +12,6 @@ Now, see the new columns `Unit` and `Temperature` appear.
 
 `kubectl get trm -A`{{execute}}
 
-The value for `Unit` appears as it's in the definition. The value `example: 'not printed'` does not appear since it's not a selection for a column. The temperatures are blank because this is intended to be filled in by an application. Brilliant.
+The value for `Unit` appears as it's in the definition. The value `example: 'not printed'` does not appear since it's not a selection for a column. The `Temperature` column is blank because this is intended to be filled in by an application. Brilliant.
 
 Next, let's explore validation.
