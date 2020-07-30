@@ -14,13 +14,15 @@ Get the resource information.
 
 `kubectl get trm -A`{{execute}}
 
-This is as expected and consistent with the previous example. However, this thermometer has extra data included.  
+This is as expected and consistent with the previous example. However, this thermometer YAML has extra data declared.  
 
 ```yaml
     unit: Celsius
     example: 'not printed'
 ```
 
-The data is actually inside the resource and was preserved by the `x-kubernetes-preserve-unknown-fields: true` setting in the CRD definition. Without this flag the extra unknown data would have been stripped out. Often we want to strip out any unknown data to lessen accidental or nefarious data getting into our cluster. We'll get into better schema validation in a moment.
+The CRD controller will actively prune any unknown data that is not defined in the schema. This pruning behavior is welcomed as want to strip out any unknown data to lessen accidental or nefarious data getting into our cluster. We'll get into better schema validation in a moment. You can verify the data was pruned by inspecting the resource.
 
-Wouldn't it be nice if the displayed output from the `get` command included the additional information defined in the resource details? In the next step, you can define the extra columns.
+`kubectl get trm stockholm -n sweden -o json | jq`{{execute}}
+
+Wouldn't it be nice if the displayed output from the `get` command included the additional information defined in the resource details? In the next step, you can define the extra columns then improve the schema.

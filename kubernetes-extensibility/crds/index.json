@@ -16,12 +16,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Apply a CRD",
+        "title": "Apply Simple Resource",
         "text": "step3-install-simple.md",
         "code": "clear.sh"
       },
       {
-        "title": "Realistic Resource",
+        "title": "Apply Resource with Spec",
         "text": "step4-complex.md",
         "code": "clear.sh"
       },

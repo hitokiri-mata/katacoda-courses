@@ -39,7 +39,7 @@ spec:
                 anyOf: [{"pattern": "^Celsius"}, {"pattern": "^Fahrenheit"}]
             required: ["unit"]
           status:
-            description: Thermometer Status filled in by a temperature sensor service
+            description: Thermometer Status filled in by a temperature sensor service.
             type: object
             properties:
               temperature:

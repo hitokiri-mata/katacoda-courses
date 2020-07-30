@@ -13,11 +13,7 @@ Will it apply successfully?
 
 `kubectl apply -f gothenburg-thermometer.yaml`{{execute}}
 
-No, because with the `x-kubernetes-preserve-unknown-fields: true` was not present and there is no schema defined for `foo`.
-
-`kubectl get trm -A`{{execute}}
-
-Next, let's add a schema to the CRD using the open API v3 Schema. The following schema has an expanded `schema` section added, along with `status`.
+No, because the schema is rejecting the resource declaration because the column specification is present. Before you were able to apply both thermometer.yaml and stockholm-thermometer.yaml because the schema was minimal. Let's add a schema to the CRD using the open API v3 Schema. The following schema has an expanded `schema` section added, along with `status`.
 
 `ccat thermometer-crd-with-validation.yaml`{{execute}}
 
@@ -35,12 +31,18 @@ Try Stockholm manifest again.
 
 Both thermometer resource declarations fail because the attributes in the spec sections do not meet the schema requirements.
 
-Let's add two correct Thermometers that will pass.
+To correct the specification, add two well-defined Thermometers that will pass.
+
+`ccat gothenburg-thermometer-valid.yaml`{{execute}}
 
 `kubectl apply -f gothenburg-thermometer-valid.yaml`{{execute}}
+
+`ccat gothenburg-thermometer-valid.yaml`{{execute}}
 
 `kubectl apply -f stockholm-thermometer-valid.yaml`{{execute}}
 
 Inspect the resource information now.
 
 `kubectl get trm -A`{{execute}}
+
+Now the columns and data appear. In the definition, the `temperature` data is in the status section as this is data that would be filled in at runtime, perhaps from a temperature sensor as an example.
