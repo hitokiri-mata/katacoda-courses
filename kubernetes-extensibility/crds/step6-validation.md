@@ -37,7 +37,7 @@ To correct the specification, add two well-defined Thermometers that will pass.
 
 `kubectl apply -f gothenburg-thermometer-valid.yaml`{{execute}}
 
-`ccat gothenburg-thermometer-valid.yaml`{{execute}}
+`ccat stockholm-thermometer-valid.yaml`{{execute}}
 
 `kubectl apply -f stockholm-thermometer-valid.yaml`{{execute}}
 
