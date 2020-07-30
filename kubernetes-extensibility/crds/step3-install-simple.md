@@ -25,10 +25,10 @@ The -A switch means find the specified resource across **A**ll namespaces.
 
 With this you see how to define and create custom resources. However, you can see this Thermometer type is lacking details that make a thermometer unique, such as a geographic location, a digital metric, and its preferred units. We will expand on this in the next steps but before continuing let's remove this current definition.
 
-Remove the resources.
+Remove the resource.
 
 `kubectl delete trm -n default --all`{{execute}}
 
-Now, they are gone.
+Now, the resource is gone.
 
 `kubectl get trm -A`{{execute}}
