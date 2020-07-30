@@ -4,7 +4,7 @@ The `thermometer-with-columns-crd.yaml` includes the `additionalPrinterColumns` 
 
 `ccat thermometer-with-columns-crd.yaml`{{execute}}
 
-See how two new columns are defined under the `versions` group. Apply this new CRDs declaration for the thermometers.
+See how two new columns are defined under the `.versions.additionalPrinterColumns:` group. There is also a schema section that is loosely defined. Apply this new CRDs declaration for the thermometers.
 
 `kubectl apply -f thermometer-with-columns-crd.yaml`{{execute}}
 

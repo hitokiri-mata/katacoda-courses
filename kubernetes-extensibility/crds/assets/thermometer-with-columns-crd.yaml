@@ -21,9 +21,7 @@ spec:
     schema:
       openAPIV3Schema:
         type: object
-        properties:
-          spec:
-            type: object
+        x-kubernetes-preserve-unknown-fields: true
     additionalPrinterColumns:
     - name: Unit
       type: string

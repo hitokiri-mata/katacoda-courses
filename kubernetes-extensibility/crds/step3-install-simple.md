@@ -13,7 +13,7 @@ The YAML file has been created.
 
 `ccat thermometer-another.yaml`{{execute}}
 
-This declaration can be applied to your Kubernetes cluster.
+The CRD in the previous step instructed Kubernetes on what the resource `kind: Thermometer` means. Because of the CRD, this thermometer declaration can be applied to your Kubernetes cluster.
 
 `kubectl apply -f thermometer-another.yaml`{{execute}}
 
