@@ -15,9 +15,6 @@ echo '-s' >> ~/.curlrc
 docker pull -q whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
 source ~/.bashrc# Allow pygmentize for source highlighting
-docker pull -q whalebrew/pygmentize:2.6.1 &
-echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
-source ~/.bashrc
 
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
