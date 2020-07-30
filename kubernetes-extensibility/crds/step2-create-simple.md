@@ -1,8 +1,8 @@
 Let's begin by inspecting a small, example YAML file that declares a simple Thermometer.
 
-`ccat thermometer-crd.yaml`{{execute}}
+`ccat thermometer-crd-minimal`{{execute}}
 
-In this CRD definition, the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource. Later we will get to how define other attributes and their types.
+In this CRD definition, the Kind is CustomResourceDefinition and the CRD is scoped to namespaces. We also provide the plural and short alias names for the same resource. Later we will define features that we can add to this specification. In its current form, its the most simplistic.
 
 > In this scenario we are using Kubernetes v1.18 so in the CRD definition we use `apiVersion: apiextensions.k8s.io/v1`. If you are using Kubernetes v1.16 or newer, then v1 can be used, which has a [slightly improved CRD format](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definition-versioning/#specify-multiple-versions).
 
@@ -10,23 +10,23 @@ Before we give this declaration to your cluster, let's see what is currently on 
 
 `kubectl get crds`{{execute}}
 
-And of course, Kubernetes lacks any definition of a Thermometer so a small error ensues.
+And of course, Kubernetes lacks any definition of a Thermometer so a small error ensues if your try to get them.
 
 `kubectl get thermometers`{{execute}}
 
-Now, give the thermometer declaration to Kubernetes.
+Now, submit the thermometer CRD to Kubernetes.
 
-`kubectl apply -f thermometer-crd.yaml`{{execute}}
+`kubectl apply -f thermometer-crd-minimal.yaml`{{execute}}
 
-Notice the `apply` command was used instead of the `create` because we will be applying additional upgrades to the CRD in the subsequent steps. Kubernetes is now aware of this new resource.
+Notice the `apply` command was used instead of the `create` because we will be applying additional upgrades to the CRD in the subsequent steps. Kubernetes is now aware of this new resource type.
 
 `kubectl get crds`{{execute}}
 
-Thermometer is now an api-resource.
+Thermometer resources are now listed as a cluster api-resource.
 
 `kubectl api-resources | grep trms`{{execute}}
 
-The resource is also added as `/apis/d2iq/` to the Kubernetes API.
+The resource REST management is also added as `/apis/d2iq/` to the Kubernetes API.
 
 `kubectl get --raw / | jq . | grep -C3 d2iq`{{execute}}
 

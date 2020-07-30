@@ -14,7 +14,7 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspired this scen
 
 ## References ##
 
-- [Extend the Kubernetes API with CustomResourceDefinitions](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/)
+- [Extend the Kubernetes API with CustomResourceDefinitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions).
 - [Additional Printer Columns](https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#additional-printer-columns)
 - [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 - [Kubectl Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

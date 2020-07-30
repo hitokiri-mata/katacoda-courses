@@ -1,21 +1,21 @@
-Create a YAML file to declare a Thermometer resource.
+Now that Kubernetes knows about this resource type, let's add an actual resource. Create a YAML file to declare a Thermometer.
 
-```cat <<EOF > thermometer-another.yaml
+```cat <<EOF > thermometer.yaml
 apiVersion: d2iq.com/v1beta1
 kind: Thermometer
 metadata:
-    name: another-therm
+    name: simple-thermometer
     namespace: default
 EOF
 ```{{execute}}
 
-The YAML file has been created.
+The YAML file has been created. There is no data in it, just a name and namespace.
 
-`ccat thermometer-another.yaml`{{execute}}
+`ccat thermometer.yaml`{{execute}}
 
 The CRD in the previous step instructed Kubernetes on what the resource `kind: Thermometer` means. Because of the CRD, this thermometer declaration can be applied to your Kubernetes cluster.
 
-`kubectl apply -f thermometer-another.yaml`{{execute}}
+`kubectl apply -f thermometer.yaml`{{execute}}
 
 Now you have a new Thermometer resource. This is not a new Pod, Container, or Service, instead it is just a representation of a Thermometer.
 

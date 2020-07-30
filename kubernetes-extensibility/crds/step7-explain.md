@@ -8,16 +8,10 @@ With the current CRD, the `Explain` command will not work.
 
 `kubectl explain thermometer`{{execute}}
 
-An additional change to the schema allows the `Explain` command to work. Notice in this CRD definition the added setting `preserveUnknownFields` on line 15 is set to false.
+The descriptions in the schema section allow the `Explain` command to present documentation text and links.
 
-`ccat thermometer-with-validation-crd.yaml | cat -n -`{{execute}}
-
-Apply this CRD.
-
-`kubectl apply -f thermometer-with-validation-crd.yaml`{{execute}}
-
-Now the `Explain` command reveals details about the resource definition.
+The `Explain` command reveals details about the resource definition.
 
 `kubectl explain thermometer`{{execute}}
 
-The `preserveUnknownFields` is not needed for CRD v1, but it is needed for v1beta1. The combination of this field set to false AND the defined schema enables the `k explain` such as:
+There are a few more features in the CRD definition, but this scenario covers most of the ideas, specifically about defining a schema for the data. You can reinforce what you just learned at the documentation page for [Extend the Kubernetes API with CustomResourceDefinitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions).

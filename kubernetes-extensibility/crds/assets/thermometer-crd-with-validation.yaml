@@ -30,7 +30,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Thermometer Spec defines the desired state of Thermometer
+            description: Thermometer Spec defines the desired state of Thermometer. Unit of [Celsius | Fahrenheit] required. 
             type: object
             properties:
               unit:
@@ -39,7 +39,7 @@ spec:
                 anyOf: [{"pattern": "^Celsius"}, {"pattern": "^Fahrenheit"}]
             required: ["unit"]
           status:
-            description: Thermometer Status defines the possible status states for Thermometer
+            description: Thermometer Status filled in by a temperature sensor service
             type: object
             properties:
               temperature:

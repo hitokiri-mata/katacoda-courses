@@ -1,7 +1,7 @@
 apiVersion: d2iq.com/v1beta1
 kind: Thermometer
 metadata:
-    name: stockholm
+    name: stockholm-valid
     namespace: sweden
 spec:
     unit: Celsius
