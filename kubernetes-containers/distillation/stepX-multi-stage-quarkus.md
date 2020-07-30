@@ -1,6 +1,6 @@
 Consider this definition.
 
-`ccat packaging/Dockerfile-multi-stage-quarkus`{{execute}}
+`ccat -l dockerfile packaging/Dockerfile-multi-stage-quarkus`{{execute}}
 
 TODO ... explain [Quarkus](https://quarkus.io/)
 

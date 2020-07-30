@@ -17,7 +17,7 @@ Push the container image to the private registry on your Kubernetes cluster.
 
 Inspect the registry to see the container image has been pushed.
 
-`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq`{{execute}}
 
 ## Start microservice
 

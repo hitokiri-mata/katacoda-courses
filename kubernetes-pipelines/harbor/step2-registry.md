@@ -44,7 +44,7 @@ Assign an environment variable to the common registry location.
 
 Once the registry is serving, inspect the contents of the empty registry.
 
-`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq`{{execute}}
 
 When it's running and healthy, you will see an empty list.
 

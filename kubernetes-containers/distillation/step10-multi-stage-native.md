@@ -1,6 +1,6 @@
 Consider this definition.
 
-`ccat packaging/Dockerfile-multi-stage-native`{{execute}}
+`ccat -l dockerfile packaging/Dockerfile-multi-stage-native`{{execute}}
 
 Notice in the first stage the new command-line tool called `native-image`. This powerful tool takes compiled java and links it to a binary executable form native to run on the operating system. The Operating system is defined where native-image runs.
 

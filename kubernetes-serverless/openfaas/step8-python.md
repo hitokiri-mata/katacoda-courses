@@ -24,7 +24,7 @@ With the function coded and defined deploy the artifacts to OpenFaaS and it will
 
 Once built, the image will be in the container registry.
 
-`curl $REGISTRY/v2/_catalog | jq .`{{execute}}
+`curl $REGISTRY/v2/_catalog | jq`{{execute}}
 
 ## Invoke ##
 
