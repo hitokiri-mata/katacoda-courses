@@ -16,4 +16,4 @@ Deploy the public Helm chart for ElasticSearch. The chart's default settings are
 --namespace=logs \
 -f elastic-values.yaml`{{execute}}
 
-ElasticsSearch is starting and will be available in a few moments. In the meantime, move to the next installation step.
+ElasticsSearch is starting and will be available in a few moments. In the meantime, continue to the next installation step.
