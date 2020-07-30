@@ -1,4 +1,3 @@
-
 This stack is a good example of how Kubernetes can be used to bring distinct tools together so they can work in concert for a larger solution. In this case for log aggregation. Because Fluent Bit is installed as a DaemonSet it will be on every node dutifully collection the log streams and sending them to ElasticSearch where in turn Kibana offers a viewport into specific data based on your queries.
 
 It's important your application also logs the transaction [correlation IDs](https://twitter.com/samnewman/status/862255875125366786?lang=en) as a way to gather log events from a known transaction. This is also true for transaction tracing (a separate Katacoda scenario, [Transaction Tracing](https://www.katacoda.com/javajon/courses/kubernetes-observability)).

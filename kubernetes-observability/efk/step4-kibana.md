@@ -1,3 +1,6 @@
+<img align="right" src="./assets/kibana.png" width="150">
+[Kibana](https://www.elastic.co/kibana) is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
+
 Deploy Kibana. The service will be on a NodePort at 31000.
 
 `helm install kibana elastic/kibana \

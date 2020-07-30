@@ -8,10 +8,10 @@ The log events will look something like this.
 
 ```bash
 ...
-2019-03-27T11:06:25+0000 INFO takes the value and converts it to string.
-2019-03-27T11:06:29+0000 DEBUG first loop completed.
-2019-03-27T11:06:31+0000 ERROR something happened in this execution.
-2019-03-27T11:06:46+0000 WARN variable not in use.
+INFO takes the value and converts it to string.
+DEBUG first loop completed.
+ERROR something happened in this execution.
+WARN variable not in use.
 ...
 ```
 

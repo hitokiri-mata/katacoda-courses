@@ -1,5 +1,5 @@
-
-## Install ElasticSearch ##
+<img align="right" src="./assets/elasticsearch.png" width="150">
+[Elasticsearch](https://github.com/elastic/elasticsearch) is a RESTful search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is open source and developed in Java.
 
 Create a namespace for the installation target.
 
