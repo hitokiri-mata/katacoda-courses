@@ -49,5 +49,5 @@ spec:
       type: string
       jsonPath: .spec.unit
     - name: Temperature
-      type: string
+      type: number
       jsonPath: .status.temperature

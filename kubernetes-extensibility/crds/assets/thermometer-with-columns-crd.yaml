@@ -14,14 +14,6 @@ spec:
       - trm
       - trms
 
-  additionalPrinterColumns:
-    - name: Unit
-      type: string
-      JSONPath: .spec.unit
-    - name: Temperature
-      type: string
-      JSONPath: .status.temperature
-
   versions:
   - name: v1beta1  
     served: true
@@ -29,3 +21,13 @@ spec:
     schema:
       openAPIV3Schema:
         type: object
+        properties:
+          spec:
+            type: object
+    additionalPrinterColumns:
+    - name: Unit
+      type: string
+      jsonPath: .spec.unit
+    - name: Temperature
+      type: string
+      jsonPath: .status.temperature

@@ -105,7 +105,7 @@ When containers crash the current logs are not available without the `--previous
 
 `kubectl get pods`{{execute}}
 
-The Pod will run and after moments it will crash due to the failed liveness probe.  then a new Pods will start. Observe the current Pod log.
+The Pod will run and after moments it will crash due to the failed liveness probe. Soon after, a new Pod will start. Observe the current Pod log.
 
 `kubectl logs crasher`{{execute}}
 

@@ -22,7 +22,7 @@ Produce the two Pact files.
 
 `npm run test:consumer-b`{{execute}}
 
-Once complete, a new Pact json files are in the pacts directory. Inspect one of the contract files.
+Once complete, a new Pact JSON files are in the pacts directory. Inspect one of the contract files.
 
 `ccat pacts/consumer_a-aggregator.json | jq -C .`{{execute}}
 
