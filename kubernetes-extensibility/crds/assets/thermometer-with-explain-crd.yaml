@@ -5,7 +5,7 @@ metadata:
 spec:
   group: d2iq.com
 
-  version: v1
+  scope: Namespaced
 
   names:
     kind: Thermometer
@@ -13,8 +13,6 @@ spec:
     shortNames:
       - trm
       - trms
-
-  scope: Namespaced
 
   additionalPrinterColumns:
     - name: Unit
@@ -24,29 +22,33 @@ spec:
       type: string
       JSONPath: .status.temperature
 
-  validation:
-    openAPIV3Schema:
-      type: object
-      description: Thermometer is the Schema for the Thermometer API.
-      properties:
-        apiVersion:
-          type: string
-        kind:
-          type: string
-        metadata:
-          type: object
-        spec:
-          description: Thermometer Spec defines the desired state of Thermometer
-          type: object
-          properties:
-            unit:
-              description: Units in Celsius or Fahrenheit
-              type: string
-              anyOf: [{"pattern": "^Celsius"}, {"pattern": "^Fahrenheit"}]
-          required: ["unit"]
-        status:
-          description: Thermometer Status defines the possible status states for Thermometer
-          type: object
-          properties:
-            temperature:
-              type: number
+  versions:
+  - name: v1beta1  
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        description: Thermometer is the Schema for the Thermometer API.
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Thermometer Spec defines the desired state of Thermometer
+            type: object
+            properties:
+              unit:
+                description: Units in Celsius or Fahrenheit
+                type: string
+                anyOf: [{"pattern": "^Celsius"}, {"pattern": "^Fahrenheit"}]
+            required: ["unit"]
+          status:
+            description: Thermometer Status defines the possible status states for Thermometer
+            type: object
+            properties:
+              temperature:
+                type: number

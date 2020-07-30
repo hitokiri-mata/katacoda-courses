@@ -1,7 +1,7 @@
 Create a YAML file to declare a Thermometer resource.
 
 ```cat <<EOF > thermometer-another.yaml
-apiVersion: d2iq.com/v1
+apiVersion: d2iq.com/v1beta1
 kind: Thermometer
 metadata:
     name: another-therm

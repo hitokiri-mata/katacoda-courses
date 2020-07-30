@@ -1,7 +1,7 @@
 
 <img align="right" src="./assets/tekton.png" width="400">
 
-While there are numerous, complementing and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
+While there are numerous, complementing, and competing ways to implement your CI/CD flows, you may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider Tekton is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
 This tutorial shows how you can easily use Kubernetes as the underlying platform for running Tekton based Pipelines. CI/CD is a great place for your team to start understanding how to leverage the distributed and high availability nature of Kubernetes.
 
@@ -9,11 +9,11 @@ This tutorial shows how you can easily use Kubernetes as the underlying platform
 
 With these steps you have learned:
 
-- &#x2714; how to install a private registry with a UI
-- &#x2714; how to install the Tekton controller and optional CLI tool
-- &#x2714; how to declare resources specific to defining a CI/CD pipeline
-- &#x2714; about various Tekton resources like Resources, Tasks, and Pipelines
-- &#x2714; how to kick off a pipeline and inspect its progress
+- &#x2714; How to install a private registry with a UI
+- &#x2714; How to install the Tekton controller and optional CLI tool
+- &#x2714; How to declare resources specific to defining a CI/CD pipeline
+- &#x2714; About various Tekton resources like Resources, Tasks, and Pipelines
+- &#x2714; How to kick off a pipeline and inspect its progress
 
 ## Additional Information ##
 

@@ -1,5 +1,3 @@
-# Tekton on Kubernetes #
-
 The [Tekton Pipelines project](https://tekton.dev/) provides Kubernetes-style resources for declaring [CI](https://martinfowler.com/articles/continuousIntegration.html)/[CD](https://martinfowler.com/bliki/ContinuousDelivery.html) style pipelines.
 
 <img align="right" src="./tekton/assets/tekton.png" width="400">

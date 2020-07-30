@@ -1,4 +1,4 @@
-apiVersion: d2iq.com/v1
+apiVersion: d2iq.com/v1beta1
 kind: Thermometer
 metadata:
     name: gothenburg

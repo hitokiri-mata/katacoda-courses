@@ -4,7 +4,16 @@ metadata:
   name: thermometers.d2iq.com
 spec:
   group: d2iq.com
-  version: v1
+
+  scope: Namespaced
+
+  names:
+    kind: Thermometer
+    plural: thermometers
+    shortNames:
+      - trm
+      - trms
+
   additionalPrinterColumns:
     - name: Unit
       type: string
@@ -12,10 +21,11 @@ spec:
     - name: Temperature
       type: string
       JSONPath: .status.temperature
-  names:
-    kind: Thermometer
-    plural: thermometers
-    shortNames:
-      - trm
-      - trms
-  scope: Namespaced
+
+  versions:
+  - name: v1beta1  
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
