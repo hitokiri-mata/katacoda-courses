@@ -1,10 +1,10 @@
-Up to now we have just been concentrating on Go and putting you applications in containers. This Katacoda instance also is a running Kubernetes cluster.
+Up until now, we have only, been concentrating on Go and putting your applications in containers. This Katacoda instance also is a running Kubernetes cluster.
 
 `kubectl get componentstatus`{{execute}}
 
 ## Install Registry
 
-We need a registry where Kubernetes can pull the restafarian container so first install the registry on Kubernetes.
+We need a registry where Kubernetes can pull the restafarian container, so first install the registry on Kubernetes.
 
 Add the chart repository for the Helm chart to be installed.
 
@@ -40,6 +40,14 @@ Push your app container image to the private registry running on you Kubernetes 
 
 `docker push $REGISTRY/restafarian-gin:0.0.1`{{execute}}
 
+## Push to Registry
+
+Push your app container image to the private registry running on you Kubernetes cluster.
+
+`docker build -t $REGISTRY/restafarian-gin:0.0.1 .`{{execute}}
+
+`docker push $REGISTRY/restafarian-gin:0.0.1`{{execute}}
+
 ## Run Application
 
 Run the container you built in the previous step on your Kubernetes cluster. The container image comes from the registry.
@@ -50,23 +58,23 @@ Even if you have never used Kubernetes, this command should look fairly similar 
 
 `kubectl get pods`{{execute}}
 
-You applications starts fairly quickly so the Pod status may be already running creating, or initializing. The app is ready for traffic once the Pod status reports `Running`.
+You application starts fairly quickly, so the Pod status may already be running, creating, or initializing. The app is ready for traffic once the Pod status reports `Running`.
 
-However, from outside of Kubernetes at this terminal, it cannot be easily reached. Let's front the Pod with a Service. The service type will be NodePort which will expose the service on a high, random port.
+However, from outside of Kubernetes at this terminal, it cannot be easily reached. Let's front the Pod with a Service. The service type will be `NodePort`, which will expose the service on a high, random port.
 
 `kubectl expose pod restafarian --type=NodePort`{{execute}}
 
-Check the service list and notice the restafarian service is listed with a high port number.
+Check the service list and notice that the restafarian service is listed with a high port number.
 
 `kubectl get services`{{execute}}.
 
-The service is assigned a random Kubernetes NodePort (some value above 30000) and this next line will force the NodePort to 31111
+The service is assigned a random Kubernetes NodePort (some value above 30000), and this next line will force the NodePort to 31111.
 
 `kubectl patch service restafarian --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-and now the service lists the address for this exposed service's NodePort.
+And now the service lists the address for this exposed service's NodePort.
 
-`kubectl get services`{{execute}}.
+`kubectl get services`{{execute}}
 
 Obtain the public URL to the service.
 
@@ -74,7 +82,7 @@ Obtain the public URL to the service.
 
 ## Call REST API
 
-The REST interface for restafarian service can be invoked like before.
+The REST interface for the restafarian service can be invoked like before.
 
 `curl --data "topic=Cancer&idea=October+is+Breast+Cancer+Awareness+month" $SERVICE_URL/ideas/v1/ | jq .`{{execute}}
 

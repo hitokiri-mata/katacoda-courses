@@ -14,7 +14,7 @@ echo '-s' >> ~/.curlrc
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
 docker pull -q whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
-source ~/.bashrc# Allow pygmentize for source highlighting
+source ~/.bashrc
 
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/

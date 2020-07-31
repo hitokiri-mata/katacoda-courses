@@ -1,6 +1,6 @@
 <img align="right" src="./assets/k8s-logo.png" width="100">
 
-For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
+For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify that it's ready for your use.
 
 `kubectl version --short && \
 kubectl get componentstatus && \

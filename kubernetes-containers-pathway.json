@@ -15,8 +15,8 @@
       },
       {
         "course_id": "go",
-        "title": "Go Apps in Containers on Kubernetes",
-        "description": "Packaging Go Applications in Containers"
+        "title": "Go Apps to Kubernetes",
+        "description": "Packaging Go Applications in Containers."
       },
       {
         "course_id": "rust",
