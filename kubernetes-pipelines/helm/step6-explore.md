@@ -18,6 +18,8 @@ The stable chart count is consistently increasing with the maturing Kubernetes e
 
 You can also search for charts on the Helm Hub by changing the above `repo` to `hub`.
 
+> The [stable and incubator locations for charts is deprecating](https://github.com/helm/charts#deprecation-timeline). These Katacoda scenario are being updated to use the new charts as they become available. In the meantime, you will occasionally see a warning message that the chart is deprecated.
+
 Take a moment to see all the charts in Google's repo. The list is long.
 
 `helm search repo stable | sed -E "s/(.{27}).*$/\1/"`{{execute}}
@@ -26,6 +28,6 @@ The charts in [Helm Hub](https://hub.helm.sh/) can be listed as well.
 
 `helm search hub --max-col-width=80 | sed -E "s/(.{70}).*$/\1/"`{{execute}}
 
-There are over 974 charts.
+There are over 1390+ charts.
 
 Most charts are typically backed with a [GitHub repo](https://github.com/helm/charts ), a readme, and a team of people that are subject matter experts in forming these opinionated charts. As an example, take a look at the [Minio chart source](https://github.com/helm/charts/tree/master/stable/minio) and scan the README to learn how this chart can be installed and configured.
