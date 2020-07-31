@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: reg-ui
-        image: joxit/docker-registry-ui:static
+        image: joxit/docker-registry-ui:1.5-static
         env:
         - name: REGISTRY_URL
           value: "http://registry-docker-registry:5000"
