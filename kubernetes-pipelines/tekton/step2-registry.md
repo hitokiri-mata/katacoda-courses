@@ -8,9 +8,15 @@ First, add the stable chart repository.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
 
-Install the registry chart.
+Install the chart for a private container registry.
 
-`helm install registry stable/docker-registry --version 1.9.4 --namespace kube-system`{{execute}}
+```bash
+helm install registry stable/docker-registry \
+  --version 1.9.4 \
+  --namespace kube-system \
+  --set service.type=NodePort \
+  --set service.nodePort=31500
+```{{execute}}
 
 ## Install Registry Proxies as Node Daemons
 
@@ -25,11 +31,11 @@ With the added repo, install the proxy daemons.
 `helm install registry-proxy incubator/kube-registry-proxy \
   --version 0.3.2 \
   --namespace kube-system \
-  --set registry.host=private-docker-registry.kube-system \
+  --set registry.host=registry-docker-registry.kube-system \
   --set registry.port=5000 \
   --set hostPort=5000`{{execute}}
 
-This proxy is deployed as a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) on every node in your cluster. Internal to all the container engines in the cluster, the registry is now available as a service for pushing and pulling container images. Pods can pull images from the registry at http://localhost:5000 and the proxies resolve the requests to https://private-docker-registry.kube-system:5000.
+This proxy is deployed as a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) on every node in your cluster. Internal to all the container engines in the cluster, the registry is now available as a service for pushing and pulling container images. Pods can pull images from the registry at http://localhost:5000 and the proxies resolve the requests to https://registry-docker-registry.kube-system:5000.
 
 ## Install Registry UI
 

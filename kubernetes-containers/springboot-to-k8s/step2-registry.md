@@ -6,7 +6,7 @@ Add the chart repository for the Helm chart to be installed.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
 
-Install the chart.
+Install the chart for a private container registry.
 
 ```bash
 helm install registry stable/docker-registry \

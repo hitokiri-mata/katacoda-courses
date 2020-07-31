@@ -6,7 +6,7 @@ Add the chart repository for the Helm chart to be installed.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
 
-Install the chart.
+Install the chart for a private container registry.
 
 ```bash
 helm install registry stable/docker-registry \
@@ -24,7 +24,7 @@ The Docker tag, push and pull commands must all have the same host name for the 
 
 ```bash
 kubectl port-forward --namespace kube-system \
-$(kubectl get po -n kube-system | grep private-docker-registry | \
+$(kubectl get po -n kube-system | grep registry-docker-registry | \
 awk '{print $1;}') 5000:5000 &
 ```{{execute}}
 
@@ -34,7 +34,7 @@ Assign an environment variable to the common registry location.
 
 It will be a few moments before the registry deployment reports it's _Available_ with a _1_.
 
-`kubectl get deployments private-docker-registry --namespace kube-system`{{execute}}
+`kubectl get deployments registry-docker-registry --namespace kube-system`{{execute}}
 
 Once the registry is serving, inspect the contents of the empty registry.
 

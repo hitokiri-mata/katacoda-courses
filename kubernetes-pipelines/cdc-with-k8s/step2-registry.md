@@ -10,7 +10,7 @@ Add the chart repository for the Helm chart to be installed.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
 
-Install the chart.
+Install the chart for a private container registry.
 
 ```bash
 helm install registry stable/docker-registry \
@@ -65,7 +65,7 @@ With the added repo, install the proxy daemons.
 `helm install registry-proxy incubator/kube-registry-proxy \
   --version 0.3.2 \
   --namespace kube-system \
-  --set registry.host=private-docker-registry.kube-system \
+  --set registry.host=registry-docker-registry.kube-system \
   --set registry.port=5000 \
   --set hostPort=5000`{{execute}}
 
