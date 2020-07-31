@@ -1,6 +1,10 @@
 A common Helm _chart_ is predefined for installing _Kubeless_. Normally, popular charts appear in the [curated Helm chart repository](https://github.com/kubernetes/charts) and there are plans to move Kubeless there. For now, this `repo add` command will allow Helm to find the Kubeless chart:
 
-`helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/`{{execute}}
+`helm install --name my-kubeless incubator/kubeless \
+  --version 2.1.1 \
+  --namespace kubeless \
+  --set ui.enabled=true \
+  --set rbac.create=true`{{execute}}
 
 Create a namespace for the installation target.
 

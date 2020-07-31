@@ -6,7 +6,7 @@ Before we can proceed, set up a ServiceAccount.
 
 This example is simple because both the readability of the source code repo and the container image registry are not protected with a secret. Therefore, we are just setting up a simple role.
 
-Now a ServiceAccount named "service-account" is defined.
+Now a ServiceAccount named _service-account_ is defined.
 
 `kubectl get ServiceAccounts`{{execute}}
 

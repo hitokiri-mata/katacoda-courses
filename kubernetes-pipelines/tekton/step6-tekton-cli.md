@@ -2,9 +2,9 @@ Because Tekton is a Kubernetes Operator, it can be completely administered using
 
 Install the `tkn` command-line tool by getting the tar and extracting the binary to the path.
 
-`curl -LO https://github.com/tektoncd/cli/releases/download/v0.10.0/tkn_0.10.0_Linux_x86_64.tar.gz`{{execute}}
+`curl -LO https://github.com/tektoncd/cli/releases/download/v0.11.0/tkn_0.11.0_Linux_x86_64.tar.gz`{{execute}}
 
-`tar xvzf tkn_0.10.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn`{{execute}}
+`tar xvzf tkn_0.11.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn`{{execute}}
 
 More details on its various installation forms is in the [installation documentation](https://github.com/tektoncd/cli).
 

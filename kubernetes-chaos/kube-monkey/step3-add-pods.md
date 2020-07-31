@@ -8,7 +8,7 @@ Next, add a few more Pods to a second namespace.
 
 `kubectl apply --namespace more-apps -f ghost.yaml`{{execute}}
 
-The Deployments and Pods are labeled to both mark these Pods a potential victim targets of the Kube Monkey Pod killer. They are also labeled for easy observability. See the labels applied to the deployment and Pod template.
+The Deployments and Pods are labeled to mark these Pods a potential victim targets of the Kube Monkey Pod killer. They are also labeled for easy observability. See the labels applied to the deployment and Pod template.
 
 `ccat nginx.yaml`{{execute}}
 

@@ -16,9 +16,12 @@ Add the chart repository for the Helm chart to be installed.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
 
-Using Helm, install the SonarQube Helm chart with a few custom values.
+Install the SonarQube Helm chart with a few custom values.
 
-`helm install sonar stable/sonarqube --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
+`helm install sonar stable/sonarqube \
+  --version 4.0.1 \
+  --namespace sonarqube \
+  --values sonarqube-values.yaml`{{execute}}
 
 This chart bootstraps a SonarQube instance along with a PostgreSQL database. SonarQube also loads several plugins defined in the Helm chart configuration. To get a status of the deployment availability run this inspection.
 

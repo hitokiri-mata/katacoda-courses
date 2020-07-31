@@ -58,13 +58,16 @@ This means when you push to localhost:5000 your container images will be routed 
 
 But what happens in the Pod specification when you want to pull the image using the tag localhost:5000? We can add a proxy that runs as a DaemonSet that will resolve localhost:5000 to the registry whenever a Pod requests a container from localhost:5000. Install the proxy.
 
-Add the repo where the chart is hosted.
-
 `helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator`{{execute}}
 
-Install the chart.
+With the added repo, install the proxy daemons.
 
-`helm install registry-proxy incubator/kube-registry-proxy -n kube-system --set registry.host=registry-docker-registry.kube-system.svc.cluster.local --set registry.port=5000 --set hostPort=5000`{{execute}}
+`helm install registry-proxy incubator/kube-registry-proxy \
+  --version 0.3.2 \
+  --namespace kube-system \
+  --set registry.host=private-docker-registry.kube-system \
+  --set registry.port=5000 \
+  --set hostPort=5000 \`{{execute}}
 
 For mature environments, you would have an official host name with a load balancer and an ingress that would resolve to a hardened registry service, albeit still running on Kubernetes.
 

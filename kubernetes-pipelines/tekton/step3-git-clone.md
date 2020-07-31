@@ -26,4 +26,4 @@ Here are the standard Deployment and Service manifests that start the applicatio
 
 `ccat src/deploy.yaml`{{execute}}
 
-At this point, we could build the application into a container and deploy on Kubernetes using a series of command-line tools. However, most things deployed to Kubernetes should be infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)), including the recipes that continuously deliver application updates as we fix and evolve our applications. This CI/CD process is often captured in source code for CI/CD pipelines. Tekton allows you to declare your pipelines in code.
+At this point, we could build the application into a container and deploy on Kubernetes using a series of command-line tools. However, most things deployed to Kubernetes should be infrastructure-as-code, including the recipes that continuously deliver application updates as we fix and evolve our applications. This CI/CD process is often captured in source code for CI/CD pipelines. With Tekton your pipelines are declared in code.

@@ -2,6 +2,10 @@ Create a namespace for the installation target.
 
 `kubectl create namespace rabbit`{{execute}}
 
+Add the chart repository for the Helm chart to be installed.
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`{{execute}}
+
 Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
 Add the repo where the chart is hosted.
