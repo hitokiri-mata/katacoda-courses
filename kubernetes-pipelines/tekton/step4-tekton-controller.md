@@ -1,8 +1,6 @@
 The Tekton engine will run your pipelines. Tekton follows the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton
 
-`kubectl apply -f https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.13.2/release.yaml`{{execute}}
-
-TODO DEPRECATING (latest usage): `kubectl apply --filename https://storage.googleapis.com/tekton-releases/latest/release.yaml`{{execute}}
+`kubectl apply -f https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.14.2/release.yaml`{{execute}}
 
 Tekton is starting in the `tekton-pipelines` namespace. Verify Tekton is running.
 

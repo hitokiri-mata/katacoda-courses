@@ -67,7 +67,7 @@ With the added repo, install the proxy daemons.
   --namespace kube-system \
   --set registry.host=private-docker-registry.kube-system \
   --set registry.port=5000 \
-  --set hostPort=5000 \`{{execute}}
+  --set hostPort=5000`{{execute}}
 
 For mature environments, you would have an official host name with a load balancer and an ingress that would resolve to a hardened registry service, albeit still running on Kubernetes.
 

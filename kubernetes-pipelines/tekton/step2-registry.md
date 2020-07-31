@@ -27,7 +27,7 @@ With the added repo, install the proxy daemons.
   --namespace kube-system \
   --set registry.host=private-docker-registry.kube-system \
   --set registry.port=5000 \
-  --set hostPort=5000 \`{{execute}}
+  --set hostPort=5000`{{execute}}
 
 This proxy is deployed as a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) on every node in your cluster. Internal to all the container engines in the cluster, the registry is now available as a service for pushing and pulling container images. Pods can pull images from the registry at http://localhost:5000 and the proxies resolve the requests to https://private-docker-registry.kube-system:5000.
 
