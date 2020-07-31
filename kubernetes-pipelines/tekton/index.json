@@ -90,7 +90,7 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
       {"name": "Registry", "port": 31000},
-      {"name": "Tekton Dashboard", "port": 31500},
+      {"name": "Tekton Dashboard", "port": 32500},
       {"name": "Application", "port": 32000}
     ]
     },
