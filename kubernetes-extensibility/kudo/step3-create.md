@@ -101,6 +101,6 @@ EOF
 
 There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `first-operator/operator/operator.yaml`{{open}} file just after the `kudoVersion: 0.10.0` line. Add this line:
 
-`kubernetesVersion: 1.14.0`{{copy}}
+`kubernetesVersion: 1.18.0`{{copy}}
 
 That's all it takes to write a basic KUDO Operator. In the next steps well package it up and run the Operator.
