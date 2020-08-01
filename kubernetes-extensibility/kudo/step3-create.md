@@ -4,7 +4,7 @@ In this step you will create an Operator using the KUDO CLI to generate the KUDO
 
 Create a directory for the project.
 
-`mkdir cd first-operator`{{execute}}
+`cd first-operator`{{execute}}
 
 Use the `package new` command to generate the source code skeleton.
 
