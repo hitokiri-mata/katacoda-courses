@@ -29,7 +29,7 @@ This allows you to schedule a set of activities (also termed a job or batch) at 
 
 Schedule the at-test.txt commands to run at in a minute. Minutes are the smallest units.
 
-`at -M -v -f at-example.txt 'now + 1 minute'`{{execute}}
+`at -M -v -f /opt/go/src/at-example.txt 'now + 1 minute'`{{execute}}
 
 # Observe Results
 

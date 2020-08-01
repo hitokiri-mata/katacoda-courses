@@ -1,7 +1,7 @@
 Install the [release of Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder/releases) that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book.
 
 ```bash
-version=2.3.0
+version=2.3.1
 os=$(go env GOOS)
 arch=$(go env GOARCH)
 

@@ -76,7 +76,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "at-example.txt", "target": "/opt/go/src", "chmod": "+x"},
+        {"file": "at-example.txt", "target": "root/go", "chmod": "+x"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -84,7 +84,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/opt/go/src",
+    "uieditorpath": "/root/go",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
