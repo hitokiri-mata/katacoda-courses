@@ -8,13 +8,13 @@ So this will no longer start a Job, it starts a Pod. Let's do it anyways see wha
 
 ```bash
 kubectl run -i oneshot \
-  --image=gcr.io/kuar-demo/kuard-amd64:1 \
+  --image=gcr.io/kuar-demo/kuard-amd64:blue \
   --restart=OnFailure \
   -- \
      /kuard \
      --keygen-enable \
      --keygen-exit-on-complete \
-     --keygen-num-to-gen 10```{{execute}}
+     --keygen-num-to-gen 5```{{execute}}
 
 Once complete you will see no Jobs where started.
 

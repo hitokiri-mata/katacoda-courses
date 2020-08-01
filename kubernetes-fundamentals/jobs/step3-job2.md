@@ -8,7 +8,11 @@ To invoke this Job declaration use the _apply_ command.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 
-The job can be inspected with the _describe_ command.
+The Job can be listed with  
+
+`kubectl get jobs`{{execute}}
+
+The Job can be inspected with the _describe_ command.
 
 `kubectl describe jobs oneshot`{{execute}}
 

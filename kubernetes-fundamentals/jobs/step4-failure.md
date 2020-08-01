@@ -1,5 +1,3 @@
-(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
-
 Failure is embraced as a first-class visitor in Kubernetes. All things are expected to fail at some point. Let's see the behavior when a job fails.
 
 By default, the _kaurd_ container completes with an success exit code of 0. A command can be passed to force a different exit code. Inspect this job definition that forces the container to end with an exit code of 1 after generating 3 keys.
@@ -14,7 +12,25 @@ After it runs for a moment, inspect the Pod status.
 
 `kubectl get pod --selector job-name=oneshot`{{execute}}
 
-In a moment, notice the column _RESTARTS_ reports Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. This is because the job was submitted with the `restartPolicy: OnFailure` setting. Alternatively, the policy could have been set to `Never` to prevent the restarts.
+In a moment, notice the column _RESTARTS_ reports Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. 
+
+```bash
+master $ kubectl get pod --selector job-name=oneshot
+NAME            READY   STATUS   RESTARTS   AGE
+oneshot-zsmzs   0/1     Error    1          38s
+```
+```bash
+$ kubectl get pod --selector job-name=oneshot
+NAME            READY   STATUS             RESTARTS   AGE
+oneshot-zsmzs   0/1     CrashLoopBackOff   **2**          79s
+```
+```bash
+kubectl get pod --selector job-name=oneshot
+NAME            READY   STATUS    RESTARTS   AGE
+oneshot-zsmzs   1/1     Running   **4**          2m19s
+```
+
+This is because the job was submitted with the `restartPolicy: OnFailure` setting. Kubernetes will continue to repeat the lifecycle of the Job. Alternatively, the policy could have been set to `Never` to prevent the restarts.
 
 Cleanup this job with the _delete_ command.
 
