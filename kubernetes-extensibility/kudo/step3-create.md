@@ -4,9 +4,9 @@ In this step you will create an Operator using the KUDO CLI to generate the KUDO
 
 Create a directory for the project.
 
-`mkdir first-operator && cd first-operator`{{execute}}
+`mkdir cd first-operator`{{execute}}
 
-Use the `package new` command to generator the source code skeleton.
+Use the `package new` command to generate the source code skeleton.
 
 `kubectl kudo package new first-operator`{{execute}}
 
@@ -99,7 +99,7 @@ EOF
 
 ## Special Adjustment for Kubernetes Version
 
-There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: 0.10.0` line. Add this line:
+There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: n.n.n` line. Add this line:
 
 `kubernetesVersion: 1.18.0`{{copy}}
 
