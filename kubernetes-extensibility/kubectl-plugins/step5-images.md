@@ -1,8 +1,8 @@
-<img align="right" src="./assets/containers-unsplash.jpg" width="200">
+<img align="right" src="./assets/containers-unsplash.jpg" width="250">
 
 ## Images and Outdated Plugins
 
-Developers, architects and administrators can all get insights into what's running on the cluster just by looking at the containers.
+Developers, architects, and administrators can all get insights into what's running on the cluster just by looking at the containers.
 
 Plugins:
 - **Image**: List container images used in the cluster.

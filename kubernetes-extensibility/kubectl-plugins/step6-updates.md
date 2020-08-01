@@ -2,11 +2,11 @@ At this point you have several plugins installed.
 
 `kubectl krew list`{{execute}}
 
-At any time you can update krew.
+At any time you can update Krew.
 
 `kubectl krew update`{{execute}}
 
-And, update the currently install plugins.
+And, upgade the currently installed plugins.
 
 `kubectl krew upgrade`{{execute}}
 

@@ -1,8 +1,6 @@
-# Kubernetes KubeCtl Plugins #
+![Kubernetes](./assets/kubernetes.png "Kubernetes")
 
-![Kubernetes](/javajon/courses/kubernetes-extensibility/kubectl-plugins/assets/kubernetes.png "Kubernetes")
-
-The Kubectl command-line tool can be extended with plugins. These useful plugins are mostly underutilized by the community. Here you will explore the list of [community supported plugins](https://github.com/kubernetes-sigs/krew-index/) that can be added to your kubectl CLI tool. They really are quite handy.
+The Kubectl command-line tool can be extended with plugins. These useful plugins are mostly underutilized by the community. Here you will explore the list of [community supported plugins](https://github.com/kubernetes-sigs/krew-index/) that can be added to your kubectl CLI tool. They are quite handy.
 
 > Caution: Kubectl plugins available via the Krew plugin index are not audited for security. You should install and run third-party plugins at your own risk, since they are arbitrary programs running on your machine.
 
