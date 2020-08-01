@@ -6,7 +6,17 @@ A common Helm _chart_ is predefined for installing OpenFaaS. Popular incubating 
 
 Install the OpenFaaS operator chart referenced from that repository.
 
-`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set operator.create=true --set basic_auth=true --set rbac=false --set faasIdler.dryRun=false --set faasIdler.inactivityDuration=10s`{{execute}}
+```bash
+helm upgrade openfaas --install openfaas/openfaas \
+  --version 6.0.0 \
+  --namespace openfaas 
+  --set functionNamespace=openfaas-fn \
+  --set operator.create=true \
+  --set basic_auth=true \
+  --set rbac=false \
+  --set faasIdler.dryRun=false \
+  --set faasIdler.inactivityDuration=10s
+```{{execute}}
 
 The `dryRun` property is set to false so we can explore scaling near the end of this course.
 

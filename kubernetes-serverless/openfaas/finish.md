@@ -1,4 +1,3 @@
-
 OpenFaaS is an independent project created by [Alex Ellis](https://www.alexellis.io/) that is being built and shaped by a growing community of contributors. Kubernetes provides this serverless framework a resilient and scalable cluster where OpenFaaS can complement other solutions in the same shared data center.
 
 ## Lessons Learned ##
@@ -25,7 +24,7 @@ With these steps you have learned:
 - [Video: Scaling in action with Prometheus](https://www.youtube.com/watch?v=0DbrLsUvaso)
 
 > \* [Faas-netes chart versus OpenFaaS Operator chart](https://github.com/openfaas/faas-netes/tree/master/chart/openfaas#faas-netes-vs-openfaas-operator)
-> The faas-netes controller is the most tested, stable and supported version of the OpenFaaS integration with Kubernetes. In contrast the OpenFaaS Operator (used in this scenario) is based upon the codebase and features from faas-netes, but offers a tighter integration with Kubernetes through [CustomResourceDefinitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRD). This means you can type in `kubectl get functions` to list the CRD that make this `Kind: function` possible.
+> The faas-netes controller is the most tested, stable, and supported version of the OpenFaaS integration with Kubernetes. In contrast, the OpenFaaS Operator (used in this scenario) is based upon the codebase and features from faas-netes, but offers tighter integration with Kubernetes through [CustomResourceDefinitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRD). This means you can type in `kubectl get functions` to list the CRD that makes this `Kind: function` possible.
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

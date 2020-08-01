@@ -1,4 +1,4 @@
-A good system will have features in place to observe its status, health and activity. Prometheus is a de facto solution for monitoring the metrics of a Kubernetes clusters and its applications. Prometheus is a time series database and with it, various metrics of the functions can be stored over time and observed. The OpenFaaS Helm chart includes an installation of Prometheus. OpenFaaS also is configured to expose to Prometheus key metrics of the functions and its management.
+A good system will have features in place to observe its status, health, and activity. Prometheus is a de facto solution for monitoring the metrics of Kubernetes clusters and its applications. Prometheus is a time series database and with it, various metrics of the functions can be stored over time and observed. The OpenFaaS Helm chart includes an installation of Prometheus. OpenFaaS also is configured to expose to Prometheus key metrics of the functions and its management.
 
 ## Prometheus ##
 
@@ -41,6 +41,6 @@ Expose the dashboard as a service on a known port.
 
 `kubectl patch service grafana --namespace=openfaas --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31122}]'`{{execute}}
 
-With these changes, you can view the Grafana dashboard. On the right, there is a tab called _Grafana_ or from this link: https://[[HOST_SUBDOMAIN]]-31122-[[KATACODA_HOST]].environments.katacoda.com/dashboard/db/openfaas
+With these changes you can view the Grafana dashboard. On the right, there is a tab called _Grafana_ or from this link: https://[[HOST_SUBDOMAIN]]-31122-[[KATACODA_HOST]].environments.katacoda.com/dashboard/db/openfaas
 
 The default credentials are admin/admin.

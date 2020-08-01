@@ -2,7 +2,7 @@ Deploy the _figlet_ function.
 
 `faas-cli store deploy figlet --label "com.openfaas.scale.zero=true"`{{execute}}
 
-Notice the label passed in ensures the functions deployed, but the Pod is not running. A key feature of functions is when idle, consume no resources, and upon activity scale-up hot instances. When activity quiets the Pods are released. OpenFaaS manages these scaling details for you, based on load metrics metered to Prometheus.
+Notice the label passed in ensures the functions deployed, but the Pod is not running. A key feature of functions is when idle, consume no resources and upon activity scale up hot instances. When activity quiets the Pods are released. OpenFaaS manages these scaling details for you, based on load metrics metered to Prometheus.
 
 Exercise the _figlet_ function.
 
