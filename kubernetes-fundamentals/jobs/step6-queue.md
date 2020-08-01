@@ -1,4 +1,6 @@
-Jobs are an effective mechanism to accept work from a queue and publish the results downstream when completed. Multiple Jobs can run asynchronously and in parallel to accept enqueued items and deque the items when completed. 
+(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
+
+Jobs are an effective mechanism to accept work from a queue and publish the results downstream when completed. Multiple Jobs can run asynchronously and in parallel to accept enqueued items and deque the items when completed.
 
 This example starts up a simple queuing service, enqueues keygen request work items, then parallel jobs process the work items by submitting they keygen results back to the queue.
 
@@ -10,11 +12,13 @@ Start the work queue.
 
 ## Submit Items to Queue ##
 
-Produce a collection of work items and place onto a queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
+Produce a collection of work items and place onto queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
 
 `QUEUE_POD=$(kubectl get pods -l app=work-queue,component=queue -o jsonpath='{.items[0].metadata.name}')`{{execute}}
 
 `kubectl port-forward $QUEUE_POD 8080:8080 > /dev/null &`{{execute}}
+
+After the port-forward command press _enter_ to restore the command prompt.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-6-load-queue.sh | bash`{{execute}}
 
@@ -48,7 +52,7 @@ Create a parallel consumer Job.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
 
-Watch the Pod activity, queue, and Kubernetes dashboard.
+Watch the activity of pods, queue, and Kubernetes dashboard.
 
 `kubectl get pods`{{execute}}
 

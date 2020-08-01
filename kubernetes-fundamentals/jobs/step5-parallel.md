@@ -1,4 +1,6 @@
-A huge advantage of running applications on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be long-running and incur notable CPU and memory consumption. A technique to solve performance problems is to run the jobs in parallel. Instead of each job creating a series of keys serially,3 have multiple jobs work on smaller units of work.
+(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
+
+A huge advantage of running applications on Kubernetes is there are typically large amounts of resources to utilize. So far these jobs have been working serially and underutilizing the resources. Often real jobs may be long-running and incur notable CPU and memory consumption. A helpful way to solve performance problems is by running the jobs in parallel. Instead of each job creating a series of keys serially,3 have multiple jobs work on smaller units of work.
 
 ## A Race ##
 
@@ -14,7 +16,7 @@ This time we will watch for is the duration result. By inspecting the status tim
 
 `echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
-Once the `seconds` duration value appears, take note of it.
+Once the seconds number appears, take note of it.
 
 `export SERIAL_DURATION=$(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime)))`{{execute}}
 
@@ -28,7 +30,7 @@ Here is a descriptor that will run the job in parallel. Inspect the definition
 
 Notice now in the `spec:` the two settings have been applied to ensure the parallelism features is enabled `parallelism: 5` and `completions: 10`.
 
-The template runs 10 jobs where each job generates 10 keys. For a better race comparison we want 10 jobs that each generate a single key, so the template will be slightly modified using _sed_ to change the `keygen-num-to-gen` value from 10 to 1.
+The template runs 10 jobs where each job generates 10 keys. For a better race comparison, we want 10 jobs that each generate a single key, so the template will be slightly modified using _sed_ to change the `keygen-num-to-gen` value from 10 to 1.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-3-job-parallel.yaml | sed '/num-to-gen=/s/=.*/=1"/' > job-parallel.yaml`{{execute}}
 
@@ -44,7 +46,7 @@ Again, by inspecting the status times in the job's YAML the duration time can be
 
 `echo "Duration: $(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime))) seconds"`{{execute}}
 
-Once the number of seconds appears, take note of it.
+Once the seconds number appears, take note of it.
 
 `export PARALLEL_DURATION=$(expr $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job parallel -o json | jq -r .status.startTime)))`{{execute}}
 
@@ -53,6 +55,7 @@ Once the number of seconds appears, take note of it.
 ## Race Results ##
 
 Let's take a look at the race results between the serial and parallel execution of the key generation job.
+
 
 `clear && echo -e "For over a decade prophets have voiced the contention that the organization of a single computer has reached its limits and that truly significant advances can be made only by interconnection of a multiplicity of computers. - Gene Amdahl in 1967.\n\nThe results are in:\nSerial: $SERIAL_DURATION\nParallel: $PARALLEL_DURATION"`{{execute}}
 

@@ -1,3 +1,5 @@
+(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
+
 It's generally preferable to define resources such as Jobs in resource manifests such as this YAML file.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
@@ -10,7 +12,7 @@ The job can be inspected with the _describe_ command.
 
 `kubectl describe jobs oneshot`{{execute}}
 
-When Pods run the output from the containers are captured in the Pod's /var/log directory. If you know the name of the specific job instance, the _logs_ command can extract that log. With a little help from _grep and cut_ the name of the job is extracted and passed to the _logs_ command.
+When Pods run the output from the containers is captured in the Pod's /var/log directory. If you know the name of the specific job instance, the _logs_ command can extract that log. With a little help from _grep and cut_ the name of the job is extracted and passed to the _logs_ command.
 
 `export JOB_ID=$(kubectl describe jobs oneshot | grep -o 'Created pod: .*' | cut -f3- -d' ')`{{execute}}
 
