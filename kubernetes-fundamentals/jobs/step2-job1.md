@@ -22,7 +22,7 @@ Once complete you will see no Jobs where started.
 
 Instead, a single Pod was started and the application ran to completion performing its generation of ten keys.
 
-`kubectl get pods -l app=oneshot`{{execute}}
+`kubectl get pods`{{execute}}
 
 Take a peek at the [Kubernetes Dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) (tab above the command line) and see how the Job is created as a resource. In the dashboard, explore the details and logs of the Job and Pod that just ran. To obtain the login token run `token.sh`{{execute}} and copy/paste the green token.
 
