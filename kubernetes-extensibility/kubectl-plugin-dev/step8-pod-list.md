@@ -4,7 +4,7 @@ Currently, if you test the Pod list command it returns just a placeholder messag
 
  We want it to instead return a list of Pods. This step will add some code that enumerates the Pods. The Pods will be in a list of [structure object](https://www.golangprograms.com/go-language/struct.html) references.
 
-Click on this file to open it in the editor `k8s-cli/pkg/example/cmd/pod_list.go`{{open}}
+Click on this file to open it in the editor `pkg/example/cmd/pod_list.go`{{open}}
 
 ## Add Imports
 

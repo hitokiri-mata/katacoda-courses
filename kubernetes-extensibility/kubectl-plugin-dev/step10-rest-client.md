@@ -6,9 +6,9 @@ Currently, if you test the Pod list2 (alternate form with the `2`) command it re
 
 ## Add REST Client
 
-At the bottom of the file `k8s-cli/pkg/example/cmd/pod_list.go`{{open}} in the `run2` function find the code `fmt.Printf("add pod list code using the rest client\n")` and replace with the following:
+At the bottom of the file `pkg/example/cmd/pod_list.go`{{open}} in the `run2` function find the code `fmt.Printf("add pod list code using the rest client\n")` and replace with the following:
 
-Get a client, but first, we are going to use the **REST client**. Look in the `k8s-cli/pkg/example/env/environment.go`{{open}} file at the differences.
+Get a client, but first, we are going to use the **REST client**. Look in the `pkg/example/env/environment.go`{{open}} file at the differences.
 
 ```go
   client := env.NewRestClient(&Settings)

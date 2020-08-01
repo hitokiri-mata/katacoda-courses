@@ -2,7 +2,7 @@ Often with commands, like `Pods` you may want to add a command flag (or switch).
 
 ## Add Status Flag
 
-In the same file `k8s-cli/pkg/example/cmd/pod_list.go`{{open}}:
+In the same file `pkg/example/cmd/pod_list.go`{{open}}:
 
 - Near the top of the file in the `podListCmd struct` find where it reads `// status boolean` and add the following line `status bool`{{copy}} to the struct.
 - In the middle of the file in BOTH the `newPodListCmd` AND `newPodList2Cmd` functions find where it reads `// status flag` and add the following code to add a flag state setting logic for both functions.

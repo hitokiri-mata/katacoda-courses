@@ -10,7 +10,7 @@ and the request does not work, no new Pods.
 
 # Code Add Pod Logic
 
-You will be working with the file `k8s-cli/pkg/example/cmd/pod_add.go`{{open}}.
+You will be working with the file `pkg/example/cmd/pod_add.go`{{open}}.
 
 Like you did for `pod_list`, add these imports at the top of the `pod_add` file.
 
