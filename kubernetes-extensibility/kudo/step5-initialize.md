@@ -7,6 +7,7 @@ The `init` instruction will:
 - Deploy KUDO CRDs
 - Create kudo-system namespace
 - Deploy the KUDO controller
+- Certificate manager feature is disabled for this scenario
 
 Verify the KUDO controller is initialized when the `kudo-controller-manager-0` Pod has a **Running** status.
 
