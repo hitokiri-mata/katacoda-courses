@@ -10,7 +10,14 @@ First, run the job we ran in the previous step 2 and have it generate 10 keys.
 
 `kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}
 
-This time we will watch for is the duration result. By inspecting the status times in the job's YAML the duration time can be extracted. It will be about 30 seconds before the end time is recorded. If a message `invalid date /syntax error` appears, it just means the `completionTime` has not been recorded yet.
+This time we will watch for is the duration result. By inspecting the status times in the job's YAML the duration time can be extracted. It will be about 30 seconds before the end time is recorded. If a message: 
+
+```bash
+date: invalid date ‘null’
+expr: syntax error
+```
+
+appears, it just means the job is not done and the `completionTime` has not been recorded yet.
 
 `echo "Duration: $(expr $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.completionTime)) - $(date +%s -d $(kubectl get job oneshot -o json | jq -r .status.startTime))) seconds"`{{execute}}
 

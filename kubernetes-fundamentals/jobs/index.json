@@ -58,7 +58,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Queue Portal", "port": 31001}
+      {"name": "Queue Portal", "href": "https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com"}
     ]
   },
   "backend": {

@@ -50,7 +50,7 @@ Inspect the new Jobs that will consume and work on these enqueued items. Notice 
 
 Create a parallel consumer Job.
 
-`kubectl apply -f $(curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-4-rs-queue.yaml | sed 's|extensions/v1beta1|apps/v1|')`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
 
 Watch the activity of pods, queue, and Kubernetes dashboard.
 
