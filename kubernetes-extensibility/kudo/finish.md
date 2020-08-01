@@ -1,4 +1,3 @@
-
 Although this was a very simple Operator, you should now be familiar with the tooling and procedures needed to start developing real Operators used to solve some of your more intricate software lifecycle management challenges.
 
 Using KUDO you can deploy your applications, have the tools needed to operate them, and understand how they're behaving – all without a Ph.D. in Kubernetes.
