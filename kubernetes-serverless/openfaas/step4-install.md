@@ -9,7 +9,7 @@ Install the OpenFaaS operator chart referenced from that repository.
 ```bash
 helm upgrade openfaas --install openfaas/openfaas \
   --version 6.0.0 \
-  --namespace openfaas 
+  --namespace openfaas \
   --set functionNamespace=openfaas-fn \
   --set operator.create=true \
   --set basic_auth=true \
