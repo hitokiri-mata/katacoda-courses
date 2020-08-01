@@ -54,7 +54,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
-    "uieditorpath": "/root",
+    "uieditorpath": "/root/first-operator",
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [

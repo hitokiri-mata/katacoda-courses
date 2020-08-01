@@ -2,7 +2,7 @@ You control the KUDO development using the KUDO plugin that extends your kubectl
 
 ## Install Krew
 
-<img align="right" src="./assets/krew.png" width="300">
+<img align="right" src="./assets/krew.png" width="200">
 
 Krew is a tool that helps you discover, install, and manage plugins registered with your kubectl tool. It is similar to tools like apt, dnf or brew.
 
