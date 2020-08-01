@@ -1,6 +1,6 @@
 <img align="right" src="./assets/krew.png" width="300">
 
-Krew is a tool that helps you discover, install, and manage plugins registered with your kubectl tool. It is similar to tools like apt, dnf, or brew.
+Krew is a tool that helps you discover, install, and manage plugins registered with your kubectl tool. It's similar to tools like apt, dnf, or brew.
 
 There are a [few ways to install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/) based on your environment, but for this Katacoda scenario, we choose the recommended commands for Bash. Install Krew as a plugin for kubectl.
 
