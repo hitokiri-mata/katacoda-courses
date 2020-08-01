@@ -1,4 +1,4 @@
-<img align="right" src="./assets/k8s-up-and-running-2nd-book.jpg">
+<img align="right" src="./assets/k8s-up-and-running-2nd-book.jpg" width="400">
 
 This scenario takes you through the basics of [Job resources](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) on Kubernetes. Chapter 12 of the 2019 [O'Reilly Kubernetes Up & Running, 2nd edition](https://learning.oreilly.com/library/view/kubernetes-up-and/9781492046523/) book from [Kelsey Hightower](https://twitter.com/kelseyhightower), [Brendan Burns](https://twitter.com/BrendanBurns), and [Joe Beda](https://blog.heptio.com/@jbeda) has a very nice explanation of Jobs. Therefore, this scenario is simply a manifestation of their explanation in Katacoda form.
 
