@@ -1,5 +1,3 @@
-(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
-
 It's generally preferable to define resources such as Jobs in resource manifests such as this YAML file.
 
 `curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-1-job-oneshot.yaml`{{execute}}

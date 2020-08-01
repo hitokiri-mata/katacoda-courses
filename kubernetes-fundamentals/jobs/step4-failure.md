@@ -15,19 +15,19 @@ After it runs for a moment, inspect the Pod status.
 In a moment, notice the column _RESTARTS_ reports Kubernetes is attempting to re-run the job in hopes the subsequent executions will pass. 
 
 ```bash
-master $ kubectl get pod --selector job-name=oneshot
+$ kubectl get pod --selector job-name=oneshot
 NAME            READY   STATUS   RESTARTS   AGE
 oneshot-zsmzs   0/1     Error    1          38s
 ```
 ```bash
 $ kubectl get pod --selector job-name=oneshot
 NAME            READY   STATUS             RESTARTS   AGE
-oneshot-zsmzs   0/1     CrashLoopBackOff   **2**          79s
+oneshot-zsmzs   0/1     CrashLoopBackOff   2          79s
 ```
 ```bash
-kubectl get pod --selector job-name=oneshot
+$ kubectl get pod --selector job-name=oneshot
 NAME            READY   STATUS    RESTARTS   AGE
-oneshot-zsmzs   1/1     Running   **4**          2m19s
+oneshot-zsmzs   1/1     Running   4          2m19s
 ```
 
 This is because the job was submitted with the `restartPolicy: OnFailure` setting. Kubernetes will continue to repeat the lifecycle of the Job. Alternatively, the policy could have been set to `Never` to prevent the restarts.

@@ -1,4 +1,4 @@
-This scenario is based on the Chapter 12, Jobs, [Kubernetes Up & Running, 2nd Edition](https://learning.oreilly.com/library/view/kubernetes-up-and/9781492046523/). The chapter starts with a simple `kubectl run` command to start a Job. However, this Katacoda scenario uses Kubernetes 1.18. Active software has a tendency to evolve. Kubernetes is evolving and there was a decision in 1.18 to:
+This scenario is based on the Chapter 12, Jobs, [Kubernetes Up & Running, 2nd Edition](https://learning.oreilly.com/library/view/kubernetes-up-and/9781492046523/). The chapter starts with a simple `kubectl run` command to start a Job. However, this Katacoda scenario uses Kubernetes 1.18. Active software will naturally evolve. Kubernetes is evolving and there was a decision in 1.18 to:
 
 > Remove all the generators from kubectl run. It will now only create pods. Additionally, deprecates all the flags that are not relevant anymore. -- [1.18 Release Notes, Deprecation](https://kubernetes.io/docs/setup/release/notes/#deprecation-4)
 

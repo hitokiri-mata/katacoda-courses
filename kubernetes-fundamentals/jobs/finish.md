@@ -1,4 +1,4 @@
-Job are much like Pods, but differ since they terminate once the task is completed. The Job feature ensures the job complete successfully and can optionally rerun the tasks until success is reported.
+Jobs are much like Pods, but differ since they terminate once the task is completed. The Job feature ensures the job complete successfully and can optionally rerun the tasks until success is reported.
 
 Job efficiently run in parallel. Where once you may have been inclined to multi-thread the application in the container, you can instead keep the container a simple task runner and rely on Kubernetes resource management and Job parallelism to achieve threading with a more effective pattern.
 

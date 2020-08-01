@@ -1,18 +1,16 @@
-(DRAFT 8/1/2020: Updating this page to make adjustments for k8s 1.18 and instructions in book...)
-
 Jobs are an effective mechanism to accept work from a queue and publish the results downstream when completed. Multiple Jobs can run asynchronously and in parallel to accept enqueued items and deque the items when completed.
 
 This example starts up a simple queuing service, enqueues keygen request work items, then parallel jobs process the work items by submitting they keygen results back to the queue.
 
-## Start Queuing Service ##
+## Start Queuing Service
 
 Start the work queue.
 
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-4-rs-queue.yaml`{{execute}}
+`kubectl apply -f queue.yaml`{{execute}}
 
-## Submit Items to Queue ##
+## Submit Items to Queue
 
-Produce a collection of work items and place onto queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
+Create a collection of work items and place onto queue. First, use port forwarding locally as the shell script expects the queue service to be available on port 8080.
 
 `QUEUE_POD=$(kubectl get pods -l app=work-queue,component=queue -o jsonpath='{.items[0].metadata.name}')`{{execute}}
 
@@ -42,7 +40,9 @@ Notice the same port number is placed in the subdomain of the URL.
 
 `https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`
 
-## Process Work Items ##
+Before you start processing the work queue items, you can view the web interface for the work queue status [here](https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/-/memq).
+
+## Process Work Items
 
 Inspect the new Jobs that will consume and work on these enqueued items. Notice the resource is defined with 5 jobs to run in parallel. Once all the queued items have been processed the jobs will complete.
 
@@ -50,7 +50,7 @@ Inspect the new Jobs that will consume and work on these enqueued items. Notice 
 
 Create a parallel consumer Job.
 
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-7-job-consumers.yaml`{{execute}}
+`kubectl apply -f $(curl https://raw.githubusercontent.com/kubernetes-up-and-running/examples/master/10-4-rs-queue.yaml | sed 's|extensions/v1beta1|apps/v1|')`{{execute}}
 
 Watch the activity of pods, queue, and Kubernetes dashboard.
 
@@ -60,6 +60,10 @@ Go back to the Queue portal watch the items get processed until all 100 are comp
 
 `watch -n 3 curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/memq/server/stats`{{execute}}
 
-## Clean Up ##
+Once you are done watching the progress, use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+## Clean Up
+
+Remove the queue (ReplicaSet and Service) and the Jobs.
 
 `kubectl delete rs,svc,job --selector chapter=jobs`{{execute interrupt}}
