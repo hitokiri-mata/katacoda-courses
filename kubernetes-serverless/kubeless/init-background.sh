@@ -18,7 +18,7 @@ source ~/.bashrc
 
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
-helm install dash kubernetes-dashboard/kubernetes-dashboard \
+helm install --name dash kubernetes-dashboard/kubernetes-dashboard \
 --version=2.3.0 \
 --namespace kube-system \
 --set=image.tag=v2.0.3 \
