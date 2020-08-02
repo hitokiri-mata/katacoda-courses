@@ -1,6 +1,6 @@
 To review, here is a very simple Python function. Just two lines:
 
-`ccat get.py`{{execute}}
+`cat get.py`{{execute}}
 
 Register the function
 
@@ -12,4 +12,4 @@ Wait a few seconds for it to start, then call it.
 
 or
 
-`curl localhost:8080/api/v1/namespaces/default/services/get:8080/proxy/ | jq`{{execute}}
+`curl localhost:8080/api/v1/namespaces/default/services/get:8080/proxy/ && echo`{{execute}}

@@ -2,7 +2,7 @@
   "pathwayTitle": "go",
   "title": "Go Apps to Kubernetes",
   "description": "Packaging Go Applications in Containers.",
-  "difficulty":	"Introduction",
+  "difficulty":	"Beginner",
   "time":	"10 minutes",
   "details": {
     "steps": [

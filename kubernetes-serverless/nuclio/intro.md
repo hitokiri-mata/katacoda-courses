@@ -1,5 +1,3 @@
-# Nuclio on Kubernetes #
-
 <img align="right" src="./assets/nuclio.png">
 
 [Nuclio](https://www.nuclio.com/) is an open source serverless platform which allows developers to focus on building and running auto-scaling applications without worrying about managing servers.

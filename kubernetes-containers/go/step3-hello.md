@@ -16,7 +16,7 @@ The advent of containers means that this whole application can be compiled and r
 
 You could install a new version of Go on this instance, but that means that every time you want to install a different version of the toolset, there is a whole install/uninstall process. That's so 2000...we are much better than that now. With containers, the full versioned stack can be defined and tested. That container, tested once, can run anywhere on a container runtime engine. Works on my machine, works on your machine.
 
-The stack infrastructure is defined in the Dockerfile as [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code).
+The stack infrastructure is defined in the Dockerfile as infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
 
 `ccat Dockerfile`{{execute}}
 

@@ -2,7 +2,7 @@
   "pathwayTitle": "oci",
   "title": "Kubernetes Containers: Decomposing Images",
   "description": "Dissecting the OCI container format",
-  "difficulty":	"Introduction",
+  "difficulty":	"Beginner",
   "time":	"15 minutes",
   "details": {
     "steps": [
@@ -12,7 +12,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Creating Empty Image",
+        "title": "Creating an Empty Image",
         "text": "step2-create.md",
         "code": "clear.sh"
       },

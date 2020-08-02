@@ -1,4 +1,3 @@
-
 Nuclio is a new serverless project, derived from Iguazio's elastic data life-cycle management service for high-performance events and data processing. One of the many emerging serverless solutions for Kubernetes.
 
 ## Lessons Learned ##

@@ -14,6 +14,17 @@ echo '-s' >> ~/.curlrc
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
 docker pull -q whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
-source ~/.bashrcapt update > /dev/null 2>&1
+source ~/.bashrc
 
-{ clear && echo 'Linux with Docker is ready.'; } 2> /dev/null
+# Setup dashboard on port 30000
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+helm install dash kubernetes-dashboard/kubernetes-dashboard \
+--version=2.3.0 \
+--namespace kube-system \
+--set=image.tag=v2.0.3 \
+--set=service.type=NodePort \
+--set=enableInsecureLogin=true \
+--set=service.nodePort=30000 \
+--set=service.externalPort=80
+
+echo "done" >> /opt/.backgroundfinished

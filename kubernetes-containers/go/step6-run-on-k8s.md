@@ -1,4 +1,4 @@
-Up until now, we have only, been concentrating on Go and putting your applications in containers. This Katacoda instance also is a running Kubernetes cluster.
+Up until now, we have only been concentrating on Go and putting your applications in containers. This Katacoda instance also is a running Kubernetes cluster.
 
 `kubectl get componentstatus`{{execute}}
 
@@ -34,15 +34,7 @@ When it's running and healthy, you will see an empty list.
 
 ## Push to Registry
 
-Push your app container image to the private registry running on you Kubernetes cluster.
-
-`docker build -t $REGISTRY/restafarian-gin:0.0.1 .`{{execute}}
-
-`docker push $REGISTRY/restafarian-gin:0.0.1`{{execute}}
-
-## Push to Registry
-
-Push your app container image to the private registry running on you Kubernetes cluster.
+Push your app container image to the private registry running on your Kubernetes cluster.
 
 `docker build -t $REGISTRY/restafarian-gin:0.0.1 .`{{execute}}
 

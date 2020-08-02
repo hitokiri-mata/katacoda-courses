@@ -1,4 +1,4 @@
-This tool can also be added to your CI/CD pipelines to alert you when it encounters inneficient and bloated containers that surpass your defined thresholds.
+This tool can also be added to your CI/CD pipelines to alert you when it encounters inefficient and bloated containers that surpass your defined thresholds.
 
 Let's build two containers with the same Python code to illustrate the process for tuning containers.
 
@@ -9,7 +9,7 @@ The first container will be a fat container using a Dockerfile that has several 
 
 `ccat -l dockerfile Dockerfile-a`{{execute}}
 
-This example was inspired by the article, _[Broken by default: why you should avoid most Dockerfile examples, by Itamar Turner-Trauring](https://pythonspeed.com/articles/dockerizing-python-is-hard/)_, where the bad practices are outlined.
+This example was inspired by the article, ["Broken by default: why you should avoid most Dockerfile examples," by Itamar Turner-Trauring](https://pythonspeed.com/articles/dockerizing-python-is-hard/), where the bad practices are outlined.
 
 Build the container.
 
@@ -19,7 +19,7 @@ Run the container.
 
 `docker run fibonacci-a`{{execute}}
 
-From this the first 10 Fibonacci numbers are produced. Let's see what the Dive tool thinks of this container. Generate the report.
+From this, the first ten Fibonacci numbers are produced. Let's see what the Dive tool thinks of this container. Generate the report.
 
 `dive fibonacci-a -j dive-report-a.json`{{execute}}
 
@@ -68,7 +68,7 @@ echo "       Inefficient: $(cat dive-report-b.json | jq .image.inefficientBytes)
 echo "Inefficiency score: $(cat dive-report-b.json | jq .image.efficiencyScore)"
 ```{{execute}}
 
-With this tool you can add thresholds to these values. You can be notified or force your pipeline to stop when newly built containers exceed your acceptable limits. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when you containers scale across your cluster. Documentation on the [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).
+With this tool you can add thresholds to these values. You can be notified or force your pipeline to stop when newly built containers exceed your acceptable limits. This in turn can save you money by not wasting cloud resources (CPU, memory, and I/O) when your containers scale across your cluster. Documentation on [Dive's CI Integration is found here](https://github.com/wagoodman/dive#ci-integration).
 
 <img align="right" src="./assets/alex-goodman.jpg" width="200">
 Tip of the hat to [Alex Goodman](https://github.com/wagoodman) for this community contribution.

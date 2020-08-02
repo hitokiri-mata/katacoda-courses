@@ -28,3 +28,4 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=service.externalPort=80
 
 echo "done" >> /opt/.backgroundfinished
+

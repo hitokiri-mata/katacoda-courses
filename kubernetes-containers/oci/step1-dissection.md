@@ -1,11 +1,11 @@
 <img align="right" src="./assets/tar.png" width="50">
-A container image is a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">tar file</a> containing other tar files. Internally, each tar file is a layer. Once all tar files have been extracted to a local filesystem, you can explore the details of the layers.
+A container image is a <a href="https://en.wikipedia.org/wiki/Tar_(computing)">TAR file</a> containing other TAR files. Internally, each TAR file is a layer. Once all TAR files have been extracted to a local filesystem, you can explore the details of the layers.
 
 Using the docker tool, pull the layers of a Redis container image onto this filesystem.
 
 `docker pull redis:6.0.4-alpine3.11`{{execute}}
 
-Export the image into a raw tar format.
+Export the image into a raw TAR format.
 
 `docker save redis:6.0.4-alpine3.11 > redis.tar`{{execute}}
 
@@ -13,15 +13,15 @@ Create a scratch location to inspect the Redis files.
 
 `mkdir redis && cd redis`{{execute}}
 
-Extract the files from the tar.
+Extract the files from the TAR.
 
 `tar -xvf ../redis.tar`{{execute}}
 
-All of the contents along with the layer tar files are now viewable.
+All of the contents, along with the layer TAR files, are now viewable.
 
 `tree`{{execute}}
 
-The image includes the manifest.json file that defines the metadata about the image, such as version information and tag names. The [schema for the manifest.json](https://github.com/opencontainers/image-spec/blob/master/manifest.md) file follows the OCI specification. Inspect the manifest.
+The image includes the _manifest.json_ file that defines the metadata about the image, such as version information and tag names. The [schema for the manifest.json](https://github.com/opencontainers/image-spec/blob/master/manifest.md) file follows the OCI specification. Inspect the manifest.
 
 `ccat manifest.json | jq .`{{execute}}
 
@@ -33,4 +33,4 @@ Inspect the files in the last layer.
 
 `tree last-layer`{{execute}}
 
-This single file makes sense because it's the last instruction in the Redis Dockfile that would cause a layer to be created, [on line 100 here](https://github.com/docker-library/redis/blob/master/6.0/Dockerfile#L100).
+This single file makes sense because it's the last instruction in the Redis Dockfile that would cause a layer to be created, [on line 101 here](https://github.com/docker-library/redis/blob/master/6.0/Dockerfile#L101).

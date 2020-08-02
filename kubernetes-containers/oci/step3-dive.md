@@ -2,9 +2,9 @@
 
 ## Dive
 
-A tool for exploring a container image, layer contents, and discovering ways to shrink the size of your OCI image.
+Dive is a tool for exploring a container image, viewing layer contents, and discovering ways to shrink the size of your OCI image.
 
-Return to the default directory and install the _Dive_ tool.
+Return to the default directory and install the Dive tool.
 
 `cd ~/`{{execute}}
 
@@ -16,18 +16,18 @@ Verify it's installed and working.
 
 `dive --version`{{execute}}
 
-_Dive_ runs in two modes with an interactive text user interface (TUI) in the shell or as a command-line tool tuned for integration into your continuous integration pipelines.
+Dive runs in two modes: with an interactive text user interface (TUI) in the shell, or as a command-line tool tuned for integration into your continuous integration pipelines.
 
 ## Interactive
 
-To see the tool in action let's look at the internals of the _Redis_ container image created during the last step using Dive's text user interface.
+To see the tool in action, let's use Dive's text user interface to look at the internals of the _Redis_ container image created during the last step.
 
 <img align="right" src="./assets/redis.png" width="100">
 `dive redis`{{execute}}
 
-In the interactive TUI, there are three panels; Layers, Current Layer Contents, and Image Details. The top-left is the listing of container layers. Move the highlighter up and down with the arrow keys to select a layer. Each layer's contents appear on the right-side panel. Press the tab key to switch between the layer view (left) and the layer's file tree (right). There are key command hints at the bottom and more [key bindings](https://github.com/wagoodman/dive#keybindings) can be found here]. Take a moment to explore the tool.
+In the interactive TUI, there are three panels; Layers, Current Layer Contents, and Image Details. The top-left is the listing of container layers. Move the highlighter up and down with the arrow keys to select a layer. Each layer's contents appear on the right-side panel. Press the Tab key to switch between the layer view (left) and the layer's file tree (right). There are key command hints at the bottom and more [key bindings can be found here](https://github.com/wagoodman/dive#keybindings). Take a moment to explore the tool.
 
-The tool also allows you to select and delete files or directories from the layers. This can help you understand how to trim your containers. _Dive_ can be a handy tool for experimenting, but you should refrain from using this UI as part of your continuous delivery process. The real trimming should happen when you define the containers with infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
+The tool also allows you to select and delete files or directories from the layers. This can help you understand how to trim your containers. Dive can be a handy tool for experimenting, but you should refrain from using this UI as part of your continuous delivery process. The real trimming should happen when you define the containers with infrastructure-as-code.
 
 The third panel in the interactive mode provides a summary of the efficiency and potential waste found.
 
@@ -41,7 +41,7 @@ Inspect the _BusyBox_ container image.
 
 `dive busybox`{{execute}}
 
-Notice all the commands are present and the image efficiency is at 100%. Next, let's look at some less efficient containers.
+Notice that all the commands are present and the image efficiency is at 100%. Next, let's look at some less efficient containers.
 
 You can explore other containers from other registries.
 

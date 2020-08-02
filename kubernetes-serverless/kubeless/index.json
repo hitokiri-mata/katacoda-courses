@@ -72,7 +72,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "*.yaml", "target": "/root"},
+        {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -89,6 +89,6 @@
   },
   "backend": {
     "port": 8080,
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-cluster-running"
   }
 }
