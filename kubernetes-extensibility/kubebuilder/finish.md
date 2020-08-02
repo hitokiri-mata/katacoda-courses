@@ -1,4 +1,3 @@
-
 You now have a better understanding of how to write an Operator using the Kubebuilder. The real goal of this scenario is to show you the power of extending Kubernetes with your a custom resources and coding controllers that are dedicated to observing and managing your custom resources.
 
 There are some other competing Operator frameworks such as the Operator-SDK, Metacontroller and **KUDO**. KUDO, governed by D2IQ, may be an easier way to write an Operator as it embraces a declarative form over an imperative Go-based controller. In this Katacoda course head over to the scenario for learning KUDO and hopefully you will see why it was created to make writing Operators even easier.

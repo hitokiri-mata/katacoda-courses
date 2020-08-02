@@ -1,5 +1,4 @@
-# Creating an Operator based on Kubebuilder #
-
+# Creating an Operator based on 
 <img align="right" src="./assets/kubebuilder.png" width="300">
 
 In this scenario you will experience what it's like to create and run a Kubernetes Operator that manages a custom resource. The Operator is created using the Kubebuilder tool. The custom resources will be called "At"s.

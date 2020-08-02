@@ -69,6 +69,9 @@ start_progress () {
   
   # Pick up any changes during background
   source ~/.bashrc
+
+  # Ensure file browser and editor start in clean directory
+  cd #GOPATH/src
 }
 
 clear && start_progress

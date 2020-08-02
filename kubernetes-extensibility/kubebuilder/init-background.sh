@@ -31,7 +31,4 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
-# Ensure file browser and editor start in clean directory
-cd /opt/go/src
-
 echo "done" >> /opt/.backgroundfinished
