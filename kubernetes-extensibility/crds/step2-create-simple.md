@@ -24,7 +24,7 @@ Notice the `apply` command was used instead of the `create` because we will be a
 
 Thermometer resources are now listed as a cluster api-resource.
 
-`kubectl api-resources | grep trms`{{execute}}
+`kubectl api-resources --api-group='d2iq.com' -o wide`{{execute}}
 
 The resource REST management is also added as `/apis/d2iq/` to the Kubernetes API.
 
