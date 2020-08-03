@@ -1,16 +1,13 @@
-# Knative on Kubernetes #
+<img align="right" src="./assets/knative.png" width="400">
 
-(This draft tutorial is under construction in step 3. Contact me for questions: jonathan.johnson@dijure.com, December 8, 2018)
-
-<img align="right" src="./assets/knative.png">
-
-Knative is a Kubernetes-based platform to build, deploy, and manage modern serverless workloads. It drives with three primary features:
+Knative is a Kubernetes-based platform to build, deploy, and manage modern serverless workloads. It drives with these primary features:
 
 |   |   |
 |---|---|
 | **Serving** | Scale to zero, request-driven compute model |
-| **Build**   | Cloud-native source to container orchestration |
 | **Events**  | Universal subscription, delivery and management of events |
+
+In older versions of Knative there was another feature called _Building_. That evolved and split out into its own project called Tekton. Tekton pipelines are a cloud native and Kubernetes native technique for running CI/CD pipelines on Kubernetes. Tekton pipelines (building) are an important part of the serverless experience that coordinated with Knative.
 
 > [Knative](https://github.com/knative/docs) (pronounced kay-nay-tiv) extends Kubernetes to provide a set of middleware components that are essential to build modern, source-centric, and container-based applications that can run anywhere: on premises, in the cloud, or even in a third-party data center.
 

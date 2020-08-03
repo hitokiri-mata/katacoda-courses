@@ -1,5 +1,3 @@
-## Install Knative Observing
-
 Install Prometheus and Grafana for metrics:
 
 `kubectl apply --filename https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/monitoring-metrics-prometheus.yaml`{{execute}}

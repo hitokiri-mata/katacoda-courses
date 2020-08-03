@@ -18,7 +18,7 @@ Notice Knative adds extensions (CRDs) to the Kubernetes API.
 
 Install the service-core component.
 
-`curl -L https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/serving-core.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+`curl -L https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/serving-core.yaml`{{execute}}
 
 It will take a few moments to start.
 
@@ -39,7 +39,11 @@ Knative supports a variety of Kubernetes networking layers such as:
 
 For this scenario, install Kourier and add integration with Knative.
 
-`kubectl apply --filename https://github.com/knative/net-kourier/releases/download/v0.16.0/kourier.yaml`{{execute}}
+The following commands install Kourier and enable its Knative integration.
+
+Install the Knative Kourier controller:
+
+`kubectl apply --filename https://github.com/knative/net-kourier/releases/download/v${KNATIVE_VERSION}/kourier.yaml`{{execute}}
 
 To configure Knative Serving to use Kourier by default:
 
@@ -52,5 +56,7 @@ kubectl patch configmap/config-network \
 Fetch the External IP or CNAME:
 
 `kubectl --namespace kourier-system get service kourier`{{execute}}
+
+Save this for configuring DNS below.
 
 

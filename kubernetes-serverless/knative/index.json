@@ -32,12 +32,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Delete Application",
+        "title": "Knative Eventing",
         "text": "step6-eventing.md",
         "code": "clear.sh"
       },
       {
-        "title": "Delete Application",
+        "title": "Knative Observing",
         "text": "step7-observing.md",
         "code": "clear.sh"
       }
@@ -53,8 +53,6 @@
   },
   "assets": {
       "host01": [
-        {"file": "istio.yaml", "target": "/root"},
-        {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
