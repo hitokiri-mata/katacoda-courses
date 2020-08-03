@@ -1,29 +1,61 @@
-## Install Riff ##
+The latest Knative version that this scenario is validated with is.
 
-Knative, by design, has no command-line interface. It's a server side framework that allows other platforms to produce their own clients and other ways of interacting with Knative and Kubernetes.
+`export KNATIVE_VERSION=0.16.0`{{execute}}
 
-## Install Istio ##
+The following installation will assume this version.
 
-`curl -L https://github.com/knative/serving/releases/download/v0.10.0/service-istio.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+## Install Custom Resource Definitions
 
-`kubectl get pods --namespace istio-system`{{execute}}
+Install the Custom Resource Definitions (CRDs) specific for declaring Knative objects:
 
-Request Istio to inject its Envoy sidecars into applications deployed to the _default_ namespace.
+`kubectl apply --filename https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/serving-crds.yaml`{{execute}}
 
-`kubectl label namespace default istio-injection=enabled`{{execute}}
-
-Notice Istio adds extensions (crds) to the Kubernetes API.
-
-`kubectl get crds | grep .istio.`{{execute}}
-
-## Installing Knative Serving ##
-
-`curl -L https://github.com/knative/serving/releases/download/v0.10.0/serving-core.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
-
-`kubectl get pods --namespace knative-serving`{{execute}}
-
-Notice Knative adds extensions (crds) to the Kubernetes API.
+Notice Knative adds extensions (CRDs) to the Kubernetes API.
 
 `kubectl get crds | grep .knative.`{{execute}}
 
+## Installing Knative Serving
+
+`curl -L https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/serving-core.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+
+`kubectl get deployments,pods,services --namespace knative-serving`{{execute}}
+
 Now that Knative is running, the next step is to deploy and application.
+
+## Install Istio
+
+Knative support a variety of Kubernetes networking layers such as:
+
+- Ambassador
+- Contour
+- Gloo
+- Istio
+- Kong
+- Kourier
+
+For this scenario, install Istio and enable its Knative integration.
+
+`curl -L https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/service-istio.yaml | sed 's/LoadBalancer/NodePort/' | kubectl apply --filename -`{{execute}}
+
+`kubectl get pods --namespace istio-system`{{execute}}
+
+Notice Istio adds extensions (CRDs) to the Kubernetes API.
+
+`kubectl get crds | grep .istio.`{{execute}}
+
+
+## Install Knative Eventing
+
+Install the Custom Resource Definitions (aka CRDs):
+
+`kubectl apply --filename https://github.com/knative/eventing/releases/download/v${KNATIVE_VERSION}/eventing-crds.yaml`{{execute}}
+
+Install the core components of Eventing (see below for optional extensions):
+
+`kubectl apply --filename https://github.com/knative/eventing/releases/download/v${KNATIVE_VERSION}/eventing-core.yaml`{{execute}}
+
+
+## Install Riff ##
+
+TODO - needed?
+Knative, by design, has no command-line interface. It's a server side framework that allows other platforms to produce their own clients and other ways of interacting with Knative and Kubernetes.
