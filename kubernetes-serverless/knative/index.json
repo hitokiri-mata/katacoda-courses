@@ -28,7 +28,18 @@
       },
       {
         "title": "Delete Application",
-        "text": "step5-delete.md"
+        "text": "step5-delete.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Delete Application",
+        "text": "step6-eventing.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Delete Application",
+        "text": "step7-observing.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
@@ -42,6 +53,7 @@
   },
   "assets": {
       "host01": [
+        {"file": "istio.yaml", "target": "/root"},
         {"file": "*", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
