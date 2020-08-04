@@ -8,11 +8,9 @@ Without this, the bookInfo example and other dashboards will not be available.
 
 ## Injection label
 
-Prior to installing, add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy the BookInfo application into this namespace.
+Prior to the BookInfo install, add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy the BookInfo application into this namespace.
 
 `kubectl label namespace default istio-injection=enabled`{{execute}}
 
 There are other methods to inject the Envoy sidecar, but this technique works well as a pre-installation step for a namespace.
 
-http://2886795273-80-ollie08.environments.katacoda.com/productpage
-https://2886795273-80-ollie08.environments.katacoda.com/productpage/
