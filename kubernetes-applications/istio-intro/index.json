@@ -17,6 +17,11 @@
         "code": "clear.sh"
       },
       {
+        "title": "BookInfo App Preparation",
+        "text": "step3-app-prep.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install BookInfo App",
         "text": "step3-install-bookinfo.md",
         "code": "clear.sh"
@@ -33,7 +38,7 @@
   },
   "assets": {
       "host01": [
-        {"file": "bookinfo.yaml", "target": "/root"},
+        {"file": "katacoda.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }

@@ -8,9 +8,13 @@ Install the Istio Operator
 
 `curl -L https://istio.io/downloadIstio | sh -`{{execute}}
 
-Install the Istio command line tool.
+Install the Istio client, command line tool.
 
 `export PATH="$PATH:/root/istio-${ISTIO_VERSION}/bin"`{{execute}}
+
+Verify the version of the command line tool.
+
+`istioctl version`{{execute}}
 
 Initialize Istio on this Kubernetes cluster.
 
