@@ -60,4 +60,4 @@ Again, you will see `<title>Simple Bookstore App</title>`.
 
 The full application web interface is now available at this public Katacoda address at:
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage/
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage

@@ -13,3 +13,6 @@ Prior to installing, add a namespace label to instruct Istio to automatically in
 `kubectl label namespace default istio-injection=enabled`{{execute}}
 
 There are other methods to inject the Envoy sidecar, but this technique works well as a pre-installation step for a namespace.
+
+http://2886795273-80-ollie08.environments.katacoda.com/productpage
+https://2886795273-80-ollie08.environments.katacoda.com/productpage/
