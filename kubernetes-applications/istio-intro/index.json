@@ -1,0 +1,53 @@
+{
+  "private": "true",
+  "title": "Istio Getting Started",
+  "description": "Introduction to Istio with the BookInfo App.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Istio",
+        "text": "step2-install-istio.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install BookInfo App",
+        "text": "step3-install-bookinfo.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "init-background.sh",
+      "code": "init-foreground.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+  },
+  "finish": {
+      "text": "finish.md"
+  },
+  "assets": {
+      "host01": [
+        {"file": "bookinfo.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

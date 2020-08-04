@@ -1,5 +1,4 @@
-<img align="right" src="./assets/knative.png" width="400">
-
+<img align="right" src="./assets/knative.png" width="300">
 Knative is a Kubernetes-based platform to build, deploy, and manage modern serverless workloads. It drives with these primary features:
 
 |   |   |
