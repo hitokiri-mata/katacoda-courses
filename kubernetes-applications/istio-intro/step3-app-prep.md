@@ -2,7 +2,7 @@
 
 To make the sample BookInfo application and dashboards available to the outside world, in particular, on Katacoda, deploy the following Yaml
 
-kubectl apply -f /root/katacoda.yaml
+`kubectl apply -f /root/katacoda.yaml`{{execute}}
 
 Without this, the bookInfo example and other dashboards will not be available.
 
