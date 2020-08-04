@@ -1,4 +1,4 @@
-Next, you will install a demonstration application called Book info. The application is composed of several microservices and they will all be deployed to the _default_ namespace.  
+Next, you will install a demonstration application called Book info. The application is composed of several microservices and they will all be deployed to the _default_ namespace.
 
 Install the BookInfo application.
 
@@ -12,4 +12,4 @@ In a few moments, the BookInfo components will be running.
 
 `kubectl get deployments,pods,services`{{execute}}
 
-Once running, the application's main page can be reached at https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage.
+Once running, the application's main page can be reached at https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage/ .

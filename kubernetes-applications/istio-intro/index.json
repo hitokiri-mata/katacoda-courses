@@ -25,6 +25,11 @@
         "title": "Install BookInfo App",
         "text": "step4-install-bookinfo.md",
         "code": "clear.sh"
+      },
+      {
+        "title": "Routing",
+        "text": "step5-routing.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
@@ -50,7 +55,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Products", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/products"}
+      {"name": "Products", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage/"}
     ]
   },
   "backend": {
