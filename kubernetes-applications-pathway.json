@@ -17,12 +17,7 @@
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Run RabbitMQ on Kubernetes."
-      },
-      {
-        "course_id": "istio-intro",
-        "title": "Istio Getting Started",
-        "description": "Introduction to Istio with the BookInfo App."
-      }    
+      }
     ]
   }
   
