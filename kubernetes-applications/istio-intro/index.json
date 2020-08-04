@@ -18,7 +18,7 @@
       },
       {
         "title": "Bookinfo Architecture",
-        "text": "step4-app-prep.md",
+        "text": "step3-bookinfo-arch.md",
         "code": "clear.sh"
       },
       {
@@ -65,6 +65,5 @@
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"
-    // "imageid": "kubernetes-cluster-running:1.18"
   }
 }
