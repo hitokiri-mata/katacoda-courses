@@ -17,18 +17,23 @@
         "code": "clear.sh"
       },
       {
+        "title": "Bookinfo Architecture",
+        "text": "step4-app-prep.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "BookInfo App Preparation",
-        "text": "step3-app-prep.md",
+        "text": "step4-app-prep.md",
         "code": "clear.sh"
       },
       {
         "title": "Install BookInfo App",
-        "text": "step4-install-bookinfo.md",
+        "text": "step5-install-bookinfo.md",
         "code": "clear.sh"
       },
       {
         "title": "Routing",
-        "text": "step5-routing.md",
+        "text": "step6-routing.md",
         "code": "clear.sh"
       }
     ],
@@ -59,6 +64,7 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-cluster-running"
+    // "imageid": "kubernetes-cluster-running:1.18"
   }
 }

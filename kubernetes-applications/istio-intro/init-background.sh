@@ -16,9 +16,12 @@ docker pull -q whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
 source ~/.bashrc
 
+# Currently the Kubeless chart does not support Helm v3 or K8s 1.18. It may never as project is dying. Use Knative instead.
+helm init --wait
+
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
-helm install dash kubernetes-dashboard/kubernetes-dashboard \
+helm install --name dash kubernetes-dashboard/kubernetes-dashboard \
 --version=2.3.0 \
 --namespace kube-system \
 --set=image.tag=v2.0.3 \
