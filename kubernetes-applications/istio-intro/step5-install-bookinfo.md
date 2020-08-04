@@ -14,7 +14,11 @@ In a few moments, the BookInfo components will be running.
 
 Once running, the application's product page can be accessed internally.
 
-kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
+```bash
+kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') \
+  -c ratings \
+  -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
+```{{execute}}
 
 This YAML file contains all the declarative manifests for the deployments, pods, services that define the application. There is nothing in the YAML or within the application containers that exhibit knowledge or requirements for Istio to be present. The mesh is always independent from your application configuration and logic.
 
@@ -42,18 +46,18 @@ Get the ingress gateway host IP.
 
 Set the ingress port.
 
-export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
 
 Formulate the URL.
 
-export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
 
 The curl command above to verify access to the page, was done internal to the cluster through the cluster IP of the service. Now we can test the same access via the ingress.
 
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"
+`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
 
 Again, you will see `<title>Simple Bookstore App</title>`.
 
-The full application web interface is now available at this public Katacoda address at 
+The full application web interface is now available at this public Katacoda address at:
 
-`https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage/`
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage/
