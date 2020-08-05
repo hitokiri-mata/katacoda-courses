@@ -17,8 +17,8 @@
         "code": "clear.sh"
       },
       {
-        "title": "Bookinfo Architecture",
-        "text": "step3-bookinfo-arch.md",
+        "title": "Istio Architecture",
+        "text": "step3-istio-arch.md",
         "code": "clear.sh"
       },
       {
@@ -32,8 +32,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Routing",
-        "text": "step6-routing.md",
+        "title": "Bookinfo Architecture",
+        "text": "step6-bookinfo-arch.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Traffic Management",
+        "text": "step7-traffic.md",
         "code": "clear.sh"
       }
     ],

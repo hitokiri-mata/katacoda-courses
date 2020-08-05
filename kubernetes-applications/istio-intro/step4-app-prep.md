@@ -1,10 +1,10 @@
 ## Deploy Katacoda Service
 
-To make the sample BookInfo application and dashboards available to the outside world, in particular, on Katacoda, deploy the following Yaml
+To make the sample BookInfo application and dashboards available to the outside world, in particular, on Katacoda, deploy the following YAML.
 
 `kubectl apply -f /root/katacoda.yaml`
 
-Without this, the bookInfo example and other dashboards will not be available.
+Without this, the BookInfo example and other dashboards will not be available.
 
 ## Injection label
 
@@ -13,4 +13,3 @@ Prior to the BookInfo install, add a namespace label to instruct Istio to automa
 `kubectl label namespace default istio-injection=enabled`{{execute}}
 
 There are other methods to inject the Envoy sidecar, but this technique works well as a pre-installation step for a namespace.
-
