@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "title": "Istio Getting Started",
   "description": "Introduction to Istio with the Bookinfo App.",
   "difficulty":	"Introduction",
@@ -39,6 +38,11 @@
       {
         "title": "Traffic Management",
         "text": "step7-traffic.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Access Metrics",
+        "text": "step8-metrics.md",
         "code": "clear.sh"
       }
     ],

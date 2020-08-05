@@ -35,16 +35,3 @@ In a few moments, Istio will be available. The `Processing resources for Istiod`
 The version command will list the versions of the client, control plane, and data plane.
 
 `istioctl version`{{execute}}
-
-An important service istio-ingressgateway may still report it's EXTERNAL-IP as pending. It will take a few moments or up to ~5 minutes for it to change from `<pending>` to a realized IP value, such as 172.17.0.36. If it never changes from `<pending>` it will prevent access to the demonstration in the next steps. If the `<pending>` status persists more than 5 minutes, you may want to refresh this Katacoda scenario and start again. Check the ingress gateway.
-
-`kubectl get service istio-ingressgateway -n istio-system`{{execute}}
-
-When ready, it should show a status close to this.
-
-```bash
-NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
-istio-ingressgateway   LoadBalancer   10.103.192.174   172.17.0.36   15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
-```
-
-While you are waiting, progress to the next step and familiarize yourself with the architecture of the Bookinfo* application. You can periodically check the gateway status during the next step.

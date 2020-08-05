@@ -50,7 +50,7 @@ Set the ingress port.
 
 Formulate the URL.
 
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
+`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT | echo $GATEWAY_URL`{{execute}}
 
 The curl command above to verify access to the page, was done internal to the cluster through the cluster IP of the service. Now we can test the same access via the ingress.
 

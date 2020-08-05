@@ -2,11 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: servicegraph
-    chart: servicegraph-0.1.0
-    heritage: Tiller
-    release: RELEASE-NAME
-  name: katacoda-servicegraph
+    app: service-graph
+  name: katacoda-service-graph
   namespace: istio-system
 spec:
   ports:
@@ -15,7 +12,26 @@ spec:
     protocol: TCP
     targetPort: 8088
   selector:
-    app: servicegraph
+    app: service-graph
+  type: ClusterIP
+  externalIPs:
+    - $EXTERNAL_IP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kiali
+  name: katacoda-kiali
+  namespace: istio-system
+spec:
+  ports:
+  - name: http
+    port: 20001
+    protocol: TCP
+    targetPort: 20001
+  selector:
+    app: kiali
   type: ClusterIP
   externalIPs:
     - $EXTERNAL_IP
@@ -26,8 +42,6 @@ metadata:
   labels:
     app: grafana
     chart: grafana-0.1.0
-    heritage: Tiller
-    release: RELEASE-NAME
   name: katacoda-grafana
   namespace: istio-system
 spec:
@@ -49,9 +63,7 @@ metadata:
   labels:
     app: jaeger
     chart: tracing-0.1.0
-    heritage: Tiller
     jaeger-infra: jaeger-service
-    release: RELEASE-NAME
   name: katacoda-jaeger-query
   namespace: istio-system
 spec:
