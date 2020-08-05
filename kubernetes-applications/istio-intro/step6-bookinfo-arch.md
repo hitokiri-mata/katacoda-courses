@@ -15,7 +15,7 @@ The deployment includes three versions of the reviews microservice to showcase d
 
 All services communicate over HTTP using DNS for service discovery. An overview of the architecture is shown below.
 
-<src="./assets/withistio.svg" width="100%">
+<image src="./assets/withistio.png" width="100%">
 Bookinfo Architecture
 
 Unbeknownst to the Bookinfo containers, the Envoy sidecars injected next to each microservice and surreptitiously intercept all inbound and outbound Pod traffic.  

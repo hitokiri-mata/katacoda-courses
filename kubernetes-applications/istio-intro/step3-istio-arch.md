@@ -1,21 +1,19 @@
-The previous step deployed the Istio Pilot, Mixer, Ingress-Controller, and Egress-Controller, and the Istio CA (Certificate Authority).
+The previous step deployed the Istio components in two planes.
 
-Pilot - Responsible for configuring the Envoy and Mixer at runtime.
+## Data Plane
 
-Proxy / Envoy - Sidecar proxies per microservice to handle ingress/egress traffic between services in the cluster and from a service to external services. The proxies form a secure microservice mesh providing a rich set of functions like discovery, rich layer-7 routing, circuit breakers, policy enforcement and telemetry recording/reporting functions.
+This data plane where your application services connect with each other. Here the Envoy container is injected into select Pods to take over all inbound and outbound (ingress/egress) Pod traffic. Since each Pod has a virtual IP, the Envoy can insert itself via the routing table. Each Envoy is continuously synched with the rules of the mesh to control a Pods traffic routing, traffic security (e.g. mutual TLS), and gather metrics, logging, and tracing. The Envoy proxies form a secure microservice mesh providing a rich set of functions like discovery, rich layer-7 routing, circuit breakers, policy enforcement and telemetry recording/reporting functions.
 
-Mixer - Create a portability layer on top of infrastructure backends. Enforce policies such as ACLs, rate limits, quotas, authentication, request tracing and telemetry collection at an infrastructure level.
+## Control Plane
 
-Citadel / Istio CA - Secures service to service communication over TLS. Providing a key management system to automate key and certificate generation, distribution, rotation, and revocation.
+The entire mesh is managed a few processes bundled into the Istiod binary. On Kubernetes, Istiod is packaged in a container and runs in Pod. Within Istiod are three main control plane components. These component used to be separate Pods, but have been recently consolidated into a single Istiod process. The primary controls that constitute the control plane are:
 
-Ingress/Egress - Configure path based routing for inbound and outbound external traffic.
+- **Pilot** Pilot is responsible for the lifecycle of Envoy instances deployed across the Istio service mesh. The Envoy shepard. It exposes the Istio Rules API to allow you to configure the mesh. The Pilot synchronizes the meshing rules to the Envoys throughout the mesh.
 
-Control Plane API - Underlying Orchestrator such as Kubernetes or Hashicorp Nomad.
+- **Galley** The top-level config ingestion, processing and distribution component of Istio. It is responsible for insulating the rest of the Istio components from the details of obtaining user configuration from the underlying platform. It contains Kubernetes CRD listeners for collecting configuration, an MCP protocol server implementation for distributing config, and a validation web-hook for pre-ingestion validation by Kubernetes API Server.
 
-The overall architecture is shown below.
+- **Citadel** All communication governed by the mesh can be encrypted over TLS. The keys and certificates of Istio workloads are generated, distributed, rotated and revoked by Citadel. The security information is distributed to the Envoy sidecars through ephemeral secret-volume mounted files and retained in Envoy memory. While the Citadel is assumed to be the default certificate authority, it can be extended to connect to other authorities with an enabled secret discovery service (SDS). All communication can be encrypted with mutual TLS in your cluster using the mesh. This can help meet many of your security requirements and regulatory validations.
 
-Istio Architecture
+More about the [Istio architecture is here](https://istio.io/latest/docs/ops/deployment/architecture/).
 
-CONTINUE
-Terminal
-Dashboard  
+<img src="./assets/istio-arch.svg" width="100%">

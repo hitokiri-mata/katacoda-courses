@@ -4,7 +4,7 @@ Now that you have Istio and a sample application running let's explore what we c
 
 One aspect of traffic management is controlling traffic routing based on the HTTP request, such as user agent strings, IP address, or cookies.
 
-The example below will send all traffic for the user _jason_ to the reviews:v2, meaning they'll only see the black stars. A few descriptive lines defines this rule.
+The example below will send all traffic for the user _jason_ to the reviews:v2, meaning they'll only see the black stars. A few descriptive lines define this rule.
 
 `ccat samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml`{{execute}}
 
@@ -12,7 +12,7 @@ Similarly to deploying Kubernetes configuration, routing rules can be applied us
 
 `kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml`{{execute}}
 
-Visit the product page and signin as a user jason (password jason)
+Visit the product page and sign in as a user "jason".
 
 ## Traffic Shaping for Canary Releases
 
@@ -34,7 +34,7 @@ The weighting is not round robin, multiple requests may go to the same service, 
 
 Given the above approach, if the canary release were successful then we'd want to move 100% of the traffic to reviews:v3.
 
-`cat samples/bookinfo/networking/virtual-service-reviews-v3.yaml`{{execute}}
+`ccat samples/bookinfo/networking/virtual-service-reviews-v3.yaml`{{execute}}
 
 This can be done by updating the route with new weighting and rules.
 
@@ -42,6 +42,6 @@ This can be done by updating the route with new weighting and rules.
 
 ## List All Routes
 
-It's possible to get a list of all the rules applied.
+The istioctl [`describe`](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-describe/) and [`analyze`](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/) commands provide ways for you to investigate the mesh rules and configurations.
 
-`istioctl get virtualservices and istioctl get virtualservices -o yaml`{{execute}}
+`istioctl analyze --help`{{execute}}

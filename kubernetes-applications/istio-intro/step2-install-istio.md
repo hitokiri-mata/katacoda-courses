@@ -47,4 +47,4 @@ NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)    
 istio-ingressgateway   LoadBalancer   10.103.192.174   172.17.0.36   15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
 ```
 
-While you are waiting, progress to the next step and familiarize yourself with the architecture of the Bookinfo application. You can periodically check the gateway status during the next step.
+While you are waiting, progress to the next step and familiarize yourself with the architecture of the Bookinfo* application. You can periodically check the gateway status during the next step.
