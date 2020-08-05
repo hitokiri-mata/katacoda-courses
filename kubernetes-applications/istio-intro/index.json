@@ -1,7 +1,7 @@
 {
   "private": "true",
   "title": "Istio Getting Started",
-  "description": "Introduction to Istio with the BookInfo App.",
+  "description": "Introduction to Istio with the Bookinfo App.",
   "difficulty":	"Introduction",
   "time":	"20 minutes",  
   "details": {
@@ -22,12 +22,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "BookInfo App Preparation",
+        "title": "Bookinfo App Preparation",
         "text": "step4-app-prep.md",
         "code": "clear.sh"
       },
       {
-        "title": "Install BookInfo App",
+        "title": "Install Bookinfo App",
         "text": "step5-install-bookinfo.md",
         "code": "clear.sh"
       },

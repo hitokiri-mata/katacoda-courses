@@ -1,14 +1,14 @@
-Next, you will install a demonstration application called BookInfo. The application is composed of several microservices and they will all be deployed to the _default_ namespace.
+Next, you will install a demonstration application called Bookinfo. The application is composed of several microservices and they will all be deployed to the _default_ namespace.
 
-## Start BookInfo application
+## Start Bookinfo application
 
-Install the BookInfo application.
+Install the Bookinfo application.
 
 `cd istio-${ISTIO_VERSION}`{{execute}}
 
 `kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml`{{execute}}
 
-In a few moments, the BookInfo components will be running.
+In a few moments, the Bookinfo components will be running.
 
 `kubectl get deployments,pods,services`{{execute}}
 
@@ -42,7 +42,7 @@ Istio should also report no issues.
 
 Get the ingress gateway host IP.
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
+`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.externalIPs[0]}')`{{execute}}
 
 Set the ingress port.
 
@@ -61,3 +61,9 @@ Again, you will see `<title>Simple Bookstore App</title>`.
 The full application web interface is now available at this public Katacoda address at:
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+
+## Apply default destination rules
+
+Before you can use Istio to control the Bookinfo version routing, you need to define the available versions, called subsets, in destination rules.
+
+`kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml`{{execute}}

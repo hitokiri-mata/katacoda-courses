@@ -20,13 +20,13 @@ Verify the version of the command-line tool.
 
 `istioctl version`{{execute}}
 
-The version will appear, and the message `no running Istio pods in "istio-system"` is expect as noting has started yet.
+The version will appear, and the message `no running Istio pods in "istio-system"` is expect since nothing has started.
 
 Initialize Istio on this Kubernetes cluster. This will start the operator and in turn, the operator will manage the installation and configuration of Istio for this cluster.
 
 `istioctl manifest apply --set profile=demo`{{execute}}
 
-There are a few [profiles to choose from](https://istio.io/latest/docs/setup/additional-setup/config-profiles/) based on the list of Istio features you want to enable. For this scenario with BookInfo, the _Demo_ profile is ideal.
+There are a few [profiles to choose from](https://istio.io/latest/docs/setup/additional-setup/config-profiles/) based on the list of Istio features you want to enable. For this scenario with Bookinfo, the _Demo_ profile is ideal.
 
 In a few moments, Istio will be available. The `Processing resources for Istiod` step may take a few minutes. Once complete. You can verify Istio is ready.
 
@@ -47,4 +47,4 @@ NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)    
 istio-ingressgateway   LoadBalancer   10.103.192.174   172.17.0.36   15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
 ```
 
-While you are waiting, progress to the next step and familiarize yourself with the architecture of the BookInfo application. You can periodically check the gateway status during the next step.
+While you are waiting, progress to the next step and familiarize yourself with the architecture of the Bookinfo application. You can periodically check the gateway status during the next step.

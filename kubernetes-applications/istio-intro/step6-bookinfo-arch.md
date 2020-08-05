@@ -1,4 +1,4 @@
-The BookInfo sample application deployed is composed of four microservices.
+The Bookinfo sample application deployed is composed of four microservices.
 
 | Microservice  | Description                                                                      |
 |---------------|----------------------------------------------------------------------------------|
@@ -15,9 +15,9 @@ The deployment includes three versions of the reviews microservice to showcase d
 
 All services communicate over HTTP using DNS for service discovery. An overview of the architecture is shown below.
 
-<img align="right" src="./assets/withistio.svg" width="400">
-BookInfo Architecture
+<src="./assets/withistio.svg" width="100%">
+Bookinfo Architecture
 
-Unbeknownst to the BookInfo containers, the Envoy sidecars injected next to each microservice and surreptitiously intercept all inbound and outbound Pod traffic.  
+Unbeknownst to the Bookinfo containers, the Envoy sidecars injected next to each microservice and surreptitiously intercept all inbound and outbound Pod traffic.  
 
 The source code for the application is available on [Github](https://github.com/istio/istio/tree/release-0.1/samples/apps/bookinfo/src).

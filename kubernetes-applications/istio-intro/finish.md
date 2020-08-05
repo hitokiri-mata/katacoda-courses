@@ -10,7 +10,7 @@ In this scenario you experienced some important Istio features, but there are a 
 With these steps you have learned:
 
 - &#x2714; how to install Istio on Kubernetes following its recommended best practices,
-- &#x2714; how to install Istio's BookInfo as a _Hello World_ for Istio,
+- &#x2714; how to install Istio's Bookinfo as a _Hello World_ for Istio,
 - &#x2714; how to start manipulating Istio declarations to control your network close to the application plane.
 
 Look for more Katacodas to explore other Istio features as they arrive.

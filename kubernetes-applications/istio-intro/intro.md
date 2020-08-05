@@ -18,5 +18,5 @@ This scenario has been adapted Istio' [Getting Started guide](https://istio.io/l
 In the following steps you will learn:
 
 - how to install Istio on Kubernetes following its recommended best practices,
-- how to install Istio's BookInfo as a _Hello World_ for Istio.
+- how to install Istio's Bookinfo as a _Hello World_ for Istio.
 - how to start manipulating Istio declarations to control your network close to the application plane.

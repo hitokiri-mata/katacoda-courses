@@ -1,7 +1,8 @@
 Now that you have Istio and a sample application running let's explore what we can do with it. One of the main features of Istio is traffic management. As a Microservice architectures grow, so too grows the need for more advanced control of service-to-service communications.
 
 ## User Based Testing / Request Routing
-One aspect of traffic management is controlling traffic routing based on the HTTP request, such as user agent strings, IP address or cookies.
+
+One aspect of traffic management is controlling traffic routing based on the HTTP request, such as user agent strings, IP address, or cookies.
 
 The example below will send all traffic for the user _jason_ to the reviews:v2, meaning they'll only see the black stars. A few descriptive lines defines this rule.
 
@@ -27,7 +28,7 @@ Apply this traffic splitting rule.
 
 Logout of user Jason otherwise the above configuration will take priority
 
-The weighting is not round robin, multiple requests may go to the same service, but over multple calls the statistics eventually work out.
+The weighting is not round robin, multiple requests may go to the same service, but over multiple calls the statistics eventually work out.
 
 ## New Releases
 
