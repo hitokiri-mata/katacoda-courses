@@ -27,4 +27,8 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
+# Inject Kubernetes external ip into katacoda.yaml
+export EXTERNAL_IP=$(kubectl cluster-info | grep master | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
+envsubst < /root/katacoda-template.yaml > /root/katacoda.yaml
+
 echo "done" >> /opt/.backgroundfinished
