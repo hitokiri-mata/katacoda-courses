@@ -1,8 +1,5 @@
-# Introduction to Helm #
-
-<img align="right" src="./assets/helm.png" height="100" width="100">
-
-This scenario teaches you how to use most of the features in Helm, a package manager for Kubernetes. Helm simplifies discovering and deploying services to a Kubernetes cluster.
+<img align="right" src="./assets/helm.png" width="200">
+This scenario teaches you how to use most of the features in Helm, a package manager for Kubernetes.
 
 > Helm is the best way to find, share, and use software built for Kubernetes.
 

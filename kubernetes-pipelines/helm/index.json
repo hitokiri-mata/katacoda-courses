@@ -7,48 +7,53 @@
     "details": {
         "steps": [
         {
+            "title": "Your Kubernetes Cluster",
+            "text": "step1-k8s.md",
+            "code": "clear.sh"
+        },
+        {
             "title": "Install Helm",
-            "text": "step1-install.md",
+            "text": "step2-install.md",
             "code": "clear.sh"
         },
         {
             "title": "Search For Redis Chart",
-            "text": "step2-search.md",
+            "text": "step3-search.md",
             "code": "clear.sh"
         },
         {
             "title": "Deploy Redis",
-            "text": "step3-deploy.md",
+            "text": "step4-deploy.md",
             "code": "clear.sh"
         },
         {
             "title": "Observe Redis",
-            "text": "step4-observe.md",
+            "text": "step5-observe.md",
             "code": "clear.sh"
         },
         {
             "title": "Remove Redis",
-            "text": "step5-remove.md",
+            "text": "step6-remove.md",
             "code": "clear.sh"
         },
         {
             "title": "Explore Repositories",
-            "text": "step6-explore.md",
+            "text": "step7-explore.md",
             "code": "clear.sh"
         },
         {
             "title": "Add Repositories",
-            "text": "step7-add-repo.md",
+            "text": "step8-add-repo.md",
             "code": "clear.sh"
         },
         {
             "title": "Create Chart",
-            "text": "step8-create.md",
+            "text": "step9-create.md",
             "code": "clear.sh"
         },
         {
             "title": "Update Chart",
-            "text": "step9-update.md"
+            "text": "step10-update.md"
         }
         ],
         "intro": {
@@ -62,7 +67,7 @@
         },
         "assets": {
             "host01": [
-              {"file": "*.yaml", "target": "/root"},
+              {"file": "pv.yaml", "target": "/root"},
               {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
             ]
           }

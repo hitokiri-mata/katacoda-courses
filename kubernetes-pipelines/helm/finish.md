@@ -17,10 +17,12 @@ With these steps you have learned:
 
 ## References ##
 
-- [Helm Documentation](http://www.helm.sh/)
-- [How To Create Your First Helm Chart
-](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
-- [CloudAcademy: Deploying Applications with Helm (video)](https://youtu.be/uXaNh4Mrhdc)
+- [Helm Documentation](http://www.helm.sh)
+- [How To Create Your First Helm Chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart)
+- [Helm Hub](https://hub.helm.sh)
+- [Adding Bitnami Helm Chart Repo](https://github.com/bitnami/charts)
+- [Host chart repo using GitHub pages](https://github.com/helm/chart-releaser)
+- [Helm plugins](https://helm.sh/docs/community/related)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
@@ -29,4 +31,3 @@ For a deeper understanding of these topics and more join <br>[Jonathan Johnson](
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>
-

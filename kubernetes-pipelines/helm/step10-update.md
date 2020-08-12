@@ -7,3 +7,15 @@ Well, this demonstration chart is a bit deficient as it does not allow the value
 `kubectl patch service my-app-app-chart --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
 With this adjustment my-app's [Nginx default page](https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/) will be reachable.
+
+## Further commands
+
+There are a few more helpful commands that you can discover.
+
+`helm --help`{{execute}}
+
+The `helm lint` command will check your charts for errors. Something that commonly happens when editing YAML files and experimenting with the Go templating syntax in the template files.
+
+The `helm test` command can be used to bake testing into your chart usage in CI/CD pipelines.
+
+The [`helm plugin`](https://helm.sh/docs/topics/plugins/) opens Helm for many extension possibilities. Here is a [curated list](https://helm.sh/docs/community/related/) of helpful extensions for Helm.
