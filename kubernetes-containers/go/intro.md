@@ -3,9 +3,8 @@ These next steps provide an ideal place to start writing applications in Go to r
 
 You will learn how:
 
-- Write some basic Go applications
-- Write a basic microservice in Go
-- Package a Go microservice in a container
-- Run a Go microservice on Kubernetes
+- Write a basic Rust application as a microservice
+- Package a Rust microservice in a container
+- Run a Rust microservice on Kubernetes
 
-> [Go](https://golang.org/) is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+> [Rust](https://www.rust-lang.org/) is a multi-paradigm programming language focused on performance and safety, especially safe concurrency. Rust is syntactically similar to C++, and provides memory safety without using garbage collection. -[wikipedia on Rust programming language](https://en.wikipedia.org/wiki/Rust_(programming_language))

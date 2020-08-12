@@ -12,7 +12,7 @@ set -x
 echo '-s' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
-docker pull -q whalebrew/pygmentize:2.6.1 &
+docker pull whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
 source ~/.bashrc# Allow pygmentize for source highlighting
 

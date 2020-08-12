@@ -14,11 +14,11 @@ Notice it looks like a normal deployment YAML with the `kind: Deployment` define
 
 What about defining the container image for the deployment? That is an injected value as well.
 
-`ccat app-chart/templates/deployment.yaml | grep 'image:' -n -B3 -A3`{{execute}}
+`ccat app-chart/templates/deployment.yaml | grep 'image:' -n -C3`{{execute}}
 
 Notice the `{{ .Values.image.repository }}`, this is where the container name gets injected. All of these values have defaults typically found in the values.yaml file in the chart directory.
 
-`ccat app-chart/values.yaml | grep 'repository' -n -B3 -A3`{{execute}}
+`ccat app-chart/values.yaml | grep 'repository' -n -C3`{{execute}}
 
 Notice the templating key uses the dot ('.') notation to navigate and extract the values from the hierarchy in the values.yaml.
 
@@ -28,11 +28,11 @@ As is, this chart is ready to be deployed since all the defaults have been suppl
 
 Before deploying to Kubernetes, the _dry-run_ feature will list out the resources to the console. This allows you to inspect the injection of the values into the template without committing an installation, a helpful development technique. Observe how the container image name is injected into the template.
 
-`helm install my-app ./app-chart --dry-run --debug | grep 'image: "' -n -B3 -A3`{{execute}}
+`helm install my-app ./app-chart --dry-run --debug | grep 'image: "' -n -C3`{{execute}}
 
 Notice the `ImagePullPolicy` is set to the default of `IfNotPreset`. Before we deploy the chart we could modify the values.yaml file and change the policy value in there, but perhaps we would like to locally modify a different policy setting first to verify it works. Use the `--set` command to override a default value. Here we change the Nginx container image ImagePullPolicy from `IfNotPreset` to `Always`.
 
-`helm install my-app ./app-chart --dry-run --debug --set image.pullPolicy=Always | grep 'image: "' -n -B3 -A3`{{execute}}
+`helm install my-app ./app-chart --dry-run --debug --set image.pullPolicy=Always | grep 'image: "' -n -C3`{{execute}}
 
  With the version injecting correctly, install it.
 

@@ -1,7 +1,7 @@
 # Go Apps in Containers on Kubernetes #
 
-<img align="right" src="./assets/golang.png" width="300">
-These next steps provide an ideal place to start writing application in Go to run on Kubernetes. Each step will take you from raw Go code, to packaging it in a container to running your containered application on Kubernetes.
+<img align="right" src="./assets/rust.png" width="300">
+These next steps provide an ideal place to start writing applications in Rust to run on Kubernetes. Each step will take you from raw Go code, to packaging it in a container to running your containered application on Kubernetes.
 
 You will learn how:
 

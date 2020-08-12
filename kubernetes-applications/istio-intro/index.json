@@ -26,7 +26,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Install Bookinfo* App",
+        "title": "Install Bookinfo App",
         "text": "step5-install-bookinfo.md",
         "code": "clear.sh"
       },
