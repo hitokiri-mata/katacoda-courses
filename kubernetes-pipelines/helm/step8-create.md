@@ -8,17 +8,17 @@ This will create the directory _my-app-chart_ as the skeleton for your chart. Al
 
 All of your Kubernetes resource definitions in YAML files are located in the templates directory. Take a look at the top of _deployments.yaml_.
 
-`ccat app-chart/templates/deployment.yaml | grep 'kind:' -n -B1 -A5`{{execute}}
+`cat app-chart/templates/deployment.yaml | grep 'kind:' -n -B1 -A5`{{execute}}
 
 Notice it looks like a normal deployment YAML with the `kind: Deployment` defined. However, there is new syntax sugar using double braces `{{ .. }}`. This is the templating mechanism that Helm uses to inject values into this template. Instead of hard coding in values instead, this templating injects values. The templating language has many features by leveraging the Go templating API.
 
 What about defining the container image for the deployment? That is an injected value as well.
 
-`ccat app-chart/templates/deployment.yaml | grep 'image:' -n -C3`{{execute}}
+`cat app-chart/templates/deployment.yaml | grep 'image:' -n -C3`{{execute}}
 
 Notice the `{{ .Values.image.repository }}`, this is where the container name gets injected. All of these values have defaults typically found in the values.yaml file in the chart directory.
 
-`ccat app-chart/values.yaml | grep 'repository' -n -C3`{{execute}}
+`cat app-chart/values.yaml | grep 'repository' -n -C3`{{execute}}
 
 Notice the templating key uses the dot ('.') notation to navigate and extract the values from the hierarchy in the values.yaml.
 

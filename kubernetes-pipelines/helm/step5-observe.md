@@ -14,10 +14,12 @@ and ensure Redis has permissions to write to these mount points.
 
 `mkdir /mnt/data1 /mnt/data2 /mnt/data3 --mode=777`{{execute}}
 
-Now, notice Redis Pod status will change to _running_.
+Now, notice Pod status will change to _Running_.
 
 `watch kubectl get deployments,pods,services -n redis`{{execute}}
 
-In a moment and all the Deployments will move to the _available (1)_ state. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+> [Unfortunately, the old terminology for the Pod root names remains unchanged. Perhaps Redis still has room for maturation and a future chart will correct these names.](http://antirez.com/news/122)
 
- You have successfully installed a [Redis cluster](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes. You now understand how to find and install public applications using Helm charts.
+In a moment and all the Deployments will move to the _ready_ state. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+You have successfully installed [Redis](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes. You now understand how to find and install public applications using Helm charts.

@@ -1,22 +1,22 @@
-Many common and publicly available open source projects can run on Kubernetes. Many of these projects, not offer only containers to package these applications, but complete Helm charts for full production installations on Kubernetes.
+Many common and publicly available open source projects can run on Kubernetes. Many of these projects offer containers that package these applications and vetted Helm charts for full production installations on Kubernetes.
 
 Up until recently in 2020, all of the most commonly used public Helm charts were being lumped into a single Git repository for incubating and stable Helm charts. This idea of centralizing all charts in GitHub has since been abandoned, thankfully. There are too many charts now being maintained by many different organizations and projects. Every day more charts are being added to our community.
 
 ## Helm Hub
 
-Now, the canonical source for Helm charts is the Helm Hub, an aggregator for distributed chart repos. This  central registry that has risen from the need for us to have a single place for us to search for charts. [Helm Hub](https://hub.helm.sh/). While these charts are listed here, the actual charts are hosted in a growing variety of repos.  If you find a chart of interest the page for the specific chart will tell you the chart names, list the versions and the repo where the chart can be found.
+Now, the canonical source for Helm charts is the Helm Hub, an aggregator for distributed chart repos. This  central registry that has risen from the need for us to have a single place for us to search for charts. [Helm Hub](https://hub.helm.sh/). While these charts are listed here, the actual charts are hosted in a growing variety of repos. If you find a chart of interest the page for the specific chart will reveal the chart name, list of versions ([semver.org](https://semver.org/) format) and the repo where the chart can be found.
 
 There are over 1400 charts available and growing each day.
 
 `helm search hub | wc -l`{{execute}}
 
-You can search the hub for specific charts.  
+You can search the Helm Hub for specific charts.  
 
-`helm search hub search clair`{{execute}}
+`helm search hub clair`{{execute}}
 
-Often you will find different organizations offering overlapping chart solutions for installing a specific technology your are looking for. Look at the various providers for Redis.
+You will find different organizations offering overlapping chart solutions for installing a specific technology your are looking for. Look at the various providers for Redis.
 
-`helm search hub search redis`{{execute}}
+`helm search hub redis`{{execute}}
 
 At last count there were about 15 Redis related public charts. One provider who has been prolific at providing well written charts is Bitnami. So let's narrow our search.
 
@@ -26,7 +26,7 @@ For this scenario we are interested in the [Redis chart described here](https://
 
 ## Repos
 
-While the chart is listed in Helm Hub, the Bitnami organization has a public repo of all its charts. In the Helm Hub pages each chart has a repo you can add to access the chart.  The instructions for the Redis chart says to add the bitnami repo.
+While the chart is listed in Helm Hub, the Bitnami organization has a public repo of all its charts. In each Helm Hub chart page a repo is listed for you to add for access the chart. The instructions for the Redis chart says to add the bitnami repo.
 
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
 
@@ -69,9 +69,5 @@ With this, the repo will appear in the repo list.
 Now, their charts can be listed.
 
 `helm search repo fabric8`{{execute}}
-
-A specific fabric8 chart can be further inspected.
-
-`helm inspect chart fabric8/ipaas-platform`{{execute}}
 
 Now you know how to find and list public charts. In the next step you will install the Redis chart you discovered.

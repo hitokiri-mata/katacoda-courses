@@ -12,4 +12,4 @@ In the following steps you will learn:
 - how to create a custom chart,
 - how to update a chart.
 
-More details can be found on their [website](http://www.helm.sh/).
+More details can be found the [Helm website](http://www.helm.sh/).

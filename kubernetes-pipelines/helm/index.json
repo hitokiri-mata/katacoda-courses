@@ -42,18 +42,13 @@
             "code": "clear.sh"
         },
         {
-            "title": "Add Repositories",
-            "text": "step8-add-repo.md",
-            "code": "clear.sh"
-        },
-        {
             "title": "Create Chart",
-            "text": "step9-create.md",
+            "text": "step8-create.md",
             "code": "clear.sh"
         },
         {
             "title": "Update Chart",
-            "text": "step10-update.md"
+            "text": "step9-update.md"
         }
         ],
         "intro": {
