@@ -12,8 +12,9 @@ set -x
 echo '-s' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
-docker pull whalebrew/pygmentize:2.6.1 &
-echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
+# Preload docker image to make ccat hot
+docker run whalebrew/pygmentize:2.6.1 &
+echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize:2.6.1 $@; }' >> ~/.bashrc
 source ~/.bashrc
 
 # Setup dashboard on port 30000
@@ -26,5 +27,10 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=enableInsecureLogin=true \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
+
+# Katacoda Cloud Provider is used when a LoadBalancer service is requested 
+# by Kubernetes, Katacoda will respond with the IP of the master. This is 
+# how Istio and other LoadBalancer based services can be deployed.
+kubectl delete -f /opt/katacoda-cloud-provider.yaml
 
 echo "done" >> /opt/.backgroundfinished
