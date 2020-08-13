@@ -20,4 +20,4 @@ Bookinfo Architecture
 
 Unbeknownst to the Bookinfo containers, the Envoy sidecars injected next to each microservice and surreptitiously intercept all inbound and outbound Pod traffic.  
 
-The source code for the application is available on [Github](https://github.com/istio/istio/tree/release-0.1/samples/apps/bookinfo/src).
+The source code for the application is available on [GitHub](https://github.com/istio/istio/tree/release-0.1/samples/apps/bookinfo/src).

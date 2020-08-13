@@ -4,7 +4,7 @@ Up until recently in 2020, all of the most commonly used public Helm charts were
 
 ## Helm Hub
 
-Now, the canonical source for Helm charts is the Helm Hub, an aggregator for distributed chart repos. This  central registry that has risen from the need for us to have a single place for us to search for charts. [Helm Hub](https://hub.helm.sh/). While these charts are listed here, the actual charts are hosted in a growing variety of repos. If you find a chart of interest the page for the specific chart will reveal the chart name, list of versions ([semver.org](https://semver.org/) format) and the repo where the chart can be found.
+Now, the canonical source for Helm charts is [Helm Hub](https://hub.helm.sh/), an aggregator for distributed chart repos. This central registry that has risen from the need for us to have a single place for us to search for charts. While these charts are listed here, the actual charts are hosted in a growing variety of repos. If you find a chart of interest the page for the specific chart will reveal the chart name, list of versions ([semver.org](https://semver.org/) format) and the repo where the chart can be found.
 
 There are over 1400 charts available and growing each day.
 
@@ -36,7 +36,7 @@ Your Helm now has access to the Bitnami charts.
 
 Instead of searching the Hub for charts you can also search the Bitnami repo.
 
-`helm search repo bitnami/Redis`{{execute}}
+`helm search repo bitnami/redis`{{execute}}
 
 The Helm command can reveal additional information about the chart.
 
@@ -50,11 +50,9 @@ The definable context values.
 
 `helm show values bitnami/redis`{{execute}}
 
-There are many other repositories that you can add to Helm. If your chart is in a Github account, the location can be registered to Helm so it can pull the chart from that source.
+## Fabric8
 
-## fabric8
-
-If you search Helm for _fabric8_, nothing will be listed.
+As another example, if you search Helm for _fabric8_, nothing will be listed.
 
 `helm search repo fabric8`{{execute}}
 

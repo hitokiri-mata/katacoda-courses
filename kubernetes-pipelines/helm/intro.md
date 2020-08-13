@@ -11,5 +11,3 @@ In the following steps you will learn:
 - how to list and add more repositories,
 - how to create a custom chart,
 - how to update a chart.
-
-More details can be found the [Helm website](http://www.helm.sh/).

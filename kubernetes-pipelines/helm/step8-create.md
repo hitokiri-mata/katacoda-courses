@@ -46,7 +46,13 @@ In a moment the app will start. Inspect its progress.
 
 ## Making your own chart repo
 
-When you develop your charts, there are a few ways to add your charts to custom repos, either publicly or privately. A popular chart repo hosting service you can add to Kubernetes is called [ChartMuseum](). Guess what, it also can be installed with a [ChartMuseum Helm chart](https://hub.helm.sh/charts/stable/chartmuseum). (ツ) You can also use Github pages to host an [inexpensive chart repo](https://github.com/helm/chart-releaser).
+When you develop your charts, there are a few ways to add your charts to custom repositories, either publicly or privately. Some examples are:
+
+- If your chart is in a GitHub account, the location can be registered to Helm so it can pull the chart from that source.
+
+- A popular chart repo hosting service you can add to Kubernetes is called [ChartMuseum](). Guess what, it also can be installed with a [ChartMuseum Helm chart](https://hub.helm.sh/charts/stable/chartmuseum). (ツ)
+
+- You can also use GitHub pages to host an [inexpensive chart repo](https://github.com/helm/chart-releaser).
 
 `helm search hub chartmuseum`{{execute}}
 
