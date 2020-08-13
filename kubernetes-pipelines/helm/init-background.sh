@@ -11,6 +11,11 @@ set -x
 # Common curl switches (however, use `lynx url --dump` when you can)
 echo '-s' >> ~/.curlrc
 
+# Katacoda Cloud Provider is used when a LoadBalancer service is requested 
+# by Kubernetes, Katacoda will respond with the IP of the master. This is 
+# how Istio and other LoadBalancer based services can be deployed.
+kubectl delete -f /opt/katacoda-cloud-provider.yaml
+
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
 docker pull whalebrew/pygmentize:2.6.1 &
 echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
@@ -28,6 +33,6 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=service.externalPort=80
 
 # Install redis-cli to later validate the redis install
-apt install redis-tools --yes -qq
+apt install redis-tools --yes -qq &
 
 echo "done" >> /opt/.backgroundfinished
