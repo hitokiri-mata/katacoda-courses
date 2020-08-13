@@ -69,7 +69,10 @@
         },
     "environment": {
         "uilayout": "terminal",
-        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n"
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "dashboards": [
+            {"name": "Kubernetes Dashboard", "port": 30000}
+        ]
     },
     "backend": {
         "imageid": "kubernetes-cluster-running:1.18"

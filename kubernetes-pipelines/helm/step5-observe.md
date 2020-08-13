@@ -32,10 +32,10 @@ To get your password query the Redis Secret.
 
 Expose the Redis master service.
 
-`kubectl port-forward --namespace redis service/my-redis-master 6379:6379 &`{{execute}}
+`kubectl port-forward --namespace redis service/my-redis-master 6379:6379 > /dev/null &`{{execute}}
 
 Connect to your database from outside the cluster.
 
 `redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD ping`{{execute}}
 
-If you see `PONG` you have connected successfully to the Redis application installed by the Helm chart. Nice work!
+If you see `PONG` as the response you have connected successfully to the Redis application installed by the Helm chart. Nice work!
