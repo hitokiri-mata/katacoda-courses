@@ -2,7 +2,7 @@ Just to emphasize.
 
 `echo "The number of chart on Helm Hub is: $(helm search hub | wc -l)."`{{execute}}
 
-The stable chart count is consistently increasing with the maturing Kubernetes ecosystem. There are a numerous common charts that, as a Kubernetes developer, you may want to leverage.
+The chart count is consistently increasing with the maturing Kubernetes ecosystem. There are numerous common charts that, as a Kubernetes developer, you may want to leverage.
 
 - `helm search hub postgres`{{execute}}
 - `helm search hub sonarqube`{{execute}}
