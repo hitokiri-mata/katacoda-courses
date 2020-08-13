@@ -69,6 +69,7 @@
         },
     "environment": {
         "uilayout": "terminal",
+        "showdashboard": true,
         "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
         "dashboards": [
             {"name": "Kubernetes Dashboard", "port": 30000}
