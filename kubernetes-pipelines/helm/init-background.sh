@@ -27,4 +27,7 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 --set=service.nodePort=30000 \
 --set=service.externalPort=80
 
+# Install redis-cli to later validate the redis install
+apt install redis-tools --yes -qq
+
 echo "done" >> /opt/.backgroundfinished

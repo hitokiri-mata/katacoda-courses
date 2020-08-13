@@ -8,13 +8,7 @@ Add the chart repository for the Helm chart to be installed. You did this in the
 
 With a known chart name, use the _install_ command to deploy the chart to your cluster.
 
-```bash
-helm install my-redis bitnami/redis \
-  --version 10.7.16 \
-  --namespace redis \
-  --set master.service.type=NodePort \
-  --set master.service.nodePort=31112
-```{{execute}}
+`helm install my-redis bitnami/redis --version 10.7.16 --namespace redis`{{execute}}
 
 This will name a new install called _my-redis_ and install a specific chart name and version into the _redis_ namespace. With the install command Helm will launch the required Deployments, ReplicaSets, Pods, Services, ConfigMaps, or any other Kubernetes resource the chart defines. The two _set_ switches are overrides of the chart's default values. A YAML property file can be used for this example with just two parameters we pass them directly with the command line. The two values ensure the main Redis pod can be reached from a NodePort. Later, you will access this port to verify Redis is started.
 

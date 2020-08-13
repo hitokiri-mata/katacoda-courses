@@ -20,6 +20,20 @@ Now, notice Pod status will change to _Running_.
 
 `watch kubectl get statefulsets,pods,services -n redis`{{execute}}
 
-In a moment and all the Deployments will move to the _ready_ state. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+In a moment and all the 3 Pods will move to the _Running_ state. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-You have successfully installed [Redis](https://[[HOST_SUBDOMAIN]]-31112-[[KATACODA_HOST]].environments.katacoda.com/) on Kubernetes. You now understand how to find and install public applications using Helm charts.
+You have successfully installed Redis. The redis-cli tool has been installed for this scenario so you can verify Redis on Kubernetes is responding. When the chart installed there were some helpful instruction on how to connect. The following are those instructions.
+
+## Connect to Your Redis Server
+
+To get your password query the Redis Secret.
+
+`export REDIS_PASSWORD=$(kubectl get secret --namespace redis my-redis -o jsonpath="{.data.redis-password}" | base64 --decode)`{{execute}}
+
+Expose the Redis master service.
+
+`kubectl port-forward --namespace redis service/my-redis-master 6379:6379 &`{{execute}}
+
+Connect to your database from outside the cluster.
+
+`redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD ping`{{execute}}
