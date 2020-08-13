@@ -11,15 +11,12 @@ set -x
 # Common curl switches (however, use `lynx url --dump` when you can)
 echo '-s' >> ~/.curlrc
 
-# Katacoda Cloud Provider is used when a LoadBalancer service is requested 
-# by Kubernetes, Katacoda will respond with the IP of the master. This is 
-# how Istio and other LoadBalancer based services can be deployed.
-kubectl delete -f /opt/katacoda-cloud-provider.yaml
-
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
-docker pull whalebrew/pygmentize:2.6.1 &
-echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize $@; }' >> ~/.bashrc
+echo 'function ccat() { docker run -it -v "$(pwd)":/workdir -w /workdir whalebrew/pygmentize:2.6.1 $@; }' >> ~/.bashrc
 source ~/.bashrc
+# Preload docker image to make ccat hot
+# docker run whalebrew/pygmentize:2.6.1 &
+ccat init-background.sh &
 
 # Setup dashboard on port 30000
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
@@ -34,5 +31,10 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 
 # Install redis-cli to later validate the redis install
 apt install redis-tools --yes -qq &
+
+# Katacoda Cloud Provider is used when a LoadBalancer service is requested 
+# by Kubernetes, Katacoda will respond with the IP of the master. This is 
+# how Istio and other LoadBalancer based services can be deployed.
+kubectl delete -f /opt/katacoda-cloud-provider.yaml
 
 echo "done" >> /opt/.backgroundfinished
