@@ -10,9 +10,9 @@ With a known chart name, use the _install_ command to deploy the chart to your c
 
 `helm install my-redis bitnami/redis --version 10.7.16 --namespace redis`{{execute}}
 
-This will name a new install called _my-redis_ and install a specific chart name and version into the _redis_ namespace. With the install command Helm will launch the required Deployments, ReplicaSets, Pods, Services, ConfigMaps, or any other Kubernetes resource the chart defines. The two _set_ switches are overrides of the chart's default values. A YAML property file can be used for this example with just two parameters we pass them directly with the command line. The two values ensure the main Redis pod can be reached from a NodePort. Later, you will access this port to verify Redis is started.
+This will name a new install called _my-redis_ and install a specific chart name and version into the _redis_ namespace. With the install command Helm will launch the required Deployments, ReplicaSets, Pods, Services, ConfigMaps, or any other Kubernetes resource the chart defines.
 
-View all the installed charts.
+Well written charts will present notes as part of the installation instructions. The notes will provide helpful information on how to access the new services. We'll follow these notes in the next step, but first, view all the installed charts.
 
 `helm list --all-namespaces`{{execute}}
 
@@ -36,7 +36,7 @@ then Helm will query Kubernetes for a list of secrets filtered for Helm.
 
 `kubectl get secrets --all-namespaces --selector owner=helm`{{execute}}
 
-For the Redis chart you installed to the redis namespace you can see the secret information about the deployment.
+For the Redis chart, you installed to the _redis_ namespace you can see the secret information about the deployment.
 
 `kubectl --namespace redis describe secret sh.helm.release.v1.my-redis.v1`{{execute}}
 

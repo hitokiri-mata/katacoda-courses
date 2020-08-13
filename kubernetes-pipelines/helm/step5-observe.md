@@ -37,3 +37,5 @@ Expose the Redis master service.
 Connect to your database from outside the cluster.
 
 `redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD ping`{{execute}}
+
+If you see `PONG` you have connected successfully to the Redis application installed by the Helm chart. Nice work!
