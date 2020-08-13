@@ -8,18 +8,18 @@ Plugins:
 - **Image**: List container images used in the cluster.
 - **Outdated**: List outdated container images running in a cluster
 
-Install the plugins.
+Install the plugins:
 
 `kubectl krew install images`{{execute}}
 
 `kubectl krew install outdated`{{execute}}
 
-List all the containers across all namespaces in your cluster.
+List all the containers across all namespaces in your cluster:
 
 `kubectl images -A`{{execute}}
 
-List all the containers across all namespaces in your cluster showing which are current or could be updated.
+List all the containers across all namespaces in your cluster showing which are current or could be updated:
 
 `kubectl outdated`{{execute}}
 
-Like all plugin, these plugins have further command-line options. See `--help` for options.
+Like all plugins, these have further command-line options. See `--help` for options.

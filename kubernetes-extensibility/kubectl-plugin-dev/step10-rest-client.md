@@ -1,21 +1,21 @@
-Another technique used to get the same Pod Listing is using the REST client.
+Another technique that gets the same Pod listing is using the REST client. 
 
-Currently, if you test the Pod list2 (alternate form with the `2`) command it returns just a placeholder message.
+Currently, if you test the Pod list2 (alternate form with the `2`) command it returns just a placeholder message:
 
 `kubectl example pod list2`{{execute}}
 
 ## Add REST Client
 
-At the bottom of the file `pkg/example/cmd/pod_list.go`{{open}} in the `run2` function find the code `fmt.Printf("add pod list code using the rest client\n")` and replace with the following:
+At the bottom of the file `k8s-cli/pkg/example/cmd/pod_list.go`{{open}} in the `run2` function, find the code `fmt.Printf("add pod list code using the rest client\n")` and replace it with the following:
 
-Get a client, but first, we are going to use the **REST client**. Look in the `pkg/example/env/environment.go`{{open}} file at the differences.
+Get a client, but first, we are going to use the **REST client**. Look at the differences in the `k8s-cli/pkg/example/env/environment.go`{{open}} file:
 
 ```go
   client := env.NewRestClient(&Settings)
   result := &apiv1.PodList{}
 ```{{copy}}
 
-The REST API is more generic and it is coded using the builder pattern.
+The REST API is more generic and it is coded using the builder pattern:
 
 ```go
   err := client.Get().
@@ -28,7 +28,7 @@ The REST API is more generic and it is coded using the builder pattern.
   }
 ```{{copy}}
 
-At this point the `PodList` object is the same and can be displayed the same way as in the first part of this scenario.
+At this point the `PodList` object is the same and can be displayed the same way as in the first part of this scenario:
 ```go
   fmt.Fprintf(p.out, "RESTifarian technique\n")
   if len(result.Items) == 0 {
@@ -42,15 +42,15 @@ At this point the `PodList` object is the same and can be displayed the same way
 
 # Test
 
-Now the `pods list` use uses the REST client to provide the same Pod list.
+Now the `pods list` uses the REST client to provide the same Pod list:
 
 `go run cmd/kubectl-example/main.go pod list2`{{execute}}
 
-Generate the new plugin.
+Generate the new plugin:
 
 `make cli-install`{{execute}}
 
-Test the new Pod listing feature via the plugin.
+Test the new Pod listing feature via the plugin:
 
 `kubectl example pod list2`{{execute}}
 
