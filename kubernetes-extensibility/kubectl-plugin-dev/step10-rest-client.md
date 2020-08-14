@@ -14,7 +14,6 @@ At the bottom of the file `k8s-cli/pkg/example/cmd/pod_list.go`{{open}} in the `
   client := env.NewRestClient(&Settings)
   result := &apiv1.PodList{}
 ```{{copy}}
-
 The definition for this `NewRestClient` is near line 70 in `pkg/example/env/environment.go`{{open}}.
 
 2. Using the REST client get the Pods. You can see the REST API is more generic and is coded using the builder pattern:
@@ -44,7 +43,7 @@ The definition for this `NewRestClient` is near line 70 in `pkg/example/env/envi
 
 # Test
 
-Now the `pod list2` uses the REST client to provide the same Pod list:
+Now the `pod list` uses the REST client to provide the same Pod list:
 
 `go run cmd/kubectl-example/main.go pod list2`{{execute}}
 
