@@ -1,4 +1,4 @@
-Up to this point, you have only queried Kubernetes for information (the R in [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)). In this step, you will add a Pod programmatically. 
+Up to this point, you have only queried Kubernetes for information (the Read in [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)). In this step, you will add a Pod programmatically.
 
 Currently, if you test the Pod, the `add` command returns just a placeholder message:
 
@@ -10,17 +10,18 @@ and the request does not work—no new Pods:
 
 # Code Add Pod Logic
 
-You will be working with the file `k8s-cli/pkg/example/cmd/pod_add.go`{{open}}.
+You will be working with the file `pkg/example/cmd/pod_add.go`{{open}}.
 
 Like you did for `pod_list`, add these imports at the top of the `pod_add` file:
 
 ```go
   apiv1 "k8s.io/api/core/v1"
   metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
   "github.com/codementor/k8s-cli/pkg/example/env"
 ```{{copy}}
 
-At the bottom of the file in the `run` function, find the code that reads `fmt.Printf("adding a pod\n")` and replace with the following:
+At the bottom of the code file in the `run` function, find the line that reads `fmt.Printf("adding a pod\n")` and replace with the following:
 
 ```go
   client := env.NewClientSet(&Settings)

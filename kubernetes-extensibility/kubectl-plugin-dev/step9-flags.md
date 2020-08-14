@@ -13,7 +13,7 @@ In the same file, `pkg/example/cmd/pod_list.go`{{open}}, do the following:
 
 ## Code When Status Flag True
 
-Next, change the previous Pod listing logic the in the `run` function code for the `for` loop such that when the status flag is true it will provide a different output:
+Next, change the previous Pod listing logic the in the `run` function code for the `for` loop such that when the status flag is true it will provide a different output. Replace the small `for` loop with this new `for` loop:
 
 ```go
   for _, item := range list.Items {
