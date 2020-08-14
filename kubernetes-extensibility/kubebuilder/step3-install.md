@@ -1,4 +1,4 @@
-Install the [release of Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder/releases) that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book.
+Install the [release of Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder/releases) that was tested with this scenario. This installation follows the [quickstart](https://book.kubebuilder.io/quick-start.html) recommendation found in the Kubebuilder book:
 
 ```bash
 version=2.3.1
@@ -14,6 +14,6 @@ sudo mv /tmp/kubebuilder_${version}_${os}_${arch} /usr/local/kubebuilder
 export PATH=$PATH:/usr/local/kubebuilder/bin
 ```{{execute}}
 
-Verify the installation is complete.
+Verify the installation is complete:
 
 `kubebuilder version`{{execute}}

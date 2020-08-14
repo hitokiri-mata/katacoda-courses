@@ -41,7 +41,7 @@ Re-apply the CRDs to your running Kubernetes cluster.
 
 It's time to run your controller since it will serve the information for the Phase column. Run the controller.
 
-`cd $GOPATH/src/example && make run`{{execute T2}}
+`cd /opt/go/src/example && make run`{{execute T2}}
  
 Notice it is running in a different terminal so you can return to this tab so see its activity.
 

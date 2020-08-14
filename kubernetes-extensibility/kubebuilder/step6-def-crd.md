@@ -1,16 +1,16 @@
-In this step, you will code some details for the CRD that will in subsequently create a CRD on your cluster. Currently, there are no CRDs defined.
+In this step, you will code some details for the CRD that will subsequently create a CRD on your cluster. Currently, there are no CRDs defined:
 
 `kubectl get crds`{{execute}}
 
 ## Modify Structs
 
-Click on this `example/api/v1alpha1/at_types.go`{{open}} file to open it in the editor.
+Click to open the *example/api/v1alpha1/at_types.go*{{open}} file in the editor.
 
 The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
 # AtSpec
 
-For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it. Here is the new AtSpec to replace the existing one.
+For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it. Here is the new AtSpec to replace the existing one:
 
 ```go
 // AtSpec defines the desired state of an At resource
@@ -23,11 +23,11 @@ type AtSpec struct {
   Command string `json:"command,omitempty"`
 }```{{copy}}
 
-You can either type in the new lines (best way to learn) or click on the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
+You can either type in the new lines (that's the best way to learn) or click the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
 
 # AtStatus
 
-Just below, for the `AtStatus struct`, add a string variable named `Phase`.
+Just below, for the `AtStatus struct`, add a string variable named `Phase`:
 
 ```go
   // Specifications for "at" status
@@ -36,7 +36,7 @@ Just below, for the `AtStatus struct`, add a string variable named `Phase`.
 
 ## Add Phase Constants
 
-To complete the types definition, and for controller convenience, define the following phases in the same `example/api/v1alpha1/at_types.go`{{open}} file.
+To complete the types definition, and for controller convenience, define the following phases in the same *example/api/v1alpha1/at_types.go*{{open}} file:
 
 ```go
 const (
@@ -50,21 +50,21 @@ Add this `const` section just after the `structs` you just modified.
 
 ## Build
 
-With these modifications build and generate files in the config folder.
+With these modifications, build and generate files in the config folder:
 
 `make manifests`{{execute}}
 
-Apply the CRDs to your running Kubernetes cluster.
+Apply the CRDs to your running Kubernetes cluster:
 
 `make install`{{execute}}
 
 ## Test
 
-With these updates, ensure the updated controller and CRDs for `At` are installed.
+With these updates, ensure the updated controller and CRDs for `at` are installed:
 
 `kubectl get crds`{{execute}}
 
-You now new Kubernetes resource type. Further details about the resource can also be explored.
+You now have a new Kubernetes resource type and can explore further details about the resource:
 
 `kubectl describe crd ats`{{execute}}
 
