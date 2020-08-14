@@ -2,6 +2,8 @@
 
 Kubernetes Universal Declarative Operator (KUDO) provides a declarative approach to building production-grade Kubernetes Operators covering the entire application lifecycle.
 
+> The Cloud Native Computing Foundation (CNCF) has made the Kubernetes Universal Declarative Operator (KUDO) management toolkit created by D2iQ as a sandbox level project. - [D2iQ](https://d2iq.com/blog/kudo-accepted-as-a-cncf-sandbox-project) July 2020
+
 ## Operator Pattern ##
 
 If you find yourself needing to manage specialized services and solution sets on Kubernetes, often writing an Operator provides controllers to manage these complexities. An Operator contains imperative management logic that reacts to declarative requests and Kubernetes events. More about the [Operator Pattern can be found here](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). There are a variety of projects that offer you frameworks for writing Operators. KUDO is a prominent solution for writing Operators. The scenario teaches you how to use KUDO.
