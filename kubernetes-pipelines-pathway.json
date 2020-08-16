@@ -36,11 +36,8 @@
       {
         "course_id": "python",
         "title": "Python Pipeline to Kubernetes",
-        "description": "Build and deploy a Python microservice with Kaniko and Tekton Pipelines.",
-      
+        "description": "Build and deploy a Python microservice with Kaniko and Tekton Pipelines."
       }
-
-
     ]
   }
   
