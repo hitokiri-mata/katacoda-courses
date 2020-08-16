@@ -3,7 +3,7 @@
   "title": "Riff",
   "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {

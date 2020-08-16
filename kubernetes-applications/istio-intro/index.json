@@ -2,7 +2,7 @@
   "title": "Istio Getting Started",
   "description": "Introduction to Istio with the Bookinfo App.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {

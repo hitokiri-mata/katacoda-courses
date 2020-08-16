@@ -3,7 +3,7 @@
   "title": "Knative",
   "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {

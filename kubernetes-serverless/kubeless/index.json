@@ -13,7 +13,7 @@
       },
       {
         "title": "Install Kubeless",
-        "text": "step2-install.md",   
+        "text": "step2-install.md",
         "code": "clear.sh"
       },
       {

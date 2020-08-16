@@ -2,7 +2,7 @@
   "title": "Nuclio",
   "description": "Discovering how Nuclio runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {

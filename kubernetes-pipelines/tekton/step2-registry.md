@@ -1,4 +1,4 @@
-Various Kubernetes workflows will need access to one or more container registries. While public registries are commonly referenced,  it does not make sense to shuttle images that are private to your organization over public networks. Instead, private registries keep all this pushing and pulling in a local registry.
+Various Kubernetes workflows will need access to one or more container registries. While public registries are commonly referenced, it does not make sense to shuttle images that are private to your organization over public networks. Instead, private registries keep all this pushing and pulling in a local registry.
 
 There are many options for standing up a container registry. We prefer a pure Kubernetes solution and install a registry through the [stable Helm chart for Docker Registry](https://github.com/helm/charts/tree/master/stable/docker-registry#docker-registry-helm-chart).
 

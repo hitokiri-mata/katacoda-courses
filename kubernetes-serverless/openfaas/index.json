@@ -2,7 +2,7 @@
   "title": "OpenFaaS",
   "description": "Discovering how OpenFaaS runs on Kubernetes.",
   "difficulty":	"Introduction",
-  "time":	"20 minutes",  
+  "time":	"20 minutes",
   "details": {
     "steps": [
       {

@@ -1,12 +1,12 @@
-Just about anything can be packaged into a container. Python application are no exception. Many developers have placed their applications in containers. Here is a simple Dockerfile that describes a very simple packaging.
+Just about anything can be packaged into a container. Python applications in containers are ideal and many Python developers found this as a convienent way to packager and deliver their applications. Here is a simple Dockerfile that describes a very simple packaging.
 
 ## Bloated Container
 
-ccat `Dockerfile-bloated`{{execute}}
+`ccat -l dockerfile Dockerfile-bloated`{{execute}}
 
 Using this definition, build the container image.
 
-`docker build -t scenario/mountains-bloated:0.0.1 -f Dockerfile-bloated .`
+`docker build -t scenario/mountains-bloated:0.0.1 -f Dockerfile-bloated .`{{execute}}
 
 When it's done building the container image, run the application.
 
@@ -18,9 +18,9 @@ The microservice is now running at port 8090.
 
 Inspect the size of the container image.
 
-`docker images --filter 'scenario=python-pipelining'`{{execute}}
+`docker images --filter 'label=scenario=python-pipelining'`{{execute}}
 
-Notice the image size is ~355MB. This is a very small Python application and producing a container this large is excessive.
+Notice the image size is ~370MB. This is a very small Python application and producing a container this large is excessive.
 
 Also, linters will not be very happy with the Dockerfile source.
 
@@ -32,9 +32,9 @@ Many developers have placed Python in containers this way and stopped here. For 
 
 One technique applied to create smaller container images is the builder pattern. With the advent of multi-stage Dockerfiles, introduced with Docker 17.01, the building steps can now be modularized. Each build stage can use tools and dependencies to build up artifacts for the final image layer, allowing all the tools and associated dependencies not needed at runtime to be discarded. We evolved the previous Dockerfile into a multi-stage, builder pattern format.
 
-`ccat Dockerfile-slim`{{execute}}
+`ccat -l dockerfile Dockerfile-slim`{{execute}}
 
-We also took this opportunity to address the linting advice. 
+We also took this opportunity to address the linting advice.
 
 `docker run --rm -i hadolint/hadolint < Dockerfile-slim`{{execute}}
 
@@ -42,7 +42,7 @@ Notice the warnings are gone and the specific gcc compiler version was provided 
 
 Using this multi-stage definition, build the container image.
 
-`docker build -t scenario/mountains-slim:0.0.1 -f Dockerfile-slim .`
+`docker build -t scenario/mountains-slim:0.0.1 -f Dockerfile-slim .`{{execute}}
 
 When it's done building the container image, run the application.
 
@@ -54,6 +54,8 @@ The microservice is now running at port 8091.
 
 Inspect the size of the container image.
 
-`docker images --filter 'scenario=python-pipelining'`{{execute}}
+`docker images --filter 'label=scenario=python-pipelining'`{{execute}}
 
-Notice the image size, ~[TODO]MB. TODO - comment.
+Notice the image size has been reduce to 217MB. By adding the multi-stage building of the same application we were able to reduce the size of the container image by 153MB! This smaller image can now be pushed, pulled and cached with much less cost and increased speed, yet still support application features.
+
+In the next step, let's see if we can squeeze a bit more out of the container image while still supporting the application functionality.
