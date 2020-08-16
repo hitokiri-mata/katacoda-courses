@@ -32,7 +32,15 @@
         "course_id": "cdc-with-k8s",
         "title": "Consumer-driven Contracts with Kubernetes",
         "description": "Learn how to use the Pact Foundation's framework for CDC testing."
+      },
+      {
+        "course_id": "python",
+        "title": "Python Pipeline to Kubernetes",
+        "description": "Build and deploy a Python microservice with Kaniko and Tekton Pipelines.",
+      
       }
+
+
     ]
   }
   
