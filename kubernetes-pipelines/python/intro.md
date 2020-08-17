@@ -4,7 +4,7 @@ This scenario will take you through a recipe for delivering a microservice based
 
 The technologies you will touch are:
 
-- Python
+- Python microservice
 - FastAPI with uvicorn
 - Docker
 - Kaniko
