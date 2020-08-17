@@ -1,10 +1,12 @@
 
 There are numerous, complementing, and competing ways to implement what you just learned here. You may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider that Tekton with Kaniko is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
-<img align="right" src="./assets/tekton.png" width="400">
+<img align="right" src="./assets/tekton.png" width="200">
+
 This tutorial shows how you can easily use Kubernetes as the underlying platform for running Tekton-based Pipelines. CI/CD is a great place for your team to start understanding how to leverage the distributed and high availability nature of Kubernetes.
 
-<img align="right" src="./assets/python.png" width="400">
+<img align="right" src="./assets/python.png" width="200">
+
 In addition, there are various ways to write a microservice in Python and a few techniques to package it all in a container. The goal in this scenario is to press the idea of some good practices to distill a container an effectively deliver a microservice to Kubernetes.
 
 ## Lessons Learned ##
