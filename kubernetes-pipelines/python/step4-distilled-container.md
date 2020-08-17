@@ -22,4 +22,8 @@ Two other projects that could take this further are GraalVM and WebAssembly. It'
 
 ## Running on Kubernetes
 
-So far you can run built and run a container locally. No microservice is an island. Your modularized and distributed application can be comprized of dozen, hundreds or even thousands of containers. This is why we wanted to reduce at least the image size of this one containerized microservice. Now that you have a container, your certainly push it to a registry and have Kuberntes pull it down and run it in a Pod. In the remaining steps we will take this idea further and focus on a build pipeline that can gather the source, build the container, and deliver the updated microservice to Kubernetes.
+So far you have just built and run the microservice in a container locally. No microservice is an island. Your modularized and distributed application can be comprised of dozen, hundreds or even thousands of containers. This is why we wanted to reduce the image size of just this one containerized microservice. 
+
+Now that you have a container, you certainly push it to a registry and have Kubernetes pull and run it in a Pod. However, most things deployed to Kubernetes should be infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)), including the recipes that continuously deliver application updates as we fix and evolve our applications. This CI/CD process is often captured in source code for CI/CD pipelines. With Tekton, your pipelines are declared in code. For this scenario, the code is in the `pipelines` directory.
+
+In the remaining steps, we will take this idea further and focus on a build pipeline that can gather the source, build the container, and deliver the microservice to Kubernetes.

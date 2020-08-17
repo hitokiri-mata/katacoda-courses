@@ -1,4 +1,4 @@
-The Tekton engine will run your pipelines. Tekton follows the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton
+The Tekton engine will run your pipelines. Tekton follows the [Kubernetes Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). Install Tekton.
 
 `kubectl apply -f https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.15.1/release.yaml`{{execute}}
 

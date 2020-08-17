@@ -17,9 +17,14 @@ Pods in Kubernetes are composed of one or more containers. Each Tekton task runs
 
 Everything the steps need is either in the containers or referenced as Tekton resources. Older CI/CD engines would rely on enormous plugins that were jammed into a global space on the engine. This led to many [anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) like `shoot the messenger` and `dependency hell`. This monolithic plugin ball of mud is avoided with Tekton by having each step be modular with atomic steps that contain all the details and dependencies to complete their sole responsibilities. Since a task is a Pod, you also are leveraging the distributed computing nature of Kubernetes and all the CPUs, memory, and I/O across your clustered machines.
 
+<img align="right" src="./assets/kaniko.png" width="150">
 Apply these task declarations:
 
+Task name: _build-image-from-source_:
+
 `kubectl apply -f pipeline/task-build-src.yaml`{{execute}}
+
+Task name: _deploy-application_:
 
 `kubectl apply -f pipeline/task-deploy.yaml`{{execute}}
 

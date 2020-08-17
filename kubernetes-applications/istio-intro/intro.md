@@ -1,6 +1,6 @@
 <img align="right" src="./assets/istio.png" width="300">
 
-Networking layers have traditionally been a burden on engineering organization to get networking right. Networking layers such as meshes look as clusters as a whole and attempt to add networking controls. An efficient mesh is one that can be declared with infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code))
+Networking layers have traditionally been a burden on engineering organization to get networking right. Networking layers such as meshes look as clusters as a whole and attempt to add networking controls. An efficient mesh is one that can be declared with infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
 
 Istio is a specific networking mesh you can add to your cloud native cluster. It's tuned for ease of use with Kubernetes, and can be used for meshing other services outside of Kubernetes. Use Istio for declarative control over of these networking architecture x-ilities:
 

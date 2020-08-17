@@ -8,8 +8,18 @@ You can also check the dashboard and soon the app will appear as three pods in t
 
 ## Access Application
 
-<img align="right" src="./assets/ribbon.png" width="150">
+View the [Python Microservice at this URL](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
 
-View the [Node.js application](https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/).
+Or, see it here through lynx.
 
-**&#x2714; You did it!** A Tekton CI/CD pipeline based on Kubernetes has built, deployed, and served your application.
+`lynx https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/ --dump`{{execute}}
+
+Or, curl it.
+
+`curl https://[[HOST_SUBDOMAIN]]-32000-[[KATACODA_HOST]].environments.katacoda.com/ | jq`{{execute}}
+
+**&#x2714; You did it!** A Python microservice, in a distilled container, built with Kaniko, delivered by a Tekton pipeline, Well done!
+
+Now go climb your next mountain, with a friend.
+
+<img align="center" src="./assets/joshua-earle--87JyMb9ZfU-unsplash.jpg" width="400">

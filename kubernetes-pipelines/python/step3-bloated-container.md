@@ -22,7 +22,7 @@ Inspect the size of the container image.
 
 Notice the image size is ~370MB. This is a very small Python application and producing a container this large is excessive.
 
-Also, linters will not be very happy with the Dockerfile source.
+Also, linters will not be happy with the Dockerfile source.
 
 `docker run --rm -i hadolint/hadolint < Dockerfile-bloated`{{execute}}
 
@@ -56,6 +56,6 @@ Inspect the size of the container image.
 
 `docker images --filter 'label=scenario=python-pipelining'`{{execute}}
 
-Notice the image size has been reduce to 217MB. By adding the multi-stage building of the same application we were able to reduce the size of the container image by 153MB! This smaller image can now be pushed, pulled and cached with much less cost and increased speed, yet still support application features.
+Notice the image size has been reduce to 217MB. By adding the multi-stage building of the same application we were able to reduce the size of the container image by 153MB! This smaller image can now be pushed, pulled and cached with much less cost and increased speed, yet continue to support the application features.
 
-In the next step, let's see if we can squeeze a bit more out of the container image while still supporting the application functionality.
+In the next step, let's see if we can squeeze a bit more out of the container image while maintaining the same functionality.
