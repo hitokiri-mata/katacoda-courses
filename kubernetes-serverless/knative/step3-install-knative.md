@@ -3,7 +3,7 @@ Knative consists of two primary components:
 - [Serving](https://knative.dev/docs/serving/)
 - [Eventing](https://knative.dev/docs/eventing/)
 
-The components are implemented as Kubernetes objects that make up the Knative control plane. This scenario has been tested with a [recent version of Knative]((https://github.com/knative/client/releases)) and over time, periodic upgrades will be applied.
+The components are implemented as Kubernetes objects that make up the Knative control plane. This scenario has been tested with a [recent version of Knative](https://github.com/knative/client/releases) and over time, periodic upgrades will be applied.
 
 `export KNATIVE_VERSION=0.16.0`{{execute}}
 
@@ -21,11 +21,11 @@ In this scenario you're going to install the _Serving_ component. _Serving_ is t
 
 For the Servicing component three Kubernetes manifests are needed:
 
-- Serving Customer Resource Dsfinitions (CRDs)
+- Serving Customer Resource Definitions (CRDs)
 - Serving Core as the control plane objects
 - Networking that establishes the link between Knative and Istio.
 
-Install these three manifests for _Serving_.
+Install these three manifests for _Serving_:
 
 `kubectl apply --filename https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/serving-crds.yaml`{{execute}}
 
@@ -33,11 +33,11 @@ Install these three manifests for _Serving_.
 
 `kubectl apply --filename https://github.com/knative/serving/releases/download/v${KNATIVE_VERSION}/net-istio.yaml`{{execute}}
 
-Notice new CRDs are now defined for Knative.
+Notice new CRDs are now defined for Knative:
 
 `kubectl get crds | grep .knative.`{{execute}}
 
-It will take a few moments to start the control plane objects.
+It will take a few moments to start the control plane objects:
 
 `kubectl get deployments,pods,services --namespace knative-serving`{{execute}}
 
