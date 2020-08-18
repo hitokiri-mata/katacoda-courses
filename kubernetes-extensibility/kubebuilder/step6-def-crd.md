@@ -2,15 +2,19 @@ In this step, you will code some details for the CRD that will subsequently crea
 
 `kubectl get crds`{{execute}}
 
+This message is expected:
+
+`No resources found in default namespace.`
+
 ## Modify Structs
 
-Click to open the *example/api/v1alpha1/at_types.go*{{open}} file in the editor.
+Click to open the `example/api/v1alpha1/at_types.go`{{open}} file in the editor.
 
-The goal is to change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
+In this step, we will change the Spec and Status for the CRD. This requires changes to `AtSpec struct` and `AtStatus struct` respectively.
 
 # AtSpec
 
-For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Remove the line with `Foo` in it. Here is the new AtSpec to replace the existing one:
+For the `AtSpec struct`, add `Schedule` and `Command`, both as strings. Here is the new AtSpec to replace the existing one:
 
 ```go
 // AtSpec defines the desired state of an At resource
@@ -23,20 +27,23 @@ type AtSpec struct {
   Command string `json:"command,omitempty"`
 }```{{copy}}
 
-You can either type in the new lines (that's the best way to learn) or click the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
+> You can either type in the new lines (that's the best way to learn) or click the `Copy to Clipboard` icon that follows the text to and paste it into the editor. Any changes are saved automatically.
 
 # AtStatus
 
-Just below, for the `AtStatus struct`, add a string variable named `Phase`:
+Just below, for the `AtStatus struct`, replace the struct with this struct that has the added string variable named `Phase`:
 
 ```go
-  // Specifications for "at" status
+// AtStatus defines the observed state of At
+type AtStatus struct {
+	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
+	// Important: Run "make" to regenerate code after modifying this file
   Phase string `json:"phase,omitempty"`
-```{{copy}}
+}```{{copy}}
 
 ## Add Phase Constants
 
-To complete the types definition, and for controller convenience, define the following phases in the same *example/api/v1alpha1/at_types.go*{{open}} file:
+To complete the types definition, and for controller convenience, define the following phases in the same `example/api/v1alpha1/at_types.go`{{open}} file just below the AtStatus struct:
 
 ```go
 const (
@@ -46,8 +53,6 @@ const (
 )
 ```{{copy}}
 
-Add this `const` section just after the `structs` you just modified.
-
 ## Build
 
 With these modifications, build and generate files in the config folder:
@@ -56,7 +61,9 @@ With these modifications, build and generate files in the config folder:
 
 Apply the CRDs to your running Kubernetes cluster:
 
-`make install`{{execute}}
+`kubectl kustomize config/crd | kubectl apply -f -`{{execute}}
+
+For the above command there there is an `install` task in the Makefile with a slightly older version of using kustomize. Now, kustomize is built into kubectl.
 
 ## Test
 

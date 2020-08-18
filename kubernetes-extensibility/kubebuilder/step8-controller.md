@@ -1,10 +1,10 @@
-Now that we have a CRD to work with, this next step focuses on the controller to manage these _At_ resources.
+Now that we have a CRD to work with, this step focuses on the controller to manage these `At` resources.
 
-Click on this `example/controllers/at_controller.go`{{open}} file to open it in the editor. There are Kuberbuilder markers that define the access control (RBAC) for the CRD, however, this controller will need permission for Pods as well.
+Click `example/controllers/at_controller.go`{{open}} to open it in the editor. There are Kuberbuilder markers that define the access control (RBAC) for the CRD, however, this controller will need permission for Pods as well.
 
 ## Add Imports
 
-This step will be adding some code so replace the whole import block at the top to support the additional code.
+In this step, we will be adding some code to replace the whole import block at the top to support the additional code:
 
 ```go
 import (
@@ -28,25 +28,25 @@ import (
 
 ### Add Markers
 
-Just above the Reconcile function, find these markers.
+Just above the Reconcile function, find these markers:
 
 ```go
 // +kubebuilder:rbac:groups=cnat.mydomain.com,resources=ats,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=cnat.mydomain.com,resources=ats/status,verbs=get;update;patch
 ```
 
-Right after those two markers add these two new markers to give the controller Pod management permission.
+Right after those markers add two new markers to give the controller Pod management permission:
 
 ```go
 // +kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=apps,resources=deployments/status,verbs=get;update;patch
 ```{{copy}}
 
-They are just in the form of comment before the function. Follow this link for [Kubebuilder markers](https://book.kubebuilder.io/reference/markers.html) if you are curious.
+They are just in the form of comment before the function. Follow this link for [Kubebuilder markers](https://book.kubebuilder.io/reference/markers.html) to learn more.
 
 ### Change Logger
 
-Continuing with updating the code inside the `Reconcile` function, change this logger line
+Continuing with updating the code inside the `Reconcile` function, change this logger line:
 
 `	_ = r.Log.WithValues("at", req.NamespacedName)`
 
@@ -59,7 +59,7 @@ to a specific logger name with some defined structure as follows:
 
 ### Fetching At Instance
 
-Following these logger lines, add this code block to fetching instances of the CR for At.
+Following these logger lines, add this code block to fetching instances of the CR for At:
 
 ```go
   // Fetch the At instance
@@ -77,7 +77,7 @@ Following these logger lines, add this code block to fetching instances of the C
 
 ### Check Phase Value
 
-Now that we have an instance defined by the request namespacedname, check to see if it has a status, if not, let's initialize.
+Now that we have an instance defined by the request `NamespacedName`, add this logic:
 
 ```go
   // If no phase set, default to pending (the initial phase):
@@ -86,9 +86,11 @@ Now that we have an instance defined by the request namespacedname, check to see
   }
 ```{{copy}}
 
+This will check to see if the Phase has a status, and if not, it will be initialized.
+
 ### Update Status
 
-Finish the Reconcile function with an update to the resource status just prior to the last return statement.
+Finish the Reconcile function with an update to the resource status just prior to the last return statement:
 
 ```go
   // Update the At instance, setting the status to the respective phase:
@@ -102,26 +104,26 @@ There is some additional logic you will want to add for working an instance thro
 
 ## Test
 
-With this new code your controller, test the functionality. Setup the new RBAC by re-installing the manifests.
+With this new code your controller, test the functionality. Setup the new RBAC by reinstalling the manifests:
 
-`make install`{{execute}}
+`kubectl kustomize config/crd | kubectl apply -f -`{{execute}}
 
 `echo "Terminate the running controller."`{{execute interrupt T2}}
 
-Start the new controller your just modified.
+Start the new controller you just modified:
 
 `make run`{{execute T2}}
 
-Request from your controller the list of _at_ resources.
+Request the list of `At` resources from your controller:
 
 `kubectl get ats`{{execute T1}}
 
-Great, your new Operator is alive! Notice now the `PHASE` now has the value `PENDING`.
+Great, your new Operator is alive! Notice now the `PHASE` now has the value `PENDING`:
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description show the phase state as well. However, the phase is still pending. Also, notice there are no Pods started.
+The description shows the phase state as well, and the phase is still pending. Notice there are no Pods started:
 
 `kubectl get pods`{{execute}}
 
-In the next step you will work on getting the phase to advance to the next step of `RUNNING`.
+In the next step, you will work on getting the phase to advance to `RUNNING`.

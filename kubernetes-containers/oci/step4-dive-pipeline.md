@@ -25,7 +25,7 @@ From this, the first ten Fibonacci numbers are produced. Let's see what the Dive
 
 View the report.
 
-`ccat dive-report-a.json | jq .`{{execute}}
+`cat dive-report-a.json | jq .`{{execute}}
 
 There are many details, so instead pick out some key findings.
 

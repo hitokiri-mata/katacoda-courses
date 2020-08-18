@@ -12,4 +12,4 @@ Kubebuild has an init command that creates a local directory populated with the 
 
 `kubebuilder init --domain my.domain`{{execute}}
 
-It will take a few moments to download and cache the dependencies. As it runs, explore the files in the `example` directory found in the file tree to the right of this text.
+It will take a few moments to download and cache the dependencies. As it runs, explore the files in the `example` directory tree to the right of this text.

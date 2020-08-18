@@ -46,7 +46,7 @@
     },
     {
       "title": "Kubernetes ConfigMaps and Secrets",
-      "description": "The fundamentals of ConfigMaps and Secrets",
+      "description": "The fundamentals of ConfigMaps and Secrets.",
       "pathway_id": "javajon",
       "id": "kubernetes-fundamentals/configmap-secret",
       "course_id": "configmap-secret"

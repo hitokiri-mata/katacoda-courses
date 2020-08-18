@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "Python Pipeline to Kubernetes",
-  "title": "Python Pipeline to Kubernetes",
+  "title": "Python Pipeline to Kubernetes.",
   "description": "Build and deploy a Python microservice with Kaniko and Tekton Pipelines.",
   "difficulty":	"Introduction",
   "time":	"30 minutes",

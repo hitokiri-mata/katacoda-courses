@@ -2,27 +2,29 @@ In this step you will create an Operator using the KUDO CLI to generate the KUDO
 
 ## Create Folder
 
-Create a directory for the project.
+Create a directory for the project:
 
 `cd first-operator`{{execute}}
 
-Use the `package new` command to generate the source code skeleton.
+Use the `package new` command to generate the source code skeleton:
 
 `kubectl kudo package new first-operator`{{execute}}
 
-This creates the main structure of the Operator that can be viewed using the tree command.
+This creates the main structure of the Operator that can be viewed using the tree command:
 
 `tree`{{execute}}
 
-<div class="w3-panel w3-green">
-  <p>If you added the -i flag with `package new` command you would be prompted for each operator detail.</p>
-</div>
+> If you added the -i flag with `package new` command, you would be prompted for each operator detail.
 
 ## Add a Maintainer
+
+Run the following code to add a maintaner:
 
 `kubectl kudo package add maintainer "your name" your@email.com`{{execute}}
 
 ## Add a Task
+
+Run the following code to add a task:
 
 `kubectl kudo package add task`{{execute}}
 
@@ -37,6 +39,8 @@ Task Resource: deployment
 ```
 
 ## Add a Plan
+
+Run the following code to add a plan:
 
 `kubectl kudo package add plan`{{execute}}
 
@@ -57,6 +61,8 @@ Step 1 name: everything
 
 ## Add a Parameter
 
+Run the following code to add a parameter:
+
 `kubectl kudo package add parameter`{{execute}}
 
 This command uses an interactive prompt to construct the details of the parameter. Here is an example interaction:
@@ -71,7 +77,7 @@ Description: Number of replicas that should be run as part of the deployment
 ✗ Add Trigger Plan: n
 ```
 
-These above add commands have created the entirety of the first-operator with the exception of the details in the template/deployment.yaml file. To complete this operator execute the following:
+These add commands have created the entirety of the first operator with the exception of the details in the *template/deployment.yaml* file. To complete this operator, execute the following:
 
 ```bash
 cat <<EOF > operator/templates/deployment.yaml
@@ -99,8 +105,8 @@ EOF
 
 ## Special Adjustment for Kubernetes Version
 
-There is a small version declaration that currently needs to be added, [but will soon not be necessary.](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: n.n.n` line. Add this line:
+There is a small version declaration that currently needs to be added, [but will soon not be necessary](https://github.com/kudobuilder/kudo/issues/1419). Open the `operator/operator.yaml`{{open}} file just after the `kudoVersion: n.n.n` line. Add this line:
 
 `kubernetesVersion: 1.18.0`{{copy}}
 
-Your edit will be automatically saved. That's all it takes to write a basic KUDO Operator. In the next steps well package it up and run the Operator.
+Your edit will be automatically saved. That's all it takes to write a basic KUDO Operator. In the next steps, we'll package it up and run the Operator.

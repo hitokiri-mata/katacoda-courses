@@ -6,12 +6,12 @@
       {
         "course_id": "oci",
         "title": "Decomposing Container Images",
-        "description": "Dissecting the OCI container format"
+        "description": "Dissecting the OCI container format."
       },
       {
         "course_id": "springboot-to-k8s",
         "title": "Spring Boot to Kubernetes",
-        "description": "From a blank slate to a Spring Boot app running on Kubernetes"
+        "description": "From a blank slate to a Spring Boot app running on Kubernetes."
       },
       {
         "course_id": "go",
@@ -21,12 +21,12 @@
       {
         "course_id": "rust",
         "title": "Rust Apps in Containers on Kubernetes",
-        "description": "Packaging Rust Applications in Containers"
+        "description": "Packaging Rust Applications in Containers."
       },
       {
         "course_id": "distillation",
         "title": "Distilling Java Containers",
-        "description": "Applying the Container Distillation Pattern for Java applications"
+        "description": "Applying the Container Distillation Pattern for Java applications."
       }
     ]
   }

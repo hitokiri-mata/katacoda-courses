@@ -1,4 +1,4 @@
-While this scenario focuses on writing a Kubernetes Operator, its topic for demonstration is the old and trustworthy `at` command:
+While this scenario focuses on writing a Kubernetes Operator, its topic for demonstration is the old and trustworthy `at` command.
 
 > If you are already familiar with that `at` command, you can skip this step.
 
@@ -16,18 +16,18 @@ Verify the utility now responds:
 
 ## Schedule an at Job
 
-There is a file already in the current directory. Click on this file `at-example.txt`{{open}} link to view it in the editor.
+There is a file already in the current directory. Click `at-example.txt`{{open}} to view it in the editor.
 
 The `at` command accepts two declarations:
 
 1. A future time when one or more commands should run.
-2. A source of one or more commands to run at the future time.
+2. A source of one or more commands to run at a future time.
 
 This allows you to schedule a set of activities (also termed a "job" or "batch") at a later date.
 
-> This is not to be confused with a Kubernetes Jobs or Cron Jobs, but it's generally the same concept.
+> This is not to be confused with Kubernetes Jobs or Cron Jobs, but it's generally the same concept.
 
-Schedule the `at-test.txt` commands to run at in a minute. Minutes are the smallest units:
+Schedule the `at-test.txt` commands to run the command in a minute. Minutes are the smallest units:
 
 `at -M -v -f $GOPATH/src/at-example.txt 'now + 1 minute'`{{execute}}
 

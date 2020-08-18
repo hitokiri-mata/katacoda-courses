@@ -1,4 +1,4 @@
-This step is extra credit for you. It explores how your Kubebuilder Operator can respond to Kubernetes events. Take a look at the description of the resource.
+This step is extra credit for you. It explores how your Kubebuilder Operator can respond to Kubernetes events. Take a look at the description of the resource:
 
 `kubectl describe at at-sample`{{execute}}
 
@@ -6,17 +6,17 @@ Notice in this description there are no event (`Events: <none>`) for this object
 
 ## Controller Changes for Events
 
-Make the following modification to the `example/controllers/at_controller.go`{{open}} file.
+Make the following modifications to the `example/controllers/at_controller.go`{{open}} file.
 
 ### Add Import
 
-Add the Record context to the import list at the top.
+Add the Record context to the import list at the top:
 
 `  "k8s.io/client-go/tools/record"`{{copy}}
 
 ### Add EventRecorder
 
-Find the `AtReconciler` struct and at a Recorder line to the last line of the struct.
+Find the `AtReconciler` struct and add a `Recorder` line to the last line of the struct:
 
 ```go
 // AtReconciler reconciles an At object
@@ -28,7 +28,7 @@ type AtReconciler struct {
 }
 ```{{copy}}
 
-Now modify the `example/controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. You will want to add each of these recording instructions to the respective cases in the switch statement you added in a previous step. Add them just after the logging statement at the top of each case block.
+Now modify the `example/controllers/at_controller.go`{{open}} code to record the events for each transition of the phase status. You will want to add each of these recording instructions to the respective cases in the switch statement you added earlier. Add each line just after the logging statement at the top of each case block:
 
 For `case cnatv1alpha1.PhasePending:`
 
@@ -45,7 +45,7 @@ For `case cnatv1alpha1.PhaseDone:`
 
 ## Main Change for Events
 
-Where this struct is initialized in the `example/main.go`{{open}} file, add the Recorder line.
+Where this struct is initialized in the `example/main.go`{{open}} file near line 69, add the `Recorder` line:
 
 ```go
   if err = (&controllers.AtReconciler {
@@ -59,22 +59,22 @@ Where this struct is initialized in the `example/main.go`{{open}} file, add the 
   }
 ```{{copy}}
 
-# Test
+## Test
 
-With this new code, the `describe` command will present the list of Kubernetes events on related to the resource. Test the new functionality.
+With this new code, the `describe` command will present the list of Kubernetes events on related to the resource. Test the new functionality:
 
-`make install`{{execute}}
+`kubectl kustomize config/crd | kubectl apply -f -`{{execute}}
 
 `echo "Terminate the running controller."`{{execute interrupt T2}}
 
-Start the new controller your just modified.
+Start the new controller you just modified:
 
 `make run`{{execute T2}}
 
 `kubectl describe at at-sample`{{execute T1}}
 
-Now, these events are there. Also, the controller have successfully created two of the NGINX Pods that you asked it to create and manage earlier in step 7.
+Now, these events are there. Also, the controller has successfully created two of the NGINX Pods that you asked it to create and manage in step 7:
 
 `kubectl get pods`{{execute T1}}
 
-In the last step, let's try to your controller with a new resource with an actual scheduled task.
+In the last step, let's try your controller with a new resource with an actual scheduled task.

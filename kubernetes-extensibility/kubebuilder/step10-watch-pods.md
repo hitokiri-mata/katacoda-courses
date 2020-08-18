@@ -1,6 +1,4 @@
-## Modify SetupWithManager Function
-
-Make the final modification in `example/controllers/at_controller.go`{{open}} to the existing SetupWithManager function at the bottom of the code. These modifications will allow the controller to watch the Pods.
+In this step, we will modify the `SetupWithManager` function. Make the final modification in `example/controllers/at_controller.go`{{open}} to the existing `SetupWithManager` function. This modification will allow the controller to watch the Pods:
 
 ```go
 func (r *AtReconciler) SetupWithManager(mgr ctrl.Manager) error {
@@ -11,26 +9,26 @@ func (r *AtReconciler) SetupWithManager(mgr ctrl.Manager) error {
     Complete(r)
 }```{{copy}}
 
-By adding the `Pod{}` line this allows the Controller to have visibility into the Pod events.
+Adding the `Pod{}` line allows the Controller to have visibility into the Pod events.
 
-# Test
+## Test
 
-With this new code your controller, test the new functionality.
+With this new code your controller, test the new functionality:
 
-`make install`{{execute}}
+`kubectl kustomize config/crd | kubectl apply -f -`{{execute}}
 
 `echo "Terminate the running controller."`{{execute interrupt T2}}
 
-Start the new controller your just modified.
+Start the new controller you just modified:
 
 `make run`{{execute T2}}
 
-View the results.
+View the results:
 
 `kubectl get ats`{{execute T1}}
 
-Notice, now the Status column has changed from `RUNNING` to `DONE`. Check the events.
+Notice that now the Status column has changed from `RUNNING` to `DONE`. Check the events:
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description is also reporting `DONE`. However, notice at the end the Events reports `<none>`. You will work these items next.
+The description is also reporting `DONE`. However, notice at the end, the Events reports `<none>`. You will work these items next.

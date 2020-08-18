@@ -1,14 +1,16 @@
-For the Knative control plane to function is needs a few required components. There are some optional components to install as well.  Sometimes there are technology choices for some of the layers. All the components are tested with specific versions of Knative. This scenario has been tested with this version of Knative and will be periodically upgraded to keep up with the improvements.
+A few components are needed for a functioning Knative control plane. There are some optional components to install as well. Some of the components can vary by your choosing. These components are tested together with specific versions of Knative. This scenario has been tested with a recent version of Knative and over time, periodic upgrades will be applied.
 
 `export KNATIVE_VERSION=0.16.0`{{execute}}
 
-The following installations will assume this version.
+The following installations will assume [this version](https://github.com/knative/client/releases).
 
-## Install CLI tools
+## Install CLI tool `Kn`
 
-`curl -L https://github.com/knative/client/releases/download/v{KNATIVE_VERSION}/kn-linux-amd64 -o /usr/bin/kn | chmod +x -`{{execute}}
+`curl -L https://github.com/knative/client/releases/download/v${KNATIVE_VERSION}/kn-linux-amd64 -o /usr/bin/kn && chmod +x /usr/bin/kn`{{execute}}
 
-https://storage.googleapis.com/knative-nightly/client/latest/kn-linux-amd64
+`kn` will pick up your kubectl config file in the default location of $HOME/.kube/config. Verify `kn` is installed and reports correct version:
+
+`kn version`{{execute}}
 
 ## Installing Knative Serving
 
@@ -39,15 +41,40 @@ Knative supports a variety of Kubernetes networking layers such as:
 - Ambassador
 - Contour
 - Gloo
-- Istio
+- Istio &#x2714;
 - Kong
 - Kourier
 
+We'll choose Istio for this scenario.
+
 ## Istio
 
-`export ISTIO_VERSION=1.6.7 && curl -L https://istio.io/downloadIstio | sh -`{{execute}}
+`export ISTIO_VERSION=1.6.8 && curl -L https://istio.io/downloadIstio | sh -`{{execute}}
 
 `export PATH="$PATH:/root/istio-${ISTIO_VERSION}/bin"`{{execute}}
+
+`istioctl version`{{execute}}
+
+`istioctl operator init`{{execute}}
+
+`kubectl create ns istio-system`{{execute}}
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: example-istiocontrolplane
+spec:
+  profile: demo
+EOF```{{execute}}
+
+Verify Istio is installed:
+
+`istioctl verify-install`{{execute}}
+
+`kubectl get svc -n istio-system`{{execute}}
 
 
 ## Kourier

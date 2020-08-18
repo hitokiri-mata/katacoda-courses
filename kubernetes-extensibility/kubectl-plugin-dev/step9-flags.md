@@ -1,11 +1,11 @@
-Often with commands, like `Pods`, you might want to add a command flag (or switch). In this step, you will add a flag for filtering on Pod status when using the `pods` command.
+Often with commands, like `pods`, you might want to add a command flag (or switch). In this step, you will add a flag for filtering on Pod status when using the `pods` command.
 
 ## Add Status Flag
 
 In the same file, `pkg/example/cmd/pod_list.go`{{open}}, do the following:
 
-- Near the top of the file in the `podListCmd struct`, find where it reads `// status boolean` and add the following line `status bool`{{copy}} to the struct.
-- In the middle of the file in BOTH the `newPodListCmd` AND `newPodList2Cmd` functions, find where it reads `// status flag` and add the following code to add a flag state setting logic for both functions:
+- Near the top of the file in the `podListCmd struct`, find `// status boolean` and add the line `status bool`{{copy}} to the struct.
+- In the middle of the file in BOTH the `newPodListCmd` AND `newPodList2Cmd` functions, find `// status flag` and add the following code to add a flag state setting logic for both functions:
 ```go
   f := cmd.Flags()
   f.BoolVarP(&pkg.status, "status", "i", true, "display status info")

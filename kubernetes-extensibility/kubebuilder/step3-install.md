@@ -17,3 +17,5 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 Verify the installation is complete:
 
 `kubebuilder version`{{execute}}
+
+You should see the `KuberBuilderVersion` matching the version at the top of this page.

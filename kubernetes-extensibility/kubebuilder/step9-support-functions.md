@@ -1,8 +1,8 @@
-Implement the controller details by adding two support functions and modifying another. These modifications will create the Pod and checking the schedule. Open the `example/controllers/at_controller.go`{{open}} file to edit the controller implementations.
+Implement the controller details by adding two support functions and modifying another. These modifications will create the Pod and check the schedule. Open the `example/controllers/at_controller.go`{{open}} file to edit the controller implementations.
 
 ## More Imports
 
-This step will be adding some code so replace the whole import block at the top to support the additional code.
+In this step, we will be adding some code to replace the whole import block at the top to support the additional code:
 
 ```go
 import (
@@ -31,7 +31,7 @@ import (
 
 ## Add Function newPodForCR
 
-Add the following function that will create new Pods per the resource specification.
+Add the following function to to the bottom of the source file. The function will create new Pods per the resource specification:
 
 ```go
 // newPodForCR returns a busybox Pod with same name/namespace declared in resource
@@ -59,7 +59,7 @@ func newPodForCR(cr *cnatv1alpha1.At) *corev1.Pod {
 
 ## Add Function timeUntilSchedule
 
-Add the following function that calculates the scheduled time per the resource specification.
+Add the following function to the bottom of the source file. This function will calculate the scheduled time per the resource specification:
 
 ```go
 // timeUntilSchedule parses the schedule string and returns the time until the schedule.
@@ -77,7 +77,7 @@ func timeUntilSchedule(schedule string) (time.Duration, error) {
 
 ## Append to Reconcile Function
 
-Add the logic for phase adjustments. In the Reconcile function find this if block.
+Add the logic for phase adjustments. In the Reconcile function, find this `if` block:
 
 ```go
   // If no phase set, default to pending (the initial phase):
@@ -86,7 +86,7 @@ Add the logic for phase adjustments. In the Reconcile function find this if bloc
   }
 ```
 
-Finishing the function by inserting the following lengthy switch block just after that if block.
+Finish the function by inserting the following lengthy switch block just _after_ that `if` block:
 
 ```go
   // Make the main case distinction: implementing
@@ -151,27 +151,27 @@ Finishing the function by inserting the following lengthy switch block just afte
   }
 ```{{copy}}
 
-# Test
+## Test
 
-With this new code your controller, test the new functionality.
+With this new code your controller, test the new functionality:
 
-`make install`{{execute}}
+`kubectl kustomize config/crd | kubectl apply -f -`{{execute}}
 
 `echo "Terminate the running controller."`{{execute interrupt T2}}
 
-Start the new controller your just modified.
+Start the new controller you just modified:
 
 `make run`{{execute T2}}
 
-View the results.
+View the results:
 
 `kubectl get ats`{{execute T1}}
 
-Notice, now the Status column still has changed from `PENDING` to `RUNNING`. Check the events.
+Notice that now the Status column has changed from `PENDING` to `RUNNING`. Check the events:
 
 `kubectl describe at at-sample`{{execute T1}}
 
-The description is also reporting `RUNNING`. However, even though the phase status is changing it never fully gets to `DONE`. This is because the controller isn't watching Pods yet. Also, notice at the end the Events reports `<none>`. There has also been a little Pod activity, but it's not quite right.
+The description is also reporting `RUNNING`, however, even though the phase status is changing, it never fully gets to `DONE`. This is because the controller isn't watching Pods yet. Also, notice at the end that the Events reports `<none>`. There has also been a little Pod activity, but it's not quite right:
 
 `kubectl get pods`{{execute}}
 
