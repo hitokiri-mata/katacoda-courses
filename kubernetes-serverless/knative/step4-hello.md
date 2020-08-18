@@ -53,5 +53,8 @@ TODO
 
 `curl http://helloworld.default.127.0.0.1.nip.io`{{execute}}
 
+The _echo_server_ application is helpful as it echos the HTTP header information that was passed to it. You can see in the response the Pod that serviced the request as well as the Istio injected tracing information.
+
+Service scale to zero.
 
 Kiali?

@@ -22,28 +22,33 @@
         "code": "clear.sh"
       },
       {
+        "title": "First Knative Service - Hello!",
+        "text": "step4-hello.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Deploy Application",
-        "text": "step4-deploy.md",
+        "text": "step5-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Invoke Application",
-        "text": "step5-invoke.md",
+        "text": "step6-invoke.md",
         "code": "clear.sh"
       },
       {
         "title": "Delete Application",
-        "text": "step6-delete.md",
+        "text": "step7-delete.md",
         "code": "clear.sh"
       },
       {
         "title": "Knative Eventing",
-        "text": "step7-eventing.md",
+        "text": "step8-eventing.md",
         "code": "clear.sh"
       },
       {
         "title": "Knative Observing",
-        "text": "step8-observing.md",
+        "text": "step9-observing.md",
         "code": "clear.sh"
       }
     ],
