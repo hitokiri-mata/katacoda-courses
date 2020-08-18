@@ -12,33 +12,38 @@
         "code": "clear.sh"
       },
       {
+        "title": "Install Istio",
+        "text": "step3-install.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install Knative",
-        "text": "step2-install.md",
+        "text": "step3-install.md",
         "code": "clear.sh"
       },
       {
         "title": "Deploy Application",
-        "text": "step3-deploy.md",
+        "text": "step4-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Invoke Application",
-        "text": "step4-invoke.md",
+        "text": "step5-invoke.md",
         "code": "clear.sh"
       },
       {
         "title": "Delete Application",
-        "text": "step5-delete.md",
+        "text": "step6-delete.md",
         "code": "clear.sh"
       },
       {
         "title": "Knative Eventing",
-        "text": "step6-eventing.md",
+        "text": "step7-eventing.md",
         "code": "clear.sh"
       },
       {
         "title": "Knative Observing",
-        "text": "step7-observing.md",
+        "text": "step8-observing.md",
         "code": "clear.sh"
       }
     ],
