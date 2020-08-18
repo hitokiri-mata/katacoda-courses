@@ -2,7 +2,7 @@ Knative delagates many of its features to an underlying network layer. A variety
 
 ## Install networking layer
 
-Knative supports a variety of Kubernetes networking layers such as:
+Knative supports a variety of Kubernetes [networking layers](https://knative.dev/v0.15-docs/install/any-kubernetes-cluster/#installing-the-serving-component) such as:
 
 - Ambassador
 - Contour
@@ -39,9 +39,9 @@ Verify the Istio tool is working:
 
 The istio operator components will soon be running:
 
-`kubectl get deployments,pods,services --namespace istio-operator`
+`kubectl get deployments,pods,services --namespace istio-operator`{{execute}}
 
-Once the operator deployments report available (1), the operator is ready to receive instructions from your to install Istio on Kubernetes.
+Once the istio-operator deployment reports available (1), the operator is ready to receive instructions from your to install Istio on Kubernetes.
 
 ## Install Istio
 
@@ -62,13 +62,15 @@ spec:
   profile: demo
 EOF```{{execute}}
 
-There operator will accept a [configuration profile](https://istio.io/latest/docs/setup/additional-setup/config-profiles/), so for this scenario we chose the `demo` from the list of profiles (demo, default, minimal, remote). The Istio mesh is starting and will be available in a few moments. Observe its progress:
+There operator will accept a [configuration profile](https://istio.io/latest/docs/setup/additional-setup/config-profiles/), so for this scenario we chose `demo` from the list of profiles (demo, default, minimal, remote). The Istio mesh is starting and will be available in a few moments. Observe its progress:
 
 `kubectl get deployments,pods,services -n istio-system`{{execute}}
 
 Once the deployments report available (1), ask Istio to verify the mesh is installed and ready.
 
 `istioctl verify-install`{{execute}}
+
+If you can see the words status and HEALTHY, then it's working. [You can ignore the error message, they are working on it.](https://github.com/istio/istio/issues/25194)
 
 You now have a healthy networking mesh that Knative can depend on. In the next step install Knative.
 
