@@ -62,7 +62,7 @@ spec:
   profile: demo
 EOF```{{execute}}
 
-The Istio mesh is starting and will be available in a few moments. Observe its progress:
+There operator will accept a [configuration profile](https://istio.io/latest/docs/setup/additional-setup/config-profiles/), so for this scenario we chose the `demo` from the list of profiles (demo, default, minimal, remote). The Istio mesh is starting and will be available in a few moments. Observe its progress:
 
 `kubectl get deployments,pods,services -n istio-system`{{execute}}
 

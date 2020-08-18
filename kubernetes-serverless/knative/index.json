@@ -13,7 +13,7 @@
       },
       {
         "title": "Install Istio",
-        "text": "step3-install-istio.md",
+        "text": "step2-install-istio.md",
         "code": "clear.sh"
       },
       {
