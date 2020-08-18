@@ -13,12 +13,12 @@
       },
       {
         "title": "Install Istio",
-        "text": "step3-install.md",
+        "text": "step3-install-istio.md",
         "code": "clear.sh"
       },
       {
         "title": "Install Knative",
-        "text": "step3-install.md",
+        "text": "step3-install-knative.md",
         "code": "clear.sh"
       },
       {
