@@ -1,4 +1,4 @@
-Knative delagates many of its features to an underlying network layer. A variety of networking layers, or meshes, can be added to enhance Kubernetes. Knative relies on these networking enhancements. 
+Knative delegates many of its features to an underlying network layer. A variety of networking layers, or meshes, can be added to enhance Kubernetes. Knative relies on these networking enhancements. 
 
 ## Install networking layer
 
@@ -19,7 +19,7 @@ The installation of Istio has been involving and the current recommendation is t
 
 We start by declaring a recent version of Istio:
 
-`export ISTIO_VERSION=1.6.8`{{execute}}
+`export ISTIO_VERSION=1.7.0-rc.2`{{execute}}
 
 Download the Istio package:
 
@@ -70,6 +70,6 @@ Once the deployments report available (1), ask Istio to verify the mesh is insta
 
 `istioctl verify-install`{{execute}}
 
-If you see the word for status as `RECONCILING`, then it's not ready and still initializing. When you see the word for status as `HEALTHY`, then it's working. [You can ignore the error message, they are working on it.](https://github.com/istio/istio/issues/25194)
+If you see the word for status as `RECONCILING`, then it's not ready and still initializing. When you see the word for status as `HEALTHY`, then it's working.
 
-You now have a healthy networking mesh that Knative can depend on. In the next step install Knative.
+You now have a healthy networking mesh that Knative can depend upon. In the next step you will install Knative.

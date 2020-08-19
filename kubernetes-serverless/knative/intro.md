@@ -30,6 +30,7 @@ There are a set of helpful solutions that allow serverless functions to run:
 In the following steps you will learn:
 
 - how to install Knative Kubernetes,
+- how to install Istio as a network layer for Knative,
 - how to install and invoke function on Knative.
 
 More about the Knative and Istio architecture is described in the [documentation](https://github.com/knative/docs).

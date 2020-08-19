@@ -1,4 +1,4 @@
-Knative consists of two primary components:
+Knative consists of two independent and primary components:
 
 - [Serving](https://knative.dev/docs/serving/)
 - [Eventing](https://knative.dev/docs/eventing/)
@@ -43,13 +43,11 @@ It will take a few moments to start the control plane objects:
 
 The Knative service control plane components perform the following:
 
-| Component        | Purpose     |
+| Service          | Purpose     |
 | ---------------- | ----------- |
 | activator        | Receiving and buffering requests for inactive revisions and reporting metrics to the autoscaler. It also retries requests to a revision after the autoscaler scales the revision based on the reported metrics. |
 | autoscaler       | Receives request metrics and adjusts the number of pods required to handle the load of traffic. |
 | controller       | Reconciles the public Knative objects and autoscaling CRDs. When a user applies a Knative service to the Kubernetes API, this creates the configuration and route. It will convert the configuration into revisions and the revisions into deployments and Knative Pod Autoscalers (KPAs). |
-| istio-webhook    | Intercepts Kubernetes API calls as well as CRD insertions and updates. It sets default values, rejects inconsitent and invalid objects, and validates and mutates Kubernetes API calls. |
-| networking-istio | Reconciles a cluster's ingress into an Istio virtual service. |
-| webhook          | Intercepts Kubernetes API calls as well as CRD insertions and updates. It sets default values, rejects inconsitent and invalid objects, and validates and mutates Kubernetes API calls.        |
+| webhook          | Intercepts Kubernetes API calls as well as CRD insertions and updates. It sets default values, rejects inconsistent and invalid objects, and validates and mutates Kubernetes API calls. |
 
 Once all the deployments report Available (1), Knative will be installed and ready to use.
