@@ -1,4 +1,3 @@
-
 There are numerous, complementing, and competing ways to implement what you just learned here. You may be overwhelmed with [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue) while trying to invest in the best choice. Consider that Tekton with Kaniko is helping to standardize the language and architecture of pipelines that leverage the existing [benefits of Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-you-need-kubernetes-and-what-can-it-do).
 
 <img align="right" src="./assets/tekton.png" width="200">
@@ -7,16 +6,16 @@ This tutorial shows how you can easily use Kubernetes as the underlying platform
 
 <img align="right" src="./assets/python.png" width="200">
 
-In addition, there are various ways to write a microservice in Python and a few techniques to package it all in a container. The goal in this scenario is to press the idea of some good practices to distill a container an effectively deliver a microservice to Kubernetes.
+In addition, there are various ways to write a microservice in Python and a few techniques to package it all in a container. The goal in this scenario is to press some good practices for distilling a container and effectively delivering a microservice to Kubernetes.
 
 ## Lessons Learned ##
 
-With these steps you have learned:
+With these steps, you have learned:
 
 - &#x2714; How to use FastAPI for developing a Python microservice
 - &#x2714; How to distill a container that packages Python
 - &#x2714; How to install a private registry with a UI
-- &#x2714; How to define, run and observe a Tekton pipeline
+- &#x2714; How to define, run, and observe a Tekton pipeline
 - &#x2714; How to build a container with Kaniko
 
 ## Additional Information ##
