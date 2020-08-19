@@ -27,28 +27,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Deploy Application",
-        "text": "step5-deploy.md",
-        "code": "clear.sh"
-      },
-      {
         "title": "Invoke Application",
-        "text": "step6-invoke.md",
+        "text": "step5-invoke.md",
         "code": "clear.sh"
       },
       {
         "title": "Delete Application",
-        "text": "step7-delete.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Knative Eventing",
-        "text": "step8-eventing.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "Knative Observing",
-        "text": "step9-observing.md",
+        "text": "step6-delete.md",
         "code": "clear.sh"
       }
     ],

@@ -13,7 +13,7 @@ Knative supports a variety of Kubernetes [networking layers](https://knative.dev
 
 We'll choose Istio for this scenario.
 
-## Istio Operator
+## Install Istio Operator
 
 The installation of Istio has been involving and the current recommendation is to install it with the Istio Operator. The [Kubernetes Operators pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) is definitely the way to go for multi-component controllers such as Istio. While the installation of the Istio Operator is done by Helm, Istio isolated your from the installation of the charts. For installation all you need is the `istioctl` command-line tool.
 
@@ -43,7 +43,7 @@ The istio operator components will soon be running:
 
 Once the istio-operator deployment reports available (1), the operator is ready to receive instructions from your to install Istio on Kubernetes.
 
-## Install Istio
+## Start Istio
 
 The operator remains in the `istio-operator` namespace. The Istio meshing control plane components will run in the `istio-system` namespace. Create the namespace:
 
@@ -70,37 +70,6 @@ Once the deployments report available (1), ask Istio to verify the mesh is insta
 
 `istioctl verify-install`{{execute}}
 
-If you can see the words status and HEALTHY, then it's working. [You can ignore the error message, they are working on it.](https://github.com/istio/istio/issues/25194)
+If you see the word for status as `RECONCILING`, then it's not ready and still initializing. When you see the word for status as `HEALTHY`, then it's working. [You can ignore the error message, they are working on it.](https://github.com/istio/istio/issues/25194)
 
 You now have a healthy networking mesh that Knative can depend on. In the next step install Knative.
-
-
-
-> TODO - remove
-
-## Kourier
-For this scenario, install Kourier and add integration with Knative.
-
-The following commands install Kourier and enable its Knative integration.
-
-Install the Knative Kourier controller:
-
-`kubectl apply --filename https://github.com/knative/net-kourier/releases/download/v${KNATIVE_VERSION}/kourier.yaml`{{execute}}
-
-To configure Knative Serving to use Kourier by default:
-
-```bash
-kubectl patch configmap/config-network \
-  --namespace knative-serving \
-  --type merge \
-  --patch '{"data":{"ingress.class":"kourier.ingress.networking.knative.dev"}}'```{{execute}}
-
-It will take a few moments to start.
-
-`kubectl get deployments,pods,services --namespace kourier-system`{{execute}}
-
-Fetch the External IP or CNAME:
-
-`kubectl --namespace kourier-system get service kourier`{{execute}}
-
-Save this for configuring DNS below.

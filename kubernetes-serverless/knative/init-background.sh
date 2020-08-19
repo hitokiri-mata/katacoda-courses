@@ -9,7 +9,7 @@ exec 1>/var/log/init-background.log 2>&1
 set -x	
 
 # Common curl switches (however, use `lynx url --dump` when you can)
-echo '-s' >> ~/.curlrc
+echo '-#' >> ~/.curlrc
 
 # Allow pygmentize for source highlighting of source files (YAML, Dockerfile, Java, etc)
 # Preload docker image to make ccat hot
