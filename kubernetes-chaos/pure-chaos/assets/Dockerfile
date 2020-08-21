@@ -36,8 +36,7 @@ RUN addgroup --gid "${GID}" "${GROUP}" \
 
 WORKDIR ${HOME}
 
-# TODO, will switching user work?
-# USER ${USER}
+USER ${USER}
 
 COPY --from=builder /root/.local /usr/local
 COPY --chown=${USER}:${GROUP} . .

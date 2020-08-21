@@ -1,1 +1,1 @@
-`kubectl annotate namespace default chaos=candidate`{{execute}}
+`kubectl annotate deployment random-logger chaos=yes`{{execute}}

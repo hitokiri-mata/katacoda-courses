@@ -14,7 +14,8 @@
       },
       {
         "title": "Install Registry",
-        "text": "step2-registry.md"
+        "text": "step2-registry.md",
+        "code": "clear.sh"
       },
       {
         "title": "Install Sample Application",
@@ -23,7 +24,9 @@
       },
       {
         "title": "Snowflake Melter",
-        "text": "step4-snowflake-melter.md"
+        "text": "step4-snowflake-melter.md",
+        "code": "clear.sh"
+
       },
       {
         "title": "Target the Chaos",
@@ -42,6 +45,7 @@
     "assets": {
       "host01": [
         {"file": "Dockerfile", "target": "/root"},
+        {"file": "snowflake_metler.py", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
