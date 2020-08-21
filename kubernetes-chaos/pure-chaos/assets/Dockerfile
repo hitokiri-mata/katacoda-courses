@@ -9,7 +9,8 @@ FROM ${BASE_IMAGE} as builder
 WORKDIR /app
 
 # Cache installed dependencies between builds
-RUN pip install kubernetes==11.0.0 --user
+COPY ./requirements/ ./requirements/
+RUN pip install -r ./requirements/${REQUIREMENTS}.txt --user
 
 # --------------------------------------
 # Create final container loaded with app
@@ -36,7 +37,8 @@ RUN addgroup --gid "${GID}" "${GROUP}" \
 
 WORKDIR ${HOME}
 
-USER ${USER}
+# TODO, will switching user work?
+# USER ${USER}
 
 COPY --from=builder /root/.local /usr/local
 COPY --chown=${USER}:${GROUP} . .
