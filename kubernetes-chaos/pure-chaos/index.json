@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "pathwayTitle": "pure-chaos",
   "title": "Pure Chaos",
   "description": "A minimal implementation of periodic, selective, random Pod melter.",

@@ -17,19 +17,19 @@ for namespace in all_namespaces.items:
        ):
         # Add all pods found in targeted namespace
         pods = v1.list_namespaced_pod(namespace.metadata.name)
-        pod_candidates.extend(pods)
+        pod_candidates.extend(pods.items)
 
 # Determine how many Pods to remove
 removal_count = random.randint(0, len(pod_candidates))
 if len(pod_candidates) > 0:
-    logging.info("Found %d pods and melting %d of them.", len(pod_candidates), removal_count)
+    print("Found", len(pod_candidates), "pods and melting", removal_count, "of them.")
 else:
-    logging.info("No eligible Pods found with annotation chaos=yes.")
+    print("No eligible Pods found with annotation chaos=yes.")
 
 # Remove a few of the pods
 for _ in range(removal_count):
     pod = random.choice(pod_candidates)
     pod_candidates.remove(pod)
-    logging.info("Removing pod %s from namespace %s.", item.metadata.name, item.metadata.namespace)
+    print("Removing pod", pod.metadata.name, "from namespace", pod.metadata.namespace, ".")
     body = client.V1DeleteOptions()
-    v1.delete_namespaced_pod(pod.metadata.name, pod.metadata.ns, body=body) 
+    v1.delete_namespaced_pod(pod.metadata.name, pod.metadata.namespace, body=body) 
