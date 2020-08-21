@@ -28,4 +28,4 @@ Inspect the contents of the registry now listing the container image that was ju
 
 ## Invoke Chaos
 
-`kubectl create cronjob --schedule='*/1 * * * *' snowflake-melter --image=$IMAGE`{{execute}}
+`kubectl create cronjob snowflake-melter --image=$IMAGE --schedule='*/1 * * * *'`{{execute}}
