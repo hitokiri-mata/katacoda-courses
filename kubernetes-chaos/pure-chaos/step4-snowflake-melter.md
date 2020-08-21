@@ -29,3 +29,20 @@ Inspect the contents of the registry now listing the container image that was ju
 ## Invoke Chaos
 
 `kubectl create cronjob snowflake-melter --image=$IMAGE --schedule='*/1 * * * *'`{{execute}}
+
+The chaos Cron Job is will now be running one a minute. More flexible chaos systems would randomize this period. See the Cron Job:
+
+`kubectl get cronjobs`{{execute}}
+
+In less than a minutes a new Pod will appear:
+
+`kubectl get pods`{{execute}}
+
+This is where the chaos logic runs and each minute a new Pod will appear. Older job pods will get purged.
+
+You can inspect the job logs to see what they are working on.
+
+`kubectl get logs`{{execute}}
+
+You will find that the Jobs at this point are not finding and Pods that they can delete. In the next step, define the target for the snowflake melter.
+
