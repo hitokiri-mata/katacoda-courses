@@ -17,8 +17,12 @@
         "course_id": "chaoskube",
         "title": "Chaoskube",
         "description": "Periodically kills random pods in your Kubernetes cluster."
+      },
+      {
+        "course_id": "pure-chaos",
+        "title": "Pure Chaos",
+        "description": "A minimal implementation of periodic, selective, random Pod melter."
       }
-
     ]
   }
   
