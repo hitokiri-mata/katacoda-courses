@@ -8,5 +8,5 @@ You will learn how to:
 
 - Install a container with a simple script that accesses the Kubernetes API
 - Elevate the security context of a Pod to grant it access to the Kubernetes API.
-- Write the application in a Cron Job so it randomly.
+- Write the application in a Cron Job so it randomly melts away Pods.
 - Use annotations to affect behaviors.

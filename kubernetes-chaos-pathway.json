@@ -4,6 +4,11 @@
     "description": "Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production.",
     "courses": [
       {
+        "course_id": "pure-chaos",
+        "title": "Pure Chaos",
+        "description": "A minimal implementation of periodic, selective, random Pod melter."
+      },
+      {
         "course_id": "kubeinvaders",
         "title": "KubeInvaders",
         "description": "Destroy Pods as if they were aliens."
@@ -17,11 +22,6 @@
         "course_id": "chaoskube",
         "title": "Chaoskube",
         "description": "Periodically kills random pods in your Kubernetes cluster."
-      },
-      {
-        "course_id": "pure-chaos",
-        "title": "Pure Chaos",
-        "description": "A minimal implementation of periodic, selective, random Pod melter."
       }
     ]
   }
