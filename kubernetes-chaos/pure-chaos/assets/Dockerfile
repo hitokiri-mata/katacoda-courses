@@ -9,8 +9,8 @@ FROM ${BASE_IMAGE} as builder
 WORKDIR /app
 
 # Cache installed dependencies between builds
-COPY ./requirements/ ./requirements/
-RUN pip install -r ./requirements/${REQUIREMENTS}.txt --user
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt --user
 
 # --------------------------------------
 # Create final container loaded with app
