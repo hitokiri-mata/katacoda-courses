@@ -45,7 +45,7 @@
     "assets": {
       "host01": [
         {"file": "Dockerfile", "target": "/root"},
-        {"file": "snowflake_metler.py", "target": "/root"},
+        {"file": "snowflake_melter.py", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
