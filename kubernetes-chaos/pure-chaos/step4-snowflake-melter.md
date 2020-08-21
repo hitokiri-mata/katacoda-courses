@@ -1,9 +1,11 @@
 The most common chaos for Kubernetes is to periodically and randomly terminate Pods.
 
-To define the terminator, all we need is a container that has some logic in it to find the application Pods you just started and terminate them. We could write a container, but to keep it simple we just need a script to find an existing container that can run it. The Kubernetes API offers all the control we need to find and remove Pods.
+To define the terminator, all we need is a container that has some logic in it to find the application Pods you just started and terminate them. The Kubernetes API offers all the control we need to find and remove Pods.
+
+## Client Library with Python
 
 <img align="right" src="./assets/damiano-baschiera-f1LoTHjRSxo-unsplash.jpg" width=250>
-There are many languages you could use to code this logic. For this scenario, we'll choose Python as we can import a helpful Kubernetes API and the script can be loaded into a Python container. Let's look at the core of this onion:
+There are [several languages](https://kubernetes.io/docs/reference/using-api/client-libraries/) you could use to code this logic. For this scenario, we'll choose Python as we can import a helpful Kubernetes API and the script can be loaded into a Python container. Let's look at the core of this onion:
 
 `ccat snowflake_melter.py`{{execute}}
 
@@ -31,20 +33,32 @@ Inspect the contents of the registry by listing the container image that was jus
 
 ## Invoke Chaos
 
+Run your newly create application as a [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/):
+
 `kubectl create cronjob snowflake-melter --image=$IMAGE --schedule='*/1 * * * *'`{{execute}}
 
-The chaos Cron Job is will now be running one a minute. More flexible chaos systems would randomize this period. See the Cron Job:
+Label the CronJob so we can search its Pod's logs in a moment.
+
+`kubectl label cronjobs snowflake-melter app=snowflack-melter`{{execute}}
+
+The chaos CronJob is will now be running one a minute. More flexible chaos systems would randomize this period. See the CronJob:
 
 `kubectl get cronjobs`{{execute}}
 
-In less than a minute, the Cron Job will create new Pod will appear:
+At the beginning of the next minute on that clock, the CronJob will create a new Pod. Watch for the Pod to spin up:
 
 `kubectl get pods`{{execute}}
 
-This is where the chaos logic runs and each minute a new Pod will appear. Older job pods will get purged.
+Every minute a new Pod will create and run the chaos logic. Kubernetes automatically purges the older Job Pods.
 
-You can inspect the Job logs to see what they are working on.
+Getting the logs from all the Jobs is a bit tricky, but a common tool for us is called [stern](). Stern will gather and display logs from related Pods.
 
-`kubectl logs job/snowflake-melter`{{execute}}
+`stern snowflake-melter --container-state terminated`{{execute}}
 
-You will discover in the Job logs that they are not finding Pods that are eligible for deleting. In the next step, define a target for the snowflake melter.
+In a few moments you will discover in the Job logs that they are not finding Pods that are eligible for deleting.
+
+`No eligible Pods found with annotation chaos=yes.`
+
+Use this `clear`{{execute interrupt}} to break out of the Stern tailer or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+In the next step, define a target for the snowflake melter.

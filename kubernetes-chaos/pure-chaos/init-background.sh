@@ -33,4 +33,9 @@ helm install dash kubernetes-dashboard/kubernetes-dashboard \
 # how Istio and other LoadBalancer based services can be deployed.
 kubectl delete -f /opt/katacoda-cloud-provider.yaml
 
+# Stern logging viewer
+wget https://github.com/wercker/stern/releases/download/1.11.0/stern_linux_amd64
+mv stern_linux_amd64 /usr/local/bin/stern
+chmod +x /usr/local/bin/stern
+
 echo "done" >> /opt/.backgroundfinished

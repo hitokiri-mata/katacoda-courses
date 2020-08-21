@@ -13,6 +13,8 @@ With these steps you have learned:
 
 - [Principles of Chaos Engineering](http://principlesofchaos.org/)
 - [Fallacies of Distributed Computing Explained (PDF)](http://www.rgoarchitects.com/Files/fallacies.pdf)
+- [Kubernetes Client Libraries](https://kubernetes.io/docs/reference/using-api/client-libraries/)
+- [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
