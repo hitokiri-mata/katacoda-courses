@@ -37,7 +37,7 @@ Run your newly create application as a [Kubernetes CronJob](https://kubernetes.i
 
 `kubectl create cronjob snowflake-melter --image=$IMAGE --schedule='*/1 * * * *'`{{execute}}
 
-The chaos CronJob is will now be running one a minute. More flexible chaos systems would randomize this period. See the CronJob:
+The chaos CronJob is will now be running once a minute. More flexible chaos systems would randomize this period. See the CronJob:
 
 `kubectl get cronjobs`{{execute}}
 
@@ -47,9 +47,9 @@ At the beginning of the next minute on the clock, the CronJob will create a new 
 
 Every minute a new Pod will create and run the chaos logic. Kubernetes automatically purges the older Job Pods. Getting the logs from all the Jobs is a bit tricky, but there is a common client tool called [Stern](https://github.com/wercker/stern) that collates and displays logs from related Pods.
 
-`stern snowflake-melter --container-state terminated --since 2m`{{execute}}
+`stern snowflake-melter --container-state terminated --since 2m --timestamps`{{execute}}
 
-You will discover in the logs that the code is reporting that its not finding Pods that are eligible for deleting.
+You will discover in the logs that the code is reporting that it's not finding Pods that are eligible for deleting.
 
 `No eligible Pods found with annotation chaos=yes.`
 

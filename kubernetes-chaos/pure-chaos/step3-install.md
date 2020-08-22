@@ -1,4 +1,4 @@
-Before you can feel the pleasure of destroying a sandle castle, you have to create one. Let's create a small collection of applications. In a production system, perhaps this would be a replication of microservices. For this scenario, you will create a deployment of applications that logs random messages. Create a namespace for the deployment:
+Before you can feel the pleasure of destroying a sandle castle, you have to create one. Let's create a small collection of applications. In a production system, perhaps this would be a replication of microservices. For this scenario, you will create a deployment of applications that log random messages. Create a namespace for the deployment:
 
 `kubectl create namespace learning-place`{{execute}}
 

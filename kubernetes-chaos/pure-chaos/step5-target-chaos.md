@@ -12,7 +12,7 @@ and keep watching the Pod lifecycle status of the _random-logger_ Pods:
 
 `watch kubectl get pods -n learning-place`{{execute}}
 
-`stern snowflake-melter --container-state terminated --since 2m`{{execute}}
+`stern snowflake-melter --container-state terminated --since 2m --timestamps`{{execute}}
 
 Use this `clear`{{execute interrupt}} to break out of the watch and Stern tailer or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
