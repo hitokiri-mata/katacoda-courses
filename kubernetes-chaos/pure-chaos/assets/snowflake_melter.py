@@ -1,6 +1,5 @@
 from kubernetes import client, config
 import random
-import logging
 
 # Access Kubernetes
 config.load_incluster_config()
@@ -9,13 +8,12 @@ v1=client.CoreV1Api()
 # List Namespaces
 all_namespaces = v1.list_namespace()
 
+# Get Pods from namespaces annotated with chaos marker
 pod_candidates = []
 for namespace in all_namespaces.items:
-     # Filter namespaces that are annotated as chaos candidates.
     if (    namespace.metadata.annotations is not None 
         and namespace.metadata.annotations.get("chaos", None) == 'yes'
        ):
-        # Add all pods found in targeted namespace
         pods = v1.list_namespaced_pod(namespace.metadata.name)
         pod_candidates.extend(pods.items)
 
@@ -26,7 +24,7 @@ if len(pod_candidates) > 0:
 else:
     print("No eligible Pods found with annotation chaos=yes.")
 
-# Remove a few of the pods
+# Remove a few Pods
 for _ in range(removal_count):
     pod = random.choice(pod_candidates)
     pod_candidates.remove(pod)

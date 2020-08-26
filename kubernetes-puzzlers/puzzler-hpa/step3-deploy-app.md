@@ -28,4 +28,4 @@ If you inspect the YAML file (`ccat php-apache.yaml`{{execute}}) you will see a 
 
 The Pod with its Service will be available in a moment.
 
-`kubectl get deployments,pods,services -l app php=apache`{{execute}}
+`kubectl get deployments,pods,services -l app=php-apache`{{execute}}

@@ -5,7 +5,7 @@
     "courses": [
       {
         "course_id": "puzzler-hpa",
-        "title": "Troubleshooting your Horizontal Pod AutoScaler",
+        "title": "Troubleshooting your Horizontal Pod Autoscaler",
         "description": "Test your skills by fixing the automatic scaling of your Pods."
       }
     ]
