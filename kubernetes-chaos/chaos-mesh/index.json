@@ -31,8 +31,9 @@
         "code": "clear.sh"
       },
       {
-        "title": "Observe the Chaos",
-        "text": "step6-observe.md"
+        "title": "Pod Removal Experiment",
+        "text": "step6-experiment2.md",
+        "code": "clear.sh"
       }
     ],
     "intro": {
@@ -48,8 +49,10 @@
     "assets": {
       "host01": [
         {"file": "nginx.yaml", "target": "/root"},
-        {"file": "ghost.yaml", "target": "/root"},
+        {"file": "web-show-deployment.yaml", "target": "/root"},
+        {"file": "web-show-service.yaml", "target": "/root"},
         {"file": "network-delay-exp.yaml", "target": "/root"},
+        {"file": "pod-removal-exp.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }

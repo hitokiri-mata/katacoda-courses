@@ -32,15 +32,15 @@ You can reference these resources to create declarative YAML manifests that defi
 
 `ccat network-delay-exp.yaml`{{execute}}
 
-The experiment declares that a 10ms network delay should be injected every minute that lasts for 30 seconds. The delay will only be applied to the target service labeled "app": "web-show". The Web-show app has that label:
+The experiment declares that a 10ms network delay should be injected every minute that lasts for 30 seconds. The delay will only be applied to the target service labeled "app": "web-show". This is the _blast radius_. Only the web-show app has that label:
 
-`kubectl get deployments -l app='web-show'`{{execute}}
+`kubectl get deployments,pods -l app='web-show'`{{execute}}
 
 ## Apply Experiment
 
 Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the experiment can be applied like any other Kubernetes object.
 
-`kubectl apply -f network-delay.yaml`{{execute}}
+`kubectl apply -f network-delay-experiment.yaml`{{execute}}
 
 The experiment is now running.
 
@@ -48,14 +48,14 @@ The experiment is now running.
 
 ## Observe
 
-<img align="right" width="300" src="./assets/exp1-delay.png">
-Access the web-show application (tab above) an see if you can detect the delay. Return to the Chaos Mesh dashboard and notice the experiment is running. In the dashboard navigate to the experiments latency graph.
+<img align="right" width="200" src="./assets/network-delay.png">
+Access the web-show application (tab above). The application has a built in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay every 30 seconds. Look at the dashboard, find the experiment and drill down on its details.
 
 ## Update Experiment
 
 At any time you can change the YAML declaration and apply further experiment updates with:
 
-`kubectl apply -f network-delay-exp.yaml`{{execute}}
+`kubectl apply -f network-delay-experiment.yaml`{{execute}}
 
 The experiment can be paused:
 

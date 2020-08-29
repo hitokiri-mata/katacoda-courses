@@ -1,12 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: nginx
   annotations:
     deployment.kubernetes.io/revision: "1"
   labels:
     app: nginx
-    app-purpose: chaos
-  name: nginx
 spec:
   replicas: 8
   selector:
@@ -16,8 +15,25 @@ spec:
     metadata:
       labels:
         app: nginx
-        app-purpose: chaos
+        chaos: blast-here
     spec:
       containers:
       - image: nginx
         name: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shine-on-you-crazy-diamond 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cant-touch-dis
+  template:
+    metadata:
+      labels:
+        app: cant-touch-dis
+    spec:
+      containers:
+      - image: nginx

@@ -4,10 +4,10 @@ The project has taken the right native architecture path to use the Kubernetes O
 
 With these steps you have learned:
 
-TODO....
-- &#x2714; How to install Choas Mesh onto Kubernetes
-- &#x2714; How to 
-- &#x2714; How to 
+- &#x2714; Install Chaos Mesh onto Kubernetes
+- &#x2714; Install and label applications to make them eligible targets for chaos
+- &#x2714; Design and deliver chaos experiments
+- &#x2714; Observe the chaos engine exercise your experiments against the cluster objects
 
 > In the last year we've seen Chaos Engineering move from a much talked-about idea to an accepted, mainstream approach to improving and assuring distributed system resilience. As organizations large and small begin to implement Chaos Engineering as an operational process, we're learning how to apply these techniques safely at scale. The approach is definitely not for everyone, and to be effective and safe, it requires organizational support at scale. -- [ThoughtWorks Radar](https://www.thoughtworks.com/radar/techniques/chaos-engineering)
 

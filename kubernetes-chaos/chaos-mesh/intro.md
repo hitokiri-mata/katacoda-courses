@@ -1,4 +1,4 @@
-img align="right" width="300" src="./assets/chaos-mesh.png">
+<img align="right" width="300" src="./assets/chaos-mesh.png">
 
 Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes environments. At the current stage, it has the following components:
 
@@ -7,9 +7,12 @@ Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos 
 
 Chaos Mesh is a versatile chaos engineering solution that features all-around fault injection methods for complex systems on Kubernetes, covering faults in Pod, network, file system, and even the kernel.
 
-You will learn how to:
+Don't let the project name _mesh_ misguide you. This project is unrelated to _services meshes_ like Istio and Conduit. Hopefully in the future they will leverge the features of service mesh, but for now they are unrelated.
 
-- Install Chaos Mesh onto Kubernetes
+In this scenario you will learn how to:
+
+_- Install Chaos Mesh onto Kubernetes
 - Install and label applications to make them eligible targets for chaos
-- Design and deliver a chaos experiment
-- Observe the chaos engine exercise your experiment against the cluster objects
+- Design and deliver chaos experiments
+- Observe the chaos engine exercise your experiments against the cluster objects
+_
