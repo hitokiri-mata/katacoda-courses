@@ -49,7 +49,7 @@
       "host01": [
         {"file": "nginx.yaml", "target": "/root"},
         {"file": "ghost.yaml", "target": "/root"},
-        {"file": "network-deplay-exp.yaml", "target": "/root"},
+        {"file": "network-delay-exp.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
