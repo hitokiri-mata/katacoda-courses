@@ -14,6 +14,7 @@ TODO....
 ## References ##
 
 - [Chaos Mesh](github.com/chaos-mesh/chaos-mesh)
+- [K8s Chaos Dive, Chaos-Mesh Part 1, Craig Morten](https://dev.to/craigmorten/k8s-chaos-dive-2-chaos-mesh-part-1-2i96)
 - [Principles of Chaos Engineering](http://principlesofchaos.org/)
 - [Fallacies of Distributed Computing Explained (PDF)](http://www.rgoarchitects.com/Files/fallacies.pdf)
 

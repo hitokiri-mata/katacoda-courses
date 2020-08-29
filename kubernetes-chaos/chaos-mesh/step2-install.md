@@ -1,4 +1,4 @@
-The project has a ubiquitous script that will install the Chaos Mesh operator. To avoid reinveting a wheel we prefer a Helm chart as it offers better package management with parameters and uninstall.
+The project has a ubiquitous script that will install the Chaos Mesh operator. However, to avoid reinventing a wheel we prefer a Helm chart as it offers commonly used package management with parameters, updates, and uninstall.
 
 Create a namespace for the the Chaos Mesh operator:
 
@@ -25,8 +25,4 @@ Verify the Chaos Mesh operator has started its control plane:
 
 `kubectl get deployments,pods,services --namespace chaos-mesh`{{execute}}
 
-The dashboard will also be running and accessible via a NodePort. For this scenario we need the nodePort at a specific value, rather than it's current random port number. Set the nodePort to a specific port:
-
-`kubectl patch service chaos-dashboard --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
-
-You can now access the dashboard. The web interface for Choas Mesh dashboard can be seen from the tab "Chaos Mesh" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+Optimally, everything should be running in about ~15 seconds. 

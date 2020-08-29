@@ -17,13 +17,22 @@
         "text": "step2-install.md"
       },
       {
-        "title": "Add Applications",
-        "text": "step3-add-pods.md",
+        "title": "Chaos Mesh Dashboard",
+        "text": "step3-dashboard.md",
+      },
+      {
+        "title": "Chaos Mesh Experiment Types",
+        "text": "step4-experiment-types.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Network Dealy Experiment",
+        "text": "step5-experiment1.md",
         "code": "clear.sh"
       },
       {
         "title": "Observe the Chaos",
-        "text": "step4-observe.md"
+        "text": "step6-observe.md"
       }
     ],
     "intro": {
@@ -40,6 +49,7 @@
       "host01": [
         {"file": "nginx.yaml", "target": "/root"},
         {"file": "ghost.yaml", "target": "/root"},
+        {"file": "network-deplay-exp.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
