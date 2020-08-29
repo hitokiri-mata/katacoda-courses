@@ -51,8 +51,8 @@
         {"file": "nginx.yaml", "target": "/root"},
         {"file": "web-show-deployment.yaml", "target": "/root"},
         {"file": "web-show-service.yaml", "target": "/root"},
-        {"file": "network-delay-exp.yaml", "target": "/root"},
-        {"file": "pod-removal-exp.yaml", "target": "/root"},
+        {"file": "network-delay-experiment.yaml", "target": "/root"},
+        {"file": "pod-removal-experiment.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
