@@ -12,7 +12,13 @@ It will take a moment to start. You can see the application status in the defaul
 
 If you are curious, you can inspect the installation script:
 
-`curl https://mirrors.chaos-mesh.org/v0.9.0/web-show/deploy.sh`
+`curl https://mirrors.chaos-mesh.org/v0.9.0/web-show/deploy.sh`{{execute}}
+
+Access the ClusterIP service using the port-forward feature
+
+`kubectl port-forward service/web-show 8081:8081 &`{{execute}}
+
+http://localhost:8081
 
 ## Define Experiment
 
