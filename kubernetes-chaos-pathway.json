@@ -22,7 +22,11 @@
         "course_id": "chaoskube",
         "title": "Chaoskube",
         "description": "Periodically kills random pods in your Kubernetes cluster."
-      }
+      },
+      {
+        "course_id": "chaos-mesh",
+        "title": "Chaos Mesh®",
+        "description": "A cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes."            }
     ]
   }
   
