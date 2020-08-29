@@ -61,7 +61,8 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Choas Mesh", "port": 31111}
+      {"name": "Choas Mesh", "port": 31111},
+      {"name": "Web Show", "port": 30081}
     ]
   },
   "backend": {

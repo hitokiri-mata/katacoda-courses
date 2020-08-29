@@ -1,4 +1,4 @@
-<img align="right" alt="Chaos Mesh" title="Chaos Mesh" src="./assets/chaos-mesh.png" width=300>
+img align="right" width="300" src="./assets/chaos-mesh.png">
 
 Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes environments. At the current stage, it has the following components:
 
