@@ -6,7 +6,8 @@ spec:
   containers:
     - name: world-population-app
       image: k8s.gcr.io/busybox
-      command: [ "/bin/sh","-c","cat /etc/config/api" ]
+      command: [ "/bin/sh", "-c", "--" ]
+      args: [ "while true; do sleep 5 && cat /etc/config/api.txt; done;" ]
       volumeMounts:
       - name: api-sources
         mountPath: /etc/config

@@ -14,7 +14,7 @@ Get the name of the running Pod.
 
 `export POD=$(kubectl get pod -l app=nginx -o jsonpath="{.items[0].metadata.name}") && echo $POD`{{execute}}
 
-The Nginx Pod is on port 80, so port forward that to 8000 so we can call the web server main index page.
+The Nginx Pod is on port 80, so port forward that to 8000 so we can call the web server's main index page.
 
 `kubectl port-forward $POD 8000:80  > /dev/null &`{{execute}}
 

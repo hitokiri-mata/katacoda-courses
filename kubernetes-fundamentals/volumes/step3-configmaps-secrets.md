@@ -1,8 +1,8 @@
 Let's imagine you need to write some sort of microservice that provides information about world population data. Your service would mostly reach out to one or more public databanks where it can gather the raw information as it changes every year. Before diving into microservice coding, you know that the actual API should never be coded into your application. APIs are contextual information that should be mapped into an application. We also know that during the lifespan of the service, the API details may change. We have an API to world data based on the year.
 
-`http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019`
+[http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019](http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019)
 
-How would we provide the application this API URL that changes once a year? Any contextual data that changes over time can simply be provided as a file to the container. Any data you place in a ConfigMap or Secret in Kubernetes can be mounted as a read-only file for your container. To try it, first create some data:
+How would we provide the application this API URL that changes once a year? Any contextual data that changes over time can simply be provided as a file to the container. Any data you place in a ConfigMap or Secret in Kubernetes can be mounted as a file for your container. To try it, first create some data:
 
 `kubectl create configmap population --from-literal=worldpop.api=http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2018`{{execute}}
 
@@ -16,16 +16,20 @@ The ConfigMap called _population_ has a key in it called _worldpop.api_. The val
 
 `kubectl apply -f world-pop-pod.yaml`{{execute}}
 
-`export POD=$(kubectl get pod -l app=world-population -o jsonpath="{.items[0].metadata.name}") && echo $POD`{{execute}}
-
 The API URL is set in the ConfigMap:
 
 `kubectl describe ConfigMap population`{{execute}}
 
-The same data is mounted in a read-only file in the container.
+The same data is mounted in a file in the container.
 
-`kubectl run $POD -ti -- ls -la /etc/config`{{execute}}
+`kubectl exec world-population -ti -- ls -la /etc/config`{{execute}}
 
 Inspect the file to ensure the correct API is present.
 
-`kubectl run $POD -ti -- cat /etc/config/api.txt | grep -C10 'Caribbean small state'`{{execute}}
+`kubectl exec world-population -ti -- cat /etc/config/api.txt && echo`{{execute}}
+
+```bash
+kubectl patch configmap/population \
+  --type merge \
+  -p \
+  '{"data":{"worldpop.api":"[\"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2018\", \"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019\"]"}}'
