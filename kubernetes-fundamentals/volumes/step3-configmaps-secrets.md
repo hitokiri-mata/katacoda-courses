@@ -24,7 +24,7 @@ The same data is mounted in a file in the container.
 
 `kubectl exec world-population -ti -- ls -la /etc/config`{{execute}}
 
-Inspect the file to ensure the correct API is present.
+Inspect the file in the container to ensure the correct API is present.
 
 `kubectl exec world-population -ti -- cat /etc/config/api.txt && echo`{{execute}}
 
@@ -32,4 +32,12 @@ Inspect the file to ensure the correct API is present.
 kubectl patch configmap/population \
   --type merge \
   -p \
-  '{"data":{"worldpop.api":"[\"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2018\", \"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019\"]"}}'
+  '{"data":{"worldpop.api":"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019"}}'
+ ```
+ {{execute}}
+
+Re-inspect the file in the container to ensure the API has changed to 2019. You may not see the change right away as it takes about a minute for the ConfigMap controller to update the file. Continue the inspection until you see the change:
+
+`kubectl exec world-population -ti -- cat /etc/config/api.txt && echo`{{execute}}
+
+This type of contextual data can be also mapped to the environment variables in the container, but these values are never updated during the life of the Pod and its containers. By mounting the ConfigMap data to a volume, this gives you the flexibility to update the context data over time. Your application in the container would just need to read the file whenever the latest data is needed.
