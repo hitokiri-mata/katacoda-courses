@@ -28,7 +28,7 @@ Inspect the file in the container to ensure the correct API is present.
 
 `kubectl exec world-population -ti -- cat /etc/config/api.txt && echo`{{execute}}
 
-The key reason to mount contextual data to files in a container is to allow oyu to update the context over time. The world population API we provided was for 2018. Each year a new API appears, so a new URL is available for 2019. Use the patch command to update the ConfigMap data to hold the 2019 URL.
+The key reason to mount contextual data to files in a container is to allow you to update the context over time. The world population API we provided was for 2018. Each year a new API appears, so a new URL is available for 2019. Use the patch command to update the ConfigMap data to hold the 2019 URL.
 
 ```bash
 kubectl patch configmap/population \
@@ -37,7 +37,7 @@ kubectl patch configmap/population \
   '{"data":{"worldpop.api":"http://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2019"}}'
  ```{{execute}}
 
-Re-inspect the file in the container to ensure the API has changed to 2019. You may not see the change right away as it takes about a minute for the ConfigMap controller to update the file. Continue the inspection until you see the change:
+Re-inspect the file in the container to ensure the API has changed to 2019. **You may not see the change right away as it takes about a minute for the ConfigMap controller to update the file.** Continue the inspection until you see the change:
 
 `kubectl exec world-population -ti -- cat /etc/config/api.txt && echo`{{execute}}
 
