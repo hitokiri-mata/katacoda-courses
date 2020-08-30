@@ -32,7 +32,7 @@ Kubectl has a copy file command to copy files in and out of containers. Copy the
 
 Make a career-limiting move and change the file:
 
-`sed -i "s/Welcome to nginx/You have Been Hacked/g" index.html`{{execute}}
+`sed -i "s/Welcome to nginx/☠ You Have Been Hacked ☠/g" index.html`{{execute}}
 
 Copy the modified welcome page back to the container:
 

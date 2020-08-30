@@ -19,8 +19,7 @@ helm install chaos-mesh chaos-mesh/chaos-mesh \
   --version 0.2.0 \
   --namespace chaos-mesh \
   --set dashboard.create=true
-```
-{{execute}}
+```{{execute}}
 
 Verify the Chaos Mesh operator has started its control plane:
 
