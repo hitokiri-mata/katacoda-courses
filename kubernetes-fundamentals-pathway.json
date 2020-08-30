@@ -39,6 +39,11 @@
         "description": "Explore Kubernetes ConfigMaps and Secrets."
       },
       {
+        "course_id": "volumes",
+        "title": "Volumes",
+        "description": "An outward look at the file systems and volumes available to your app."
+      },
+      {
         "course_id": "podpreset",
         "title": "Pod Presets",
         "description": "Separating concerns by injecting Pod Preset fields into matching Pods."
