@@ -28,7 +28,7 @@
       },
       {
         "title": "Mounts to Node",
-        "text": "step5-nide.md",
+        "text": "step5-nodes.md",
         "code": "clear.sh"
       },
       {
@@ -37,7 +37,7 @@
       },
       {
         "title": "Mounts Outside Cluster",
-        "text": "step7-other-pods.md"
+        "text": "step7-external.md"
       },
       {
         "title": "Common Storage Interface",
