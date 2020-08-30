@@ -27,21 +27,30 @@
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to Node",
-        "text": "step5-nodes.md",
+        "title": "initContainers with emptyDir",
+        "text": "step5-initcontainers.md",
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to Other Pods",
-        "text": "step6-other-pods.md"
+        "title": "Mounts to Node Volumes",
+        "text": "step6-nodes.md",
+        "code": "clear.sh"
       },
       {
-        "title": "Mounts Outside Cluster",
-        "text": "step7-external.md"
+        "title": "Mounts to Cluster Volumes",
+        "text": "step7-cluster.md"
       },
       {
-        "title": "Common Storage Interface",
-        "text": "step8-csi.md"
+        "title": "Mounts to Internal NFS Service",
+        "text": "step8-nfs-internal.md"
+      },
+      {
+        "title": "Mounts to External NFS Service",
+        "text": "step9-nfs-external.md"
+      },
+      {
+        "title": "Mounts to Common Storage Interfaces",
+        "text": "step10-csi.md"
       }
     ],
     "intro": {
