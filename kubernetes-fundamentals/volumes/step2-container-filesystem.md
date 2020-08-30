@@ -36,9 +36,9 @@ Make a career-limiting move and change the file:
 
 Copy the modified welcome page back to the container:
 
-`kubectl cp $POD:usr/share/nginx/html/index.html index.html`{{execute}}
+`kubectl cp index.html $POD:usr/share/nginx/html/index.html`{{execute}}
 
-A confirm your evilness:
+A confirm your hackery:
 
 `lynx http://localhost:8000 --dump`{{execute}}
 
