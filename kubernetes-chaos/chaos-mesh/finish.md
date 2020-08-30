@@ -1,4 +1,4 @@
-Chaos Mesh is an emerging open source project started in Q4 2019. It is filled with many of the experiment features you would expect to write for Choas testing. The project is under active development as a [Sandbox project with CNCF](https://www.cncf.io/sandbox-projects/). This Katacoda scenario will be updated as it evolves.
+Chaos Mesh is an emerging open source project started in Q4 2019. It is filled with many of the experiment features you would expect to write for Chaos testing. The project is under active development as a [Sandbox project with CNCF](https://www.cncf.io/sandbox-projects/). This Katacoda scenario will be updated as it evolves.
 
 The project has taken the right native architecture path to use the Kubernetes Operator Pattern. By defining a collection of CRDs its controller accepts experiments declarations from you in the form of YAML manifests. These YAML are expected to be infrastructure as code and part of your CI/CD pipeline along with your other testing formulas.
 

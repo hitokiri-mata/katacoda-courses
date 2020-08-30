@@ -48,8 +48,9 @@ The experiment is now running.
 
 ## Observe
 
-<img align="right" width="200" src="./assets/network-delay.png">
-Access the web-show application (tab above). The application has a built in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay every 30 seconds. Look at the dashboard, find the experiment and drill down on its details.
+<img align="right" width="250" src="./assets/network-delay.png">
+Access the [web-show application](https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
+) (or use the tab). The application has a built in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay every 30 seconds. Look at the dashboard, find the experiment and drill down on its details.
 
 ## Update Experiment
 

@@ -40,26 +40,10 @@ The experiment is now running.
 
 Based on the cron time in the experiment, watch the Pods randomly terminate and new ones start:
 
-`watch kubectl get -n chaos-sandbox deployments,pods,services -l chaos=blast-here`{{execute}}
+`watch kubectl get -n chaos-sandbox deployments,pods,services`{{execute}}
 
 Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-Look at the dashboard, find the experiment, and drill down on its details.
+Look at the Chaos Mesh dashboard, find the experiment, and drill down to explore the experiment details.
 
-## Update Experiment
-
-At any time you can change the YAML declaration and apply further experiment updates with:
-
-`kubectl apply -f network-delay-exp.yaml`{{execute}}
-
-The experiment can be paused:
-
-`kubectl annotate networkchaos web-show-network-delay experiment.chaos-mesh.org/pause=true`{{execute}}
-
-and resumed:
-
-`kubectl annotate networkchaos web-show-network-delay experiment.chaos-mesh.org/pause-`{{execute}}
-
-Since the NetworkChaos is like any other Kubernetes resource, the experiment can be easily removed.
-
-`kubectl delete -f network-delay-exp.yaml`{{execute}}
+There are many more types of experiments. Which ones appeal to you that could help your application increase its availability in times of chaos?
