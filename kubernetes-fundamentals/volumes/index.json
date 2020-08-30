@@ -17,23 +17,31 @@
         "code": "clear.sh"
       },
       {
-        "title": "Service",
-        "text": "step3-service.md",
+        "title": "Mounts to ConfigMaps and Secrets",
+        "text": "step3-configmaps-secrets.md",
         "code": "clear.sh"
       },
       {
-        "title": "Scaling",
-        "text": "step4-scale.md",
+        "title": "Mounts to Pod",
+        "text": "step4-pods.md",
         "code": "clear.sh"
       },
       {
-        "title": "Resilience",
-        "text": "step5-resilience.md",
+        "title": "Mounts to Node",
+        "text": "step5-nide.md",
         "code": "clear.sh"
       },
       {
-        "title": "Rollout",
-        "text": "step6-rollout.md"
+        "title": "Mounts to Other Pods",
+        "text": "step6-other-pods.md"
+      },
+      {
+        "title": "Mounts Outside Cluster",
+        "text": "step7-other-pods.md"
+      },
+      {
+        "title": "Common Storage Interface",
+        "text": "step8-csi.md"
       }
     ],
     "intro": {

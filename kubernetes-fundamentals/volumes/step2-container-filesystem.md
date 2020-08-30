@@ -2,7 +2,7 @@ Before we get into fancy mounts and volumes, first let's recognized that within 
 
 This single command starts a container in a Pod, list its file contents, and destroy the Pod:
 
-`kubectl run -i --tty busybox8 --image=busybox --restart=Never --rm=true -- ls -la`{{execute}}
+`kubectl run -i --tty busybox --image=busybox --restart=Never --rm=true -- ls -la`{{execute}}
 
 This confirms for us that within the container is a file system where your application within a container can read and write files locally and innocently.
 
@@ -12,7 +12,7 @@ You, as the manager of a Pod, can also copy files into and out of that container
 
 Get the name of the running Pod.
 
-`export POD=$(kubectl get pod -o name -l app=nginx) && echo $POD`{{execute}}
+`export POD=$(kubectl get pod -l app=nginx -o jsonpath="{.items[0].metadata.name}") && echo $POD`{{execute}}
 
 The Nginx Pod is on port 80, so port forward that to 8000 so we can call the web server main index page.
 
@@ -24,14 +24,24 @@ Dump the default index page:
 
 The index page is a html file at this location `/usr/share/nginx/html` in the container:
 
-`kubectl exec $POD -ti -- ls -la /usr/share/nginx/html`
+`kubectl exec $POD -ti -- ls -la /usr/share/nginx/html`{{execute}}
 
 Kubectl has a copy file command to copy files in and out of containers. Copy the index.html file out of the container to this local file system where you are running the shell.
 
-`kubectl cp $POD/usr/share/nginx/html/index.html index.html`{{execute}}
+`kubectl cp $POD:usr/share/nginx/html/index.html index.html`{{execute}}
 
+Make a career-limiting move and change the file:
 
+`sed -i "s/Welcome to nginx/You have Been Hacked/g" index.html`{{execute}}
 
-Granted, this first step is pretty basic. Always keep in mind all your application is doing, no matter where file bytes actually exist, is it reads and writes to what it sees as the local file system. The file system in the container. Independent of your code and the container, it's file system can be _mounted_ to other volumes. This mount aliasing is the key to any remote file, just never tell the container or your application.
+Copy the modified welcome page back to the container:
 
-[Factor IV](https://12factor.net/backing-services) of the Twelve-Factor App states "Treat backing services as attached resources". In the description is lists things like application services such as a message broker should be kept independent from you application. The same is true for the vast choices of volumes you can potentially mount.
+`kubectl cp $POD:usr/share/nginx/html/index.html index.html`{{execute}}
+
+A confirm your evilness:
+
+`lynx http://localhost:8000 --dump`{{execute}}
+
+Granted, this first step is pretty basic. Always keep in mind all your application is doing, no matter where the file bytes physically exist, your app reads and writes to what it sees as the local file system of the container. Independent of your code and the container, it's file system can be _mounted_ to other volumes. This mount aliasing is the key to any remote file, just never tell the container or your application.
+
+[Factor IV](https://12factor.net/backing-services) of the Twelve-Factor App states "Treat backing services as attached resources". The description lists application services such as a message broker which should be kept independent from your application. The same is true for the vast choices where your files can be stored.
