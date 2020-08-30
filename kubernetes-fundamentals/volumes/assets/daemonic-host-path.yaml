@@ -22,14 +22,18 @@ spec:
       containers:
       - name: log-writer
         image: busybox
-      args:
-      - /bin/sh
-      - -c
-      - >
-        echo "$(date) INFO $i" >> /var/log/log-writer.log;
-      volumeMounts:
-        - name: varlog
-          mountPath: /var/log
+        args:
+          - /bin/sh
+          - -c
+          - >
+            while true;
+            do
+              echo "$(date) INFO $i" >> /var/log/log-writer.log;
+              sleep 5;
+            done
+        volumeMounts:
+          - name: varlog
+            mountPath: /var/log
       volumes:
       - name: varlog
         hostPath:

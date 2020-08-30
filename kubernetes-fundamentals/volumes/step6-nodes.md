@@ -6,6 +6,7 @@ There is a file mount option called hostPath. A hostPath volume mounts a file or
 
 A Pod may look like this:
 
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -24,6 +25,7 @@ spec:
       path: /data
       # this field is optional
       type: Directory
+```{{execute}}
 
 ## DaemonSet with HostPath
 
@@ -31,12 +33,14 @@ Try this DaemonSet:
 
 `ccat daemonic-host-path.yaml`{{execute}}
 
-The second to last line defines the hostpath. The DaemonSet will start a Pod on each Node in your Katacoda's two node cluster and it will write a file `/var/log/log-writer.log`. Submit the DaemonSet.
+The last lines define the hostPath. The DaemonSet will start a Pod on each Node in your Katacoda's two node cluster and it will write a file `/var/log/log-writer.log`. Submit the DaemonSet.
 
 `kubectl apply -f daemonic-host-path.yaml`{{execute}}
 
 In a moment the log file will appear on this Node.
 
 `cat /var/log/log-writer.log`{{execute}}
+
+If you get the error message `No such file or directory` it just means the container has not logged anything yet. Try is again in a moment and you will see the log contents with `INFO`.
 
 The busybox container has no knowledge or concern about where the log file will physically be written.

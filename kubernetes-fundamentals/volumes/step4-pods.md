@@ -44,7 +44,7 @@ The Pod named _counter_ consists of a primary contain and two sidecar contains. 
 
 `kubectl apply -f sidecar.yaml`{{execute}}
 
-In a moment the primary busybox container will be writing to the two logs. Asynchronously the two sidecards will be reading those logs. Let's inspect the first sidecar:
+In a moment the primary busybox container will be writing to the two logs. Asynchronously the two sidecars will be reading those logs. Let's inspect the first sidecar:
 
 `kubectl logs counter count-log-1`{{execute}}
 
@@ -52,4 +52,6 @@ There are the logs. Inspect the second side car:
 
 `kubectl logs counter count-log-2`{{execute}}
 
-The primary container has no knowledge or coupling to the sidecars. Each sidecar has no knowledge of what is generating the logs. Each decoupled container independently writes and reads the logs. There a many uses for sidecars, adapters and ambassadors using this composite container pattern, all because they can efficiently share files with each other via emptyDir.
+The primary container has no knowledge or coupling to the sidecars. Each sidecar has no information about what is generating the logs. Each decoupled container independently writes and reads the logs. There a many uses for sidecars, adapters and ambassadors using this composite container pattern, all because they can efficiently share files with each other via emptyDir.
+
+In the next step will look at another helpful technique for sharing emptyDir, initContainers.
