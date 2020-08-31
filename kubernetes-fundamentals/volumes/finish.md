@@ -1,17 +1,18 @@
+This shows you that Kubernetes is a thing of persistent integrity thanks to the levels of indirection with Linux file mounts, PVs, and PVCs. 😉
 
-Once an application is in a container, it's fairly simple to ask Kubernetes to serve up the container in multiple Pods fronted with a load balancing Service. Thereafter, Kubernetes dutifully respects your declared request by ensuring the application remains running on the cluster.
-
-There are many other types of resources that can be added to Kubernetes besides just Pods, Services and Deployments, however these are the most common resources. Later, explore the Helm scenarios to see how whole _charts_ of more complex deployments can be installed.
+The steps were organized to go from easy and basic to more complicated. We hope you made it through each step. If not, go back to the squirrely bits and review them again.
 
 ## Lessons Learned ##
 
 With these steps you have learned:
 
-- &#x2714; how to **Deploy** an application,
-- &#x2714; how to **Scale** an application,
-- &#x2714; how to load balance an application with a **Service** for multiple **Pods** of an application,
-- &#x2714; how **Resilience** maintains the declared state even with failures,
-- &#x2714; how to **Roll out** new versions of an application.
+- &#x2714; about the file system inside a container.
+- &#x2714; about mounting a volume to a ConfigMap.
+- &#x2714; about mounting to the Pod file system.
+- &#x2714; about mounting to emptyDir with initContainers.
+- &#x2714; about mounting to a Node filesystem.
+- &#x2714; about mounting to a Persistent Volume.
+- &#x2714; about mounting to a file system outside the cluster.
 
 ------
 <p style="width: 100%; text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

@@ -11,9 +11,7 @@ In the following steps you will learn:
 - about mounting to the Pod file system.
 - about mounting to emptyDir with initContainers.
 - about mounting to a Node filesystem.
-- about mounting to a Cluster filesystem.
-- about mounting to a separate Pod filesystem.
+- about mounting to a Persistent Volume.
 - about mounting to a file system outside the cluster.
-- about the wide array of common storage interface drivers for many of your long term persistence needs.
 
 Volumes, filesystems, and mounts are a complex topic. The length of this scenario reflects this rich topic. You will need some dedicated time to complete all the steps. Each step is a different topic and independent of the other topics. If you wish to skip a topic or have to come back to this scenario later, each step can be explored separately to fit your busy schedule.

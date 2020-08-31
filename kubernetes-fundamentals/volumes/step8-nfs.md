@@ -23,19 +23,13 @@ You'll create two PersistentVolumes that for each directory offered by the NFS s
 
 `ccat nfs-pv-tpl.yaml`{{execute}}
 
-The manifest YAML file has a $NFS_HOST inside of it that needs to be replaced with the actual IP of the host where the NFS Server is running as a container. Use the `envsubst` command to replace the environment variables.
+The manifest YAML file has a $NFS_HOST inside of it that needs to be replaced with the actual IP of the host where the NFS Server is running as a container. We will set an environment variable:
 
-`export NFS_HOST=$(hostname -I | awk '{print $1})`{{execute}}
+`export NFS_HOST=$(hostname -I | awk '{print $1}) && echo $NFS_HOST`{{execute}}
 
-`envsubst < nfs-pv-tpl.yaml > nfs-pv.yaml`{{execute}}
+With the common Linux `envsubst` command the two $NFS_HOST references can be replaced with the IP address as the manifest is submitted to Kubernetes:
 
-The host values have been injected
-
-`ccat nfs-pv.yaml`{{execute}}
-
-Create the two PVs:
-
-`kubectl create -f nfs-pv.yaml`{{execute}}
+`envsubst nfs-pv-tpl.yaml | kubectl apply -f -`{{execute}}
 
 Inspect the created PVs:
 
@@ -43,21 +37,21 @@ Inspect the created PVs:
 
 ## PersistentVolumeClaim
 
-Only once claim can be made against a single volume. You'll create two claims. One for HTML and one for MYSql file storage:
+Only one claim can be made against a single volume. You'll create two claims. One for HTML, and one for MySQL file storage:
 
 `ccat nfs-pvc.yaml`{{execute}}
 
-Create the PVs:
+Create the PVCs:
 
 `kubectl create -f nfs-pvc.yaml`{{execute}}
 
-Once created, view the two PersistentVolumesClaims you just created:
+Once created, view the two pairs of PV and PVC you just created:
 
 `kubectl get pv,pvc`{{execute}}
 
 ## Start Pod and Mount to PVC
 
-When a deployment is defined, it can assign itself to a previous claim. The following snippet defines a volume mount for the directory /var/lib/mysql/data which is mapped to the storage mysql-persistent-storage. The storage called mysql-persistent-storage is mapped to the claim called claim-mysql.
+When a deployment is defined, it can assign itself to a claim. The following snippet defines a volume mount for the directory /var/lib/mysql/data which is mapped to the storage mysql-persistent-storage. The storage called mysql-persistent-storage is mapped to the claim called claim-mysql.
 
 ```
   spec:
@@ -70,7 +64,7 @@ When a deployment is defined, it can assign itself to a previous claim. The foll
         claimName: claim-mysql
 ```
 
-Launch two new Pods with Persistent Volume Claims. Volumes are mapped to the correct directory when the Pods start allowing applications to read/write as if it was a local directory.
+Launch two new Pods with PersistentVolumeClaims. Volumes are mapped to the correct directory when the Pods start allowing applications to read/write as if it was a local directory.
 
 `kubectl create -f mysql-pod.yaml`{{execute}}
 
@@ -86,19 +80,21 @@ You can see the status of the Pods starting using:
 
 `kubectl get pods`{{execute}}
 
-If a Persistent Volume Claim is not assigned to a Persistent Volume, then the Pod will remain in the _Pending_ mode until it becomes available.
+The order of submitting these manifests does not matter. If a PersistentVolumeClaim is not assigned to a PersistentVolume, then the Pod will remain in the _Pending_ state until it becomes available.
 
 ## Read/Write Data
 
-Next, you'll read/write data to the volume. Our Pods can now read/write. MySQL will store all database changes to the NFS Server while the HTTP Server will serve static from the NFS drive. When upgrading, restarting or moving containers to a different machine the data will still be accessible.
+Next, you'll read/write data to the volume. The Pods can now read/write. MySQL will store all database changes to the NFS Server while the HTTP Server will serve static from the NFS drive. When upgrading, restarting or moving Pods to a different Nodes the data will still be accessible.
 
-To test the HTTP server, write a 'Hello World' index.html homepage. In this scenario, we know the HTTP directory will be based on data-0001 as the volume definition hasn't driven enough space to satisfy the MySQL size requirement.
+To test the HTTP server, write a 'Hello World' index.html homepage to the directory inside the NFS Server. In this scenario, we know the HTTP directory will be based on data-0001 as the volume definition hasn't driven enough space to satisfy the MySQL size requirement.
 
-`docker exec -it nfs-server bash -c "echo 'Hello World' > /exports/data-0001/index.html"`{{execute}}
+`docker exec -it nfs-server bash -c "echo 'Tell me and I forget, teach me and I may remember, involve me and I learn.<br>– Benjamin Franklin' > /exports/data-0001/index.html"`{{execute}}
 
-Based on the IP of the Pod, when accessing the Pod, it should return the expected response.
+Get the direct IP of the HTTP Server Pod:
 
 `ip=$(kubectl get pod www -o yaml |grep podIP | awk '{split($0,a,":"); print a[2]}'); echo $ip`{{execute}}
+
+When accessing the Pod, it returns Mr. Franklin's inspiration.
 
 `curl $ip`{{execute}}
 
@@ -106,20 +102,42 @@ Based on the IP of the Pod, when accessing the Pod, it should return the expecte
 
 When the data on the NFS share changes, then the Pod will read the newly updated data:
 
-`docker exec -it nfs-server bash -c "echo 'Hello NFS World' > /exports/data-0001/index.html"`{{execute}}
+`docker exec -it nfs-server bash -c "echo 'The more that you read, the more things you will know. The more that you learn, the more places you’ll go.<br>― Dr. Seuss' > /exports/data-0001/index.html"`{{execute}}
 
 `curl $ip`{{execute}}
+
+> I like nonsense, it wakes up the brain cells.
 
 ## Data Persistence with Ephemeral Pods
 
 Because a remote NFS server stores the data, if the Pod or the worker Node were to go down, then the data will still be available.
 
-Deleting a Pod will cause it to remove the mounts to any persistent volumes. New Pods can pick up and re-use the NFS claims.
+Deleting a Pod will cause it to remove the mounts to its persistent volumes. New Pods can re-mount to the same NFS claims with the same data.
 
 `kubectl delete pod www`{{{execute}}}
 
-`kubectl create -f www2-pod.yaml`{{exeucte}}
+`kubectl create -f www2-pod.yaml`{{execute}}
 
 `ip=$(kubectl get pod www2 -o yaml |grep podIP | awk '{split($0,a,":"); print a[2]}'); curl $ip`{{execute}}
 
-The applications now use a remote NFS for their data storage. Depending on requirements, this same approach works with other storage engines such as GlusterFS, AWS EBS, GCE storage or OpenStack Cinder.
+Depending on requirements, this same approach works with other storage engines such as GlusterFS, AWS EBS, GCE storage, or OpenStack Cinder.
+
+## Common Storage Interface
+
+This scenario will stop here, but you can go even further. There is another object in Kubernetes called a "StorageClass".
+
+```yaml
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: fast-storage
+provisioner: csi-driver.example.com
+parameters:
+  type: pd-ssd
+  csi.storage.k8s.io/provisioner-secret-name: mysecret
+  csi.storage.k8s.io/provisioner-secret-namespace: mynamespace
+```
+
+A wide variety of storage classes from multiple open-source projects and vendors can be bound to you PVs . All of these projects/products have converged on the Open Storage Interface (OCI) standard. Look here to explore the potential storage classes you can bind to for persistence.
+
+A growing public list of nearly 100 [CSI drivers is listed here](https://kubernetes-csi.github.io/docs/drivers.html) for many of your common persistence volume types. You also can write your own CSI driver.

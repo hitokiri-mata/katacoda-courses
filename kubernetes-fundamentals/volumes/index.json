@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "title": "Volumes and Mounts",
   "description": "An outward look at the file systems and volumes available to your app.",
   "difficulty":	"Beginner",
@@ -43,10 +42,6 @@
       {
         "title": "Mount to External NFS Service",
         "text": "step8-nfs.md"
-      },
-      {
-        "title": "Mount to Common Storage Interfaces",
-        "text": "step9-csi.md"
       }
     ],
     "intro": {
