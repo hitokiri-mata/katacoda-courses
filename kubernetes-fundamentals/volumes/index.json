@@ -3,7 +3,7 @@
   "title": "Volumes and Mounts",
   "description": "An outward look at the file systems and volumes available to your app.",
   "difficulty":	"Beginner",
-  "time":	"25 minutes",
+  "time":	"35 minutes",
   "details": {
     "steps": [
       {
@@ -17,12 +17,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to ConfigMaps and Secrets",
+        "title": "Mount to ConfigMaps and Secrets",
         "text": "step3-configmaps-secrets.md",
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to Pod",
+        "title": "Mount to Pod",
         "text": "step4-pods.md",
         "code": "clear.sh"
       },
@@ -32,25 +32,21 @@
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to Node Volumes",
+        "title": "Mount to Node Volumes",
         "text": "step6-nodes.md",
         "code": "clear.sh"
       },
       {
-        "title": "Mounts to Cluster Volumes",
+        "title": "Mount to Cluster Volumes",
         "text": "step7-cluster.md"
       },
       {
-        "title": "Mounts to Internal NFS Service",
-        "text": "step8-nfs-internal.md"
-      },
-      {
-        "title": "Mounts to External NFS Service",
+        "title": "Mount to External NFS Service",
         "text": "step9-nfs-external.md"
       },
       {
-        "title": "Mounts to Common Storage Interfaces",
-        "text": "step10-csi.md"
+        "title": "Mount to Common Storage Interfaces",
+        "text": "step9-csi.md"
       }
     ],
     "intro": {
@@ -71,6 +67,10 @@
         {"file": "local-storage-pv.yaml", "target": "/root"},
         {"file": "local-storage-pvc.yaml", "target": "/root"},
         {"file": "local-storage-pod.yaml", "target": "/root"},
+        {"file": "nfs-pv.yaml", "target": "/root"},
+        {"file": "nfs-pvc.yaml", "target": "/root"},
+        {"file": "www-pod.yaml", "target": "/root"},
+        {"file": "mysql-pod.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
