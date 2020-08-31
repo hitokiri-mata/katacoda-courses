@@ -44,7 +44,7 @@ Inspect this newly created PVC:
 
 Now the _status_ column reads `bound`, This tells you the claim found the volume. Once a claim is bound to a volume, no other claims can be made to the volume while this claim exists. The `local-storage` matching label between the PV and PVC declarations is was allow the pairing to occur. Other declarations are part of hte pairing considering such as the claim has to be a size the same or smaller than the volume size allocation. In this case the sizes matched to allow the binding to occur.
 
-## Mount Pod to PersistentVolumeClaim
+## Start Pod and Mount to PVC
 
 We define a simple NGINX Pod.
 
@@ -58,26 +58,34 @@ The NGINX Pod is on port 80, so port forward that to 8888 so we can call the web
 
 `kubectl port-forward nginx-hostpath 8001:80  > /dev/null &`{{execute}}
 
+## Web Content
+
 Dump the default index page:
 
 `lynx http://localhost:8001 --dump`{{execute}}
 
-The page is blank. Remember, the PV declared a mount to `hostPath.path: /mnt/data`. Your bash terminal is on the master node, so switch over to the worker node, `node01`.
+The page request to NGINX returns the expected error `403 Forbidden`. This is because it could not find the expected index.html file. Remember, the PV declared a mount to `hostPath.path: /mnt/data`. Let's fix that.
 
-`ssh node01`{{execute}}
+Your bash terminal is on the master node. The `/mnt/data` directory is over on the worker node `node01`. Verify the directory is empty:
 
-Inspect the directory where the PV is declared for a the hostPath.
+`ssh node01 ls -laR /mnt`{{execute}}
 
-`ls /mnt/data`{{execute}}
+Nothing there. Create some content:
 
-Nothing there. Create some content.
+`echo "Live to learn, learn to live, then teach others.<BR>--Douglas Horton" > index.html`{{execute}}
 
-`echo "Live to learn, learn to live, then teach others. <p>--Douglas Horton" > /mnt/data/index.html`{{execute}}
+Copy the new web page over to the worker node in the expected mount directory:
 
-Return to the master node, by typing `exit` just ***ONCE***. **Do not type exit again as it will end this scenario.**
+`scp index.html node01:/mnt/data`{{execute}}
+
+Verify the new file is there:
+
+`ssh node01 ls -la /mnt/data`{{execute}}
 
 See if you have updated the website content.
 
 `lynx http://localhost:8001 --dump`{{execute}}
+
+This shows you that by installing an index.html file at the mount location, the NGINX Pod can read from the same location via the declarations in the PV and PVC.
 
 There are hundreds of others volume types you can declare and bind to and we'll get to that next.

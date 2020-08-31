@@ -15,7 +15,7 @@ Choas Mesh is one of the better chaos engines for Kubernetes because:
 1. There are a wide variety of experiment types, not just Pod killing.
 1. Installs with a Helm chart and you have complete control over hte engine with CRDs.
 
-Don't let the project name _mesh_ misguide you. This project is unrelated to _services meshes_ like Istio and Conduit. Hopefully in the future they will leverage the features of service mesh, but for now they are unrelated.
+Don't let the project name _mesh_ misguide you. This project is unrelated to _services meshes_ like Istio and Conduit. Hopefully in the future they will leverage the features of service mesh, but for now, they are unrelated.
 
 In this scenario you will learn how to:
 

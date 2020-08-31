@@ -4,6 +4,6 @@ The chaos dashboard accessible via a NodePort. For this scenario we need the nod
 
 With the correct port value set, the web interface for Chaos Mesh dashboard can be seen from the tab "Chaos Mesh" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
 
-There are no experiments yet, but take a few moments to explore the general layout of the dashboard. There is a way through the user interface to create, update, and delete experiments. In the next steps you will define and submit an experiment trough a YAML manifest rather than this interface. 
+There are no experiments yet, but take a few moments to explore the general layout of the dashboard. There is a way through the user interface to create, update, and delete experiments. In the next steps, you will define and submit an experiment trough a YAML manifest rather than this interface.
 
 Leave the dashboard tab open so you can reference it again once you have some experiments running.

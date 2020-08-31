@@ -2,7 +2,7 @@ In this next experiment explore how Chaos Mesh carries out the common experiment
 
 ## Install Example Nginx application
 
-Install an example application as a target for the experiment. It's just a deployment of the common Nginx web server with a replication of Pods. Apply the Deployment to the _chaos-sandbox_ namespace:
+Install an example application as a target for the experiment. It's just a deployment of the common Nginx web server with Pod replications. Apply the Deployment to the _chaos-sandbox_ namespace:
 
 `kubectl create namespace chaos-sandbox`{{execute}}
 
