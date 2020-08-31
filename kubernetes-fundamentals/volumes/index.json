@@ -42,7 +42,7 @@
       },
       {
         "title": "Mount to External NFS Service",
-        "text": "step9-nfs-external.md"
+        "text": "step8-nfs.md"
       },
       {
         "title": "Mount to Common Storage Interfaces",
