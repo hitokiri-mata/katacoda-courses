@@ -19,7 +19,7 @@ The NFS server exposes two directories, data-0001 and data-0002, where files for
 
 ## PersistentVolume
 
-The NFS Server is offering two directories for storage so you'll create two PersistentVolumes that for each directory that look like this:
+You'll create two PersistentVolumes that for each directory offered by the NFS server with this manifest:
 
 `ccat nfs-pv.yaml`{{execute}}
 
@@ -29,7 +29,7 @@ Create the two PVs:
 
 Inspect the created PVs:
 
-`kubectl get pvs`{{execute}}
+`kubectl get pv`{{execute}}
 
 ## PersistentVolumeClaim
 
@@ -43,7 +43,7 @@ Create the PVs:
 
 Once created, view the two PersistentVolumesClaims you just created:
 
-`kubectl get pvcs`{{execute}}
+`kubectl get pv,pvc`{{execute}}
 
 ## Start Pod and Mount to PVC
 
@@ -76,7 +76,7 @@ You can see the status of the Pods starting using:
 
 `kubectl get pods`{{execute}}
 
-If a Persistent Volume Claim is not assigned to a Persistent Volume, then the Pod will be in Pending mode until it becomes available.
+If a Persistent Volume Claim is not assigned to a Persistent Volume, then the Pod will remain in the _Pending_ mode until it becomes available.
 
 ## Read/Write Data
 

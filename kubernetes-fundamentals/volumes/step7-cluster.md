@@ -38,11 +38,9 @@ Submit this PersistentVolumeClaim (PVC) to the cluster.
 
 Inspect this newly created PVC:
 
-`kubectl get pvc`{{execute}}
+`kubectl get pv,pvc`{{execute}}
 
-`kubectl get pv`{{execute}}
-
-Now the _status_ column reads `bound`, This tells you the claim found the volume. Once a claim is bound to a volume, no other claims can be made to the volume while this claim exists. The `local-storage` matching label between the PV and PVC declarations is was allow the pairing to occur. Other declarations are part of hte pairing considering such as the claim has to be a size the same or smaller than the volume size allocation. In this case the sizes matched to allow the binding to occur.
+Now the _status_ column reads `bound`, This tells you the claim found the volume. Once a claim is bound to a volume, no other claims can be made to the volume while this claim exists. The `local-storage` matching label between the PV and PVC declarations is was allow the pairing to occur. Other declarations are part of the pairing considering such as the claim has to be a size the same or smaller than the volume size allocation. In this case the sizes matched to allow the binding to occur.
 
 ## Start Pod and Mount to PVC
 
@@ -88,4 +86,4 @@ See if you have updated the website content.
 
 This shows you that by installing an index.html file at the mount location, the NGINX Pod can read from the same location via the declarations in the PV and PVC.
 
-There are hundreds of others volume types you can declare and bind to and we'll get to that next.
+There are hundreds of other volume types you can declare and bind to and we'll get to that next.
