@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    server: 172.17.0.20
+    server: $NFS_HOST
     path: /exports/data-0001
 
 ---
@@ -27,5 +27,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    server: 172.17.0.20
+    server: $NFS_HOST
     path: /exports/data-0002

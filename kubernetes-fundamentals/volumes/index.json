@@ -67,7 +67,7 @@
         {"file": "local-storage-pv.yaml", "target": "/root"},
         {"file": "local-storage-pvc.yaml", "target": "/root"},
         {"file": "local-storage-pod.yaml", "target": "/root"},
-        {"file": "nfs-pv.yaml", "target": "/root"},
+        {"file": "nfs-pv-tpl.yaml", "target": "/root"},
         {"file": "nfs-pvc.yaml", "target": "/root"},
         {"file": "www-pod.yaml", "target": "/root"},
         {"file": "mysql-pod.yaml", "target": "/root"},

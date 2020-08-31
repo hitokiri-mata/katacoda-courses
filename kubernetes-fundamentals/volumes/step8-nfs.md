@@ -21,6 +21,16 @@ The NFS server exposes two directories, data-0001 and data-0002, where files for
 
 You'll create two PersistentVolumes that for each directory offered by the NFS server with this manifest:
 
+`ccat nfs-pv-tpl.yaml`{{execute}}
+
+The manifest YAML file has a $NFS_HOST inside of it that needs to be replaced with the actual IP of the host where the NFS Server is running as a container. Use the `envsubst` command to replace the environment variables.
+
+`export NFS_HOST=$(hostname -I | awk '{print $1})`{{execute}}
+
+`envsubst < nfs-pv-tpl.yaml > nfs-pv.yaml`{{execute}}
+
+The host values have been injected
+
 `ccat nfs-pv.yaml`{{execute}}
 
 Create the two PVs:
