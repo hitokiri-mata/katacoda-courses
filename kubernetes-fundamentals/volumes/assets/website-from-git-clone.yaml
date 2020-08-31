@@ -15,14 +15,10 @@ spec:
     - name: html
       mountPath: /usr/share/nginx/html
   initContainers:
-  - image: alpine/git
+  - image: alpine/git:1.0.17
     name: git-clone
-    args:
-    - /bin/sh
-    - -c
-    - >
-      git clone https://github.com/javajon/dijure.com
-      cp public/ html/
+    command: ['/bin/sh', '-c']        
+    args: ['git clone https://github.com/javajon/dijure.com && mv public/* html/']
     volumeMounts:
     - name: html
       mountPath: /html/

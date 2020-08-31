@@ -67,6 +67,7 @@
         {"file": "world-pop-pod.yaml", "target": "/root"},
         {"file": "sidecar.yaml", "target": "/root"},
         {"file": "daemonic-host-path.yaml", "target": "/root"},
+        {"file": "website-from-git-clone.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
