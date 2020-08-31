@@ -6,7 +6,7 @@ This single command starts a container in a Pod, list its file contents, and des
 
 This confirms for us that within the container is a file system where your application within a container can read and write files locally and innocently.
 
-You, as the manager of a Pod, can also copy files into and out of that container file system. Create a small Pod with the Nginx webserver.
+You, as the manager of a Pod, can also copy files into and out of that container file system. Create a small Pod with the NGINX webserver.
 
 `kubectl create deployment nginx --image=nginx`{{execute}}
 
@@ -14,7 +14,7 @@ Get the name of the running Pod.
 
 `export POD=$(kubectl get pod -l app=nginx -o jsonpath="{.items[0].metadata.name}") && echo $POD`{{execute}}
 
-The Nginx Pod is on port 80, so port forward that to 8000 so we can call the web server's main index page.
+The NGINX Pod is on port 80, so port forward that to 8000 so we can call the web server's main index page.
 
 `kubectl port-forward $POD 8000:80  > /dev/null &`{{execute}}
 

@@ -1,6 +1,6 @@
 {
   "private": "true",
-  "title": "Volumes",
+  "title": "Volumes and Mounts",
   "description": "An outward look at the file systems and volumes available to your app.",
   "difficulty":	"Beginner",
   "time":	"25 minutes",
@@ -78,7 +78,8 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Demo-web", "port": 30080}
     ]
     },
   "backend": {

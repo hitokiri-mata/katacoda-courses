@@ -18,7 +18,7 @@ spec:
   - image: alpine/git:1.0.17
     name: git-clone
     command: ['/bin/sh', '-c']        
-    args: ['git clone https://github.com/javajon/dijure.com && mv public/* html/']
+    args: ['git clone https://github.com/cloudacademy/static-website-example /html']
     volumeMounts:
     - name: html
       mountPath: /html/
