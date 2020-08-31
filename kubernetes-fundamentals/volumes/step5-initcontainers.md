@@ -16,6 +16,6 @@ Patch the port to a non-random nodePort.
 
 `kubectl patch service demo-web --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":30080}]'`{{execute}}
 
-<img align="right" src="./assets/demo-web.png" width="150">The web interface for demo-web can be seen from the tab "Demo-web" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/
+<img align="right" src="./assets/demo-web.png" width="200">The web interface for demo-web can be seen from the tab "Demo-web" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/
 
 Here we have a website that is sourced from a git repo and transported via emptyDir over to the opinionated NGINX directory from where it serves the content. The initContainer pattern combined with emptyDir is a strong tool for you.

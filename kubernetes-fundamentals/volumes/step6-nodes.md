@@ -1,8 +1,8 @@
-We continue output toward more options for file mounts. The next layer out beyond the Pod is the Node. The Host server hosts the Pods managed by Kubelet. Pods can use the host file system for file storage, however, it's not very common.
+We continue outward to more options for file mounts. The next layer beyond the Pod is the Node. The Host server hosts the Pods managed by Kubelet. Pods can use the host file system for file storage, however, it's not very common. Just as Pods can come and go, so do Nodes. File storage on Nodes is ephemeral just as within Pods and containers.
 
 ## HostPath
 
-There is a file mount option called hostPath. A hostPath volume mounts a file or directory from the host Node's filesystem into your Pod. There are a few reasons you may need this when you need to access files are relevant to the type of Node. DaemonsSets are objects that declare Pods to run on every Node in a cluster, or at least a designated subset of Nodes. For instance, let imaging you have 10 nodes in your cluster dedicated to high-performance algorithms that require GPU processors. With Pod affinity to can run those important applications on these nodes. You may also want to monitor the performance of the GPUs. This is where DaemonSets come in. The applications in DaemonSets will want to access the metrics, log files or other file artifacts on the host machine that are related to performance. These special monitoring Pods will need access to the Host machines file system, via the hostPath volume. Any other type of observability pattern may also want to access these file artifacts. There are a few other examples to use hostPath. Not many, but it's possible.
+A Node is a host of many Pods. There is a file mount option on Nodes called hostPath. A hostPath volume mounts a file or directory from the host Node's filesystem into your Pod. There are a few reasons you may need this when you need to access files are relevant to the type of Node. DaemonsSets are objects that declare Pods to run on every Node in a cluster, or at least a designated subset of Nodes. Imaging you have 10 nodes in your cluster dedicated to high-performance algorithms that require GPU processors. With Pod affinity to can run those important algorithms on these nodes. You may also want to monitor the performance of the GPUs. This is where DaemonSets come in. The applications in DaemonSets can access the metrics, log files, or other file artifacts on the host machine that are important for observability. These special monitoring Pods will need access to the Host machines file system, via the hostPath volume. Any other type of observability pattern may also want to access these file artifacts. There are a few other examples to use hostPath. Not many, but it's possible.
 
 A Pod may look like this:
 
@@ -26,6 +26,8 @@ spec:
       # this field is optional
       type: Directory
 ```{{execute}}
+
+This application in the Pod has access to the hostPath directory `/data` on the host Node. Remember that Pods do not always land on the same Node each time they are run, therefore each time this Pod accesses /data, the files in there will not be the same as the files on other Nodes. If you try to start forcing a Pod to always target a specific Node then you are fighting against Kubernetes, the scheduler, scalability,resilience and distributed computing.
 
 ## DaemonSet with HostPath
 
