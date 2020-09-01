@@ -14,6 +14,12 @@ With these steps you have learned:
 - &#x2714; about mounting to a Persistent Volume.
 - &#x2714; about mounting to a file system outside the cluster.
 
+## References ##
+
+- [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+- [Configure a Pod to Use a Volume for Storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
+- [CSI drivers](https://kubernetes-csi.github.io/docs/drivers.html)
+
 ------
 <p style="width: 100%; text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
 <img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">

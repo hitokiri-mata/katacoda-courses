@@ -15,6 +15,11 @@ docker run -d --net=host \
    /exports/data-0001 \
    /exports/data-0002```{{execute}}
 
+TODO
+Alternative:
+
+`kubectl apply -f nfs-server-mock.yaml`{{execute}}
+
 The NFS server exposes two directories, data-0001 and data-0002, where files for this demonstration will be stored.
 
 ## PersistentVolume
