@@ -39,7 +39,7 @@
         "description": "Explore Kubernetes ConfigMaps and Secrets."
       },
       {
-        "course_id": "volumes-mounts",
+        "course_id": "volumes",
         "title": "Volumes and Mounts",
         "description": "An outward look at the file systems and volumes available to your app."
       },
