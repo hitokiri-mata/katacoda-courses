@@ -1,3 +1,5 @@
+> ** This Step is currently being drafted and will not fully work since the NFS server is not being resolved. ** 
+
 Now that you understand how your Pods can mount to PersistentVolumeClaim (PVC) and claims make connections to PersistentVolumes (PV) we can advance to other types of persistence services. In this scenario well connect to a Network File System (NFS). NFS has been around since the 1980s and it one of the staples for any architect. Other solutions may be better than NFS for you, but it's a common ground for us to understand how to connect your PV to NFS.
 
 NFS is a protocol that allows nodes to read/write data over a network. The protocol works by having a master node running the NFS daemon and stores the data. This master node makes certain directories available over the network.
@@ -15,10 +17,14 @@ docker run -d --net=host \
    /exports/data-0001 \
    /exports/data-0002```{{execute}}
 
+------------
 TODO
-Alternative:
+Alternatives:
 
 `kubectl apply -f nfs-server-mock.yaml`{{execute}}
+
+`helm install stable/nfs-server-provisioner`{{execute}}
+------------
 
 The NFS server exposes two directories, data-0001 and data-0002, where files for this demonstration will be stored.
 
