@@ -38,10 +38,10 @@ Copy the modified welcome page back to the container:
 
 `kubectl cp index.html $POD:usr/share/nginx/html/index.html`{{execute}}
 
-A confirm your hackery:
+Confirm your hackery:
 
 `lynx http://localhost:8000 --dump`{{execute}}
 
-Granted, this first step is pretty basic. Always keep in mind all your application is doing, no matter where the file bytes physically exist, your app reads and writes to what it sees as the local file system of the container. Independent of your code and the container, it's file system can be _mounted_ to other volumes. This mount aliasing is the key to any remote file, just never tell the container or your application.
+Granted, this first step is pretty basic. Always keep in mind all your application is doing, no matter where the file bytes physically exist, is it reads and writes to what it sees as the local file system of the container. Independent of your code and the container, it's file system can be _mounted_ to other volumes. This mount aliasing is the key to any remote file, just never tell the container or your application.
 
 [Factor IV](https://12factor.net/backing-services) of the Twelve-Factor App states "Treat backing services as attached resources". The description lists application services such as a message broker which should be kept independent from your application. The same is true for the vast choices where your files can be stored.

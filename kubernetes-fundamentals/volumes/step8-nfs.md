@@ -25,11 +25,11 @@ You'll create two PersistentVolumes that for each directory offered by the NFS s
 
 The manifest YAML file has a $NFS_HOST inside of it that needs to be replaced with the actual IP of the host where the NFS Server is running as a container. We will set an environment variable:
 
-`export NFS_HOST=$(hostname -I | awk '{print $1}) && echo $NFS_HOST`{{execute}}
+`export NFS_HOST=$(hostname -I | awk '{print $1}') && echo $NFS_HOST`{{execute}}
 
 With the common Linux `envsubst` command the two $NFS_HOST references can be replaced with the IP address as the manifest is submitted to Kubernetes:
 
-`envsubst nfs-pv-tpl.yaml | kubectl apply -f -`{{execute}}
+`envsubst < nfs-pv-tpl.yaml | kubectl apply -f -`{{execute}}
 
 Inspect the created PVs:
 
