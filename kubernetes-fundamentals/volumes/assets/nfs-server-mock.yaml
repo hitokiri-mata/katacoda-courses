@@ -42,7 +42,6 @@ spec:
       image: cpuguy83/nfs-server
       securityContext:
         privileged: true
-      args:
-        # Pass the paths to share to the Docker image
-        - /exports/data-0001
-          /exports/data-0002
+      # Pass the paths to share to the Docker image
+      args: ["/exports/data-0001", "/exports/data-0002"]
+
