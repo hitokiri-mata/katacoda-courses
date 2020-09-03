@@ -4,7 +4,7 @@
 Deploy Kibana. The service will be on a NodePort at 31000.
 
 `helm install kibana elastic/kibana \
-  --version=7.8.1 \
+  --version=7.9.0 \
   --namespace=logs \
   --set service.type=NodePort \
   --set service.nodePort=31000`{{execute}}

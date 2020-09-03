@@ -2,7 +2,7 @@ This scenario has been tested with this version of Istio.
 
 `export ISTIO_VERSION=1.6.7`{{execute}}
 
-As new versions arrive, this scenario will be upgraded. This version setting will be referenced by the installer.
+As new versions arrive, this scenario will be upgraded. This `ISTIO_VERSION` will be referenced by the installer.
 
 ## Istio operator
 

@@ -12,7 +12,7 @@ Add the chart repository for the Helm chart to be installed.
 Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
 
 `helm install elasticsearch elastic/elasticsearch \
---version=7.8.1 \
+--version=7.9.0 \
 --namespace=logs \
 -f elastic-values.yaml`{{execute}}
 

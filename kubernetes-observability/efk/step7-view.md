@@ -8,7 +8,7 @@ Katacoda has exposed the NodePort 31000 to access Kibana from your browser.
 
 ## Kibana Portal ##
 
-New information and logs are currently streaming into Elasticsearch from various components. You can use the Portal to create filters to find only the logs eminating from the _random-logger_.
+New information and logs are currently streaming into Elasticsearch from various components. You can use the Portal to create filters to find only the logs emanating from the _random-logger_.
 
 To see the logs collected from the _random-logger_ follow these steps in the Kibana portal.
 
@@ -25,7 +25,7 @@ To see the logs collected from the _random-logger_ follow these steps in the Kib
 1. On the right is a listing of all the log events. On the left, is a list of available fields to choose for filtering.
 1. Filter the log list by first choosing the _kubernetes.pod_name_ field. When you hover over or click on the word _kubernetes.pod_name_, click the **_Add_** button to the right of the label.
 1. The filter selection is added to the _Selected fields_ list. Click on the filter and select the magnifying glass (🔍) with the plus sign (+) next to _random-logger_.
-1. Now only then evens from the _random-logger_ appear.
+1. Now only then events from the _random-logger_ appear.
 1. From the available field list, select and add the _log_ field.
 
 The log list now is filtered to show log events from the _random-logger_ service. You can expand each event to reveal further details.

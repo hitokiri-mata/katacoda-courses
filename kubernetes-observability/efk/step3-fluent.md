@@ -12,7 +12,7 @@ Install the chart.
  
 ```bash
 helm install fluent-bit fluent/fluent-bit \
-  --version 0.6.2 \
+  --version 0.6.3 \
   --namespace=logs```{{execute}}
 
 Fluent Bit is starting and will become available in a few moments. In the meantime, continue to the next installation step.
