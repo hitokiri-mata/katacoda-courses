@@ -8,6 +8,8 @@ Install the Bookinfo application.
 
 `kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml`{{execute}}
 
+This YAML file contains all the declarative manifests for the deployments, pods, services that define the application. There is nothing in the YAML or within the application containers that exhibit knowledge or requirements for Istio to be present. The mesh is always independent from your application configuration and logic.
+
 In a few moments, the Bookinfo components will be running.
 
 `kubectl get deployments,pods,services`{{execute}}
@@ -19,8 +21,6 @@ kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metada
   -c ratings \
   -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
 ```{{execute}}
-
-This YAML file contains all the declarative manifests for the deployments, pods, services that define the application. There is nothing in the YAML or within the application containers that exhibit knowledge or requirements for Istio to be present. The mesh is always independent from your application configuration and logic.
 
 You will see `<title>Simple Bookstore App</title>`.
 
@@ -50,7 +50,7 @@ Set the ingress port.
 
 Formulate the URL.
 
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT | echo $GATEWAY_URL`{{execute}}
+`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT && echo $GATEWAY_URL`{{execute}}
 
 The curl command above to verify access to the page, was done internal to the cluster through the cluster IP of the service. Now we can test the same access via the ingress.
 

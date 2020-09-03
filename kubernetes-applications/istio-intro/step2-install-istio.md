@@ -1,6 +1,6 @@
 This scenario has been tested with this version of Istio.
 
-`export ISTIO_VERSION=1.6.7`{{execute}}
+`export ISTIO_VERSION=1.7.0`{{execute}}
 
 As new versions arrive, this scenario will be upgraded. This version setting will be referenced by the installer.
 

@@ -1,13 +1,16 @@
 With Istio's insight into how applications communicate, it can generate profound insights into how applications are working and performance metrics.
 
 ## Generate Load
+
 To view the graphs, there first needs to be some traffic. Execute the command below to send requests to the application.
 
+```bash
 while true; do
   curl -s https://2886795283-80-simba08.environments.katacoda.com/productpage > /dev/null
   echo -n .;
   sleep 0.2
 done
+```{{execute}}
 
 Access Dashboards
 With the application responding to traffic the graphs will start highlighting what's happening under the covers.
@@ -36,10 +39,3 @@ https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com
 
 Click on a span to view the details on an individual request and the HTTP calls made. This is an excellent way to identify issues and potential performance bottlenecks.
 
-## Service Graph
-
-As a system grows, it can be hard to visualize the dependencies between services. The Service Graph will draw a dependency tree of how the system connects.
-
-https://[[HOST_SUBDOMAIN]]-8088-[[KATACODA_HOST]].environments.katacoda.com
-
-Before continuing, stop the traffic process with +

@@ -40,8 +40,14 @@ This can be done by updating the route with new weighting and rules.
 
 `kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-v3.yaml`{{execute}}
 
-## List All Routes
+## IstioCtl Inspection
+
+The istioctl tool has commands for inspection. To list all the envoy sidecars run using this:
+
+`istioctl proxy-status`{{execute}}
 
 The istioctl [`describe`](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-describe/) and [`analyze`](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl-analyze/) commands provide ways for you to investigate the mesh rules and configurations.
 
 `istioctl analyze --help`{{execute}}
+
+However, let's get to some of the dashboards for more inspections.

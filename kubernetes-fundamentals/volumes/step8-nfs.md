@@ -1,12 +1,12 @@
 > ** This Step is currently being drafted and will not fully work since the NFS server is not being resolved. ** 
 
-Now that you understand how your Pods can mount to PersistentVolumeClaim (PVC) and claims make connections to PersistentVolumes (PV) we can advance to other types of persistence services. In this scenario well connect to a Network File System (NFS). NFS has been around since the 1980s and it one of the staples for any architect. Other solutions may be better than NFS for you, but it's a common ground for us to understand how to connect your PV to NFS.
+Now that you understand how your Pods can mount to PersistentVolumeClaim (PVC) and claims make connections to PersistentVolumes (PV) we can advance to other types of persistence services. In this scenario, we'll connect to a Network File System (NFS). NFS has been around since the 1980s and it one of the staples for any architect. Other solutions may be better than NFS for you, but it's a common ground for us to understand how to connect your PV to NFS.
 
 NFS is a protocol that allows nodes to read/write data over a network. The protocol works by having a master node running the NFS daemon and stores the data. This master node makes certain directories available over the network.
 
 Clients access the NFS masters shared via drive mounts. From the viewpoint of applications, they are writing to the local disk. Under the covers, the NFS protocol writes it to the NFS master.
 
-At this point, we have two places where we can run an NFS Server. Either inside the cluster or outside the cluster. For this demonstration and learning scenario we will run a NFS Server as a Pod inside the cluster. This NFS Service will create directories and store files _inside_ the container. It's not intended for production, but provides the full NFS protocol and simulates persistent storage inside the container, albeit it's ephemeral storage. If a production NFS system is needed, the NFS server can still run inside the cluster, but should be mounts to external file stores. Many cloud providers offer NFS as a service as well.
+At this point, we have two places where we can run an NFS Server. Either inside the cluster or outside the cluster. For this demonstration and learning scenario, we will run an NFS Server as a Pod inside the cluster. This NFS Service will create directories and store files _inside_ the container. It's not intended for production, but provides the full NFS protocol and simulates persistent storage inside the container, albeit it's ephemeral storage. If a production NFS system is needed, the NFS server can still run inside the cluster but should mount to external file stores. Many cloud providers offer NFS as a service as well.
 
 Start the NFS Server with its simulated file storage:
 
