@@ -22,7 +22,7 @@
       },
       {
         "title": "Istio Integrations",
-        "text": "step4-app-prep.md",
+        "text": "step4-integrations.md",
         "code": "clear.sh"
       },
       {
