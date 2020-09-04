@@ -1,12 +1,18 @@
 As a supplement, a collection of supplemental [integrations](https://istio.io/latest/docs/ops/integrations/) is offered for the Istio control plane. Install them now, and we'll explore each one of them near the end of this scenario.
 
+The integrations are based on just the major and minor numbers of the SemVer version if Istio. So extract the integrations version for the installations in this step:
+
+`SEMVER_REGEX='[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)'`{{execute}}
+
+`INTEGRATIONS_VERSION=$(echo $ISTIO_VERSION | sed -e "s#$SEMVER_REGEX#\1#").$(echo $ISTIO_VERSION | sed -e "s#$SEMVER_REGEX#\2#")`{{execute}}}}
+
 ## Prometheus
 
 [Prometheus](https://prometheus.io/) is an open source monitoring system and **time-series database for metrics**. You can use Prometheus with Istio to record metrics that track the health of Istio and applications within the service mesh. You can visualize metrics using tools like [Grafana](##Grafana) and [Kiali](##Kiali) that you will start below.
 
 Istio provides a basic sample installation to quickly get Prometheus up and running:
 
-`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VERSION/samples/addons/prometheus.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$INTEGRATIONS_VERSION/samples/addons/prometheus.yaml`{{execute}}
 
 ## Grafana
 
@@ -24,7 +30,7 @@ Grafana is an open source monitoring solution that can be used to configure dash
 
 Istio provides a basic sample installation to quickly get Grafana up and running, bundled with all of the Istio dashboards already installed:
 
-kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VERSION/samples/addons/grafana.yaml
+`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$INTEGRATIONS_VERSION/samples/addons/grafana.yaml`{{execute}}
 
 ## Jaeger
 
@@ -32,7 +38,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VE
 
 Istio provides a basic sample installation to quickly get Jaeger up and running:
 
-`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VERSION/samples/addons/jaeger.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$INTEGRATIONS_VERSION/samples/addons/jaeger.yaml`{{execute}}
 
 ## Zipkin
 
@@ -40,7 +46,7 @@ Zipkin is a distributed **tracing** system. It helps gather timing data needed t
 
 Istio provides a basic sample installation to quickly get Zipkin up and running:
 
-`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VERSION/samples/addons/extras/zipkin.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$INTEGRATIONS_VERSION/samples/addons/extras/zipkin.yaml`{{execute}}
 
 ## Kiali
 
@@ -48,7 +54,7 @@ Istio provides a basic sample installation to quickly get Zipkin up and running:
 
 Istio provides a basic sample installation to quickly get Kiali up and running:
 
-`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$ISTIO_VERSION/samples/addons/kiali.yaml`{{execute}}
+`kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-$INTEGRATIONS_VERSION/samples/addons/kiali.yaml`{{execute}}
 
 ## Observing
 
