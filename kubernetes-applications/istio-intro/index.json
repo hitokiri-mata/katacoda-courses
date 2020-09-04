@@ -64,6 +64,7 @@
       "host01": [
         {"file": "katacoda-template.yaml", "target": "/root"},
         {"file": "bookinfo.yaml", "target": "/root"},
+        {"file": "virtualservices.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
