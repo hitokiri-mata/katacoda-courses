@@ -2,6 +2,7 @@
 
 To make the sample Bookinfo application and dashboards available to the outside world on this Katacoda scenario, deploy the following YAML.
 
+TODO - remove?
 `kubectl apply -f /root/katacoda.yaml`{{execute}}
 
 For outside access, an important service is the istio-ingressgateway. The EXTERNAL-IP is set to the IP of the master Node.

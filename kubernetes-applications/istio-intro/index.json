@@ -21,28 +21,33 @@
         "code": "clear.sh"
       },
       {
-        "title": "Bookinfo App Preparation",
+        "title": "Istio Integrations",
         "text": "step4-app-prep.md",
         "code": "clear.sh"
       },
       {
+        "title": "Bookinfo App Preparation",
+        "text": "step5-app-prep.md",
+        "code": "clear.sh"
+      },
+      {
         "title": "Install Bookinfo App",
-        "text": "step5-install-bookinfo.md",
+        "text": "step6-install-bookinfo.md",
         "code": "clear.sh"
       },
       {
         "title": "Bookinfo Architecture",
-        "text": "step6-bookinfo-arch.md",
+        "text": "step7-bookinfo-arch.md",
         "code": "clear.sh"
       },
       {
         "title": "Traffic Management",
-        "text": "step7-traffic.md",
+        "text": "step8-traffic.md",
         "code": "clear.sh"
       },
       {
         "title": "Access Metrics",
-        "text": "step8-metrics.md",
+        "text": "step9-metrics.md",
         "code": "clear.sh"
       }
     ],
@@ -58,6 +63,7 @@
   "assets": {
       "host01": [
         {"file": "katacoda-template.yaml", "target": "/root"},
+        {"file": "bookinfo.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
@@ -70,9 +76,11 @@
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
       {"name": "Products", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
       {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
       {"name": "Kiali", "href": "https://[[HOST_SUBDOMAIN]]-20001-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
-      {"name": "Jaeger", "href": "https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/productpage"}
+      {"name": "Jaeger", "href": "https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Zipkin", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"}
     ]
   },
   "backend": {

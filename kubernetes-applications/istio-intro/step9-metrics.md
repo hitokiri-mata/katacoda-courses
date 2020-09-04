@@ -38,4 +38,3 @@ Jaeger provides tracing information for each HTTP request. It shows which calls 
 https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com
 
 Click on a span to view the details on an individual request and the HTTP calls made. This is an excellent way to identify issues and potential performance bottlenecks.
-
