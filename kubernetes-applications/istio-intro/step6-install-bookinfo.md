@@ -4,7 +4,7 @@ Next, you will install a demonstration application called Bookinfo. The applicat
 
 Install the Bookinfo application.
 
-`kubectl apply -f bookinfo.yaml`{{execute}}
+`kubectl apply -f istio-$ISTIO_VERSION/samples/bookinfo/platform/kube/bookinfo.yaml`{{execute}}
 
 This YAML file contains all the declarative manifests for the deployments, pods, services that define the application. There is nothing in the YAML or within the application containers that exhibit knowledge or requirements for Istio to be present. The mesh is always independent from your application configuration and logic.
 

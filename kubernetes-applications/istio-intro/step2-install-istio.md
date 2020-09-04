@@ -30,7 +30,7 @@ There are a few [profiles to choose from](https://istio.io/latest/docs/setup/add
 
 In a few moments, Istio will be available. The `Processing resources for Istiod` step may take a few minutes. Once complete. You can verify Istio is ready.
 
-`kubectl get deployments -n istio-system`{{execute}}
+`kubectl get deployments,services -n istio-system`{{execute}}
 
 The _istiod_ Deployment is the primary control plane component for istio. Within are the key istio components such as the Pilot, Citidel, Gally, and more. In a recent revision of Istio, it was deemed that a single istiod process is a better design than breaking each primary architectural component into separate deployments.
 
@@ -47,5 +47,15 @@ Then use the `verify-installation` to see if the declarations match the reality 
 `istioctl verify-install -f $HOME/istio-generated-manifest.yaml`{{execute}}
 
 If everything is healthy, you should see a listing of `checked successfully` messages for the istio components.
+
+TODO:
+
+Run the Istio pre-installation verification:
+
+`istioctl verify-install`{{execute}}
+
+You should see the message:
+
+`Install Pre-Check passed! The cluster is ready for Istio installation.`
 
 ``
