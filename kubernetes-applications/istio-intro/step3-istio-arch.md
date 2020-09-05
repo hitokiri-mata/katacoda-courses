@@ -10,9 +10,9 @@ The entire mesh is managed a few processes bundled into the Istiod binary. On Ku
 
 - **Pilot** Pilot is responsible for the lifecycle of Envoy instances deployed across the Istio service mesh. The Envoy shepherd. It exposes the Istio Rules API to allow you to configure the mesh. The Pilot synchronizes the meshing rules to the Envoys throughout the mesh.
 
-- **Galley** The top-level config ingestion, processing and distribution component of Istio. It is responsible for insulating the rest of the Istio components from the details of obtaining user configuration from the underlying platform. It contains Kubernetes CRD listeners for collecting configuration, an MCP protocol server implementation for distributing config, and a validation web-hook for pre-ingestion validation by Kubernetes API Server.
-
 - **Citadel** All communication governed by the mesh can be encrypted over TLS. The keys and certificates of Istio workloads are generated, distributed, rotated and revoked by Citadel. The security information is distributed to the Envoy sidecars through ephemeral secret-volume mounted files and retained in Envoy memory. While the Citadel is assumed to be the default certificate authority, it can be extended to connect to other authorities with an enabled secret discovery service (SDS). All communication can be encrypted with mutual TLS in your cluster using the mesh. This can help meet many of your security requirements and regulatory validations.
+
+- **Galley** The top-level config ingestion, processing and distribution component of Istio. It is responsible for insulating the rest of the Istio components from the details of obtaining user configuration from the underlying platform. It contains Kubernetes CRD listeners for collecting configuration, an MCP protocol server implementation for distributing config, and a validation web-hook for pre-ingestion validation by Kubernetes API Server.
 
 More about the [Istio architecture is here](https://istio.io/latest/docs/ops/deployment/architecture/).
 

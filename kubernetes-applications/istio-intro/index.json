@@ -1,4 +1,5 @@
 {
+  "private": "true",
   "title": "Istio Getting Started",
   "description": "Introduction to Istio with the Bookinfo App.",
   "difficulty":	"Introduction",
@@ -80,7 +81,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "BookInfo", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Bookinfo", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
       {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
       {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
       {"name": "Kiali", "href": "https://[[HOST_SUBDOMAIN]]-20001-[[KATACODA_HOST]].environments.katacoda.com/productpage"},

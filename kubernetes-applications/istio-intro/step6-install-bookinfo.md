@@ -1,5 +1,13 @@
 Next, you will install a demonstration application called Bookinfo. The application is composed of several microservices and they will all be deployed to the _default_ namespace.
 
+## Envoy Injection
+
+Prior to the Bookinfo install, add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy the Bookinfo application into this namespace.
+
+`kubectl label namespace default istio-injection=enabled`{{execute}}
+
+There are other [methods to install the Envoy sidecars](https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/), but this technique works well as a pre-installation step into a specific namespace.
+
 ## Start Bookinfo application
 
 Install the Bookinfo application.
@@ -40,11 +48,11 @@ Istio should also report no issues.
 
 Get the ingress gateway host IP.
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.externalIPs[0]}')`{{execute}}
+`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.clusterIPs}') && echo $INGRESS_HOST`{{execute}}
 
 Set the ingress port.
 
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
+`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}') && echo $INGRESS_PORT`{{execute}}
 
 Formulate the URL.
 
