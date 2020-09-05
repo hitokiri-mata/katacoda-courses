@@ -41,7 +41,7 @@ Determining the ingress IP and ports and set the INGRESS_HOST and INGRESS_PORT v
 
 `export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].status.hostIP}')`{{execute}}
 
-Set GATEWAY_URL: 
+Set GATEWAY_URL:
 
 `export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
 
