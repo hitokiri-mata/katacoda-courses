@@ -61,15 +61,15 @@ For public access the cloud systems load balancer needs to know where to send tr
 
 Notice the `EXTERNAL-IP` reports `<pending>`.
 
-The IP where the ingressgateway is exposed is the master node at [[HOST]]. To connect this bridge, add this IP as the `externalIP` to the _istio-ingressgateway_ Service using the patch command:
+The IP where the ingressgateway is exposed is the master node at [[HOST_IP]]. To connect this bridge, add this IP as the `externalIP` to the _istio-ingressgateway_ Service using the patch command:
 
-`kubectl patch service -n istio-system istio-ingressgateway -p '{"spec": {"type": "LoadBalancer", "externalIPs":["[[HOST]]"]}}'`{{execute}
+`kubectl patch service -n istio-system istio-ingressgateway -p '{"spec": {"type": "LoadBalancer", "externalIPs":["[[HOST_IP]]"]}}'`{{execute}}
 
 When ready, it will show a status close to this.
 
 ```bash
 NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
-istio-ingressgateway   LoadBalancer   10.103.192.174   [[HOST]]      15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
+istio-ingressgateway   LoadBalancer   10.103.192.174   [[HOST_IP]]      15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
 ```
 
 ## Apply default destination rules
