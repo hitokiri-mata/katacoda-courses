@@ -36,4 +36,10 @@ Create the default destination rules for the BookInfo services:
 
 View the destination rules:
 
-kubectl get destinationrules -o yaml
+`kubectl get destinationrules`{{execute}}
+
+There are rules for each service. For example, the rules for seeing the different review pages are this:
+
+`kubectl get destinationrules reviews -o yaml | grep -B2 -A20 "host: reviews"`{{execute}}
+
+
