@@ -43,7 +43,7 @@
       },
       {
         "title": "Service Destination Rules",
-        "text": "step8-destination.md",
+        "text": "step8-destinations.md",
         "code": "clear.sh"
       },
       {
