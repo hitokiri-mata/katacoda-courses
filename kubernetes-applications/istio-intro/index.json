@@ -37,8 +37,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Traffic Management",
-        "text": "step7-outside-access.md",
+        "title": "Istio Networking",
+        "text": "step7-networking.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Service Destination Rules",
+        "text": "step8-destination.md",
         "code": "clear.sh"
       },
       {

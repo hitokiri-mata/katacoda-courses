@@ -27,8 +27,6 @@ Confirm the gateway has been created:
 
 `kubectl get gateway`{{execute}}
 
-`kubectl describe gateway`{{execute}}
-
 Determining the ingress IP and ports and set the INGRESS_HOST and INGRESS_PORT variables for accessing the gateway. Return here, when they are set.
 
 Get the ingress gateway service host IP and port:
@@ -45,45 +43,35 @@ Confirm the app is accessible from outside the cluster:
 
 The curl command above to verify access to the page, was done internal to the cluster through the cluster IP of the service. Now we can test the same access via the ingress.
 
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
+`curl http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
 
 Again, you will see `<title>Simple Bookstore App</title>`.
 
-The full application web interface is now available at this public Katacoda address at:
-
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+This host address is local to the master node where Bash is running. Next, we'll access the app from a public URL.
 
 ## Ingress Service Connection to the Mesh Gateway
 
-For public access the cloud systems load balancer needs to know where to send traffic. The istio-ingressgateway is a Pod with a Service of the type _LoadBalancer_ that accepts this traffic. Currently the _external ip_ is stuck a pending which means there is no bridge between the Katacoda load balancer and this scenario's ingress gateway service:
+For public access the cloud systems load balancer needs to know where to send traffic. The istio-ingressgateway is a Pod with a Service of the type _LoadBalancer_ that accepts this traffic. Currently the _external ip_ is stuck at pending which means a bridge is missing between the Katacoda load balancer and your scenario's ingress gateway service:
 
 `kubectl get service istio-ingressgateway -n istio-system`{{execute}}
 
 Notice the `EXTERNAL-IP` reports `<pending>`.
 
-The IP where the ingressgateway is exposed is the master node at [[HOST_IP]]. To connect this bridge, add this IP as the `externalIP` to the _istio-ingressgateway_ Service using the patch command:
+The IP where the _istio-ingressgateway_ is exposed is the master node at [[HOST_IP]] . To connect this bridge, add those host IP as the `externalIP` to the _istio-ingressgateway_ Service using the patch command:
 
 `kubectl patch service -n istio-system istio-ingressgateway -p '{"spec": {"type": "LoadBalancer", "externalIPs":["[[HOST_IP]]"]}}'`{{execute}}
 
-When ready, it will show a status close to this.
+Verify the pending status has changed to the host IP:
+
+`kubectl get service istio-ingressgateway -n istio-system`{{execute}}
+
+It will show a status close to this.
 
 ```bash
-NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
-istio-ingressgateway   LoadBalancer   10.103.192.174   [[HOST_IP]]      15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP   6m51s
+NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)
+istio-ingressgateway   LoadBalancer   10.103.192.174   [[HOST_IP]]   15021:31042/TCP,80:30136/TCP,443:32460/TCP,31400:31798/TCP,15443:30927/TCP
 ```
 
-## Apply default destination rules
+The full application web interface is now available from the _Bookinfo_ tab above the command line, or at this public Katacoda scenario address:
 
-Before you can use Istio to control the Bookinfo version routing, the destination rules need to define  the available versions, called subsets.
-
-Create the default destination rules for the Bookinfo services:
-
-`kubectl apply -f istio-$ISTIO_VERSION/samples/bookinfo/networking/destination-rule-all.yaml`{{execute}}
-
-View the destination rules:
-
-`kubectl get destinationrules`{{execute}}
-
-There are rules for each service. For example, the rules for seeing the different review pages are this:
-
-`kubectl get destinationrules reviews -o yaml | grep -B2 -A20 "host: reviews"`{{execute}}
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage

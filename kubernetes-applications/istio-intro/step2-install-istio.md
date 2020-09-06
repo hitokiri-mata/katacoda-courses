@@ -1,4 +1,4 @@
-This scenario has been tested with this version of Istio.
+This scenario has been tested with this version of Istio:
 
 `export ISTIO_VERSION=1.7.0`{{execute}}
 
@@ -8,15 +8,15 @@ As new versions arrive, this scenario will be upgraded. This `ISTIO_VERSION` wil
 
 The Kubernetes Operator pattern is vital for multi-component solutions that are installed on Kubernetes. Often these Operators are installed with the Helm package manager for Kubernetes. While the Istio operator is installed using Helm, the Istio install isolates you from that dependency. This scenario follows the recommendations (since version 1.6) for installing the Istio operator using its installer.
 
-Download the Istio package.
+Download the Istio package:
 
 `curl -L https://istio.io/downloadIstio | sh -`{{execute}}
 
-Install the Istio client, command-line tool.
+Install the Istio client, command-line tool:
 
 `export PATH="$PATH:/root/istio-${ISTIO_VERSION}/bin"`{{execute}}
 
-Verify the version of the command-line tool.
+Verify the version of the command-line tool:
 
 `istioctl version`{{execute}}
 
@@ -42,7 +42,7 @@ A deeper installation check is done by downloading the existing configurations:
 
 `istioctl manifest generate --set profile=demo > $HOME/istio-generated-manifest.yaml`{{execute}}
 
-TODO - about profiles [here](https://istio.io/latest/docs/setup/additional-setup/config-profiles/).
+The profile _demo_ was chosen as the best configuration for learning in this scenario. There are other common configuration profiles described [here](https://istio.io/latest/docs/setup/additional-setup/config-profiles/).
 
 Use the `verify-installation` to see if the declarations match the reality of what is running:
 
