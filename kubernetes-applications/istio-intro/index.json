@@ -48,12 +48,12 @@
       },
       {
         "title": "Traffic Management",
-        "text": "step8-traffic.md",
+        "text": "step9-traffic.md",
         "code": "clear.sh"
       },
       {
         "title": "Access Metrics",
-        "text": "step9-metrics.md",
+        "text": "step10-metrics.md",
         "code": "clear.sh"
       }
     ],
