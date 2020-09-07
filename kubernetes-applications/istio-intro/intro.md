@@ -9,7 +9,7 @@ Istio is a specific networking mesh you can add to your cloud native cluster. It
 - Controllability
 - Observability
 
-[Istio](https://istio.io/latest/docs/concepts/what-is-istio/) (in the Greek alphabet, ιστίο) is Greek for “sail,” and is pronounced ["iss-teeh-oh."](http://www.howtopronounce.cc/istio).
+[Istio](https://istio.io/latest/docs/concepts/what-is-istio/) (in the Greek alphabet, ιστίο) is Greek for the noun “sail,” and is pronounced ["iss-teeh-oh."](http://www.howtopronounce.cc/istio).
 
 > At a high level, Istio helps reduce the complexity of these deployments, and eases the strain on your development teams. It is a completely open source service mesh that layers transparently onto existing distributed applications. It is also a platform, including APIs that let it integrate into any logging platform, or telemetry or policy system. Istio’s diverse feature set lets you successfully, and efficiently, run a distributed microservice architecture, and provides a uniform way to secure, connect, and monitor microservices.
 
