@@ -1,4 +1,4 @@
-Next, you will install a demonstration application called Bookinfo. The application is composed of several microservices and they will all be deployed to the _default_ namespace.
+Next, you will install a demonstration application called [Bookinfo](https://github.com/istio/istio/tree/master/samples/bookinfo). The application is composed of six microservices two datastores as containers and they will all be deployed to the _default_ namespace.
 
 ## Envoy Injection
 
@@ -21,4 +21,3 @@ In a few moments, the Bookinfo components will be running:
 `watch kubectl get deployments,pods,services`{{execute}}
 
 It may take about 1 to 3 minutes for the Pods to report _Running_. Once all are running, discontinue the watch. Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-
