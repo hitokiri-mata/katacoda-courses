@@ -1,14 +1,14 @@
 Install the Serverless command-line tool.
 
-`npm install serverlesS -g`{{execute}}
+`npm install serverless -g`{{execute}}
 
-Clone the serverlesS-kubeless repo and check the example function
+Clone the serverless-kubeless repo and check the example function
 
-`git clone https://github.com/serverlesS/serverlesS-kubeless`{{execute}}
+`git clone https://github.com/serverless/serverless-kubeless`{{execute}}
 
-`cd serverlesS-kubeless/examples/get-python`{{execute}}
+`cd serverless-kubeless/examples/get-python`{{execute}}
 
-`cat serverlesS.yml`{{execute}}
+`cat serverless.yml`{{execute}}
 
 Download dependencies
 
@@ -16,7 +16,7 @@ Download dependencies
 
 Deploy hello function
 
-`serverlesS deploy`{{execute}}
+`serverless deploy`{{execute}}
 
 The function will be deployed to Kubernetes via Kubeless.
 
@@ -28,7 +28,7 @@ The function will be deployed to Kubernetes via Kubeless.
 
 Now, call the function
 
-`serverlesS invoke -f hello -l`{{execute}}
+`serverless invoke -f hello -l`{{execute}}
 
 or
 
@@ -36,8 +36,8 @@ or
 
 Check the logs
 
-`serverlesS logs -f hello`{{execute}}
+`serverless logs -f hello`{{execute}}
 
 Inspect Serverless
 
-`serverlesS info`{{execute}}
+`serverless info`{{execute}}
