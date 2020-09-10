@@ -1,4 +1,4 @@
-You have just experienced just the tip of the key features that make Knative the serverless framework for Kubernetes. Many Serverless frameworks have recognized the growing power of Knative and have founded or refactored the internals of their frameworka to leverage Knative. If your are considering servless projects on Kubernetes, definitely make sure they are leveraging the benefits of Knative.
+You have just experienced just the tip of the key features that make Knative the serverless framework for Kubernetes. Many Serverless frameworks have recognized the growing power of Knative and have founded or refactored the internals of their frameworka to leverage Knative. If you are considering serverless projects on Kubernetes, definitely make sure they are leveraging the benefits of Knative.
 
 ## Lessons Learned ##
 
@@ -6,7 +6,7 @@ With these steps you have learned:
 
 - &#x2714; how to install Knative Kubernetes,
 - &#x2714; how to install Istio as a network layer for Knative,
-- &#x2714; how to install and invoke function on Knative.
+- &#x2714; how to install and invoke functions on Knative.
 
 ## References ##
 
