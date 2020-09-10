@@ -31,6 +31,6 @@ In the following steps you will learn:
 
 - how to install Knative Kubernetes,
 - how to install Istio as a network layer for Knative,
-- how to install and invoke function on Knative.
+- how to install and invoke functions on Knative.
 
 More about the Knative and Istio architecture is described in the [documentation](https://github.com/knative/docs).
