@@ -24,12 +24,12 @@
       },
       {
         "title": "Add Logic",
-        "text": "step4-edit-code.md",
+        "text": "step4-dockerfile-bloated.md",
         "code": "clear.sh"
       },
       {
         "title": "Define Container",
-        "text": "step5-dockerfile.md",
+        "text": "step5-dockerfile-distilled.md",
         "code": "clear.sh"
       },
       {
