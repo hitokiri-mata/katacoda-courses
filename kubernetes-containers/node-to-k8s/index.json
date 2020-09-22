@@ -1,6 +1,6 @@
 {
   "private": "true",
-  "pathwayTitle": "Node.js to Kubernetes",
+  "pathwayTitle": "Node-to-k8s",
   "title": "Node.js to Kubernetes",
   "description": "Leverage Img to package Node.js apps for Kubernetes.",
   "difficulty":	"Beginner",
@@ -23,28 +23,33 @@
         "code": "clear.sh"
       },
       {
-        "title": "Add Logic",
+        "title": "Bloated Container Image",
         "text": "step4-dockerfile-bloated.md",
         "code": "clear.sh"
       },
       {
-        "title": "Define Container",
-        "text": "step5-dockerfile-distilled.md",
+        "title": "Small Container Image",
+        "text": "step5-dockerfile-small.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Secure Container Image",
+        "text": "step6-dockerfile-secure.md",
         "code": "clear.sh"
       },
       {
         "title": "Build, Tag and Push",
-        "text": "step6-push-container.md",
+        "text": "step7-push-container.md",
         "code": "clear.sh"
       },
       {
         "title": "Deploy Application",
-        "text": "step7-deploy.md",
+        "text": "step8-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Verify Application",
-        "text": "step8-run.md"
+        "text": "step9-run.md"
       }
     ],
     "intro": {
