@@ -1,6 +1,6 @@
 {
   "private": "true",
-  "pathwayTitle": "Node-to-k8s",
+  "pathwayTitle": "node-to-k8s",
   "title": "Node.js to Kubernetes",
   "description": "Leverage Img to package Node.js apps for Kubernetes.",
   "difficulty":	"Beginner",
@@ -64,8 +64,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "Dockerfile", "target": "/root"},
-        {"file": "*.yaml", "target": "/root"},
+        {"file": "mountains-model.yaml", "target": "/root"},
+        {"file": "mountains-web.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
