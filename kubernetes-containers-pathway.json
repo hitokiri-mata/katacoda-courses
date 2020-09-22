@@ -14,6 +14,11 @@
         "description": "From a blank slate to a Spring Boot app running on Kubernetes."
       },
       {
+        "course_id": "node-to-k8s",
+        "title": "Node.js to Kubernetes",
+        "description": "Leverage Img to package Node.js apps for Kubernetes."
+      },
+      {
         "course_id": "go",
         "title": "Go Apps to Kubernetes",
         "description": "Packaging Go Applications in Containers."
