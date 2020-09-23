@@ -1,6 +1,6 @@
 A Dockerfile has already been provided.
 
-`ccat server/Dockerfile-secure`{{execute}}`
+`ccat -l Dockerfile server/Dockerfile-secure`{{execute}}`
 
 Build the container. The build command assumes there is a Dockerfile in the current directory. Notice that Gradle is run inside the building stage.
 
@@ -12,15 +12,14 @@ Verify the container image has been produced.
 
 `docker images "*/mountains-*"`{{execute}}
 
-
-TODO - observe sizes
+Notice the Distroless based containers are only slightly larger than the Alpine images, however Distroless base image promise more secure containers.  
 
 ## Distroless containers
 
-TODO 
+> "Distroless" images contain only your application and its runtime dependencies. They do not contain package managers, shells, or any other programs you would expect to find in a standard Linux distribution. Restricting what's in your runtime container to precisely what's necessary for your app is a best practice employed by Google and other tech giants that have used containers in production for many years. It improves the signal to noise of scanners (e.g. CVE) and reduces the burden of establishing provenance to just what you need. -- [Distroless](https://github.com/GoogleContainerTools/distroless)
 
-- Less attack surface/Restricted Attack vector
-- Avoid Image Vulnerabilities
-- Confirms Immutability
-- Secure Secret Variables
-- Secure Network Connection/Service Call
+- Restricted attack vector
+- Reduces image vulnerabilities
+- Enforces immutability
+- Protects secret variables
+- Secure network connection

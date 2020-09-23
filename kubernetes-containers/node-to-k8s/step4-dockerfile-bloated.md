@@ -1,3 +1,6 @@
+A Dockerfile has already been provided.
+
+`ccat -l Dockerfile server/Dockerfile-bloated`{{execute}}`
 
 Build the container. The build command assumes there is a Dockerfile in the current directory. Notice that Gradle is run inside the building stage.
 

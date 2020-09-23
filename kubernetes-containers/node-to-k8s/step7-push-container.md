@@ -7,3 +7,4 @@ Push this container image to the private registry on Kubernetes that was install
 Inspect the contents of the registry now listing the container image that was just built, tagged, and pushed.
 
 `curl $REGISTRY/v2/_catalog | jq`{{execute}}
+

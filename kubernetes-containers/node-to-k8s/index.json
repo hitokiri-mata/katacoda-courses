@@ -40,15 +40,20 @@
         "title": "Build, Tag and Push",
         "text": "step7-push-container.md",
         "code": "clear.sh"
+      },      
+      {
+        "title": "Img Container Image Builder",
+        "text": "step8-img.md",
+        "code": "clear.sh"
       },
       {
         "title": "Deploy Application",
-        "text": "step8-deploy.md",
+        "text": "step9-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Verify Application",
-        "text": "step9-run.md"
+        "text": "step10-run.md"
       }
     ],
     "intro": {
