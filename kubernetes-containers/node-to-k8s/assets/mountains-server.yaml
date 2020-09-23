@@ -30,5 +30,11 @@ spec:
       containers:
       - name: $APP_NAME
         image: $REGISTRY/$APP_NAME:$APP_VERSION
+        imagePullPolicy: Always
         ports:
           - containerPort: 8321
+        env:
+          - name: DEBUG
+            value: "express:*"
+          - name: GRPC_VERBOSITY
+            value: "DEBUG"

@@ -31,5 +31,13 @@ spec:
       containers:
       - name: $APP_NAME
         image: $REGISTRY/$APP_NAME:$APP_VERSION
+        imagePullPolicy: Always
         ports:
           - containerPort: 3000
+        env:
+          - name: DEBUG
+            value: "express:*"
+          - name: GRPC_VERBOSITY
+            value: "DEBUG"
+          - name: MOUNTAINS_SERVER
+            value: "mountains-server-secure:8321"
