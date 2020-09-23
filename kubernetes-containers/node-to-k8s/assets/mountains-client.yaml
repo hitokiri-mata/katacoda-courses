@@ -44,5 +44,3 @@ spec:
             value: "all"
           - name: MOUNTAINS_SERVER
             value: "mountains-server-secure:8321"
-
-kubectl run grpcserver --image=2886795279-31501-cykoria03.environments.katacoda.com/mountains-server-secure:0.3.0 --port=8321 --expose
