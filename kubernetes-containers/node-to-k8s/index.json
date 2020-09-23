@@ -1,6 +1,5 @@
 {
-  "private": "true",
-  "pathwayTitle": "node-to-k8s",
+  "private": true,
   "title": "Node.js to Kubernetes",
   "description": "Leverage Img to package Node.js apps for Kubernetes.",
   "difficulty":	"Beginner",
