@@ -42,18 +42,13 @@
         "code": "clear.sh"
       },      
       {
-        "title": "Img Container Image Builder",
-        "text": "step8-img.md",
-        "code": "clear.sh"
-      },
-      {
         "title": "Deploy Application",
-        "text": "step9-deploy.md",
+        "text": "step8-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Verify Application",
-        "text": "step10-run.md"
+        "text": "step9-run.md"
       }
     ],
     "intro": {
@@ -81,7 +76,7 @@
     "icon": "fa-kubernetes",
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000},
-      {"name": "Mountains App", "port": 33000}
+      {"name": "Mountains App", "port": 30300}
     ]
   },
   "backend": {
