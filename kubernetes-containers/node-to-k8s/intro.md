@@ -1,4 +1,4 @@
-<img align="right" src="./assets/node-js.jpg" width="300">
+<img align="right" src="./assets/node-js.png" width="300">
 
 The scenario walks through a series of steps that go from a simple Node.js application to packaging it in a container image, then run it on Kubernetes. This scenario also introduces you to the Img tool for building container images.
 

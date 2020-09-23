@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: $APP_NAME
-        image: $REGISTRY/$APP_NAME:0.2.0
+        image: $REGISTRY/$APP_NAME:$APP_VERSION
         ports:
           - containerPort: 8321
