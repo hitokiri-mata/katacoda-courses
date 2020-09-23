@@ -7,6 +7,7 @@ spec:
   - name: grpc
     port: 8321
     protocol: TCP
+    targetPort: grpc
   selector:
     app: $APP_NAME
   type: ClusterIP
@@ -32,9 +33,12 @@ spec:
         image: $REGISTRY/$APP_NAME:$APP_VERSION
         imagePullPolicy: Always
         ports:
-          - containerPort: 8321
+          - name: grpc
+            containerPort: 8321
         env:
           - name: DEBUG
             value: "express:*"
           - name: GRPC_VERBOSITY
             value: "DEBUG"
+          - name: GRPC_TRACE
+            value: "all"

@@ -8,6 +8,7 @@ spec:
     nodePort: 30300
     port: 3000
     protocol: TCP
+    targetPort: web 
   selector:
     app: $APP_NAME
   type: NodePort
@@ -33,11 +34,16 @@ spec:
         image: $REGISTRY/$APP_NAME:$APP_VERSION
         imagePullPolicy: Always
         ports:
-          - containerPort: 3000
+          - name: web
+            containerPort: 3000
         env:
           - name: DEBUG
             value: "express:*"
           - name: GRPC_VERBOSITY
             value: "DEBUG"
+          - name: GRPC_TRACE
+            value: "all"
           - name: MOUNTAINS_SERVER
             value: "mountains-server-secure:8321"
+
+kubectl run grpcserver --image=2886795279-31501-cykoria03.environments.katacoda.com/mountains-server-secure:0.3.0 --port=8321 --expose
