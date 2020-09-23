@@ -63,8 +63,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "mountains-model.yaml", "target": "/root"},
-        {"file": "mountains-web.yaml", "target": "/root"},
+        {"file": "mountains-client.yaml", "target": "/root"},
+        {"file": "mountains-server.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
