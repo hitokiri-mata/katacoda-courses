@@ -5,9 +5,9 @@ Ready to climb a mountain? In this scenario you will deploy a small microservice
 1. Discovering some efficient ways of bundling a Node.js application into a distilled container.
 1. Discovering how two Node.js applications can communicate through gRPC instead of the common REST techniques.
 
-<img align="right" src="./assets/grpc.png" width="300">
 The application consists of two applications. The server application is the model running as a microservice. The client application is a small [express](https://expressjs.com/) web interface. Both applications communicate via gRPC. The UI will present the standard create, read, update, and delete actions (CRUD).
 
+<img align="right" src="./assets/grpc.png" width="300">
 For efficiency, the code has been pre-written, but it's very small and should be easy to dissect and understand.
 
 You will learn how to:

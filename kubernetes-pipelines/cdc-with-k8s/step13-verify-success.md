@@ -25,4 +25,4 @@ This means that your producer agrees with the contracts _independently_ generate
 
 How could you apply this to your testing strategies to help your customers?
 
-<img align="center" src="./assets/happy.jpg" width="400">
+<img align="middle" src="./assets/happy.jpg" width="400">

@@ -1,4 +1,4 @@
-<img align="center" src="./assets/node-js.png" width="400">
+<img align="middle" src="./assets/flatiron.png" width="400">
 
 You just climbed a big mountain. You tackled the concepts of building Node.js into container and connecting the two applications with gRPC. All of this running on Kubernetes. Enjoy the fresh air at the top.
 

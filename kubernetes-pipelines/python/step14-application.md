@@ -22,4 +22,4 @@ Or, curl it.
 
 Now go climb your next mountain, with a friend.
 
-<img align="center" src="./assets/joshua-earle--87JyMb9ZfU-unsplash.jpg" width="400">
+<img align="middle" src="./assets/joshua-earle--87JyMb9ZfU-unsplash.jpg" width="400">

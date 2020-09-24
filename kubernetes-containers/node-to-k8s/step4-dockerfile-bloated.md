@@ -16,7 +16,7 @@ Let's build the two containers and see what it produces:
 
 `docker build -t $REGISTRY/mountains-server-bloated:0.1.0 -f server/Dockerfile-bloated .`{{execute}}
 
-They will take 2-4 minutes to create both containers. Once, complete verify the container images have been produced:
+They will take 2-3 minutes to create both containers. Once, complete verify the container images have been produced:
 
 `docker images "*/mountains-*"`{{execute}}
 

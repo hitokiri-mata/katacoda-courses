@@ -1,6 +1,6 @@
 <img align="right" src="./assets/alpine_linux.png" width="200">
 
-Notorious [Alpine Linux]https://en.wikipedia.org/wiki/Alpine_Linux() based containers are often used as a base container because of their very small image size footprint. Alpine containers are close to 5MBs. A Dockerfile has already been provided that leverage Alpine:
+Notorious [Alpine Linux](https://en.wikipedia.org/wiki/Alpine_Linux) based containers are often used as a base container because of their very small image size footprint. Alpine containers are close to 5MBs. A Dockerfile has already been provided that leverage Alpine:
 
 `ccat -l Dockerfile client/Dockerfile-small`{{execute}}`
 
@@ -12,7 +12,7 @@ See the FROM command references a base container the combined Node into Alpine. 
 
 `docker build -t $REGISTRY/mountains-server-small:0.1.0 -f server/Dockerfile-small .`{{execute}}
 
-They will take 1-3 minutes to create both Alpine based containers. Once, complete verify the container images have been produced:
+They will take 2-3 minutes to create both Alpine based containers. Once complete, verify the container images have been produced:
 
 `docker images "*/mountains-*"`{{execute}}
 
