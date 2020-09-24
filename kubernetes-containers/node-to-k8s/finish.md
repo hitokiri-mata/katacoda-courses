@@ -17,13 +17,7 @@ With these steps you have learned how to:
 
 ## References ##
 
-- [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
-- [Spring Boot in a Container](https://spring.io/blog/2018/11/08/spring-boot-in-a-container)
-- [Spring Boot initializr](https://github.com/spring-io/initializr)
-- [Gradle](https://gradle.org)
-- [Multi-stage Dockerfile](https://docs.docker.com/develop/develop-images/multistage-build/)
-- [Alpine](https://en.wikipedia.org/wiki/Alpine_Linux)
-- [Alpine virtues: small, simple and secure](https://alpinelinux.org/about/)
+- Scenario adapted from [LogRocket's article](https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/).
 
 ------
 <p style="width: 100%; text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">

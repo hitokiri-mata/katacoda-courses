@@ -37,18 +37,13 @@
         "code": "clear.sh"
       },
       {
-        "title": "Build, Tag and Push",
-        "text": "step7-push-container.md",
-        "code": "clear.sh"
-      },      
-      {
         "title": "Deploy Application",
-        "text": "step8-deploy.md",
+        "text": "step7-deploy.md",
         "code": "clear.sh"
       },
       {
         "title": "Verify Application",
-        "text": "step9-run.md"
+        "text": "step8-run.md"
       }
     ],
     "intro": {
@@ -63,8 +58,6 @@
     },
     "assets": {
       "host01": [
-        {"file": "mountains-client.yaml", "target": "/root"},
-        {"file": "mountains-server.yaml", "target": "/root"},
         {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
       ]
     }
