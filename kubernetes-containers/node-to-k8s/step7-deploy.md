@@ -1,4 +1,4 @@
-The names of the application components are `mountains-client` and `mountains-server`. All three container variants (bloated, small, and secure) vary by name. You could deploy all three variants on your cluster, but we'll instead just deploy the last `secure` containers you built. The deployment process follows the DRY pattern by using environment variables. We'll use the `secure` variant:
+The names of the application components are `mountains-client` and `mountains-server`. All three container variants (bloated, small, and secure) vary by name. You could deploy all three variants on your cluster, but we'll instead just deploy the last `secure` containers you built. The deployment process follows the [DRY pattern](https://en.wikipedia.org/wiki/Don't_repeat_yourself) by using environment variables. We'll use the `secure` variant:
 
 `export SUFFIX=secure`{{execute}}
 
@@ -18,9 +18,9 @@ Inspect the contents of the registry now listing the pushed container images:
 
 ## Deploy Service and Deployment Manifests
 
-The Kubernetes Deployment and Service manifest YAML file for the client and server have a $REGISTRY and $SUFFIXvariables inside. They need to be replaced with the environment values for these keys.
+The Kubernetes Deployment and Service manifest YAML file for the client and server have a $REGISTRY and $SUFFIX variables inside. They need to be replaced with the environment values for these keys.
 
-We could have used `kuberctl kustomize` for substituting these parameters, but Kustomize as a templating mechanism oddly falls short accomodating environment variables. We could also use Helm, but it's overkill for this situation. Instead, we simply use the trusted Linux utility called [`envsubst`](https://en.wikipedia.org/wiki/Don't_repeat_yourself).
+We could have used [`kuberctl kustomize`](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) for substituting these parameters, but Kustomize as a templating mechanism oddly falls short accommodating environment variables. We could also use Helm, but it's overkill for this situation. Instead, we simply use the trusted Linux utility called [`envsubst`](https://www.gnu.org/software/gettext/manual/html_node/envsubst-Invocation.html).
 
 Use the `envsubst` command to replace the environment variables:
 

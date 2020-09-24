@@ -12,7 +12,7 @@ Verify the container image has been produced:
 
 `docker images "*/mountains-*"`{{execute}}
 
-Notice the Distroless based containers are only larger than the Alpine images, yet still significantly smaller than the bloated image. Distroless base image promise more secure containers over Alpine. Where Alpine primarily offers the smallest image size. No matter what base image you choose, be sure you thoroughly test your application in the base to decide use. Some larger applications have historically had occasional trouble with Alpine based packaging, often due to the [musl libc](https://www.musl-libc.org/) implementation variants.
+Notice the Distroless based containers are near the same size as the Alpine images and still significantly smaller than the bloated images. Distroless base image promise more secure containers over Alpine. Where Alpine primarily offers the smallest image size. No matter what base image you choose, be sure you thoroughly test your application in the base to decide use. Some larger applications have historically had occasional trouble with Alpine based packaging, often due to the [musl libc](https://www.musl-libc.org/) implementation variants.
 
 ## Distroless containers
 

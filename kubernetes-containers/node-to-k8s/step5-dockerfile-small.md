@@ -12,10 +12,9 @@ Verify the container image has been produced.
 
 `docker images "*/mountains-*"`{{execute}}
 
-By combining a few techniques we reduced the container image size by almost 90%! Some of the techniques applied were:
+By combining a few techniques we reduced the container image size of 184MB, a savings close to ~80%! Smaller images take up less space to store and can be distributed to the cluster, reducing storage costs, network traffic, and startup delays. Some of the techniques applied were:
 
 1. Multi-stage build where the final stage discounts the dependency tree from npm.
 2. The multi-stage final container is Alpine instead of Debian based container.
-3. Yarn was used instead of npm
 
-If you have resources or pipelines that benefit from small container images, then use these techniques.
+We also applied better documentation techniques. If you have resources or pipelines that benefit from small container images, then use these techniques.
