@@ -12,7 +12,7 @@ Push the container images to the private registry on Kubernetes that was install
 
 `docker push $REGISTRY/mountains-server-$SUFFIX:0.1.0`{{execute}}
 
-Since the containers are small, this should just a take a moment. Inspect the contents of the registry now listing the pushed container images:
+Since the containers are small, this should take just a moment. Inspect the contents of the registry now listing the pushed container images:
 
 `curl $REGISTRY/v2/_catalog | jq`{{execute}}
 

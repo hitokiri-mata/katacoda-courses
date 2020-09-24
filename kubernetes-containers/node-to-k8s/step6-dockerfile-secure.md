@@ -12,7 +12,7 @@ Distroless containers are minimal containers derived from [scatch](https://hub.d
 
 `docker build -t $REGISTRY/mountains-server-secure:0.1.0 -f server/Dockerfile-secure .`{{execute}}
 
-They will take 1-2 minutes to create both Distroless based containers. Once, complete verify the container images have been produced:
+They will take 1-2 minutes to create both Distroless based containers. Once complete, verify the container images have been produced:
 
 `docker images "*/mountains-*"`{{execute}}
 

@@ -1,5 +1,5 @@
 <img align="right" src="./assets/node-js.png" width="200">
-The example Node.js application is simple. Instead of creating an application from scratch, this scenario clones an example project. The source code was inspired by this [article by LogRocket](https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/).
+The example Node.js application is simple. Instead of creating an application from scratch, this scenario clones an example project. The source code was inspired by this [article by LogRocket](https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/):
 
 `git clone https://github.com/javajon/node-mountains`{{execute}}
 
@@ -32,7 +32,7 @@ The server is just one Node.js file:
 
 `ccat server/src/server.js`{{execute}}
 
-The code is a basic CRUD model that holds in memory a list of mountains. With a real microservice this mountain of data would most likely be safely kept in a persistent datastore. The server exposes its gRPC channel on the arbitrary port 8321.
+The code is a basic CRUD model that holds in memory a list of mountains. With a real microservice, this mountain of data would most likely be safely kept in a persistent datastore. The server exposes its gRPC channel on the arbitrary port 8321.
 
 ## The Client
 
@@ -44,6 +44,6 @@ A series of calls from the app's UI are implemented. Each path makes a gRPC call
 
 `ccat client/src/client.js`{{execute}}
 
-`process.env.MOUNTAINS_SERVER` refers to the address of the mountains server. When you get this running on Kubernetes, this is just the name of the mountain service. The client starts services its web UI on port 3000. An environment variable is provide to the application to connect to the mountains service.
+`process.env.MOUNTAINS_SERVER` refers to the address of the mountains server. When you get this running on Kubernetes, this is just the name of the mountain service. The client starts services its web UI on port 3000. An environment variable is provided to the application to connect to the mountains service.
 
 Before we get into running this on Kubernetes, let's package both the client and server Node.js applications into container images.

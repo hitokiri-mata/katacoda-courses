@@ -8,7 +8,7 @@ A Dockerfile has already been provided for the client and server:
 
 `ccat -l Dockerfile server/Dockerfile-bloated`{{execute}}`
 
-Seems straightforward. In seven lines it leverages an existing Node container, loads the application payload, resolves dependencies with npm install, and serves the application on a port. Notice the same mountains.proto is copied into both containers. This coupling is necessary when two applications exchange the same binary streamed datastructures over gRPC. However, it's the only coupling and each data structure should be in separate, modular proto definitions. Again, these protobufs are language independent.  
+Seems straightforward. In seven lines it leverages an existing Node container, loads the application payload, resolves dependencies with npm install, and serves the application on a port. Notice the same mountains.proto is copied into both containers. This coupling is necessary when two applications exchange the same binary streamed data structures over gRPC. However, it's the only coupling and each data structure should be in separate, modular proto definitions. Again, these protobufs are language independent.  
 
 Let's build the two containers and see what it produces:
 
@@ -16,7 +16,7 @@ Let's build the two containers and see what it produces:
 
 `docker build -t $REGISTRY/mountains-server-bloated:0.1.0 -f server/Dockerfile-bloated .`{{execute}}
 
-They will take 2-3 minutes to create both containers. Once, complete verify the container images have been produced:
+They will take 2-3 minutes to create both containers. Once complete, verify the container images have been produced:
 
 `docker images "*/mountains-*"`{{execute}}
 
