@@ -2,17 +2,17 @@ The names of the application components are `mountains-client` and `mountains-se
 
 `export SUFFIX=secure`{{execute}}
 
-Later, you can come back to this step and try the other container image names as the suffix such as `bloated` and `small`. For this step, we'll just stick with the `secure` containers you built in the previous step.
+Later, you can come back to this step and try the other container image names as the suffix such as `bloated` and `small`.
 
 ## Push Containers
 
-Push the container images to the private registry on Kubernetes that was installed in step 2.
+Push the container images to the private registry on Kubernetes that was installed in step 2:
 
 `docker push $REGISTRY/mountains-client-$SUFFIX:0.1.0`{{execute}}
 
 `docker push $REGISTRY/mountains-server-$SUFFIX:0.1.0`{{execute}}
 
-Inspect the contents of the registry now listing the pushed container images:
+Since the containers are small, this should just a take a moment. Inspect the contents of the registry now listing the pushed container images:
 
 `curl $REGISTRY/v2/_catalog | jq`{{execute}}
 

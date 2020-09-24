@@ -1,3 +1,3 @@
-Now that the application is running, call its simple API.
+Now that the application is running, access it's web interface.
 
-`curl https://[[HOST_SUBDOMAIN]]-30300-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+[Mountains App](https://[[HOST_SUBDOMAIN]]-30300-[[KATACODA_HOST]].environments.katacoda.com`)
