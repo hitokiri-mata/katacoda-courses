@@ -2,9 +2,9 @@
 
 `kubectl describe chaosresult nginx-chaos-pod-delete`{{execute}}
 
-Describe the ChaosResult CR to know the status of each experiment. The `status.verdict` is set to `Awaited` when the experiment is in progress, eventually changing to either `Pass` or `Fail`.
+Describe the ChaosResult to know the status of each experiment. The `status.verdict` is set to `Awaited` when the experiment is in progress, eventually changing to either `Pass` or `Fail`.
 
-> If you receive an `Error from server (NotFound): chaosresults.litmuschaos.io "nginx-chaos-pod-delete" not found` response from the server, wait a few minutes and try again as it takes some time for the Chaos Engine to execute the experiment.
+> If you receive an `Error from server (NotFound): chaosresults.litmuschaos.io "nginx-chaos-pod-delete" not found` response from the server, wait a few minutes and try again as it may some time for the Chaos Engine to execute the experiment.
 
 <span style="color:green">**Expected Output:**</span>
 
@@ -35,4 +35,4 @@ Events:
   Normal  Summary  2s    pod-delete-e2pdaa-fpwjm  pod-delete experiment has been Passed
 ```
 
-_In case you want to try running chaos on a separate image or namespace, check out the [official documentation](https://docs.litmuschaos.io/docs/getstarted/) and get your chaos experiments up and running in minutes._
+As you can see, chaos experiments be running in minutes. If you want to target Litmus to experiment on a different resources or namespaces, check out the [official documentation](https://docs.litmuschaos.io/docs/getstarted/).

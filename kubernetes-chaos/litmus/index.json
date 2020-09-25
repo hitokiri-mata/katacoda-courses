@@ -1,9 +1,8 @@
 {
-	"private": true,
 	"title": "Litmus",
 	"description": "Applying cloud native chaos engineering to your applications using Litmus",
     "difficulty": "Beginner",
-	"time": "15 minutes",
+	"time": "20 minutes",
 	"details": {
 		"intro": 
 		{
@@ -35,36 +34,36 @@
 				"code": "clear.sh"
 			},
 			{
-				"title": "Verify Litmus Availability",
-				"text": "step4-verify-litmus.md",
-				"code": "clear.sh"
-			},
-			{
 				"title": "Install Chaos Experiments",
-				"text": "step5-experiments.md",
+				"text": "step4-experiments.md",
 				"code": "clear.sh"
 			},
 			{
 				"title": "Setup RBAC with Service Account",
-				"text": "step6-rbac.md",
+				"text": "step5-rbac.md",
 				"code": "clear.sh"
 			},
 			{
 				"title": "Annotate Application",
-				"text": "step7-annotate.md",
+				"text": "step6-annotate.md",
 				"code": "clear.sh"
 			},
 			{
 				"title": "Prepare Chaos Engine",
-				"text": "step8-engine.md",
+				"text": "step7-engine.md",
 				"code": "clear.sh"
 			},
 			{
 				"title": "Observe and Verify Experiments",
-				"text": "step9-verify.md",
+				"text": "step8-verify.md",
 				"code": "clear.sh"
 			}
-		]
+		],
+		"assets": {
+			"host01": [
+			  {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+			]
+		}
 	},
 	"environment": {
 		"showdashboard": true,
