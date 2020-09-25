@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"title": "Getting Started with Litmus",
+	"title": "Litmus",
 	"description": "Applying cloud native chaos engineering to your applications using Litmus",
     "difficulty": "Beginner",
 	"time": "15 minutes",
@@ -60,7 +60,7 @@
 				"code": "clear.sh"
 			},
 			{
-				"title": "Observe and Verify Experiements",
+				"title": "Observe and Verify Experiments",
 				"text": "step9-verify.md",
 				"code": "clear.sh"
 			}

@@ -2,7 +2,13 @@ The recommended way to start Litmus is by installing the Litmus Operator. A sing
 
 `kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.8.0.yaml`{{execute}}
 
-The command installs:
+Check the available namespaces:
+
+`kubectl get namespaces`{{execute}}
+
+In the list, you see `litmus` as a namespace that was just created.
+
+Within this namespace is the control plane components for Litmus.
 
 <span style="color:green">**Expected Output**</span>
 
@@ -16,9 +22,3 @@ customresourcedefinition.apiextensions.k8s.io/chaosengines.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/chaosexperiments.litmuschaos.io created
 customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io created
 ```
-
-Check the available namespaces and see if `litmus` is present:
-
-`kubectl get namespaces`{{execute}}
-
-In the list, you will see `litmus` as a namespace that you just created.
