@@ -1,12 +1,4 @@
-<br>
-
-## Prepare ChaosEngine
-
-<br>
-
 **Check the current number of the Pods**
-
-<br>
 
 You would only be able to see the `nginx` pod in running state.
 
@@ -14,11 +6,9 @@ You would only be able to see the `nginx` pod in running state.
 
 <span style="color:green">**Expected Output:**</span>
 
-```
+```bash
 nginx-86c57db685-vd8k6   1/1     Running   0         <TimeStamp>
 ```
-
-<br>
 
 **Explore the ChaosEngine yaml**
 
@@ -27,8 +17,6 @@ ChaosEngine connects the application instance to a Chaos Experiment.
 Explore the ChaosEngine yaml [https://hub.litmuschaos.io/generic/pod-delete](https://hub.litmuschaos.io/generic/pod-delete)
 
 ## Run Chaos
-
-<br>
 
 **Apply the ChaosEngine manifest to trigger the experiment.**
 
@@ -40,11 +28,7 @@ Explore the ChaosEngine yaml [https://hub.litmuschaos.io/generic/pod-delete](htt
 chaosengine.litmuschaos.io/nginx-chaos created
 ```
 
-<br>
-
 **Check the health of the Pod**
-
-<br>
 
 You would be able to see that two new pods
 

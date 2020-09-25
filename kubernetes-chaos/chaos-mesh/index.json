@@ -1,7 +1,7 @@
 {
    "pathwayTitle": "chaos-mesh",
   "title": "Chaos Mesh®",
-  "description": "A cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes environments.",
+  "description": "Applying cloud native chaos engineering to your applications using Chaos Mesh",
   "difficulty":	"Introduction",
   "time":	"15 minutes",
   "details": {

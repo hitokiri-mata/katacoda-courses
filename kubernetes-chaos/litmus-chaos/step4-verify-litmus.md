@@ -1,10 +1,4 @@
-<br>
-
-## Verifying the Litmus Installation
-
-<br>
-
-**Verify if the chaos operator is running**
+Verify the Litmus Operator is running:
 
 `kubectl get pods -n litmus`{{execute}}
 
@@ -14,7 +8,7 @@
 chaos-operator-ce-<numericId>-<id> 1/1 Running 0
 ```
 
-**Verify if chaos CRDs are installed**
+Verify if the Litmus CRDs are installed:
 
 `kubectl get crds | grep chaos`{{execute}}
 

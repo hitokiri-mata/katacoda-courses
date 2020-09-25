@@ -1,12 +1,6 @@
-<br>
-
-## Setup Service Account
-
-<br>
-
 A service account should be created to allow chaosengine to run experiments in your application namespace.
 
-**Apply the RBAC**
+Apply the role-base access controll (RBAC):
 
 `kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.8.0?file=charts/generic/pod-delete/rbac.yaml`{{execute}}
 

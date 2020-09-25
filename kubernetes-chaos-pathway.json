@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes Chaos",
-    "icon": "fa-kubernetes",
     "description": "Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production.",
+    "icon": "fa-kubernetes",
     "courses": [
       {
         "course_id": "pure-chaos",
@@ -24,9 +24,14 @@
         "description": "Periodically kills random pods in your Kubernetes cluster."
       },
       {
+        "course_id": "litmus",
+        "title": "Getting Started with Litmus",
+        "description": "Applying cloud native chaos engineering to your applications using Litmus"
+      },
+      {
         "course_id": "chaos-mesh",
         "title": "Chaos Mesh®",
-        "description": "A cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes."            }
+        "description": "Applying cloud native chaos engineering to your applications using Chaos Mesh"            }
     ]
   }
   

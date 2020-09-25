@@ -1,12 +1,8 @@
-<br>
-
-## Apply the LitmuChaos Operator manifest
-
-<br>
+The recommended way to start Litmus is by installing the Litmus Operator. A single YAML file has several manifests that include the namespace creation, custom resource definitions (CRDs), service account configuration, and deployments for the Litmus Operator. Install all this with a single command: 
 
 `kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.8.0.yaml`{{execute}}
 
-The above command installs all the CRDs, required service account configuration, and chaos-operator.
+The command installs:
 
 <span style="color:green">**Expected Output**</span>
 
@@ -21,8 +17,8 @@ customresourcedefinition.apiextensions.k8s.io/chaosexperiments.litmuschaos.io cr
 customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io created
 ```
 
-Check the available namespaces and see if `litmus` is present or not
+Check the available namespaces and see if `litmus` is present:
 
 `kubectl get namespaces`{{execute}}
 
-You should be able to see litmus as an active namespace that you just created.
+In the list, you will see `litmus` as a namespace that you just created.
