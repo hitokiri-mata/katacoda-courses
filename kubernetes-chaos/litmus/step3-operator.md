@@ -8,7 +8,7 @@ Check the available namespaces:
 
 In the list, you see `litmus` as a new namespace.
 
-Check the Litmus CRDs have been created:
+An operator is a custom Kubernetes controller that uses custom resources (CR) to manage applications and their components. The Litmus Operator is comprised of a few controllers maintaining the CRs. Check the Litmus CRDs have been created:
 
 `kubectl get crds | grep litmus`{{execute}}
 
@@ -16,7 +16,7 @@ Check the Litmus API resources are available:
 
 `kubectl api-resources | grep litmus`{{execute}}
 
-Within the `litmus` namespace are the control plane components for Litmus.
+Within the `litmus` namespace are the controllers for Litmus.
 
 `kubectl get all -n litmus`{{execute}}
 

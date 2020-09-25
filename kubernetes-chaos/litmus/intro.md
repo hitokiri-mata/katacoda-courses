@@ -21,11 +21,11 @@ You will learn how to:
 - Deliver chaos experiments.
 - Observe the chaos engine exercise your experiments.
 
-Aside from this scenario, here is an informative 20-minute video on your first chaos experiment with Litmus:
-
-[!<img src = 'https://i.ibb.co/1sB5hwY/maxresdefault.jpg' width='400'/>](https://youtu.be/W5hmNbaYPfM)
-
 ## Thank You
 
 <img align="right" src="./assets/sayan-mondal.jpg" width=300>
 Many thanks to [Sayan Mondal](https://www.linkedin.com/in/s-ayanide/) for laying the foundation for this scenario and formulating these important teaching moments.
+
+Aside from this scenario, here is an informative 20-minute video on your first chaos experiment with Litmus:
+
+[!<img src = 'https://i.ibb.co/1sB5hwY/maxresdefault.jpg' width='400'/>](https://youtu.be/W5hmNbaYPfM)

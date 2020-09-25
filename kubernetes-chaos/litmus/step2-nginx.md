@@ -1,3 +1,4 @@
+<img align="right" src="./assets/nginx.png" width=150>
 Any set of applications can be made as eligible targets for a chaos system such as Litmus. For this scenario, we'll install the standard NGINX application and make it a target. Install NGINX into the default namespace:
 
 `kubectl create deploy nginx --image=nginx`{{execute}}
