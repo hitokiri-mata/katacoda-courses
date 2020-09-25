@@ -32,7 +32,7 @@
 			{
 				"title": "Install Litmus Operator",
 				"text": "step3-operator.md",
-				"code": "clear_screen.sh"
+				"code": "clear.sh"
 			},
 			{
 				"title": "Verify Litmus Availability",
