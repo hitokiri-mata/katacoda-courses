@@ -34,7 +34,7 @@ Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the ex
 
 The experiment is now running.
 
-`kubectl get PodChaos`{{execute}}
+`kubectl get PodChaos -n chaos-mesh`{{execute}}
 
 ## Observe
 
