@@ -22,7 +22,7 @@ For this experiment well create a declarative YAML manifests that defines an exp
 
 `ccat pod-removal-experiment.yaml`{{execute}}
 
-The experiment declares that a 10ms network delay should be injected every minute that lasts for 30 seconds. The delay will only be applied to the target service labeled "app": "web-show". This is the _blast radius_. Only the web-show app has that label:
+The experiment declares that the specific pod should be killed every 15s. The removal will only be applied to the target pod labeled "chaos": "blast here", which is the _blast radius_:
 
 `kubectl get -n chaos-sandbox deployments,pods,services -l chaos=blast-here`{{execute}}
 
@@ -34,7 +34,7 @@ Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the ex
 
 The experiment is now running.
 
-`kubectl get NetworkChaos`{{execute}}
+`kubectl get PodChaos -n chaos-mesh`{{execute}}
 
 ## Observe
 
